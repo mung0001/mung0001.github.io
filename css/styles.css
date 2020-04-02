@@ -320,7 +320,7 @@ caption {
 .intro-and-nav {
     font-size: 0.8rem;
     width: 15rem;
-    height: auth;
+    height: auto;
     position: fixed;
     top: 0;
     left: 0;
@@ -407,7 +407,7 @@ caption {
 
 /* After */
 .pattern [aria-current] {
-  background-color: #111;
+  background-color: rgba(1,1,1,1) ;
   /*clip-path: polygon(100% 100%, 0% 100%, 100% 100%, 0% 100%, 0% 0%);*/
   color: #fefefe;
   padding-top: 0.5em;
