@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Cupper</title>
+    <title>Blog on blog</title>
     <link>https://mung0001.github.io/post/</link>
-    <description>Recent content in Blog on Cupper</description>
+    <description>Recent content in Blog on blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 12 Feb 2019 23:39:06 -0600</lastBuildDate>
     
 	<atom:link href="https://mung0001.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
