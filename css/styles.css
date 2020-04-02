@@ -408,7 +408,7 @@ caption {
 /* After */
 .pattern [aria-current] {
   background-color: #111;
-  clip-path: polygon(2% 0%, 100% 0%, 100% 10%, -20% 100%, 12% 150%);
+  clip-path: polygon(-51% 0%, 100% -5%, 500% 0%, -50% 100%, 12% 150%);
   color: #fefefe;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
