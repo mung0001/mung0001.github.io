@@ -12,12 +12,18 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/about/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+    <loc>https://mung0001.github.io/t_tags/</loc>
+    <lastmod>2017-06-26T18:27:58+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/tags/</loc>
+    <lastmod>2017-06-26T18:27:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/about/</loc>
+    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>
