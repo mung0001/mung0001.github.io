@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hugo on blog</title>
-    <link>https://mung0001.github.io/tags/hugo/</link>
-    <description>Recent content in hugo on blog</description>
+    <title>hugo on 정근이가 잘 할거에요</title>
+    <link>http://example.org/tags/hugo/</link>
+    <description>Recent content in hugo on 정근이가 잘 할거에요</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Feb 2019 23:39:06 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mung0001.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Cupper Shortcodes</title>
-      <link>https://mung0001.github.io/hihello/</link>
-      <pubDate>Tue, 12 Feb 2019 23:39:06 -0600</pubDate>
-      
-      <guid>https://mung0001.github.io/hihello/</guid>
-      <description>호호호호호 </description>
-    </item>
     
     <item>
-      <title>죽어라 이 괴물이야!</title>
-      <link>https://mung0001.github.io/hihello-copy/</link>
-      <pubDate>Tue, 12 Feb 2019 23:39:06 -0600</pubDate>
+      <title>테스트3</title>
+      <link>http://example.org/posts/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/hihello-copy/</guid>
-      <description>깔깔깔 </description>
+      <guid>http://example.org/posts/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
     </item>
     
   </channel>

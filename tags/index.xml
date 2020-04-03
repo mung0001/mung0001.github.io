@@ -1,31 +1,67 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>이렇게 하면 되는건감??? on blog</title>
-    <link>https://mung0001.github.io/tags/</link>
-    <description>Recent content in 이렇게 하면 되는건감??? on blog</description>
+    <title>Tags on 정근이가 잘 할거에요</title>
+    <link>http://example.org/tags/</link>
+    <description>Recent content in Tags on 정근이가 잘 할거에요</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Jun 2017 18:27:58 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mung0001.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>달기</title>
-      <link>https://mung0001.github.io/tags/%EB%8B%AC%EA%B8%B0/</link>
-      <pubDate>Mon, 26 Jun 2017 18:27:58 +0100</pubDate>
+      <title>development</title>
+      <link>http://example.org/tags/development/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/tags/%EB%8B%AC%EA%B8%B0/</guid>
+      <guid>http://example.org/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>태그</title>
-      <link>https://mung0001.github.io/tags/%ED%83%9C%EA%B7%B8/</link>
-      <pubDate>Mon, 26 Jun 2017 18:27:58 +0100</pubDate>
+      <title>go</title>
+      <link>http://example.org/tags/go/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/tags/%ED%83%9C%EA%B7%B8/</guid>
+      <guid>http://example.org/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>http://example.org/tags/golang/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://example.org/tags/hugo/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>templates</title>
+      <link>http://example.org/tags/templates/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/templates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>themes</title>
+      <link>http://example.org/tags/themes/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/themes/</guid>
       <description></description>
     </item>
     
