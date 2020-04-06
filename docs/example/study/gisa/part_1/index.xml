@@ -1,23 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>정근이가 잘 할거에요</title>
-    <link>https://mung0001.github.io/docs/example/study/gisa/part_1/</link>
-    <description>Recent content on 정근이가 잘 할거에요</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://mung0001.github.io/docs/example/study/gisa/part_1/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/example/study/gisa/part_1/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%84%A4%EA%B3%84/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/example/study/gisa/part_1/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%84%A4%EA%B3%84/</guid>
-      <description>플랫폼 ( Platform )  애플리케이션을 구동시키는 데 필요한 하드웨어와 소프트웨어의 결합 동일 플랫폼 내에서의 상호 호환이 가능하도록 만들어진 결합체를 의미 소프트웨어의 개발과 운영비용을 감소시키고, 생산성이 향상 동일 플랫폼의 커뮤니티가 형성되고 네트워크 효과를 유발  플랫폼의 유형  유형 | 설명 | 사례------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------싱글 사이드 플랫폼 (Single-Side platform) | 제휴 관계를 통해 소비자와 공급자를 연결하는 형태 | 아이튠즈, 안드로이드 마켓투 사이드 플랫폼 (Two-Side Platform) | 두 그룹을 중개하고 모두에게 개방하는 형태 | 소개팅 앱멀티 사이트 플랫폼 (Multi-Side Platform) | 다양한 이해관계 그룹을 연결하여 중개하는 형태 | 페이스북, 인스타그램 플랫폼의 기능 분석  플랫폼 성능 분석을 통해 사용자의 서비스 이용 시 적정성을 알 수 있다.</description>
-    </item>
-    
-  </channel>
-</rss>
