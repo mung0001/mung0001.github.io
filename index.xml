@@ -13,6 +13,16 @@
     
     <item>
       <title>With ToC</title>
+      <link>https://mung0001.github.io/docs/example/main_01/main_01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/example/main_01/main_01/</guid>
+      <description>Caput vino delphine in tamen vias Cognita laeva illo fracta Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
+ Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit  Natus quaerere Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
+    </item>
+    
+    <item>
+      <title>With ToC</title>
       <link>https://mung0001.github.io/docs/example/table-of-contents/with-toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -98,75 +108,21 @@ Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii.
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/shortcodes/buttons/</link>
+      <link>https://mung0001.github.io/docs/example/main_02/main_02/main_02/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/shortcodes/buttons/</guid>
-      <description>Buttons Buttons are styled links that can lead to local page or external link.
-Example {{&amp;lt; button relref=&amp;#34;/&amp;#34; [class=&amp;#34;...&amp;#34;] &amp;gt;}}Get Home{{&amp;lt; /button &amp;gt;}}{{&amp;lt; button href=&amp;#34;https://github.com/alex-shpak/hugo-book&amp;#34; &amp;gt;}}Contribute{{&amp;lt; /button &amp;gt;}}Get HomeContribute</description>
+      <guid>https://mung0001.github.io/docs/example/main_02/main_02/main_02/</guid>
+      <description>4th Level of Menu Caesorum illa tu sentit micat vestes papyriferi Inde aderam facti; Theseus vis de tauri illa peream. Oculos uberaque non regisque vobis cursuque, opus venit quam vulnera. Et maiora necemque, lege modo; gestanda nitidi, vero? Dum ne pectoraque testantur.
+Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii. Cupiens auctoribus pariter rubet, profana magni super nocens. Vos ius sibilat inpar turba visae iusto! Sedes ante dum superest extrema.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/shortcodes/columns/</link>
+      <link>https://mung0001.github.io/docs/example/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EC%84%A4%EA%B3%84/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/shortcodes/columns/</guid>
-      <description>Columns Columns help organize shorter pieces of content horizontally for readability.
-{{&amp;lt; columns &amp;gt;}} &amp;lt;!-- begin columns block --&amp;gt;# Left ContentLorem markdownum insigne...&amp;lt;---&amp;gt; &amp;lt;!-- magic sparator, between columns --&amp;gt;# Mid ContentLorem markdownum insigne...&amp;lt;---&amp;gt; &amp;lt;!-- magic sparator, between columns --&amp;gt;# Right ContentLorem markdownum insigne...{{&amp;lt; /columns &amp;gt;}}Example Left Content Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter!</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/shortcodes/expand/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/shortcodes/expand/</guid>
-      <description>Expand Expand shortcode can help to decrease clutter on screen by hiding part of text. Expand content by clicking on it.
-Example Default {{&amp;lt; expand &amp;gt;}}## Markdown contentLorem markdownum insigne...{{&amp;lt; /expand &amp;gt;}}Expand↕Markdown content Lorem markdownum insigne&amp;hellip;With Custom Label {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}}## Markdown contentLorem markdownum insigne...{{&amp;lt; /expand &amp;gt;}}Custom Label...Markdown content Lorem markdownum insigne.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/shortcodes/hints/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/shortcodes/hints/</guid>
-      <description>Hints Hint shortcode can be used as hint/alerts/notification block.
-There are 3 colors to choose: info, warning and danger.
-{{&amp;lt; hint [info|warning|danger] &amp;gt;}}**Markdown content** Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develatstringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa{{&amp;lt; /hint &amp;gt;}}Example Markdown content
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus TelethusaMarkdown content</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/shortcodes/katex/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/shortcodes/katex/</guid>
-      <description>KaTeX KaTeX shortcode let you render math typesetting in markdown document. See KaTeX
-Example {{&amp;lt; katex [display] [class=&amp;#34;text-center&amp;#34;] &amp;gt;}}x = \begin{cases}a &amp;amp;\text{if } b \\c &amp;amp;\text{if } d\end{cases}{{&amp;lt; /katex &amp;gt;}}Display Mode Example Here is some inline example: \(\pi(x)\), rendered in the same line. And below is display example, having display: block \[x = \begin{cases}a &amp;\text{if } b \\c &amp;\text{if } d\end{cases}\]Text continues here.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/shortcodes/mermaid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/shortcodes/mermaid/</guid>
-      <description>Mermaid Chart Mermaid is library for generating svg charts and diagrams from text.
-Example {{&amp;lt; mermaid [class=&amp;#34;text-center&amp;#34;]&amp;gt;}}sequenceDiagramAlice-&amp;gt;&amp;gt;Bob: Hello Bob, how are you?alt is sickBob-&amp;gt;&amp;gt;Alice: Not so good :(else is wellBob-&amp;gt;&amp;gt;Alice: Feeling fresh like a daisyendopt Extra responseBob-&amp;gt;&amp;gt;Alice: Thanks for askingend{{&amp;lt; /mermaid &amp;gt;}}</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/shortcodes/tabs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/shortcodes/tabs/</guid>
-      <description>Tabs Tabs let you organize content by context, for example installation instructions for each supported platform.
-{{&amp;lt; tabs &amp;#34;uniqueid&amp;#34; &amp;gt;}}{{&amp;lt; tab &amp;#34;MacOS&amp;#34; &amp;gt;}} # MacOS Content {{&amp;lt; /tab &amp;gt;}}{{&amp;lt; tab &amp;#34;Linux&amp;#34; &amp;gt;}} # Linux Content {{&amp;lt; /tab &amp;gt;}}{{&amp;lt; tab &amp;#34;Windows&amp;#34; &amp;gt;}} # Windows Content {{&amp;lt; /tab &amp;gt;}}{{&amp;lt; /tabs &amp;gt;}}Example MacOSMacOS This is tab MacOS content.
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter!</description>
+      <guid>https://mung0001.github.io/docs/example/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EC%84%A4%EA%B3%84/</guid>
+      <description>플랫폼 ( Platform )  애플리케이션을 구동시키는 데 필요한 하드웨어와 소프트웨어의 결합 동일 플랫폼 내에서의 상호 호환이 가능하도록 만들어진 결합체를 의미 소프트웨어의 개발과 운영비용을 감소시키고, 생산성이 향상 동일 플랫폼의 커뮤니티가 형성되고 네트워크 효과를 유발  플랫폼의 유형  유형 | 설명 | 사례------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------싱글 사이드 플랫폼 (Single-Side platform) | 제휴 관계를 통해 소비자와 공급자를 연결하는 형태 | 아이튠즈, 안드로이드 마켓투 사이드 플랫폼 (Two-Side Platform) | 두 그룹을 중개하고 모두에게 개방하는 형태 | 소개팅 앱멀티 사이트 플랫폼 (Multi-Side Platform) | 다양한 이해관계 그룹을 연결하여 중개하는 형태 | 페이스북, 인스타그램 플랫폼의 기능 분석  플랫폼 성능 분석을 통해 사용자의 서비스 이용 시 적정성을 알 수 있다.</description>
     </item>
     
   </channel>
