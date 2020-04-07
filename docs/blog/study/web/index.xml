@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>정근이가 잘 할거에요</title>
+    <link>https://mung0001.github.io/docs/blog/study/web/</link>
+    <description>Recent content on 정근이가 잘 할거에요</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://mung0001.github.io/docs/blog/study/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/blog/study/web/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/blog/study/web/css/</guid>
+      <description>#css태그 {스타일}*{}전체선택.클래스명{스타일}&amp;lt;h1 class=&amp;quot;클래스명&amp;quot;&amp;gt;id 선택자#아이디명{스타일}단위: em, ex, px, ptfont-family: &amp;lt;글꼴 이름[,&amp;lt;글꼴 이름&amp;gt;, &amp;lt;글꼴 이름&amp;gt;];font-size: &amp;lt;절대 크기&amp;gt; | &amp;lt;상대 크기&amp;gt; | &amp;lt;크기&amp;gt; | &amp;lt;백분율&amp;gt;font-weight: noraml | bold | bolder | lighter | 100 | 200 ...font-variant: normal | small-capsfont-style: normal | italic | obliquefont: .....#text 스타일color: &amp;lt;색상&amp;gt;rgb(0,200,0). rgba(n,n,n,n), #0000ff, bluetext-decoration: none | underline | overline | line-throughtext-transform: none | capitalize | uppercase | lowercase | full-widthtext-shadow: none | &amp;lt;가로 거리&amp;gt; &amp;lt;세로 거리&amp;gt; &amp;lt;번짐 정도&amp;gt; &amp;lt;색상&amp;gt;white-space: normal | nowrap | pre | pre-line | pre-wrapletter-spacing: normal | &amp;lt;크기&amp;gt;word-spacing: normal | &amp;lt;크기&amp;gt;#문단 스타일direction: ltr | rtlltr 왼쪽에서 오른쪽으로 표시rtl 오른쪽에서 왼쪽으로 표시text-align: start | end | left | right | center | justtify | match-parenttext-justfy: auto | none | inter-word | distributetext-indent: &amp;lt;크기&amp;gt; | &amp;lt;백분율&amp;gt; 들여쓰기text-overflow: clip | ellipsis 너치는 텍스트를 자르기 | .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/blog/study/web/html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/blog/study/web/html/</guid>
+      <description>HTML Expand↕HTML 기본양식 &amp;lt;head&amp;gt;&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt;&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt; 태그 줄 바꾸기  &amp;lt;br&amp;gt; 구분선  &amp;lt;hr&amp;gt; 제목  &amp;lt;h1- h6&amp;gt; &amp;lt;/hn&amp;gt; 문단  &amp;lt;p&amp;gt; &amp;lt;/p&amp;gt; 입력을 그대로 표시하는 태그  &amp;lt;pre&amp;gt; &amp;lt;/pre&amp;gt; 인용문을 넣는 태그  &amp;lt;blockquote&amp;gt; &amp;lt;/blockquote&amp;gt; 인용문을 인 라인에 넣는 태그  &amp;lt;q&amp;gt; &amp;lt;/q&amp;gt; text 밑줄  &amp;lt;u&amp;gt; &amp;lt;/u&amp;gt; 굵은 텍스트  &amp;lt;b&amp;gt; &amp;lt;/b&amp;gt; 텍스트 강조  &amp;lt;strong&amp;gt; &amp;lt;/strong&amp;gt; 형광펜 텍스트  &amp;lt;mark&amp;gt;&amp;lt;/mark&amp;gt; 동아시아 글자 표시 rt는 읽는 방법표기법  &amp;lt;ruby&amp;gt; &amp;lt;rt&amp;gt; &amp;lt;/rt&amp;gt; &amp;lt;/ruby&amp;gt; 이탤릭 체 Emphasized tag  &amp;lt;em&amp;gt; &amp;lt;/em&amp;gt; 줄 찍  &amp;lt;del&amp;gt; &amp;lt;/del&amp;gt; 인설트 태그  &amp;lt;ins&amp;gt; &amp;lt;/ins&amp;gt;This is &amp;lt;sub&amp;gt; sub &amp;lt;sub&amp;gt; text &amp;lt;/sub&amp;gt; &amp;lt;/sub&amp;gt;  &amp;lt; &amp;gt; 태그 요소  &amp;amp;lt; &amp;amp;gt; 스페이스바  &amp;amp;nbsp;  약자 속성, title 속성을 함께 사용가능  &amp;lt;addr&amp;gt; &amp;lt;/addr&amp;gt; 포스트에서 참고 내용을 표시  &amp;lt;cite&amp;gt; &amp;lt;/cite&amp;gt; 컴퓨터 인식코드  &amp;lt;code&amp;gt; &amp;lt;/code&amp;gt; 키보드, 음성 입력  &amp;lt;kbd&amp;gt; &amp;lt;/kbd&amp;gt; 작게 표시 (부가정보)  &amp;lt;small&amp;gt; &amp;lt;/small&amp;gt; 아래 첨자  &amp;lt;sub&amp;gt; &amp;lt;/sub&amp;gt; 위 첨자  &amp;lt;sup&amp;gt; &amp;lt;/sup&amp;gt; 취소선  &amp;lt;s&amp;gt; &amp;lt;/s&amp;gt; List #list&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;ul의 종류: disc, circle, sqaure, none&amp;lt;ol&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;ol&amp;gt;ol의 종류: 1, i, l, a, A, none&amp;lt;dl&amp;gt;&amp;lt;dt&amp;gt; &amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt; &amp;lt;/dd&amp;gt;&amp;lt;dt&amp;gt; &amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt; &amp;lt;/dd&amp;gt;&amp;lt;/dl&amp;gt; p { color : xx; background: xx; adding: xx; }</description>
+    </item>
+    
+  </channel>
+</rss>

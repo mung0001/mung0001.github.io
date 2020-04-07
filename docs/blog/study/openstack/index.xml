@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>정근이가 잘 할거에요</title>
+    <link>https://mung0001.github.io/docs/blog/study/openstack/</link>
+    <description>Recent content on 정근이가 잘 할거에요</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://mung0001.github.io/docs/blog/study/openstack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/blog/study/openstack/openstack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/blog/study/openstack/openstack/</guid>
+      <description>인프라 환경 변화의 시작, 클라우드 클라우드 컴퓨팅의 정의와 종류 클라우드 컴퓨팅(Cloud Computing)  인터넷이 가능한 디바이스(스마트폰, 스마트패드, 스마트TV 등)로 클라우드에서 데이터를 처리하며, 저장 및 관리하는 컴퓨팅 시스템  클라우드 서비스의 종류   IaaS(Infrastrcture as a Service): 서버, 스토리지, 네트워크를 가상화 환경으로 만 들어 필요에 따라 인프라 자원을 제공하는 서비스
+  PaaS(Platform as a Service): 웹에서 개발 플랫폼을 제공하는 서비스
+  SaaS(Software as a Service): 온디맨드 소프트웨어(On-demand Software)라고도 하며, 중앙에서 호스팅 되는 소프트웨어를 웹 브라우저 등 클라우이언트로 이용하는 서비스</description>
+    </item>
+    
+  </channel>
+</rss>
