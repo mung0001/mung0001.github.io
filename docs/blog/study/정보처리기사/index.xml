@@ -25,7 +25,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/blog/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/2.-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B3%84%EB%B0%9C/</guid>
-      <description>ㅎㅇ</description>
+      <description>데이터 입출력 구현  자료 구조 ( Data Structure )    컴퓨터상 자료를 효율적으로 저장하기 위해 만들어진 논리적인 구조
+  자료 구조의 현명한 선택을 통해 효율적인 알고리즘을 사용할 수 있어 성능을 향샹
+   자료 구조의 분류    자료 구조의 분류는 선형 구조와 비선형 구조로 크게 나뉜다
+  선형 구조에는 배열, 연결 리스트, 스택, 큐 등이 있다
+  비선형 구조엔느 트리, 그래프 등이 존재</description>
     </item>
     
     <item>

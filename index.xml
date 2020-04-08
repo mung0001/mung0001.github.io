@@ -68,6 +68,18 @@ Follow the following steps:
     
     <item>
       <title></title>
+      <link>https://mung0001.github.io/docs/blog/network/packet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/blog/network/packet/</guid>
+      <description>네트워크 패킷 ( Network Packet )    패킷이란 데이터의 묶음 단위로 한번에 전송할 데이터의 크기
+  제 3계층 이상 ( Network 계층 ) 에서는 이 데이터의 묶음을 패킷이라고 부르며, 제 2계층에서는 프레임( Frame )
+  패킷의 크기는 네트워크의 종류에 따라 크기가 다름
+  패킷을 이렇게 나눠 보내는 이유는 컴퓨터는 동시다발적으로 데이터를 전송하는 데, 한 데이터에게만 데이터를 줄 경우, 한 컴퓨터와의 통신밖에 하지 못하기에, 데이터를 나눠 모두에게 통신할 수 있게 하며, 중간에 에러가 날 경우를 대비</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://mung0001.github.io/docs/blog/study/openstack/openstack/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -110,7 +122,11 @@ Follow the following steps:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/blog/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/2.-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B3%84%EB%B0%9C/</guid>
-      <description>ㅎㅇ</description>
+      <description>데이터 입출력 구현  자료 구조 ( Data Structure )    컴퓨터상 자료를 효율적으로 저장하기 위해 만들어진 논리적인 구조
+  자료 구조의 현명한 선택을 통해 효율적인 알고리즘을 사용할 수 있어 성능을 향샹
+   자료 구조의 분류    자료 구조의 분류는 선형 구조와 비선형 구조로 크게 나뉜다
+  선형 구조에는 배열, 연결 리스트, 스택, 큐 등이 있다
+  비선형 구조엔느 트리, 그래프 등이 존재</description>
     </item>
     
     <item>
