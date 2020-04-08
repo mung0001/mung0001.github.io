@@ -19,7 +19,7 @@
 <title>정근이가 잘 할거에요</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.b359adf4278f2556f684ad221f21ee5336ecac1bdbcc148e52ae66ee6c0d9bd0.js" integrity="sha256-s1mt9CePJVb2hK0iHyHuUzbsrBvbzBSOUq5m7mwNm9A="></script>
+<script defer src="/en.search.min.c355c1d4edfa10604a66429b79c100e22f17dabfec977209add100db74293caa.js" integrity="sha256-w1XB1O36EGBKZkKbecEA4i8X2r/sl3IJrdEA23QpPKo="></script>
 <!--
 
 -->
@@ -447,7 +447,7 @@
     <li>
       <ul>
         <li><a href="#http-protocol"><strong>HTTP Protocol</strong></a></li>
-        <li><a href="#heading-32">****</a></li>
+        <li><a href="#heading-33">****</a></li>
       </ul>
     </li>
   </ul>
@@ -548,9 +548,17 @@
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <img src="https://t1.daumcdn.net/cfile/tistory/997A14455E1B437113" alt="인캡슐레이션"></p>
+      <p><img src="https://t1.daumcdn.net/cfile/tistory/997A14455E1B437113" alt="인캡슐레이션"></p>
 <h1 id="heading"></h1>
-<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>위에 언급한 듯이 송신자가 수신자에게 데이터를 볼 수 있도록 포장하는 것을 인캡슐레이션이라 하며 이는 <strong>OSI L7에서 L1 방향</strong>으로 진행 된다.</p>
+</li>
+<li>
+<p>Payload를 4 계층 TCP 헤더로 캡슐화( 세그먼트 ) -&gt; IPv4, TCP 헤더로 캡슐화 ( 패킷 ) -&gt; IPv4, TCP, Ethernet( 프레임 )으로 캡슐화 하는 것을 인 캡슐레이션이라 한다.</p>
+</li>
+</ul>
+
     </div>
   </label>
 </div>
@@ -566,16 +574,25 @@
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <img src="https://t1.daumcdn.net/cfile/tistory/996441455E1B43891D" alt="디캡슐레이션"></p>
-<!-- raw HTML omitted -->
+      <p><img src="https://t1.daumcdn.net/cfile/tistory/996441455E1B43891D" alt="디캡슐레이션"></p>
+<ul>
+<li>
+<p>인캡슐레이션 되어진 ( 포장되어진 ) 페이로드를 읽기위해서 포장되어진 역 순서로 다시 헤더를 제거하는 것을 디 캡슐레이션이라 하며, <strong>OSI L1에서 L7 방향</strong>으로 진행 된다.</p>
+</li>
+<li>
+<p>Payload를 IPv4, TCP, Ethernet ( 프레임 ) -&gt; IPv4, TCP, ( 패킷 ) -&gt; TCP ( 세그먼트 ) -&gt; 데이터로 캡슐화를 해제하는 것을 디 캡슐레이션이라 한다.</p>
+</li>
+</ul>
+
     </div>
   </label>
 </div>
 
 <hr>
 <hr>
-<h2 id="각-계층의-protocol"><strong>각 계층의 Protocol</strong></h2>
 <h1 id="heading-8"></h1>
+<h2 id="각-계층의-protocol"><strong>각 계층의 Protocol</strong></h2>
+<h1 id="heading-9"></h1>
 <ul>
 <li>각 프로토콜은</li>
 <li>2진수 1개 = 1bit</li>
@@ -584,9 +601,9 @@
 <li>16진수 2개 = 2진수 8개</li>
 <li>16진수 2개 8bit = 1byte를 뜻함</li>
 </ul>
-<h1 id="heading-9"></h1>
-<h2 id="2계층--data-link-"><strong>2계층 ( Data-Link )</strong></h2>
 <h1 id="heading-10"></h1>
+<h2 id="2계층--data-link-"><strong>2계층 ( Data-Link )</strong></h2>
+<h1 id="heading-11"></h1>
 <ul>
 <li>
 <p>2계층은 하나의 네트워크 대역 즉, 네트워크 상에 존재하는 여러 장비들 중에서 어떤 장비에게 보내는 <strong>데이터를 전달하는 역할</strong> 을 수행.</p>
@@ -598,7 +615,7 @@
 <p>하나의 네트워크 대역 LAN에서만 통신할 때 사용하며,<strong>다른 네트워크와 통신 할 때에는 3계층이 도와주어야만 통</strong> 신이 가능</p>
 </li>
 </ul>
-<h1 id="heading-11"></h1>
+<h1 id="heading-12"></h1>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/996700395E199B6B0E" alt="D_P" /></p>
 <ul>
 <li>Ethernet 14byte</li>
@@ -606,13 +623,13 @@
 <li>Source Address: 데이터를 전달하는 시스템의 MAV 주소 6byte
 상위 프로토콜 타입: 2byte, IPv4 ( 0x0800 ), ARD ( 0x0806 )</li>
 </ul>
-<h1 id="heading-12"></h1>
+<h1 id="heading-13"></h1>
 <hr>
 <hr>
 <h2 id="3계층--network-"><strong>3계층 ( Network )</strong></h2>
-<h1 id="heading-13"></h1>
-<h3 id="arp-protocol"><strong>ARP Protocol</strong></h3>
 <h1 id="heading-14"></h1>
+<h3 id="arp-protocol"><strong>ARP Protocol</strong></h3>
+<h1 id="heading-15"></h1>
 <ul>
 <li>
 <p>ARP 프로토콜은 같은 네트워크 대역에서 통신을 하기 위해 필요한 <strong>MAC주소를 IP주소를 이용해서 알아오는 프로토콜</strong></p>
@@ -624,7 +641,7 @@
 <p>ARP는 같은 대역에서만 사용가능</p>
 </li>
 </ul>
-<h1 id="heading-15"></h1>
+<h1 id="heading-16"></h1>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/99A5593E5E19A5C317" alt="N_A" /></p>
 <ul>
 <li>
@@ -637,7 +654,7 @@
 <p>최소는 60byte, 최대는 1514byte</p>
 </li>
 </ul>
-<h1 id="heading-16"></h1>
+<h1 id="heading-17"></h1>
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -666,11 +683,11 @@
   </label>
 </div>
 
-<h1 id="heading-17"></h1>
+<h1 id="heading-18"></h1>
 <hr>
 <hr>
 <h3 id="ipv4-protocol"><strong>IPv4 Protocol</strong></h3>
-<h1 id="heading-18"></h1>
+<h1 id="heading-19"></h1>
 <ul>
 <li>
 <p>IPv4는 네트워크 상에서 데이터를 교환하기 위한 프로토콜이지만, <strong>데이터가 정확하게 전달될 것을 보장하지는 않음</strong></p>
@@ -682,7 +699,7 @@
 <p>데이터의 정확하고 순차적인 전달은 그보다 상위 프로토콜인 TCP에서 보장</p>
 </li>
 </ul>
-<h1 id="heading-19"></h1>
+<h1 id="heading-20"></h1>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/992CC3435E1B443431" alt="N_I" /></p>
 <ul>
 <li><strong>구조 설명</strong>
@@ -717,11 +734,11 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-20"></h1>
+<h1 id="heading-21"></h1>
 <hr>
 <hr>
 <h3 id="icmp-protocol"><strong>ICMP Protocol</strong></h3>
-<h1 id="heading-21"></h1>
+<h1 id="heading-22"></h1>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/99B7AC3D5E19AA312F" alt="N_I" /></p>
 <ul>
 <li>8 ( 요청 )/ 0 ( 정상적인 응답 )</li>
@@ -731,7 +748,7 @@
 <hr>
 <hr>
 <h2 id="4계층--transport-"><strong>4계층 ( Transport )</strong></h2>
-<h1 id="heading-22"></h1>
+<h1 id="heading-23"></h1>
 <ul>
 <li>
 <p>4계층 전송 계층 ( Transprot layer )은 <strong>송신자의 프로세스와 수신자의 프로세스를 연결하는 서비스</strong> 를 제공하는 계층이다.</p>
@@ -743,9 +760,9 @@
 <p>전송 프로토콜 중 가장 장 알려진 것은 연결 지향전송박시으로 사용하는 <strong>전송제어 프로토콜( TCP )</strong> 단순한 전송에 사용되는 사용자 <strong>데이터 프로토콜 ( UDP )</strong> 가 있다</p>
 </li>
 </ul>
-<h1 id="heading-23"></h1>
-<h3 id="udp-protocol"><strong>UDP Protocol</strong></h3>
 <h1 id="heading-24"></h1>
+<h3 id="udp-protocol"><strong>UDP Protocol</strong></h3>
+<h1 id="heading-25"></h1>
 <ul>
 <li>
 <p>UDP 프로토콜 ( User Datagram Protocol )은 데이터 그램 프로토콜 ( Universal Datagram Protocol )이라고 일컫기도 한다.</p>
@@ -757,13 +774,13 @@
 <p>UDP는 일반적으로 오류의 검사와 수정이 필요 없는 프로그램에서 수행할 것으로 가정해야 한다.</p>
 </li>
 </ul>
-<h1 id="heading-25"></h1>
-<p><img src="https://t1.daumcdn.net/cfile/tistory/99F246485E1B452132" alt="T_U" /></p>
 <h1 id="heading-26"></h1>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/99F246485E1B452132" alt="T_U" /></p>
+<h1 id="heading-27"></h1>
 <hr>
 <hr>
 <h3 id="tcp-protocol"><strong>TCP Protocol</strong></h3>
-<h1 id="heading-27"></h1>
+<h1 id="heading-28"></h1>
 <ul>
 <li>
 <p>전송 제어 프로토콜 (Transmission Control Protocol ) 은 인터넷에 연결된 컴퓨터에서 실행되는 프로그램 간에 통신을  <strong>안정적으로, 순서대로 에러없이 교환</strong> 할 수 있다</p>
@@ -772,7 +789,7 @@
 <p>TCP의 안정성을 필요로 하지 않은 애플리케이션의 경우 일반적으로 TCP 대신 비접속형 사용자 데이터그램 프로토콜 ( User Datagream Protocol )을 사용하여, <strong>TCP는 UDP보다 안전하지만 느리다</strong></p>
 </li>
 </ul>
-<h1 id="heading-28"></h1>
+<h1 id="heading-29"></h1>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/99D791365E1A618116" alt="T_T" /></p>
 <ul>
 <li><strong>TCP Fags</strong>
@@ -789,7 +806,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-29"></h1>
+<h1 id="heading-30"></h1>
 <h3 id="3way-handshake"><strong>3Way Handshake</strong></h3>
 <div class="book-expand">
   <label>
@@ -838,14 +855,14 @@
   </label>
 </div>
 
-<h1 id="heading-30"></h1>
+<h1 id="heading-31"></h1>
 <hr>
 <hr>
 <h2 id="7계층--application-"><strong>7계층 ( Application )</strong></h2>
-<h1 id="heading-31"></h1>
+<h1 id="heading-32"></h1>
 <h3 id="http-protocol"><strong>HTTP Protocol</strong></h3>
-<h3 id="heading-32">****</h3>
-<h1 id="heading-33"></h1>
+<h3 id="heading-33">****</h3>
+<h1 id="heading-34"></h1>
 <ul>
 <li>
 <p>IP( Internet Protocol )은 네트워크 계층에서 사용하는 주소로, 컴퓨터는 MAC주소를 사용하지만, <strong>사람이 읽기 힘들어 읽기 편한 IP주소를 사용</strong> 한다.</p>
@@ -854,7 +871,7 @@
 <p>3계층은 다른 네트워크 대역 즉, <strong>멀리 떨어진 곳에 존재하는 네트워크까지 어떻게 데이터를 전달할지 제어하는 일을 담당, 발신에서 착신까지의 패킷의 경로를 제어하는 역할을 수행</strong> 하며 거리가 먼 다른 기기와 통신을 위해서는 3계층이 필요하다</p>
 </li>
 </ul>
-<h1 id="heading-34"></h1>
+<h1 id="heading-35"></h1>
 </article>
  
       
@@ -984,7 +1001,7 @@
     <li>
       <ul>
         <li><a href="#http-protocol"><strong>HTTP Protocol</strong></a></li>
-        <li><a href="#heading-32">****</a></li>
+        <li><a href="#heading-33">****</a></li>
       </ul>
     </li>
   </ul>
