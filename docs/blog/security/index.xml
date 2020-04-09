@@ -10,5 +10,21 @@
 	<atom:link href="https://mung0001.github.io/docs/blog/security/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/blog/security/tt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/blog/security/tt/</guid>
+      <description>Network Security  해킹 프로세스   확인 정보( OS 버전, 응용 프로그램, IP주소, 도메인 )
+  정보 수집
+  취약점 확인
+  관리자 권한 획득
+   정보 수집   구글 검색    intitle:[검색어] - 탭 제목에 포함된 내용으로 검색
+  filetype:[검색어] - 특정 파일 확장자로 검색
+  site:[검색어] - 특정 도메인 주소 검색
+  inurl:[검색어] - URL에 포함된 문자 검색</description>
+    </item>
+    
   </channel>
 </rss>

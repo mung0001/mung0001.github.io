@@ -19,7 +19,7 @@
 <title>왈왈왈</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.83785485ca4b118b0c79dc97116ace4be39ee6503d55ffdcc72299d615f6ff75.js" integrity="sha256-g3hUhcpLEYsMedyXEWrOS&#43;Oe5lA9Vf/cxyKZ1hX2/3U="></script>
+<script defer src="/en.search.min.29626ca7added86349a1cbfff9139153d1ee942e87b3c10f0cdf2c049ca1d8b1.js" integrity="sha256-KWJsp63e2GNJocv/&#43;RORU9HulC6Hs8EPDN8sBJyh2LE="></script>
 <!--
 
 -->
@@ -27,9 +27,10 @@
   
 </head>
 
-<body style="background-image: url('/B_i.png'); width:100%;">
+<body style="background-image: url('/B_i.png');">
+  <div class="background">
   <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="container flex" >
+  <main class="container flex" style="width:95%;" >
     <aside class="book-menu">
       
   <nav>
@@ -195,6 +196,8 @@
   <ul>
     
       
+    
+      
         <li>
 
   
@@ -232,6 +235,16 @@
 
   
   <ul>
+    
+      
+        <li>
+
+  
+  <a href="/docs/blog/security/tt/" class="">Tt</a>
+  
+
+</li>
+      
     
   </ul>
   
@@ -447,9 +460,32 @@
     <li>
       <ul>
         <li><a href="#http-protocol"><strong>HTTP Protocol</strong></a></li>
-        <li><a href="#heading-33">****</a></li>
       </ul>
     </li>
+  </ul>
+
+  <ul>
+    <li><a href="#dns-protocol"><strong>DNS Protocol</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#domain-address"><strong>Domain address</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#쿼리-query-"><strong>쿼리( Query )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#zone-영역파일"><strong>ZONE 영역파일</strong></a></li>
   </ul>
 </nav>
 
@@ -861,8 +897,111 @@
 <h2 id="7계층--application-"><strong>7계층 ( Application )</strong></h2>
 <h1 id="heading-32"></h1>
 <h3 id="http-protocol"><strong>HTTP Protocol</strong></h3>
-<h3 id="heading-33">****</h3>
+<h1 id="heading-33"></h1>
+<hr>
+<hr>
+<h2 id="dns-protocol"><strong>DNS Protocol</strong></h2>
+<p><img src="/study/DNS_2.gif" alt="DNS" /></p>
 <h1 id="heading-34"></h1>
+<ul>
+<li>
+<p>기존의 192.168&hellip;.. 등의 호스트 도메인의 이름을 네트워크 주소로 바꾸거나 그 반대의 변환을 수행을 위해 개발되어짐</p>
+</li>
+<li>
+<p>일반적으로  <a href="http://www.xxx.com">www.xxx.com</a>과 같은 도메인 주소를 입력하면 해당 주소에 맞는 IP주소로 변환시켜주는 역할을 수행</p>
+</li>
+<li>
+<p><div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>DNS 서버는 계층 구조로 이루어져 있음</span>
+      <span>...</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <p><img src="/study/DNS.png" alt="DNS"></p>
+<ul>
+<li><strong>DNS 서버는 계층 구조</strong></li>
+</ul>
+<blockquote>
+<p><strong>루트 DNS 서버</strong></p>
+<blockquote>
+<p><strong>최상위 레벨의 DNS 서버</strong></p>
+<blockquote>
+<p><strong>책임 DNS 서버</strong></p>
+<blockquote>
+<p><strong>로컬 DNS 서버로 구성</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+
+    </div>
+  </label>
+</div>
+}</p>
+</li>
+</ul>
+<h1 id="heading-35"></h1>
+<hr>
+<hr>
+<h3 id="domain-address"><strong>Domain address</strong></h3>
+<h1 id="heading-36"></h1>
+<ul>
+<li>
+<p>인터넷 상에서의 주소인 URL의 일부</p>
+</li>
+<li>
+<p>도메인 또는 도메인 네임( Domain name )은 넓게 보면 암기 및 식별하기 어려운 IP주소를 example.com처럼 기억하기 쉽게 만들어주는 네트워크 호스트를 의미</p>
+</li>
+<li>
+<p>보통 루트 네임 서버( 최상위 DNS서버로 JAVA에서 관리 )에 등록된 최상위 호스트 네임을 관리하는 도메인 레지스트리에서 관리하는 하위 호스트 네임을 이르는 말</p>
+</li>
+</ul>
+<h1 id="heading-37"></h1>
+<hr>
+<hr>
+<h3 id="쿼리-query-"><strong>쿼리( Query )</strong></h3>
+<h1 id="heading-38"></h1>
+<p><strong>재귀 쿼리</strong></p>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/990420385E30D8E128" alt="DNS" /></p>
+<ul>
+<li><strong>로컬 DNS서버와 주고받는 질의와 응답</strong></li>
+</ul>
+<h1 id="heading-39"></h1>
+<h1 id="heading-40"></h1>
+<hr>
+<p><strong>반복 쿼리</strong></p>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/99FFB9385E30D8E228" alt="DNS" /></p>
+<ul>
+<li><strong>로컬 DNS 서버가 다른 DNS 서버와 주고 받는 응답</strong></li>
+</ul>
+<h1 id="heading-41"></h1>
+<h1 id="heading-42"></h1>
+<hr>
+<p><strong>권한이 없는 응답</strong></p>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/99041C385E30D8E228" alt="DNS" /></p>
+<ul>
+<li><strong>반복 쿼리를 통해 알아온 주소</strong></li>
+</ul>
+<h1 id="heading-43"></h1>
+<h1 id="heading-44"></h1>
+<hr>
+<p><strong>권한이 있는 응답</strong></p>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/9902E0385E30D8E228" alt="DNS" /></p>
+<ul>
+<li><strong>로컬 DNS가 알고 있는 주소</strong></li>
+</ul>
+<h1 id="heading-45"></h1>
+<hr>
+<hr>
+<h2 id="zone-영역파일"><strong>ZONE 영역파일</strong></h2>
+<h1 id="heading-46"></h1>
+<ul>
+<li>호스트 IP를 저장하고 있는 파일</li>
+</ul>
+<h1 id="heading-47"></h1>
+<h1 id="heading-48"></h1>
 <ul>
 <li>
 <p>IP( Internet Protocol )은 네트워크 계층에서 사용하는 주소로, 컴퓨터는 MAC주소를 사용하지만, <strong>사람이 읽기 힘들어 읽기 편한 IP주소를 사용</strong> 한다.</p>
@@ -871,7 +1010,7 @@
 <p>3계층은 다른 네트워크 대역 즉, <strong>멀리 떨어진 곳에 존재하는 네트워크까지 어떻게 데이터를 전달할지 제어하는 일을 담당, 발신에서 착신까지의 패킷의 경로를 제어하는 역할을 수행</strong> 하며 거리가 먼 다른 기기와 통신을 위해서는 3계층이 필요하다</p>
 </li>
 </ul>
-<h1 id="heading-35"></h1>
+<h1 id="heading-49"></h1>
 </article>
  
       
@@ -1001,9 +1140,32 @@
     <li>
       <ul>
         <li><a href="#http-protocol"><strong>HTTP Protocol</strong></a></li>
-        <li><a href="#heading-33">****</a></li>
       </ul>
     </li>
+  </ul>
+
+  <ul>
+    <li><a href="#dns-protocol"><strong>DNS Protocol</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#domain-address"><strong>Domain address</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#쿼리-query-"><strong>쿼리( Query )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#zone-영역파일"><strong>ZONE 영역파일</strong></a></li>
   </ul>
 </nav>
 
@@ -1014,7 +1176,7 @@
 
   
 </body>
-
+</div>
 </html>
 
 
