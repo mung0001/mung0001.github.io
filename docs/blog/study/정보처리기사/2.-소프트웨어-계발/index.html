@@ -21,7 +21,7 @@
 <title>왈왈왈</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.5ba254b25c4b7ef176f3c76e58d7ea3400e3f711d6f5c1aa5c1bb7c6b20f6c81.js" integrity="sha256-W6JUslxLfvF288duWNfqNADj9xHW9cGqXBu3xrIPbIE="></script>
+<script defer src="/en.search.min.769cce181a08e408f73993416e3c3ba20027c68458724cbda35f462a26f4cf7e.js" integrity="sha256-dpzOGBoI5Aj3OZNBbjw7ogAnxoRYcky9o19GKib0z34="></script>
 <!--
 
 -->
@@ -593,13 +593,141 @@
   </ul>
 
   <ul>
+    <li><a href="#물리-데이터-저장소-구성"><strong>물리 데이터 저장소 구성</strong></a></li>
+  </ul>
+
+  <ul>
     <li>
       <ul>
-        <li><a href="#heading-27">****</a></li>
-        <li><a href="#heading-28">****</a></li>
-        <li><a href="#heading-29">****</a></li>
-        <li><a href="#heading-30">****</a></li>
-        <li><a href="#heading-31">****</a></li>
+        <li><a href="#테이블-제약조건--constraint-설계"><strong>테이블 제약조건 ( Constraint )설계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#인덱스--index--설계"><strong>인덱스 ( Index ) 설계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#뷰-view--설계"><strong>뷰( View ) 설계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#클러스터-cluster--설계"><strong>클러스터( Cluster ) 설계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#파티션-partition--설계"><strong>파티션( Partition ) 설계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#디스크-disk-구성-설계"><strong>디스크( Disk )구성 설계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#orm-object-relational-mapping-프레임워크">**ORM( Object-Relational Mapping )프레임워크</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#orm-프레임워크-매핑-기법"><strong>ORM 프레임워크 매핑 기법</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#orm-프레임워크-매핑-기법-1"><strong>ORM 프레임워크 매핑 기법</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#orm-프레임워크-절차"><strong>ORM 프레임워크 절차</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#논리-데이터-저장소-구조"><strong>논리 데이터 저장소 구조</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#트랜잭션-인터페이스"><strong>트랜잭션 인터페이스</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#트랜잭션-인터페이스-설계"><strong>트랜잭션 인터페이스 설계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#프로시저"><strong>프로시저</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#절차형-데이터-조작-프로시저"><strong>절차형 데이터 조작 프로시저</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#프로그램-디버깅-program-debugging-"><strong>프로그램 디버깅( Program Debugging )</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#프로그램-디버깅-도구"><strong>프로그램 디버깅 도구</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#단위-테스트-도구"><strong>단위 테스트 도구</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#쿼리-query--성능-측정"><strong>쿼리( Query ) 성능 측정</strong></a>
+      <ul>
+        <li><a href="#heading-63">****</a></li>
       </ul>
     </li>
   </ul>
@@ -1011,13 +1139,417 @@
 </li>
 </ul>
 </li>
+<li>
+<p><strong>반 정규화 ( De-normalization ) 수행 ( 시스템 성능 향상과 개발 및 운영의 단순화를 위해 데이터 모델을 통합하는 반 정규화를 수행</strong></p>
+<ul>
+<li><strong>반 정규화 수행 방법</strong></li>
+</ul>
+<ol>
+<li>
+<p>증복 테이블 추가: 집계 테이블, 특정 부분만 포함하는 테이블 추가</p>
+</li>
+<li>
+<p>테이블 조합: 1:1, 1:M, 슈퍼 타입/ 서브 타입 테이블 조합</p>
+</li>
+<li>
+<p>테이블 분할: 수직분할, 수평분할</p>
+</li>
+<li>
+<p>테이블 제거: 테이블 재정의 접근하지 않는 테이블 제거</p>
+</li>
+<li>
+<p>컬럼 중복화, 조인 성능 향상을 위한 중복 허용</p>
+</li>
+</ol>
+</li>
 </ol>
 <h1 id="heading-26"></h1>
-<h3 id="heading-27">****</h3>
-<h3 id="heading-28">****</h3>
-<h3 id="heading-29">****</h3>
-<h3 id="heading-30">****</h3>
-<h3 id="heading-31">****</h3>
+<hr>
+<hr>
+<h2 id="물리-데이터-저장소-구성"><strong>물리 데이터 저장소 구성</strong></h2>
+<h1 id="heading-27"></h1>
+<ul>
+<li>DBMS를 선정한 이후 물리 데이터 저장소 구성을 위한 활동</li>
+</ul>
+<h1 id="heading-28"></h1>
+<h3 id="테이블-제약조건--constraint-설계"><strong>테이블 제약조건 ( Constraint )설계</strong></h3>
+<h1 id="heading-29"></h1>
+<pre><code>제약 조건                              |     옵션           |           설명
+--------------------------------------------------------------------------------------------------------------------------
+삭제 제약 조건 ( Delete Constraint )    | 연쇄 ( Cascade)    | 참조한 테이블에 있는 외부 키와 일치하는 모든 Row가 삭제
+                                      | 제한 ( Restricted) | 참조한 테이블에 있는 외부 키에 없는 것만 삭제 가능
+                                      | 무효 ( Nullify )   | 참조한 테이블에 정의된 외부 키와 일치하는 것을 Null로 수정
+--------------------------------------------------------------------------------------------------------------------------
+갱신 제약 조건 ( Update Constraint )    | 연쇄 ( Cascade)    | 참조한 테이블에 있는 외부 키와 일치하는 모든 Row가 수정
+                                      | 제한 ( Restricted) | 참조한 테이블에 있는 외부 키에 없는 것만 수정 가능
+                                      | 무효 ( Nullify )   | 참조한 테이블에 정의된 외부 키와 일치하는 것을 Null로 수정
+</code></pre>
+<hr>
+<hr>
+<h1 id="heading-30"></h1>
+<h3 id="인덱스--index--설계"><strong>인덱스 ( Index ) 설계</strong></h3>
+<pre><code>- 인덱스 적용 기준, 컬럼 선정, 고려사항 등을 고려하여 설계
+- 인덱스 적용 기준 ( 인덱스 분포도가 10~ 15% 이내인 경우): 
+    * 분포도: ( 1/ ( 컬럼 값의 종류 )X 100 )
+    * ( 컬럼 값의 평균 ROw 수 )/ ( 테이블의 총 Row 수 ) X 100
+</code></pre>
+<h1 id="heading-31"></h1>
+<ul>
+<li><strong>인덱스 컬럼 설정</strong>
+<ul>
+<li>
+<p>분포도가 좋은 컬럼은 단독적으로 생성</p>
+</li>
+<li>
+<p>자주 조합되어 사용되는 컬럼은 결합 인덱스로 생성</p>
+</li>
+<li>
+<p>결합 인덱스는 구성되는 컬럼 순서 선정 ( 사용빈도, 유일성, 정렬 등 )에 유의</p>
+</li>
+<li>
+<p>가능한 한 수정이 번번하지 않은 컬럼을 선정</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-32"></h1>
+<ul>
+<li><strong>설계시 고려사항</strong>
+<ul>
+<li>
+<p>지나치게 많은 인덱스는 오베헤드( Overhead )로 작용</p>
+</li>
+<li>
+<p>인덱스는 추가적인 저장 공간이 필요함을 고려해야 한다</p>
+</li>
+<li>
+<p>넓은 범위를 인덱스 처리 시 오히려 전체 처리보다 많은 오버헤드를 발생시킬 수 있음에 유의</p>
+</li>
+<li>
+<p>인덱스와 테이블의 저장 공간을 적절히 분리될 수 있도록 설계</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<hr>
+<h1 id="heading-33"></h1>
+<h3 id="뷰-view--설계"><strong>뷰( View ) 설계</strong></h3>
+<h1 id="heading-34"></h1>
+<ul>
+<li>
+<p><strong>뷰의 속성</strong></p>
+<ul>
+<li>REPLACE: 뷰가 이미 존재하는 경우 재성성</li>
+<li>FORCE: 본 테이블의 존재 여부에 관계 없이 뷰 생성</li>
+<li>NOFORCE: 기본 테이블이 존재할 때 뷰 생성</li>
+<li>WITH CHECK OPTION: 서브 쿼리 내의 조건을 만족하는 행만 변경</li>
+<li>WITH READ ONLY: 데이터 조작어( DML ) 작업 불가</li>
+</ul>
+</li>
+<li>
+<p><strong>뷰 설계시 고려사항</strong></p>
+<ul>
+<li>뷰 사용에 따라 수행속도에 문제가 발생할 수 있다.</li>
+<li>뷰 SELECT 문의 조건은 최적의 엑세스 경로를 사용할 수 있도록 한다.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<hr>
+<h1 id="heading-35"></h1>
+<h3 id="클러스터-cluster--설계"><strong>클러스터( Cluster ) 설계</strong></h3>
+<h1 id="heading-36"></h1>
+<ul>
+<li>
+<p><strong>클러스터의 적용 기준</strong></p>
+<ul>
+<li>
+<p>인덱스의 단점을 ㅎ결한 기법으로, 분포도가 넓을수록 유리</p>
+</li>
+<li>
+<p>액세스 기법이 아니라 액세스 효율 향상을 위한 물리적 저장방법</p>
+</li>
+<li>
+<p>분포도가 넓은 테이블의 클러스터링은 저장 공간의 절약이 가능</p>
+</li>
+<li>
+<p>대량의 범위를 자주 엑세스하는 경우 적용</p>
+</li>
+<li>
+<p>인덱스를 사용한 처리 부담이 되는 넓은 분포도에 활용</p>
+</li>
+<li>
+<p>여러 개의 테이블이 번번하게 조인을 일으킬 때 활용</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>클러스터 설계 시 고려사항</strong></p>
+<ul>
+<li>
+<p>검색 효율은 높여 주나 입력, 수정, 삭제 시는 부하가 증가함을 고려</p>
+</li>
+<li>
+<p>UNION, DISTINCT, ORDER BY, GROUP BY가 빈번한 컬럼이면 검토 대상</p>
+</li>
+<li>
+<p>수정이 자주 발생하지 않는 컬럼은 검토 대상</p>
+</li>
+<li>
+<p>처리 범위가 넓어 문제가 발생하는 경우는 단일 테이블 클러스터링을 고려</p>
+</li>
+<li>
+<p>조인이 많아 문제가 발생되는 경우는 다중 테이블 클러스터링을 고려</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<hr>
+<h1 id="heading-37"></h1>
+<h3 id="파티션-partition--설계"><strong>파티션( Partition ) 설계</strong></h3>
+<h1 id="heading-38"></h1>
+<ul>
+<li><strong>파티션의 종류</strong>
+<ul>
+<li>레인지 파티셔닝( Range Partitioning ): 지정한 열의 값을 기준으로 분할</li>
+<li>해시 파티셔닝( Hash Partitioning ): 해시 함수에 따라 데이터를 분할</li>
+<li>리스트 파티셔닝( List Partitioning ): 미리 정해진 그룹핑 기준에 따라 데이터를 분할</li>
+<li>컴포지트 파티셔닝( Composite Partitioning ): 범위 분할에 이후 해시 함수를 적용하여 재분할</li>
+</ul>
+</li>
+<li><strong>파티션의 장점</strong>
+<ul>
+<li>성능 향상: 데이터 엑세스 범위를 줄여 성능 향상</li>
+<li>가용성 향상: 전체 데이터의 훼손 가능성이 감소 및 데이터 가용성 향상</li>
+<li>백업 가능: 분할 영역을 독립적으로 백업하고 복구 가능</li>
+<li>경합 감소: 디스크 스트라이핑으로 입출력 성능을 향ㅅ아 가능, 디스크 컨트롤러에 대한 경합의 감소</li>
+</ul>
+</li>
+</ul>
+<hr>
+<hr>
+<h1 id="heading-39"></h1>
+<h3 id="디스크-disk-구성-설계"><strong>디스크( Disk )구성 설계</strong></h3>
+<h1 id="heading-40"></h1>
+<ul>
+<li>정확한 용량을 산정하여 디스크 사용의 효율을 높인다</li>
+<li>업무량이 집중되어 있는 디스크를 분리하여 설계</li>
+<li>입출력 경합을 최소화하여 데이터의 접근 성능을 향상</li>
+<li>디스크 구성에 따라 테이블스페이스 개수와 사이즈 등을 결정</li>
+<li>파티션 수행 테이블은 별도로 분류</li>
+</ul>
+<hr>
+<hr>
+<h1 id="heading-41"></h1>
+<h2 id="orm-object-relational-mapping-프레임워크">**ORM( Object-Relational Mapping )프레임워크</h2>
+<h1 id="heading-42"></h1>
+<p><img src="/study/ORM.jpg" alt="ORM" /></p>
+<ul>
+<li>
+<p>관계형 데이터베이스와 객체지향 프로그래밍 언어 간 호환되지 않은 데이터를 변환하는 프로그래밍 기법</p>
+</li>
+<li>
+<p>객체지향 언어에서 사용하는 객체를 관계형 데이터베이스로 변환하여 테이블을 구성하는 활용</p>
+</li>
+</ul>
+<h1 id="heading-43"></h1>
+<h3 id="orm-프레임워크-매핑-기법"><strong>ORM 프레임워크 매핑 기법</strong></h3>
+<ul>
+<li>
+<p>ORM 프레임워크에는 크게 SQL, Mapping기반 기술과 OR Mapping 기반 기술로 구분</p>
+</li>
+<li>
+<p>SQL Mapping 기반 기술로는 iBatis, Mybatis가 있고, OR Mapping 기반 기술로는 Hibernate 등이 있다</p>
+</li>
+</ul>
+<h1 id="heading-44"></h1>
+<h3 id="orm-프레임워크-매핑-기법-1"><strong>ORM 프레임워크 매핑 기법</strong></h3>
+<ul>
+<li>ORM 프레임워크를 통해 객체와 테이블 간의 변환방법을 제공
+<ul>
+<li>객체/ 테이블/ 객체 지향 내 객체는 데이터베이스에서 테이블로 변환</li>
+<li>속성/ 컬럼/ 객체의 속성은 데이터베이스에서 컬럼으로 변환</li>
+<li>오퍼레이션/ 프로시져, 함수/ 객체의 행위인 오퍼레이션은 데이터베이스에서 프로시저 또는 함수로 변환</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-45"></h1>
+<h3 id="orm-프레임워크-절차"><strong>ORM 프레임워크 절차</strong></h3>
+<h1 id="heading-46"></h1>
+<ol>
+<li>
+<p>클래스 &ndash;&gt; 테이블 변환: 클래스의 인스턴스는 테이블 레코드로 변환</p>
+</li>
+<li>
+<p>애트리뷰트 &ndash;&gt; 컬럼 변환: 클래스 인스턴스의 애트리뷰트는 테이블 컬럼으로 변환</p>
+</li>
+<li>
+<p>클래스 간 관계 &ndash;&gt; 테이블 간 관계 변환: 클래스 간 관계를 데이터베이스의 테이블 제약사항으로 변환</p>
+</li>
+</ol>
+<h1 id="heading-47"></h1>
+<h3 id="논리-데이터-저장소-구조"><strong>논리 데이터 저장소 구조</strong></h3>
+<h1 id="heading-48"></h1>
+<pre><code>    구분            |                   부분적 ORM               |                  완전 ORM
+    ------------------------------------------------------------------------------------------------
+    개요            | SQL을 특정이름으로 정의하여 사용            | 내부엔진에서 SQL 자동생성
+    매퍼 사용       | SQL Mapper                                 | Object Relation Mapper
+    방법            | iBatis, MyBatis, Embeded SQL               | Hibernate
+    장점            | 데이터 전송 방식의 효율성                   | 효율적인 매핑 기법
+</code></pre>
+<h1 id="heading-49"></h1>
+<hr>
+<hr>
+<h2 id="트랜잭션-인터페이스"><strong>트랜잭션 인터페이스</strong></h2>
+<h1 id="heading-50"></h1>
+<ul>
+<li>
+<p>데이터베이스 트랜잭션의 공격 및 인터페이스를 정의하는 활동</p>
+</li>
+<li>
+<p>트랜잭션은 데이터베이스의 입출력과 기능적 형태로 정의</p>
+</li>
+<li>
+<p>트랜잭션 인터페이스는 ACID 원칙을 기반으로 설계</p>
+<ul>
+<li>원자성( Atomicity ): 트랜잭션 연산을 데이터베이스 모두에 반영 또는 반영하지 말아야 함 ( All or Nothing )</li>
+<li>일관성( Consistency ): 트랜잭션이 실행을 성공적으로 완료할시 일관성 있는 데이터베이스 상태를 유지</li>
+<li>독립성( Isolation ): 둘 이상의 트랜잭션 동시 실행 시 한 개의 트랜잭션만 접근이 가능하여 간섭불가</li>
+<li>영속성( Durability ): 성공적으로 완료된 트랜잭션 결과는 영구적으로 반영</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-51"></h1>
+<h3 id="트랜잭션-인터페이스-설계"><strong>트랜잭션 인터페이스 설계</strong></h3>
+<h1 id="heading-52"></h1>
+<ul>
+<li>
+<p>데이터 접근 방법 및 인터페이스를 절차적으로 명세</p>
+</li>
+<li>
+<p>트랜잭션 인터페이스는 주로 프로그래밍 언어로 구현</p>
+</li>
+<li>
+<p>대표적인 사례로 JDBC( Java Database Connetivity, ODBC( Open DataBase Connectivity ))등이 있다</p>
+</li>
+</ul>
+<h1 id="heading-53"></h1>
+<h2 id="프로시저"><strong>프로시저</strong></h2>
+<h1 id="heading-54"></h1>
+<ul>
+<li>
+<p>SQL를 이용해 생성된 데이터를 <strong>조작하는 프로그램</strong></p>
+</li>
+<li>
+<p>데이터베이스 내부에 저장되고 일정한 조건이 되면 자동으로 수행</p>
+</li>
+</ul>
+<h1 id="heading-55"></h1>
+<h3 id="절차형-데이터-조작-프로시저"><strong>절차형 데이터 조작 프로시저</strong></h3>
+<ul>
+<li>
+<p>절차형 데이터 조작 프로시저를 Oracle PL/ SQL 기반으로 설명</p>
+<ol>
+<li>
+<p><strong>Oracle 기반 PL/ SQL 개념</strong></p>
+<ul>
+<li>
+<p>표준 SQL을 기본으로 Oracle에서 개발한 데이터 조작 언어</p>
+</li>
+<li>
+<p>Oracle 기반의 모든 프로시저 작성에 사용되며 표준 SQL의 확징 기능이 우수</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>PL/ SQL의 장점</strong></p>
+<ul>
+<li>
+<p>컴파일 불필요: 컴파일 없이 스크립트 생성 및 변경 후 실행가능</p>
+</li>
+<li>
+<p>모듈화 가능: 블록 내에서 논리적으로 관련된 문장 그룹화 가능</p>
+</li>
+<li>
+<p>데이텁이스의 테이블과 레코드를 기반으로 하는 동적변수 선언 가능, 단일형 데이터 타입과 복합형 데이터 타입 선언가능</p>
+</li>
+<li>
+<p>에러처리: 예외처리 루틴을 이용한 에러 처리 가능</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>PL/ SQL의 구성</strong></p>
+<ul>
+<li>
+<p>선언부( Declare ): 실행부에서 참조할 모든 변수, 상수, CURSOR, EXCEPTION을 선언</p>
+</li>
+<li>
+<p>실행부( Begin/ End): Begin과 End 사이에 기술되는 영역, 데이터를 처리할 SQL문과 PL/ SQL 블록을 기술</p>
+</li>
+<li>
+<p>예외부( Exception ): 실행부에서 에러가 발생했을 때 문장 기술</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>PL/ SQL을 활용한 저장형 객체 활용</strong></p>
+<pre><code> 구분                                | 설명
+ -----------------------------------------------------------------------------------------------------------------------------------------
+ 저장된 프로시저( Stored Procedure )  | 작성한 PL/ SQL을 저장해 놓고 필요한 경우 추출
+ 저장된 함수( Stored Fuction )        | 저장 프로시저와 용도는 비슷하나, 실행결과를 되돌려 받을 수 있음
+ 저장된 패키지( Stored Package )      | 프로시저나 함수를 효율적으로 관리하기 위해 패키지 단위로 배포할 때 사용
+ 트리거( Trigger )                    | 특정 테이블에 삽입, 수정, 삭제 등의 데이터 변경 이벤트가 발생 시 DBMS에서 자동적으로 실행되도록 구현된 프로그램
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<hr>
+<h1 id="heading-56"></h1>
+<h2 id="프로그램-디버깅-program-debugging-"><strong>프로그램 디버깅( Program Debugging )</strong></h2>
+<h1 id="heading-57"></h1>
+<ul>
+<li>
+<p>프로시저가 입력 자료를 받아 출력을 올바르게 도출하는지에 관한 확인 과정</p>
+</li>
+<li>
+<p>데이터베이스 프로시저에 대한 검증 작업을 프로그램 디버깅이라 함</p>
+</li>
+</ul>
+<h1 id="heading-58"></h1>
+<h3 id="프로그램-디버깅-도구"><strong>프로그램 디버깅 도구</strong></h3>
+<h1 id="heading-59"></h1>
+<ul>
+<li>
+<p>프로시저의 디버깅을 위해 SQL Plus라는 도구를 이용</p>
+</li>
+<li>
+<p>SQL PLUS는 SQL을 DBMS 서버에 전송하여 처리할 수 있또록 하는 Oracle에서 제공하는 도구</p>
+</li>
+<li>
+<p>주요 명령어로는 파일 명령어, 편짐 명령어, 실행 명령어, 환경 명령어, 형식 명령어, 대화 명령어 등이 있다</p>
+</li>
+</ul>
+<h1 id="heading-60"></h1>
+<h3 id="단위-테스트-도구"><strong>단위 테스트 도구</strong></h3>
+<h1 id="heading-61"></h1>
+<ul>
+<li>
+<p>구현된 프로시저의 적합성을 확인하기 위한 방법을 제공하는 도구</p>
+</li>
+<li>
+<p>Oracle DBMS는 모든 데이터 조작 프로시저에 대한 테스트 환경으로 SQL Plus 기반의 PL/ SQL을 활용</p>
+</li>
+</ul>
+<h1 id="heading-62"></h1>
+<hr>
+<hr>
+<h2 id="쿼리-query--성능-측정"><strong>쿼리( Query ) 성능 측정</strong></h2>
+<h3 id="heading-63">****</h3>
 </article>
  
       
@@ -1160,13 +1692,141 @@
   </ul>
 
   <ul>
+    <li><a href="#물리-데이터-저장소-구성"><strong>물리 데이터 저장소 구성</strong></a></li>
+  </ul>
+
+  <ul>
     <li>
       <ul>
-        <li><a href="#heading-27">****</a></li>
-        <li><a href="#heading-28">****</a></li>
-        <li><a href="#heading-29">****</a></li>
-        <li><a href="#heading-30">****</a></li>
-        <li><a href="#heading-31">****</a></li>
+        <li><a href="#테이블-제약조건--constraint-설계"><strong>테이블 제약조건 ( Constraint )설계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#인덱스--index--설계"><strong>인덱스 ( Index ) 설계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#뷰-view--설계"><strong>뷰( View ) 설계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#클러스터-cluster--설계"><strong>클러스터( Cluster ) 설계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#파티션-partition--설계"><strong>파티션( Partition ) 설계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#디스크-disk-구성-설계"><strong>디스크( Disk )구성 설계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#orm-object-relational-mapping-프레임워크">**ORM( Object-Relational Mapping )프레임워크</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#orm-프레임워크-매핑-기법"><strong>ORM 프레임워크 매핑 기법</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#orm-프레임워크-매핑-기법-1"><strong>ORM 프레임워크 매핑 기법</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#orm-프레임워크-절차"><strong>ORM 프레임워크 절차</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#논리-데이터-저장소-구조"><strong>논리 데이터 저장소 구조</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#트랜잭션-인터페이스"><strong>트랜잭션 인터페이스</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#트랜잭션-인터페이스-설계"><strong>트랜잭션 인터페이스 설계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#프로시저"><strong>프로시저</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#절차형-데이터-조작-프로시저"><strong>절차형 데이터 조작 프로시저</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#프로그램-디버깅-program-debugging-"><strong>프로그램 디버깅( Program Debugging )</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#프로그램-디버깅-도구"><strong>프로그램 디버깅 도구</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#단위-테스트-도구"><strong>단위 테스트 도구</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#쿼리-query--성능-측정"><strong>쿼리( Query ) 성능 측정</strong></a>
+      <ul>
+        <li><a href="#heading-63">****</a></li>
       </ul>
     </li>
   </ul>
