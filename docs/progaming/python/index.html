@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Python 내장함수  ...abs abs(x)는 어떤 숫자를 입력받았을 때, 그 숫자의 절댓값을 돌려주는 함수
+&gt;&gt;&gt; abs(3)3&gt;&gt;&gt; abs(-3)3   all all(x)는 반복 가능한(iterable) 자료형 x를 입력 인수로 받으며 이 x가 모두 참이면 True, 거짓이 하나라도 있으면 False를 반환
+※ 반복 가능한 자료형이란 for문으로 그 값을 출력할 수 있는 것을 의미한다. 리스트, 튜플, 문자열, 딕셔너리, 집합 등이 있다.
+&gt;&gt;&gt; all([1, 2, 3])True&gt;&gt;&gt; all([1, 2, 3, 0])False  any any(x)는 x 중 하나라도 참이 있으면 True를 돌려주고, x가 모두 거짓일 때에만 False를 돌려준다."><meta property="og:title" content="" />
+<meta property="og:description" content="Python 내장함수  ...abs abs(x)는 어떤 숫자를 입력받았을 때, 그 숫자의 절댓값을 돌려주는 함수
+&gt;&gt;&gt; abs(3)3&gt;&gt;&gt; abs(-3)3   all all(x)는 반복 가능한(iterable) 자료형 x를 입력 인수로 받으며 이 x가 모두 참이면 True, 거짓이 하나라도 있으면 False를 반환
+※ 반복 가능한 자료형이란 for문으로 그 값을 출력할 수 있는 것을 의미한다. 리스트, 튜플, 문자열, 딕셔너리, 집합 등이 있다.
+&gt;&gt;&gt; all([1, 2, 3])True&gt;&gt;&gt; all([1, 2, 3, 0])False  any any(x)는 x 중 하나라도 참이 있으면 True를 돌려주고, x가 모두 거짓일 때에만 False를 돌려준다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/progaming/python/" />
+
+
+<title>왈왈왈</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.af55973040c0172a393037ff0682e569005e6595cd19c268c76946d62a129af6.js" integrity="sha256-r1WXMEDAFyo5MDf/BoLlaQBeZZXNGcJox2lG1ioSmvY="></script>
+<!--
+
+-->
+
+  
+</head>
+
+<body style="background-image: url('/B_i.png');">
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="width:95%;" >
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>왈왈왈</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <span>E X</span>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <span>Progaming</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  
+  <a href="/docs/progaming/java/" class="">Java</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/progaming/php/" class="">P H P</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/progaming/python/" class="active">Python</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <span>Study</span>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/" class="">Network</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/network/packet/" class="">Packet</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Python</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#python-내장함수"><strong>Python 내장함수</strong></a>
+      <ul>
+        <li><a href="#abs"><strong>abs</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#all"><strong>all</strong></a></li>
+        <li><a href="#any"><strong>any</strong></a></li>
+        <li><a href="#chr"><strong>chr</strong></a></li>
+        <li><a href="#dir"><strong>dir</strong></a></li>
+        <li><a href="#divmod"><strong>divmod</strong></a></li>
+        <li><a href="#enumerate"><strong>enumerate</strong></a></li>
+        <li><a href="#eval"><strong>eval</strong></a></li>
+        <li><a href="#filter"><strong>filter</strong></a></li>
+        <li><a href="#hex"><strong>hex</strong></a></li>
+        <li><a href="#id"><strong>id</strong></a></li>
+        <li><a href="#input"><strong>input</strong></a></li>
+        <li><a href="#int"><strong>int</strong></a></li>
+        <li><a href="#isinstance"><strong>isinstance</strong></a></li>
+        <li><a href="#len"><strong>len</strong></a></li>
+        <li><a href="#list"><strong>list</strong></a></li>
+        <li><a href="#map"><strong>map</strong></a></li>
+        <li><a href="#max"><strong>max</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#min"><strong>min</strong></a>
+      <ul>
+        <li><a href="#oct"><strong>oct</strong></a></li>
+        <li><a href="#open"><strong>open</strong></a></li>
+        <li><a href="#ord"><strong>ord</strong></a></li>
+        <li><a href="#pow"><strong>pow</strong></a></li>
+        <li><a href="#range"><strong>range</strong></a></li>
+        <li><a href="#round"><strong>round</strong></a></li>
+        <li><a href="#sorted"><strong>sorted</strong></a></li>
+        <li><a href="#str"><strong>str</strong></a></li>
+        <li><a href="#sum"><strong>sum</strong></a></li>
+        <li><a href="#tuple"><strong>tuple</strong></a></li>
+        <li><a href="#type"><strong>type</strong></a></li>
+        <li><a href="#zip"><strong>zip</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#sys"><strong>sys</strong></a>
+      <ul>
+        <li><a href="#argv_testpy"><strong>argv_test.py</strong></a></li>
+        <li><a href="#sysexit"><strong>sys.exit</strong></a></li>
+        <li><a href="#syspath"><strong>sys.path</strong></a></li>
+        <li><a href="#path_appendpy"><strong>path_append.py</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#pickle"><strong>pickle</strong></a></li>
+    <li><a href="#os"><strong>os</strong></a>
+      <ul>
+        <li><a href="#osenviron"><strong>os.environ</strong></a></li>
+        <li><a href="#oschdir"><strong>os.chdir</strong></a></li>
+        <li><a href="#osgetcwd"><strong>os.getcwd</strong></a></li>
+        <li><a href="#ossystem"><strong>os.system</strong></a></li>
+        <li><a href="#ospopen"><strong>os.popen</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#shutil"><strong>shutil</strong></a></li>
+    <li><a href="#glob"><strong>glob</strong></a></li>
+    <li><a href="#tempfile"><strong>tempfile</strong></a></li>
+    <li><a href="#time"><strong>time</strong></a>
+      <ul>
+        <li><a href="#timetime"><strong>time.time</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#random"><strong>random</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#webbrowser"><strong>webbrowser</strong></a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="python-내장함수"><strong>Python 내장함수</strong></h2>
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span> </span>
+      <span>...</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">
+
+</code></pre></div>
+    </div>
+  </label>
+</div>
+
+<h3 id="abs"><strong>abs</strong></h3>
+<p><strong>abs(x)는 어떤 숫자를 입력받았을 때, 그 숫자의 절댓값을 돌려주는 함수</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> abs(<span style="color:#ae81ff">3</span>)
+<span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> abs(<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>)
+<span style="color:#ae81ff">3</span>
+</code></pre></div><h1 id="heading"></h1>
+<hr>
+<hr>
+<h3 id="all"><strong>all</strong></h3>
+<p>all(x)는 반복 가능한(iterable) 자료형 x를 입력 인수로 받으며 이 x가 모두 참이면 True, 거짓이 하나라도 있으면 False를 반환</p>
+<p>※ 반복 가능한 자료형이란 for문으로 그 값을 출력할 수 있는 것을 의미한다. 리스트, 튜플, 문자열, 딕셔너리, 집합 등이 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> all([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+True
+<span style="color:#f92672">&gt;&gt;&gt;</span> all([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>])
+False
+</code></pre></div><hr>
+<hr>
+<h3 id="any"><strong>any</strong></h3>
+<p>any(x)는 x 중 하나라도 참이 있으면 True를 돌려주고, x가 모두 거짓일 때에만 False를 돌려준다. all(x)의 반대이다.</p>
+<p>다음 예를 보자.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> any([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>])
+True
+<span style="color:#f92672">&gt;&gt;&gt;</span> any([<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;&#34;</span>])
+False
+
+</code></pre></div><hr>
+<hr>
+<h3 id="chr"><strong>chr</strong></h3>
+<p>chr(i)는 아스키(ASCII) 코드 값을 입력받아 그 코드에 해당하는 문자를 출력하는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> chr(<span style="color:#ae81ff">97</span>)
+<span style="color:#e6db74">&#39;a&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> chr(<span style="color:#ae81ff">48</span>)
+<span style="color:#e6db74">&#39;0&#39;</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="dir"><strong>dir</strong></h3>
+<p>dir은 객체가 자체적으로 가지고 있는 변수나 함수를 보여 준다. 다음 예는 리스트와 딕셔너리 객체 관련 함수(메서드)를 보여 주는 예이다. 우리가 02장에서 살펴본 자료형 관련 함수를 만나 볼 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> dir([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+[<span style="color:#e6db74">&#39;append&#39;</span>, <span style="color:#e6db74">&#39;count&#39;</span>, <span style="color:#e6db74">&#39;extend&#39;</span>, <span style="color:#e6db74">&#39;index&#39;</span>, <span style="color:#e6db74">&#39;insert&#39;</span>, <span style="color:#e6db74">&#39;pop&#39;</span>,<span style="color:#f92672">...</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> dir({<span style="color:#e6db74">&#39;1&#39;</span>:<span style="color:#e6db74">&#39;a&#39;</span>})
+[<span style="color:#e6db74">&#39;clear&#39;</span>, <span style="color:#e6db74">&#39;copy&#39;</span>, <span style="color:#e6db74">&#39;get&#39;</span>, <span style="color:#e6db74">&#39;has_key&#39;</span>, <span style="color:#e6db74">&#39;items&#39;</span>, <span style="color:#e6db74">&#39;keys&#39;</span>,<span style="color:#f92672">...</span>]
+False
+
+</code></pre></div><hr>
+<hr>
+<h3 id="divmod"><strong>divmod</strong></h3>
+<p>divmod(a, b)는 2개의 숫자를 입력으로 받는다. 그리고 a를 b로 나눈 몫과 나머지를 튜플 형태로 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> divmod(<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">3</span>)
+(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>)
+</code></pre></div><hr>
+<hr>
+<h3 id="enumerate"><strong>enumerate</strong></h3>
+<p>enumerate는 &ldquo;열거하다&quot;라는 뜻이다. 이 함수는 순서가 있는 자료형(리스트, 튜플, 문자열)을 입력으로 받아 인덱스 값을 포함하는 enumerate 객체를 반환한다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> i, name <span style="color:#f92672">in</span> enumerate([<span style="color:#e6db74">&#39;body&#39;</span>, <span style="color:#e6db74">&#39;foo&#39;</span>, <span style="color:#e6db74">&#39;bar&#39;</span>]):
+<span style="color:#66d9ef">print</span>(i, name)
+<span style="color:#ae81ff">0</span> body
+<span style="color:#ae81ff">1</span> foo
+<span style="color:#ae81ff">2</span> bar
+</code></pre></div><hr>
+<hr>
+<h3 id="eval"><strong>eval</strong></h3>
+<p>eval(expression )은 실행 가능한 문자열(1+2, &lsquo;hi&rsquo; + &lsquo;a&rsquo; 같은 것)을 입력으로 받아 문자열을 실행한 결괏값을 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> eval(<span style="color:#e6db74">&#39;1+2&#39;</span>)
+<span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> eval(<span style="color:#e6db74">&#34;&#39;hi&#39; + &#39;a&#39;&#34;</span>)
+<span style="color:#e6db74">&#39;hia&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> eval(<span style="color:#e6db74">&#39;divmod(4, 3)&#39;</span>)
+(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)
+</code></pre></div><hr>
+<hr>
+<h3 id="filter"><strong>filter</strong></h3>
+<p>filter란 무엇인가를 걸러낸다는 뜻으로 filter 함수도 동일한 의미를 가진다.</p>
+<p>filter 함수는 첫 번째 인수로 함수 이름을, 두 번째 인수로 그 함수에 차례로 들어갈 반복 가능한 자료형을 받는다. 그리고 두 번째 인수인 반복 가능한 자료형 요소가 첫 번째 인수인 함수에 입력되었을 때 반환 값이 참인 것만 묶어서(걸러 내서) 돌려준다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">positive</span>(Ex): 
+    result <span style="color:#f92672">=</span> [] 
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> Ex: 
+        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>: 
+            result<span style="color:#f92672">.</span>append(i) 
+    <span style="color:#66d9ef">return</span> result
+
+<span style="color:#66d9ef">print</span>(positive([<span style="color:#ae81ff">1</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>]))
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>]
+
+<span style="color:#66d9ef">print</span>(list(filter(positive, [<span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>])))
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>]
+</code></pre></div><hr>
+<hr>
+<h3 id="hex"><strong>hex</strong></h3>
+<p>hex(x)는 정수 값을 입력받아 16진수(hexadecimal)로 변환하여 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> hex(<span style="color:#ae81ff">234</span>)
+<span style="color:#e6db74">&#39;0xea&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> hex(<span style="color:#ae81ff">3</span>)
+<span style="color:#e6db74">&#39;0x3&#39;</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="id"><strong>id</strong></h3>
+<p>id(object)는 객체를 입력받아 객체의 고유 주소 값(레퍼런스)을 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> id(<span style="color:#ae81ff">3</span>)
+<span style="color:#ae81ff">135072304</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="input"><strong>input</strong></h3>
+<p>input([prompt])은 사용자 입력을 받는 함수이다. 매개변수로 문자열을 주면 다음 세 번째 예에서 볼 수 있듯이 그 문자열은 프롬프트가 된다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> input()
+hi
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+<span style="color:#e6db74">&#39;hi&#39;</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="int"><strong>int</strong></h3>
+<p>int(x)는 문자열 형태의 숫자나 소수점이 있는 숫자 등을 정수 형태로 돌려주는 함수로, 정수를 입력으로 받으면 그대로 돌려준다.
+int(x, radix)는 radix 진수로 표현된 문자열 x를 10진수로 변환하여 돌려준다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> int(<span style="color:#e6db74">&#39;3&#39;</span>)
+<span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> int(<span style="color:#ae81ff">3.4</span>)
+<span style="color:#ae81ff">3</span>
+<span style="color:#75715e"># 2진수로 표현된 11의 10진수 값은 다음과 같이 구한다.</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> int(<span style="color:#e6db74">&#39;11&#39;</span>, <span style="color:#ae81ff">2</span>)
+<span style="color:#ae81ff">3</span>
+
+<span style="color:#75715e"># 16진수로 표현된 1A의 10진수 값은 다음과 같이 구한다.</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> int(<span style="color:#e6db74">&#39;1A&#39;</span>, <span style="color:#ae81ff">16</span>)
+<span style="color:#ae81ff">26</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="isinstance"><strong>isinstance</strong></h3>
+<p>isinstance(object, class )는 첫 번째 인수로 인스턴스, 두 번째 인수로 클래스 이름을 받는다. 입력으로 받은 인스턴스가 그 클래스의 인스턴스인지를 판단하여 참이면 True, 거짓이면 False를 돌려준다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>: <span style="color:#66d9ef">pass</span>
+<span style="color:#f92672">...</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> Person()
+<span style="color:#f92672">&gt;&gt;&gt;</span> isinstance(a, Person)
+True
+<span style="color:#75715e"># 위 예는 a가 Person 클래스가 만든 인스턴스임을 확인시켜 준다.</span>
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> isinstance(b, Person)
+False
+<span style="color:#75715e"># b는 Person 클래스가 만든 인스턴스가 아니므로 False를 돌려준다.</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="len"><strong>len</strong></h3>
+<p>len(s)은 입력값 s의 길이(요소의 전체 개수)를 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> len(<span style="color:#e6db74">&#34;python&#34;</span>)
+<span style="color:#ae81ff">6</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> len([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>])
+<span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> len((<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;a&#39;</span>))
+<span style="color:#ae81ff">2</span>
+<span style="color:#f92672">***</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="list"><strong>list</strong></h3>
+<p>list(s)는 반복 가능한 자료형 s를 입력받아 리스트로 만들어 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> list(<span style="color:#e6db74">&#34;python&#34;</span>)
+[<span style="color:#e6db74">&#39;p&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;t&#39;</span>, <span style="color:#e6db74">&#39;h&#39;</span>, <span style="color:#e6db74">&#39;o&#39;</span>, <span style="color:#e6db74">&#39;n&#39;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> list((<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>))
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+<span style="color:#75715e"># list 함수에 리스트를 입력으로 주면 똑같은 리스트를 복사하여 돌려준다.</span>
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> list(a)
+<span style="color:#f92672">&gt;&gt;&gt;</span> b
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+</code></pre></div><hr>
+<hr>
+<h3 id="map"><strong>map</strong></h3>
+<p>map(f, iterable)은 함수(f)와 반복 가능한(iterable) 자료형을 입력으로 받는다. map은 입력받은 자료형의 각 요소를 함수 f가 수행한 결과를 묶어서 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># two_times.py</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">two_times</span>(numberList):
+    result <span style="color:#f92672">=</span> [ ]
+    <span style="color:#66d9ef">for</span> number <span style="color:#f92672">in</span> numberList:
+        result<span style="color:#f92672">.</span>append(number<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)
+    <span style="color:#66d9ef">return</span> result
+
+result <span style="color:#f92672">=</span> two_times([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>])
+<span style="color:#66d9ef">print</span>(result)
+<span style="color:#75715e"># two_times 함수는 리스트 요소를 입력받아 각 요소에 2를 곱한 결괏값을 돌려준다. 실행 결과는 다음과 같다.</span>
+
+[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">8</span>]
+
+<span style="color:#75715e"># 위 예제는 map 함수를 사용하면 다음처럼 바꿀 수 있다.</span>
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">two_times</span>(x): 
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">return</span> x<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>
+<span style="color:#f92672">...</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> list(map(two_times, [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]))
+[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">8</span>]
+<span style="color:#75715e"># 이제 앞 예제를 해석해 보자. 먼저 리스트의 첫 번째 요소인 1이 two_times 함수의 입력값으로 들어가고 1 * 2의 과정을 거쳐서 2가 된다. 다음으로 리스트의 두 번째 요소인 2가 2 * 2 의 과정을 거쳐 4가 된다. 따라서 결괏값 리스트는 이제 [2, 4]가 된다. 총 4개의 요솟값이 모두 수행되면 마지막으로 [2, 4, 6, 8]을 돌려준다. 이것이 map 함수가 하는 일이다.</span>
+
+<span style="color:#75715e"># 앞의 예는 lambda를 사용하면 다음처럼 간략하게 만들 수 있다.</span>
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> list(map(<span style="color:#66d9ef">lambda</span> a: a<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>, [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]))
+[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">8</span>]
+</code></pre></div><hr>
+<hr>
+<h3 id="max"><strong>max</strong></h3>
+<p>max(iterable)는 인수로 반복 가능한 자료형을 입력받아 그 최댓값을 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> max([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+<span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> max(<span style="color:#e6db74">&#34;python&#34;</span>)
+<span style="color:#e6db74">&#39;y&#39;</span>
+</code></pre></div><hr>
+<hr>
+<h2 id="min"><strong>min</strong></h2>
+<p>min(iterable)은 max 함수와 반대로, 인수로 반복 가능한 자료형을 입력받아 그 최솟값을 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> min([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+<span style="color:#ae81ff">1</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> min(<span style="color:#e6db74">&#34;python&#34;</span>)
+<span style="color:#e6db74">&#39;h&#39;</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="oct"><strong>oct</strong></h3>
+<p>oct(x)는 정수 형태의 숫자를 8진수 문자열로 바꾸어 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> oct(<span style="color:#ae81ff">34</span>)
+<span style="color:#e6db74">&#39;0o42&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> oct(<span style="color:#ae81ff">12345</span>)
+<span style="color:#e6db74">&#39;0o30071&#39;</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="open"><strong>open</strong></h3>
+<p>open(filename, [mode])은 &ldquo;파일 이름&quot;과 &ldquo;읽기 방법&quot;을 입력받아 파일 객체를 돌려주는 함수이다. 읽기 방법(mode)을 생략하면 기본값인 읽기 전용 모드(r)로 파일 객체를 만들어 돌려준다.</p>
+<p>mode	설명
+w	쓰기 모드로 파일 열기
+r	읽기 모드로 파일 열기
+a	추가 모드로 파일 열기
+b	바이너리 모드로 파일 열기
+b는 w, r, a와 함께 사용한다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;binary_file&#34;</span>, <span style="color:#e6db74">&#34;rb&#34;</span>)
+<span style="color:#75715e"># 위 예의 rb는 &#34;바이너리 읽기 모드&#34;를 의미한다.</span>
+
+<span style="color:#75715e"># 다음 예의 fread와 fread2는 동일한 방법이다.</span>
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> fread <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;read_mode.txt&#34;</span>, <span style="color:#e6db74">&#39;r&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> fread2 <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;read_mode.txt&#34;</span>)
+<span style="color:#75715e"># 즉 모드 부분을 생략하면 기본값으로 읽기 모드 r를 갖게 된다.</span>
+
+<span style="color:#75715e"># 다음은 추가 모드(a)로 파일을 여는 예이다.</span>
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> fappend <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;append_mode.txt&#34;</span>, <span style="color:#e6db74">&#39;a&#39;</span>)
+</code></pre></div><hr>
+<hr>
+<h3 id="ord"><strong>ord</strong></h3>
+<p>ord(c)는 문자의 아스키 코드 값을 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> ord(<span style="color:#e6db74">&#39;a&#39;</span>)
+<span style="color:#ae81ff">97</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> ord(<span style="color:#e6db74">&#39;0&#39;</span>)
+<span style="color:#ae81ff">48</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="pow"><strong>pow</strong></h3>
+<p>pow(x, y)는 x의 y 제곱한 결괏값을 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> pow(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>)
+<span style="color:#ae81ff">16</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> pow(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>)
+<span style="color:#ae81ff">27</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="range"><strong>range</strong></h3>
+<p>range([start,] stop [,step] )는 for문과 함께 자주 사용하는 함수이다. 이 함수는 입력받은 숫자에 해당하는 범위 값을 반복 가능한 객체로 만들어 돌려준다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 시작 숫자를 지정해 주지 않으면 range 함수는 0부터 시작한다.</span>
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> list(range(<span style="color:#ae81ff">5</span>))
+[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
+
+<span style="color:#75715e"># 입력으로 주어지는 2개의 인수는 시작 숫자와 끝 숫자를 나타낸다. 단 끝 숫자는 해당 범위에 포함되지 않는다는 것에 주의하자.</span>
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> list(range(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>))
+[<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>]
+
+<span style="color:#75715e"># 세 번째 인수는 숫자 사이의 거리를 말한다.</span>
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> list(range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">2</span>))
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">9</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> list(range(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>))
+[<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">6</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">7</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">8</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">9</span>]
+</code></pre></div><hr>
+<hr>
+<h3 id="round"><strong>round</strong></h3>
+<p>round(number[, ndigits]) 함수는 숫자를 입력받아 반올림해 주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> round(<span style="color:#ae81ff">4.6</span>)
+<span style="color:#ae81ff">5</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> round(<span style="color:#ae81ff">4.2</span>)
+<span style="color:#ae81ff">4</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> round(<span style="color:#ae81ff">5.678</span>, <span style="color:#ae81ff">2</span>)
+<span style="color:#ae81ff">5.68</span>
+<span style="color:#75715e"># round 함수의 두 번째 매개변수는 반올림하여 표시하고 싶은 소수점의 자릿수(ndigits)이다.</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="sorted"><strong>sorted</strong></h3>
+<p>sorted(iterable) 함수는 입력값을 정렬한 후 그 결과를 리스트로 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> sorted([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>])
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> sorted([<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>])
+[<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> sorted(<span style="color:#e6db74">&#34;zero&#34;</span>)
+[<span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;o&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> sorted((<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>))
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+<span style="color:#75715e"># 리스트 자료형에도 sort 함수가 있다. 하지만 리스트 자료형의 sort 함수는 리스트 객체 그 자체를 정렬만 할 뿐 정렬된 결과를 돌려주지는 않는다.</span>
+
+</code></pre></div><hr>
+<hr>
+<h3 id="str"><strong>str</strong></h3>
+<p>str(object)은 문자열 형태로 객체를 변환하여 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> str(<span style="color:#ae81ff">3</span>)
+<span style="color:#e6db74">&#39;3&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> str(<span style="color:#e6db74">&#39;hi&#39;</span>)
+<span style="color:#e6db74">&#39;hi&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> str(<span style="color:#e6db74">&#39;hi&#39;</span><span style="color:#f92672">.</span>upper())
+<span style="color:#e6db74">&#39;HI&#39;</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="sum"><strong>sum</strong></h3>
+<p>sum(iterable) 은 입력받은 리스트나 튜플의 모든 요소의 합을 돌려주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> sum([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>])
+<span style="color:#ae81ff">6</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> sum((<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>))
+<span style="color:#ae81ff">15</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="tuple"><strong>tuple</strong></h3>
+<p>tuple(iterable)은 반복 가능한 자료형을 입력받아 튜플 형태로 바꾸어 돌려주는 함수이다. 만약 튜플이 입력으로 들어오면 그대로 돌려준다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> tuple(<span style="color:#e6db74">&#34;abc&#34;</span>)
+(<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> tuple([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> tuple((<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>))
+(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+</code></pre></div><hr>
+<hr>
+<h3 id="type"><strong>type</strong></h3>
+<p>type(object)은 입력값의 자료형이 무엇인지 알려 주는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> type(<span style="color:#e6db74">&#34;abc&#34;</span>)
+<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">str</span><span style="color:#e6db74">&#39;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> type([ ])
+<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">list</span><span style="color:#e6db74">&#39;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> type(open(<span style="color:#e6db74">&#34;test&#34;</span>, <span style="color:#e6db74">&#39;w&#39;</span>))
+<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">_io</span><span style="color:#f92672">.</span>TextIOWrapper<span style="color:#e6db74">&#39;&gt;</span>
+</code></pre></div><hr>
+<hr>
+<h3 id="zip"><strong>zip</strong></h3>
+<p>zip(*iterable)은 동일한 개수로 이루어진 자료형을 묶어 주는 역할을 하는 함수이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> list(zip([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>], [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]))
+[(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">6</span>)]
+<span style="color:#f92672">&gt;&gt;&gt;</span> list(zip([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>], [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>], [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>]))
+[(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">8</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">9</span>)]
+<span style="color:#f92672">&gt;&gt;&gt;</span> list(zip(<span style="color:#e6db74">&#34;abc&#34;</span>, <span style="color:#e6db74">&#34;def&#34;</span>))
+[(<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;d&#39;</span>), (<span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>), (<span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;f&#39;</span>)]
+</code></pre></div><hr>
+<hr>
+<h2 id="sys"><strong>sys</strong></h2>
+<p>sys 모듈은 파이썬 인터프리터가 제공하는 변수와 함수를 직접 제어할 수 있게 해주는 모듈이다.</p>
+<p>명령 행에서 인수 전달하기 - sys.argv</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">C:<span style="color:#f92672">/</span>User<span style="color:#f92672">/</span>home<span style="color:#f92672">&gt;</span>python test<span style="color:#f92672">.</span>py abc pey guido
+<span style="color:#75715e"># 명령 프롬프트 창에서 위 예처럼 test.py 뒤에 또 다른 값을 함께 넣어 주면 sys.argv 리스트에 그 값이 추가된다.</span>
+</code></pre></div><p>예제를 따라 하며 확인해 보자. 우선 다음과 같은 파이썬 프로그램을 작성하자. argv_test.py 파일은 C:/doit/Mymod 디렉터리에 저장했다고 가정한다(만약 C:/doit/Mymod 디렉터리가 없다면 먼저 생성하고 진행하자).</p>
+<h3 id="argv_testpy"><strong>argv_test.py</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sys
+<span style="color:#66d9ef">print</span>(sys<span style="color:#f92672">.</span>argv)
+<span style="color:#960050;background-color:#1e0010">명령</span> <span style="color:#960050;background-color:#1e0010">프롬프트</span> <span style="color:#960050;background-color:#1e0010">창에서</span> Mymod <span style="color:#960050;background-color:#1e0010">디렉터리로</span> <span style="color:#960050;background-color:#1e0010">들어간</span> <span style="color:#960050;background-color:#1e0010">뒤</span> <span style="color:#960050;background-color:#1e0010">다음과</span> <span style="color:#960050;background-color:#1e0010">같이</span> <span style="color:#960050;background-color:#1e0010">실행해</span> <span style="color:#960050;background-color:#1e0010">보자</span><span style="color:#f92672">.</span>
+
+C:<span style="color:#f92672">/</span>doit<span style="color:#f92672">/</span>Mymod<span style="color:#f92672">&gt;</span>python argv_test<span style="color:#f92672">.</span>py you need python
+[<span style="color:#e6db74">&#39;argv_test.py&#39;</span>, <span style="color:#e6db74">&#39;you&#39;</span>, <span style="color:#e6db74">&#39;need&#39;</span>, <span style="color:#e6db74">&#39;python&#39;</span>]
+python <span style="color:#960050;background-color:#1e0010">명령어</span> <span style="color:#960050;background-color:#1e0010">뒤의</span> <span style="color:#960050;background-color:#1e0010">모든</span> <span style="color:#960050;background-color:#1e0010">것들이</span> <span style="color:#960050;background-color:#1e0010">공백을</span> <span style="color:#960050;background-color:#1e0010">기준으로</span> <span style="color:#960050;background-color:#1e0010">나뉘어서</span> sys<span style="color:#f92672">.</span>argv <span style="color:#960050;background-color:#1e0010">리스트의</span> <span style="color:#960050;background-color:#1e0010">요소가</span> <span style="color:#960050;background-color:#1e0010">된다</span><span style="color:#f92672">.</span>
+
+<span style="color:#960050;background-color:#1e0010">※</span> <span style="color:#960050;background-color:#1e0010">명령</span> <span style="color:#960050;background-color:#1e0010">프롬프트</span> <span style="color:#960050;background-color:#1e0010">창에서는</span> <span style="color:#f92672">/</span>, \<span style="color:#960050;background-color:#1e0010">든</span> <span style="color:#960050;background-color:#1e0010">상관없지만</span>, <span style="color:#960050;background-color:#1e0010">소스코드</span> <span style="color:#960050;background-color:#1e0010">안에서는</span> <span style="color:#960050;background-color:#1e0010">반드시</span> <span style="color:#f92672">/</span> <span style="color:#960050;background-color:#1e0010">또는</span> \\ <span style="color:#960050;background-color:#1e0010">기호를</span> <span style="color:#960050;background-color:#1e0010">사용해야</span> <span style="color:#960050;background-color:#1e0010">한다</span><span style="color:#f92672">.</span>
+</code></pre></div><h3 id="sysexit"><strong>sys.exit</strong></h3>
+<p>강제로 스크립트 종료</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> sys<span style="color:#f92672">.</span>exit()
+<span style="color:#75715e"># sys.exit는 Ctrl+Z나 Ctrl+D를 눌러서 대화형 인터프리터를 종료하는 것과 같은 기능을 한다. 프로그램 파일 안에서 사용하면 프로그램을 중단시킨다.</span>
+</code></pre></div><h3 id="syspath"><strong>sys.path</strong></h3>
+<p>자신이 만든 모듈 불러와 사용하기
+sys.path는 파이썬 모듈들이 저장되어 있는 위치를 나타낸다. 즉 이 위치에 있는 파이썬 모듈은 경로에 상관없이 어디에서나 불러올 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> sys
+<span style="color:#f92672">&gt;&gt;&gt;</span> sys<span style="color:#f92672">.</span>path
+[<span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">&#39;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">SYSTEM32</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">python37.zip&#39;</span>, <span style="color:#e6db74">&#39;c:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Python37</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">DLLs&#39;</span>, 
+<span style="color:#e6db74">&#39;c:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Python37</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">lib&#39;</span>, <span style="color:#e6db74">&#39;c:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Python37&#39;</span>, <span style="color:#e6db74">&#39;c:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Python37</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">lib</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">site-packages&#39;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#75715e"># &#39;&#39; = 현재 디렉토리</span>
+</code></pre></div><h3 id="path_appendpy"><strong>path_append.py</strong></h3>
+<p>파이썬 프로그램 파일에서 sys.path.append를 사용해 경로 이름을 추가할 수 있다. 이렇게 하고 난 후에는 C:/doit/Mymod 디렉터리에 있는 파이썬 모듈을 불러와서 사용할 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sys
+sys<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;C:/doit/mymod&#34;</span>)
+</code></pre></div><hr>
+<hr>
+<h2 id="pickle"><strong>pickle</strong></h2>
+<p>pickle은 객체의 형태를 그대로 유지하면서 파일에 저장하고 불러올 수 있게 하는 모듈이다. 다음 예는 pickle 모듈의 dump 함수를 사용하여 딕셔너리 객체인 data를 그대로 파일에 저장하는 방법을 보여 준다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> pickle
+<span style="color:#f92672">&gt;&gt;&gt;</span> f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;test.txt&#34;</span>, <span style="color:#e6db74">&#39;wb&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> data <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>: <span style="color:#e6db74">&#39;python&#39;</span>, <span style="color:#ae81ff">2</span>: <span style="color:#e6db74">&#39;you need&#39;</span>}
+<span style="color:#f92672">&gt;&gt;&gt;</span> pickle<span style="color:#f92672">.</span>dump(data, f)
+<span style="color:#f92672">&gt;&gt;&gt;</span> f<span style="color:#f92672">.</span>close()
+<span style="color:#75715e"># 다음은 pickle.dump로 저장한 파일을 pickle.load를 사용해서 원래 있던 딕셔너리 객체(data) 상태 그대로 불러오는 예이다.</span>
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> pickle
+<span style="color:#f92672">&gt;&gt;&gt;</span> f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;test.txt&#34;</span>, <span style="color:#e6db74">&#39;rb&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> data <span style="color:#f92672">=</span> pickle<span style="color:#f92672">.</span>load(f)
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(data)
+{<span style="color:#ae81ff">2</span>:<span style="color:#e6db74">&#39;you need&#39;</span>, <span style="color:#ae81ff">1</span>:<span style="color:#e6db74">&#39;python&#39;</span>}
+<span style="color:#75715e"># 위 예에서는 딕셔너리 객체를 사용했지만 어떤 자료형이든저장하고 불러올 수 있다.</span>
+</code></pre></div><hr>
+<hr>
+<h2 id="os"><strong>os</strong></h2>
+<p>OS 모듈은 환경 변수나 디렉터리, 파일 등의 OS 자원을 제어할 수 있게 해주는 모듈이다.</p>
+<h3 id="osenviron"><strong>os.environ</strong></h3>
+<p>시스템은 제각기 다른 환경 변수 값을 가지고 있는데, os.environ은 현재 시스템의 환경 변수 값을 보여 준다. 다음을 따라 해 보자.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> os
+<span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>environ
+environ({<span style="color:#e6db74">&#39;PROGRAMFILES&#39;</span>: <span style="color:#e6db74">&#39;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Program Files&#39;</span>, <span style="color:#e6db74">&#39;APPDATA&#39;</span>: <span style="color:#960050;background-color:#1e0010">…</span> <span style="color:#960050;background-color:#1e0010">생략</span> <span style="color:#960050;background-color:#1e0010">…</span>})
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#75715e"># 위 결괏값은 필자의 시스템 정보이다. os.environ은 환경 변수에 대한 정보를 딕셔너리 객체로 돌려준다. 자세히 보면 여러 가지 유용한 정보를 찾을 수 있다.</span>
+
+<span style="color:#75715e"># 돌려받은 객체가 딕셔너리이기 때문에 다음과 같이 호출할 수 있다. 다음은 필자 시스템의 PATH 환경 변수 내용이다.</span>
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;PATH&#39;</span>]
+<span style="color:#e6db74">&#39;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">ProgramData</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Oracle</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Java</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">javapath;...생략...&#39;</span>
+</code></pre></div><h3 id="oschdir"><strong>os.chdir</strong></h3>
+<p>os.chdir를 사용하면 다음과 같이 현재 디렉터리 위치를 변경할 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>chdir(<span style="color:#e6db74">&#34;C:\WINDOWS&#34;</span>)
+</code></pre></div><h3 id="osgetcwd"><strong>os.getcwd</strong></h3>
+<p>os.getcwd는 현재 자신의 디렉터리 위치를 돌려준다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>getcwd()
+<span style="color:#e6db74">&#39;C:\WINDOWS&#39;</span>
+</code></pre></div><h3 id="ossystem"><strong>os.system</strong></h3>
+<p>시스템 자체의 프로그램이나 기타 명령어를 파이썬에서 호출할 수도 있다. os.system(&ldquo;명령어&rdquo;)처럼 사용한다. 다음은 현재 디렉터리에서 시스템 명령어 dir을 실행하는 예이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#34;dir&#34;</span>)
+<span style="color:#75715e"># 실행한 시스템 명령어의 결괏값 돌려받기 - os.popen</span>
+</code></pre></div><h3 id="ospopen"><strong>os.popen</strong></h3>
+<p>os.popne은 시스템 명령어를 실행한 결괏값을 읽기 모드 형태의 파일 객체로 돌려준다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> f <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>popen(<span style="color:#e6db74">&#34;dir&#34;</span>)
+<span style="color:#75715e"># 읽어 들인 파일 객체의 내용을 보기 위해서는 다음과 같이 하면 된다.</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(f<span style="color:#f92672">.</span>read())
+</code></pre></div><p>기타 유용한 os 관련 함수
+함수	설명
+os.mkdir(디렉터리)	디렉터리를 생성한다.
+os.rmdir(디렉터리)	디렉터리를 삭제한다.단, 디렉터리가 비어있어야 삭제가 가능하다.
+os.unlink(파일)	파일을 지운다.
+os.rename(src, dst)	src라는 이름의 파일을 dst라는 이름으로 바꾼다.</p>
+<hr>
+<hr>
+<h2 id="shutil"><strong>shutil</strong></h2>
+<p>shutil은 파일을 복사해 주는 파이썬 모듈이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> shutil
+<span style="color:#f92672">&gt;&gt;&gt;</span> shutil<span style="color:#f92672">.</span>copy(<span style="color:#e6db74">&#34;src.txt&#34;</span>, <span style="color:#e6db74">&#34;dst.txt&#34;</span>)
+<span style="color:#75715e"># 위 예를 실행해 보면 src.txt 파일과 동일한 내용의 파일이 dst.txt로 복사되는 것을 확인할 수 있다.</span>
+</code></pre></div><hr>
+<hr>
+<h2 id="glob"><strong>glob</strong></h2>
+<p>가끔 파일을 읽고 쓰는 기능이 있는 프로그램을 만들다 보면 특정 디렉터리에 있는 파일 이름 모두를 알아야 할 때가 있다. 이럴 때 사용하는 모듈이 바로 glob이다.</p>
+<p>디렉터리에 있는 파일들을 리스트로 만들기 - glob(pathname)</p>
+<p>glob 모듈은 디렉터리 안의 파일들을 읽어서 돌려준다. *, ? 등 메타 문자를 써서 원하는 파일만 읽어 들일 수도 있다.</p>
+<p>다음은 C:/doit 디렉터리에 있는 파일 중 이름이 mark로 시작하는 파일을 모두 찾아서 읽어들이는 예이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> glob
+<span style="color:#f92672">&gt;&gt;&gt;</span> glob<span style="color:#f92672">.</span>glob(<span style="color:#e6db74">&#34;c:/doit/mark*&#34;</span>)
+[<span style="color:#e6db74">&#39;c:/doit</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">marks1.py&#39;</span>, <span style="color:#e6db74">&#39;c:/doit</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">marks2.py&#39;</span>, <span style="color:#e6db74">&#39;c:/doit</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">marks3.py&#39;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+</code></pre></div><hr>
+<hr>
+<h2 id="tempfile"><strong>tempfile</strong></h2>
+<p>파일을 임시로 만들어서 사용할 때 유용한 모듈이 바로 tempfile이다. tempfile.mkstemp()는 중복되지 않는 임시 파일의 이름을 무작위로 만들어서 돌려준다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> tempfile
+<span style="color:#f92672">&gt;&gt;&gt;</span> filename <span style="color:#f92672">=</span> tempfile<span style="color:#f92672">.</span>mkstemp()
+<span style="color:#f92672">&gt;&gt;&gt;</span> filename
+<span style="color:#e6db74">&#39;C:\WINDOWS\TEMP\~-275151-0&#39;</span>
+tempfile<span style="color:#f92672">.</span>TemporaryFile()<span style="color:#960050;background-color:#1e0010">은</span> <span style="color:#960050;background-color:#1e0010">임시</span> <span style="color:#960050;background-color:#1e0010">저장</span> <span style="color:#960050;background-color:#1e0010">공간으로</span> <span style="color:#960050;background-color:#1e0010">사용할</span> <span style="color:#960050;background-color:#1e0010">파일</span> <span style="color:#960050;background-color:#1e0010">객체를</span> <span style="color:#960050;background-color:#1e0010">돌려준다</span><span style="color:#f92672">.</span> <span style="color:#960050;background-color:#1e0010">이</span> <span style="color:#960050;background-color:#1e0010">파일은</span> <span style="color:#960050;background-color:#1e0010">기본적으로</span> <span style="color:#960050;background-color:#1e0010">바이너리</span> <span style="color:#960050;background-color:#1e0010">쓰기</span> <span style="color:#960050;background-color:#1e0010">모드</span>(wb)<span style="color:#960050;background-color:#1e0010">를</span> <span style="color:#960050;background-color:#1e0010">갖는다</span><span style="color:#f92672">.</span> f<span style="color:#f92672">.</span>close()<span style="color:#960050;background-color:#1e0010">가</span> <span style="color:#960050;background-color:#1e0010">호출되면</span> <span style="color:#960050;background-color:#1e0010">이</span> <span style="color:#960050;background-color:#1e0010">파일</span> <span style="color:#960050;background-color:#1e0010">객체는</span> <span style="color:#960050;background-color:#1e0010">자동으로</span> <span style="color:#960050;background-color:#1e0010">사라진다</span><span style="color:#f92672">.</span>
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> tempfile
+<span style="color:#f92672">&gt;&gt;&gt;</span> f <span style="color:#f92672">=</span> tempfile<span style="color:#f92672">.</span>TemporaryFile()
+<span style="color:#f92672">&gt;&gt;&gt;</span> f<span style="color:#f92672">.</span>close()
+</code></pre></div><hr>
+<hr>
+<h2 id="time"><strong>time</strong></h2>
+<p>시간과 관련된 time 모듈에는 함수가 굉장히 많다. 그중 가장 유용한 몇 가지만 알아보자.</p>
+<h3 id="timetime"><strong>time.time</strong></h3>
+<p>time.time()은 UTC(Universal Time Coordinated 협정 세계 표준시)를 사용하여 현재 시간을 실수 형태로 돌려주는 함수이다. 1970년 1월 1일 0시 0분 0초를 기준으로 지난 시간을 초 단위로 돌려준다.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import time
+time.time()
+988458015.73417199
+time.localtime</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>time.localtime은 time.time()이 돌려준 실수 값을 사용해서 연도, 월, 일, 시, 분, 초, &hellip; 의 형태로 바꾸어 주는 함수이다.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>time.localtime(time.time())
+time.struct_time(tm_year=2013, tm_mon=5, tm_mday=21, tm_hour=16,
+tm_min=48, tm_sec=42, tm_wday=1, tm_yday=141, tm_isdst=0)
+time.asctime</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>위 time.localtime에 의해서 반환된 튜플 형태의 값을 인수로 받아서 날짜와 시간을 알아보기 쉬운 형태로 돌려주는 함수이다.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>time.asctime(time.localtime(time.time()))
+&lsquo;Sat Apr 28 20:50:20 2001&rsquo;
+time.ctime</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>time.asctime(time.localtime(time.time()))은 time.ctime()을 사용해 간편하게 표시할 수 있다. asctime과 다른 점은 ctime은 항상 현재 시간만을 돌려준다는 점이다.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>time.ctime()
+&lsquo;Sat Apr 28 20:56:31 2001&rsquo;
+time.strftime</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>time.strftime(&lsquo;출력할 형식 포맷 코드&rsquo;, time.localtime(time.time()))
+strftime 함수는 시간에 관계된 것을 세밀하게 표현하는 여러 가지 포맷 코드를 제공한다.</p>
+<p>시간에 관계된 것을 표현하는 포맷 코드</p>
+<p>포맷코드	설명	예
+%a	요일 줄임말	Mon
+%A	요일	Monday
+%b	달 줄임말	Jan
+%B	달	January
+%c	날짜와 시간을 출력함	06/01/01 17:22:21
+%d	날(day)	[01,31]
+%H	시간(hour)-24시간 출력 형태	[00,23]
+%I	시간(hour)-12시간 출력 형태	[01,12]
+%j	1년 중 누적 날짜	[001,366]
+%m	달	[01,12]
+%M	분	[01,59]
+%p	AM or PM	AM
+%S	초	[00,59]
+%U	1년 중 누적 주-일요일을 시작으로	[00,53]
+%w	숫자로 된 요일	[0(일요일),6]
+%W	1년 중 누적 주-월요일을 시작으로	[00,53]
+%x	현재 설정된 로케일에 기반한 날짜 출력	06/01/01
+%X	현재 설정된 로케일에 기반한 시간 출력	17:22:21
+%Y	년도 출력	2001
+%Z	시간대 출력	대한민국 표준시
+%%	문자	%
+%y	세기부분을 제외한 년도 출력	01
+다음은 time.strftime을 사용하는 예이다.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import time
+time.strftime('%x&rsquo;, time.localtime(time.time()))
+&lsquo;05/01/01&rsquo;
+time.strftime('%c&rsquo;, time.localtime(time.time()))
+&lsquo;05/01/01 17:22:21&rsquo;
+time.sleep</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>time.sleep 함수는 주로 루프 안에서 많이 사용한다. 이 함수를 사용하면 일정한 시간 간격을 두고 루프를 실행할 수 있다. 다음 예를 보자.</p>
+<p>#sleep1.py
+import time
+for i in range(10):
+print(i)
+time.sleep(1)
+위 예는 1초 간격으로 0부터 9까지의 숫자를 출력한다. 위 예에서 볼 수 있듯이 time.sleep 함수의 인수는 실수 형태를 쓸 수 있다. 즉 1이면 1초, 0.5면 0.5초가 되는 것이다.</p>
+<p>calendar
+calendar는 파이썬에서 달력을 볼 수 있게 해주는 모듈이다.</p>
+<p>calendar.calendar(연도)로 사용하면 그해의 전체 달력을 볼 수 있다. 결괏값은 달력이 너무 길어 생략하겠다.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import calendar
+print(calendar.calendar(2015))
+calendar.prcal(연도)를 사용해도 위와 똑같은 결괏값을 얻을 수 있다.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>calendar.prcal(2015)
+다음 예는 2015년 12월의 달력만 보여 준다.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>calendar.prmonth(2015, 12)
+December 2015
+Mo Tu We Th Fr Sa Su
+1  2  3  4  5  6
+7  8  9  10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+calendar.weekday</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>calendar 모듈의 또 다른 유용한 함수를 보자. weekday(연도, 월, 일) 함수는 그 날짜에 해당하는 요일 정보를 돌려준다. 월요일은 0, 화요일은 1, 수요일은 2, 목요일은 3, 금요일은 4, 토요일은 5, 일요일은 6이라는 값을 돌려준다.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>calendar.weekday(2015, 12, 31)
+3
+위의 예에서 2015년 12월 31일은 목요일임을 보여 준다.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>calendar.monthrange</p>
+<p>monthrange(연도, 월) 함수는 입력받은 달의 1일이 무슨 요일인지와 그 달이 며칠까지 있는지를 튜플 형태로 돌려준다.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>calendar.monthrange(2015,12)
+(1, 31)
+위 예는 2015년 12월 1일은 화요일이고, 이 달은 31일까지 있다는 것을 보여 준다.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>날짜와 관련된 프로그래밍을 할 때 위 2가지 함수는 매우 유용하게 사용된다.</p>
+<hr>
+<hr>
+<h2 id="random"><strong>random</strong></h2>
+<p>random은 난수(규칙이 없는 임의의 수)를 발생시키는 모듈이다. random과 randint에 대해 알아보자.</p>
+<p>다음은 0.0에서 1.0 사이의 실수 중에서 난수 값을 돌려주는 예를 보여 준다.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import random
+random.random()
+0.53840103305098674
+다음 예는 1에서 10 사이의 정수 중에서 난수 값을 돌려준다.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>random.randint(1, 10)
+6
+다음 예는 1에서 55 사이의 정수 중에서 난수 값을 돌려준다.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>random.randint(1, 55)
+43
+random 모듈을 사용해서 재미있는 함수를 하나 만들어 보자.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h1 id="random_poppy">random_pop.py</h1>
+<p>import random
+def random_pop(data):
+number = random.randint(0, len(data)-1)
+return data.pop(number)</p>
+<p>if <strong>name</strong> == &ldquo;<strong>main</strong>&quot;:
+data = [1, 2, 3, 4, 5]
+while data: 
+print(random_pop(data))
+결과값:
+2 
+3 
+1 
+5 
+4
+위 random_pop 함수는 리스트의 요소 중에서 무작위로 하나를 선택하여 꺼낸 다음 그 값을 돌려준다. 물론 꺼낸 요소는 pop 메서드에 의해 사라진다.</p>
+<p>random_pop 함수는 random 모듈의 choice 함수를 사용하여 다음과 같이 좀 더 직관적으로 만들 수도 있다.</p>
+<p>def random_pop(data):
+number = random.choice(data)
+data.remove(number)
+return number
+random.choice 함수는 입력으로 받은 리스트에서 무작위로 하나를 선택하여 돌려준다.</p>
+<p>리스트의 항목을 무작위로 섞고 싶을 때는 random.shuffle 함수를 사용하면 된다.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import random
+data = [1, 2, 3, 4, 5]
+random.shuffle(data)
+data
+[5, 1, 3, 4, 2]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>[1, 2, 3, 4, 5] 리스트가 shuffle 함수에 의해 섞여서 [5, 1, 3, 4, 2]로 변한 것을 확인할 수 있다.</p>
+<hr>
+<hr>
+<h2 id="webbrowser"><strong>webbrowser</strong></h2>
+<p>webbrowser는 자신의 시스템에서 사용하는 기본 웹 브라우저를 자동으로 실행하는 모듈이다. 다음 예제는 웹 브라우저를 자동으로 실행하고 해당 URL인 google.com으로 가게 해 준다.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import webbrowser
+webbrowser.open(&ldquo;<a href="http://google.com">http://google.com</a>&rdquo;)
+webbrowser의 open 함수는 웹 브라우저가 이미 실행된 상태라면 입력 주소로 이동한다. 만약 웹 브라우저가 실행되지 않은 상태라면 새로 웹 브라우저를 실행한 후 해당 주소로 이동한다.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>open_new 함수는 이미 웹 브라우저가 실행된 상태이더라도 새로운 창으로 해당 주소가 열리게 한다.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>webbrowser.open_new(&ldquo;<a href="http://google.com">http://google.com</a>&rdquo;)
+[스레드를 다루는 threading 모듈]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>스레드 프로그래밍은 초보 프로그래머가 구현하기에는 매우 어려운 기술이다. 여기에 잠시 소개했으니 눈으로만 살펴보고 넘어가자.</p>
+<p>컴퓨터에서 동작하고 있는 프로그램을 프로세스(Process)라고 한다. 보통 1개의 프로세스는 한 가지 일만 하지만 스레드(Thread)를 사용하면 한 프로세스 안에서 2가지 또는 그 이상의 일을 동시에 수행할 수 있다.</p>
+<p>간단한 예제로 설명을 대신하겠다.</p>
+<h1 id="thread_testpy">thread_test.py</h1>
+<p>import time</p>
+<p>def long_task():  # 5초의 시간이 걸리는 함수
+for i in range(5):
+time.sleep(1)  # 1초간 대기한다.
+print(&ldquo;working:%s\n&rdquo; % i)</p>
+<p>print(&ldquo;Start&rdquo;)</p>
+<p>for i in range(5):  # long_task를 5회 수행한다.
+long_task()</p>
+<p>print(&ldquo;End&rdquo;)
+long_task 함수는 수행하는 데 5초의 시간이 걸리는 함수이다. 위 프로그램은 이 함수를 총 5번 반복해서 수행하는 프로그램이다. 이 프로그램은 5초가 5번 반복되니 총 25초의 시간이 걸린다.</p>
+<p>하지만 앞에서 설명했듯이 스레드를 사용하면 5초의 시간이 걸리는 long_task 함수를 동시에 실행할 수 있으니 시간을 줄일 수 있다.</p>
+<p>다음과 같이 프로그램을 수정해 보자.</p>
+<h1 id="thread_testpy-1">thread_test.py</h1>
+<p>import time
+import threading  # 스레드를 생성하기 위해서는 threading 모듈이 필요하다.</p>
+<p>def long_task():
+for i in range(5):
+time.sleep(1)
+print(&ldquo;working:%s\n&rdquo; % i)</p>
+<p>print(&ldquo;Start&rdquo;)</p>
+<p>threads = []
+for i in range(5):
+t = threading.Thread(target=long_task)  # 스레드를 생성한다.
+threads.append(t)</p>
+<p>for t in threads:
+t.start()  # 스레드를 실행한다.</p>
+<p>print(&ldquo;End&rdquo;)
+이와 같이 프로그램을 수정하고 실행해 보면 25초 걸리던 작업이 5초 정도에 수행되는 것을 확인할 수 있다. threading.Thread를 사용하여 만든 스레드 객체가 동시 작업을 가능하게 해 주기 때문이다.</p>
+<p>하지만 위 프로그램을 실행해 보면 &ldquo;Start&quot;와 &ldquo;End&quot;가 먼저 출력되고 그 이후에 스레드의 결과가 출력되는 것을 확인할 수 있다. 그리고 프로그램이 정상 종료되지 않는다. 우리가 기대하는 것은 &ldquo;Start&quot;가 출력되고 그다음에 스레드의 결과가 출력된 후 마지막으로 &ldquo;End&quot;가 출력되는 것이다.</p>
+<p>이 문제를 해결하기 위해서는 다음과 같이 프로그램을 수정해야 한다.</p>
+<h1 id="thread_testpy-2">thread_test.py</h1>
+<p>import time
+import threading</p>
+<p>def long_task():
+for i in range(5):
+time.sleep(1)
+print(&ldquo;working:%s\n&rdquo; % i)</p>
+<p>print(&ldquo;Start&rdquo;)</p>
+<p>threads = []
+for i in range(5):
+t = threading.Thread(target=long_task)
+threads.append(t)</p>
+<p>for t in threads:
+t.start()</p>
+<p>for t in threads:
+t.join()  # join으로 스레드가 종료될때까지 기다린다.</p>
+<p>print(&ldquo;End&rdquo;)
+스레드의 join 함수는 해당 스레드가 종료될 때까지 기다리게 한다. 따라서 위와 같이 수정하면 우리가 원하던 출력을 보게 된다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#python-내장함수"><strong>Python 내장함수</strong></a>
+      <ul>
+        <li><a href="#abs"><strong>abs</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#all"><strong>all</strong></a></li>
+        <li><a href="#any"><strong>any</strong></a></li>
+        <li><a href="#chr"><strong>chr</strong></a></li>
+        <li><a href="#dir"><strong>dir</strong></a></li>
+        <li><a href="#divmod"><strong>divmod</strong></a></li>
+        <li><a href="#enumerate"><strong>enumerate</strong></a></li>
+        <li><a href="#eval"><strong>eval</strong></a></li>
+        <li><a href="#filter"><strong>filter</strong></a></li>
+        <li><a href="#hex"><strong>hex</strong></a></li>
+        <li><a href="#id"><strong>id</strong></a></li>
+        <li><a href="#input"><strong>input</strong></a></li>
+        <li><a href="#int"><strong>int</strong></a></li>
+        <li><a href="#isinstance"><strong>isinstance</strong></a></li>
+        <li><a href="#len"><strong>len</strong></a></li>
+        <li><a href="#list"><strong>list</strong></a></li>
+        <li><a href="#map"><strong>map</strong></a></li>
+        <li><a href="#max"><strong>max</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#min"><strong>min</strong></a>
+      <ul>
+        <li><a href="#oct"><strong>oct</strong></a></li>
+        <li><a href="#open"><strong>open</strong></a></li>
+        <li><a href="#ord"><strong>ord</strong></a></li>
+        <li><a href="#pow"><strong>pow</strong></a></li>
+        <li><a href="#range"><strong>range</strong></a></li>
+        <li><a href="#round"><strong>round</strong></a></li>
+        <li><a href="#sorted"><strong>sorted</strong></a></li>
+        <li><a href="#str"><strong>str</strong></a></li>
+        <li><a href="#sum"><strong>sum</strong></a></li>
+        <li><a href="#tuple"><strong>tuple</strong></a></li>
+        <li><a href="#type"><strong>type</strong></a></li>
+        <li><a href="#zip"><strong>zip</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#sys"><strong>sys</strong></a>
+      <ul>
+        <li><a href="#argv_testpy"><strong>argv_test.py</strong></a></li>
+        <li><a href="#sysexit"><strong>sys.exit</strong></a></li>
+        <li><a href="#syspath"><strong>sys.path</strong></a></li>
+        <li><a href="#path_appendpy"><strong>path_append.py</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#pickle"><strong>pickle</strong></a></li>
+    <li><a href="#os"><strong>os</strong></a>
+      <ul>
+        <li><a href="#osenviron"><strong>os.environ</strong></a></li>
+        <li><a href="#oschdir"><strong>os.chdir</strong></a></li>
+        <li><a href="#osgetcwd"><strong>os.getcwd</strong></a></li>
+        <li><a href="#ossystem"><strong>os.system</strong></a></li>
+        <li><a href="#ospopen"><strong>os.popen</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#shutil"><strong>shutil</strong></a></li>
+    <li><a href="#glob"><strong>glob</strong></a></li>
+    <li><a href="#tempfile"><strong>tempfile</strong></a></li>
+    <li><a href="#time"><strong>time</strong></a>
+      <ul>
+        <li><a href="#timetime"><strong>time.time</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#random"><strong>random</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#webbrowser"><strong>webbrowser</strong></a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

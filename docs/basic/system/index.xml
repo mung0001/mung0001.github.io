@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>왈왈왈</title>
+    <link>https://mung0001.github.io/docs/basic/system/</link>
+    <description>Recent content on 왈왈왈</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://mung0001.github.io/docs/basic/system/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/basic/system/%E3%84%B4linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/basic/system/%E3%84%B4linux/</guid>
+      <description>**Linux 기본 **    유닉스 기반의 컴퓨터 운영체제의 한 종류
+  핀란드 헬싱키 대학의 대학원생 리누스 토발즈 ( Linus Tovalds )가 1991년에 개발
+  윈도우와는 다르게 오픈 소스 ( 소스코드가 공개된 프로그램 ) 운영체제
+  소스코드가 공개되어 있기 때문에 다양한 리눅스 기반의 운영 체제가 존재 ( 구글의 안드로이드도 리눅스를 기반으로 만든 운영체제 )
+  대표적인 리눅스 기관 GNU
+      유닉스 운영체제 종류      Linux의 특징   높은 이식성과 확정성 ( C언어 기반 )</description>
+    </item>
+    
+  </channel>
+</rss>
