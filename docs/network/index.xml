@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>왈왈왈</title>
+    <link>https://mung0001.github.io/docs/network/</link>
+    <description>Recent content on 왈왈왈</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://mung0001.github.io/docs/network/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/network/network_equipment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/network/network_equipment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/network/packet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/network/packet/</guid>
+      <description>네트워크 패킷 ( Network Packet )    패킷이란 데이터의 묶음 단위로 한번에 전송할 데이터의 크기
+  제 3계층 이상 ( Network 계층 ) 에서는 이 데이터의 묶음을 패킷이라고 부르며, 제 2계층에서는 프레임( Frame )
+  패킷의 크기는 네트워크의 종류에 따라 크기가 다름
+  패킷을 이렇게 나눠 보내는 이유는 컴퓨터는 동시다발적으로 데이터를 전송하는 데, 한 데이터에게만 데이터를 줄 경우, 한 컴퓨터와의 통신밖에 하지 못하기에, 데이터를 나눠 모두에게 통신할 수 있게 하며, 중간에 에러가 날 경우를 대비</description>
+    </item>
+    
+  </channel>
+</rss>
