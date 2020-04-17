@@ -78,12 +78,39 @@ This document is a brief primer on using Go templates.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/basic/system/%E3%84%B4linux/</guid>
-      <description>**Linux 기본 **    유닉스 기반의 컴퓨터 운영체제의 한 종류
+      <description>Linux 기본    유닉스 기반의 컴퓨터 운영체제의 한 종류
   핀란드 헬싱키 대학의 대학원생 리누스 토발즈 ( Linus Tovalds )가 1991년에 개발
   윈도우와는 다르게 오픈 소스 ( 소스코드가 공개된 프로그램 ) 운영체제
   소스코드가 공개되어 있기 때문에 다양한 리눅스 기반의 운영 체제가 존재 ( 구글의 안드로이드도 리눅스를 기반으로 만든 운영체제 )
   대표적인 리눅스 기관 GNU
       유닉스 운영체제 종류      Linux의 특징   높은 이식성과 확정성 ( C언어 기반 )</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/basic/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/basic/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</guid>
+      <description>방화벽 (CentOS - firewalld)    리눅스의 방화벽
+ 커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제       방화벽의 종류
+ 패킷 필터링 방화벽  - 제 1세대 방화벽 - 레이어 1~4에서 사용 - 단순하기 때문에 빠르고 효과적 - 5~7계층 대응 불가  Stateful 방화벽  - 제 2세대 방화벽 - 패킷의 연결 상태를 관찰 - 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약  **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽 - 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요      방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/basic/system/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/basic/system/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</guid>
+      <description>시스템통합 관리 침입 탐지 시스템(IDS) &amp;ndash; Snort 이용    주된 기능
+  탐지(Detection)
+  잘못된 패킷을 감지하면 사용자에게 알림(주체적으로 처리하지 X, only 안내)
+       탐지 종류 2가지
+  (1)오용 탐지	알고 있는 것 탐지
+  (2)이상 탐지	모르는 것도 탐지(100% 탐지 X)
+  너무 민감하게 처리하면 필요한 정보도 차단하는 실수를 할 수 있음
+       설치위치 ( 성능이 달라짐 )</description>
     </item>
     
     <item>
