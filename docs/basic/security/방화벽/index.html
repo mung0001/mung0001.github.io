@@ -11,7 +11,7 @@
  커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제       방화벽의 종류
  패킷 필터링 방화벽  - 제 1세대 방화벽 - 레이어 1~4에서 사용 - 단순하기 때문에 빠르고 효과적 - 5~7계층 대응 불가  Stateful 방화벽  - 제 2세대 방화벽 - 패킷의 연결 상태를 관찰 - 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약  **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽 - 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요      방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mung0001.github.io/docs/basic/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/" />
+<meta property="og:url" content="https://mung0001.github.io/docs/basic/security/%EB%B0%A9%ED%99%94%EB%B2%BD/" />
 
 
 <title>왈왈왈</title>
@@ -258,7 +258,7 @@
         <li>
 
   
-  <a href="/docs/basic/security/%EB%B0%A9%ED%99%94%EB%B2%BD/" class="">방화벽</a>
+  <a href="/docs/basic/security/%EB%B0%A9%ED%99%94%EB%B2%BD/" class="active">방화벽</a>
   
 
 </li>
@@ -327,7 +327,7 @@
         <li>
 
   
-  <a href="/docs/basic/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/" class="active">ㄴ방화벽</a>
+  <a href="/docs/basic/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/" class="">ㄴ방화벽</a>
   
 
 </li>
@@ -488,7 +488,7 @@
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>ㄴ방화벽</strong>
+  <strong>방화벽</strong>
 
   <label for="toc-control">
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -1037,6 +1037,182 @@ firewall-cmd &ndash;zone=internal &ndash;add-masquerade</p>
 <p>뉴 인터페이스</p>
 <p>new DNG 서버에 맞게 아이피 설정
 규칙에 맞게 설정</p>
+<p>DMZ 영역</p>
+<ol>
+<li>DMZ란?
+외부의 불특정 호스트들과 직접 상호작용하는 공개 웹서버, 외부 DNS 서버 등을 배치하고
+방화벽 바깥의 비 보안 영역과 방화벽 내부의 보안 영역 사이에 완충적인 영역으로 구성</li>
+</ol>
+<pre><code>내부에서 DMZ 통신 가능
+외부에서 DMZ 통신 가능
+DMZ에서 외부 통신 가능
+DMZ에서 내부 통신 불가능
+
+서비스를 제공하는 서버들이 외부의 불특정 호스트들과 통신하면서
+서버가 바이러스나 악성코드에 의해서 감염이 되었을 때 내부에 있는 호스트들에게는
+피해를 주지 않기 위해서 설정
+</code></pre>
+<ol start="2">
+<li>SOPHOS 설정
+내부 -&gt; DMZ  (웹, SSH, DNS 허용)
+내부 -&gt; 외부 (모두 허용)
+DMZ  -&gt; 내부 (모두 거부)
+DMZ  -&gt; 외부 (DNS만 허용)
+외부 -&gt; 내부 (모두 거부)
+외부 -&gt; DMZ  (웹 서비스, DNS만 허용)</li>
+</ol>
+<ol start="5">
+<li>
+<p>VPN 이란?
+Virtual Private Network, 가상 사설망이라고 한다.
+특정 네트워크 대역끼리 사설 네트워크를 만들어서 연결할 때 하나하나 실제 네트워크
+선을 연결해서 만들어야 하지만 현실적으로 비용이 많이 들고 물리적인 보안에 취약</p>
+<p>따라서 그 대신에 인터넷 네트워크 상으로 통신할 때 암호화 기술을 이용하여
+특정한 사용자만 알아볼 수 있는 방식으로 통신</p>
+</li>
+</ol>
+<ol>
+<li>
+<p>VPN 종류
+2계층 : PPTP(MS에서 개발), L2TP(Cisco에서 개발)
+3계층 : IPsec(IP 기반), IPv4, IPv6 모두 지원
+IPsec의 모드 : AH(전송모드, 터널모드, 주로 인증)
+ESP(투명모드, 터널모드, 주로 암호화)
+*터널모드는 기존의 IP헤더를 암호화해서 감추고
+새로운 IP헤더를 캡슐화한다.
+AH(인증 헤더)
+기본 패킷 : [원본 IP 헤더][상위 헤더][Data]</p>
+<p>전송 모드 : [원본 IP 헤더][AH][상위 헤더][Data]</p>
+<p>터널 모드 : [새 IP 헤더][AH][원본IP 헤더][상위 헤더][Data]</p>
+</li>
+</ol>
+<pre><code>ESP(암호화 헤더)
+  기본 패킷 : [원본 IP 헤더][상위 헤더][Data]
+
+  전송 모드 : [원본 IP 헤더][ESP][상위 헤더][Data][ESP Tail][ESP Auth]
+
+  터널 모드 : [새 IP 헤더][ESP][원본IP 헤더][상위 헤더][Data][ESP Tail][ESP Auth]
+
+
+
+4계층 : SSL(Secure Socket Layer, TLS)
+    SSL 프로토콜의 종류
+    Handshake : 암호화에 사용할 알고리즘을 서로 합의
+    Change Chiper Spec : 협상한 암호키 이용, 레코드 암호화 명령
+    Alert : 에러 메시지 전달
+    Record : 데이터 암호화
+	
+    *네트워크 보안에서 SSL Strip, HeartBleed
+</code></pre>
+<ol start="6">
+<li>VPN Remote Access 설정</li>
+</ol>
+<ol>
+<li>
+<p>UTM 설정</p>
+</li>
+<li>
+<p>클라이언트 설정
+크롬 설치</p>
+<p>SIC_V12.14_32.exe  (베리즈에서 다운 후 윈도우 7에 설치)</p>
+<p>크롬에서 https://[UTM IP] 접속 -&gt; 로그인 -&gt; 원격 접속
+-&gt; 2번째 파일 다운 -&gt; 패스워드 아무거나 입력 후 3번째 파일 다운</p>
+</li>
+</ol>
+<ol start="7">
+<li>Site to Site VPN설정</li>
+</ol>
+<ol>
+<li>
+<p>UTM-1</p>
+</li>
+<li>
+<p>UTM-2</p>
+</li>
+</ol>
+<p>설정파일 다운 로드 후 추가</p>
+<p>컨피규레이션 설티피케이트에 인증서 확인</p>
+<p>add 클릭</p>
+<p>sophos_crt</p>
+<p>from PKCS#12 파일 선택</p>
+<p>OK</p>
+<p>프로필</p>
+<p>프로필 추가</p>
+<p>임포트 후 넥스트</p>
+<p>프로필 다시 들어가서 설정 변경</p>
+<p>아이덴티티</p>
+<p>프리쉐어드 키 none을 추가한 이증서로 바꾸기</p>
+<ol start="8">
+<li>EMS 구축 (Enterprise Management System)</li>
+</ol>
+<ol>
+<li>UTM 설정</li>
+</ol>
+<hr>
+<pre><code>    원격 로그 서버 실습
+</code></pre>
+<hr>
+<p>서버
+서버
+/etc/rsyslog.conf
+15번, 16번 라인에 주석 제거</p>
+<pre><code>systemctl restart rsyslog.service
+systemctl stop firewalld
+</code></pre>
+<p>클라이언트
+/etc/rsyslog.conf
+75번 라인에 다음 추가
+*.notice		@[서버 IP]</p>
+<pre><code>systemctl restart rsyslog.service
+</code></pre>
+<h1 id="snort-remote-log">Snort Remote log</h1>
+<p>vi /etc/snort/snort.conf</p>
+<h1 id="syslog">syslog</h1>
+<p>주석풀기</p>
+<p>vi /etc/rsys.conf</p>
+<h1 id="snort-remote-log-1">Snort Remote log</h1>
+<p>auth.alert 					@ [ 서버 IP ] 추가</p>
+<p>화이트 블럭 제출하기</p>
+<p>Firewalld</p>
+<p>firewall-cmd &ndash;get-log-denied
+off = 로그를 남기지 않는다</p>
+<p>firewall-cmd &ndash;set-log-denied=all
+all = 로그를 남긴다</p>
+<p>vi /etc/sysconfig/firewalld
+FIREWALLD_ARGS=[ &ndash;debug ] 추가</p>
+<p>firewall-cmd &ndash;list-all
+firewall-cmd &ndash;permanent &ndash;zone=public &ndash;add-icmp-block=echo-request
+firewall-cmd &ndash;zone=public &ndash;add-interface=ens33</p>
+<p>vi /etc/rsys.conf</p>
+<h1 id="snort-remote-log-2">Snort Remote log</h1>
+<p>kern.* 					@ [ 서버 IP ] 추가</p>
+<p>테스트
+클라이언트에서 로그를 남기면 서버 쪽에서 확인 가능
+logger -p local1.notice logging hahahahahahaha</p>
+<ol start="2">
+<li>
+<p>snort 설정</p>
+</li>
+<li>
+<p>firewalld 설정</p>
+</li>
+</ol>
+<pre><code>firewall-cmd --set-log-denied=[값]
+            all, unicast, broadcast, multicast, off
+</code></pre>
+<p>아까 말한 시험 준비 말해드릴께여</p>
+<p>전에 얘기 했던 것 처럼 와이어 샤크 패킷 캡처 파일은 준 후
+패킷이 캡쳐되어 있는 데, 누가 누구에게 무엇을 어떻게 했는 지를 파악해서</p>
+<p>누가 누구에게 ~ 를 했다를 쓰는 거에요</p>
+<p>아 컴퓨터 뻗었어</p>
+<p>누구에게 무엇을 했다</p>
+<p>누가 누구에게 무엇을 했다라는 소리는 무슨 아이피가 무슨 아이피에게 무엇을 했다라는 걸 말하는 거구요</p>
+<p>크리스마스 스캔
+근거1. 포트르 바꿔가면서 보내는 거면 이런 아이피인 에가 포트를 바꿔가면서 뭐를 보냈다
+근거2. 아이피도 바꾼걸로 바꿔서 디코이 공격도 같이 했다
+대응책. 대응책을 세운 후, 적용 후 스크린샷을 찍어서 적용시킨다.</p>
+<p>이렇게 써서 보고서로 작성해서 제출하면 되요</p>
+<p>이제 다들 남은 시간동안 개인 공부하세요</p>
 </article>
  
       
