@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>왈왈왈</title>
+    <link>https://mung0001.github.io/docs/study/django/</link>
+    <description>Recent content on 왈왈왈</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://mung0001.github.io/docs/study/django/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/django/django/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/django/django/</guid>
+      <description>Djnago  Djnago 설치  설치환경   Ubuntu 18.04
+  mysql 5.7
+  python 3.6.8
+  pip3 9.0.3
+  django 2.1
+   Ubuntu 설정   apt-get update -y
+  apt-get upgrade -y
+  apt-get install python3 -y
+  apt-get install python3-pip -y
+  apt-get install gcc -y
+  apt-get install python-dev -y
+  apt-get install libmysqlclient-dev -y</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/django/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/django/test/</guid>
+      <description>Django Project  Django Project start  startproject (ve) django-admin startproject Django(ve) cd Django  테스트 서버 실행 python3 manage.py runserver 0.0.0.0:8000
+  내부가 아닌 다른 곳에서 접속을 원하는 경우
+ Django/setting.py에서 ALLOWED_HOSTS = [&#39;*&#39;]로 편집해준다. 방화벽을 해제한다.      설정파일 settings.py   settings.py는 파일 장고의 전반적인 설정을 다룬다.  </description>
+    </item>
+    
+  </channel>
+</rss>

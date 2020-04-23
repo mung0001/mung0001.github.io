@@ -36,19 +36,19 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/programing/java/</link>
+      <link>https://mung0001.github.io/docs/programing/code/java/java/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/programing/java/</guid>
+      <guid>https://mung0001.github.io/docs/programing/code/java/java/</guid>
       <description>Java ****  ...</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/programing/php/</link>
+      <link>https://mung0001.github.io/docs/programing/code/php/php/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/programing/php/</guid>
+      <guid>https://mung0001.github.io/docs/programing/code/php/php/</guid>
       <description>PHP ID, PW EX...&amp;lt;?php$cookie=$_GET[&amp;#34;data&amp;#34;];$myfile=fopen(&amp;#34;cookie/data.txt&amp;#34;, &amp;#34;a+&amp;#34;);fwrite($myfile, $cookie.&amp;#34;\r\n&amp;#34;);fclose($myfile);?&amp;gt;</description>
     </item>
     
@@ -60,29 +60,6 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <guid>https://mung0001.github.io/posts/goisforlovers/</guid>
       <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
 This document is a brief primer on using Go templates.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/aws/auto-scaling/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/aws/auto-scaling/</guid>
-      <description>Auto Scaling  Auto Scaling  EC2 인스턴스를 자동으로 시작하거나 종료하여 애플리케이션 로드를 처리하기에 적절한 수의 EC를 유지할 수 있도록 하는 서비스 사용자가 정의하는 조건에 따라 EC2 개수를 자동으로 확장 또는 축소가 가능 모니터링을 통해 비정상 인스턴스를 탐지하고 교체할 수 있음 수요가 급증할 경우 EC2 수를 자동으로 늘려 성능을 유지하고 수요가 적을 경우 수를 줄여 비용을 절감 ELB의 대상그룹을 Auto Scaling Group( ASG )에 포함시켜 자동생성된 EC2로 하여금 트래픽 부하분산을 하도록 설정가능 수요 변화가 예측 나응한 경우 예약된 일정을 통해 정해싲 시간에 늘리거나 줄이도록 설정이 가능 ASG 내 손상된 인스턴스가 발견될 경우, Auto Scaling은 이를 자동으로 종료하고 새로운 인스턴스로 교체  ELB를 사용하는 경우, ELB가 손상된 인스턴스를 트래픽 요청 대상에서 분리시킨 후, Auto Scaling이 이를 새로운 인스턴스로 교체   비정상 서버 탐지 후 Auto Scaling이 새로운 인스턴스를 In Service 상태를 만들기까지 5분 이내 소요   AWS Auto Scaling 그룹.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/aws/%EC%96%91%EC%8B%9D/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/aws/%EC%96%91%EC%8B%9D/</guid>
-      <description>AWS 용어 정리    AWS 기본 용어  AWS 기본 용어... Region
-  AWS에서 사용하는 일종의 IDC의 집합으로 거의 모든 클라우드 서비스가 탑재되는 곳으로 다수의 Availability Zone( 가용영역 )으로 구성됨
-  한 곳의 AZ의 기능이 마비되어도 다른 AZ가 기능을 수행
-  전 세계 주요 대도시에는 분포되어있음
-  AWS 사용자는 각 Region 마다 별도의 클라우드 망을 구축할 수 있음
-   On-premise</description>
     </item>
     
     <item>
@@ -200,6 +177,70 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
+      <link>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/git/</guid>
+      <description>Git&amp;amp;&amp;amp; Github  깃 ( git )    Git 공식 홈페이지 에서 다운로드
+  형상 관리 도구 ( Configuration Management Tool )인 분산형 관리 시스템
+  무료, 공개소프트웨어 서비스
+  소스코드를 주고 받을 필요 없이, 같은 파일을 여러 명이 동시에 작업하는 병렬 개발이 가능
+  분산 버전관리이기 때문에 인터넷이 연결되지 않은 곳에서도 개발을 진행할 수 있으며, 중앙 저장소가 날라가벌도 다시 원상복구가 가능
+     git의 특징   버전관리   깃에서 버전이란 문서를 수정하고 저장할 때마다 생기는 지점</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/hugo/</guid>
+      <description>Hugo  휴고 다운로드
+   So cutey
+  Hugo는 Go언어를 기반으로 Go 언어를 이용한 프로그램 사용 및 수정
+  Markdown으로 글을 작성
+  git을 활용한 글 관리 및 버전 관리
+     Hugo 적용    Hugo 환경변수 등록
+  휴고 사이트 시작
+  hugo new site testprojectcd testprojecthugo server -D  테마 적용    Hugo 테마 다운로드</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/sdn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/sdn/</guid>
+      <description>SDN    SDN ( Software Defined Networking : 소프트웨어 정의 네트워킹 )    기존의 네트워크 인프라가 가지고 있던 문제를 해결하기 위해서 나온 개념
+  기존의 네트워크 인프라를 구성하는 네트워크 장비들은 하나의 장비에 HW OS APP이 모두 들어가 있었기 때문에 장비 하나하나가 복잡한 기능을 모두 가지고 있었고 장비 자체의 사양도 높아야 했다. 그러다보니 장비마다 비용도 비싸지고 장비를 하나하나 설정해야하는 문제점들이 있었다.
+  SDN은 기존의 장비의 HW와 OS APP 부분을 분리하여 장비 하나하나는 HW부분만을 담당하고 SW적인 부분은 중앙의 컨트롤러에서 제어한다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloud/aws/auto-scaling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/auto-scaling/</guid>
+      <description>Auto Scaling  Auto Scaling  EC2 인스턴스를 자동으로 시작하거나 종료하여 애플리케이션 로드를 처리하기에 적절한 수의 EC를 유지할 수 있도록 하는 서비스 사용자가 정의하는 조건에 따라 EC2 개수를 자동으로 확장 또는 축소가 가능 모니터링을 통해 비정상 인스턴스를 탐지하고 교체할 수 있음 수요가 급증할 경우 EC2 수를 자동으로 늘려 성능을 유지하고 수요가 적을 경우 수를 줄여 비용을 절감 ELB의 대상그룹을 Auto Scaling Group( ASG )에 포함시켜 자동생성된 EC2로 하여금 트래픽 부하분산을 하도록 설정가능 수요 변화가 예측 나응한 경우 예약된 일정을 통해 정해싲 시간에 늘리거나 줄이도록 설정이 가능 ASG 내 손상된 인스턴스가 발견될 경우, Auto Scaling은 이를 자동으로 종료하고 새로운 인스턴스로 교체  ELB를 사용하는 경우, ELB가 손상된 인스턴스를 트래픽 요청 대상에서 분리시킨 후, Auto Scaling이 이를 새로운 인스턴스로 교체   비정상 서버 탐지 후 Auto Scaling이 새로운 인스턴스를 In Service 상태를 만들기까지 5분 이내 소요   AWS Auto Scaling 그룹.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloud/aws/%EC%96%91%EC%8B%9D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/%EC%96%91%EC%8B%9D/</guid>
+      <description>AWS 용어 정리    AWS 기본 용어  AWS 기본 용어... Region
+  AWS에서 사용하는 일종의 IDC의 집합으로 거의 모든 클라우드 서비스가 탑재되는 곳으로 다수의 Availability Zone( 가용영역 )으로 구성됨
+  한 곳의 AZ의 기능이 마비되어도 다른 AZ가 기능을 수행
+  전 세계 주요 대도시에는 분포되어있음
+  AWS 사용자는 각 Region 마다 별도의 클라우드 망을 구축할 수 있음
+   On-premise</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://mung0001.github.io/docs/hidden/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -210,14 +251,45 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/programing/python/</link>
+      <link>https://mung0001.github.io/docs/programing/code/python/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/programing/python/</guid>
+      <guid>https://mung0001.github.io/docs/programing/code/python/python/</guid>
       <description>Python 내장함수  ...abs abs(x)는 어떤 숫자를 입력받았을 때, 그 숫자의 절댓값을 돌려주는 함수
 &amp;gt;&amp;gt;&amp;gt; abs(3)3&amp;gt;&amp;gt;&amp;gt; abs(-3)3   all all(x)는 반복 가능한(iterable) 자료형 x를 입력 인수로 받으며 이 x가 모두 참이면 True, 거짓이 하나라도 있으면 False를 반환
 ※ 반복 가능한 자료형이란 for문으로 그 값을 출력할 수 있는 것을 의미한다. 리스트, 튜플, 문자열, 딕셔너리, 집합 등이 있다.
 &amp;gt;&amp;gt;&amp;gt; all([1, 2, 3])True&amp;gt;&amp;gt;&amp;gt; all([1, 2, 3, 0])False  any any(x)는 x 중 하나라도 참이 있으면 True를 돌려주고, x가 모두 거짓일 때에만 False를 돌려준다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/django/django/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/django/django/</guid>
+      <description>Djnago  Djnago 설치  설치환경   Ubuntu 18.04
+  mysql 5.7
+  python 3.6.8
+  pip3 9.0.3
+  django 2.1
+   Ubuntu 설정   apt-get update -y
+  apt-get upgrade -y
+  apt-get install python3 -y
+  apt-get install python3-pip -y
+  apt-get install gcc -y
+  apt-get install python-dev -y
+  apt-get install libmysqlclient-dev -y</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/django/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/django/test/</guid>
+      <description>Django Project  Django Project start  startproject (ve) django-admin startproject Django(ve) cd Django  테스트 서버 실행 python3 manage.py runserver 0.0.0.0:8000
+  내부가 아닌 다른 곳에서 접속을 원하는 경우
+ Django/setting.py에서 ALLOWED_HOSTS = [&#39;*&#39;]로 편집해준다. 방화벽을 해제한다.      설정파일 settings.py   settings.py는 파일 장고의 전반적인 설정을 다룬다.  </description>
     </item>
     
     <item>
@@ -297,36 +369,6 @@ This document is a brief primer on using Go templates.</description>
       
       <guid>https://mung0001.github.io/docs/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/5.-%EC%A0%95%EB%B3%B4%EC%84%B8%EC%8A%A4%ED%85%9C-%EA%B5%AC%EC%B6%95%EA%B4%80%EB%A6%AC/</guid>
       <description>ㅎㅇ</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/%EB%B0%B0%EC%B9%98-%EC%A0%84/git/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/%EB%B0%B0%EC%B9%98-%EC%A0%84/git/</guid>
-      <description>Git&amp;amp;&amp;amp; Github  깃 ( git )    Git 공식 홈페이지 에서 다운로드
-  형상 관리 도구 ( Configuration Management Tool )인 분산형 관리 시스템
-  무료, 공개소프트웨어 서비스
-  소스코드를 주고 받을 필요 없이, 같은 파일을 여러 명이 동시에 작업하는 병렬 개발이 가능
-  분산 버전관리이기 때문에 인터넷이 연결되지 않은 곳에서도 개발을 진행할 수 있으며, 중앙 저장소가 날라가벌도 다시 원상복구가 가능
-     git의 특징   버전관리   깃에서 버전이란 문서를 수정하고 저장할 때마다 생기는 지점</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/%EB%B0%B0%EC%B9%98-%EC%A0%84/hugo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/%EB%B0%B0%EC%B9%98-%EC%A0%84/hugo/</guid>
-      <description>Hugo  휴고 다운로드
-   So cutey
-  Hugo는 Go언어를 기반으로 Go 언어를 이용한 프로그램 사용 및 수정
-  Markdown으로 글을 작성
-  git을 활용한 글 관리 및 버전 관리
-     Hugo 적용    Hugo 환경변수 등록
-  휴고 사이트 시작
-  hugo new site testprojectcd testprojecthugo server -D  테마 적용    Hugo 테마 다운로드</description>
     </item>
     
     <item>
