@@ -16,7 +16,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/basic/security/%EC%A0%95%EB%A6%AC/</loc>
+    <loc>https://mung0001.github.io/docs/study/security/%EC%A0%95%EB%A6%AC/</loc>
   </url>
   
   <url>
@@ -25,14 +25,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/study/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/</loc>
   </url>
   
   <url>
@@ -52,7 +44,19 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/project/mini/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/study/django/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/golang/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/network/</loc>
   </url>
   
   <url>
@@ -60,7 +64,19 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/study/security/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/system/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/study/web/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/%EC%A0%84%EC%A0%84/</loc>
   </url>
   
   <url>
@@ -127,79 +143,15 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/basic/cloud/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/database/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/network/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/network/network_equipment/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/network/%E3%84%B4-packet/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/network/%E3%84%B4-portnumber/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/security/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/security/%EB%B0%A9%ED%99%94%EB%B2%BD/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/security/%EB%B3%B4%EC%95%88/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/security/%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/system/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/system/%E3%84%B4linux/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/system/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/git/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/hugo/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/sdn/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/cloud/aws/auto-scaling/</loc>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/docs/cloud/aws/%EC%96%91%EC%8B%9D/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloud/aws/%EC%9A%B4%EC%98%81-%EC%84%9C%EB%B2%84%EC%9D%98-%EC%99%B8%EB%B6%80%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1/</loc>
   </url>
   
   <url>
@@ -211,6 +163,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/study/django/basic/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/study/django/django/</loc>
   </url>
   
@@ -219,7 +175,47 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/study/golang/ttt/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/network/network_equipment/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/network/%E3%84%B4-packet/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/network/%E3%84%B4-portnumber/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/study/openstack/openstack/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/security/%EB%B0%A9%ED%99%94%EB%B2%BD/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/security/%EB%B3%B4%EC%95%88/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/security/%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/system/linux/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/system/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</loc>
   </url>
   
   <url>
@@ -228,6 +224,18 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/study/web/html/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/%EC%A0%84%EC%A0%84/git/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/%EC%A0%84%EC%A0%84/hugo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/%EC%A0%84%EC%A0%84/sdn/</loc>
   </url>
   
   <url>

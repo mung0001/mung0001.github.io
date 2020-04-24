@@ -33,5 +33,14 @@
    On-premise</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloud/aws/%EC%9A%B4%EC%98%81-%EC%84%9C%EB%B2%84%EC%9D%98-%EC%99%B8%EB%B6%80%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/%EC%9A%B4%EC%98%81-%EC%84%9C%EB%B2%84%EC%9D%98-%EC%99%B8%EB%B6%80%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1/</guid>
+      <description>AWS의 외부환경 구성  DNS ( Domain Name System )   DNS란 도메인네임서버를 일컫으며, 인터넷은 서버들을 유일하게 구분할 수 있는 IP주소 체계를 보다 인간이 읽게 쉽게 하기 위해 계발되었다. 흔히 우리가 알고 있는 naver.com, google.com, daum.net 모두 DNS이다. AWS에서는 Route 53을 활용해 도메인 서비스를 지원한다.   AWS Route 53    AWS의 DNS 서비스 ( 도메인 등록, DNS 라우팅, Health check ) 도메인 등록시 약 12.000원 정도 지불해야 하며, 최대 3일 정도 걸림 해당 도메인을 AWS 내 서비스 ( EC2, ELB, S3 등 ) 와 연결 할 수 있으며 AWS 외 요소들과도 연결 가능 도메인 생성 후 레코드 세트를 생성하여 하위 도메인을 등록할 수 있음 레코드 세트 등록시에는 IP 주소, 도메인, ‘Alias’ 등을 지정하여 쿼리를 라우팅할 수 있음   Route 53의 라우팅 정책  Simple : 동일 레코드 내에 다수의 IP를 지정하여 라우팅 가능, 값을 다수 지정한 경우 무작위로 반환함 Weighted : Region 별 부하 분산 가능, 각 가중치를 가진 동일한 이름의 A 레코드를 만들어 IP를 다르게 줌 Latency-based : 지연 시간이 가장 적은, 즉 응답시간이 가장 빠른 리전으로 쿼리를 요청 Failover : A/S 설정에서 사용됨, Main과 DR로 나누어 Main 장애시 DR로 쿼리 Geolocation : 각 지역을 기반으로 가장 가까운 리전으로 쿼리 수행, 레코드 생성시 지역을 지정할 수 있음 Geo-proximity : Traffic flow를 이용한 사용자 정의 DNS 쿼리 생성 가능 Multi-value answer : 다수의 IP를 지정한다는 것은 simpl와 비슷하지만 health check가 가능 ( 실패시 자동 Failover )     AWS Route 사용방법.</description>
+    </item>
+    
   </channel>
 </rss>

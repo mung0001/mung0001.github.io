@@ -13,10 +13,10 @@
     
     <item>
       <title>Home</title>
-      <link>https://mung0001.github.io/docs/basic/security/%EC%A0%95%EB%A6%AC/</link>
+      <link>https://mung0001.github.io/docs/study/security/%EC%A0%95%EB%A6%AC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/basic/security/%EC%A0%95%EB%A6%AC/</guid>
+      <guid>https://mung0001.github.io/docs/study/security/%EC%A0%95%EB%A6%AC/</guid>
       <description>인
  용
  구
@@ -64,160 +64,6 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/basic/network/network_equipment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/basic/network/network_equipment/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/basic/network/%E3%84%B4-packet/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/basic/network/%E3%84%B4-packet/</guid>
-      <description>네트워크 패킷 ( Network Packet )    패킷이란 데이터의 묶음 단위로 한번에 전송할 데이터의 크기
-  제 3계층 이상 ( Network 계층 ) 에서는 이 데이터의 묶음을 패킷이라고 부르며, 제 2계층에서는 프레임( Frame )
-  패킷의 크기는 네트워크의 종류에 따라 크기가 다름
-  패킷을 이렇게 나눠 보내는 이유는 컴퓨터는 동시다발적으로 데이터를 전송하는 데, 한 데이터에게만 데이터를 줄 경우, 한 컴퓨터와의 통신밖에 하지 못하기에, 데이터를 나눠 모두에게 통신할 수 있게 하며, 중간에 에러가 날 경우를 대비</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/basic/network/%E3%84%B4-portnumber/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/basic/network/%E3%84%B4-portnumber/</guid>
-      <description>TCP/ UDP 포트 번호 정리  기본적인 포트번호    Well-known port : 0 ~ 1023
-  Registered port : 1024 ~ 49151
-  Dynamic port : 49152 ~ 65535
-    Port Tables...  Register Port  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/basic/security/%EB%B0%A9%ED%99%94%EB%B2%BD/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/basic/security/%EB%B0%A9%ED%99%94%EB%B2%BD/</guid>
-      <description>방화벽 (CentOS - firewalld)    리눅스의 방화벽
- 커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제       방화벽의 종류
- 패킷 필터링 방화벽  - 제 1세대 방화벽 - 레이어 1~4에서 사용 - 단순하기 때문에 빠르고 효과적 - 5~7계층 대응 불가  Stateful 방화벽  - 제 2세대 방화벽 - 패킷의 연결 상태를 관찰 - 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약  **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽 - 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요      방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/basic/security/%EB%B3%B4%EC%95%88/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/basic/security/%EB%B3%B4%EC%95%88/</guid>
-      <description>Network Security   Hacking Process  확인 정보 ( OS 버전, 응용 프로그램, IP주소, 도메인 )  정보수집  정보 수집...  구글 검색    intitle : [검색어] - 탭 제목에 포함된 내용으로 검색
-  filetype : [검색어] - 특정 파일 확장자로 검색
-  site : [검색어] - 특정 도메인 주소 검색
-  inurl : [검색어] - URL에 포함된 문자 검색</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/basic/security/%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/basic/security/%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</guid>
-      <description>시스템통합 관리 침입 탐지 시스템(IDS) &amp;ndash; Snort 이용    주된 기능
-  탐지(Detection)
-  잘못된 패킷을 감지하면 사용자에게 알림(주체적으로 처리하지 X, only 안내)
-       탐지 종류 2가지
-  (1)오용 탐지	알고 있는 것 탐지
-  (2)이상 탐지	모르는 것도 탐지(100% 탐지 X)
-  너무 민감하게 처리하면 필요한 정보도 차단하는 실수를 할 수 있음
-       설치위치 ( 성능이 달라짐 )</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/basic/system/%E3%84%B4linux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/basic/system/%E3%84%B4linux/</guid>
-      <description>Linux 기본    유닉스 기반의 컴퓨터 운영체제의 한 종류
-  핀란드 헬싱키 대학의 대학원생 리누스 토발즈 ( Linus Tovalds )가 1991년에 개발
-  윈도우와는 다르게 오픈 소스 ( 소스코드가 공개된 프로그램 ) 운영체제
-  소스코드가 공개되어 있기 때문에 다양한 리눅스 기반의 운영 체제가 존재 ( 구글의 안드로이드도 리눅스를 기반으로 만든 운영체제 )
-  대표적인 리눅스 기관 GNU
-      유닉스 운영체제 종류      Linux의 특징   높은 이식성과 확정성 ( C언어 기반 )</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/basic/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/basic/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</guid>
-      <description>방화벽 (CentOS - firewalld)    리눅스의 방화벽
- 커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제       방화벽의 종류
- 패킷 필터링 방화벽  - 제 1세대 방화벽 - 레이어 1~4에서 사용 - 단순하기 때문에 빠르고 효과적 - 5~7계층 대응 불가  Stateful 방화벽  - 제 2세대 방화벽 - 패킷의 연결 상태를 관찰 - 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약  **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽 - 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요      방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/basic/system/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/basic/system/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</guid>
-      <description>시스템통합 관리 침입 탐지 시스템(IDS) &amp;ndash; Snort 이용    주된 기능
-  탐지(Detection)
-  잘못된 패킷을 감지하면 사용자에게 알림(주체적으로 처리하지 X, only 안내)
-       탐지 종류 2가지
-  (1)오용 탐지	알고 있는 것 탐지
-  (2)이상 탐지	모르는 것도 탐지(100% 탐지 X)
-  너무 민감하게 처리하면 필요한 정보도 차단하는 실수를 할 수 있음
-       설치위치 ( 성능이 달라짐 )</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/git/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/git/</guid>
-      <description>Git&amp;amp;&amp;amp; Github  깃 ( git )    Git 공식 홈페이지 에서 다운로드
-  형상 관리 도구 ( Configuration Management Tool )인 분산형 관리 시스템
-  무료, 공개소프트웨어 서비스
-  소스코드를 주고 받을 필요 없이, 같은 파일을 여러 명이 동시에 작업하는 병렬 개발이 가능
-  분산 버전관리이기 때문에 인터넷이 연결되지 않은 곳에서도 개발을 진행할 수 있으며, 중앙 저장소가 날라가벌도 다시 원상복구가 가능
-     git의 특징   버전관리   깃에서 버전이란 문서를 수정하고 저장할 때마다 생기는 지점</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/hugo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/hugo/</guid>
-      <description>Hugo  휴고 다운로드
-   So cutey
-  Hugo는 Go언어를 기반으로 Go 언어를 이용한 프로그램 사용 및 수정
-  Markdown으로 글을 작성
-  git을 활용한 글 관리 및 버전 관리
-     Hugo 적용    Hugo 환경변수 등록
-  휴고 사이트 시작
-  hugo new site testprojectcd testprojecthugo server -D  테마 적용    Hugo 테마 다운로드</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/sdn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/basic/%EC%A0%84%EC%A0%84/sdn/</guid>
-      <description>SDN    SDN ( Software Defined Networking : 소프트웨어 정의 네트워킹 )    기존의 네트워크 인프라가 가지고 있던 문제를 해결하기 위해서 나온 개념
-  기존의 네트워크 인프라를 구성하는 네트워크 장비들은 하나의 장비에 HW OS APP이 모두 들어가 있었기 때문에 장비 하나하나가 복잡한 기능을 모두 가지고 있었고 장비 자체의 사양도 높아야 했다. 그러다보니 장비마다 비용도 비싸지고 장비를 하나하나 설정해야하는 문제점들이 있었다.
-  SDN은 기존의 장비의 HW와 OS APP 부분을 분리하여 장비 하나하나는 HW부분만을 담당하고 SW적인 부분은 중앙의 컨트롤러에서 제어한다.</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://mung0001.github.io/docs/cloud/aws/auto-scaling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -237,6 +83,15 @@ This document is a brief primer on using Go templates.</description>
   전 세계 주요 대도시에는 분포되어있음
   AWS 사용자는 각 Region 마다 별도의 클라우드 망을 구축할 수 있음
    On-premise</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloud/aws/%EC%9A%B4%EC%98%81-%EC%84%9C%EB%B2%84%EC%9D%98-%EC%99%B8%EB%B6%80%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/%EC%9A%B4%EC%98%81-%EC%84%9C%EB%B2%84%EC%9D%98-%EC%99%B8%EB%B6%80%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1/</guid>
+      <description>AWS의 외부환경 구성  DNS ( Domain Name System )   DNS란 도메인네임서버를 일컫으며, 인터넷은 서버들을 유일하게 구분할 수 있는 IP주소 체계를 보다 인간이 읽게 쉽게 하기 위해 계발되었다. 흔히 우리가 알고 있는 naver.com, google.com, daum.net 모두 DNS이다. AWS에서는 Route 53을 활용해 도메인 서비스를 지원한다.   AWS Route 53    AWS의 DNS 서비스 ( 도메인 등록, DNS 라우팅, Health check ) 도메인 등록시 약 12.000원 정도 지불해야 하며, 최대 3일 정도 걸림 해당 도메인을 AWS 내 서비스 ( EC2, ELB, S3 등 ) 와 연결 할 수 있으며 AWS 외 요소들과도 연결 가능 도메인 생성 후 레코드 세트를 생성하여 하위 도메인을 등록할 수 있음 레코드 세트 등록시에는 IP 주소, 도메인, ‘Alias’ 등을 지정하여 쿼리를 라우팅할 수 있음   Route 53의 라우팅 정책  Simple : 동일 레코드 내에 다수의 IP를 지정하여 라우팅 가능, 값을 다수 지정한 경우 무작위로 반환함 Weighted : Region 별 부하 분산 가능, 각 가중치를 가진 동일한 이름의 A 레코드를 만들어 IP를 다르게 줌 Latency-based : 지연 시간이 가장 적은, 즉 응답시간이 가장 빠른 리전으로 쿼리를 요청 Failover : A/S 설정에서 사용됨, Main과 DR로 나누어 Main 장애시 DR로 쿼리 Geolocation : 각 지역을 기반으로 가장 가까운 리전으로 쿼리 수행, 레코드 생성시 지역을 지정할 수 있음 Geo-proximity : Traffic flow를 이용한 사용자 정의 DNS 쿼리 생성 가능 Multi-value answer : 다수의 IP를 지정한다는 것은 simpl와 비슷하지만 health check가 가능 ( 실패시 자동 Failover )     AWS Route 사용방법.</description>
     </item>
     
     <item>
@@ -263,6 +118,16 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
+      <link>https://mung0001.github.io/docs/study/django/basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/django/basic/</guid>
+      <description>Django    Django   파이썬으로 만들어진 무료 오픈소스 웹 애플리케이션 프레임워크 모델&amp;ndash;뷰&amp;ndash;컨트롤러 ( MVC ) 패턴을 따름 장고는 컴포넌트의 재사용 및 플러그인화 가능성을, 빠른 개발을 위해 계발 웹 개발 시 많이 사용되며, 번거로운 요소들을 새로 개발할 필요 없이 내장된 기능만을 이용해 빠른 개발이 가능   MTV ( Model-Template-View )    Model
+ 데이터에 관한 정보를 담으며, 데이터에 대한 접근, 검증, 작동과 데이터 사이의 관계를 정의하며, 각각의 모델은 데이터베이스에서 테이블에 해당    Template</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://mung0001.github.io/docs/study/django/django/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -272,13 +137,13 @@ This document is a brief primer on using Go templates.</description>
   python 3.6.8
   pip3 9.0.3
   django 2.1
-   Ubuntu 설정   apt-get update -y
-  apt-get upgrade -y
-  apt-get install python3 -y
-  apt-get install python3-pip -y
-  apt-get install gcc -y
-  apt-get install python-dev -y
-  apt-get install libmysqlclient-dev -y</description>
+   Ubuntu 설정   apt update -y
+  apt upgrade -y
+  apt install python3 -y
+  apt install python3-pip -y
+  apt install gcc -y
+  apt install python-dev -y
+  apt install libmysqlclient-dev -y</description>
     </item>
     
     <item>
@@ -287,9 +152,51 @@ This document is a brief primer on using Go templates.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/study/django/test/</guid>
-      <description>Django Project  Django Project start  startproject (ve) django-admin startproject Django(ve) cd Django  테스트 서버 실행 python3 manage.py runserver 0.0.0.0:8000
-  내부가 아닌 다른 곳에서 접속을 원하는 경우
- Django/setting.py에서 ALLOWED_HOSTS = [&#39;*&#39;]로 편집해준다. 방화벽을 해제한다.      설정파일 settings.py   settings.py는 파일 장고의 전반적인 설정을 다룬다.  </description>
+      <description>Django Project   Django Boardapp project  모델을 구성하기에 앞서 django에서 지원하는 admin을 사용하기 위해 기본적인 database를 받아온다.
+(ve) $ ./manage.py migrate DB 테이블 생성
+# User tableALTER TABLE auth_userADD COLUMN phone VARCHAR(45) NOT NULL AFTER date_joined,ADD COLUMN date_of_birth DATETIME NOT NULL AFTER phone,CHANGE COLUMN date_joined date_joined DATETIME NOT NULL AFTER email,CHANGE COLUMN first_name first_name VARCHAR(30) NULL AFTER is_active,CHANGE COLUMN is_staff is_staff TINYINT(1) NULL,CHANGE COLUMN is_active is_active TINYINT(1) NULL;# Board table## board_categoriescreate table board_categories(id int(10) not null auto_increment,category_type varchar(45) not null default &amp;#39;Normal&amp;#39;,category_code varchar(100) not null,category_name varchar(100) not null,category_desc varchar(200) not null,list_count int(10) default &amp;#39;20&amp;#39;,authority int(1) default &amp;#39;0&amp;#39;,creation_date datetime default current_timestamp,last_update_date datetime default null,primary key(id))engine=InnoDB default CHARSET=utf8;## boardscreate table boards(id int(10) not null auto_increment,category_id int(10) not null,user_id int(10) not null,title varchar(300) not null,content text not null,registered_date datetime default current_timestamp,last_update_date datetime default null,view_count int(10) default &amp;#39;0&amp;#39;,image varchar(255) default null,primary key(id),key board_category_fk_idx(category_id),key board_user_fk_idx(user_id),constraint board_category_fk foreign key(category_id) references board_categories(id) on delete no action on update no action,constraint board_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action)engine=InnoDB default CHARSET=utf8;## board_repliescreate table board_replies(id int(10) not null auto_increment,article_id int(10) not null,user_id int(10) not null,`level` tinyint(1) default &amp;#39;1&amp;#39;,content text not null,reference_reply_id int(10) default &amp;#39;0&amp;#39;,registered_date datetime default current_timestamp,last_update_date datetime default null,primary key(id),key user_reply_fk_idx(user_id),key article_reply_fk_idx(article_id),constraint article_reply_fk foreign key(article_id) references boards(id) on delete no action on update no action,constraint user_reply_fk foreign key(user_id) references auth_user(id) on delete no action on update no action)engine=InnoDB default CHARSET=utf8;## board_likescreate table board_likes(id int(10) not null auto_increment,article_id int(10) not null,user_id int(11) not null,registered_date datetime default current_timestamp,primary key(id),key like_article_fk_idx(article_id),key like_user_fk_idx(user_id),constraint like_article_fk foreign key(article_id) references boards(id) on delete no action on update no action,constraint like_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action)engine=InnoDB default CHARSET=utf8;pip3 install Pillow</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/golang/ttt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/golang/ttt/</guid>
+      <description>Go   Golang 설치 Go에서 OS맞는 패키지를 설치</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/network/network_equipment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/network/network_equipment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/network/%E3%84%B4-packet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/network/%E3%84%B4-packet/</guid>
+      <description>네트워크 패킷 ( Network Packet )    패킷이란 데이터의 묶음 단위로 한번에 전송할 데이터의 크기
+  제 3계층 이상 ( Network 계층 ) 에서는 이 데이터의 묶음을 패킷이라고 부르며, 제 2계층에서는 프레임( Frame )
+  패킷의 크기는 네트워크의 종류에 따라 크기가 다름
+  패킷을 이렇게 나눠 보내는 이유는 컴퓨터는 동시다발적으로 데이터를 전송하는 데, 한 데이터에게만 데이터를 줄 경우, 한 컴퓨터와의 통신밖에 하지 못하기에, 데이터를 나눠 모두에게 통신할 수 있게 하며, 중간에 에러가 날 경우를 대비</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/network/%E3%84%B4-portnumber/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/network/%E3%84%B4-portnumber/</guid>
+      <description>TCP/ UDP 포트 번호 정리  기본적인 포트번호    Well-known port : 0 ~ 1023
+  Registered port : 1024 ~ 49151
+  Dynamic port : 49152 ~ 65535
+    Port Tables...  Register Port  </description>
     </item>
     
     <item>
@@ -301,6 +208,81 @@ This document is a brief primer on using Go templates.</description>
       <description>인프라 환경 변화의 시작, 클라우드 클라우드 컴퓨팅의 정의와 종류 클라우드 컴퓨팅(Cloud Computing)  인터넷이 가능한 디바이스(스마트폰, 스마트패드, 스마트TV 등)로 클라우드에서 데이터를 처리하며, 저장 및 관리하는 컴퓨팅 시스템  클라우드 서비스의 종류   IaaS(Infrastrcture as a Service): 서버, 스토리지, 네트워크를 가상화 환경으로 만 들어 필요에 따라 인프라 자원을 제공하는 서비스
   PaaS(Platform as a Service): 웹에서 개발 플랫폼을 제공하는 서비스
   SaaS(Software as a Service): 온디맨드 소프트웨어(On-demand Software)라고도 하며, 중앙에서 호스팅 되는 소프트웨어를 웹 브라우저 등 클라우이언트로 이용하는 서비스</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/security/%EB%B0%A9%ED%99%94%EB%B2%BD/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/security/%EB%B0%A9%ED%99%94%EB%B2%BD/</guid>
+      <description>방화벽 (CentOS - firewalld)    리눅스의 방화벽
+ 커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제       방화벽의 종류
+ 패킷 필터링 방화벽  - 제 1세대 방화벽 - 레이어 1~4에서 사용 - 단순하기 때문에 빠르고 효과적 - 5~7계층 대응 불가  Stateful 방화벽  - 제 2세대 방화벽 - 패킷의 연결 상태를 관찰 - 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약  **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽 - 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요      방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/security/%EB%B3%B4%EC%95%88/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/security/%EB%B3%B4%EC%95%88/</guid>
+      <description>Network Security   Hacking Process  확인 정보 ( OS 버전, 응용 프로그램, IP주소, 도메인 )  정보수집  정보 수집...  구글 검색    intitle : [검색어] - 탭 제목에 포함된 내용으로 검색
+  filetype : [검색어] - 특정 파일 확장자로 검색
+  site : [검색어] - 특정 도메인 주소 검색
+  inurl : [검색어] - URL에 포함된 문자 검색</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/security/%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/security/%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</guid>
+      <description>시스템통합 관리 침입 탐지 시스템(IDS) &amp;ndash; Snort 이용    주된 기능
+  탐지(Detection)
+  잘못된 패킷을 감지하면 사용자에게 알림(주체적으로 처리하지 X, only 안내)
+       탐지 종류 2가지
+  (1)오용 탐지	알고 있는 것 탐지
+  (2)이상 탐지	모르는 것도 탐지(100% 탐지 X)
+  너무 민감하게 처리하면 필요한 정보도 차단하는 실수를 할 수 있음
+       설치위치 ( 성능이 달라짐 )</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/system/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/system/linux/</guid>
+      <description>Linux   Linux 기초   유닉스 기반의 컴퓨터 운영체제의 한 종류 핀란드 헬싱키 대학의 대학원생 리누스 토발즈가 1991년에 개발 오픈 소스의 운영체제 대표적인 리눅스 기관 GNU 높은 이식성과 확정성 ( C언어 기반 ) 안전성과 신뢰성 ( 국제적이고 개방적으로 개발되었기 때문에 문제점에 대한 대처가 빠름 ) 계층적 파일 시스템 ( 최상위 디렉토리가 존재하고 모든 것들은 해당 디렉토리 하부에 존재 )   유닉스 운영체제 종류  리눅스의 구성요소   명령어 : 사용자가 원하는 프로그램을 콜링</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</guid>
+      <description>방화벽 (CentOS - firewalld)    리눅스의 방화벽
+ 커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제       방화벽의 종류
+ 패킷 필터링 방화벽  - 제 1세대 방화벽 - 레이어 1~4에서 사용 - 단순하기 때문에 빠르고 효과적 - 5~7계층 대응 불가  Stateful 방화벽  - 제 2세대 방화벽 - 패킷의 연결 상태를 관찰 - 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약  **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽 - 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요      방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/system/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/system/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</guid>
+      <description>시스템통합 관리 침입 탐지 시스템(IDS) &amp;ndash; Snort 이용    주된 기능
+  탐지(Detection)
+  잘못된 패킷을 감지하면 사용자에게 알림(주체적으로 처리하지 X, only 안내)
+       탐지 종류 2가지
+  (1)오용 탐지	알고 있는 것 탐지
+  (2)이상 탐지	모르는 것도 탐지(100% 탐지 X)
+  너무 민감하게 처리하면 필요한 정보도 차단하는 실수를 할 수 있음
+       설치위치 ( 성능이 달라짐 )</description>
     </item>
     
     <item>
@@ -318,7 +300,48 @@ This document is a brief primer on using Go templates.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/study/web/html/</guid>
-      <description>HTML Expand↕HTML 기본양식 &amp;lt;head&amp;gt;&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt;&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt; 태그 줄 바꾸기  &amp;lt;br&amp;gt; 구분선  &amp;lt;hr&amp;gt; 제목  &amp;lt;h1- h6&amp;gt; &amp;lt;/hn&amp;gt; 문단  &amp;lt;p&amp;gt; &amp;lt;/p&amp;gt; 입력을 그대로 표시하는 태그  &amp;lt;pre&amp;gt; &amp;lt;/pre&amp;gt; 인용문을 넣는 태그  &amp;lt;blockquote&amp;gt; &amp;lt;/blockquote&amp;gt; 인용문을 인 라인에 넣는 태그  &amp;lt;q&amp;gt; &amp;lt;/q&amp;gt; text 밑줄  &amp;lt;u&amp;gt; &amp;lt;/u&amp;gt; 굵은 텍스트  &amp;lt;b&amp;gt; &amp;lt;/b&amp;gt; 텍스트 강조  &amp;lt;strong&amp;gt; &amp;lt;/strong&amp;gt; 형광펜 텍스트  &amp;lt;mark&amp;gt;&amp;lt;/mark&amp;gt; 동아시아 글자 표시 rt는 읽는 방법표기법  &amp;lt;ruby&amp;gt; &amp;lt;rt&amp;gt; &amp;lt;/rt&amp;gt; &amp;lt;/ruby&amp;gt; 이탤릭 체 Emphasized tag  &amp;lt;em&amp;gt; &amp;lt;/em&amp;gt; 줄 찍  &amp;lt;del&amp;gt; &amp;lt;/del&amp;gt; 인설트 태그  &amp;lt;ins&amp;gt; &amp;lt;/ins&amp;gt;This is &amp;lt;sub&amp;gt; sub &amp;lt;sub&amp;gt; text &amp;lt;/sub&amp;gt; &amp;lt;/sub&amp;gt;  &amp;lt; &amp;gt; 태그 요소  &amp;amp;lt; &amp;amp;gt; 스페이스바  &amp;amp;nbsp;  약자 속성, title 속성을 함께 사용가능  &amp;lt;addr&amp;gt; &amp;lt;/addr&amp;gt; 포스트에서 참고 내용을 표시  &amp;lt;cite&amp;gt; &amp;lt;/cite&amp;gt; 컴퓨터 인식코드  &amp;lt;code&amp;gt; &amp;lt;/code&amp;gt; 키보드, 음성 입력  &amp;lt;kbd&amp;gt; &amp;lt;/kbd&amp;gt; 작게 표시 (부가정보)  &amp;lt;small&amp;gt; &amp;lt;/small&amp;gt; 아래 첨자  &amp;lt;sub&amp;gt; &amp;lt;/sub&amp;gt; 위 첨자  &amp;lt;sup&amp;gt; &amp;lt;/sup&amp;gt; 취소선  &amp;lt;s&amp;gt; &amp;lt;/s&amp;gt; List #list&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;ul의 종류: disc, circle, sqaure, none&amp;lt;ol&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;ol&amp;gt;ol의 종류: 1, i, l, a, A, none&amp;lt;dl&amp;gt;&amp;lt;dt&amp;gt; &amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt; &amp;lt;/dd&amp;gt;&amp;lt;dt&amp;gt; &amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt; &amp;lt;/dd&amp;gt;&amp;lt;/dl&amp;gt; p { color : xx; background: xx; adding: xx; }</description>
+      <description>HTML   HTML 기본양식...&amp;lt;head&amp;gt;&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt;&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;   태그   줄 바꾸기 &amp;lt;br&amp;gt; 구분선 &amp;lt;hr&amp;gt; 제목 &amp;lt;h1- h6&amp;gt; &amp;lt;/hn&amp;gt; 문단 &amp;lt;p&amp;gt; &amp;lt;/p&amp;gt; 입력을 그대로 표시하는 태그 &amp;lt;pre&amp;gt; &amp;lt;/pre&amp;gt; 인용문을 넣는 태그 &amp;lt;blockquote&amp;gt; &amp;lt;/blockquote&amp;gt; 인용문을 인 라인에 넣는 태그 &amp;lt;q&amp;gt; &amp;lt;/q&amp;gt;  text   밑줄 &amp;lt;u&amp;gt; &amp;lt;/u&amp;gt; 굵은 텍스트 &amp;lt;b&amp;gt; &amp;lt;/b&amp;gt; 텍스트 강조 &amp;lt;strong&amp;gt; &amp;lt;/strong&amp;gt; 형광펜 텍스트 &amp;lt;mark&amp;gt;&amp;lt;/mark&amp;gt; 동아시아 글자 표시 rt는 읽는 방법표기법 &amp;lt;ruby&amp;gt; &amp;lt;rt&amp;gt; &amp;lt;/rt&amp;gt; &amp;lt;/ruby&amp;gt; 이탤릭 체 Emphasized tag &amp;lt;em&amp;gt; &amp;lt;/em&amp;gt; 줄 찍 &amp;lt;del&amp;gt; &amp;lt;/del&amp;gt; 인설트 태그 &amp;lt;ins&amp;gt; &amp;lt;/ins&amp;gt; This is &amp;lt;sub&amp;gt; sub &amp;lt;sub&amp;gt; text &amp;lt;/sub&amp;gt; &amp;lt;/sub&amp;gt; &amp;lt; &amp;gt; 태그 요소 &amp;amp;lt; &amp;amp;gt; 스페이스바 &amp;amp;nbsp; 약자 속성, title 속성을 함께 사용가능 &amp;lt;addr&amp;gt; &amp;lt;/addr&amp;gt; 포스트에서 참고 내용을 표시 &amp;lt;cite&amp;gt; &amp;lt;/cite&amp;gt; 컴퓨터 인식코드 &amp;lt;code&amp;gt; &amp;lt;/code&amp;gt; 키보드, 음성 입력 &amp;lt;kbd&amp;gt; &amp;lt;/kbd&amp;gt; 작게 표시 (부가정보) &amp;lt;small&amp;gt; &amp;lt;/small&amp;gt; 아래 첨자 &amp;lt;sub&amp;gt; &amp;lt;/sub&amp;gt; 위 첨자 &amp;lt;sup&amp;gt; &amp;lt;/sup&amp;gt; 취소선 &amp;lt;s&amp;gt; &amp;lt;/s&amp;gt;  List  #list&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;ul의 종류: disc, circle, sqaure, none&amp;lt;ol&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;ol&amp;gt;ol의 종류: 1, i, l, a, A, none&amp;lt;dl&amp;gt;&amp;lt;dt&amp;gt; &amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt; &amp;lt;/dd&amp;gt;&amp;lt;dt&amp;gt; &amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt; &amp;lt;/dd&amp;gt;&amp;lt;/dl&amp;gt;&amp;lt;h1 style= &amp;#34; 설정 값 &amp;#34; &amp;gt; &amp;lt;/h1&amp;gt;p {color : xx;background: xx;adding: xx;}xx-color: rgb(x,x,x);#xxxxxx;hsl(x,x%,x%)  링크태그   인터넷 링크 &amp;lt;a href=&amp;#34;링크할 주소&amp;#34; [속성=&amp;#34;속성 값&amp;#34;]&amp;gt; &amp;lt;/a&amp;gt;&amp;lt;a href =&amp;#34;도메인 주소&amp;#34;&amp;gt; &amp;lt;/a&amp;gt;a 태그 안에서 사용 가능한 요소href링크한 문서나 사이트의 주소를 입력target링크한 내용이 표시될 위치를 지정target =&amp;#34;_blank&amp;#34; 링크 내용이 새 창이나 새 탭에서 열림열림표시전체 화면에 표시download링크한 내용을 보여주는 것이 아니라 다운로드rel현재 문서와 링크한 문서의 관계를 알려줌hreflang링크한 문서의 언어를 지정type링크한 문서의 파일 유형을 알려줌a 대신 iframe을 사용시 액자식 구성 사용 가능앵커 기능&amp;lt;태그 id=&amp;#34;앵커 이름&amp;#34;&amp;gt; 텍스트 또는 이미지&amp;lt;/태그&amp;gt;&amp;lt;a href=&amp;#34;#앵커 이름&amp;#34;&amp;gt;텍스트 또는 이미지&amp;lt;/a&amp;gt;  이미지 링크  &amp;lt;img src=&amp;quot;이미지의 경로&amp;quot; 속성값=&amp;quot;&amp;quot;&amp;gt;width=&amp;quot;n&amp;quot;이미지의 넓이를 지정height=&amp;quot;n&amp;quot;이미지의 높이를 지정alt=&amp;quot;설명&amp;quot;이미지의 설명을 지정&amp;lt;figure&amp;gt; 요소 &amp;lt;/figure&amp;gt;&amp;lt;figcaption&amp;gt; 설명 &amp;lt;/figcaption&amp;gt;요소로 묶은 것에 대한 설명을 붙임&amp;lt;map name=&amp;quot;이름&amp;quot;&amp;gt;&amp;lt;area&amp;gt;&amp;lt;area shape=&amp;quot;rect&amp;quot; coords=&amp;quot;n,n,n,n&amp;quot; href=&amp;quot;주소&amp;quot; alt=&amp;quot;설명&amp;quot;&amp;gt;.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/%EC%A0%84%EC%A0%84/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/%EC%A0%84%EC%A0%84/git/</guid>
+      <description>Git&amp;amp;&amp;amp; Github  깃 ( git )    Git 공식 홈페이지 에서 다운로드
+  형상 관리 도구 ( Configuration Management Tool )인 분산형 관리 시스템
+  무료, 공개소프트웨어 서비스
+  소스코드를 주고 받을 필요 없이, 같은 파일을 여러 명이 동시에 작업하는 병렬 개발이 가능
+  분산 버전관리이기 때문에 인터넷이 연결되지 않은 곳에서도 개발을 진행할 수 있으며, 중앙 저장소가 날라가벌도 다시 원상복구가 가능
+     git의 특징   버전관리   깃에서 버전이란 문서를 수정하고 저장할 때마다 생기는 지점</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/%EC%A0%84%EC%A0%84/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/%EC%A0%84%EC%A0%84/hugo/</guid>
+      <description>Hugo  휴고 다운로드
+   So cutey
+  Hugo는 Go언어를 기반으로 Go 언어를 이용한 프로그램 사용 및 수정
+  Markdown으로 글을 작성
+  git을 활용한 글 관리 및 버전 관리
+     Hugo 적용    Hugo 환경변수 등록
+  휴고 사이트 시작
+  hugo new site testprojectcd testprojecthugo server -D  테마 적용    Hugo 테마 다운로드</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/%EC%A0%84%EC%A0%84/sdn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/%EC%A0%84%EC%A0%84/sdn/</guid>
+      <description>SDN   SDN ( Software Defined Networking : 소프트웨어 정의 네트워킹 )    기존의 네트워크 인프라가 가지고 있던 문제를 해결하기 위해서 나온 개념
+  기존의 네트워크 인프라를 구성하는 네트워크 장비들은 하나의 장비에 HW OS APP이 모두 들어가 있었기 때문에 장비 하나하나가 복잡한 기능을 모두 가지고 있었고 장비 자체의 사양도 높아야 했다. 그러다보니 장비마다 비용도 비싸지고 장비를 하나하나 설정해야하는 문제점들이 있었다.
+  SDN은 기존의 장비의 HW와 OS APP 부분을 분리하여 장비 하나하나는 HW부분만을 담당하고 SW적인 부분은 중앙의 컨트롤러에서 제어한다.</description>
     </item>
     
     <item>
