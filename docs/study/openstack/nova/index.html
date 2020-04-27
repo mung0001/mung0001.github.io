@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nova   가상 서버를 생성하는 컴퓨트 Nova   오픈 스택 Nova는 컴퓨트 서비스의 핵심이며, 하이퍼바이저, 메시지 Queue, 인스턴스 접속을 하는 콘솔 등의 다양한 기능이 유기적으로 연결되어 가상 서버를 생성할 수 있는 시스템을 구성
+논리 아키텍처 Nova  Nova는 대시보드나 콘솔에서 호출하는 nova-api에서 시작 Queue를 이용해 nova-compute에 인스턴스를 생성하라는 명령을 전달 nova-compute는 하이퍼바이저 라이브러리를 이용해 하이퍼바이저에 인스턴스를 생성하려는 명령어를 전달 하이퍼바이저가 인스턴스를 생성 생성된 인스턴스는 nova-api로 접근할 수 있으며 Nova의 몯느 기능은 메시지 Queue로 처리할 수 있음  Nova가 지원하는 하이퍼바이저의 종류  기본 하이퍼바이저는 KVM과 QEMU 프로바이더가 테스트하는 Hyper-V, VMware, XenServer, Sen via libvirt 몇 번의 테스트만 하는 하이퍼바이저 드라이버인 베어메탈, Docker, LXC via libvirt  노드별로 설치되는 Nova  nova-api: Nova의 REST API 서버를 담당 nova-cert: X509 인증서 서비스를 제공하는 서버 데이터 데몬 nova-conductor: 코디네이션과 데이터베이스 쿼리를 지원하는 서버 데몬 nova-consoleauth: nova-console 인증을 제공 nova-novncproxy: novnc-console과 호환되는 웹 소켓 프록시 nova-scheduler: VM 인스턴스를 실행할 컴퓨터 노드를 선택하는 역할을 수행 nova-novaclient: nova REST API를 사용하는 클라이언트 프로그램 컴퓨터 노드에 설치  nova-compute-kvm: 인스턴스(가상 머신)와 관련된 모든 프로세스를 처리 python-guestfs: 파일 생성 기능을 지원하는 Python 라이브러리 qemu-kvm: KVM 하이퍼바이저      "><meta property="og:title" content="" />
+<meta property="og:description" content="Nova   가상 서버를 생성하는 컴퓨트 Nova   오픈 스택 Nova는 컴퓨트 서비스의 핵심이며, 하이퍼바이저, 메시지 Queue, 인스턴스 접속을 하는 콘솔 등의 다양한 기능이 유기적으로 연결되어 가상 서버를 생성할 수 있는 시스템을 구성
+논리 아키텍처 Nova  Nova는 대시보드나 콘솔에서 호출하는 nova-api에서 시작 Queue를 이용해 nova-compute에 인스턴스를 생성하라는 명령을 전달 nova-compute는 하이퍼바이저 라이브러리를 이용해 하이퍼바이저에 인스턴스를 생성하려는 명령어를 전달 하이퍼바이저가 인스턴스를 생성 생성된 인스턴스는 nova-api로 접근할 수 있으며 Nova의 몯느 기능은 메시지 Queue로 처리할 수 있음  Nova가 지원하는 하이퍼바이저의 종류  기본 하이퍼바이저는 KVM과 QEMU 프로바이더가 테스트하는 Hyper-V, VMware, XenServer, Sen via libvirt 몇 번의 테스트만 하는 하이퍼바이저 드라이버인 베어메탈, Docker, LXC via libvirt  노드별로 설치되는 Nova  nova-api: Nova의 REST API 서버를 담당 nova-cert: X509 인증서 서비스를 제공하는 서버 데이터 데몬 nova-conductor: 코디네이션과 데이터베이스 쿼리를 지원하는 서버 데몬 nova-consoleauth: nova-console 인증을 제공 nova-novncproxy: novnc-console과 호환되는 웹 소켓 프록시 nova-scheduler: VM 인스턴스를 실행할 컴퓨터 노드를 선택하는 역할을 수행 nova-novaclient: nova REST API를 사용하는 클라이언트 프로그램 컴퓨터 노드에 설치  nova-compute-kvm: 인스턴스(가상 머신)와 관련된 모든 프로세스를 처리 python-guestfs: 파일 생성 기능을 지원하는 Python 라이브러리 qemu-kvm: KVM 하이퍼바이저      " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/study/openstack/nova/" />
+
+
+<title>왈왈왈</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.6f77235a986809c8b3f1770f5f3d8e179b89d8e1a210221443e0e11cf72966c1.js" integrity="sha256-b3cjWphoCciz8XcPXz2OF5uJ2OGiECIUQ&#43;DhHPcpZsE="></script>
+<!--
+
+-->
+
+  
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:95%;" >
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>왈왈왈</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/cloud/" class="">AWS</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloud/aws/" class="collapsed ">A W S</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/programing/" class="">Programing</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/code/" class="collapsed ">Code</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/study/" class="">Study</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/django/" class="collapsed ">Django</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/network/" class="collapsed ">Network</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/openstack/" class="collapsed ">Open Stack</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/keystone/" class="">Keystone</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/glance/" class="">Glance</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/nova/" class="active">Nova</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/swift/" class="">Swift</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/neutron/" class="">Neutron</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/cinder/" class="">Cinder</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/keystone-copy-6/" class="">Keystone Copy 6</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/keystone-copy-7/" class="">Keystone Copy 7</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/openstack/" class="">Openstack</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/security/" class="collapsed ">Security</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/system/" class="collapsed ">System</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/%EC%A0%84%EC%A0%84/" class="collapsed ">전전</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/" class="collapsed ">정보처리기사</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Project</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/project/mini/" class="collapsed ">M Ini</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Nova</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#가상-서버를-생성하는-컴퓨트-nova"><strong>가상 서버를 생성하는 컴퓨트 Nova</strong></a>
+      <ul>
+        <li><a href="#논리-아키텍처-nova"><strong>논리 아키텍처 Nova</strong></a></li>
+        <li><a href="#nova가-지원하는-하이퍼바이저의-종류"><strong>Nova가 지원하는 하이퍼바이저의 종류</strong></a></li>
+        <li><a href="#노드별로-설치되는-nova"><strong>노드별로 설치되는 Nova</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="nova"><strong>Nova</strong></h1>
+<hr>
+<h1 id="heading"></h1>
+<h2 id="가상-서버를-생성하는-컴퓨트-nova"><strong>가상 서버를 생성하는 컴퓨트 Nova</strong></h2>
+<p><img src="/Openstack/Nova.png" alt="Nova" /></p>
+<ul>
+<li>
+<p>오픈 스택 Nova는 컴퓨트 서비스의 핵심이며, 하이퍼바이저, 메시지 Queue, 인스턴스 접속을 하는 콘솔 등의 다양한 기능이 유기적으로 연결되어 가상 서버를 생성할 수 있는 시스템을 구성</p>
+<h3 id="논리-아키텍처-nova"><strong>논리 아키텍처 Nova</strong></h3>
+<ul>
+<li>Nova는 대시보드나 콘솔에서 호출하는 nova-api에서 시작</li>
+<li>Queue를 이용해 nova-compute에 인스턴스를 생성하라는 명령을 전달</li>
+<li>nova-compute는 하이퍼바이저 라이브러리를 이용해 하이퍼바이저에 인스턴스를 생성하려는 명령어를 전달</li>
+<li>하이퍼바이저가 인스턴스를 생성</li>
+<li>생성된 인스턴스는 nova-api로 접근할 수 있으며 Nova의 몯느 기능은 메시지 Queue로 처리할 수 있음</li>
+</ul>
+<h3 id="nova가-지원하는-하이퍼바이저의-종류"><strong>Nova가 지원하는 하이퍼바이저의 종류</strong></h3>
+<ul>
+<li>기본 하이퍼바이저는 KVM과 QEMU</li>
+<li>프로바이더가 테스트하는 Hyper-V, VMware, XenServer, Sen via libvirt</li>
+<li>몇 번의 테스트만 하는 하이퍼바이저 드라이버인 베어메탈, Docker, LXC via libvirt</li>
+</ul>
+<h3 id="노드별로-설치되는-nova"><strong>노드별로 설치되는 Nova</strong></h3>
+<ul>
+<li>nova-api: Nova의 REST API 서버를 담당</li>
+<li>nova-cert: X509 인증서 서비스를 제공하는 서버 데이터 데몬</li>
+<li>nova-conductor: 코디네이션과 데이터베이스 쿼리를 지원하는 서버 데몬</li>
+<li>nova-consoleauth: nova-console 인증을 제공</li>
+<li>nova-novncproxy: novnc-console과 호환되는 웹 소켓 프록시</li>
+<li>nova-scheduler: VM 인스턴스를 실행할 컴퓨터 노드를 선택하는 역할을 수행</li>
+<li>nova-novaclient: nova REST API를 사용하는 클라이언트 프로그램</li>
+<li><strong>컴퓨터 노드에 설치</strong>
+<ul>
+<li>nova-compute-kvm: 인스턴스(가상 머신)와 관련된 모든 프로세스를 처리</li>
+<li>python-guestfs: 파일 생성 기능을 지원하는 Python 라이브러리</li>
+<li>qemu-kvm: KVM 하이퍼바이저</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#가상-서버를-생성하는-컴퓨트-nova"><strong>가상 서버를 생성하는 컴퓨트 Nova</strong></a>
+      <ul>
+        <li><a href="#논리-아키텍처-nova"><strong>논리 아키텍처 Nova</strong></a></li>
+        <li><a href="#nova가-지원하는-하이퍼바이저의-종류"><strong>Nova가 지원하는 하이퍼바이저의 종류</strong></a></li>
+        <li><a href="#노드별로-설치되는-nova"><strong>노드별로 설치되는 Nova</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

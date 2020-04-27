@@ -28,6 +28,30 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/keystone/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/glance/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/nova/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/swift/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/neutron/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/cinder/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloud/aws/</loc>
   </url>
   
@@ -61,6 +85,14 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/study/openstack/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/keystone-copy-6/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/keystone-copy-7/</loc>
   </url>
   
   <url>
@@ -144,6 +176,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloud/aws/auto-scaling/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloud/aws/%EB%B0%B0%ED%8F%AC/</loc>
   </url>
   
   <url>
