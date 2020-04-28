@@ -16,7 +16,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/study/golang/ttt/</guid>
-      <description>Go   Golang 설치 Go에서 OS맞는 패키지를 설치</description>
+      <description>Go   Golang 설치 Go에서 OS맞는 패키지를 설치
+var a int = 1var b float32 = 1.3var c float32 = a + b</description>
     </item>
     
   </channel>

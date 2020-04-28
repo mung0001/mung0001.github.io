@@ -8,6 +8,14 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloud/aws/aws_computing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/openstack/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloud/</loc>
   </url>
   
@@ -25,6 +33,22 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/study/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloud/aws/aws_migrate/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloud/aws/aws_developer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloud/aws/aws_management/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloud/aws/aws_analysis/</loc>
   </url>
   
   <url>
@@ -49,6 +73,18 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/study/openstack/cinder/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/horizon/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/ceilometer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/heat/</loc>
   </url>
   
   <url>
@@ -88,11 +124,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/keystone-copy-6/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/keystone-copy-7/</loc>
+    <loc>https://mung0001.github.io/docs/study/openstack/trove/</loc>
   </url>
   
   <url>
@@ -113,6 +145,18 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/sahara/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/ironic/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/study/openstack/service/</loc>
   </url>
   
   <url>
@@ -179,6 +223,34 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloud/aws/aws-%EA%B3%84%EC%A0%95/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloud/aws/aws_database/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloud/aws/aws_network/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloud/aws/aws_security/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloud/aws/aws_storage/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloud/aws/aws%EC%9A%94%EA%B8%88/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloud/aws/vpc/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloud/aws/%EB%B0%B0%ED%8F%AC/</loc>
   </url>
   
@@ -224,10 +296,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/study/network/%E3%84%B4-portnumber/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/openstack/</loc>
   </url>
   
   <url>
