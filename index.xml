@@ -400,10 +400,10 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/study/golang/ttt/</link>
+      <link>https://mung0001.github.io/docs/study/golang/golang/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/study/golang/ttt/</guid>
+      <guid>https://mung0001.github.io/docs/study/golang/golang/</guid>
       <description>Golang 설치  Go 공식 홈페이지에서 OS맞는 패키지를 설치   Golang Study 사이트  Go 기본 메뉴얼 가장 빨리 만나는 Go 언어 Go-tour    Go 기초 문법  중괄호 표기법  Go는 문법의 작성 스타일을 강제 Go의 대표적인 문법으로는 { } ( 중괄호 ) 표기 법이 있음 즉, 함수, 조건문, 반복문 등을 시작할 때는 반드시 같은 줄에서 시작   ; 세미콜론  마지막 구문의 세미클론을 생략 한 줄에 여러 구문을 사용할 때에는 세미콜론을 사용하여 나눔  fmt.</description>
     </item>
     
