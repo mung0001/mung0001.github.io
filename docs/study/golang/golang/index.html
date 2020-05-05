@@ -11,10 +11,10 @@
 <meta property="og:url" content="https://mung0001.github.io/docs/study/golang/golang/" />
 
 
-<title>Blog</title>
+<title>뭉개뭉개</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.c4ad6b01c0e10f93e93d4c56c4f1cfcdf93f966b84359e73ac90f33418f49b64.js" integrity="sha256-xK1rAcDhD5PpPUxWxPHPzfk/lmuENZ5zrJDzNBj0m2Q="></script>
+<script defer src="/en.search.min.680a8ac57c764baa9c7938be785ec228bcbb2b594724adafce24a726e305f321.js" integrity="sha256-aAqKxXx2S6qceTi&#43;eF7CKLy7K1lHJK2vziSnJuMF8yE="></script>
 <!--
 
 -->
@@ -30,7 +30,7 @@
       
   <nav styles="background-color:red; position=none;">
 <h2 class="book-brand">
-  <a href="/"><span>Blog</span>
+  <a href="/"><span>뭉개뭉개</span>
   </a>
 </h2>
 
@@ -644,6 +644,14 @@
       </ul>
     </li>
   </ul>
+
+  <ul>
+    <li><a href="#상수-사용하기"><strong>상수 사용하기</strong></a>
+      <ul>
+        <li><a href="#const와---사용해서-열거형에-사용이-가능"><strong>Const와 ( ) 사용해서 열거형에 사용이 가능</strong></a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
 
@@ -963,7 +971,35 @@
 <h1 id="heading-27"></h1>
 <p> </p>
 <h1 id="heading-28"></h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">1</span>
+<h2 id="상수-사용하기"><strong>상수 사용하기</strong></h2>
+<ul>
+<li><strong>Go 언어에서는 const 를 사용하여 상수 생성이 가능</strong></li>
+<li><strong>변수와 마찬가지로 문자 또는 _로 시작해야 함</strong></li>
+<li>consr 키워드와 ( )를 사용하면 여러 개를 한 번에 선언 및 초기화 가능</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">age</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">20</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span> = <span style="color:#e6db74">&#34;Maria&#34;</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">score</span> <span style="color:#66d9ef">int</span> <span style="color:#75715e">// 컴파일 에러
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">age</span> = <span style="color:#ae81ff">20</span>        <span style="color:#75715e">// 컴파일 에러
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Ede&#34;</span>    <span style="color:#75715e">// 컴파일 에러
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">const</span> (
+        <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>        <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>
+        <span style="color:#a6e22e">age</span>, <span style="color:#a6e22e">name</span>       = <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;Maria&#34;</span>
+)
+</code></pre></div><h3 id="const와---사용해서-열거형에-사용이-가능"><strong>Const와 ( ) 사용해서 열거형에 사용이 가능</strong></h3>
+<ul>
+<li>상수에 일일이 대입하지 않고, 순서대로 생성하려면 iota 를 사용</li>
+<li>1 부터 시작하길 원하면 iota +1 사용 ( 다른 연산자도 사용 가능 )</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">const</span> (
+        <span style="color:#a6e22e">Sunday</span>          = <span style="color:#66d9ef">iota</span>  <span style="color:#75715e">// 0
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">Monday</span>                  <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">Tuesday</span>                 <span style="color:#75715e">// 2
+</span><span style="color:#75715e"></span>        <span style="color:#f92672">...</span>
+        <span style="color:#a6e22e">Saturday</span>                <span style="color:#75715e">// 6
+</span><span style="color:#75715e"></span>)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">1</span>
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#66d9ef">float32</span> = <span style="color:#ae81ff">1.3</span>
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">c</span> <span style="color:#66d9ef">float32</span> = <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>
 </code></pre></div><h1 id="heading-29"></h1>
@@ -1101,6 +1137,14 @@
       <ul>
         <li><a href="#문자열-연산하기"><strong>문자열 연산하기</strong></a></li>
         <li><a href="#제어문자"><strong>제어문자</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#상수-사용하기"><strong>상수 사용하기</strong></a>
+      <ul>
+        <li><a href="#const와---사용해서-열거형에-사용이-가능"><strong>Const와 ( ) 사용해서 열거형에 사용이 가능</strong></a></li>
       </ul>
     </li>
   </ul>
