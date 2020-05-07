@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Neutron   네트워크를 관리하는 Neutron   폴섬 버전에서는 Quantum, 그리즐리 버전에서는 Neutron으로 릴리스 되었음
   기존 오픈스택의 네트워크 서비스는 nova-network가 담당했으나, SDN(Software Defined Network) 개념이 들어오면서 별도의 네트워크 프로젝트로 분리되었음
-논리 아키텍처의 Neutron  Neutron은 neutron-server, Neutron L2 Agent* 및 neutron-l3-agent*, neutron-dhcp-agent, Queue, Neutron Database, Neutron 3rd Party Plugin으로 구성 Neutron은 다양한 네트워크 플러그인이나 네트워크 모델을 지원  사용자는 Neutron API를 이용해 neutron-server로 IP 할당을 요청 neutron-server 들어온 요청을 Queue로 다시 요청 Queue는 neutron-dhcp-agent와 Neutron 3rd Party plugin으로 IP 할당 지시를 내림 neutron-dhcp-agent와 Neutron 3rd Party Plugin은 지시 받은 작업 수행을 시작 neutron-server는 수시로 작업 상태를 Neutron database에 저장 할당된 IP를 인스턴스에서 사용 가능    Neutron이 지원하는 플러그인의 종류  사이트 참조  Neutron과 VRRP, DVR  VRRP(Virtual Router Redundancy Protocl)로 랜에서 정적으로 설정된 기본 라우터를 사용할 때, 하나 이상의 백업 라우터를 사용하는 방법을 제공하는 인터넷 프로토콜 DVR(Distributed Virtual Router)이란 VRRP 기능을 향상시키고, 분산 라우팅 기능과 HA(High Availability), 로드밸런싱 기능을 사용할 수 있음 기존 레거시 HA 라우터와 마찬가지로 DVR/ SNAT(Static NAT), HA 라우터는 다른 노드에서 실행되는 L3 Agent의 백업 DVR/ SNAT 라우터에서 SNAT 서비스 장애를 빠르게 해결 가능 #    "><meta property="og:title" content="" />
+논리 아키텍처의 Neutron  Neutron은 neutron-server, Neutron L2 Agent* 및 neutron-l3-agent*, neutron-dhcp-agent, Queue, Neutron Database, Neutron 3rd Party Plugin으로 구성 Neutron은 다양한 네트워크 플러그인이나 네트워크 모델을 지원  사용자는 Neutron API를 이용해 neutron-server로 IP 할당을 요청 neutron-server 들어온 요청을 Queue로 다시 요청 Queue는 neutron-dhcp-agent와 Neutron 3rd Party plugin으로 IP 할당 지시를 내림 neutron-dhcp-agent와 Neutron 3rd Party Plugin은 지시 받은 작업 수행을 시작 neutron-server는 수시로 작업 상태를 Neutron database에 저장 할당된 IP를 인스턴스에서 사용 가능    Neutron이 지원하는 플러그인의 종류  사이트 참조  Neutron과 VRRP, DVR  VRRP(Virtual Router Redundancy Protocl)로 랜에서 정적으로 설정된 기본 라우터를 사용할 때, 하나 이상의 백업 라우터를 사용하는 방법을 제공하는 인터넷 프로토콜 DVR(Distributed Virtual Router)이란 VRRP 기능을 향상시키고, 분산 라우팅 기능과 HA(High Availability), 로드밸런싱 기능을 사용할 수 있음 기존 레거시 HA 라우터와 마찬가지로 DVR/ SNAT(Static NAT), HA 라우터는 다른 노드에서 실행되는 L3 Agent의 백업 DVR/ SNAT 라우터에서 SNAT 서비스 장애를 빠르게 해결 가능     오픈스택 네트워크 구조"><meta property="og:title" content="" />
 <meta property="og:description" content="Neutron   네트워크를 관리하는 Neutron   폴섬 버전에서는 Quantum, 그리즐리 버전에서는 Neutron으로 릴리스 되었음
   기존 오픈스택의 네트워크 서비스는 nova-network가 담당했으나, SDN(Software Defined Network) 개념이 들어오면서 별도의 네트워크 프로젝트로 분리되었음
-논리 아키텍처의 Neutron  Neutron은 neutron-server, Neutron L2 Agent* 및 neutron-l3-agent*, neutron-dhcp-agent, Queue, Neutron Database, Neutron 3rd Party Plugin으로 구성 Neutron은 다양한 네트워크 플러그인이나 네트워크 모델을 지원  사용자는 Neutron API를 이용해 neutron-server로 IP 할당을 요청 neutron-server 들어온 요청을 Queue로 다시 요청 Queue는 neutron-dhcp-agent와 Neutron 3rd Party plugin으로 IP 할당 지시를 내림 neutron-dhcp-agent와 Neutron 3rd Party Plugin은 지시 받은 작업 수행을 시작 neutron-server는 수시로 작업 상태를 Neutron database에 저장 할당된 IP를 인스턴스에서 사용 가능    Neutron이 지원하는 플러그인의 종류  사이트 참조  Neutron과 VRRP, DVR  VRRP(Virtual Router Redundancy Protocl)로 랜에서 정적으로 설정된 기본 라우터를 사용할 때, 하나 이상의 백업 라우터를 사용하는 방법을 제공하는 인터넷 프로토콜 DVR(Distributed Virtual Router)이란 VRRP 기능을 향상시키고, 분산 라우팅 기능과 HA(High Availability), 로드밸런싱 기능을 사용할 수 있음 기존 레거시 HA 라우터와 마찬가지로 DVR/ SNAT(Static NAT), HA 라우터는 다른 노드에서 실행되는 L3 Agent의 백업 DVR/ SNAT 라우터에서 SNAT 서비스 장애를 빠르게 해결 가능 #    " />
+논리 아키텍처의 Neutron  Neutron은 neutron-server, Neutron L2 Agent* 및 neutron-l3-agent*, neutron-dhcp-agent, Queue, Neutron Database, Neutron 3rd Party Plugin으로 구성 Neutron은 다양한 네트워크 플러그인이나 네트워크 모델을 지원  사용자는 Neutron API를 이용해 neutron-server로 IP 할당을 요청 neutron-server 들어온 요청을 Queue로 다시 요청 Queue는 neutron-dhcp-agent와 Neutron 3rd Party plugin으로 IP 할당 지시를 내림 neutron-dhcp-agent와 Neutron 3rd Party Plugin은 지시 받은 작업 수행을 시작 neutron-server는 수시로 작업 상태를 Neutron database에 저장 할당된 IP를 인스턴스에서 사용 가능    Neutron이 지원하는 플러그인의 종류  사이트 참조  Neutron과 VRRP, DVR  VRRP(Virtual Router Redundancy Protocl)로 랜에서 정적으로 설정된 기본 라우터를 사용할 때, 하나 이상의 백업 라우터를 사용하는 방법을 제공하는 인터넷 프로토콜 DVR(Distributed Virtual Router)이란 VRRP 기능을 향상시키고, 분산 라우팅 기능과 HA(High Availability), 로드밸런싱 기능을 사용할 수 있음 기존 레거시 HA 라우터와 마찬가지로 DVR/ SNAT(Static NAT), HA 라우터는 다른 노드에서 실행되는 L3 Agent의 백업 DVR/ SNAT 라우터에서 SNAT 서비스 장애를 빠르게 해결 가능     오픈스택 네트워크 구조" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/study/openstack/neutron/" />
 
@@ -18,7 +18,7 @@
 <title>뭉개뭉개</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.cd553ba037fd9e9810473d49413b79a8c810ef91803379f6aa885ee9c144a50f.js" integrity="sha256-zVU7oDf9npgQRz1JQTt5qMgQ75GAM3n2qohe6cFEpQ8="></script>
+<script defer src="/en.search.min.f5ac1a6d82f1e05efefc31acf7bf7fa1b1cf614a7e890cd7710a94c00d453922.js" integrity="sha256-9awabYLx4F7&#43;/DGs979/obHPYUp&#43;iQzXcQqUwA1FOSI="></script>
 <!--
 
 -->
@@ -426,6 +426,26 @@
 </li>
       
     
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/openstack%EC%84%A4%EC%B9%98/" class="">Openstack설치</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/%EA%B0%80%EC%83%81%ED%99%94/" class="">가상화</a>
+  
+
+</li>
+      
+    
   </ul>
   
 
@@ -734,11 +754,92 @@
 <ul>
 <li>VRRP(Virtual Router Redundancy Protocl)로 랜에서 정적으로 설정된 기본 라우터를 사용할 때, 하나 이상의 백업 라우터를 사용하는 방법을 제공하는 인터넷 프로토콜</li>
 <li>DVR(Distributed Virtual Router)이란 VRRP 기능을 향상시키고, 분산 라우팅 기능과 HA(High Availability), 로드밸런싱 기능을 사용할 수 있음</li>
-<li>기존 레거시 HA 라우터와 마찬가지로 DVR/ SNAT(Static NAT), HA 라우터는 다른 노드에서 실행되는 L3 Agent의 백업 DVR/ SNAT 라우터에서 SNAT 서비스 장애를 빠르게 해결 가능
-#</li>
+<li>기존 레거시 HA 라우터와 마찬가지로 DVR/ SNAT(Static NAT), HA 라우터는 다른 노드에서 실행되는 L3 Agent의 백업 DVR/ SNAT 라우터에서 SNAT 서비스 장애를 빠르게 해결 가능</li>
 </ul>
 </li>
 </ul>
+<h1 id="heading-1"></h1>
+<p>오픈스택 네트워크 구조</p>
+<ol>
+<li>
+<p>Neutron 프로젝트
+오픈스택에서 네트워크 서비스를 생성 및 관리하는 프로젝트	
+사용자는 Neutron API를 통해 Neutron Plugin에게 사용자 요청을 전달</p>
+</li>
+<li>
+<p>Neutron Plugin
+Neutron에서 가장 많이 사용되는 플러그인은 OVS(Open vSwitch)이다.
+해당 플러그인은 효율적으로 패킷을 포워딩하기 위한 가상의 네트워크 스위치이다.</p>
+</li>
+<li>
+<p>OVS 구조</p>
+</li>
+<li>
+<p>네트워크 관련 명령어
+(1) 네트워크 확인
+openstack network list</p>
+</li>
+</ol>
+<pre><code>(2) 네트워크 정보 조회
+openstack network show [네트워크 이름]
+
+(3) 라우터 정보 조회
+ip netns
+
+(4) 라우터의 자세한 정보 조회
+ip netns exec [라우터이름] [리눅스 명령어]
+                netstat -r
+                arp -an
+                ifconfig
+                ping 
+
+(5) 네트워크 생성
+openstack network create --provider-network-type [타입] [네트워크 이름] 
+
+(6) 서브넷 생성
+openstack subnet create --network [네트워크 이름] --gateway [GW주소] --subnet-range [서브넷 범위] [서브넷 이름
+
+(7) 라우터 목록 확인
+openstack router list
+
+(8) 라우터 정보 조회
+openstack router show [라우터 이름]
+
+(9) 라우터에 서브넷 추가
+openstack router add subnet [라우터 이름] [서브넷 이름]
+
+(10) 포트 생성
+openstack port create --network [네트워크 이름] --fixed-ip subnet=[서브넷 이름] [포트 이름]
+
+(11) 라우터에 포트 추가
+openstack router add port [라우터 이름] [포트 이름]
+</code></pre>
+<ol start="3">
+<li>fixed-ip와 floating-ip
+Fixed IP	: 원래는 인터넷에 연결하기 위해 KT, SK, LG와 같은 인터넷 서비스 업체로부터 
+제공받는 공인 IP를 의미한다.
+하지만 클라우드에서는 클라우드 내에서 생성한 가상머신에 할당되는 내부 IP를 의미한다.</li>
+</ol>
+<pre><code>Floating IP	: 클라우드 내의 가상머신이 인터넷 외부망과 연결되기 위해 배정 받는 IP를 의미한다.
+</code></pre>
+<ol start="4">
+<li>보안 그룹
+인스턴스에 대한 인바운드 및 아웃바운드 트래픽을 제어하는 가상의 네트워크 방화벽</li>
+</ol>
+<pre><code>하나의 인스턴스에 여러 개의 보안 그룹 적용도 가능
+</code></pre>
+<ul>
+<li>key 페어 등록</li>
+</ul>
+<p>key 권한 변경
+chmod 700 [ Key파일 ]
+ssh -i [ key 파일 ] [ CentOS or Ubuntu : 호스트 이름 ]@[ 192.168.0.204 : 해당 대역 ]</p>
+<p>접속확인 ssh [ CentOS or Ubuntu ]@[ 192.168.0.204 : 해당 대역 ]</p>
+<p>형식 바꾸기</p>
+<p>Puttygen 으로 생성</p>
+<p>save private 키 클릭</p>
+<p>푸티 접속</p>
+<p>cat authorized_keys</p>
 </article>
  
       

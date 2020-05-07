@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="OpenStack   Packtack을 이용한 설치 오픈 스택 오픈스택이란? 클라우드 환경에서 컴퓨팅 자원과 스토리지 인프라를 설치하고 구동하기 위해 사용하는 오픈 소스 SW 프로젝트의 집합  설치 방법 메뉴얼을 이용한 설치 Devstack을 이용한 설치 자동화 툴을 이용한 설치
+자동화 툴 packstack을 이용한 설치 자동화 툴을 이용한 설치 2) 준비 가상머신 3대	cpu	메모리	디스크 controller	1	3gb	50gb compute	1	2gb	50gb network	1	1gb	20gb
+controller 192.168.0.62compute	192.168.0.200network	192."><meta property="og:title" content="" />
+<meta property="og:description" content="OpenStack   Packtack을 이용한 설치 오픈 스택 오픈스택이란? 클라우드 환경에서 컴퓨팅 자원과 스토리지 인프라를 설치하고 구동하기 위해 사용하는 오픈 소스 SW 프로젝트의 집합  설치 방법 메뉴얼을 이용한 설치 Devstack을 이용한 설치 자동화 툴을 이용한 설치
+자동화 툴 packstack을 이용한 설치 자동화 툴을 이용한 설치 2) 준비 가상머신 3대	cpu	메모리	디스크 controller	1	3gb	50gb compute	1	2gb	50gb network	1	1gb	20gb
+controller 192.168.0.62compute	192.168.0.200network	192." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/study/openstack/openstack%EC%84%A4%EC%B9%98/" />
+
+
+<title>뭉개뭉개</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.f5ac1a6d82f1e05efefc31acf7bf7fa1b1cf614a7e890cd7710a94c00d453922.js" integrity="sha256-9awabYLx4F7&#43;/DGs979/obHPYUp&#43;iQzXcQqUwA1FOSI="></script>
+<!--
+
+-->
+
+  
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:95%;" >
+    <aside class="book-menu">
+      
+  <nav styles="background-color:red; position=none;">
+<h2 class="book-brand">
+  <a href="/"><span>뭉개뭉개</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/cloud/" class="">AWS</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloud/aws/" class="collapsed ">A W S</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/programing/" class="">Programing</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/code/" class="collapsed ">Code</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/study/" class="">Study</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/django/" class="collapsed ">Django</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/network/" class="collapsed ">Network</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/openstack/" class="collapsed ">Open Stack</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/openstack/" class="">Openstack</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/keystone/" class="">Keystone</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/glance/" class="">Glance</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/nova/" class="">Nova</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/swift/" class="">Swift</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/neutron/" class="">Neutron</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/cinder/" class="">Cinder</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/horizon/" class="">Horizon</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/ceilometer/" class="">Ceilometer</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/heat/" class="">Heat</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/trove/" class="">Trove</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/sahara/" class="">Sahara</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/ironic/" class="">Ironic</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/service/" class="">Service</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/openstack%EC%84%A4%EC%B9%98/" class="active">Openstack설치</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/study/openstack/%EA%B0%80%EC%83%81%ED%99%94/" class="">가상화</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/security/" class="collapsed ">Security</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/system/" class="collapsed ">System</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/%EC%A0%84%EC%A0%84/" class="collapsed ">전전</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/" class="collapsed ">정보처리기사</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Project</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/project/mini/" class="collapsed ">M Ini</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Openstack설치</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#자동화-툴-packstack을-이용한-설치"><strong>자동화 툴 packstack을 이용한 설치</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#특정-노드-추가"><strong>특정 노드 추가</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#초기설정"><strong>초기설정</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#네트워크-노드"><strong>네트워크 노드</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="openstack"><strong>OpenStack</strong></h1>
+<hr>
+<h1 id="heading"></h1>
+<h1 id="packtack을-이용한-설치">Packtack을 이용한 설치</h1>
+<ol start="2">
+<li>오픈 스택
+오픈스택이란?
+클라우드 환경에서 컴퓨팅 자원과 스토리지 인프라를 설치하고 구동하기 위해 사용하는 
+오픈 소스 SW 프로젝트의 집합</li>
+</ol>
+<p>설치 방법
+메뉴얼을 이용한 설치
+Devstack을 이용한 설치
+자동화 툴을 이용한 설치</p>
+<h2 id="자동화-툴-packstack을-이용한-설치"><strong>자동화 툴 packstack을 이용한 설치</strong></h2>
+<p>자동화 툴을 이용한 설치
+2) 준비
+가상머신 3대	cpu	메모리		디스크
+controller	1	3gb		50gb
+compute		1	2gb		50gb
+network		1	1gb		20gb</p>
+<pre><code>controller  192.168.0.62
+compute	192.168.0.200
+network	192.168.0.201
+</code></pre>
+<ol start="3">
+<li>OS 설치
+CentOS 7 버전 각각 minimal로 설치</li>
+</ol>
+<p>각각 맞는 대역을 설정</p>
+<ul>
+<li>yum -y install bind-utils</li>
+</ul>
+<h1 id="heading-1"></h1>
+<p> </p>
+<ol>
+<li><strong>전체 설치 과정</strong></li>
+</ol>
+<ul>
+<li>호스트명 설정 controller | comupte | network 노드</li>
+<li>vi /etc/hosts	 아래에 각 노드의 내용을 추가</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ae81ff">192.168.0.62</span> <span style="color:#a6e22e">controller</span>
+<span style="color:#ae81ff">192.168.0.162</span> <span style="color:#a6e22e">compute</span>
+<span style="color:#ae81ff">192.168.0.163</span> <span style="color:#a6e22e">network</span>
+</code></pre></div><h1 id="heading-2"></h1>
+<ul>
+<li>controller | compute | network의 hostname에 기존 내용 지우고 다음과 같이 수정</li>
+<li>vi/etc/hostname</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">controller</span>  <span style="color:#ae81ff">192.168.0.62</span>
+<span style="color:#a6e22e">compute</span>	<span style="color:#ae81ff">192.168.0.162</span>
+<span style="color:#a6e22e">network</span>	<span style="color:#ae81ff">192.168.0.166</span>
+</code></pre></div><h1 id="heading-3"></h1>
+<ul>
+<li>재시작</li>
+</ul>
+<h1 id="heading-4"></h1>
+<p> 
+2. <strong>방화벽 설정</strong></p>
+<ul>
+<li><strong>controller 노드</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">stop</span> <span style="color:#a6e22e">firewalld</span>
+<span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">disable</span> <span style="color:#a6e22e">firewalld</span>
+<span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">stop</span> <span style="color:#a6e22e">NetworkManager</span>
+<span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">disable</span> <span style="color:#a6e22e">NetworkManager</span>
+<span style="color:#a6e22e">setenforce</span> <span style="color:#ae81ff">0</span>
+<span style="color:#a6e22e">sed</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">i</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">s</span><span style="color:#f92672">/=</span><span style="color:#a6e22e">enforcing</span><span style="color:#f92672">/=</span><span style="color:#a6e22e">disabled</span><span style="color:#f92672">/</span><span style="color:#a6e22e">g</span><span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">etc</span><span style="color:#f92672">/</span><span style="color:#a6e22e">sysconfig</span><span style="color:#f92672">/</span><span style="color:#a6e22e">selinux</span>
+</code></pre></div><h1 id="heading-5"></h1>
+<ul>
+<li><strong>compute 노드</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">stop</span> <span style="color:#a6e22e">firewalld</span>
+<span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">disable</span> <span style="color:#a6e22e">firewalld</span>
+<span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">stop</span> <span style="color:#a6e22e">NetworkManager</span>
+<span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">disable</span> <span style="color:#a6e22e">NetworkManager</span>
+<span style="color:#a6e22e">setenforce</span> <span style="color:#ae81ff">0</span>
+<span style="color:#a6e22e">sed</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">i</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">s</span><span style="color:#f92672">/=</span><span style="color:#a6e22e">enforcing</span><span style="color:#f92672">/=</span><span style="color:#a6e22e">disabled</span><span style="color:#f92672">/</span><span style="color:#a6e22e">g</span><span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">etc</span><span style="color:#f92672">/</span><span style="color:#a6e22e">sysconfig</span><span style="color:#f92672">/</span><span style="color:#a6e22e">selinux</span>
+</code></pre></div><h1 id="heading-6"></h1>
+<ul>
+<li><strong>network 노드</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">stop</span> <span style="color:#a6e22e">firewalld</span>
+<span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">disable</span> <span style="color:#a6e22e">firewalld</span>
+<span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">stop</span> <span style="color:#a6e22e">NetworkManager</span>
+<span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">disable</span> <span style="color:#a6e22e">NetworkManager</span>
+<span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">status</span> <span style="color:#a6e22e">firewalld</span>
+<span style="color:#a6e22e">setenforce</span> <span style="color:#ae81ff">0</span>
+<span style="color:#a6e22e">sed</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">i</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">s</span><span style="color:#f92672">/=</span><span style="color:#a6e22e">enforcing</span><span style="color:#f92672">/=</span><span style="color:#a6e22e">disabled</span><span style="color:#f92672">/</span><span style="color:#a6e22e">g</span><span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">etc</span><span style="color:#f92672">/</span><span style="color:#a6e22e">sysconfig</span><span style="color:#f92672">/</span><span style="color:#a6e22e">selinux</span>
+</code></pre></div><ul>
+<li>전체 재시작</li>
+</ul>
+<h1 id="heading-7"></h1>
+<p> 
+3. <strong>ssh 설정</strong>
+<strong>controller 노드</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">ssh</span><span style="color:#f92672">-</span><span style="color:#a6e22e">keygen</span>
+</code></pre></div><p>엔터 3번 ( 암호 없이 입력 )</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">ssh</span><span style="color:#f92672">-</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">-</span><span style="color:#a6e22e">id</span> <span style="color:#a6e22e">root</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">controller</span>
+<span style="color:#a6e22e">패스워드</span> <span style="color:#a6e22e">입력</span>
+<span style="color:#a6e22e">ssh</span><span style="color:#f92672">-</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">-</span><span style="color:#a6e22e">id</span> <span style="color:#a6e22e">root</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">compute</span>
+<span style="color:#a6e22e">패스워드</span> <span style="color:#a6e22e">입력</span>
+<span style="color:#a6e22e">ssh</span><span style="color:#f92672">-</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">-</span><span style="color:#a6e22e">id</span> <span style="color:#a6e22e">root</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">network</span>
+<span style="color:#a6e22e">패스워드</span> <span style="color:#a6e22e">입력</span>
+</code></pre></div><h1 id="heading-8"></h1>
+<p> 
+4. <strong>오픈스택 설치 파일 다운</strong></p>
+<ul>
+<li>controller 노드</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">yum</span> <span style="color:#a6e22e">update</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">y</span>
+<span style="color:#a6e22e">yum</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">centos</span><span style="color:#f92672">-</span><span style="color:#a6e22e">release</span><span style="color:#f92672">-</span><span style="color:#a6e22e">openstack</span><span style="color:#f92672">-</span><span style="color:#a6e22e">rocky</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">y</span>
+<span style="color:#a6e22e">yum</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">openstack</span><span style="color:#f92672">-</span><span style="color:#a6e22e">packstack</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">y</span>
+<span style="color:#a6e22e">yum</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">openstack</span><span style="color:#f92672">-</span><span style="color:#a6e22e">utils</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">y</span>
+<span style="color:#a6e22e">yum</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">chrony</span> <span style="color:#a6e22e">ntp</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">y</span>
+</code></pre></div><ol start="5">
+<li><strong>오픈스택 설치 파일 설정</strong></li>
+</ol>
+<ul>
+<li>controller 노드</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">packstack</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">gen</span><span style="color:#f92672">-</span><span style="color:#a6e22e">answer</span><span style="color:#f92672">-</span><span style="color:#a6e22e">file</span>=<span style="color:#f92672">/</span><span style="color:#a6e22e">root</span><span style="color:#f92672">/</span><span style="color:#a6e22e">rocky</span><span style="color:#f92672">-</span><span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">txt</span>
+</code></pre></div><h1 id="heading-9"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">vi</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">root</span><span style="color:#f92672">/</span><span style="color:#a6e22e">rocky</span><span style="color:#f92672">-</span><span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">txt</span>
+<span style="color:#a6e22e">CONFIG_CONTROLLER_HOST</span>=[<span style="color:#a6e22e">컨트롤러</span> <span style="color:#a6e22e">노드</span> <span style="color:#a6e22e">IP</span>]
+<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">controller</span> <span style="color:#a6e22e">Node</span>
+<span style="color:#a6e22e">CONFIG_COMPUTE_HOSTS</span>=[<span style="color:#a6e22e">컴퓨트</span> <span style="color:#a6e22e">노드</span> <span style="color:#a6e22e">IP</span>],[<span style="color:#a6e22e">컴퓨트</span> <span style="color:#a6e22e">노드</span> <span style="color:#a6e22e">IP</span>],[<span style="color:#a6e22e">컴퓨트</span> <span style="color:#a6e22e">노드</span> <span style="color:#a6e22e">IP</span>]
+<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">compute</span> <span style="color:#a6e22e">Node</span>, 
+<span style="color:#a6e22e">CONFIG_NETWORK_HOSTS</span>=[<span style="color:#a6e22e">네트워크</span> <span style="color:#a6e22e">노드</span> <span style="color:#a6e22e">IP</span>],[<span style="color:#a6e22e">네트워크</span> <span style="color:#a6e22e">노드</span> <span style="color:#a6e22e">IP</span>]
+<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">Network</span> <span style="color:#a6e22e">node</span>
+<span style="color:#a6e22e">CONFIG_PROVISION_DEMO</span>=<span style="color:#a6e22e">n</span>
+<span style="color:#a6e22e">CONFIG_NTP_SERVERS</span>=<span style="color:#ae81ff">0.</span><span style="color:#a6e22e">centos</span>.<span style="color:#a6e22e">pool</span>.<span style="color:#a6e22e">ntp</span>.<span style="color:#a6e22e">org</span> <span style="color:#a6e22e">iburst</span>, <span style="color:#ae81ff">1.</span><span style="color:#a6e22e">centos</span>.<span style="color:#a6e22e">pool</span>.<span style="color:#a6e22e">ntp</span>.<span style="color:#a6e22e">org</span> <span style="color:#a6e22e">iburst</span>, <span style="color:#ae81ff">2.</span><span style="color:#a6e22e">centos</span>.<span style="color:#a6e22e">pool</span>.<span style="color:#a6e22e">ntp</span>.<span style="color:#a6e22e">org</span> <span style="color:#a6e22e">iburst</span>, <span style="color:#ae81ff">3.</span><span style="color:#a6e22e">centos</span>.<span style="color:#a6e22e">pool</span>.<span style="color:#a6e22e">ntp</span>.<span style="color:#a6e22e">org</span> <span style="color:#a6e22e">iburst</span>
+<span style="color:#a6e22e">CONFIG_CINDER_VOLUMES_SIZE</span>=<span style="color:#ae81ff">50</span><span style="color:#a6e22e">G</span>
+</code></pre></div><ol start="6">
+<li><strong>오픈스택 설치 진행</strong></li>
+</ol>
+<ul>
+<li>controller 노드</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">packstack</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">answer</span><span style="color:#f92672">-</span><span style="color:#a6e22e">file</span>=<span style="color:#f92672">/</span><span style="color:#a6e22e">root</span><span style="color:#f92672">/</span><span style="color:#a6e22e">rocky</span><span style="color:#f92672">-</span><span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">txt</span>
+</code></pre></div><h1 id="heading-10"></h1>
+<ol start="7">
+<li><strong>확인 [ IP ]/dashboard</strong>
+1f80b10c5dee4592</li>
+</ol>
+<h2 id="특정-노드-추가"><strong>특정 노드 추가</strong></h2>
+<ul>
+<li>예시) 컴퓨트 노드 추가</li>
+</ul>
+<blockquote>
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>예시) 컴퓨터 노드 추가</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <ul>
+<li>CPU	MEM	HDD	네트워크</li>
+<li>Controller	1	4	50	NAT, VMnet1</li>
+<li>Compute		2	2	80	NAT, VMnet1</li>
+</ul>
+<ol>
+<li>IP, hosts 등 기본 설정 후</li>
+<li>controller 노드
+<ul>
+<li>vi /root/rocky-answer.txt</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">CONFIG_CONTROLLER_HOST</span>=[ <span style="color:#a6e22e">추가할</span> <span style="color:#a6e22e">IP</span> ]
+<span style="color:#a6e22e">CONFIG_COMPUTE_HOSTS</span>=[ <span style="color:#a6e22e">추가할</span> <span style="color:#a6e22e">IP</span> ]
+<span style="color:#a6e22e">CONFIG_NETWORK_HOSTS</span>=[ <span style="color:#a6e22e">추가할</span> <span style="color:#a6e22e">IP</span> ]
+<span style="color:#a6e22e">EXCLUDE_SERVERS</span>=[ <span style="color:#a6e22e">제외</span> <span style="color:#a6e22e">아이피</span> ]
+</code></pre></div><ol start="3">
+<li>설치진행</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">packstack</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">answer</span><span style="color:#f92672">-</span><span style="color:#a6e22e">file</span>=<span style="color:#f92672">/</span><span style="color:#a6e22e">root</span><span style="color:#f92672">/</span><span style="color:#a6e22e">rocky</span><span style="color:#f92672">-</span><span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">txt</span>
+<span style="color:#a6e22e">packstack</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">allinone</span>
+</code></pre></div><ol start="4">
+<li>확인 [ IP ]/dashboard</li>
+</ol>
+
+    </div>
+  </label>
+</div>
+
+</blockquote>
+<h1 id="heading-11"></h1>
+<p> </p>
+<h2 id="초기설정"><strong>초기설정</strong></h2>
+<h1 id="heading-12"></h1>
+<pre><code class="language-tql" data-lang="tql">TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=enp3s0
+UUID=bdc4a55f-51ae-4205-bb35-196d28878451
+DEVICE=enp3s0
+ONBOOT=yes
+IPADDR=192.168.0.62
+NETMASK=255.255.255.0
+GATEWAY=192.168.0.1
+DNS1=8.8.8.8
+~
+
+</code></pre><h3 id="네트워크-노드"><strong>네트워크 노드</strong></h3>
+<ul>
+<li>vi ifcfg-ens33</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">DEVICE</span>=<span style="color:#a6e22e">ens33</span>
+<span style="color:#a6e22e">TYPE</span>=<span style="color:#a6e22e">OVSPort</span>
+<span style="color:#a6e22e">DEVICETYPE</span>=<span style="color:#a6e22e">ovs</span>
+<span style="color:#a6e22e">OVS_BRIDGE</span>=<span style="color:#a6e22e">br</span><span style="color:#f92672">-</span><span style="color:#a6e22e">ex</span>
+<span style="color:#a6e22e">ONBOOT</span>=<span style="color:#a6e22e">yes</span>
+</code></pre></div><ul>
+<li>vi ifcfg-br-ex</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">DEVICE</span>=<span style="color:#a6e22e">br</span><span style="color:#f92672">-</span><span style="color:#a6e22e">ex</span>
+<span style="color:#a6e22e">DEVICETYPE</span>=<span style="color:#a6e22e">ovs</span>
+<span style="color:#a6e22e">TYPE</span>=<span style="color:#a6e22e">OVSBridge</span>
+<span style="color:#a6e22e">BOOTPROTO</span>=<span style="color:#a6e22e">static</span>
+<span style="color:#a6e22e">IPADDR</span>=<span style="color:#ae81ff">192.168.10.10</span>
+<span style="color:#a6e22e">NETMASK</span>=<span style="color:#ae81ff">255.255.255.0</span>
+<span style="color:#a6e22e">GATEWAY</span>=<span style="color:#ae81ff">192.168.10.2</span>
+<span style="color:#a6e22e">ONBOOT</span>=<span style="color:#a6e22e">yes</span>
+</code></pre></div><ul>
+<li>
+<p>systemctl restart network</p>
+</li>
+<li>
+<p>확인</p>
+<ul>
+<li>ovs-vsctl show</li>
+</ul>
+</li>
+<li>
+<p>yum install bind-utils -y</p>
+</li>
+<li>
+<p>yum install net-tools -y</p>
+</li>
+<li>
+<p>openstack 서비스 재시작</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">openstack</span><span style="color:#f92672">-</span><span style="color:#a6e22e">service</span> <span style="color:#a6e22e">list</span> | <span style="color:#a6e22e">xargs</span> <span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">restart</span>
+</code></pre></div><ul>
+<li>대시보드 에러</li>
+</ul>
+<blockquote>
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>vi /etc/httpd/conf.d/15-horizon_vhost.conf</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <h1 id="heading">************************************</h1>
+<h1 id="vhost-template-in-module-puppetlabs-apache">Vhost template in module puppetlabs-apache</h1>
+<h1 id="managed-by-puppet">Managed by Puppet</h1>
+<h1 id="heading-1">************************************</h1>
+<p>&lt;VirtualHost *:80&gt;
+ServerName controller
+ServerAlias 192.168.10.10
+ServerAlias 10.10.10.10
+ServerAlias controller
+ServerAlias localhost
+WSGIApplicationGroup %{GLOBAL}
+WSGIDaemonProcess apache display-name=horizon group=apache processes=2 threads=1 user=apache
+WSGIProcessGroup apache
+WSGIScriptAlias /dashboard &ldquo;/usr/share/openstack-dashboard/openstack_dashboard/wsgi/django.wsgi&rdquo;</p>
+<h2 id="vhost-docroot">Vhost docroot</h2>
+<p>DocumentRoot &ldquo;/var/www/&rdquo;</p>
+<h2 id="alias-declarations-for-resources-outside-the-documentroot">Alias declarations for resources outside the DocumentRoot</h2>
+<p>Alias /dashboard/static &ldquo;/usr/share/openstack-dashboard/static&rdquo;</p>
+<h2 id="directories-there-should-at-least-be-a-declaration-for-varwww">Directories, there should at least be a declaration for /var/www/</h2>
+<p>&lt;Directory &ldquo;/var/www/&ldquo;&gt;
+Options Indexes FollowSymLinks MultiViews
+AllowOverride None
+Require all granted
+<!-- raw HTML omitted --></p>
+<p>&lt;Directory &ldquo;/usr/share/openstack-dashboard/openstack-dashboard/wsgi&quot;&gt;
+Options All
+AllowOverride All
+Require all granted
+<!-- raw HTML omitted --></p>
+<p>&lt;Directory &ldquo;/usr/share/openstack-dashboard/static&quot;&gt;
+Options All
+AllowOverride All
+Require all granted
+<!-- raw HTML omitted --></p>
+<h2 id="logging">Logging</h2>
+<p>ErrorLog &ldquo;/var/log/httpd/horizon_error.log&rdquo;
+ServerSignature Off
+CustomLog &ldquo;/var/log/httpd/horizon_access.log&rdquo; combined</p>
+<h2 id="redirectmatch-rules">RedirectMatch rules</h2>
+<p>RedirectMatch permanent  ^/$ /dashboard</p>
+<h2 id="server-aliases">Server aliases</h2>
+<!-- raw HTML omitted -->
+
+    </div>
+  </label>
+</div>
+
+</blockquote>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#자동화-툴-packstack을-이용한-설치"><strong>자동화 툴 packstack을 이용한 설치</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#특정-노드-추가"><strong>특정 노드 추가</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#초기설정"><strong>초기설정</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#네트워크-노드"><strong>네트워크 노드</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
