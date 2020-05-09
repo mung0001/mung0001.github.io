@@ -288,6 +288,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloud/aws/aws-%EC%8B%A4%EC%8A%B5%EC%98%88%EC%A0%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/aws-%EC%8B%A4%EC%8A%B5%EC%98%88%EC%A0%9C/</guid>
+      <description>AWS 실습 예제  문제 사이트    vmware 상의 OS를 AWS의 EC2로 이전 vmware 상의 OS를 AWS의 EC2로 이전↕ vmware 상의 OS를 AWS의 EC2로 이전  VMware 15 VMware workstation CentOS7 ( Mini )   ens33 수정 ( /etc/sysconfig/netwrok-scripts/ifcfg-ens33 )  BOOTPROTO = dhcpONBOOT = No -&amp;gt; YES vmware에서 Export to OVF 파일을 선택합니다.    AWS cli를 실행하여 vmdk 파일을 S3에 import시킵니다.</description>
+    </item>
+    
+    <item>
       <title>테스트</title>
       <link>https://mung0001.github.io/posts/goisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
@@ -322,6 +331,18 @@ This document is a brief primer on using Go templates.</description>
       
       <guid>https://mung0001.github.io/docs/cloud/aws/aws%EC%9A%94%EA%B8%88/</guid>
       <description>AWS 요금   AWS의 요금  AWS는 기본적으로 종량 요금제이지만 일부는 무료로 이용이 가능 요금 체계는 서비스 마다 다르지만, 원칙이 존재   AWS의 요금체계  AWS는 기본적으로 종량 요금제 ( 사용한 만큼 금액을 지불하는 방식 ) 종량 과금에는 시간 기준, 횟수 기준, 용량 기준의 3가지 종류가 있으며, 이 가운데 하나 혹은 조합의 이해 요금이 측정  EC2의 경우 CPU, 메모리 등의 조합으로 한 시간단위로 이용량이 결정되어짐      네트워크 과금의 방식  네트워크 과금의 사고 방법에는 수신과 송신이 존재 외부 네트워크에서 AWS로 통신을 수신, AWS에서 외부 네트워크로 송신이라 하며 수신은 기본적으로 무료이지만 송신에 대해서는 1GB당 얼마라는 계산 방식으로 과금이 측정되어짐 수신은 무료이므로 온프레미스 서버의 데이터를 AWS에 백업하는 방식은 통신료가 무료이며, 데이터 복원 등의 이유로 그 데이터를 온프레미스로 송신할 때만 과금이 발생      횟수 기준에 따른 방식  횟수 기준에 따른 과금은 API 호출 횟수를 기준으로 계산  Amazon SQS라는 큐 서비스는 표준 큐의 경우 100만 건의 API 요청에 $0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloud/aws/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/test/</guid>
+      <description>awscli awscli 는 AWS Command Line Interface 의 약어입니다. 설치하면 이후 s3 관련 작업을 terminal command 로 할 수 있습니다.
+설치는 pip install 로 가능합니다. Python 2.6x 혹은 Python 2.7x 이상이 필요하였는데, 저는 Python 3.x 만 이용하므로 버전은 자세히 보지 않았습니다.
+pip install awscli 설치 후 help 명령어를 입력하여 awscli 가 설치되었는지 확인도 해봅니다.
+aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추가해야 합니다. aws configure 를 실행시킵니다.</description>
     </item>
     
     <item>
@@ -444,9 +465,8 @@ This document is a brief primer on using Go templates.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/study/openstack/openstack%EC%84%A4%EC%B9%98/</guid>
-      <description>OpenStack   Packtack을 이용한 설치 오픈 스택 오픈스택이란? 클라우드 환경에서 컴퓨팅 자원과 스토리지 인프라를 설치하고 구동하기 위해 사용하는 오픈 소스 SW 프로젝트의 집합  설치 방법 메뉴얼을 이용한 설치 Devstack을 이용한 설치 자동화 툴을 이용한 설치
-자동화 툴 packstack을 이용한 설치 자동화 툴을 이용한 설치 2) 준비 가상머신 3대	cpu	메모리	디스크 controller	1	3gb	50gb compute	1	2gb	50gb network	1	1gb	20gb
-controller 192.168.0.62compute	192.168.0.200network	192.</description>
+      <description>OpenStack   설치 방법  메뉴얼을 이용한 설치 자동화 툴을 이용한 설치 ( Packstack, Devstack )      packstack을 이용한 설치   0. 설치환경
+   Hostname IP 운영체제 cpu 메모리 디스크      controller 192.168.1.98 CentOS7 2 4 50gb    compute 192.168.1.99 CentOS7 2 4 200gb    network 192.168.1.100 CentOS7 1 2 50gb                1.</description>
     </item>
     
     <item>

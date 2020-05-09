@@ -156,9 +156,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/study/openstack/openstack%EC%84%A4%EC%B9%98/</guid>
-      <description>OpenStack   Packtack을 이용한 설치 오픈 스택 오픈스택이란? 클라우드 환경에서 컴퓨팅 자원과 스토리지 인프라를 설치하고 구동하기 위해 사용하는 오픈 소스 SW 프로젝트의 집합  설치 방법 메뉴얼을 이용한 설치 Devstack을 이용한 설치 자동화 툴을 이용한 설치
-자동화 툴 packstack을 이용한 설치 자동화 툴을 이용한 설치 2) 준비 가상머신 3대	cpu	메모리	디스크 controller	1	3gb	50gb compute	1	2gb	50gb network	1	1gb	20gb
-controller 192.168.0.62compute	192.168.0.200network	192.</description>
+      <description>OpenStack   설치 방법  메뉴얼을 이용한 설치 자동화 툴을 이용한 설치 ( Packstack, Devstack )      packstack을 이용한 설치   0. 설치환경
+   Hostname IP 운영체제 cpu 메모리 디스크      controller 192.168.1.98 CentOS7 2 4 50gb    compute 192.168.1.99 CentOS7 2 4 200gb    network 192.168.1.100 CentOS7 1 2 50gb                1.</description>
     </item>
     
     <item>
