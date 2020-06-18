@@ -144,6 +144,51 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     
     <item>
       <title></title>
+      <link>https://mung0001.github.io/docs/cloud/aws-%EC%8B%A4%EC%8A%B5/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws-%EC%8B%A4%EC%8A%B5/base/</guid>
+      <description>****    ****          </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloud/aws-%EC%8B%A4%EC%8A%B5/ebs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws-%EC%8B%A4%EC%8A%B5/ebs/</guid>
+      <description>AWS Elastic Fire System    EFS      AWS 서비스에서 EFS를 클릭합니다.      스토리지 생성을 위해 파일 시스템 생성을 클릭합니다.      네트워크 엑세스를 구성합니다. 여기서는 기본 VPC에서 가용영역 a, c를 사용하겠습니다.      파일 시스템 설정 구성을 설정합니다. 여기서는 후에 설정을 전부 기본 값을 사용하여 생성합니다.      생성된 내용을 확인합니다.      EFS 사용하기 위해 가용영역 a, c에 인스턴스를 생성합니다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloud/aws-%EC%8B%A4%EC%8A%B5/ec2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws-%EC%8B%A4%EC%8A%B5/ec2/</guid>
+      <description>AWS 컴퓨팅 서비스    EC2 ( Elastic COmpute Cloud )   인스턴스 생성방법      검색에서 EC2를 입력후 인스턴스로 들어갑니다.      대시보드에서 현재 사용량을 확인할 수 있습니다. 인스턴스 생성을 위해 좌측 메뉴에 인스턴스를 클릭합니다.      인스턴스 시작을 클릭합니다.      AMI 선택에서는 이미지 파일을 선택할 수 있습니다. 여기에서는 Amzon Linux를 생성하겠습니다. 또한 AMI는 직접 만들 수 있으며, AWS Marketplace를 통해서 타 유저의 이미지를 구매할 수도 있습니다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloud/aws-%EC%8B%A4%EC%8A%B5/s3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws-%EC%8B%A4%EC%8A%B5/s3/</guid>
+      <description>Simple Storage Service    S3 생성       AWS 서비스에서 S3를 검색합니다.      버킷 생성을 클릭합니다.      버킷의 이름과 리전을 선택합니다. 참고로 S3는 VPC에 영향을 받지 않습니다.      옵션을 선택합니다. 여기서는 기본 값으로 생성을 진행합니다.      S3에 대한 권한을 설정합니다. 기본적으로 차단되어 있는 것이 좋으며, 경우에 따라 설정 값을 변경합니다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloud/aws-%EC%8B%A4%EC%8A%B5/vpc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws-%EC%8B%A4%EC%8A%B5/vpc/</guid>
+      <description>AWS Network   AWS VPC 생성     AWS 서비스에서 VPC를 검색합니다.      VPC 대시보드에서는 VPC서비스의 전체적인 서비스 상태를 확인할 수 있습니다. 좌측 메뉴에서 VPC 생성을 위해 VPC를 선택합니다.      AWS 가입시 기본적으로 기본 VPC가 생성되며, Custom VPC를 생성하기 위해 VPC 생성을 클릭합니다.      VPC 생성을 위해 VPC의 이름과 주소대역을 CIDR 형식으로 작성합니다.      생성이 완료되었습니다.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://mung0001.github.io/docs/study/openstack/keystone/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -380,10 +425,19 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/programing/code/python/python/</guid>
-      <description>Python 내장함수  ...abs abs(x)는 어떤 숫자를 입력받았을 때, 그 숫자의 절댓값을 돌려주는 함수
+      <description>python 내장함수  ...abs abs(x)는 어떤 숫자를 입력받았을 때, 그 숫자의 절댓값을 돌려주는 함수
 &amp;gt;&amp;gt;&amp;gt; abs(3)3&amp;gt;&amp;gt;&amp;gt; abs(-3)3   all all(x)는 반복 가능한(iterable) 자료형 x를 입력 인수로 받으며 이 x가 모두 참이면 True, 거짓이 하나라도 있으면 False를 반환
 ※ 반복 가능한 자료형이란 for문으로 그 값을 출력할 수 있는 것을 의미한다. 리스트, 튜플, 문자열, 딕셔너리, 집합 등이 있다.
 &amp;gt;&amp;gt;&amp;gt; all([1, 2, 3])True&amp;gt;&amp;gt;&amp;gt; all([1, 2, 3, 0])False  any any(x)는 x 중 하나라도 참이 있으면 True를 돌려주고, x가 모두 거짓일 때에만 False를 돌려준다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/bigdata/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/bigdata/</guid>
+      <description>빅데이터란  Bigdata    빅데이터는 큰 사이즈의 데이터로부터 유의미한 지표를 분석해내는 행위 SNS, 로그, 문서 등 다양한 경로를 통해 수집한 여러가지 형태의 많은 양의 데이터를 이용하여 의사결정에 도움을 주는 지표를 분석하여 제공하는 것   Bigdata가 대두 되어지는 이유  데이터 양의 증가와 데이터 저장기술 발달 경제적 타당성 증가/ 저장장치의 가격 인하 데이터 처리 기술의 발달   Bigdata 5V  Volume - 크기  저장장치 가격의 하락, 네트워크 속도의 향상으로 수 페타바이트의 데이터가 매일 생성   Variety - 다양성  정형, 반정형, 비정형 형태의 다양한 데이터를 분석   Velocity - 속도  정보의 유통 속도가 굉장히 빠름.</description>
     </item>
     
     <item>
@@ -525,6 +579,15 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
   (2)이상 탐지	모르는 것도 탐지(100% 탐지 X)
   너무 민감하게 처리하면 필요한 정보도 차단하는 실수를 할 수 있음
        설치위치 ( 성능이 달라짐 )</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/study/system/code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/study/system/code/</guid>
+      <description>메일 자동화  이미지 크롤링 from urllib.request import urlopenfrom urllib.parse import quote_plusfrom bs4 import BeautifulSoupfrom selenium import webdriverimport timebaseUrl = &amp;#39;https://www.instagram.com/explore/tags/&amp;#39;plusUrl = input(&amp;#39;검색할 태그를 입력하세요 : &amp;#39;)url = baseUrl + quote_plus(plusUrl)driver = webdriver.Chrome(&amp;#39;C:\\chromedriver.exe&amp;#39;)driver.get(url)time.sleep(3)html = driver.page_sourcesoup = BeautifulSoup(html)insta = soup.select(&amp;#39;.v1Nh3.kIKUG._bz0w&amp;#39;)n = 1for i in insta:print(&amp;#39;https://www.instagram.com&amp;#39;+ i.a[&amp;#39;href&amp;#39;])imgUrl = i.select_one(&amp;#39;.KL4Bh&amp;#39;).img[&amp;#39;src&amp;#39;]with urlopen(imgUrl) as f:with open(&amp;#39;C:\\test\\&amp;#39; + plusUrl + str(n) + &amp;#39;.</description>
     </item>
     
     <item>
