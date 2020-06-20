@@ -1,34 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>왈왈왈</title>
+    <title>Network on 뭉게뭉게</title>
     <link>https://mung0001.github.io/docs/network/</link>
-    <description>Recent content on 왈왈왈</description>
+    <description>Recent content in Network on 뭉게뭉게</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>kr-ko</language>
     
 	<atom:link href="https://mung0001.github.io/docs/network/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/network/network_equipment/</link>
+      <link>https://mung0001.github.io/docs/network/gns3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/network/network_equipment/</guid>
-      <description></description>
+      <guid>https://mung0001.github.io/docs/network/gns3/</guid>
+      <description>네트워크 실습을 위한 GNS3 설치    GNS3 Download Link      상단의 GNS3 다운로드 링크를 클릭하여 GNS3에 접속 후, 로그인 혹은 회원가입을 진행합니다.      로그인 후, Download를 클릭하여 운영체제에 맞는 GNS3 설치파일을 다운로드 합니다.      기본 값으로 설치를 진행합니다. 단 솔라윈드 톨킷은 설치하지 않습니다.      GNS3의 설치가 완료되었습니다.      GNS3가 설치되면 GNS3를 실행시킵니다.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/network/packet/</link>
+      <link>https://mung0001.github.io/docs/network/3tier/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/network/packet/</guid>
+      <guid>https://mung0001.github.io/docs/network/3tier/</guid>
+      <description>Loacal 3Tier 구현    OS, 구현 프로그램  Ubuntu18.04 Apache2 Tomcat8 Mysql5.8 GNS3   IP 대역  10.10.10.0/24 Public 20.20.20.0/24 Private 30.30.30.0/24 Private2  Public 대역 10.10.10.10 Apache1 10.10.10.11 Apache2  Private 대역 20.20.20.20 Tomcat1 20.20.20.21 Tomcat2  Public 대역 30.30.30.30 Mysql1 30.30.30.30 Mysql2     sudo vi /etc/netplan/50-cloud-init.yamlnetwork:version: 2ethernets:ens33:dhcp6: noaddresses:- [ IP addresses ]gateway4: [ gateway ]nameservers:addresses: [ [nameserver] ]$ sudo netplan apply$ hostname -l아키텍처 사진</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/network/%E3%84%B4-packet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/network/%E3%84%B4-packet/</guid>
       <description>네트워크 패킷 ( Network Packet )    패킷이란 데이터의 묶음 단위로 한번에 전송할 데이터의 크기
   제 3계층 이상 ( Network 계층 ) 에서는 이 데이터의 묶음을 패킷이라고 부르며, 제 2계층에서는 프레임( Frame )
   패킷의 크기는 네트워크의 종류에 따라 크기가 다름
   패킷을 이렇게 나눠 보내는 이유는 컴퓨터는 동시다발적으로 데이터를 전송하는 데, 한 데이터에게만 데이터를 줄 경우, 한 컴퓨터와의 통신밖에 하지 못하기에, 데이터를 나눠 모두에게 통신할 수 있게 하며, 중간에 에러가 날 경우를 대비</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/network/%E3%84%B4-portnumber/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/network/%E3%84%B4-portnumber/</guid>
+      <description>TCP/ UDP 포트 번호 정리  기본적인 포트번호    Well-known port : 0 ~ 1023
+  Registered port : 1024 ~ 49151
+  Dynamic port : 49152 ~ 65535
+    Port Tables...  Register Port  </description>
     </item>
     
   </channel>

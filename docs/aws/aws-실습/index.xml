@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>뭉게뭉게</title>
+    <link>https://mung0001.github.io/docs/aws/aws-%EC%8B%A4%EC%8A%B5/</link>
+    <description>Recent content on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    
+	<atom:link href="https://mung0001.github.io/docs/aws/aws-%EC%8B%A4%EC%8A%B5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/aws/aws-%EC%8B%A4%EC%8A%B5/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/aws-%EC%8B%A4%EC%8A%B5/base/</guid>
+      <description>****    ****          </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/aws/aws-%EC%8B%A4%EC%8A%B5/ebs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/aws-%EC%8B%A4%EC%8A%B5/ebs/</guid>
+      <description>AWS Elastic Fire System    EFS      AWS 서비스에서 EFS를 클릭합니다.      스토리지 생성을 위해 파일 시스템 생성을 클릭합니다.      네트워크 엑세스를 구성합니다. 여기서는 기본 VPC에서 가용영역 a, c를 사용하겠습니다.      파일 시스템 설정 구성을 설정합니다. 여기서는 후에 설정을 전부 기본 값을 사용하여 생성합니다.      생성된 내용을 확인합니다.      EFS 사용하기 위해 가용영역 a, c에 인스턴스를 생성합니다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/aws/aws-%EC%8B%A4%EC%8A%B5/ec2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/aws-%EC%8B%A4%EC%8A%B5/ec2/</guid>
+      <description>AWS 컴퓨팅 서비스    EC2 ( Elastic COmpute Cloud )   인스턴스 생성방법      검색에서 EC2를 입력후 인스턴스로 들어갑니다.      대시보드에서 현재 사용량을 확인할 수 있습니다. 인스턴스 생성을 위해 좌측 메뉴에 인스턴스를 클릭합니다.      인스턴스 시작을 클릭합니다.      AMI 선택에서는 이미지 파일을 선택할 수 있습니다. 여기에서는 Amzon Linux를 생성하겠습니다. 또한 AMI는 직접 만들 수 있으며, AWS Marketplace를 통해서 타 유저의 이미지를 구매할 수도 있습니다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/aws/aws-%EC%8B%A4%EC%8A%B5/s3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/aws-%EC%8B%A4%EC%8A%B5/s3/</guid>
+      <description>Simple Storage Service    S3 생성       AWS 서비스에서 S3를 검색합니다.      버킷 생성을 클릭합니다.      버킷의 이름과 리전을 선택합니다. 참고로 S3는 VPC에 영향을 받지 않습니다.      옵션을 선택합니다. 여기서는 기본 값으로 생성을 진행합니다.      S3에 대한 권한을 설정합니다. 기본적으로 차단되어 있는 것이 좋으며, 경우에 따라 설정 값을 변경합니다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/aws/aws-%EC%8B%A4%EC%8A%B5/vpc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/aws-%EC%8B%A4%EC%8A%B5/vpc/</guid>
+      <description>AWS Network   AWS VPC 생성     AWS 서비스에서 VPC를 검색합니다.      VPC 대시보드에서는 VPC서비스의 전체적인 서비스 상태를 확인할 수 있습니다. 좌측 메뉴에서 VPC 생성을 위해 VPC를 선택합니다.      AWS 가입시 기본적으로 기본 VPC가 생성되며, Custom VPC를 생성하기 위해 VPC 생성을 클릭합니다.      VPC 생성을 위해 VPC의 이름과 주소대역을 CIDR 형식으로 작성합니다.      생성이 완료되었습니다.</description>
+    </item>
+    
+  </channel>
+</rss>
