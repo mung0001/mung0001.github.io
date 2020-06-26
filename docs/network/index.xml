@@ -21,6 +21,15 @@
     
     <item>
       <title></title>
+      <link>https://mung0001.github.io/docs/network/nas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/network/nas/</guid>
+      <description>네트워크 실습을 위한 GNS3 설치    GNS3 Download Link      상단의 GNS3 다운로드 링크를 클릭하여 GNS3에 접속 후, 로그인 혹은 회원가입을 진행합니다.      로그인 후, Download를 클릭하여 운영체제에 맞는 GNS3 설치파일을 다운로드 합니다.      기본 값으로 설치를 진행합니다. 단 솔라윈드 톨킷은 설치하지 않습니다.      GNS3의 설치가 완료되었습니다.      GNS3가 설치되면 GNS3를 실행시킵니다.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://mung0001.github.io/docs/network/3tier/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

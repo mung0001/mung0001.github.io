@@ -20,6 +20,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/network/nas/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/study/openstack/openstack/</loc>
   </url>
   
@@ -49,10 +53,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/aws/aws/aws_computing/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/network/3tier/</loc>
   </url>
   
   <url>
@@ -112,7 +112,15 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/network/3tier/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/study/openstack/keystone/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/system/mail-server/</loc>
   </url>
   
   <url>
@@ -136,7 +144,15 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/aws/aws-%EC%8B%A4%EC%8A%B5/nas-owncloud/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/study/openstack/neutron/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/system/mount/</loc>
   </url>
   
   <url>
@@ -416,10 +432,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/5.-%EC%A0%95%EB%B3%B4%EC%84%B8%EC%8A%A4%ED%85%9C-%EA%B5%AC%EC%B6%95%EA%B4%80%EB%A6%AC/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/system/network_equipment/</loc>
   </url>
   
   <url>

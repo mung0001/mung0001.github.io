@@ -12,11 +12,23 @@
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/system/network_equipment/</link>
+      <link>https://mung0001.github.io/docs/system/mail-server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/system/network_equipment/</guid>
-      <description></description>
+      <guid>https://mung0001.github.io/docs/system/mail-server/</guid>
+      <description>Mail 서버 생성   단계  SSL 보안 인증서 발급받기  도메인 주소   메일서버 설치   Ubuntu 18.04
+   SSL 보안 인증서 발급받기  1. 도메인 주소 설정  SSL 보안 인증서를 사용하기 위해서는 http://도메인으로 해당 사이트에 접근이 가능해아합니다. 이미 도메인 주소가 있으신 분은 그것을 사용하고, 없으신 분은 Link에서 무료 도메인을 사용하시면 됩니다.   2. SSL  무료 SSL을 생성합니다.  $ sudo apt-get install -y postfix# postfix 설치   VMware에 NAS 설치   Vmware에서 Custom으로 Virtual Machine을 설치합니다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/system/mount/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/mount/</guid>
+      <description>Linux HD Mount   디스크의 구조 1. 물리적 구조
+ 스핀들 : 디스크는 하나의 스핀들을 기준으로 여러 개의 플래터로 구성되어 있고 스핀들은 여러 개의 플랫터를 회전시키는 역할을 한다. 플래터 : 플래터는 마그네틱으로 코딩되어져 있고 연속으로 구성되어 있다. 헤더 : 회전중인 플래터에 데이터를 읽거나 쓰기 위해서는 엑세스 암에 부착된 헤더를 이용하여 엑세스 한다.   2. 논리적 구조
+ 섹터 : 플래터의 가장 작은 단위, 일반적으로 1섹터의 크기는 512바이트 트랙 : 섹터가 모여 하나의 원을 구성 실린더 : 트랙의 스택 구조 파티션 : MBR의 파티션 테이블(64바이트)에 정보가 저장, 주 파티션 (16바이트, 4개까지 생성이 가능), 확장 파티션 생성이 가능 논리적 구조 크기 비교 : 섹터 &amp;lt; 트랙 &amp;lt; 실린더 &amp;lt; 실린더 그룹 or 파티션 &amp;lt; 디스크   3.</description>
     </item>
     
   </channel>
