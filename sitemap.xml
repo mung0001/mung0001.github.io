@@ -8,10 +8,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws%EB%9E%80/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/network/gns3/</loc>
   </url>
   
@@ -21,6 +17,14 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/study/openstack/openstack/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/training/start/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws%EB%9E%80/</loc>
   </url>
   
   <url>
@@ -52,19 +56,19 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/training/iam/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/training/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_database/</loc>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_storage/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/basic/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/</loc>
   </url>
   
   <url>
@@ -89,10 +93,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_analysis/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/base/</loc>
   </url>
   
   <url>
@@ -236,11 +236,23 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws-%EC%8B%A4%EC%8A%B5%EC%98%88%EC%A0%9C/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/training/aws-%EC%8B%A4%EC%8A%B5%EC%98%88%EC%A0%9C/</loc>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/auto-scaling/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/test/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/%EB%B0%B0%ED%8F%AC/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/training/base/</loc>
   </url>
   
   <url>
@@ -252,11 +264,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/test/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/%EB%B0%B0%ED%8F%AC/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/basic/</loc>
   </url>
   
   <url>

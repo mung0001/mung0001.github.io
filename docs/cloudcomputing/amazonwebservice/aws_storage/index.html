@@ -5,7 +5,7 @@
   <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AWS Storage   S3 ( Simple Storage Service )    웹 서비스 인터페이스( HTTP ) 를 이용하여 웹에서 언제 어디서나 원하는 양의 데이터를 저장하고 검색할 수 있는 스토리지 버킷( Bucket )과 객체 ( Object )로 나뉘며, 저장하고자 하는 모든 요소는 하나의 객체로 저장되고, 객체를 담는 곳이 버킷 S3 자체는 글로벌 서비스이지만 버킷을 생성 할 때에는 리전을 선택해야 함 객체는 객체 데이터와 메타 데이터로 나뉘며, 각자의 고유한 URL을 가지며 해당 URL로 접속 가능   버킷( Bucket )의 정의와 특징  객체를 담고 있는 구성 요소 크기는 무제한, 리전을 지정하여 버킷을 생성해야 함 버킷의 이름은 반드시 고유해야하며, 증복이 불가능 한번 설정된 버킷의 이름은 다른 계정에서 사용불가   객체( Object ) 의 정의와 특징  S3에 업로드되는 1개의 데이터를 객체라 함 키, 버전 ID, 값, 메타데이터 등으로 구성 객체 하나의 최소 크기는 1(0) byte ~ 5TB 스토리지 클래스, 암호화, 태그, 메타데이터, 객체 잠금 설정 가능 객체의 크기가 매우 클 경우 멀티파트 업로드를 통해 신속하게 업로드 가능   객체의 스토리지 클래스  객체의 접근빈도 및 저장기안에 따라 결정되는 객체의 특성 Standard Type : 클래스를 선택하지 않을 경우 선택되는 일반적인 클래스 Strandard_IA(Ifrequent Access ) : 자주 엑세스하지는 않지만 즉시 액세스할 수 있는 데이터여야하는 경우 선택되는 클래스 One Zone_iA : Standard_IA와 기능은 동일하나 Standard_IA의 경우 세 곳의 AZ에 저장되는 것과 달리 한 군데의 AZ에만 저장되어 해당 AZ가 파괴될 경우 정보 손실 가능성 존재 ( 저장 요금이 적음 ) Intelligent tiering : 엑세스 빈도가 불규칙하여 빈도를 가늠하기 어려운 경우 선택되는 클래스 Glancier : 검색이 아닌 저장이 주용도인 스토리지로 저장요금이 위 클래스들보다 훨씬 저렴한, 다만 저장이 주용도이기 때문에 검색이 3~ 5시간이 소요 Glacier Deep Archive : 10년 이상 저장할 데이터를 저장하는 스토리지 클래스   S3 사용  S3 생성↕ S3 생성 1."><meta property="og:title" content="" />
+<meta name="description" content="AWS Storage   S3 ( Simple Storage Service )    웹 서비스 인터페이스( HTTP ) 를 이용하여 웹에서 언제 어디서나 원하는 양의 데이터를 저장하고 검색할 수 있는 스토리지 버킷( Bucket )과 객체 ( Object )로 나뉘며, 저장하고자 하는 모든 요소는 하나의 객체로 저장되고, 객체를 담는 곳이 버킷 S3 자체는 글로벌 서비스이지만 버킷을 생성 할 때에는 리전을 선택해야 함 객체는 객체 데이터와 메타 데이터로 나뉘며, 각자의 고유한 URL을 가지며 해당 URL로 접속 가능   버킷( Bucket )의 정의와 특징  객체를 담고 있는 구성 요소 크기는 무제한, 리전을 지정하여 버킷을 생성해야 함 버킷의 이름은 반드시 고유해야하며, 증복이 불가능 한번 설정된 버킷의 이름은 다른 계정에서 사용불가   객체( Object ) 의 정의와 특징  S3에 업로드되는 1개의 데이터를 객체라 함 키, 버전 ID, 값, 메타데이터 등으로 구성 객체 하나의 최소 크기는 1(0) byte ~ 5TB 스토리지 클래스, 암호화, 태그, 메타데이터, 객체 잠금 설정 가능 객체의 크기가 매우 클 경우 멀티파트 업로드를 통해 신속하게 업로드 가능   객체의 스토리지 클래스  객체의 접근빈도 및 저장기안에 따라 결정되는 객체의 특성 Standard Type : 클래스를 선택하지 않을 경우 선택되는 일반적인 클래스 Strandard_IA(Ifrequent Access ) : 자주 엑세스하지는 않지만 즉시 액세스할 수 있는 데이터여야하는 경우 선택되는 클래스 One Zone_iA : Standard_IA와 기능은 동일하나 Standard_IA의 경우 세 곳의 AZ에 저장되는 것과 달리 한 군데의 AZ에만 저장되어 해당 AZ가 파괴될 경우 정보 손실 가능성 존재 ( 저장 요금이 적음 ) Intelligent tiering : 엑세스 빈도가 불규칙하여 빈도를 가늠하기 어려운 경우 선택되는 클래스 Glancier : 검색이 아닌 저장이 주용도인 스토리지로 저장요금이 위 클래스들보다 훨씬 저렴한, 다만 저장이 주용도이기 때문에 검색이 3~ 5시간이 소요 Glacier Deep Archive : 10년 이상 저장할 데이터를 저장하는 스토리지 클래스   S3 사용  S3 생성↕ S3 생성 1."><meta property="og:title" content="AWS Storage" />
 <meta property="og:description" content="AWS Storage   S3 ( Simple Storage Service )    웹 서비스 인터페이스( HTTP ) 를 이용하여 웹에서 언제 어디서나 원하는 양의 데이터를 저장하고 검색할 수 있는 스토리지 버킷( Bucket )과 객체 ( Object )로 나뉘며, 저장하고자 하는 모든 요소는 하나의 객체로 저장되고, 객체를 담는 곳이 버킷 S3 자체는 글로벌 서비스이지만 버킷을 생성 할 때에는 리전을 선택해야 함 객체는 객체 데이터와 메타 데이터로 나뉘며, 각자의 고유한 URL을 가지며 해당 URL로 접속 가능   버킷( Bucket )의 정의와 특징  객체를 담고 있는 구성 요소 크기는 무제한, 리전을 지정하여 버킷을 생성해야 함 버킷의 이름은 반드시 고유해야하며, 증복이 불가능 한번 설정된 버킷의 이름은 다른 계정에서 사용불가   객체( Object ) 의 정의와 특징  S3에 업로드되는 1개의 데이터를 객체라 함 키, 버전 ID, 값, 메타데이터 등으로 구성 객체 하나의 최소 크기는 1(0) byte ~ 5TB 스토리지 클래스, 암호화, 태그, 메타데이터, 객체 잠금 설정 가능 객체의 크기가 매우 클 경우 멀티파트 업로드를 통해 신속하게 업로드 가능   객체의 스토리지 클래스  객체의 접근빈도 및 저장기안에 따라 결정되는 객체의 특성 Standard Type : 클래스를 선택하지 않을 경우 선택되는 일반적인 클래스 Strandard_IA(Ifrequent Access ) : 자주 엑세스하지는 않지만 즉시 액세스할 수 있는 데이터여야하는 경우 선택되는 클래스 One Zone_iA : Standard_IA와 기능은 동일하나 Standard_IA의 경우 세 곳의 AZ에 저장되는 것과 달리 한 군데의 AZ에만 저장되어 해당 AZ가 파괴될 경우 정보 손실 가능성 존재 ( 저장 요금이 적음 ) Intelligent tiering : 엑세스 빈도가 불규칙하여 빈도를 가늠하기 어려운 경우 선택되는 클래스 Glancier : 검색이 아닌 저장이 주용도인 스토리지로 저장요금이 위 클래스들보다 훨씬 저렴한, 다만 저장이 주용도이기 때문에 검색이 3~ 5시간이 소요 Glacier Deep Archive : 10년 이상 저장할 데이터를 저장하는 스토리지 클래스   S3 사용  S3 생성↕ S3 생성 1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_storage/" />
@@ -14,7 +14,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.39e0ca0ab3ed2f631e6d6206df10382ca3790843021df1a1bbe71e044509f752.js" integrity="sha256-OeDKCrPtL2MebWIG3xA4LKN5CEMCHfGhu&#43;ceBEUJ91I="></script>
+<script defer src="/en.search.min.41fee8a9bd4a4c8d3b51d69a4f7f971a9493091b382209668c8215ea3780947f.js" integrity="sha256-Qf7oqb1KTI07UdaaT3&#43;XGpSTCRs4IglmjIIV6jeAlH8="></script>
 <!--
 
 -->
@@ -113,7 +113,7 @@
         <li>
 
   
-  <a href="/docs/cloudcomputing/amazonwebservice/aws%EB%9E%80/" class="">A W S란</a>
+  <a href="/docs/cloudcomputing/amazonwebservice/aws%EB%9E%80/" class="">AWS와 Cloud Computing</a>
   
 
 </li>
@@ -123,7 +123,7 @@
         <li>
 
   
-  <a href="/docs/cloudcomputing/amazonwebservice/aws_computing/" class="">A W S Computing</a>
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_computing/" class="">AWS Computing</a>
   
 
 </li>
@@ -133,7 +133,7 @@
         <li>
 
   
-  <a href="/docs/cloudcomputing/amazonwebservice/aws_database/" class="">A W S Database</a>
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_database/" class="">AWS Database</a>
   
 
 </li>
@@ -143,7 +143,7 @@
         <li>
 
   
-  <a href="/docs/cloudcomputing/amazonwebservice/aws_storage/" class="active">A W S Storage</a>
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_storage/" class="active">AWS Storage</a>
   
 
 </li>
@@ -153,7 +153,7 @@
         <li>
 
   
-  <a href="/docs/cloudcomputing/amazonwebservice/basic/" class="">Basic</a>
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_network/" class="">AWS Network</a>
   
 
 </li>
@@ -163,7 +163,7 @@
         <li>
 
   
-  <a href="/docs/cloudcomputing/amazonwebservice/aws_network/" class="">A W S Network</a>
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_migrate/" class="">AWS Migrate</a>
   
 
 </li>
@@ -173,7 +173,7 @@
         <li>
 
   
-  <a href="/docs/cloudcomputing/amazonwebservice/aws_migrate/" class="">A W S Migrate</a>
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_developer/" class="">AWS Developer</a>
   
 
 </li>
@@ -183,7 +183,7 @@
         <li>
 
   
-  <a href="/docs/cloudcomputing/amazonwebservice/aws_developer/" class="">A W S Developer</a>
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_management/" class="">AWS Management</a>
   
 
 </li>
@@ -193,7 +193,7 @@
         <li>
 
   
-  <a href="/docs/cloudcomputing/amazonwebservice/aws_management/" class="">A W S Management</a>
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_security/" class="">AWS Security</a>
   
 
 </li>
@@ -203,27 +203,7 @@
         <li>
 
   
-  <a href="/docs/cloudcomputing/amazonwebservice/aws_security/" class="">A W S Security</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/docs/cloudcomputing/amazonwebservice/aws_analysis/" class="">A W S Analysis</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/docs/cloudcomputing/amazonwebservice/aws-%EC%8B%A4%EC%8A%B5%EC%98%88%EC%A0%9C/" class="">A W S 실습예제</a>
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_analysis/" class="">AWS Analysis</a>
   
 
 </li>
@@ -234,26 +214,6 @@
 
   
   <a href="/docs/cloudcomputing/amazonwebservice/auto-scaling/" class="">Auto Scaling</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/docs/cloudcomputing/amazonwebservice/aws-%EA%B3%84%EC%A0%95/" class="">A W S 계정</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/docs/cloudcomputing/amazonwebservice/aws%EC%9A%94%EA%B8%88/" class="">A W S요금</a>
   
 
 </li>
@@ -274,6 +234,36 @@
 
   
   <a href="/docs/cloudcomputing/amazonwebservice/%EB%B0%B0%ED%8F%AC/" class="">배포</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws-%EA%B3%84%EC%A0%95/" class="">AWS 계정</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws%EC%9A%94%EA%B8%88/" class="">AWS 요금</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/basic/" class="">Base</a>
   
 
 </li>
@@ -833,7 +823,7 @@
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>A W S Storage</strong>
+  <strong>AWS Storage</strong>
 
   <label for="toc-control">
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />

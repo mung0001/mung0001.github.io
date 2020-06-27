@@ -11,7 +11,7 @@
     
     
     <item>
-      <title></title>
+      <title>AWS와 Cloud Computing</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws%EB%9E%80/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>AWS Computing</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_computing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -30,7 +30,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>AWS Database</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_database/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -39,7 +39,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>AWS Storage</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_storage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -48,21 +48,7 @@
     </item>
     
     <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/basic/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/basic/</guid>
-      <description>AWS 용어 정리   AWS 기본 용어  Workloads
- 고객 대면 애플리케이션이나 백엔드 프로세스 같이 비즈니스 가치를 창출하는 리소스 및 코드 모음을 의미   Region
-  AWS에서 사용하는 일종의 IDC의 집합으로 거의 모든 클라우드 서비스가 탑재되는 곳으로 다수의 Availability Zone( 가용영역 )으로 구성됨
-  한 곳의 AZ의 기능이 마비되어도 다른 AZ가 기능을 수행
-  전 세계 주요 대도시에는 분포되어있음
-  AWS 사용자는 각 Region 마다 별도의 클라우드 망을 구축할 수 있음</description>
-    </item>
-    
-    <item>
-      <title></title>
+      <title>AWS Network</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -71,7 +57,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>AWS Migrate</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_migrate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -80,7 +66,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>AWS Developer</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_developer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -89,7 +75,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>AWS Management</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -98,7 +84,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>AWS Security</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -107,7 +93,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>AWS Analysis</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_analysis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -117,38 +103,11 @@
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws-%EC%8B%A4%EC%8A%B5%EC%98%88%EC%A0%9C/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws-%EC%8B%A4%EC%8A%B5%EC%98%88%EC%A0%9C/</guid>
-      <description>AWS 실습 예제  문제 사이트    vmware 상의 OS를 AWS의 EC2로 이전 vmware 상의 OS를 AWS의 EC2로 이전↕ vmware 상의 OS를 AWS의 EC2로 이전  VMware 15 VMware workstation CentOS7 ( Mini )   ens33 수정 ( /etc/sysconfig/netwrok-scripts/ifcfg-ens33 )  BOOTPROTO = dhcpONBOOT = No -&amp;gt; YES vmware에서 Export to OVF 파일을 선택합니다.    AWS cli를 실행하여 vmdk 파일을 S3에 import시킵니다.</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/auto-scaling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/auto-scaling/</guid>
       <description>Auto Scaling  Auto Scaling  EC2 인스턴스를 자동으로 시작하거나 종료하여 애플리케이션 로드를 처리하기에 적절한 수의 EC를 유지할 수 있도록 하는 서비스 사용자가 정의하는 조건에 따라 EC2 개수를 자동으로 확장 또는 축소가 가능 모니터링을 통해 비정상 인스턴스를 탐지하고 교체할 수 있음 수요가 급증할 경우 EC2 수를 자동으로 늘려 성능을 유지하고 수요가 적을 경우 수를 줄여 비용을 절감 ELB의 대상그룹을 Auto Scaling Group( ASG )에 포함시켜 자동생성된 EC2로 하여금 트래픽 부하분산을 하도록 설정가능 수요 변화가 예측 나응한 경우 예약된 일정을 통해 정해싲 시간에 늘리거나 줄이도록 설정이 가능 ASG 내 손상된 인스턴스가 발견될 경우, Auto Scaling은 이를 자동으로 종료하고 새로운 인스턴스로 교체  ELB를 사용하는 경우, ELB가 손상된 인스턴스를 트래픽 요청 대상에서 분리시킨 후, Auto Scaling이 이를 새로운 인스턴스로 교체   비정상 서버 탐지 후 Auto Scaling이 새로운 인스턴스를 In Service 상태를 만들기까지 5분 이내 소요   AWS Auto Scaling 그룹.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws-%EA%B3%84%EC%A0%95/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws-%EA%B3%84%EC%A0%95/</guid>
-      <description>AWS 계정    AWS의 계정   AWS 상에서 공유하는 리소스 관리단위 단일계정과 복수계정을 활요할 수 있으며, 비교 관점에 따라 각각 운용성과 보안의 장단점이 존재   단일 계정  단순함이 장점이며, 리소스가 집약되어 있기에 초보자가 사용하기 적합 단, 여러 개의 환경을 구축하거나 운용할 때는 문제가 발생, 운용 현장의 경우에는 개발 환경만 이용 가능하고, 작업 권한이 없는 사용자가 필요 AWS는 IAM을 사용해 사용자에게 권한을 제어하고 있지만, 서버 단위 권한을 부여해야 할 경우에는 비효율적   복수 계정  복수 계쩡의 장점은 환경 단위로 계정을 나눌 수 있다는 것으로, 개발용 계정과 운영용 계정을 따로 분리해서 각기 이용하는 사용자를 나눌 수 있음 운용 측면에서 매우 큰 장점이라 할 수 있음     AWS의 감사 추적    AWS의 감사 추적  감사추적이란 시스템의 작업 이력 및 상태를 감사자가 추적할 수 있는 기록 감사추적은 크게 AWS 자체의 작업 상태와 이력, AWS 내의 리소스로 나뉘어짐   AWS 자체의 작업 상태와 이력  AWS는 브라우저로 관리 콘솔 화면 또는 API를 이용해서 작업을 진행 AWS 자체 감사 추적의 기본은 AWS Config와 AWS CloudTrail Service가 있으며 이 두가지 서비스를 통해 AWS 서비스의 감사 추적 기록을 취득할 수 있음  Config  Config.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws%EC%9A%94%EA%B8%88/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws%EC%9A%94%EA%B8%88/</guid>
-      <description>AWS 요금   AWS의 요금  AWS는 기본적으로 종량 요금제이지만 일부는 무료로 이용이 가능 요금 체계는 서비스 마다 다르지만, 원칙이 존재   AWS의 요금체계  AWS는 기본적으로 종량 요금제 ( 사용한 만큼 금액을 지불하는 방식 ) 종량 과금에는 시간 기준, 횟수 기준, 용량 기준의 3가지 종류가 있으며, 이 가운데 하나 혹은 조합의 이해 요금이 측정  EC2의 경우 CPU, 메모리 등의 조합으로 한 시간단위로 이용량이 결정되어짐      네트워크 과금의 방식  네트워크 과금의 사고 방법에는 수신과 송신이 존재 외부 네트워크에서 AWS로 통신을 수신, AWS에서 외부 네트워크로 송신이라 하며 수신은 기본적으로 무료이지만 송신에 대해서는 1GB당 얼마라는 계산 방식으로 과금이 측정되어짐 수신은 무료이므로 온프레미스 서버의 데이터를 AWS에 백업하는 방식은 통신료가 무료이며, 데이터 복원 등의 이유로 그 데이터를 온프레미스로 송신할 때만 과금이 발생      횟수 기준에 따른 방식  횟수 기준에 따른 과금은 API 호출 횟수를 기준으로 계산  Amazon SQS라는 큐 서비스는 표준 큐의 경우 100만 건의 API 요청에 $0.</description>
     </item>
     
     <item>
@@ -170,6 +129,38 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/%EB%B0%B0%ED%8F%AC/</guid>
       <description>배포 ( Deploy )    배포 ( Deploy )  무중단 배포  서비스를 배포시 ( 버전 업데이트 등 ) 서버를 중단하지 않고 배포( 업데이트 )를 진행하는 것   중단배포( Ice breaking )  서비스를 배포시 서버를 중단하고 배포를 진행하는 것 ( 서버 정기 정검 )   In-Place Deployment  In-Place Deployment... In-Place Deployment    한 개의 로드밸런서가 4개의 서버로 요청을 보내고 있으며, 현재 1.</description>
+    </item>
+    
+    <item>
+      <title>AWS 계정</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws-%EA%B3%84%EC%A0%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws-%EA%B3%84%EC%A0%95/</guid>
+      <description>AWS 계정    AWS의 계정   AWS 상에서 공유하는 리소스 관리단위 단일계정과 복수계정을 활요할 수 있으며, 비교 관점에 따라 각각 운용성과 보안의 장단점이 존재   단일 계정  단순함이 장점이며, 리소스가 집약되어 있기에 초보자가 사용하기 적합 단, 여러 개의 환경을 구축하거나 운용할 때는 문제가 발생, 운용 현장의 경우에는 개발 환경만 이용 가능하고, 작업 권한이 없는 사용자가 필요 AWS는 IAM을 사용해 사용자에게 권한을 제어하고 있지만, 서버 단위 권한을 부여해야 할 경우에는 비효율적   복수 계정  복수 계쩡의 장점은 환경 단위로 계정을 나눌 수 있다는 것으로, 개발용 계정과 운영용 계정을 따로 분리해서 각기 이용하는 사용자를 나눌 수 있음 운용 측면에서 매우 큰 장점이라 할 수 있음     AWS의 감사 추적    AWS의 감사 추적  감사추적이란 시스템의 작업 이력 및 상태를 감사자가 추적할 수 있는 기록 감사추적은 크게 AWS 자체의 작업 상태와 이력, AWS 내의 리소스로 나뉘어짐   AWS 자체의 작업 상태와 이력  AWS는 브라우저로 관리 콘솔 화면 또는 API를 이용해서 작업을 진행 AWS 자체 감사 추적의 기본은 AWS Config와 AWS CloudTrail Service가 있으며 이 두가지 서비스를 통해 AWS 서비스의 감사 추적 기록을 취득할 수 있음  Config  Config.</description>
+    </item>
+    
+    <item>
+      <title>AWS 요금</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws%EC%9A%94%EA%B8%88/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws%EC%9A%94%EA%B8%88/</guid>
+      <description>AWS 요금   AWS의 요금  AWS는 기본적으로 종량 요금제이지만 일부는 무료로 이용이 가능 요금 체계는 서비스 마다 다르지만, 원칙이 존재   AWS의 요금체계  AWS는 기본적으로 종량 요금제 ( 사용한 만큼 금액을 지불하는 방식 ) 종량 과금에는 시간 기준, 횟수 기준, 용량 기준의 3가지 종류가 있으며, 이 가운데 하나 혹은 조합의 이해 요금이 측정  EC2의 경우 CPU, 메모리 등의 조합으로 한 시간단위로 이용량이 결정되어짐      네트워크 과금의 방식  네트워크 과금의 사고 방법에는 수신과 송신이 존재 외부 네트워크에서 AWS로 통신을 수신, AWS에서 외부 네트워크로 송신이라 하며 수신은 기본적으로 무료이지만 송신에 대해서는 1GB당 얼마라는 계산 방식으로 과금이 측정되어짐 수신은 무료이므로 온프레미스 서버의 데이터를 AWS에 백업하는 방식은 통신료가 무료이며, 데이터 복원 등의 이유로 그 데이터를 온프레미스로 송신할 때만 과금이 발생      횟수 기준에 따른 방식  횟수 기준에 따른 과금은 API 호출 횟수를 기준으로 계산  Amazon SQS라는 큐 서비스는 표준 큐의 경우 100만 건의 API 요청에 $0.</description>
+    </item>
+    
+    <item>
+      <title>Base</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/basic/</guid>
+      <description>AWS 용어 정리   AWS 기본 용어  Workloads
+ 고객 대면 애플리케이션이나 백엔드 프로세스 같이 비즈니스 가치를 창출하는 리소스 및 코드 모음을 의미    On-premise
+ 클라우드 방식이 아닌, 회사 등이 자체적으로 보유한 전산실 등의 인프라를 의미   Edge Location
+  CDN( Contents Delivery Network ) 서비스인 CloudFront 가 사용하는 캐시서버
+  전 세계의 분포되어 있으며 Edge Location 끼리 데이터를 공유
+   Elasticity ( 탄력성 )</description>
     </item>
     
   </channel>
