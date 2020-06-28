@@ -175,5 +175,14 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
   기본적으로 AWS 매니지먼트 콘솔과 거의 같은 조작이 가능하며, 콘솔화면에서 할 수 있는 조작을 프로그램으로 만들어 배치 ( barch )로 만들면 AWS 서비스를 보다 쉽게 사용이 가능합니다.</description>
     </item>
     
+    <item>
+      <title>AWS SDK</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_sdk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_sdk/</guid>
+      <description>AWS SDK   AWS SDK  AWS SDK </description>
+    </item>
+    
   </channel>
 </rss>

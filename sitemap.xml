@@ -80,6 +80,14 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/training/vpc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/training/ec2/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_migrate/</loc>
   </url>
   
@@ -104,15 +112,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/ec2/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/training/s3/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/vpc/</loc>
   </url>
   
   <url>
@@ -273,6 +273,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_cli/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_sdk/</loc>
   </url>
   
   <url>
