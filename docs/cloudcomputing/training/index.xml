@@ -26,7 +26,16 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/training/iam/</guid>
-      <description>AWS 사용자 계정 생성    AWS 사용자 계정 생성    이번 시간에는 AWS 계정생성에 이어 AWS 사용자 계정을 생성해보도록 하겠습니다. IAM이 무엇인지는 IAM을 참조해주세요.      먼저 AWS에 로그인 후, IAM 서비스를 검색 후, IAM 서비스                                                          </description>
+      <description>AWS 사용자 계정 생성    AWS 사용자 계정 생성    이번 시간에는 AWS 계정생성에 이어 AWS 사용자 계정을 생성해보도록 하겠습니다. IAM이 무엇인지는 IAM Link을 참조해주세요.      먼저 AWS에 로그인 후, IAM 서비스를 검색합니다.      IAM 서비스에 진입하여, 메뉴에서 사용자를 클릭합니다.      사용자 추가를 선택합니다.      사용자의 이름을 기입하고, 엑세스 유형을 선택합니다.</description>
+    </item>
+    
+    <item>
+      <title>AWS CLI</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/training/cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/training/cli/</guid>
+      <description>****    ****          </description>
     </item>
     
     <item>

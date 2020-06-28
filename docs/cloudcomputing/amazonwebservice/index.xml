@@ -163,5 +163,17 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
    Elasticity ( 탄력성 )</description>
     </item>
     
+    <item>
+      <title>AWS CLI</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_cli/</guid>
+      <description>AWS CLI   Amazon Web Service Command Line Interface  AWS CLI    AWS CLI란 AWS의 서비스들을 명령어로 조작할 수 있게 해주는 통합 툴입니다.
+  다양한 운옃제에서 지원하며, 파이썬 프로그래밍 언어인 AWS SDK인 boto를 기반으로 만들어져 있습니다.
+  AWS CLI로 사용할 수 있는 AWS 서비스는 AWS CLI에서 확일할 수 있습니다.
+  기본적으로 AWS 매니지먼트 콘솔과 거의 같은 조작이 가능하며, 콘솔화면에서 할 수 있는 조작을 프로그램으로 만들어 배치 ( barch )로 만들면 AWS 서비스를 보다 쉽게 사용이 가능합니다.</description>
+    </item>
+    
   </channel>
 </rss>
