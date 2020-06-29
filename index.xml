@@ -26,19 +26,19 @@
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/network/gns3/</link>
+      <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/gns3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/network/gns3/</guid>
+      <guid>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/gns3/</guid>
       <description>네트워크 실습을 위한 GNS3 설치    GNS3 Download Link      상단의 GNS3 다운로드 링크를 클릭하여 GNS3에 접속 후, 로그인 혹은 회원가입을 진행합니다.      로그인 후, Download를 클릭하여 운영체제에 맞는 GNS3 설치파일을 다운로드 합니다.      기본 값으로 설치를 진행합니다. 단 솔라윈드 톨킷은 설치하지 않습니다.      GNS3의 설치가 완료되었습니다.      GNS3가 설치되면 GNS3를 실행시킵니다.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/network/nas/</link>
+      <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/nas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/network/nas/</guid>
+      <guid>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/nas/</guid>
       <description>네트워크 실습을 위한 GNS3 설치    GNS3 Download Link      상단의 GNS3 다운로드 링크를 클릭하여 GNS3에 접속 후, 로그인 혹은 회원가입을 진행합니다.      로그인 후, Download를 클릭하여 운영체제에 맞는 GNS3 설치파일을 다운로드 합니다.      기본 값으로 설치를 진행합니다. 단 솔라윈드 톨킷은 설치하지 않습니다.      GNS3의 설치가 완료되었습니다.      GNS3가 설치되면 GNS3를 실행시킵니다.</description>
     </item>
     
@@ -64,10 +64,10 @@
     
     <item>
       <title>Home</title>
-      <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC/</link>
+      <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/%EC%A0%95%EB%A6%AC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC/</guid>
+      <guid>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/%EC%A0%95%EB%A6%AC/</guid>
       <description>인
  용
  구
@@ -254,19 +254,19 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/network/3tier/</link>
+      <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/3tier/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/network/3tier/</guid>
+      <guid>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/3tier/</guid>
       <description>Loacal 3Tier 구현    OS, 구현 프로그램  Ubuntu18.04 Apache2 Tomcat8 Mysql5.8 GNS3   IP 대역  10.10.10.0/24 Public 20.20.20.0/24 Private 30.30.30.0/24 Private2  Public 대역 10.10.10.10 Apache1 10.10.10.11 Apache2  Private 대역 20.20.20.20 Tomcat1 20.20.20.21 Tomcat2  Public 대역 30.30.30.30 Mysql1 30.30.30.30 Mysql2     sudo vi /etc/netplan/50-cloud-init.yamlnetwork:version: 2ethernets:ens33:dhcp6: noaddresses:- [ IP addresses ]gateway4: [ gateway ]nameservers:addresses: [ [nameserver] ]$ sudo netplan apply$ hostname -l아키텍처 사진</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/system/mail-server/</link>
+      <link>https://mung0001.github.io/docs/system/%EC%A0%95%EB%A6%AC%EC%A0%84/mail-server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/system/mail-server/</guid>
+      <guid>https://mung0001.github.io/docs/system/%EC%A0%95%EB%A6%AC%EC%A0%84/mail-server/</guid>
       <description>Mail 서버 생성   단계  SSL 보안 인증서 발급받기  도메인 주소   메일서버 설치   Ubuntu 18.04
    SSL 보안 인증서 발급받기  1. 도메인 주소 설정  SSL 보안 인증서를 사용하기 위해서는 http://도메인으로 해당 사이트에 접근이 가능해아합니다. 이미 도메인 주소가 있으신 분은 그것을 사용하고, 없으신 분은 Link에서 무료 도메인을 사용하시면 됩니다.   2. SSL  무료 SSL을 생성합니다.  $ sudo apt-get install -y postfix# postfix 설치   VMware에 NAS 설치   Vmware에서 Custom으로 Virtual Machine을 설치합니다.</description>
     </item>
@@ -313,10 +313,10 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/system/mount/</link>
+      <link>https://mung0001.github.io/docs/system/%EC%A0%95%EB%A6%AC%EC%A0%84/mount/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/system/mount/</guid>
+      <guid>https://mung0001.github.io/docs/system/%EC%A0%95%EB%A6%AC%EC%A0%84/mount/</guid>
       <description>Linux HD Mount   디스크의 구조 1. 물리적 구조
  스핀들 : 디스크는 하나의 스핀들을 기준으로 여러 개의 플래터로 구성되어 있고 스핀들은 여러 개의 플랫터를 회전시키는 역할을 한다. 플래터 : 플래터는 마그네틱으로 코딩되어져 있고 연속으로 구성되어 있다. 헤더 : 회전중인 플래터에 데이터를 읽거나 쓰기 위해서는 엑세스 암에 부착된 헤더를 이용하여 엑세스 한다.   2. 논리적 구조
  섹터 : 플래터의 가장 작은 단위, 일반적으로 1섹터의 크기는 512바이트 트랙 : 섹터가 모여 하나의 원을 구성 실린더 : 트랙의 스택 구조 파티션 : MBR의 파티션 테이블(64바이트)에 정보가 저장, 주 파티션 (16바이트, 4개까지 생성이 가능), 확장 파티션 생성이 가능 논리적 구조 크기 비교 : 섹터 &amp;lt; 트랙 &amp;lt; 실린더 &amp;lt; 실린더 그룹 or 파티션 &amp;lt; 디스크   3.</description>
@@ -504,7 +504,7 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/noserver/</guid>
-      <description>****    ****          예제 1. 다음의 인스턴스를 생성해보세요.  예제 1. 답안↕ 사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다. 정책에서 admin의 권한을 선택 후 생성합니다.  </description>
+      <description>AWS 서버리스 사이트 구축    이번 장에서는 S3를 통해 서버가 없는 정적인 사이트를 구현해보도록 하겠습니다. 이와 같이 서버리스의 가장 큰 특징은 EC2처럼 상시 실행 상태 중이 아니여도, 사용자가 요청시에만 실행이 가능하기 때문에 비용면과 운영면에서 효율적이라 할 수 있습니다. AWS에서는 S3에서 웹 호스팅 기능을 제공하고 있어, 이를 통해 구현해보도록 하겠습니다.    AWS 서버리스 사이트 구축      먼저, AWS에 접속하여 S3 서비스를 검색 후, 클릭합니다.</description>
     </item>
     
     <item>
@@ -579,10 +579,10 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/network/sdn/</link>
+      <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/sdn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/network/sdn/</guid>
+      <guid>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/sdn/</guid>
       <description>SDN   SDN ( Software Defined Networking : 소프트웨어 정의 네트워킹 )    기존의 네트워크 인프라가 가지고 있던 문제를 해결하기 위해서 나온 개념
   기존의 네트워크 인프라를 구성하는 네트워크 장비들은 하나의 장비에 HW OS APP이 모두 들어가 있었기 때문에 장비 하나하나가 복잡한 기능을 모두 가지고 있었고 장비 자체의 사양도 높아야 했다. 그러다보니 장비마다 비용도 비싸지고 장비를 하나하나 설정해야하는 문제점들이 있었다.
   SDN은 기존의 장비의 HW와 OS APP 부분을 분리하여 장비 하나하나는 HW부분만을 담당하고 SW적인 부분은 중앙의 컨트롤러에서 제어한다.</description>
@@ -590,10 +590,10 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/network/%E3%84%B4-packet/</link>
+      <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/%E3%84%B4-packet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/network/%E3%84%B4-packet/</guid>
+      <guid>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/%E3%84%B4-packet/</guid>
       <description>네트워크 패킷 ( Network Packet )    패킷이란 데이터의 묶음 단위로 한번에 전송할 데이터의 크기
   제 3계층 이상 ( Network 계층 ) 에서는 이 데이터의 묶음을 패킷이라고 부르며, 제 2계층에서는 프레임( Frame )
   패킷의 크기는 네트워크의 종류에 따라 크기가 다름
@@ -602,10 +602,10 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/network/%E3%84%B4-portnumber/</link>
+      <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/%E3%84%B4-portnumber/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/network/%E3%84%B4-portnumber/</guid>
+      <guid>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/%E3%84%B4-portnumber/</guid>
       <description>TCP/ UDP 포트 번호 정리  기본적인 포트번호    Well-known port : 0 ~ 1023
   Registered port : 1024 ~ 49151
   Dynamic port : 49152 ~ 65535
@@ -614,10 +614,10 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/network/%EB%B0%A9%ED%99%94%EB%B2%BD/</link>
+      <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/%EB%B0%A9%ED%99%94%EB%B2%BD/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/network/%EB%B0%A9%ED%99%94%EB%B2%BD/</guid>
+      <guid>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/%EB%B0%A9%ED%99%94%EB%B2%BD/</guid>
       <description>방화벽 (CentOS - firewalld)    리눅스의 방화벽
  커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제       방화벽의 종류
  패킷 필터링 방화벽  - 제 1세대 방화벽 - 레이어 1~4에서 사용 - 단순하기 때문에 빠르고 효과적 - 5~7계층 대응 불가  Stateful 방화벽  - 제 2세대 방화벽 - 패킷의 연결 상태를 관찰 - 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약  **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽 - 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요      방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.</description>
@@ -625,10 +625,10 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/network/%EB%B3%B4%EC%95%88/</link>
+      <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/%EB%B3%B4%EC%95%88/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/network/%EB%B3%B4%EC%95%88/</guid>
+      <guid>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/%EB%B3%B4%EC%95%88/</guid>
       <description>Network Security   Hacking Process  확인 정보 ( OS 버전, 응용 프로그램, IP주소, 도메인 )  정보수집  정보 수집...  구글 검색    intitle : [검색어] - 탭 제목에 포함된 내용으로 검색
   filetype : [검색어] - 특정 파일 확장자로 검색
   site : [검색어] - 특정 도메인 주소 검색
@@ -637,10 +637,10 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/network/%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</link>
+      <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/network/%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</guid>
+      <guid>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</guid>
       <description>시스템통합 관리 침입 탐지 시스템(IDS) &amp;ndash; Snort 이용    주된 기능
   탐지(Detection)
   잘못된 패킷을 감지하면 사용자에게 알림(주체적으로 처리하지 X, only 안내)
@@ -653,91 +653,11 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/programing/bigdata/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/bigdata/</guid>
-      <description>빅데이터란  Bigdata    빅데이터는 큰 사이즈의 데이터로부터 유의미한 지표를 분석해내는 행위 SNS, 로그, 문서 등 다양한 경로를 통해 수집한 여러가지 형태의 많은 양의 데이터를 이용하여 의사결정에 도움을 주는 지표를 분석하여 제공하는 것   Bigdata가 대두 되어지는 이유  데이터 양의 증가와 데이터 저장기술 발달 경제적 타당성 증가/ 저장장치의 가격 인하 데이터 처리 기술의 발달   Bigdata 5V  Volume - 크기  저장장치 가격의 하락, 네트워크 속도의 향상으로 수 페타바이트의 데이터가 매일 생성   Variety - 다양성  정형, 반정형, 비정형 형태의 다양한 데이터를 분석   Velocity - 속도  정보의 유통 속도가 굉장히 빠름.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/django/basic/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/django/basic/</guid>
-      <description>Django    Django   파이썬으로 만들어진 무료 오픈소스 웹 애플리케이션 프레임워크 모델&amp;ndash;뷰&amp;ndash;컨트롤러 ( MVC ) 패턴을 따름 장고는 컴포넌트의 재사용 및 플러그인화 가능성을, 빠른 개발을 위해 계발 웹 개발 시 많이 사용되며, 번거로운 요소들을 새로 개발할 필요 없이 내장된 기능만을 이용해 빠른 개발이 가능   MTV ( Model-Template-View )    Model
- 데이터에 관한 정보를 담으며, 데이터에 대한 접근, 검증, 작동과 데이터 사이의 관계를 정의하며, 각각의 모델은 데이터베이스에서 테이블에 해당    Template</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/django/django/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/django/django/</guid>
-      <description>Djnago  Djnago 설치  설치환경   Ubuntu 18.04
-  mysql 5.7
-  python 3.6.8
-  pip3 9.0.3
-  django 2.1
-   Ubuntu 설정   apt update -y
-  apt upgrade -y
-  apt install python3 -y
-  apt install python3-pip -y
-  apt install gcc -y
-  apt install python-dev -y
-  apt install libmysqlclient-dev -y</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/django/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/django/test/</guid>
-      <description>Django Project   Django Boardapp project  모델을 구성하기에 앞서 django에서 지원하는 admin을 사용하기 위해 기본적인 database를 받아온다.
-(ve) $ ./manage.py migrate DB 테이블 생성
-# User tableALTER TABLE auth_userADD COLUMN phone VARCHAR(45) NOT NULL AFTER date_joined,ADD COLUMN date_of_birth DATETIME NOT NULL AFTER phone,CHANGE COLUMN date_joined date_joined DATETIME NOT NULL AFTER email,CHANGE COLUMN first_name first_name VARCHAR(30) NULL AFTER is_active,CHANGE COLUMN is_staff is_staff TINYINT(1) NULL,CHANGE COLUMN is_active is_active TINYINT(1) NULL;# Board table## board_categoriescreate table board_categories(id int(10) not null auto_increment,category_type varchar(45) not null default &amp;#39;Normal&amp;#39;,category_code varchar(100) not null,category_name varchar(100) not null,category_desc varchar(200) not null,list_count int(10) default &amp;#39;20&amp;#39;,authority int(1) default &amp;#39;0&amp;#39;,creation_date datetime default current_timestamp,last_update_date datetime default null,primary key(id))engine=InnoDB default CHARSET=utf8;## boardscreate table boards(id int(10) not null auto_increment,category_id int(10) not null,user_id int(10) not null,title varchar(300) not null,content text not null,registered_date datetime default current_timestamp,last_update_date datetime default null,view_count int(10) default &amp;#39;0&amp;#39;,image varchar(255) default null,primary key(id),key board_category_fk_idx(category_id),key board_user_fk_idx(user_id),constraint board_category_fk foreign key(category_id) references board_categories(id) on delete no action on update no action,constraint board_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action)engine=InnoDB default CHARSET=utf8;## board_repliescreate table board_replies(id int(10) not null auto_increment,article_id int(10) not null,user_id int(10) not null,`level` tinyint(1) default &amp;#39;1&amp;#39;,content text not null,reference_reply_id int(10) default &amp;#39;0&amp;#39;,registered_date datetime default current_timestamp,last_update_date datetime default null,primary key(id),key user_reply_fk_idx(user_id),key article_reply_fk_idx(article_id),constraint article_reply_fk foreign key(article_id) references boards(id) on delete no action on update no action,constraint user_reply_fk foreign key(user_id) references auth_user(id) on delete no action on update no action)engine=InnoDB default CHARSET=utf8;## board_likescreate table board_likes(id int(10) not null auto_increment,article_id int(10) not null,user_id int(11) not null,registered_date datetime default current_timestamp,primary key(id),key like_article_fk_idx(article_id),key like_user_fk_idx(user_id),constraint like_article_fk foreign key(article_id) references boards(id) on delete no action on update no action,constraint like_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action)engine=InnoDB default CHARSET=utf8;pip3 install Pillow</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/git/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/git/</guid>
-      <description>Git&amp;amp;&amp;amp; Github  깃 ( git )    Git 공식 홈페이지 에서 다운로드
-  형상 관리 도구 ( Configuration Management Tool )인 분산형 관리 시스템
-  무료, 공개소프트웨어 서비스
-  소스코드를 주고 받을 필요 없이, 같은 파일을 여러 명이 동시에 작업하는 병렬 개발이 가능
-  분산 버전관리이기 때문에 인터넷이 연결되지 않은 곳에서도 개발을 진행할 수 있으며, 중앙 저장소가 날라가벌도 다시 원상복구가 가능
-     git의 특징   버전관리   깃에서 버전이란 문서를 수정하고 저장할 때마다 생기는 지점</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://mung0001.github.io/docs/programing/golang/golang/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/programing/golang/golang/</guid>
       <description>Golang 설치  Go 공식 홈페이지에서 OS맞는 패키지를 설치   Golang Study 사이트  Go 기본 메뉴얼 가장 빨리 만나는 Go 언어 Go-tour    Go 기초 문법  중괄호 표기법  Go는 문법의 작성 스타일을 강제 Go의 대표적인 문법으로는 { } ( 중괄호 ) 표기 법이 있음 즉, 함수, 조건문, 반복문 등을 시작할 때는 반드시 같은 줄에서 시작   ; 세미콜론  마지막 구문의 세미클론을 생략 한 줄에 여러 구문을 사용할 때에는 세미콜론을 사용하여 나눔  fmt.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/hugo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/hugo/</guid>
-      <description>Hugo  휴고 다운로드
-   So cutey
-  Hugo는 Go언어를 기반으로 Go 언어를 이용한 프로그램 사용 및 수정
-  Markdown으로 글을 작성
-  git을 활용한 글 관리 및 버전 관리
-     Hugo 적용    Hugo 환경변수 등록
-  휴고 사이트 시작
-  hugo new site testprojectcd testprojecthugo server -D  테마 적용    Hugo 테마 다운로드</description>
     </item>
     
     <item>
@@ -763,6 +683,47 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
+      <link>https://mung0001.github.io/docs/programing/web/django/basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/web/django/basic/</guid>
+      <description>Django    Django   파이썬으로 만들어진 무료 오픈소스 웹 애플리케이션 프레임워크 모델&amp;ndash;뷰&amp;ndash;컨트롤러 ( MVC ) 패턴을 따름 장고는 컴포넌트의 재사용 및 플러그인화 가능성을, 빠른 개발을 위해 계발 웹 개발 시 많이 사용되며, 번거로운 요소들을 새로 개발할 필요 없이 내장된 기능만을 이용해 빠른 개발이 가능   MTV ( Model-Template-View )    Model
+ 데이터에 관한 정보를 담으며, 데이터에 대한 접근, 검증, 작동과 데이터 사이의 관계를 정의하며, 각각의 모델은 데이터베이스에서 테이블에 해당    Template</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/programing/web/django/django/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/web/django/django/</guid>
+      <description>Djnago  Djnago 설치  설치환경   Ubuntu 18.04
+  mysql 5.7
+  python 3.6.8
+  pip3 9.0.3
+  django 2.1
+   Ubuntu 설정   apt update -y
+  apt upgrade -y
+  apt install python3 -y
+  apt install python3-pip -y
+  apt install gcc -y
+  apt install python-dev -y
+  apt install libmysqlclient-dev -y</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/programing/web/django/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/web/django/test/</guid>
+      <description>Django Project   Django Boardapp project  모델을 구성하기에 앞서 django에서 지원하는 admin을 사용하기 위해 기본적인 database를 받아온다.
+(ve) $ ./manage.py migrate DB 테이블 생성
+# User tableALTER TABLE auth_userADD COLUMN phone VARCHAR(45) NOT NULL AFTER date_joined,ADD COLUMN date_of_birth DATETIME NOT NULL AFTER phone,CHANGE COLUMN date_joined date_joined DATETIME NOT NULL AFTER email,CHANGE COLUMN first_name first_name VARCHAR(30) NULL AFTER is_active,CHANGE COLUMN is_staff is_staff TINYINT(1) NULL,CHANGE COLUMN is_active is_active TINYINT(1) NULL;# Board table## board_categoriescreate table board_categories(id int(10) not null auto_increment,category_type varchar(45) not null default &amp;#39;Normal&amp;#39;,category_code varchar(100) not null,category_name varchar(100) not null,category_desc varchar(200) not null,list_count int(10) default &amp;#39;20&amp;#39;,authority int(1) default &amp;#39;0&amp;#39;,creation_date datetime default current_timestamp,last_update_date datetime default null,primary key(id))engine=InnoDB default CHARSET=utf8;## boardscreate table boards(id int(10) not null auto_increment,category_id int(10) not null,user_id int(10) not null,title varchar(300) not null,content text not null,registered_date datetime default current_timestamp,last_update_date datetime default null,view_count int(10) default &amp;#39;0&amp;#39;,image varchar(255) default null,primary key(id),key board_category_fk_idx(category_id),key board_user_fk_idx(user_id),constraint board_category_fk foreign key(category_id) references board_categories(id) on delete no action on update no action,constraint board_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action)engine=InnoDB default CHARSET=utf8;## board_repliescreate table board_replies(id int(10) not null auto_increment,article_id int(10) not null,user_id int(10) not null,`level` tinyint(1) default &amp;#39;1&amp;#39;,content text not null,reference_reply_id int(10) default &amp;#39;0&amp;#39;,registered_date datetime default current_timestamp,last_update_date datetime default null,primary key(id),key user_reply_fk_idx(user_id),key article_reply_fk_idx(article_id),constraint article_reply_fk foreign key(article_id) references boards(id) on delete no action on update no action,constraint user_reply_fk foreign key(user_id) references auth_user(id) on delete no action on update no action)engine=InnoDB default CHARSET=utf8;## board_likescreate table board_likes(id int(10) not null auto_increment,article_id int(10) not null,user_id int(11) not null,registered_date datetime default current_timestamp,primary key(id),key like_article_fk_idx(article_id),key like_user_fk_idx(user_id),constraint like_article_fk foreign key(article_id) references boards(id) on delete no action on update no action,constraint like_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action)engine=InnoDB default CHARSET=utf8;pip3 install Pillow</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://mung0001.github.io/docs/programing/web/html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -772,28 +733,67 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/system/code/</link>
+      <link>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/bigdata/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/system/code/</guid>
+      <guid>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/bigdata/</guid>
+      <description>빅데이터란  Bigdata    빅데이터는 큰 사이즈의 데이터로부터 유의미한 지표를 분석해내는 행위 SNS, 로그, 문서 등 다양한 경로를 통해 수집한 여러가지 형태의 많은 양의 데이터를 이용하여 의사결정에 도움을 주는 지표를 분석하여 제공하는 것   Bigdata가 대두 되어지는 이유  데이터 양의 증가와 데이터 저장기술 발달 경제적 타당성 증가/ 저장장치의 가격 인하 데이터 처리 기술의 발달   Bigdata 5V  Volume - 크기  저장장치 가격의 하락, 네트워크 속도의 향상으로 수 페타바이트의 데이터가 매일 생성   Variety - 다양성  정형, 반정형, 비정형 형태의 다양한 데이터를 분석   Velocity - 속도  정보의 유통 속도가 굉장히 빠름.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/git/</guid>
+      <description>Git&amp;amp;&amp;amp; Github  깃 ( git )    Git 공식 홈페이지 에서 다운로드
+  형상 관리 도구 ( Configuration Management Tool )인 분산형 관리 시스템
+  무료, 공개소프트웨어 서비스
+  소스코드를 주고 받을 필요 없이, 같은 파일을 여러 명이 동시에 작업하는 병렬 개발이 가능
+  분산 버전관리이기 때문에 인터넷이 연결되지 않은 곳에서도 개발을 진행할 수 있으며, 중앙 저장소가 날라가벌도 다시 원상복구가 가능
+     git의 특징   버전관리   깃에서 버전이란 문서를 수정하고 저장할 때마다 생기는 지점</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/hugo/</guid>
+      <description>Hugo  휴고 다운로드
+   So cutey
+  Hugo는 Go언어를 기반으로 Go 언어를 이용한 프로그램 사용 및 수정
+  Markdown으로 글을 작성
+  git을 활용한 글 관리 및 버전 관리
+     Hugo 적용    Hugo 환경변수 등록
+  휴고 사이트 시작
+  hugo new site testprojectcd testprojecthugo server -D  테마 적용    Hugo 테마 다운로드</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/system/%EC%A0%95%EB%A6%AC%EC%A0%84/code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/%EC%A0%95%EB%A6%AC%EC%A0%84/code/</guid>
       <description>메일 자동화  이미지 크롤링 from urllib.request import urlopenfrom urllib.parse import quote_plusfrom bs4 import BeautifulSoupfrom selenium import webdriverimport timebaseUrl = &amp;#39;https://www.instagram.com/explore/tags/&amp;#39;plusUrl = input(&amp;#39;검색할 태그를 입력하세요 : &amp;#39;)url = baseUrl + quote_plus(plusUrl)driver = webdriver.Chrome(&amp;#39;C:\\chromedriver.exe&amp;#39;)driver.get(url)time.sleep(3)html = driver.page_sourcesoup = BeautifulSoup(html)insta = soup.select(&amp;#39;.v1Nh3.kIKUG._bz0w&amp;#39;)n = 1for i in insta:print(&amp;#39;https://www.instagram.com&amp;#39;+ i.a[&amp;#39;href&amp;#39;])imgUrl = i.select_one(&amp;#39;.KL4Bh&amp;#39;).img[&amp;#39;src&amp;#39;]with urlopen(imgUrl) as f:with open(&amp;#39;C:\\test\\&amp;#39; + plusUrl + str(n) + &amp;#39;.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/system/linux/</link>
+      <link>https://mung0001.github.io/docs/system/%EC%A0%95%EB%A6%AC%EC%A0%84/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/system/linux/</guid>
+      <guid>https://mung0001.github.io/docs/system/%EC%A0%95%EB%A6%AC%EC%A0%84/linux/</guid>
       <description>Linux   Linux 기초   유닉스 기반의 컴퓨터 운영체제의 한 종류 핀란드 헬싱키 대학의 대학원생 리누스 토발즈가 1991년에 개발 오픈 소스의 운영체제 대표적인 리눅스 기관 GNU 높은 이식성과 확정성 ( C언어 기반 ) 안전성과 신뢰성 ( 국제적이고 개방적으로 개발되었기 때문에 문제점에 대한 대처가 빠름 ) 계층적 파일 시스템 ( 최상위 디렉토리가 존재하고 모든 것들은 해당 디렉토리 하부에 존재 )   유닉스 운영체제 종류  리눅스의 구성요소   명령어 : 사용자가 원하는 프로그램을 콜링</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</link>
+      <link>https://mung0001.github.io/docs/system/%EC%A0%95%EB%A6%AC%EC%A0%84/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</guid>
+      <guid>https://mung0001.github.io/docs/system/%EC%A0%95%EB%A6%AC%EC%A0%84/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</guid>
       <description>방화벽 (CentOS - firewalld)    리눅스의 방화벽
  커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제       방화벽의 종류
  패킷 필터링 방화벽  - 제 1세대 방화벽 - 레이어 1~4에서 사용 - 단순하기 때문에 빠르고 효과적 - 5~7계층 대응 불가  Stateful 방화벽  - 제 2세대 방화벽 - 패킷의 연결 상태를 관찰 - 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약  **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽 - 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요      방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.</description>
@@ -801,10 +801,10 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/system/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</link>
+      <link>https://mung0001.github.io/docs/system/%EC%A0%95%EB%A6%AC%EC%A0%84/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/system/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</guid>
+      <guid>https://mung0001.github.io/docs/system/%EC%A0%95%EB%A6%AC%EC%A0%84/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</guid>
       <description>시스템통합 관리 침입 탐지 시스템(IDS) &amp;ndash; Snort 이용    주된 기능
   탐지(Detection)
   잘못된 패킷을 감지하면 사용자에게 알림(주체적으로 처리하지 X, only 안내)
