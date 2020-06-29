@@ -302,16 +302,6 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/nas-owncloud/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/nas-owncloud/</guid>
-      <description>Nas-Owncloud 실습    Owncloud를 활용하여 Ec2 Nas 만들기        EC2 생성
-&amp;gt; OS : Ubuntu 18.04&amp;gt; Flavor : t2.micro&amp;gt; Storage : 100G ( 원하는 만큼, 차후에 EFS 등으로도 가능합니다. )&amp;gt; VPC : Custop&amp;gt; 보안그룹 : Custop 인스턴스를 생성합니다.      먼저, Owncloud를 사용하기 위해서는 LAMP를 설치해야합니다.  $ sudo apt install -y tasksel$ sudo tasksel install -y lamp-server# LAMP 간편 설치$ sudo apt install -y apache2# apache2 설치$ sudo apt install -y mysql-server# mysql 설치$ sudo apt install -y php7.</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://mung0001.github.io/docs/cloudcomputing/openstack/neutron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -429,15 +419,6 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/aws-%EC%8B%A4%EC%8A%B5%EC%98%88%EC%A0%9C/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/aws-%EC%8B%A4%EC%8A%B5%EC%98%88%EC%A0%9C/</guid>
-      <description>AWS 실습 예제  문제 사이트    vmware 상의 OS를 AWS의 EC2로 이전 vmware 상의 OS를 AWS의 EC2로 이전↕ vmware 상의 OS를 AWS의 EC2로 이전  VMware 15 VMware workstation CentOS7 ( Mini )   ens33 수정 ( /etc/sysconfig/netwrok-scripts/ifcfg-ens33 )  BOOTPROTO = dhcpONBOOT = No -&amp;gt; YES vmware에서 Export to OVF 파일을 선택합니다.    AWS cli를 실행하여 vmdk 파일을 S3에 import시킵니다.</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/auto-scaling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -494,6 +475,16 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
     </item>
     
     <item>
+      <title>AWS OwnCloud</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/owncloud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/owncloud/</guid>
+      <description>Nas-Owncloud 실습    Owncloud를 활용하여 Ec2 Nas 만들기        EC2 생성
+&amp;gt; OS : Ubuntu 18.04&amp;gt; Flavor : t2.micro&amp;gt; Storage : 100G ( 원하는 만큼, 차후에 EFS 등으로도 가능합니다. )&amp;gt; VPC : Custop&amp;gt; 보안그룹 : Custop 인스턴스를 생성합니다.      먼저, Owncloud를 사용하기 위해서는 LAMP를 설치해야합니다.  $ sudo apt install -y tasksel$ sudo tasksel install -y lamp-server# LAMP 간편 설치$ sudo apt install -y apache2# apache2 설치$ sudo apt install -y mysql-server# mysql 설치$ sudo apt install -y php7.</description>
+    </item>
+    
+    <item>
       <title>Base</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -505,6 +496,15 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
   CDN( Contents Delivery Network ) 서비스인 CloudFront 가 사용하는 캐시서버
   전 세계의 분포되어 있으며 Edge Location 끼리 데이터를 공유
    Elasticity ( 탄력성 )</description>
+    </item>
+    
+    <item>
+      <title>AWS 서버리스 사이트 구축</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/noserver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/noserver/</guid>
+      <description>****    ****          예제 1. 다음의 인스턴스를 생성해보세요.  예제 1. 답안↕ 사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다. 정책에서 admin의 권한을 선택 후 생성합니다.  </description>
     </item>
     
     <item>
@@ -768,35 +768,6 @@ This document is a brief primer on using Go templates.</description>
       
       <guid>https://mung0001.github.io/docs/programing/web/html/</guid>
       <description>HTML   HTML 기본양식...&amp;lt;head&amp;gt;&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt;&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;   태그   줄 바꾸기 &amp;lt;br&amp;gt; 구분선 &amp;lt;hr&amp;gt; 제목 &amp;lt;h1- h6&amp;gt; &amp;lt;/hn&amp;gt; 문단 &amp;lt;p&amp;gt; &amp;lt;/p&amp;gt; 입력을 그대로 표시하는 태그 &amp;lt;pre&amp;gt; &amp;lt;/pre&amp;gt; 인용문을 넣는 태그 &amp;lt;blockquote&amp;gt; &amp;lt;/blockquote&amp;gt; 인용문을 인 라인에 넣는 태그 &amp;lt;q&amp;gt; &amp;lt;/q&amp;gt;  text   밑줄 &amp;lt;u&amp;gt; &amp;lt;/u&amp;gt; 굵은 텍스트 &amp;lt;b&amp;gt; &amp;lt;/b&amp;gt; 텍스트 강조 &amp;lt;strong&amp;gt; &amp;lt;/strong&amp;gt; 형광펜 텍스트 &amp;lt;mark&amp;gt;&amp;lt;/mark&amp;gt; 동아시아 글자 표시 rt는 읽는 방법표기법 &amp;lt;ruby&amp;gt; &amp;lt;rt&amp;gt; &amp;lt;/rt&amp;gt; &amp;lt;/ruby&amp;gt; 이탤릭 체 Emphasized tag &amp;lt;em&amp;gt; &amp;lt;/em&amp;gt; 줄 찍 &amp;lt;del&amp;gt; &amp;lt;/del&amp;gt; 인설트 태그 &amp;lt;ins&amp;gt; &amp;lt;/ins&amp;gt; This is &amp;lt;sub&amp;gt; sub &amp;lt;sub&amp;gt; text &amp;lt;/sub&amp;gt; &amp;lt;/sub&amp;gt; &amp;lt; &amp;gt; 태그 요소 &amp;amp;lt; &amp;amp;gt; 스페이스바 &amp;amp;nbsp; 약자 속성, title 속성을 함께 사용가능 &amp;lt;addr&amp;gt; &amp;lt;/addr&amp;gt; 포스트에서 참고 내용을 표시 &amp;lt;cite&amp;gt; &amp;lt;/cite&amp;gt; 컴퓨터 인식코드 &amp;lt;code&amp;gt; &amp;lt;/code&amp;gt; 키보드, 음성 입력 &amp;lt;kbd&amp;gt; &amp;lt;/kbd&amp;gt; 작게 표시 (부가정보) &amp;lt;small&amp;gt; &amp;lt;/small&amp;gt; 아래 첨자 &amp;lt;sub&amp;gt; &amp;lt;/sub&amp;gt; 위 첨자 &amp;lt;sup&amp;gt; &amp;lt;/sup&amp;gt; 취소선 &amp;lt;s&amp;gt; &amp;lt;/s&amp;gt;  List  #list&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;ul의 종류: disc, circle, sqaure, none&amp;lt;ol&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;ol&amp;gt;ol의 종류: 1, i, l, a, A, none&amp;lt;dl&amp;gt;&amp;lt;dt&amp;gt; &amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt; &amp;lt;/dd&amp;gt;&amp;lt;dt&amp;gt; &amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt; &amp;lt;/dd&amp;gt;&amp;lt;/dl&amp;gt;&amp;lt;h1 style= &amp;#34; 설정 값 &amp;#34; &amp;gt; &amp;lt;/h1&amp;gt;p {color : xx;background: xx;adding: xx;}xx-color: rgb(x,x,x);#xxxxxx;hsl(x,x%,x%)  링크태그   인터넷 링크 &amp;lt;a href=&amp;#34;링크할 주소&amp;#34; [속성=&amp;#34;속성 값&amp;#34;]&amp;gt; &amp;lt;/a&amp;gt;&amp;lt;a href =&amp;#34;도메인 주소&amp;#34;&amp;gt; &amp;lt;/a&amp;gt;a 태그 안에서 사용 가능한 요소href링크한 문서나 사이트의 주소를 입력target링크한 내용이 표시될 위치를 지정target =&amp;#34;_blank&amp;#34; 링크 내용이 새 창이나 새 탭에서 열림열림표시전체 화면에 표시download링크한 내용을 보여주는 것이 아니라 다운로드rel현재 문서와 링크한 문서의 관계를 알려줌hreflang링크한 문서의 언어를 지정type링크한 문서의 파일 유형을 알려줌a 대신 iframe을 사용시 액자식 구성 사용 가능앵커 기능&amp;lt;태그 id=&amp;#34;앵커 이름&amp;#34;&amp;gt; 텍스트 또는 이미지&amp;lt;/태그&amp;gt;&amp;lt;a href=&amp;#34;#앵커 이름&amp;#34;&amp;gt;텍스트 또는 이미지&amp;lt;/a&amp;gt;  이미지 링크  &amp;lt;img src=&amp;quot;이미지의 경로&amp;quot; 속성값=&amp;quot;&amp;quot;&amp;gt;width=&amp;quot;n&amp;quot;이미지의 넓이를 지정height=&amp;quot;n&amp;quot;이미지의 높이를 지정alt=&amp;quot;설명&amp;quot;이미지의 설명을 지정&amp;lt;figure&amp;gt; 요소 &amp;lt;/figure&amp;gt;&amp;lt;figcaption&amp;gt; 설명 &amp;lt;/figcaption&amp;gt;요소로 묶은 것에 대한 설명을 붙임&amp;lt;map name=&amp;quot;이름&amp;quot;&amp;gt;&amp;lt;area&amp;gt;&amp;lt;area shape=&amp;quot;rect&amp;quot; coords=&amp;quot;n,n,n,n&amp;quot; href=&amp;quot;주소&amp;quot; alt=&amp;quot;설명&amp;quot;&amp;gt;.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/study/django/django/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/study/django/django/</guid>
-      <description>Djnago  Djnago 설치  설치환경   Ubuntu 18.04
-  mysql 5.7
-  python 3.6.8
-  pip3 9.0.3
-  django 2.1
-   Ubuntu 설정   apt update -y
-  apt upgrade -y
-  apt install python3 -y
-  apt install python3-pip -y
-  apt install gcc -y
-  apt install python-dev -y
-  apt install libmysqlclient-dev -y</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/study/openstack/%EA%B0%80%EC%83%81%ED%99%94/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/study/openstack/%EA%B0%80%EC%83%81%ED%99%94/</guid>
-      <description>AWS 클라우드 아키텍처 설계를 통한 인프라 구축    가상화 ( Virtualization )   클라우드 컴퓨팅의 핵심적인 기술 단일한 물리 시스템에서 여러 환경이나 전용 리소스를 생성할 수 있는 기술, 1개의 시스템을 VM ( 가상 머신 )이라는 별도의 고유하고 안전한 환경으로 분할 가능 실제 물리적인 실제 서버처럼 운용이 가능   클라우드의 가상화 기술  일반적으로 클라우드란, 클라우드 컴퓨팅으로 흔히 말하는 클라우드는 클라우드 컴퓨팅을 얘기하며 클라우드 컴퓨팅이란 컴퓨터를 이용한 처리를 내 자원을 이용하는 것이 아닌 인터넷을 통해 제공되는 클라우드 사업자의 컴퓨터에서 처리하는 것을 의미 인터넷을 통해 사상화된 컴퓨터의 다양한 자원과 어플리케이션을 온 디맨드 ( 사용자의 욕에 따라 바로 제공 )로 제공하는 서비스 도커는 하이퍼 기반이 아닌 컨테이너 기반 NIST ( 미국 굽립 표준 기술연구소 )에서는 공유 구성이 가능한 컴퓨팅 리소스(네트워크, 서버, 스토리지, 애플리케이션 서비스)의 통합을 통해 어디서나 편하게 요청에 따라	네트워크를 통해 접근하는 것을 가능하게 하는 모델로 정의 NIST에서 정한 클라우드의 특징  주문형 셀프 서비스 : 개별 관리화면을 통해 서비스 이용 가능 광범위한 네트워크 접속 : 다양한 디바이스를 통해 서비스에 접속 리소스의 공유 : 사업자의 컴퓨터 자원을 여러 사용자가 공유하는 형태로 이용 신속한 확장성 : 필요에 따라 스케일 업, 스케일 다운 가능 측정 가능한 서비스 : 이용한 만큼 요금이 부과, 종량제     클라우드의 등장 배경 1980	메인 프레임에서 대부분 처리	메인(모든 것 처리)----클라이언트1990	클라이언트에서도 처리 기능이 추가	메인(처리)----클라이언트(처리)2000	사내 서버에서 처리	메인(모든 것 처리)----클라이언트현재	서버에서 처리하는 것은 동일하나 서버를 소유X	메인(모든 것 처리) 클라이언트 클라우드는 전혀 새로운 개념은 아니다.</description>
     </item>
     
     <item>
