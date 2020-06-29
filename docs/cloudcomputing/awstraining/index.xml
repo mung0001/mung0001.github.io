@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS Training on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/</link>
+    <description>Recent content in AWS Training on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    
+	<atom:link href="https://mung0001.github.io/docs/cloudcomputing/awstraining/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS 시작하기</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/start/</guid>
+      <description>AWS 시작히기    AWS 계정 생성    AWS 서비스를 이용하기 위한 계정을 생성하고, MFA를 사용하여 보안을 강화하는 방법에 대해 알아보도록 하겠습니다.     -먼저 AWS Link을 통해 AWS에 접속합니다.
+    AWS 계정 새로 만들기를 선택합니다.      다음 항목들을 기입 후, 계정 만들기를 선택합니다.      프로페셔널과 개인 중 맞는 항목을 선택 후, 아래 항목들을 기입합니다.</description>
+    </item>
+    
+    <item>
+      <title>AWS 사용자 계정 생성</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/iam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/iam/</guid>
+      <description>AWS 사용자 계정 생성    AWS 사용자 계정 생성    이번 시간에는 AWS 계정생성에 이어 AWS 사용자 계정을 생성해보도록 하겠습니다. IAM이 무엇인지는 IAM Link을 참고해주세요.      먼저 AWS에 로그인 후, IAM 서비스를 검색합니다.      IAM 서비스에 진입하여, 메뉴에서 사용자를 클릭합니다.      사용자 추가를 선택합니다.      사용자의 이름을 기입하고, 엑세스 유형을 선택합니다.</description>
+    </item>
+    
+    <item>
+      <title>AWS CLI 활용</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/cli/</guid>
+      <description>AWS CLI 활용    AWS CLI 활용    이번 시간에는 AWS CLI을 활용하는 방법에 대해 알아보도록 하겠습니다. AWS CLI의 대한 개념과 설치는 AWS CLI를 참고해주세요.     AWS CLI 기본설정   먼저 여기서는 Window 10, Powershell에서 진행하도록 하겠습니다. Linux나 Mac 등 타 OS도 AWS CLI가 설치되어 있으면 모두 동일하니 똑같이 진행하셔도 문제없습니다.      먼저 프롬프트 혹은 터미널을 실행 후, aws configure을 입력합니다.</description>
+    </item>
+    
+    <item>
+      <title>AWS 사용자 정의 VPC 생성</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/vpc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/vpc/</guid>
+      <description>AWS 사용자 정의 VPC 생성    AWS 사용자 정의 VPC 생성    이제 본격적으로 AWS 서비스들에 대해서 다루어 보겠습니다. 그 중, AWS 서비스의 근간이 VPC를 생성해 보도록 하겠습니다. VPC 중요한 개념이므로, VPC에 대한 개념이 부족한 분들은은 AWS VPC를 참고해주세요.     GUI 환경에서의 사용자 정의 VPC 생성   기본적인 VPC 생성의 순서
+1. VPC 네트워크 생성 2. Internet Gateway 설정
+2. Subnet 설정</description>
+    </item>
+    
+    <item>
+      <title>AWS EC2 생성</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/ec2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/ec2/</guid>
+      <description>AWS EC2 생성    AWS EC2 생성    이번 장에서는 저번 장에서 생성했던 사용자 정의 VPC의 대역에 EC2를 생성해 보도록 하겠습니다. EC2 또한 중요한 개념이므로, EC2에 대한 개념이 부족한 분들은 AWS EC2를 참고해주세요.      EC2 ( Elastic Compute Cloud ) 생성   기본적인 EC2 생성의 순서
+1. AMI ( Amazon Machin Image ) 선택 2. Instance type 선택
+2. Instance Network 설정</description>
+    </item>
+    
+    <item>
+      <title>AWS AMI 생성</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/ami/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/ami/</guid>
+      <description>AWS AMI 생성    저번 장에서는 EC2를 생성해보았습니다. 이번 Marketplace에서 AMI를 사용해서 인스턴스를 만들고, 생성한 인스턴스를 사용해서 AMI를 만들어 보도록하겠습니다. AMI에 대한 개념이 부족한 분들은 AWS AMI를 참고해주세요.    AWS AMI 생성      먼저 EC2 생성을 위해 인스턴스 시작을 클릭 합니다.      AMI 선택화면이 나오면 AWS Marketplace에서 CentOS를 입력 후, 선택합니다. 이와 같이 Marketplace에서는 사람들이 만들어둔 이미지를 사용할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>AWS Elastic IP 할당</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/eip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/eip/</guid>
+      <description>AWS Elastic IP 할당   AWS Elastic IP ( 이하 EIP )란 인스턴스의 IP를 고정적으로 할당시킨 IP를 뜻합니다. 만약 인스턴스를 생성할 시, 퍼블릭 IP를 활성화 하면, 인스턴스를 자동 실행시마다 유동적으로 IP가 변화하여 문제가 되는 데, 이러한 문제들을 해결할 수 있습니다.    AWS Elastic IP 할당      EIP를 생성하기 위해 메뉴에서 EC2 서비스에서 네트워크 및 보안 -&amp;gt; 탄력적 IP를 선택합니다. 탄력적 IP 주소 할당을 클릭합니다.</description>
+    </item>
+    
+    <item>
+      <title>AWS S3 생성</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/s3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/s3/</guid>
+      <description>AWS S3 생성    이번 장에서는 S3를 생성해보도록 하겠습니다. S3 또한 중요한 개념이니, S3가 무엇인지를 S3 Link를 참조해주세요.    AWS S3 생성       AWS 서비스에서 S3를 검색합니다.      버킷 생성을 클릭합니다.      버킷의 이름과 리전을 선택합니다. 참고로 S3는 VPC에 영향을 받지 않습니다.      옵션을 선택합니다. 여기서는 기본 값으로 생성을 진행합니다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/ebs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/ebs/</guid>
+      <description>AWS Elastic Fire System    EFS      AWS 서비스에서 EFS를 클릭합니다.      스토리지 생성을 위해 파일 시스템 생성을 클릭합니다.      네트워크 엑세스를 구성합니다. 여기서는 기본 VPC에서 가용영역 a, c를 사용하겠습니다.      파일 시스템 설정 구성을 설정합니다. 여기서는 후에 설정을 전부 기본 값을 사용하여 생성합니다.      생성된 내용을 확인합니다.      EFS 사용하기 위해 가용영역 a, c에 인스턴스를 생성합니다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/nas-owncloud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/nas-owncloud/</guid>
+      <description>Nas-Owncloud 실습    Owncloud를 활용하여 Ec2 Nas 만들기        EC2 생성
+&amp;gt; OS : Ubuntu 18.04&amp;gt; Flavor : t2.micro&amp;gt; Storage : 100G ( 원하는 만큼, 차후에 EFS 등으로도 가능합니다. )&amp;gt; VPC : Custop&amp;gt; 보안그룹 : Custop 인스턴스를 생성합니다.      먼저, Owncloud를 사용하기 위해서는 LAMP를 설치해야합니다.  $ sudo apt install -y tasksel$ sudo tasksel install -y lamp-server# LAMP 간편 설치$ sudo apt install -y apache2# apache2 설치$ sudo apt install -y mysql-server# mysql 설치$ sudo apt install -y php7.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/aws-%EC%8B%A4%EC%8A%B5%EC%98%88%EC%A0%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/aws-%EC%8B%A4%EC%8A%B5%EC%98%88%EC%A0%9C/</guid>
+      <description>AWS 실습 예제  문제 사이트    vmware 상의 OS를 AWS의 EC2로 이전 vmware 상의 OS를 AWS의 EC2로 이전↕ vmware 상의 OS를 AWS의 EC2로 이전  VMware 15 VMware workstation CentOS7 ( Mini )   ens33 수정 ( /etc/sysconfig/netwrok-scripts/ifcfg-ens33 )  BOOTPROTO = dhcpONBOOT = No -&amp;gt; YES vmware에서 Export to OVF 파일을 선택합니다.    AWS cli를 실행하여 vmdk 파일을 S3에 import시킵니다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/base/</guid>
+      <description>****    ****          예제 1. 다음의 인스턴스를 생성해보세요.  예제 1. 답안↕ 사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다. 정책에서 admin의 권한을 선택 후 생성합니다.  </description>
+    </item>
+    
+  </channel>
+</rss>

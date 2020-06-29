@@ -12,6 +12,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/openstack/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/network/gns3/</loc>
   </url>
   
@@ -20,11 +24,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/openstack/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/start/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/start/</loc>
   </url>
   
   <url>
@@ -40,7 +40,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/security/%EC%A0%95%EB%A6%AC/</loc>
+    <loc>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC/</loc>
   </url>
   
   <url>
@@ -48,7 +48,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/</loc>
+    <loc>https://mung0001.github.io/docs/programing/python/</loc>
   </url>
   
   <url>
@@ -56,15 +56,11 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/iam/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/iam/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/cli/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/cli/</loc>
   </url>
   
   <url>
@@ -76,15 +72,23 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/java/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_network/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/vpc/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/vpc/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/ec2/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/ec2/</loc>
   </url>
   
   <url>
@@ -92,11 +96,23 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/ami/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_developer/</loc>
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/eip/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_management/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/s3/</loc>
   </url>
   
   <url>
@@ -108,19 +124,15 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/ebs/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/ebs/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/s3/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/keystone/</loc>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/docs/network/3tier/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/keystone/</loc>
   </url>
   
   <url>
@@ -132,7 +144,11 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/glance/</loc>
+    <loc>https://mung0001.github.io/docs/programing/php/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/glance/</loc>
   </url>
   
   <url>
@@ -140,19 +156,19 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/nova/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/nova/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/swift/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/swift/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/nas-owncloud/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/nas-owncloud/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/neutron/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/neutron/</loc>
   </url>
   
   <url>
@@ -160,31 +176,47 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/cinder/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/cinder/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/horizon/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/horizon/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/ceilometer/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/ceilometer/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/heat/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/heat/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/programing/code/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/programing/code/java/java/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/trove/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/programing/code/php/php/</loc>
+    <loc>https://mung0001.github.io/docs/programing/django/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/golang/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/java/java/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/php/php/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/web/</loc>
   </url>
   
   <url>
@@ -192,55 +224,23 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/django/</loc>
+    <loc>https://mung0001.github.io/posts/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/golang/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/sahara/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/ironic/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/trove/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/service/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/security/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/system/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/web/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/%EC%A0%84%EC%A0%84/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/sahara/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/ironic/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/service/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/aws-%EC%8B%A4%EC%8A%B5%EC%98%88%EC%A0%9C/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/aws-%EC%8B%A4%EC%8A%B5%EC%98%88%EC%A0%9C/</loc>
   </url>
   
   <url>
@@ -256,7 +256,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/training/base/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/base/</loc>
   </url>
   
   <url>
@@ -280,7 +280,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/openstack-%EB%AA%85%EB%A0%B9%EC%96%B4/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/openstack-%EB%AA%85%EB%A0%B9%EC%96%B4/</loc>
   </url>
   
   <url>
@@ -343,7 +343,19 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/openstack%EC%84%A4%EC%B9%98/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/%EA%B0%80%EC%83%81%ED%99%94/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/hidden/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/network/sdn/</loc>
   </url>
   
   <url>
@@ -355,15 +367,55 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/programing/code/python/python/</loc>
+    <loc>https://mung0001.github.io/docs/network/%EB%B0%A9%ED%99%94%EB%B2%BD/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/bigdata/</loc>
+    <loc>https://mung0001.github.io/docs/network/%EB%B3%B4%EC%95%88/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/django/basic/</loc>
+    <loc>https://mung0001.github.io/docs/network/%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/bigdata/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/django/basic/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/django/django/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/django/test/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/git/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/golang/golang/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/hugo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/python/python/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/web/css/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/web/html/</loc>
   </url>
   
   <url>
@@ -371,91 +423,47 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/django/test/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/golang/golang/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/openstack/openstack%EC%84%A4%EC%B9%98/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/study/openstack/%EA%B0%80%EC%83%81%ED%99%94/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/security/%EB%B0%A9%ED%99%94%EB%B2%BD/</loc>
+    <loc>https://mung0001.github.io/docs/system/code/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/security/%EB%B3%B4%EC%95%88/</loc>
+    <loc>https://mung0001.github.io/docs/system/linux/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/security/%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</loc>
+    <loc>https://mung0001.github.io/docs/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/study/system/code/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/system/linux/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/system/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/web/css/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/web/html/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/%EC%A0%84%EC%A0%84/git/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/%EC%A0%84%EC%A0%84/hugo/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/%EC%A0%84%EC%A0%84/sdn/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/1.-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%84%A4%EA%B3%84/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/2.-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B3%84%EB%B0%9C/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/3.-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B5%AC%EC%B6%95/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/4.-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%96%B8%EC%96%B4-%ED%99%9C%EC%9A%A9/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/study/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/5.-%EC%A0%95%EB%B3%B4%EC%84%B8%EC%8A%A4%ED%85%9C-%EA%B5%AC%EC%B6%95%EA%B4%80%EB%A6%AC/</loc>
+    <loc>https://mung0001.github.io/docs/system/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</loc>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/hidden/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/posts/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/1.-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%84%A4%EA%B3%84/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/posts/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/2.-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B3%84%EB%B0%9C/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/posts/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/3.-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B5%AC%EC%B6%95/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/posts/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/4.-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%96%B8%EC%96%B4-%ED%99%9C%EC%9A%A9/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/posts/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/5.-%EC%A0%95%EB%B3%B4%EC%84%B8%EC%8A%A4%ED%85%9C-%EA%B5%AC%EC%B6%95%EA%B4%80%EB%A6%AC/</loc>
   </url>
   
 </urlset>

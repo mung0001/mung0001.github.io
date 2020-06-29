@@ -31,5 +31,50 @@
  섹터 : 플래터의 가장 작은 단위, 일반적으로 1섹터의 크기는 512바이트 트랙 : 섹터가 모여 하나의 원을 구성 실린더 : 트랙의 스택 구조 파티션 : MBR의 파티션 테이블(64바이트)에 정보가 저장, 주 파티션 (16바이트, 4개까지 생성이 가능), 확장 파티션 생성이 가능 논리적 구조 크기 비교 : 섹터 &amp;lt; 트랙 &amp;lt; 실린더 &amp;lt; 실린더 그룹 or 파티션 &amp;lt; 디스크   3.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/system/code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/code/</guid>
+      <description>메일 자동화  이미지 크롤링 from urllib.request import urlopenfrom urllib.parse import quote_plusfrom bs4 import BeautifulSoupfrom selenium import webdriverimport timebaseUrl = &amp;#39;https://www.instagram.com/explore/tags/&amp;#39;plusUrl = input(&amp;#39;검색할 태그를 입력하세요 : &amp;#39;)url = baseUrl + quote_plus(plusUrl)driver = webdriver.Chrome(&amp;#39;C:\\chromedriver.exe&amp;#39;)driver.get(url)time.sleep(3)html = driver.page_sourcesoup = BeautifulSoup(html)insta = soup.select(&amp;#39;.v1Nh3.kIKUG._bz0w&amp;#39;)n = 1for i in insta:print(&amp;#39;https://www.instagram.com&amp;#39;+ i.a[&amp;#39;href&amp;#39;])imgUrl = i.select_one(&amp;#39;.KL4Bh&amp;#39;).img[&amp;#39;src&amp;#39;]with urlopen(imgUrl) as f:with open(&amp;#39;C:\\test\\&amp;#39; + plusUrl + str(n) + &amp;#39;.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/system/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/</guid>
+      <description>Linux   Linux 기초   유닉스 기반의 컴퓨터 운영체제의 한 종류 핀란드 헬싱키 대학의 대학원생 리누스 토발즈가 1991년에 개발 오픈 소스의 운영체제 대표적인 리눅스 기관 GNU 높은 이식성과 확정성 ( C언어 기반 ) 안전성과 신뢰성 ( 국제적이고 개방적으로 개발되었기 때문에 문제점에 대한 대처가 빠름 ) 계층적 파일 시스템 ( 최상위 디렉토리가 존재하고 모든 것들은 해당 디렉토리 하부에 존재 )   유닉스 운영체제 종류  리눅스의 구성요소   명령어 : 사용자가 원하는 프로그램을 콜링</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/%E3%84%B4%EB%B0%A9%ED%99%94%EB%B2%BD/</guid>
+      <description>방화벽 (CentOS - firewalld)    리눅스의 방화벽
+ 커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제       방화벽의 종류
+ 패킷 필터링 방화벽  - 제 1세대 방화벽 - 레이어 1~4에서 사용 - 단순하기 때문에 빠르고 효과적 - 5~7계층 대응 불가  Stateful 방화벽  - 제 2세대 방화벽 - 패킷의 연결 상태를 관찰 - 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약  **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽 - 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요      방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/system/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</guid>
+      <description>시스템통합 관리 침입 탐지 시스템(IDS) &amp;ndash; Snort 이용    주된 기능
+  탐지(Detection)
+  잘못된 패킷을 감지하면 사용자에게 알림(주체적으로 처리하지 X, only 안내)
+       탐지 종류 2가지
+  (1)오용 탐지	알고 있는 것 탐지
+  (2)이상 탐지	모르는 것도 탐지(100% 탐지 X)
+  너무 민감하게 처리하면 필요한 정보도 차단하는 실수를 할 수 있음
+       설치위치 ( 성능이 달라짐 )</description>
+    </item>
+    
   </channel>
 </rss>
