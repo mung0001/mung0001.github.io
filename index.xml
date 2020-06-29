@@ -207,12 +207,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
-      <title>AWS S3 생성</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/s3/</link>
+      <title>AWS ELB ( 2 Tier ) 생성</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/elb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/s3/</guid>
-      <description>AWS S3 생성    이번 장에서는 S3를 생성해보도록 하겠습니다. S3 또한 중요한 개념이니, S3가 무엇인지를 S3 Link를 참조해주세요.    AWS S3 생성       AWS 서비스에서 S3를 검색합니다.      버킷 생성을 클릭합니다.      버킷의 이름과 리전을 선택합니다. 참고로 S3는 VPC에 영향을 받지 않습니다.      옵션을 선택합니다. 여기서는 기본 값으로 생성을 진행합니다.</description>
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/elb/</guid>
+      <description>AWS ELB 생성    이번 장에서는 생성된 인스턴스들을 로드밸런싱하는 방법에 대해 알아보도록 하겠습니다. ELB 또한 중요한 개념이니, ELB에 대한 개념이 부족하신 분들은 AWS ELB를 참고해주세요.    AWS ELB 생성    ELB에 대한 생성 순서은 아래의 순서대로 진행합니다.   1. 인스턴스 생성
+2. 대상그룹 생성
+3. 로드 밸런서 생성
+  인스턴스 생성   먼저 기본 VPC에 가용영역 a와 c에 한 대씩, 총 두 대의 인스턴스를 생성해주세요.</description>
     </item>
     
     <item>
@@ -234,12 +237,12 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/ebs/</link>
+      <title>AWS RDS 생성</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/rds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/ebs/</guid>
-      <description>AWS Elastic Fire System    EFS      AWS 서비스에서 EFS를 클릭합니다.      스토리지 생성을 위해 파일 시스템 생성을 클릭합니다.      네트워크 엑세스를 구성합니다. 여기서는 기본 VPC에서 가용영역 a, c를 사용하겠습니다.      파일 시스템 설정 구성을 설정합니다. 여기서는 후에 설정을 전부 기본 값을 사용하여 생성합니다.      생성된 내용을 확인합니다.      EFS 사용하기 위해 가용영역 a, c에 인스턴스를 생성합니다.</description>
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/rds/</guid>
+      <description>****    ****          예제 1. 다음의 인스턴스를 생성해보세요.  예제 1. 답안↕ 사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다. 정책에서 admin의 권한을 선택 후 생성합니다.  </description>
     </item>
     
     <item>
@@ -272,12 +275,30 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>AWS 3Tier 구현</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/3tier/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/3tier/</guid>
+      <description>****    ****          예제 1. 다음의 인스턴스를 생성해보세요.  예제 1. 답안↕ 사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다. 정책에서 admin의 권한을 선택 후 생성합니다.  </description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://mung0001.github.io/docs/cloudcomputing/openstack/glance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstack/glance/</guid>
       <description>Glance   운영체제 이미지를 관리하는 Glance  이미지 서비스인 Glance는 Nova에서 생성하는 인스턴스의 운영체제에 해당하는 이미지를 관리 가상머신을 생성해 컴퓨터를 대신 사용, 이 때 필요한 운영체제의 이미지 파일을 Glance이 다양한 하이퍼바이저에서 사용할 수 있는 VM 이미지를 관리 및 VM에 설치된 운영체제를 보관, 관리 함  논리 아키텍처의 Glance  Glance 사용자들은 glance-api로 이미지를 등록, 삭제, 관리할 수 있음 glance-api는 glance-registry와 Glance database에서 이미지를 관리함 이미지를 등록할 때는 glance-registry로 Glance database에 저장됨 등록된 이미지를 사용할 때는 Glance database에 바로 사용을 요청 관리자는 운영하려는 운영체제의 이미지를 glance-registry로 Glance database에 등록 이미 저장된 이미지만으로도 인스턴스를 생성할 수 있음, 즉 Glance는 Nova 옆에 항상 따라다님  가상 머신 이미지 포맷  대체적으로 이미지를 내려받아 Glance에 등록할 때는 raw 포맷이나, qcow2 포맷으로 등록함  aki: 아마존 커널 이미지 ami: 아마존 머신 이미지 ari: 아마존 ram 디스크 이미지 iso: 광학 디스크나 CD-ROM의 데이터 콘텐츠를 지원하는 아카이브 포맷 qcow2: QEMU 에뮬레이터가 지원하는 포맷, 동적으로 확장할 수 있으며, Copy on Write를 지원 raw: 구조화되지 않은 디스크 포맷 vdi: VirtalBox 모니터와 QEMU 에뮬레이터가 지원하는 디스크 포맷 vhd: VHD 디스크 포맷은 VMware, Xen 마이크로소프트, VirtualBox 같은 가상 머신 모니터가 사용하는 일반적인 디스크 포맷 vhdx: VHDX 디스크 포맷은 큰 디스크 크기를 지원하는 VHD 형식의 향상된 버전 vmdk: 일반적인 디스크 포맷으로 여러 가상 머신 모니터가 지원    컨테이너 포맷(container Format)  컨테이너 포맷은 VM 이미지가 실제 VM 메타데이터를 포함하는 파일 포맷인지를 나타냄  aki: 아마존 커널 이미지 ami: 아마존 머신 이미지 bare: 아마존 ram 디스크 이미지 docker: Docker 컨테이너 포맷 ova: tar 파일의 OVF 패키지 ovf: OVF 컨테이너 포맷    지원하는 운영체제 이미지  오픈스택 Nova에서 인스턴스를 생성할 때는 이미 하이퍼바이저에서 생성한 가상 머신에 운영체제를 설치한 이미지를 Glance에 등록시키고, 등록시킨 이미지를 이용해서 인스턴스를 생성  Glance 구조  이미지를 저장하면 glance-registry로 Glance DB에 저장 주의사항  오픈스택 이미지를 생성할 때는 VMware처럼 운영체제 설치 파일(iso)로 가상머신을 생성하는 것이 아니라 이미 운영체제가 이미 설치가 된 가상머신을 이미지로 등록해야 함 따라서 이미지는 클라우드 전용이미지를 사용하는 것이 좋다.</description>
+    </item>
+    
+    <item>
+      <title>AWS S3 생성</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/s3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/s3/</guid>
+      <description>AWS S3 생성    이번 장에서는 S3를 생성해보도록 하겠습니다. S3 또한 중요한 개념이니, S3가 무엇인지를 S3 Link를 참조해주세요.    AWS S3 생성       AWS 서비스에서 S3를 검색합니다.      버킷 생성을 클릭합니다.      버킷의 이름과 리전을 선택합니다. 참고로 S3는 VPC에 영향을 받지 않습니다.      옵션을 선택합니다. 여기서는 기본 값으로 생성을 진행합니다.</description>
     </item>
     
     <item>
@@ -505,6 +526,15 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/noserver/</guid>
       <description>AWS 서버리스 사이트 구축    이번 장에서는 S3를 통해 서버가 없는 정적인 사이트를 구현해보도록 하겠습니다. 이와 같이 서버리스의 가장 큰 특징은 EC2처럼 상시 실행 상태 중이 아니여도, 사용자가 요청시에만 실행이 가능하기 때문에 비용면과 운영면에서 효율적이라 할 수 있습니다. AWS에서는 S3에서 웹 호스팅 기능을 제공하고 있어, 이를 통해 구현해보도록 하겠습니다.    AWS 서버리스 사이트 구축      먼저, AWS에 접속하여 S3 서비스를 검색 후, 클릭합니다.</description>
+    </item>
+    
+    <item>
+      <title>정리 중</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/ebs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/ebs/</guid>
+      <description>AWS Elastic Fire System    EFS      AWS 서비스에서 EFS를 클릭합니다.      스토리지 생성을 위해 파일 시스템 생성을 클릭합니다.      네트워크 엑세스를 구성합니다. 여기서는 기본 VPC에서 가용영역 a, c를 사용하겠습니다.      파일 시스템 설정 구성을 설정합니다. 여기서는 후에 설정을 전부 기본 값을 사용하여 생성합니다.      생성된 내용을 확인합니다.      EFS 사용하기 위해 가용영역 a, c에 인스턴스를 생성합니다.</description>
     </item>
     
     <item>

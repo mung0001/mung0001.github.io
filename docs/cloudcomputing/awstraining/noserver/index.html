@@ -14,7 +14,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.a173b734bc3a289cd30433098e195a4f597062d6a35ab3512078191c3491a99b.js" integrity="sha256-oXO3NLw6KJzTBDMJjhlaT1lwYtajWrNRIHgZHDSRqZs="></script>
+<script defer src="/en.search.min.dc612b4d8f634b79eb7d2cc6aaf0127da4bfbb2b499fe7f4fee7b2220363003a.js" integrity="sha256-3GErTY9jS3nrfSzGqvASfaS/uytJn&#43;f0/ueyIgNjADo="></script>
 <!--
 
 -->
@@ -88,11 +88,11 @@
       
         
 
-  <li class="book-section-flat" >
+  <li>
     
 
   
-  <a href="/docs/cloudcomputing/" class="">Cloud Computing</a>
+  <a href="/docs/cloudcomputing/" class="collapsed ">Cloud Computing</a>
   
 
 
@@ -220,7 +220,7 @@
         <li>
 
   
-  <a href="/docs/cloudcomputing/awstraining/s3/" class="">AWS S3 생성</a>
+  <a href="/docs/cloudcomputing/awstraining/elb/" class="">AWS ELB ( 2 Tier ) 생성</a>
   
 
 </li>
@@ -230,7 +230,27 @@
         <li>
 
   
-  <a href="/docs/cloudcomputing/awstraining/ebs/" class="">E B S</a>
+  <a href="/docs/cloudcomputing/awstraining/rds/" class="">AWS RDS 생성</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/cloudcomputing/awstraining/3tier/" class="">AWS 3Tier 구현</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/cloudcomputing/awstraining/s3/" class="">AWS S3 생성</a>
   
 
 </li>
@@ -261,6 +281,16 @@
 
   
   <a href="/docs/cloudcomputing/awstraining/noserver/" class="active">AWS 서버리스 사이트 구축</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/docs/cloudcomputing/awstraining/ebs/" class="">정리 중</a>
   
 
 </li>
@@ -706,9 +736,21 @@
   </ul>
 
   <ul>
+    <li><a href="#aws-서버리스-사이트-세부설정"><strong>AWS 서버리스 사이트 세부설정</strong></a></li>
+  </ul>
+
+  <ul>
     <li>
       <ul>
-        <li></li>
+        <li><a href="#redirection-rules"><strong>Redirection Rules</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dns-설정"><strong>DNS 설정</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -737,125 +779,242 @@
 <h1 id="heading-2"></h1>
 <p> </p>
 <h1 id="heading-3"></h1>
-<p><img src="/AWS/S3-Server01.png" alt="" /></p>
+<p><img src="/AWS/S3/S3-Server01.png" alt="" /></p>
 <ul>
 <li><strong>먼저, <a href="https://aws.com">AWS</a>에 접속하여 S3 서비스를 검색 후, 클릭합니다.</strong></li>
 </ul>
 <h1 id="heading-4"></h1>
 <p> </p>
 <h1 id="heading-5"></h1>
-<p><img src="/AWS/S3-Server02.png" alt="" /></p>
+<p><img src="/AWS/S3/S3-Server02.png" alt="" /></p>
 <ul>
 <li><strong>S3를 시작하기 위해 버킷을 생성합니다.</strong></li>
 </ul>
 <h1 id="heading-6"></h1>
 <p> </p>
 <h1 id="heading-7"></h1>
-<p><img src="/AWS/S3-Server0.png" alt="" /></p>
+<p><img src="/AWS/S3/S3-Server03.png" alt="" /></p>
 <ul>
 <li><strong>버킷의 이름을 지정하고, 리전을 선택합니다.</strong></li>
 </ul>
 <h1 id="heading-8"></h1>
 <p> </p>
 <h1 id="heading-9"></h1>
-<p><img src="/AWS/S3-Server0.png" alt="" /></p>
+<p><img src="/AWS/S3/S3-Server04.png" alt="" /></p>
 <ul>
-<li>
-<hr>
-</li>
+<li><strong>기본 값으로 설정을 진행합니다.</strong></li>
 </ul>
 <h1 id="heading-10"></h1>
 <p> </p>
 <h1 id="heading-11"></h1>
-<p><img src="/AWS/S3-Server0.png" alt="" /></p>
+<p><img src="/AWS/S3/S3-Server05.png" alt="" /></p>
 <ul>
-<li>
-<hr>
-</li>
+<li><strong>단, 그림과 같이 퍼블릭 엑세스의 대한 차단을 해제합니다.</strong></li>
 </ul>
 <h1 id="heading-12"></h1>
 <p> </p>
 <h1 id="heading-13"></h1>
-<p><img src="/AWS/S3-Server0.png" alt="" /></p>
+<p><img src="/AWS/S3/S3-Server06.png" alt="" /></p>
 <ul>
-<li>
-<hr>
-</li>
+<li><strong>버킷의 생성이 완료되었습니다.</strong></li>
 </ul>
 <h1 id="heading-14"></h1>
 <p> </p>
 <h1 id="heading-15"></h1>
-<p><img src="/AWS/S3-Server0.png" alt="" /></p>
+<p><img src="/AWS/S3/S3-Server06-1.png" alt="" /></p>
 <ul>
-<li>
-<hr>
-</li>
+<li><strong>다음으로는 생성된 버킷을 호스팅 등록하기 전에, 버킷의 정책을 먼저 생성하겠습니다.</strong></li>
+<li><strong>버킷의 생성이 완료되면, 생성된 버킷을 클릭합니다.</strong></li>
+<li><strong>생성된 버킷에서 권한 -&gt; 버킷 정책을 클릭 후, 하단의 정책 생성기를 클릭합니다.</strong></li>
 </ul>
 <h1 id="heading-16"></h1>
 <p> </p>
 <h1 id="heading-17"></h1>
-<p><img src="/AWS/S3-Server0.png" alt="" /></p>
+<p><img src="/AWS/S3/S3-Server06-2.png" alt="" /></p>
 <ul>
-<li>
-<hr>
-</li>
+<li><strong>그림은 정책생성기로, 원하는 정책옵션을 선택하면 그 옵션을 Json파일로 변환시켜주는 역할을 수행합니다.</strong></li>
+<li><strong>여기서는 아래의 값으로 설정을 진행합니다.</strong></li>
 </ul>
+<blockquote>
+<p><strong>Select Type : S3 Bucket Policy</strong><br>
+<strong>Principal : &quot; * &ldquo;</strong>  ( Principal는 리소스로의 접근을 허가 또는 거부할 사용자, 계정, 서비스, 엔티티를 나타냅니다.) <br>
+<strong>Actions : GetObject</strong> ( Actions는 허가할 조작을 나타냅니다.)<br>
+<strong>ARN : arn:aws:s3::: [ 버킷 이름 ]/[ Key_name ]</strong> ( 허용할 파일 혹은 디렉토리를 나타냅니다. 여기서 /Key_name은 /*을 사용합니다. )</p>
+</blockquote>
 <h1 id="heading-18"></h1>
 <p> </p>
 <h1 id="heading-19"></h1>
-<p><img src="/AWS/S3-Server0.png" alt="" /></p>
+<p><img src="/AWS/S3/S3-Server06-3.png" alt="" /></p>
 <ul>
-<li>
-<hr>
-</li>
+<li><strong>생성 후, Add Statement를 클릭하면 현재 선택한 옵션들은 Json 형식으로 바꾸어 줍니다.</strong></li>
 </ul>
-<h1 id="heading-20"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#75715e">{</span>
+  <span style="color:#e6db74">&#34;Id&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Policy1593408879908&#34;</span><span style="color:#f92672">,</span>
+  <span style="color:#e6db74">&#34;Version&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2012-10-17&#34;</span><span style="color:#f92672">,</span>
+  <span style="color:#e6db74">&#34;Statement&#34;</span><span style="color:#f92672">:</span> <span style="color:#f92672">[</span>
+    <span style="color:#75715e">{</span>
+      <span style="color:#e6db74">&#34;Sid&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Stmt1593408870453&#34;</span><span style="color:#f92672">,</span>
+      <span style="color:#e6db74">&#34;Action&#34;</span><span style="color:#f92672">:</span> <span style="color:#f92672">[</span>
+        <span style="color:#e6db74">&#34;s3:GetBucketObjectLockConfiguration&#34;</span>
+      <span style="color:#f92672">],</span>
+      <span style="color:#e6db74">&#34;Effect&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Allow&#34;</span><span style="color:#f92672">,</span>
+      <span style="color:#e6db74">&#34;Resource&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;arn:aws:s3:::s3-serverless-web/*&#34;</span><span style="color:#f92672">,</span>
+      <span style="color:#e6db74">&#34;Principal&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;*&#34;</span>
+    <span style="color:#75715e">}</span>
+  <span style="color:#f92672">]</span>
+<span style="color:#75715e">}</span>
+</code></pre></div><h1 id="heading-20"></h1>
 <p> </p>
 <h1 id="heading-21"></h1>
-<p><img src="/AWS/S3-Server0.png" alt="" /></p>
+<p><img src="/AWS/S3/S3-Server09.png" alt="" /></p>
 <ul>
-<li>
-<hr>
-</li>
+<li><strong>다음은 미리 index.html과 error.html 파일을 업로드 하겠습니다.</strong></li>
 </ul>
 <h1 id="heading-22"></h1>
 <p> </p>
 <h1 id="heading-23"></h1>
-<p><img src="/AWS/S3-Server0.png" alt="" /></p>
+<p><img src="/AWS/S3/S3-Server10.png" alt="" /><br>
+<img src="/AWS/S3/S3-Server11.png" alt="" /></p>
 <ul>
-<li>
-<hr>
-</li>
+<li><strong>위의 그림과 같이 파일을 업로드 합니다.</strong></li>
+<li><strong>모든 설정은 기본 값으로 설정합니다.</strong></li>
 </ul>
 <h1 id="heading-24"></h1>
 <p> </p>
 <h1 id="heading-25"></h1>
-<p><img src="/AWS/S3-Server0.png" alt="" /></p>
+<p><img src="/AWS/S3/S3-Server07.png" alt="" /></p>
+<ul>
+<li><strong>이제, 호스팅을 위해 S3에서 정적 웹 사이트 호스팅을 설정하겠습니다.</strong></li>
+<li><strong>S3의 속성 -&gt; 정적 웹 사이트 호스팅을 선택합니다.</strong></li>
+</ul>
+<h1 id="heading-26"></h1>
+<p> </p>
+<h1 id="heading-27"></h1>
+<p><img src="/AWS/S3/S3-Server08.png" alt="" /></p>
+<ul>
+<li><strong>정적 웹 사이트 호스팅 창이 나오면 인덱스 문서 및 오류 문서의 업로드한 파일을 기입 후 저장합니다.</strong></li>
+</ul>
+<h1 id="heading-28"></h1>
+<p> </p>
+<h1 id="heading-29"></h1>
+<p><img src="/AWS/S3/S3-Server12.png" alt="" /><br>
+<img src="/AWS/S3/S3-Server13.png" alt="" /></p>
+<ul>
+<li><strong>이제 S3 EndPoint로 접속하면 index.html을 확인할 수 있습니다.</strong></li>
+<li><strong>또한 에러 발생시에는 error.html이 보여지는 것을 확인할 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-30"></h1>
+<ul>
+<li><strong>이제 이것으로 기본적인 S3를 사용한 정적사이트 구축이 완료되었습니다.</strong></li>
+<li><strong>이어서 서비스와 기능을 추가시켜보도록 하겠습니다.</strong></li>
+</ul>
+<h1 id="heading-31"></h1>
+<p> </p>
+<h1 id="heading-32"></h1>
+<h2 id="aws-서버리스-사이트-세부설정"><strong>AWS 서버리스 사이트 세부설정</strong></h2>
+<hr>
+<h1 id="heading-33"></h1>
+<h3 id="redirection-rules"><strong>Redirection Rules</strong></h3>
+<h1 id="heading-34"></h1>
+<ul>
+<li><strong>Redirection Rules란 특정 경로 또는 HTTP 오류 코드 등의 조건에 따라 라우팅을 지정해주는 기능입니다.</strong></li>
+</ul>
+<h1 id="heading-35"></h1>
+<p> </p>
+<h1 id="heading-36"></h1>
+<p><img src="/AWS/S3/S3-Server14.png" alt="" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">&lt;RoutingRules&gt;
+    &lt;RoutingRule&gt;
+        &lt;Condition&gt;
+            &lt;KeyPrefixEquals&gt;hello/&lt;/KeyPrefixEquals&gt;
+        &lt;/Condition&gt;
+        &lt;Redirect&gt;
+            &lt;ReplaceKeyPrefixWith&gt;bye/&lt;/ReplaceKeyPrefixWith&gt;
+        &lt;/Redirect&gt;
+    &lt;/RoutingRule&gt;
+&lt;/RoutingRules&gt;
+# KeyPrefixEquals로 진입한 트래픽을 ReplaceKeyPrefixWith로 진입시킵니다.
+</code></pre></div><ul>
+<li><strong>Redirection Rules의 설정을 위해 다시 정적 웹 사이트 호스팅 설정을 클릭합니다.</strong></li>
+<li><strong>후 위의 값을 리디렉션 규칙에 작성합니다.</strong></li>
+<li><strong>위 설정을 마치면 Endpoint에 hello로 진입시 bye로 진입되는 것을 확인 할 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-37"></h1>
+<p> </p>
+<h1 id="heading-38"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">&lt;RoutingRules&gt;
+    &lt;RoutingRule&gt;
+        &lt;Condition&gt;
+            &lt;HttpErrorCodeReturnedEquals&gt;404&lt;/HttpErrorCodeReturnedEquals&gt;
+        &lt;/Condition&gt;
+        &lt;Redirect&gt;
+            &lt;ReplaceKeyWith&gt;index.html&lt;/ReplaceKeyWith&gt;
+        &lt;/Redirect&gt;
+    &lt;/RoutingRule&gt;
+&lt;/RoutingRules&gt;
+# HttpErrorCodeReturnedEquals는 특정 에러가 발생하면 에러를 보여주는 대신 ReplaceKeyWith 값을 보여줍니다.
+</code></pre></div><ul>
+<li><strong>이와 동일하게 위의 값을 다시 리디렉션 규칙에 작성합니다.</strong></li>
+<li><strong>설정을 마치면, Endpoint/의 모든 Null 값이 index.html로 옮겨지는 것을 확인할 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-39"></h1>
+<p> </p>
+<h1 id="heading-40"></h1>
+<ul>
+<li><strong>차후 Lmabda, DNS, CDN 서비스를 추가하여 업데이트 하겠습니다.</strong></li>
+</ul>
+<h3 id="dns-설정"><strong>DNS 설정</strong></h3>
+<p><img src="/AWS/S3/S3-Server1.png" alt="" /></p>
 <ul>
 <li>
 <hr>
 </li>
 </ul>
-<h4 id="예제-1">예제 1.</h4>
-<h4 id="다음의-인스턴스를-생성해보세요">다음의 인스턴스를 생성해보세요.</h4>
-<blockquote>
-<div class="book-expand">
-  <label>
-    <div class="book-expand-head flex justify-between">
-      <span>예제 1. 답안</span>
-      <span>↕</span>
-    </div>
-    <input type="checkbox" class="hidden" />
-    <div class="book-expand-content markdown-inner">
-      <ul>
-<li>사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다.</li>
-<li>정책에서 admin의 권한을 선택 후 생성합니다.</li>
+<h1 id="heading-41"></h1>
+<p> </p>
+<h1 id="heading-42"></h1>
+<p><img src="/AWS/S3/S3-Server1.png" alt="" /></p>
+<ul>
+<li>
+<hr>
+</li>
 </ul>
-    </div>
-  </label>
-</div>
-
-</blockquote>
+<h1 id="heading-43"></h1>
+<p> </p>
+<h1 id="heading-44"></h1>
+<p><img src="/AWS/S3/S3-Server1.png" alt="" /></p>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-45"></h1>
+<p> </p>
+<h1 id="heading-46"></h1>
+<p><img src="/AWS/S3/S3-Server1.png" alt="" /></p>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-47"></h1>
+<p> </p>
+<h1 id="heading-48"></h1>
+<p><img src="/AWS/S3/S3-Server1.png" alt="" /></p>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-49"></h1>
+<p> </p>
+<h1 id="heading-50"></h1>
+<p><img src="/AWS/S3/S3-Server1.png" alt="" /></p>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
 </article>
  
       
@@ -894,9 +1053,21 @@
   </ul>
 
   <ul>
+    <li><a href="#aws-서버리스-사이트-세부설정"><strong>AWS 서버리스 사이트 세부설정</strong></a></li>
+  </ul>
+
+  <ul>
     <li>
       <ul>
-        <li></li>
+        <li><a href="#redirection-rules"><strong>Redirection Rules</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dns-설정"><strong>DNS 설정</strong></a></li>
       </ul>
     </li>
   </ul>
