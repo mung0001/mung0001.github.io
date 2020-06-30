@@ -56,6 +56,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/iam/</loc>
   </url>
   
@@ -69,10 +73,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_storage/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/</loc>
   </url>
   
   <url>
@@ -293,6 +293,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/ebs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/ec2site/</loc>
   </url>
   
   <url>

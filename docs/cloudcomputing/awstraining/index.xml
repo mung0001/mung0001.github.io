@@ -55,7 +55,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/ec2/</guid>
-      <description>AWS EC2 생성    AWS EC2 생성    이번 장에서는 저번 장에서 생성했던 사용자 정의 VPC의 대역에 EC2를 생성해 보도록 하겠습니다. EC2 또한 중요한 개념이므로, EC2에 대한 개념이 부족한 분들은 AWS EC2를 참고해주세요.      EC2 ( Elastic Compute Cloud ) 생성   기본적인 EC2 생성의 순서
+      <description>AWS EC2 생성    AWS EC2 생성    이번 장에서는 저번 장에서 생성했던 사용자 정의 VPC의 대역에 EC2를 생성해 보도록 하겠습니다. EC2 또한 중요한 개념이므로, EC2에 대한 학습을 원하는 분들은 AWS EC2를 참고해주세요.      EC2 ( Elastic Compute Cloud ) 생성   기본적인 EC2 생성의 순서
 1. AMI ( Amazon Machin Image ) 선택 2. Instance type 선택
 2. Instance Network 설정</description>
     </item>
@@ -66,7 +66,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/ami/</guid>
-      <description>AWS AMI 생성    저번 장에서는 EC2를 생성해보았습니다. 이번 Marketplace에서 AMI를 사용해서 인스턴스를 만들고, 생성한 인스턴스를 사용해서 AMI를 만들어 보도록하겠습니다. AMI에 대한 개념이 부족한 분들은 AWS AMI를 참고해주세요.    AWS AMI 생성      먼저 EC2 생성을 위해 인스턴스 시작을 클릭 합니다.      AMI 선택화면이 나오면 AWS Marketplace에서 CentOS를 입력 후, 선택합니다. 이와 같이 Marketplace에서는 사람들이 만들어둔 이미지를 사용할 수 있습니다.</description>
+      <description>AWS AMI 생성    저번 장에서는 EC2를 생성해보았습니다. 이번 Marketplace에서 AMI를 사용해서 인스턴스를 만들고, 생성한 인스턴스를 사용해서 AMI를 만들어 보도록하겠습니다. AMI에 대한 학습을 원하는 분들은 AWS AMI를 참고해주세요.    AWS AMI 생성      먼저 EC2 생성을 위해 인스턴스 시작을 클릭 합니다.      AMI 선택화면이 나오면 AWS Marketplace에서 CentOS를 입력 후, 선택합니다. 이와 같이 Marketplace에서는 사람들이 만들어둔 이미지를 사용할 수 있습니다.</description>
     </item>
     
     <item>
@@ -84,7 +84,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/elb/</guid>
-      <description>AWS ELB 생성    이번 장에서는 생성된 인스턴스들을 로드밸런싱하는 방법에 대해 알아보도록 하겠습니다. ELB 또한 중요한 개념이니, ELB에 대한 개념이 부족하신 분들은 AWS ELB를 참고해주세요.    AWS ELB 생성    ELB에 대한 생성 순서은 아래의 순서대로 진행합니다.   1. 인스턴스 생성
+      <description>AWS ELB 생성    이번 장에서는 생성된 인스턴스들을 로드밸런싱하는 방법에 대해 알아보도록 하겠습니다. ELB 또한 중요한 개념이니, ELB에 대한 학습을 원하는 분들은 AWS ELB를 참고해주세요.    AWS ELB 생성    ELB에 대한 생성 순서은 아래의 순서대로 진행합니다.   1. 인스턴스 생성
 2. 대상그룹 생성
 3. 로드 밸런서 생성
   인스턴스 생성   먼저 기본 VPC에 가용영역 a와 c에 한 대씩, 총 두 대의 인스턴스를 생성해주세요.</description>
@@ -96,7 +96,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/rds/</guid>
-      <description>****    ****          예제 1. 다음의 인스턴스를 생성해보세요.  예제 1. 답안↕ 사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다. 정책에서 admin의 권한을 선택 후 생성합니다.  </description>
+      <description>AWS RDS 생성    AWS RDS는 우리가 흔히 아는 Database ( Oracle db, Mysql, MariaDB )와 동일한 역할을 수행하지만, 보다 편리하고 안전하게 관리가 가능합니다. AWS RDS는 중요한 개념이므로, RDS에 대한 개념이 학습이 필요한 들은 AWS RDS를 참고해주세요.    AWS RDS 생성      먼저, RDS의 생성을 위해 AWS의 접속하여 RDS를 검색 후 클릭합니다.      데이터베이스 생성 -&amp;gt; 데이터베이스 생성을 클릭합니다.</description>
     </item>
     
     <item>
@@ -114,7 +114,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/s3/</guid>
-      <description>AWS S3 생성    이번 장에서는 S3를 생성해보도록 하겠습니다. S3 또한 중요한 개념이니, S3가 무엇인지를 S3 Link를 참조해주세요.    AWS S3 생성       AWS 서비스에서 S3를 검색합니다.      버킷 생성을 클릭합니다.      버킷의 이름과 리전을 선택합니다. 참고로 S3는 VPC에 영향을 받지 않습니다.      옵션을 선택합니다. 여기서는 기본 값으로 생성을 진행합니다.</description>
+      <description>AWS S3 생성    이번 장에서는 S3를 생성해보도록 하겠습니다. S3 또한 중요한 개념이니, S3에 대한 학습을 원하는 분들은 S3 Link를 참조해주세요.    AWS S3 생성       AWS 서비스에서 S3를 검색합니다.      버킷 생성을 클릭합니다.      버킷의 이름과 리전을 선택합니다. 참고로 S3는 VPC에 영향을 받지 않습니다.      옵션을 선택합니다. 여기서는 기본 값으로 생성을 진행합니다.</description>
     </item>
     
     <item>
@@ -152,6 +152,15 @@
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/ebs/</guid>
       <description>AWS Elastic Fire System    EFS      AWS 서비스에서 EFS를 클릭합니다.      스토리지 생성을 위해 파일 시스템 생성을 클릭합니다.      네트워크 엑세스를 구성합니다. 여기서는 기본 VPC에서 가용영역 a, c를 사용하겠습니다.      파일 시스템 설정 구성을 설정합니다. 여기서는 후에 설정을 전부 기본 값을 사용하여 생성합니다.      생성된 내용을 확인합니다.      EFS 사용하기 위해 가용영역 a, c에 인스턴스를 생성합니다.</description>
+    </item>
+    
+    <item>
+      <title>EC2 동적 사이트 구축</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/ec2site/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/ec2site/</guid>
+      <description>EC2 동적 사이트 구축    이번 장에서는 EC2와 WordPress, RDS를 활용해 동적 사이트를 구축해보겠습니다.    EC2 동적 사이트 구축       VPC     VPC 이름 IPv4 CIDR     VPC-WordPress 10.0.0.0/16      Subnet     Subnet 이름 VPC AZ IPv4 CIDR     WordPress-Public-Subnet VPC-WordPress ap-northeast-a 10.0.1.0/24   WordPress-Public-Subnet2 VPC-WordPress ap-northeast-c 10.</description>
     </item>
     
   </channel>
