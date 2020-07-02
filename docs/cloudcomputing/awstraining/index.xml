@@ -163,5 +163,14 @@
       <description>EC2 동적 사이트 구축    이번 장에서는 EC2와 WordPress, RDS를 활용해 동적 사이트를 구축해보겠습니다. 이 장에서는 RDS 복제본 사용시 과금이 청구될 수 있습니다. 이를 원치 않는 분들은, RDS 설정 시, Multi-AZ 설정을 하지 않고, 1개의 Master RDS만 생성 후 진행하세요.    EC2 동적 사이트 구축       VPC     VPC 이름 IPv4 CIDR     VPC-WordPress 10.</description>
     </item>
     
+    <item>
+      <title>Elastic Beanstalk 사이트 구축</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/elasticbeanstalk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/elasticbeanstalk/</guid>
+      <description>Elastic Beanstalk 사이트 구축    이번 장에서는 Elastic Beanstalk를 활용해서 WordPress 사이트를 구축해보겠습니다. Elastic Beanstalk가 무엇인지는 Elastic Beanstalk를 참조해주세요.    Elastic Beanstalk 사이트 구축      Elastic Beanstalk는 zip 형식으로 애플리케이션을 압축해서 AWS 상에 업로드 할 수 있습니다. WordPress를 사용하기 위해 WordPress에서 zip 형식으로 다운로드 합니다.      다운로드가 완료되면 AWS에서 Elastic Beanstalk를 검색합니다.      Elastic Beanstalk의 생성을 위해 Create Application을 클릭합니다.</description>
+    </item>
+    
   </channel>
 </rss>

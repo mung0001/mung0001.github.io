@@ -76,10 +76,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/programing/java/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_network/</loc>
   </url>
   
@@ -144,11 +140,11 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/network/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_as/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/programing/php/</loc>
+    <loc>https://mung0001.github.io/docs/network/</loc>
   </url>
   
   <url>
@@ -212,23 +208,11 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/programing/java/java/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/programing/php/php/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/programing/web/</loc>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/docs/programing/web/django/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/</loc>
   </url>
   
   <url>
@@ -244,6 +228,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/programing/git/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/sahara/</loc>
   </url>
   
@@ -253,10 +241,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/service/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/auto-scaling/</loc>
   </url>
   
   <url>
@@ -297,6 +281,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/ec2site/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/elasticbeanstalk/</loc>
   </url>
   
   <url>
@@ -407,6 +395,18 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/programing/git/bigdata/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/git/git/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/git/hugo/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/programing/golang/golang/</loc>
   </url>
   
@@ -432,18 +432,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/programing/web/html/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/bigdata/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/git/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/hugo/</loc>
   </url>
   
   <url>

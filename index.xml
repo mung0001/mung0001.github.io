@@ -284,6 +284,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>AWS AutoScaling</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_as/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_as/</guid>
+      <description>Auto Scaling  Auto Scaling  EC2 인스턴스를 자동으로 시작하거나 종료하여 애플리케이션 로드를 처리하기에 적절한 수의 EC를 유지할 수 있도록 하는 서비스 사용자가 정의하는 조건에 따라 EC2 개수를 자동으로 확장 또는 축소가 가능 모니터링을 통해 비정상 인스턴스를 탐지하고 교체할 수 있음 수요가 급증할 경우 EC2 수를 자동으로 늘려 성능을 유지하고 수요가 적을 경우 수를 줄여 비용을 절감 ELB의 대상그룹을 Auto Scaling Group( ASG )에 포함시켜 자동생성된 EC2로 하여금 트래픽 부하분산을 하도록 설정가능 수요 변화가 예측 나응한 경우 예약된 일정을 통해 정해싲 시간에 늘리거나 줄이도록 설정이 가능 ASG 내 손상된 인스턴스가 발견될 경우, Auto Scaling은 이를 자동으로 종료하고 새로운 인스턴스로 교체  ELB를 사용하는 경우, ELB가 손상된 인스턴스를 트래픽 요청 대상에서 분리시킨 후, Auto Scaling이 이를 새로운 인스턴스로 교체   비정상 서버 탐지 후 Auto Scaling이 새로운 인스턴스를 In Service 상태를 만들기까지 5분 이내 소요   AWS Auto Scaling 그룹.</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://mung0001.github.io/docs/cloudcomputing/openstack/glance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -393,24 +402,6 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/programing/java/java/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/java/java/</guid>
-      <description>Java ****  ...</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/php/php/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/php/php/</guid>
-      <description>PHP ID, PW EX...&amp;lt;?php$cookie=$_GET[&amp;#34;data&amp;#34;];$myfile=fopen(&amp;#34;cookie/data.txt&amp;#34;, &amp;#34;a+&amp;#34;);fwrite($myfile, $cookie.&amp;#34;\r\n&amp;#34;);fclose($myfile);?&amp;gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://mung0001.github.io/docs/cloudcomputing/openstack/sahara/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -436,15 +427,6 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstack/service/</guid>
       <description>****   옵셔널 서비스  컴퓨트, 오브젝트 스토리지, 이미지, 인증, 네트워크, 블록 스토리지, 대시보드 서비스만으로도 오픈스택을 구축할 수 있음 텔레미터, 오케스트레이션, 데이터베이스 같은 서비스를 제대로 사용한다면 효율적인 클라우드 관리와 운영에 많은 도움을 많을 수 있음 메시징 서비스 Zaqar 공유 파일 시스템 서비스 Manila DNS 서비스 Designate  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/auto-scaling/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/auto-scaling/</guid>
-      <description>Auto Scaling  Auto Scaling  EC2 인스턴스를 자동으로 시작하거나 종료하여 애플리케이션 로드를 처리하기에 적절한 수의 EC를 유지할 수 있도록 하는 서비스 사용자가 정의하는 조건에 따라 EC2 개수를 자동으로 확장 또는 축소가 가능 모니터링을 통해 비정상 인스턴스를 탐지하고 교체할 수 있음 수요가 급증할 경우 EC2 수를 자동으로 늘려 성능을 유지하고 수요가 적을 경우 수를 줄여 비용을 절감 ELB의 대상그룹을 Auto Scaling Group( ASG )에 포함시켜 자동생성된 EC2로 하여금 트래픽 부하분산을 하도록 설정가능 수요 변화가 예측 나응한 경우 예약된 일정을 통해 정해싲 시간에 늘리거나 줄이도록 설정이 가능 ASG 내 손상된 인스턴스가 발견될 경우, Auto Scaling은 이를 자동으로 종료하고 새로운 인스턴스로 교체  ELB를 사용하는 경우, ELB가 손상된 인스턴스를 트래픽 요청 대상에서 분리시킨 후, Auto Scaling이 이를 새로운 인스턴스로 교체   비정상 서버 탐지 후 Auto Scaling이 새로운 인스턴스를 In Service 상태를 만들기까지 5분 이내 소요   AWS Auto Scaling 그룹.</description>
     </item>
     
     <item>
@@ -544,6 +526,15 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/ec2site/</guid>
       <description>EC2 동적 사이트 구축    이번 장에서는 EC2와 WordPress, RDS를 활용해 동적 사이트를 구축해보겠습니다. 이 장에서는 RDS 복제본 사용시 과금이 청구될 수 있습니다. 이를 원치 않는 분들은, RDS 설정 시, Multi-AZ 설정을 하지 않고, 1개의 Master RDS만 생성 후 진행하세요.    EC2 동적 사이트 구축       VPC     VPC 이름 IPv4 CIDR     VPC-WordPress 10.</description>
+    </item>
+    
+    <item>
+      <title>Elastic Beanstalk 사이트 구축</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/elasticbeanstalk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/elasticbeanstalk/</guid>
+      <description>Elastic Beanstalk 사이트 구축    이번 장에서는 Elastic Beanstalk를 활용해서 WordPress 사이트를 구축해보겠습니다. Elastic Beanstalk가 무엇인지는 Elastic Beanstalk를 참조해주세요.    Elastic Beanstalk 사이트 구축      Elastic Beanstalk는 zip 형식으로 애플리케이션을 압축해서 AWS 상에 업로드 할 수 있습니다. WordPress를 사용하기 위해 WordPress에서 zip 형식으로 다운로드 합니다.      다운로드가 완료되면 AWS에서 Elastic Beanstalk를 검색합니다.      Elastic Beanstalk의 생성을 위해 Create Application을 클릭합니다.</description>
     </item>
     
     <item>
@@ -692,6 +683,45 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
+      <link>https://mung0001.github.io/docs/programing/git/bigdata/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/git/bigdata/</guid>
+      <description>빅데이터란  Bigdata    빅데이터는 큰 사이즈의 데이터로부터 유의미한 지표를 분석해내는 행위 SNS, 로그, 문서 등 다양한 경로를 통해 수집한 여러가지 형태의 많은 양의 데이터를 이용하여 의사결정에 도움을 주는 지표를 분석하여 제공하는 것   Bigdata가 대두 되어지는 이유  데이터 양의 증가와 데이터 저장기술 발달 경제적 타당성 증가/ 저장장치의 가격 인하 데이터 처리 기술의 발달   Bigdata 5V  Volume - 크기  저장장치 가격의 하락, 네트워크 속도의 향상으로 수 페타바이트의 데이터가 매일 생성   Variety - 다양성  정형, 반정형, 비정형 형태의 다양한 데이터를 분석   Velocity - 속도  정보의 유통 속도가 굉장히 빠름.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/programing/git/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/git/git/</guid>
+      <description>Git&amp;amp;&amp;amp; Github  깃 ( git )    Git 공식 홈페이지 에서 다운로드
+  형상 관리 도구 ( Configuration Management Tool )인 분산형 관리 시스템
+  무료, 공개소프트웨어 서비스
+  소스코드를 주고 받을 필요 없이, 같은 파일을 여러 명이 동시에 작업하는 병렬 개발이 가능
+  분산 버전관리이기 때문에 인터넷이 연결되지 않은 곳에서도 개발을 진행할 수 있으며, 중앙 저장소가 날라가벌도 다시 원상복구가 가능
+     git의 특징   버전관리   깃에서 버전이란 문서를 수정하고 저장할 때마다 생기는 지점</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/programing/git/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/git/hugo/</guid>
+      <description>Hugo  휴고 다운로드
+   So cutey
+  Hugo는 Go언어를 기반으로 Go 언어를 이용한 프로그램 사용 및 수정
+  Markdown으로 글을 작성
+  git을 활용한 글 관리 및 버전 관리
+     Hugo 적용    Hugo 환경변수 등록
+  휴고 사이트 시작
+  hugo new site testprojectcd testprojecthugo server -D  테마 적용    Hugo 테마 다운로드</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://mung0001.github.io/docs/programing/golang/golang/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -768,45 +798,6 @@ This document is a brief primer on using Go templates.</description>
       
       <guid>https://mung0001.github.io/docs/programing/web/html/</guid>
       <description>HTML   HTML 기본양식...&amp;lt;head&amp;gt;&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt;&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;   태그   줄 바꾸기 &amp;lt;br&amp;gt; 구분선 &amp;lt;hr&amp;gt; 제목 &amp;lt;h1- h6&amp;gt; &amp;lt;/hn&amp;gt; 문단 &amp;lt;p&amp;gt; &amp;lt;/p&amp;gt; 입력을 그대로 표시하는 태그 &amp;lt;pre&amp;gt; &amp;lt;/pre&amp;gt; 인용문을 넣는 태그 &amp;lt;blockquote&amp;gt; &amp;lt;/blockquote&amp;gt; 인용문을 인 라인에 넣는 태그 &amp;lt;q&amp;gt; &amp;lt;/q&amp;gt;  text   밑줄 &amp;lt;u&amp;gt; &amp;lt;/u&amp;gt; 굵은 텍스트 &amp;lt;b&amp;gt; &amp;lt;/b&amp;gt; 텍스트 강조 &amp;lt;strong&amp;gt; &amp;lt;/strong&amp;gt; 형광펜 텍스트 &amp;lt;mark&amp;gt;&amp;lt;/mark&amp;gt; 동아시아 글자 표시 rt는 읽는 방법표기법 &amp;lt;ruby&amp;gt; &amp;lt;rt&amp;gt; &amp;lt;/rt&amp;gt; &amp;lt;/ruby&amp;gt; 이탤릭 체 Emphasized tag &amp;lt;em&amp;gt; &amp;lt;/em&amp;gt; 줄 찍 &amp;lt;del&amp;gt; &amp;lt;/del&amp;gt; 인설트 태그 &amp;lt;ins&amp;gt; &amp;lt;/ins&amp;gt; This is &amp;lt;sub&amp;gt; sub &amp;lt;sub&amp;gt; text &amp;lt;/sub&amp;gt; &amp;lt;/sub&amp;gt; &amp;lt; &amp;gt; 태그 요소 &amp;amp;lt; &amp;amp;gt; 스페이스바 &amp;amp;nbsp; 약자 속성, title 속성을 함께 사용가능 &amp;lt;addr&amp;gt; &amp;lt;/addr&amp;gt; 포스트에서 참고 내용을 표시 &amp;lt;cite&amp;gt; &amp;lt;/cite&amp;gt; 컴퓨터 인식코드 &amp;lt;code&amp;gt; &amp;lt;/code&amp;gt; 키보드, 음성 입력 &amp;lt;kbd&amp;gt; &amp;lt;/kbd&amp;gt; 작게 표시 (부가정보) &amp;lt;small&amp;gt; &amp;lt;/small&amp;gt; 아래 첨자 &amp;lt;sub&amp;gt; &amp;lt;/sub&amp;gt; 위 첨자 &amp;lt;sup&amp;gt; &amp;lt;/sup&amp;gt; 취소선 &amp;lt;s&amp;gt; &amp;lt;/s&amp;gt;  List  #list&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;ul의 종류: disc, circle, sqaure, none&amp;lt;ol&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&amp;lt;ol&amp;gt;ol의 종류: 1, i, l, a, A, none&amp;lt;dl&amp;gt;&amp;lt;dt&amp;gt; &amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt; &amp;lt;/dd&amp;gt;&amp;lt;dt&amp;gt; &amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt; &amp;lt;/dd&amp;gt;&amp;lt;/dl&amp;gt;&amp;lt;h1 style= &amp;#34; 설정 값 &amp;#34; &amp;gt; &amp;lt;/h1&amp;gt;p {color : xx;background: xx;adding: xx;}xx-color: rgb(x,x,x);#xxxxxx;hsl(x,x%,x%)  링크태그   인터넷 링크 &amp;lt;a href=&amp;#34;링크할 주소&amp;#34; [속성=&amp;#34;속성 값&amp;#34;]&amp;gt; &amp;lt;/a&amp;gt;&amp;lt;a href =&amp;#34;도메인 주소&amp;#34;&amp;gt; &amp;lt;/a&amp;gt;a 태그 안에서 사용 가능한 요소href링크한 문서나 사이트의 주소를 입력target링크한 내용이 표시될 위치를 지정target =&amp;#34;_blank&amp;#34; 링크 내용이 새 창이나 새 탭에서 열림열림표시전체 화면에 표시download링크한 내용을 보여주는 것이 아니라 다운로드rel현재 문서와 링크한 문서의 관계를 알려줌hreflang링크한 문서의 언어를 지정type링크한 문서의 파일 유형을 알려줌a 대신 iframe을 사용시 액자식 구성 사용 가능앵커 기능&amp;lt;태그 id=&amp;#34;앵커 이름&amp;#34;&amp;gt; 텍스트 또는 이미지&amp;lt;/태그&amp;gt;&amp;lt;a href=&amp;#34;#앵커 이름&amp;#34;&amp;gt;텍스트 또는 이미지&amp;lt;/a&amp;gt;  이미지 링크  &amp;lt;img src=&amp;quot;이미지의 경로&amp;quot; 속성값=&amp;quot;&amp;quot;&amp;gt;width=&amp;quot;n&amp;quot;이미지의 넓이를 지정height=&amp;quot;n&amp;quot;이미지의 높이를 지정alt=&amp;quot;설명&amp;quot;이미지의 설명을 지정&amp;lt;figure&amp;gt; 요소 &amp;lt;/figure&amp;gt;&amp;lt;figcaption&amp;gt; 설명 &amp;lt;/figcaption&amp;gt;요소로 묶은 것에 대한 설명을 붙임&amp;lt;map name=&amp;quot;이름&amp;quot;&amp;gt;&amp;lt;area&amp;gt;&amp;lt;area shape=&amp;quot;rect&amp;quot; coords=&amp;quot;n,n,n,n&amp;quot; href=&amp;quot;주소&amp;quot; alt=&amp;quot;설명&amp;quot;&amp;gt;.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/bigdata/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/bigdata/</guid>
-      <description>빅데이터란  Bigdata    빅데이터는 큰 사이즈의 데이터로부터 유의미한 지표를 분석해내는 행위 SNS, 로그, 문서 등 다양한 경로를 통해 수집한 여러가지 형태의 많은 양의 데이터를 이용하여 의사결정에 도움을 주는 지표를 분석하여 제공하는 것   Bigdata가 대두 되어지는 이유  데이터 양의 증가와 데이터 저장기술 발달 경제적 타당성 증가/ 저장장치의 가격 인하 데이터 처리 기술의 발달   Bigdata 5V  Volume - 크기  저장장치 가격의 하락, 네트워크 속도의 향상으로 수 페타바이트의 데이터가 매일 생성   Variety - 다양성  정형, 반정형, 비정형 형태의 다양한 데이터를 분석   Velocity - 속도  정보의 유통 속도가 굉장히 빠름.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/git/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/git/</guid>
-      <description>Git&amp;amp;&amp;amp; Github  깃 ( git )    Git 공식 홈페이지 에서 다운로드
-  형상 관리 도구 ( Configuration Management Tool )인 분산형 관리 시스템
-  무료, 공개소프트웨어 서비스
-  소스코드를 주고 받을 필요 없이, 같은 파일을 여러 명이 동시에 작업하는 병렬 개발이 가능
-  분산 버전관리이기 때문에 인터넷이 연결되지 않은 곳에서도 개발을 진행할 수 있으며, 중앙 저장소가 날라가벌도 다시 원상복구가 가능
-     git의 특징   버전관리   깃에서 버전이란 문서를 수정하고 저장할 때마다 생기는 지점</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/hugo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/%EC%A0%95%EB%A6%AC%EC%A0%84/hugo/</guid>
-      <description>Hugo  휴고 다운로드
-   So cutey
-  Hugo는 Go언어를 기반으로 Go 언어를 이용한 프로그램 사용 및 수정
-  Markdown으로 글을 작성
-  git을 활용한 글 관리 및 버전 관리
-     Hugo 적용    Hugo 환경변수 등록
-  휴고 사이트 시작
-  hugo new site testprojectcd testprojecthugo server -D  테마 적용    Hugo 테마 다운로드</description>
     </item>
     
     <item>
