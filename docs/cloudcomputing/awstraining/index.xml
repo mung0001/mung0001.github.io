@@ -91,6 +91,15 @@
     </item>
     
     <item>
+      <title>AWS AutoScaling</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/as/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/as/</guid>
+      <description>AWS AutoScaling    이번 장에서는 CloudComputing의 꽃이라고도 할 수 있는 AutoScaling 서비스를 구축해보겠습니다. AutoSacling의 대한 개념은 AutoScaling을 참조해주세요.    AWS AutoScaling ( 이하 As )      As 그룹 생성을 위해 AWS에 접속 합니다. 인스턴스를 생성하여, Apache가 자동시작되어있게 설정 후, AMI를 생성합니다. AMI 생성 참고      AMI 생성 후, As 그룹 생성을 위해 좌측의 메뉴에서 Auto Scaling &amp;gt; Auto Scaling 그룹 생성을 클릭합니다.</description>
+    </item>
+    
+    <item>
       <title>AWS RDS 생성</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/rds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -115,15 +124,6 @@
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/s3/</guid>
       <description>AWS S3 생성    이번 장에서는 S3를 생성해보도록 하겠습니다. S3 또한 중요한 개념이니, S3에 대한 학습을 원하는 분들은 AWS S3를 참조해주세요.    AWS S3 생성       AWS 서비스에서 S3를 검색합니다.      버킷 생성을 클릭합니다.      버킷의 이름과 리전을 선택합니다. 참고로 S3는 VPC에 영향을 받지 않습니다.      옵션을 선택합니다. 여기서는 기본 값으로 생성을 진행합니다.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/base/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/base/</guid>
-      <description>****    ****          예제 1. 다음의 인스턴스를 생성해보세요.  예제 1. 답안↕ 사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다. 정책에서 admin의 권한을 선택 후 생성합니다.  </description>
     </item>
     
     <item>
@@ -170,6 +170,15 @@
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/elasticbeanstalk/</guid>
       <description>Elastic Beanstalk 사이트 구축    이번 장에서는 Elastic Beanstalk를 활용해서 WordPress 사이트를 구축해보겠습니다. Elastic Beanstalk가 무엇인지는 Elastic Beanstalk를 참조해주세요.    Elastic Beanstalk 사이트 구축      Elastic Beanstalk는 zip 형식으로 애플리케이션을 압축해서 AWS 상에 업로드 할 수 있습니다. WordPress를 사용하기 위해 WordPress에서 zip 형식으로 다운로드 합니다.      다운로드가 완료되면 AWS에서 Elastic Beanstalk를 검색합니다.      Elastic Beanstalk의 생성을 위해 Create Application을 클릭합니다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/base/</guid>
+      <description>****    ****          예제 1. 다음의 인스턴스를 생성해보세요.  예제 1. 답안↕ 사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다. 정책에서 admin의 권한을 선택 후 생성합니다.  </description>
     </item>
     
   </channel>

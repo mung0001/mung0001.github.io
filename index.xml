@@ -237,6 +237,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>AWS AutoScaling</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/as/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/as/</guid>
+      <description>AWS AutoScaling    이번 장에서는 CloudComputing의 꽃이라고도 할 수 있는 AutoScaling 서비스를 구축해보겠습니다. AutoSacling의 대한 개념은 AutoScaling을 참조해주세요.    AWS AutoScaling ( 이하 As )      As 그룹 생성을 위해 AWS에 접속 합니다. 인스턴스를 생성하여, Apache가 자동시작되어있게 설정 후, AMI를 생성합니다. AMI 생성 참고      AMI 생성 후, As 그룹 생성을 위해 좌측의 메뉴에서 Auto Scaling &amp;gt; Auto Scaling 그룹 생성을 클릭합니다.</description>
+    </item>
+    
+    <item>
       <title>AWS RDS 생성</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/rds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -451,15 +460,6 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
     </item>
     
     <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/base/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/base/</guid>
-      <description>****    ****          예제 1. 다음의 인스턴스를 생성해보세요.  예제 1. 답안↕ 사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다. 정책에서 admin의 권한을 선택 후 생성합니다.  </description>
-    </item>
-    
-    <item>
       <title>AWS 계정</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws-%EA%B3%84%EC%A0%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -556,6 +556,15 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_sdk/</guid>
       <description>AWS SDK   AWS SDK  AWS SDK </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/base/</guid>
+      <description>****    ****          예제 1. 다음의 인스턴스를 생성해보세요.  예제 1. 답안↕ 사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다. 정책에서 admin의 권한을 선택 후 생성합니다.  </description>
     </item>
     
     <item>
