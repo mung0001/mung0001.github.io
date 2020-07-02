@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mail 서버 생성   단계  SSL 보안 인증서 발급받기  도메인 주소   메일서버 설치   Ubuntu 18.04
+   SSL 보안 인증서 발급받기  1. 도메인 주소 설정  SSL 보안 인증서를 사용하기 위해서는 http://도메인으로 해당 사이트에 접근이 가능해아합니다. 이미 도메인 주소가 있으신 분은 그것을 사용하고, 없으신 분은 Link에서 무료 도메인을 사용하시면 됩니다.   2. SSL  무료 SSL을 생성합니다.  $ sudo apt-get install -y postfix# postfix 설치   VMware에 NAS 설치   Vmware에서 Custom으로 Virtual Machine을 설치합니다."><meta property="og:title" content="" />
+<meta property="og:description" content="Mail 서버 생성   단계  SSL 보안 인증서 발급받기  도메인 주소   메일서버 설치   Ubuntu 18.04
+   SSL 보안 인증서 발급받기  1. 도메인 주소 설정  SSL 보안 인증서를 사용하기 위해서는 http://도메인으로 해당 사이트에 접근이 가능해아합니다. 이미 도메인 주소가 있으신 분은 그것을 사용하고, 없으신 분은 Link에서 무료 도메인을 사용하시면 됩니다.   2. SSL  무료 SSL을 생성합니다.  $ sudo apt-get install -y postfix# postfix 설치   VMware에 NAS 설치   Vmware에서 Custom으로 Virtual Machine을 설치합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/mail/mail-server/" />
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.b316485e3c726ca9bf0e3f76323cec8ea6d48cf56bfa05191b6378d56a4032c3.js" integrity="sha256-sxZIXjxybKm/Dj92MjzsjqbUjPVr&#43;gUZG2N41WpAMsM="></script>
+<!--
+
+-->
+
+  
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<img style="padding-left: 3%; padding-right: 1%;"src = "https://github.com/mung0001/source/blob/master/static/Go/Golang.jpg?raw=true" width="90%" height="13%" >
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+  <div>
+    Comment : 내 직장도 뭉게뭉게
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/cloudcomputing/" class="">CloudComputing</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/" class="collapsed ">Amazon Web Service</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/docker/" class="collapsed ">Docker</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/openstack/" class="collapsed ">OpenStack</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/programing/" class="">Programing</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/python/" class="collapsed ">Python</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/network/" class="">Network</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/" class="collapsed ">정리전</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/system/" class="">System</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  
+  <a href="/docs/system/mail/mail-server/" class="active">Mail Server</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Project</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/project/mini/" class="collapsed ">M Ini</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Mail Server</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#단계">단계</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#ssl-보안-인증서-발급받기">SSL 보안 인증서 발급받기</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-도메인-주소-설정">1. 도메인 주소 설정</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#2-ssl">2. SSL</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#vmware에-nas-설치">VMware에 NAS 설치</a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="mail-서버-생성">Mail 서버 생성</h1>
+<hr>
+<h1 id="heading"></h1>
+<h2 id="단계">단계</h2>
+<ol>
+<li>SSL 보안 인증서 발급받기
+<ol>
+<li>도메인 주소</li>
+</ol>
+</li>
+<li>메일서버 설치</li>
+<li></li>
+</ol>
+<p>Ubuntu 18.04</p>
+<h1 id="heading-1"></h1>
+<p> </p>
+<h1 id="heading-2"></h1>
+<h2 id="ssl-보안-인증서-발급받기">SSL 보안 인증서 발급받기</h2>
+<h1 id="heading-3"></h1>
+<h3 id="1-도메인-주소-설정">1. 도메인 주소 설정</h3>
+<p><img src="/System/Mail/mail01.png" alt="Mail" /></p>
+<ul>
+<li><strong>SSL 보안 인증서를 사용하기 위해서는 http://도메인으로 해당 사이트에 접근이 가능해아합니다.</strong></li>
+<li><strong>이미 도메인 주소가 있으신 분은 그것을 사용하고, 없으신 분은 <a href="https://xn--220b31d95hq8o.xn--3e0b707e/">Link</a>에서 무료 도메인을 사용하시면 됩니다.</strong></li>
+</ul>
+<h1 id="heading-4"></h1>
+<h3 id="2-ssl">2. SSL</h3>
+<p><img src="/System/Mail/mail02.png" alt="Mail" /></p>
+<ul>
+<li><strong>무료 SSL을 생성합니다.</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ sudo apt-get install -y postfix
+# postfix 설치
+</code></pre></div><h1 id="heading-5"></h1>
+<p> </p>
+<h1 id="heading-6"></h1>
+<h2 id="vmware에-nas-설치">VMware에 NAS 설치</h2>
+<h1 id="heading-7"></h1>
+<p><img src="/System/NAS/NAS01.png" alt="NAS" /></p>
+<ul>
+<li><strong>Vmware에서 Custom으로 Virtual Machine을 설치합니다.</strong></li>
+</ul>
+<h1 id="heading-8"></h1>
+<p> </p>
+<h1 id="heading-9"></h1>
+<p><img src="/System/NAS/NAS02.png" alt="NAS" /><br>
+<img src="/System/NAS/NAS03.png" alt="NAS" /></p>
+<ul>
+<li><strong>14 혹은 15 버전을 선택 후 iso파일을 선택합니다.</strong></li>
+<li><strong>파일이 없을시 <a href="">Link</a>에서 다운로드 합니다..</strong></li>
+</ul>
+<h1 id="heading-10"></h1>
+<p> </p>
+<h1 id="heading-11"></h1>
+<p><img src="/System/NAS/NAS04.png" alt="NAS" /></p>
+<ul>
+<li><strong>운영체제는 Linux에서 2.6.x Kernel 64-bit를 선택합니다.</strong></li>
+</ul>
+<h1 id="heading-12"></h1>
+<p> </p>
+<h1 id="heading-13"></h1>
+<p><img src="/System/NAS/NAS05.png" alt="NAS" /></p>
+<ul>
+<li><strong>Virtual Machine의 이름을 지정합니다.</strong></li>
+</ul>
+<h1 id="heading-14"></h1>
+<p> </p>
+<h1 id="heading-15"></h1>
+<p><img src="/System/NAS/NAS06.png" alt="NAS" /></p>
+<ul>
+<li><strong>코어 할당량을 지정합니다. ( 여기서는 빠른 설치를 위해 2/2개를 할당하였습니다. )</strong></li>
+</ul>
+<h1 id="heading-16"></h1>
+<p> </p>
+<h1 id="heading-17"></h1>
+<p><img src="/System/NAS/NAS07.png" alt="NAS" /></p>
+<ul>
+<li><strong>RAM을 할당을 지정합니다. ( 여기서는 빠른 설치를 위해 4G을 할당하였습니다.</strong></li>
+</ul>
+<h1 id="heading-18"></h1>
+<p> </p>
+<h1 id="heading-19"></h1>
+<p><img src="/System/NAS/NAS08.png" alt="NAS" /></p>
+<ul>
+<li><strong>접속의 편리를 위해 Nat로 선택합니다.</strong></li>
+</ul>
+<h1 id="heading-20"></h1>
+<p> </p>
+<h1 id="heading-21"></h1>
+<p><img src="/System/NAS/NAS09.png" alt="NAS" /></p>
+<ul>
+<li><strong>LSILogic으르 선택합니다.</strong></li>
+</ul>
+<h1 id="heading-22"></h1>
+<p> </p>
+<h1 id="heading-23"></h1>
+<p><img src="/System/NAS/NAS10.png" alt="NAS" /></p>
+<ul>
+<li><strong>SATA를 선택합니다.</strong></li>
+</ul>
+<h1 id="heading-24"></h1>
+<p><img src="/System/NAS/NAS11.png" alt="NAS" /><br>
+<img src="/System/NAS/NAS12.png" alt="NAS" /><br>
+<img src="/System/NAS/NAS13.png" alt="NAS" /></p>
+<ul>
+<li><strong>Use an existing virtual disk를 선택 후, synoboot.vmdk를 임포트 시킵니다.</strong></li>
+</ul>
+<h1 id="heading-25"></h1>
+<p> </p>
+<h1 id="heading-26"></h1>
+<p><img src="/System/NAS/NAS14.png" alt="NAS" /></p>
+<ul>
+<li><strong>설정 창이 뜨면 기존 포맷을 유지시킵니다.</strong></li>
+</ul>
+<h1 id="heading-27"></h1>
+<p> </p>
+<h1 id="heading-28"></h1>
+<p><img src="/System/NAS/NAS15.png" alt="NAS" /><br>
+<img src="/System/NAS/NAS16.png" alt="NAS" /><br>
+<img src="/System/NAS/NAS17.png" alt="NAS" /><br>
+<img src="/System/NAS/NAS18.png" alt="NAS" /></p>
+<ul>
+<li><strong>NAS를 실행시키기 전에 하드를 추가시킵니다. ( 여기서는 20G 하나만 추가시키겠습니다. )</strong></li>
+</ul>
+<h1 id="heading-29"></h1>
+<p> </p>
+<h1 id="heading-30"></h1>
+<p><img src="/System/NAS/NAS19.png" alt="NAS" /></p>
+<ul>
+<li><strong>실행 후, 1분이 경과하면 <a href="http://find.synology.com">find.synology.com</a>에 접속합니다.</strong></li>
+</ul>
+<h1 id="heading-31"></h1>
+<p> </p>
+<h1 id="heading-32"></h1>
+<p><img src="/System/NAS/NAS20.png" alt="NAS" /></p>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-33"></h1>
+<p> </p>
+<h1 id="heading-34"></h1>
+<p><img src="/System/NAS/NAS21.png" alt="NAS" /></p>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-35"></h1>
+<p> </p>
+<h1 id="heading-36"></h1>
+<p><img src="/System/NAS/NAS0.png" alt="NAS" /></p>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-37"></h1>
+<p> </p>
+<h1 id="heading-38"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">
+</code></pre></div><ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-39"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">
+</code></pre></div><ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-40"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">
+</code></pre></div><ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-41"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">
+</code></pre></div><ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-42"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">
+</code></pre></div><ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-43"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">
+</code></pre></div><ul>
+<li>
+<hr>
+</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#단계">단계</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#ssl-보안-인증서-발급받기">SSL 보안 인증서 발급받기</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-도메인-주소-설정">1. 도메인 주소 설정</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#2-ssl">2. SSL</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#vmware에-nas-설치">VMware에 NAS 설치</a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
