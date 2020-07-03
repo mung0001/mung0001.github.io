@@ -128,6 +128,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_analysis/</loc>
   </url>
   
@@ -157,6 +161,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_as/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/docker/</loc>
   </url>
   
   <url>
@@ -236,15 +244,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/docker/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/programing/git/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/</loc>
   </url>
   
   <url>
@@ -284,6 +284,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/cloudformation/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/noserver/</loc>
   </url>
   
@@ -297,6 +301,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/elasticbeanstalk/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/ses/</loc>
   </url>
   
   <url>
