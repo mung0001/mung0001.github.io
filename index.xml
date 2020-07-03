@@ -224,7 +224,7 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_security/</guid>
-      <description>AWS Security    AWS가 제공하는 기본적인 보안 서비스      AWS 제공 서비스 서비스 개요     통신 경로 암호화 AWS 매니지먼트 콘솔로의 접속 또는 API를 사용할 때 HTTPS를 사용해 데이터를 암호화합니다.   Security Group&amp;amp; NetworkACL 인스턴스들의 보안 그룹과 서브넷들의 통신 허가/ 거부 설정을 하는 네트워크 ACL을 사용해 예상하지 못하는 통신을 사전차단합니다.   Identity and Access Management(IAM) 사용자의 역할을 분리하고 최소한의 권한만을 부여하여 보안을 유지합니다.</description>
+      <description>AWS Security    기본적으로 AWS의 보안적 요소는 설비, 인프라 등과 관련된 물리적인 부분과 네트워크 인프라 등은 AWS가 책임을 지고 보안 대책을 수행합니다. 이러한 인프라 위의 OS, 애플리케이션, 네트워크 설정, 계정 관리 등은 사용자가 책임을 져야 하는 공유 책임 모델의 구조를 띄고 있습니다.    AWS가 제공하는 기본적인 보안 서비스      AWS 제공 서비스 서비스 개요     통신 경로 암호화 AWS 매니지먼트 콘솔로의 접속 또는 API를 사용할 때 HTTPS를 사용해 데이터를 암호화합니다.</description>
     </item>
     
     <item>
