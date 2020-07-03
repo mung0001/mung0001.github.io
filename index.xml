@@ -529,6 +529,15 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
     </item>
     
     <item>
+      <title>AWS Cognito</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/cognito/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/cognito/</guid>
+      <description>AWS Cognito    AWS Cognito      Cognito는 기본적으로 모바일에서 인증을 진행 후, 인증 혹은 비인증에 해당하는 리소스에 대한 사용 권한을 부여 받는 형식으로 진행됩니다.      Cognito 서비스 사용을 위해서 먼저, AWS에 접속하여 Cognito를 검색합니다. Cognito에 대한 개념은 Cognito를 참고하세요.      Cognito의 메인 페이지에서 &amp;gt; 자격 증명 풀 관리를 클릭합니다.      새 자격 증명 풀을 생성합니다.</description>
+    </item>
+    
+    <item>
       <title>EC2 동적 사이트 구축</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/ec2site/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -556,7 +565,7 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
 1. Simple Email Service ( SES ) 사용
 2. EC2 인스턴스로 메일 서버를 구축
 3. 서드 파티 도구를 사용
-   AWS SES 메일 시스템 구축                                                                                          예제 1.</description>
+   AWS SES 메일 시스템 구축      먼저, SES 서비스를 이용하기 위해 AWS에서 SES를 검색합니다.</description>
     </item>
     
     <item>
