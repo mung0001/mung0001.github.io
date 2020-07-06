@@ -204,6 +204,15 @@
     </item>
     
     <item>
+      <title>AWS Lambda Crawling</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/aws-lambda-crawling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/aws-lambda-crawling/</guid>
+      <description>AWS Lambda Crawling    AWS Lambda Crawling                     $ pip3 install [ Package ] -t .$ pip3 install bs4 -t .$ &amp;#39;[ 7z 경로, 다른 zip도 가능 ]&amp;#39; a &amp;#39;[ 압축할 패키지 이름 ]&amp;#39; &amp;#39;[ 압축할 패키지 경로 ]&amp;#39; $ &amp;#39;C:\Program Files\7-Zip\7z.exe&amp;#39; a &amp;#39;C:\AWSLambda\bs4.zip&amp;#39; &amp;#39;.&amp;#39;                                                                                     예제 1.</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/base/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

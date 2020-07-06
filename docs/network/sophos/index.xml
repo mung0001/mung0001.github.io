@@ -19,5 +19,14 @@
       <description>Sophos 설치    구성환경    Sophos는 nat을 외부대역으로 Host 2 ( 20.20.20.0/24 )를 내부대역으로 갖습니다. Sophos의 설치를 위해 내부 대역 ( Host 2 )의 Win 7을 통해 설치를 진행합니다.      Sophos 설치를 위한 Vm을 설정합니다.       운영체제 버전에서 Other Linux 2.6x kernel을 선택합니다. 그 후 RAM 1G 디스크 20G 외에는 기본 값으로 진행합니다.      위 그림과 같이 설정이 생성이 완료되면 설정을 위해 Edit virtual machine settings를 클릭합니다.</description>
     </item>
     
+    <item>
+      <title>Sophos 방화벽 구축</title>
+      <link>https://mung0001.github.io/docs/network/sophos/sophos_2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/network/sophos/sophos_2/</guid>
+      <description>Sophos 방화벽 구축    구성환경    저번 장에 이어 이번에는 10.10.10.0/24 서버를 한 개 추가하여 방화벽을 구축해보도록 하겠습니다. 먼저, 다음과 같이 환경을 세팅합니다.                                                                                             </description>
+    </item>
+    
   </channel>
 </rss>

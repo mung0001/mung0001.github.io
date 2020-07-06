@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://mung0001.github.io/</loc>
-    <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -40,6 +40,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/docker/docker-1/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/%EC%A0%95%EB%A6%AC/</loc>
   </url>
   
@@ -60,6 +64,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/network/sophos/sophos_1/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_computing/</loc>
   </url>
   
@@ -72,7 +80,15 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/docker/docker-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/system/mail/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/network/sophos/sophos_2/</loc>
   </url>
   
   <url>
@@ -85,6 +101,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_storage/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/docker/docker-3/</loc>
   </url>
   
   <url>
@@ -308,6 +328,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/aws-lambda-crawling/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_cli/</loc>
   </url>
   
@@ -320,6 +344,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/docker/base/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/openstack-%EB%AA%85%EB%A0%B9%EC%96%B4/</loc>
   </url>
   
@@ -328,22 +356,47 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/tags/aws/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/categories/aws/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/posts/</loc>
-    <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/categories/</loc>
-    <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/categories/os/</loc>
-    <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+    <loc>https://mung0001.github.io/tags/lambda/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/posts/lambda/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/tags/serverless/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/tags/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/categories/os/</loc>
     <lastmod>2020-07-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -509,10 +562,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/network/sophos/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/network/sophos/sophos_1/</loc>
   </url>
   
 </urlset>
