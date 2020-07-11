@@ -97,6 +97,17 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>Network</title>
+      <link>https://mung0001.github.io/docs/network/network/natwork-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/network/network/natwork-1/</guid>
+      <description>Network    Network란 무엇인가?       네트워크란 물리적으로 떨어져 있는 여러 시스템을 연결하여 데이터를 주고 받을 수 있게 연결되어 있는 시스템
+  노드들이 데이터를 공휴할 수 있게 하는 디지털 전기 통신망의 한 종류로, 분산되어 있는 컴퓨터를 통신망을 통해 연결한 것을 말한다.
+  흔히 사람들은 네트워크와 인터넷을 함께 혼용하지만 인터넷은 문서, 그림, 영상과 같은 여러가지 데이터를 공유하도록 구성된 거대한 네트워크를 의미로, 인터넷이 네트워크에 포함되어 있다고 할 수 있다.</description>
+    </item>
+    
+    <item>
       <title>Sophos 설치</title>
       <link>https://mung0001.github.io/docs/network/sophos/sophos_1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -671,6 +682,15 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstack/openstack-%EB%AA%85%EB%A0%B9%EC%96%B4/</guid>
       <description>OpenStack 명령어 입력시, 옵션이 많으니 사용 시 사전에 확인할 것
 대부분의 명령어 입력은 기본 값으로 진행 compute service   인스턴스 리스트 출력  openstack server list  인스턴스 생성  openstack server create --image [] --flavor [] --key-name [] --network [] [ server_name ]  인스턴스 제거  openstack server delete [ 서버 이름 ]  인스턴스 시작  openstack server start [ 서버 이름 ]  인스턴스 정지  openstack server stop [ 서버 이름 ]   인스턴스 상세설명  openstack server show [ 서버 이름 ]  인스턴스 수정  openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/network/network/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/network/network/base/</guid>
+      <description>****    ****          </description>
     </item>
     
     <item>
