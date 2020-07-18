@@ -657,6 +657,15 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
     </item>
     
     <item>
+      <title>Openstack Stain Manual 설치</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstack/openstack-stein/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstack/openstack-stein/</guid>
+      <description>Openstack Stain Manual 설치    1. 시스템 및 네트워크 구성   여기서는 Nat 네트워크를 외부, host1 대역을 내부로 사용하여 Openstack을 구축해보도록 하겠습니다.    운영체제 및 네트워크 구성  Hypervisor : Vmware Workstation 15 OS : CentOS7      노드 구성     OS Hostname Network Interface Network Interface2 CPU RAM DISK     CentOS7 controller Nat ( 192.168.10.100 ) HOST1 ( 10.</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/base/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
