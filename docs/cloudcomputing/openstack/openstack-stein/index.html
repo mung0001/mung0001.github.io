@@ -14,7 +14,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.20fd7baf25aa7f8e25c473f96d19700df687975fd8cae119e3f5dd79e6e382b9.js" integrity="sha256-IP17ryWqf44lxHP5bRlwDfaHl1/YyuEZ4/Xdeebjgrk="></script>
+<script defer src="/en.search.min.1046fd073e43819ea5fecce75d982753cb00d3322a88a931f99a1918ad7c8461.js" integrity="sha256-EEb9Bz5DgZ6l/sznXZgnU8sA0zIqiKkx&#43;ZoZGK18hGE="></script>
 <!--
 
 -->
@@ -1795,7 +1795,7 @@ $ systemctl restart openstack-nova-api
 <p> </p>
 <h1 id="heading-45"></h1>
 <ul>
-<li><strong>이제 다음으로는 compute 노드에 구현해보도록 하겠습니다.</strong></li>
+<li><strong>이제 다음으로는 network 노드에 구현해보도록 하겠습니다.</strong></li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ yum --enablerepo=centos-openstack-stein,epel -y install openstack-neutron openstack-neutron-ml2 openstack-neutron-openvswitch libibverbs
 # neutron 패키지를 설치합니다.
@@ -1864,6 +1864,89 @@ enable_ipset = true
 # openvswitch_agent.ini 파일의 하단에 추가합니다.
 </code></pre></div><h1 id="heading-47"></h1>
 <ul>
+<li><strong>Selinux 및 방화벽 설정</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ yum --enablerepo=centos-openstack-stein -y install openstack-selinux
+$ setsebool -P neutron_can_network on
+$ setsebool -P haproxy_connect_any on
+$ setsebool -P daemons_enable_cluster_mode on
+$ vi my-ovsofctl.te
+# create new
+module my-ovsofctl 1.0;
+
+require <span style="color:#75715e">{</span>
+        <span style="color:#a6e22e">type</span> <span style="color:#a6e22e">neutron_t</span><span style="color:#f92672">;</span>
+        <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">capability</span> <span style="color:#a6e22e">sys_rawio</span><span style="color:#f92672">;</span>
+<span style="color:#75715e">}</span>
+
+#============= neutron_t ==============
+allow neutron_t self:capability sys_rawio;
+
+$ checkmodule -m -M -o my-ovsofctl.mod my-ovsofctl.te 
+$ semodule_package --outfile my-ovsofctl.pp --module my-ovsofctl.mod 
+$ semodule -i my-ovsofctl.pp 
+# Selinux 및 방화벽을 추가설정합니다.
+</code></pre></div><h1 id="heading-48"></h1>
+<ul>
+<li><strong>시스템을 재시작 합니다.</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ ln -s /etc/neutron/plugins/ml2/ml2_conf.ini /etc/neutron/plugin.ini
+$ systemctl start openvswitch
+$ systemctl enable openvswitch
+$ ovs-vsctl add-br br-int
+$ systemctl restart openstack-nova-compute
+$ systemctl start neutron-openvswitch-agent
+$ systemctl enable neutron-openvswitch-agent
+</code></pre></div><h1 id="heading-49"></h1>
+<ul>
+<li><strong>이어서 compute 노드에서의 설정을 진행하겠습니다.</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ yum --enablerepo=centos-openstack-stein,epel -y install openstack-neutron openstack-neutron-ml2 openstack-neutron-openvswitch
+# neutron 패키지를 설치합니다.
+</code></pre></div><h1 id="heading-50"></h1>
+<ul>
+<li><strong>neutron 설정합니다.</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ vi /etc/neutron/neutron.conf
+[DEFAULT]
+core_plugin = ml2
+service_plugins = router
+auth_strategy = keystone
+stae_path = /var/lib/neutron
+allow_overlapping_ips = True
+
+transport_url = rabbit://openstack:qwer1234@controller
+
+[keystone_authtoken]
+www_authenticate_uri = http://controller:5000
+auth_url = http://controller:5000
+memcached_servers = controller:11211
+auth_type = password
+project_domain_name = default
+user_domain_name = default
+project_name = service
+username = neutron
+password = qwer1234
+
+[oslo_concurrency]
+lock_path = $state_path/tmp
+
+$ vi /etc/neutron/plugins/ml2/ml2_conf.ini
+[ml2]
+type_drivers = flat,vlan,gre,vxlan
+tenant_network_types =
+mechanism_drivers = openvswitch
+extension_drivers = port_security
+# ml2_conf.ini 파일에 설정을 수정합니다.
+
+$ vi /etc/neutron/plugins/ml2/openvswitch_agent.ini
+[securitygroup]
+firewall_driver = openvswitch
+enable_security_group = true
+enable_ipset = true
+# openvswitch_agent.ini 파일의 하단에 추가합니다.
+</code></pre></div><h1 id="heading-51"></h1>
+<ul>
 <li><strong>이어서 Nova.conf 파일을 수정합니다.</strong></li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ vi /etc/nova/nova.conf
@@ -1886,7 +1969,7 @@ username = neutron
 password = qwer1234
 service_metadata_proxy = True
 metadata_proxy_shared_secret = metadata_secret
-</code></pre></div><h1 id="heading-48"></h1>
+</code></pre></div><h1 id="heading-52"></h1>
 <ul>
 <li><strong>Selinux 및 방화벽 설정</strong></li>
 </ul>
@@ -1910,20 +1993,20 @@ $ checkmodule -m -M -o my-ovsofctl.mod my-ovsofctl.te
 $ semodule_package --outfile my-ovsofctl.pp --module my-ovsofctl.mod 
 $ semodule -i my-ovsofctl.pp 
 # Selinux 및 방화벽을 추가설정합니다.
-</code></pre></div><h1 id="heading-49"></h1>
+</code></pre></div><h1 id="heading-53"></h1>
 <ul>
 <li><strong>시스템을 재시작 합니다.</strong></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ ln -s /etc/neutron/plugns/ml2/ml2_conf.ini /etc/neutron/plugin.ini
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ ln -s /etc/neutron/plugins/ml2/ml2_conf.ini /etc/neutron/plugin.ini
 $ systemctl start openvswitch
 $ systemctl enable openvswitch
 $ ovs-vsctl add-br br-int
 $ systemctl restart openstack-nova-compute
 $ systemctl start neutron-openvswitch-agent
 $ systemctl enable neutron-openvswitch-agent
-</code></pre></div><h1 id="heading-50"></h1>
+</code></pre></div><h1 id="heading-54"></h1>
 <p> </p>
-<h1 id="heading-51"></h1>
+<h1 id="heading-55"></h1>
 <ul>
 <li><strong>이제 다음으로는 본격적인 네트워크를 구현해보도록 하겠습니다.</strong></li>
 <li><strong>먼저 controller 노드에서 ml2 에이전트를 수정 및 추가합니다.</strong></li>
@@ -1941,23 +2024,24 @@ vni_ranges = 1:1000
 
 $ systemctl restart neutron-server
 # neutron 서비스를 재시작 합니다.
-</code></pre></div><h1 id="heading-52"></h1>
+</code></pre></div><h1 id="heading-56"></h1>
 <ul>
 <li><strong>이제 Network 노드에서의 설치를 진행해보도록 하겠습니다.</strong></li>
 </ul>
-<h1 id="heading-53"></h1>
+<h1 id="heading-57"></h1>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ yum -y install centos-release-openstack-stein
 $ sed -i -e &#34;s/enabled=1/enabled=0/g&#34; /etc/yum.repos.d/CentOS-OpenStack-stein.repo
 # stein 패키지를 등록합니다.
 
 $ yum --enablerepo=centos-openstack-stein,epel -y install openstack-neutron openstack-neutron-ml2 openstack-neutron-openvswitch libibverbs
 # neutron 패키지를 설치합니다.
-</code></pre></div><h1 id="heading-54"></h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ sudo /usr/share/openvswitch/scripts/ovs-ctl start
+</code></pre></div><h1 id="heading-58"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">####################
+$ sudo /usr/share/openvswitch/scripts/ovs-ctl start
 $ ovs-vsctl add-br br-eth1
 $ ovs-vsctl add-port br-eth1 ens33
 # 네트워크 브릿지를 생성하고, 네트워크 노드의 외부대역의 인터페이스 번호를 바인딩합니다.
-</code></pre></div><h1 id="heading-55"></h1>
+</code></pre></div><h1 id="heading-59"></h1>
 <ul>
 <li><strong>neutron 서비스 사용을 위한 설정을 진행합니다.</strong></li>
 </ul>
@@ -1991,26 +2075,26 @@ done
 
 $ systemctl stop firewalld
 $ systemctl disable firewalld
-</code></pre></div><h1 id="heading-56"></h1>
+</code></pre></div><h1 id="heading-60"></h1>
 <p> </p>
-<h1 id="heading-57"></h1>
+<h1 id="heading-61"></h1>
 <h3 id="6-2-테넌트-네트워크-환경-구축"><strong>6-2. 테넌트 네트워크 환경 구축</strong></h3>
-<h1 id="heading-58"></h1>
+<h1 id="heading-62"></h1>
 <p> </p>
-<h1 id="heading-59"></h1>
+<h1 id="heading-63"></h1>
 <h3 id="7-horizon--대시보드-서비스--구성"><strong>7. Horizon ( 대시보드 서비스 ) 구성</strong></h3>
 <hr>
 <ul>
 <li><strong>Horizon은 controller 노드에서 설치가 진행됩니다.</strong></li>
 <li><strong>에 대한 설명은 <a href="">Horizone</a>을 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-60"></h1>
+<h1 id="heading-64"></h1>
 <ul>
 <li><strong>Horizon 패키지 설치</strong></li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$  yum --enablerepo=centos-openstack-stein,epel -y install openstack-dashboard
 # Horizon 패키지를 설치합니다.
-</code></pre></div><h1 id="heading-61"></h1>
+</code></pre></div><h1 id="heading-65"></h1>
 <ul>
 <li><strong>대시보드를 설정합니다.</strong></li>
 </ul>
@@ -2053,7 +2137,7 @@ WSGISocketPrefix run/wsgi
 
 WSGIApplicationGroup %<span style="color:#75715e">{</span><span style="color:#a6e22e">GLOBAL</span><span style="color:#75715e">}</span>
 # 추가
-</code></pre></div><h1 id="heading-62"></h1>
+</code></pre></div><h1 id="heading-66"></h1>
 <ul>
 <li><strong>Selinux 및 방화벽 설정</strong></li>
 </ul>
@@ -2062,7 +2146,7 @@ $ firewall-cmd --add-service=<span style="color:#75715e">{</span><span style="co
 $ firewall-cmd --reload
 
 $ systemctl restart httpd
-</code></pre></div><h1 id="heading-63"></h1>
+</code></pre></div><h1 id="heading-67"></h1>
 <ul>
 <li>** DB 생성**</li>
 </ul>
@@ -2072,9 +2156,9 @@ mysql&gt; grant all privileges on .* to @&#39;localhost&#39; identified by &#39;
 mysql&gt; grant all privileges on .* to @&#39;%&#39; identified by &#39;pw&#39;;
 mysql&gt; flush privileges;
 #  구성을 위한 db를 생성합니다. ( 저는 편의를 위해 모든 pw로 qwer1234 설정하였습니다. )
-</code></pre></div><h1 id="heading-64"></h1>
+</code></pre></div><h1 id="heading-68"></h1>
 <p> </p>
-<h1 id="heading-65"></h1>
+<h1 id="heading-69"></h1>
 <h3 id="8-cinder--오브젝트-스토리지-및-블록-스토리지-구성-"><strong>8. Cinder ( 오브젝트 스토리지 및 블록 스토리지 구성 )</strong></h3>
 <hr>
 <ul>
@@ -2083,7 +2167,7 @@ mysql&gt; flush privileges;
 <li><strong>구성 순서는 controller &gt; compute 노드 순으로 진행하겠습니다.</strong></li>
 <li><strong>Cinder에 대한 설명은 <a href="">Cinder</a>을 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-66"></h1>
+<h1 id="heading-70"></h1>
 <ul>
 <li><strong>Cinder 서비스 등록</strong></li>
 </ul>
@@ -2098,7 +2182,7 @@ $ openstack endpoint create --region RegionOne volumev3 public http://$controlle
 $ openstack endpoint create --region RegionOne volumev3 internal http://$controller:8776/v3/%\(tenant_id\)s
 $ openstack endpoint create --region RegionOne volumev3 admin http://$controller:8776/v3/%\(tenant_id\)s
 # cinder의 endpoint를 생성합니다.
-</code></pre></div><h1 id="heading-67"></h1>
+</code></pre></div><h1 id="heading-71"></h1>
 <ul>
 <li><strong>Cinder DB 생성</strong></li>
 </ul>
@@ -2108,7 +2192,7 @@ mysql&gt; grant all privileges on cinder.* to cinder@&#39;localhost&#39; identif
 mysql&gt; grant all privileges on cinder.* to cinder@&#39;%&#39; identified by &#39;pw&#39;;
 mysql&gt; flush privileges;
 # cinder 구성을 위한 db를 생성합니다. ( 저는 편의를 위해 모든 pw로 qwer1234 설정하였습니다. )
-</code></pre></div><h1 id="heading-68"></h1>
+</code></pre></div><h1 id="heading-72"></h1>
 <ul>
 <li><strong>cinder 패키지 설치 및 수정</strong></li>
 </ul>
@@ -2155,9 +2239,9 @@ $ source ~/admin
 
 $ firewall-cmd --add-port=8776/tcp --permanent
 $ firewall-cmd --reload
-</code></pre></div><h1 id="heading-69"></h1>
+</code></pre></div><h1 id="heading-73"></h1>
 <p> </p>
-<h1 id="heading-70"></h1>
+<h1 id="heading-74"></h1>
 <ul>
 <li><strong>이어서 compute 노드에 설치를 진행하겠습니다.</strong></li>
 <li><strong>cinder 패키지 설치 및 수정</strong></li>
@@ -2205,16 +2289,18 @@ $ controller $openstack volume service list
 +------------------+------------+------+---------+-------+----------------------------+
 | cinder-scheduler | controller | nova | enabled | up    | 2020-07-20T04:02:31.000000 |
 +------------------+------------+------+---------+-------+----------------------------+
-</code></pre></div><h1 id="heading-71"></h1>
+</code></pre></div><h1 id="heading-75"></h1>
 <p> </p>
-<h1 id="heading-72"></h1>
+<h1 id="heading-76"></h1>
 <h3 id="8-2-lvm으로-블록-스토리지-백엔드-구성"><strong>8-2. LVM으로 블록 스토리지 백엔드 구성</strong></h3>
-<h1 id="heading-73"></h1>
+<h1 id="heading-77"></h1>
 <ul>
 <li><strong>compute 노드에 cinder 서비스를 설치한 것에 이어 LVM 백엔드를 설정해보도록 하겠습니다.</strong></li>
+<li><strong><a href="">VG 생성 참조</a></strong></li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ fdisk /dev/sd[ n ]
 # 만약 디스크 파티션이 없으시면 새로 생성 후 등록합니다.
+# 저는 간단하게 100G 하드를 추가한 후, cinder 이름으로 vg를 생성하였습니다.
 
 $ vi /etc/cinder/cinder.conf
 [DEFAULT]
@@ -2238,7 +2324,7 @@ $ firewall-cmd --reload
 
 $ systemctl restart openstack-cinder-volume
 # 서비스를 재시작합니다.
-</code></pre></div><h1 id="heading-74"></h1>
+</code></pre></div><h1 id="heading-78"></h1>
 <ul>
 <li><strong>이어서 compute 노드의 nova.conf 파일을 수정합니다.</strong></li>
 </ul>
@@ -2295,13 +2381,13 @@ $ openstack volume list
 | f09ee80f-3ec8-4eaf-a4a5-af13cccbd5ae | test | available |    1 |             |
 +--------------------------------------+------+-----------+------+-------------+
 
-</code></pre></div><h1 id="heading-75"></h1>
+</code></pre></div><h1 id="heading-79"></h1>
 <p> </p>
-<h1 id="heading-76"></h1>
+<h1 id="heading-80"></h1>
 <h3 id="8-3-lfs-lvm-기반-다중-스토리지-노드-구성"><strong>8-3. LFS, LVM 기반 다중 스토리지 노드 구성</strong></h3>
-<h1 id="heading-77"></h1>
+<h1 id="heading-81"></h1>
 <p> </p>
-<h1 id="heading-78"></h1>
+<h1 id="heading-82"></h1>
 <h3 id="9-swift--오브젝트-스토리지-서비스--구성"><strong>9. Swift ( 오브젝트 스토리지 서비스 ) 구성</strong></h3>
 <hr>
 <ul>
@@ -2310,7 +2396,7 @@ $ openstack volume list
 </li>
 <li><strong>에 대한 설명은 <a href=""></a>을 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-79"></h1>
+<h1 id="heading-83"></h1>
 <ul>
 <li>** DB 생성**</li>
 </ul>
@@ -2320,19 +2406,19 @@ mysql&gt; grant all privileges on .* to @&#39;localhost&#39; identified by &#39;
 mysql&gt; grant all privileges on .* to @&#39;%&#39; identified by &#39;pw&#39;;
 mysql&gt; flush privileges;
 #  구성을 위한 db를 생성합니다. ( 저는 편의를 위해 모든 pw로 qwer1234 설정하였습니다. )
-</code></pre></div><h1 id="heading-80"></h1>
-<p> </p>
-<h1 id="heading-81"></h1>
-<h3 id="10-ssl--https--접속-가능한-오픈스택-대시보드-구성"><strong>10. SSL ( HTTPS ) 접속 가능한 오픈스택 대시보드 구성</strong></h3>
-<h1 id="heading-82"></h1>
-<p> </p>
-<h1 id="heading-83"></h1>
-<h3 id="11-openstack-대시보드-메인-로고-및-링크-변경"><strong>11. Openstack 대시보드 메인 로고 및 링크 변경</strong></h3>
-<h1 id="heading-84"></h1>
+</code></pre></div><h1 id="heading-84"></h1>
 <p> </p>
 <h1 id="heading-85"></h1>
-<h3 id="12-neutron-기반-service-functon-chaining--sfc--기능-구성"><strong>12. Neutron 기반 Service Functon Chaining ( SFC ) 기능 구성</strong></h3>
+<h3 id="10-ssl--https--접속-가능한-오픈스택-대시보드-구성"><strong>10. SSL ( HTTPS ) 접속 가능한 오픈스택 대시보드 구성</strong></h3>
 <h1 id="heading-86"></h1>
+<p> </p>
+<h1 id="heading-87"></h1>
+<h3 id="11-openstack-대시보드-메인-로고-및-링크-변경"><strong>11. Openstack 대시보드 메인 로고 및 링크 변경</strong></h3>
+<h1 id="heading-88"></h1>
+<p> </p>
+<h1 id="heading-89"></h1>
+<h3 id="12-neutron-기반-service-functon-chaining--sfc--기능-구성"><strong>12. Neutron 기반 Service Functon Chaining ( SFC ) 기능 구성</strong></h3>
+<h1 id="heading-90"></h1>
 <p> 
 #</p>
 </article>
