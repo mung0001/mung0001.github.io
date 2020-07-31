@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/docs/programing/shell/</link>
+    <description>Recent content in Shell on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    
+	<atom:link href="https://mung0001.github.io/docs/programing/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/programing/shell/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/base/</guid>
+      <description>****    ****         #</description>
+    </item>
+    
+    <item>
+      <title>Shell Script</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell-1/</guid>
+      <description>Shell Script    Shell Script의 개요   UNIX/ Linux 소개 및 특징   UNIX  1969년 AT&amp;amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다 벨연구소는 대학과 연구기관에 UNIX를 활용할 수 있도록 라이선스를 제공하였으며, 버클리 대학교에서는 UNIX에 네트워크 프로토콜인 TCP/IP 등 다양한 기능을 보강하여 BSD 배포본을 제작하고 이후 파생되는 많은 UNIX에 영향을 끼쳤다.      Linux  1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원생에 의해 커널이 개발된 이래, 1984년부터 리처드 스토람에 의해 추진된 GNU 프로젝트의 다양한 소프트웨어들이 합쳐진 운영체제가 Linux이다.</description>
+    </item>
+    
+    <item>
+      <title>Shell 학습 환경 구축</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell-2/</guid>
+      <description>Shell 학습 환경 구축   기본적인 준비 프로그램   x86에 설치되지 않는 UNIX/Linux 버전은 사용이 불가능하다.(IMB의 AIX, HP의 HP-UX, SUN의 SPARC CPU 버전 Solaris 등) VMware 또는 VirtualBox 설치 기본 용량 cpu 1/1, ram 1GB, HDD 8GB(VDI, 동적할당) PuTTY를 통해 ssh 접속 PuTTY의 문자를 UTF-으로 변경
+   운영체제 이미지 파일 다운로드 구분 | 운영체제/ 배포본 | 웹 사이트 주소 UNIX | solaris | http://www.oracle.com/kr/index.html | FreeBSD | http://www.</description>
+    </item>
+    
+  </channel>
+</rss>
