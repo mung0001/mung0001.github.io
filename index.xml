@@ -172,6 +172,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>Keystone</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstack/keystone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstack/keystone/</guid>
+      <description>인증을 관리하는 서비스 : Keyston   인증을 관리하는 서비스 : Keystone   Keystone은 인증 토큰을 비롯해 테넌트 및 사용자 관리, 서비스의 엔드포인트 URL 등을 관리하는 서비스 Keystone은 openstack의 백엔드에서 RBAD ( Role Based Access Control )을 통해 사용자의 접근을 제어하는 등의 인증 ( Identify ) 서비스로 사용되며 다음과 같은 기능으로 이루어져 있음     Keystone의 구성요소      구성요소 역할     user 사람 또는 오픈 스택 서비스를 이용하는 서비스 ( nova, neutron, cinder 등 )을 의미     User은 특정 프로젝트에 할당할 수 있으며, 증복을 허용하지 않음         Authentication 사용자의 신분을 확인하는 절차로, 특정 값을 통해 Keystone이 이를 검증     보통 인증을 위한 자료로는 ID, PW가 사용되며 Keystone은 인증확인 시 인증토큰을 방행         Token RBAD의 신분을 증명하기 위해 사용되는 텍스트 데이터   Token type fernet, uuid, pki, pkiz     어떤 자원에 접근이 가능한지 범위가 지정되어 있음 ( 시간 제한 있음 )         Project Keystone V2까지 Tenant라는 이름으로 사용 ( V3 이후 Project )     어떤 자원이나 어플리케이션에 대한 권리를 가진 보안그룹     프로젝트는 특정 도메인에 의해 소유         Endpoint 사용자가 서비스를 이용하기 위해 연결정보를 제공하는 접근 가능한 네트워크 주소 ( URL )   EndPoint type admin, internal, public         Role 사용자가 어떤 동작을 수행하도록 허용하는 규칙     사용자가 가지는 역할은 사용자에게 발행된 토큰을 통해 확인     사용자가 서비스를 호출하면, 서비스는 토큰에 저장된 사용자의 역할을 해석하여 허용유무 결정         Domain 구성요소를 효과적으로 관리하기 위한 사용자, 그룹, 프로젝트의 집합     사용자들은 한 도메인의 관리자의 권한 등을 부여받는 방식으로 역할을 부여가능     Domain, Project, Group, User, Rule 개념과 관계  Keystone은 위에도 언급하였 듯이 사용자 인증 부분과 서비스 인증 부분을 관리 사용자일 때는 사용자 ID와 패스워드, 사용자 권한의 롤( Roll )을 등록 서비스일 때는 서비스를 등록하고 해당 서비스의 엔드포인트 URL을 등록  도메인(Domain)은 서로 분리되어 있음 각 도메인에는 프로젝트와 사용자가 있음 프로젝트는 사용자를 가질 수 있음 사용자에게는 롤이 있으며, 여러 프로젝트의 구성원이 될 수 있음 관리자 롤(Admin Role)을 가진 사용자끼리, 일반 사용자롤(Member Role)을 가진 사용자간의 그룹핑(Grouping)을 할 수 있음       Keystone의 논리 아키텍처   Keystone의 논리 아키텍처는 토큰(Token), 카탈로그(Catalog), 정책(Poliy), 인증(Identity) 으로 구성      구성요소 역할     Token Backend 사용자별 토큰을 관리   Catalog Backend 오픈스택에서 모든 서비스의 엔드포인트 URL을 관리   Policy Backend 테넌트, 사용자 계정, 롤 등을 관리   Identity Backend 사용자 인증을 관리       Openstack에서 Keystone 위치    Openstack Keystone은 모든 서비스를 관장하는 위치 모든 User, Service는 Keystone의 인증을 통해서만 요청, 응답이 가능 Keystone은 타인이나 해커에게서 시스템을 안전하게 보호하고 사용자 등록, 삭제, 권한 관리, 사용자가 접근할 수 있는 서비스 포인트 관리와 다른 API들의 인증 등의 전체적인 인증 프로세스를 관리하는 역할을 수행    </description>
+    </item>
+    
+    <item>
       <title>Sophos 방화벽 구축</title>
       <link>https://mung0001.github.io/docs/network/sophos/sophos_2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -214,6 +223,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/docker/docker-3/</guid>
       <description>Docker 이미지와 컨테이너    Docker 이미지와 컨테이너    Docker 이미지  $ docker image --help$ docker image [ options ]   옵션 설명     build 이미지 빌드   history history 출력   inspect 임포트   load 로드   ls 이미지 리스트르 보여준다   prune 사용하지 않는 이미지를 제거   pull 저장소에서 이미지를 다운로드   push 저장소에 이미지를 업로드   rm 삭제   save tar로 이미지를 저장   tag 태그를 생성       $ docker pull [ options ] [ 레포지터리 : 태그 ]$ docker image pull [ options ] [ 레포지터리 : 태그 ]# 도커 이미지 다운로드$ docker images $ docker image list# 도커 이미지 리스트 리스트 출력$ docker image tags [ 기반이미지 : 태그 ] [ 새이미지 | 태그 ]# 도커 이미지에 태그 입력$ docker image push [ 레포지터리 : 태그 ]# 지정된 레포지터리에 업로드 도커 이미지의 태그는 버전을 구별하기 위한 역할을 수행합니다.</description>
+    </item>
+    
+    <item>
+      <title>Glance</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstack/glance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstack/glance/</guid>
+      <description>이미지를 관리하는 서비스 : Glance   이미지를 관리하는 서비스 : Glance   Cloud Computing을 사용하기 위해서는 Virtual Machine을 생성하기 위한 이미지가 필요로 하며, Glance는 Nova에서 생성하는 인스턴스의 운영체제에 해당하는 이미지를 관리하는 서비스     Glance의 구성요소    Glance는 위의 그림과 같이 3가지의 구성요소로 이루어져 있다      구성요소 역할     Glance-api 이미지를 확인/ 복구/ 저장하는 등의 질의를 하기 이한 api 요청/ 응답을 담당   Glance-registry 이미지에 대한 메타데이터를 저장하고 처리하는 역할을 담당, 이 메타데이터에는 이미지 별 크기, 타입 등의 정보를 가지고 있으며, Glance database에 저장된 데이터를 불러들이는 역할을 수행   Glance-database 이미지의 관련 정보들을 보관       논리 아키텍처의 Glance   Glance 사용자들은 glance-api로 이미지를 등록, 삭제, 관리 glance-api는 glance-registry와 Glance database에서 이미지를 관리 이미지를 등록할 때는 glance-registry로 Glance database에 저장 등록된 이미지를 사용할 때는 Glance database에 바로 사용을 요청 관리자는 운영하려는 운영체제의 이미지를 glance-registry로 Glance database에 등록     가상 머신 이미지 포맷   aki: 아마존 커널 이미지 ami: 아마존 머신 이미지 ari: 아마존 ram 디스크 이미지 iso: 광학 디스크나 CD-ROM의 데이터 콘텐츠를 지원하는 아카이브 포맷 qcow2: QEMU 에뮬레이터가 지원하는 포맷, 동적으로 확장할 수 있으며, Copy on Write를 지원 raw: 구조화되지 않은 디스크 포맷 vdi: VirtalBox 모니터와 QEMU 에뮬레이터가 지원하는 디스크 포맷 vhd: VHD 디스크 포맷은 VMware, Xen 마이크로소프트, VirtualBox 같은 가상 머신 모니터가 사용하는 일반적인 디스크 포맷 vhdx: VHDX 디스크 포맷은 큰 디스크 크기를 지원하는 VHD 형식의 향상된 버전 vmdk: 일반적인 디스크 포맷으로 여러 가상 머신 모니터가 지원     컨테이너 포맷(container Format)   aki: 아마존 커널 이미지 ami: 아마존 머신 이미지 bare: 아마존 ram 디스크 이미지 docker: Docker 컨테이너 포맷 ova: tar 파일의 OVF 패키지 ovf: OVF 컨테이너 포맷        Glance 명령어  현재 이미지 목록 확인  openstack image list  특정 이미지의 자세한 정보 확인  openstack image show [이미지 이름]  이미지 삭제  openstack image delete [이미지 이름]  이미지 추가  openstack image create --public --container-format bare --disk-format qcow2 --file [경로를 포함한 이미지 파일 이름] [이미지 이름]   커스텀 이미지 생성   xming 윈도우에 설치   CentOS 준비 후 CentOS에 가상머신 프로그램 설치 및 실행  $ yum install qemu kvm qemu-kvm libvirt virt-install bridge-utils virt-manager dejavu-lgc-sans-fonts virt-viewer$ systemctl restart libvirtd ISO 파일로 qcow2 각 이미지에 맞는 파일 생성  qemu-img create -f qcow2 [이미지 파일 위치] [이미지 파일 크기]qemu-img create -f qcow2 /test/centos7.</description>
     </item>
     
     <item>
@@ -342,16 +360,6 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/openstack/keystone/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/openstack/keystone/</guid>
-      <description>keystone   인증을 관리하는 Keystone   인증 서비스인 Keystone은 인증 토큰을 비롯해 테넌트 및 사용자 관리, 서비스의 엔드포인트 URL 등을 관리하는 기본 서비스
-논리 아키텍처의 Keystone  논리 아키텍처에서 Keystone은 Keystone-all, Database와 LDAP로 구성 Keystone-all에는 토큰(Token), 카탈로그(Catalog), 정책(Poliy), 인증(Identity) 등이 포함되어 있음  Token Backend는 사용자별 토큰을 관리 Catalog Backend는 오픈스택에서 모든 서비스의 엔드포인트 URL을 관리 Policy Backend는 테넌트, 사용자 계정, 롤 등을 관리 Identity Backend로 사용자 인증을 관리    오픈스택에서 Keystone 위치  오픈스택 Keystone은 모든 서비스를 관장하는 위치이 있음 Keystone은 타인이나 해커에게서 시스템을 안전하게 보호하고 사용자 등록, 삭제, 권한 관리, 사용자가 접근할 수 있는 서비스 포인트 관리까지 전반적인 사용자 인증을 관리  도메인, 프로젝트, 그룹, 사용자, 롤의 개념과 관계  Keystone은 사용자 인증 부분과 서비스 인증 부분을 관리함 사용자일 때는 사용자 ID와 패스워드, 사용자 권한의 롤(Roll)을 등록 서비스일 때는 서비스를 등록하고 해당 서비스의 엔드포인트 URL을 등록  도메인(Domain)은 서로 분리되어 있음 각 도메인에는 프로젝트와 사용자가 있음 프로젝트는 사용자를 가질 수 있음 사용자에게는 롤이 있으며, 여러 프로젝트의 구성원이 될 수 있음 관리자 롤(Admin Role)을 가진 사용자끼리, 일반 사용자롤(Member Role)을 가진 사용자끼리 그룹핑(Grouping)을 할 수 있음    Keystone의 속성비교  회사의 Keystone은 도메인에 해당 관리자와 일반 사용자는 Keystone의 프로젝트에 해당 시스템을 잘 개발하는 직원은 관리자이면서 사용자에 해당 관리자가 시스템을 이용해 할 수 있는 역할은 롤에 해당 메뉴는 서비스에 해당하며, 메뉴에 연결할 링크는 엔드포인트 URL에 해당    </description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/3tier/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -385,15 +393,6 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_as/</guid>
       <description>Auto Scaling  Auto Scaling  EC2 인스턴스를 자동으로 시작하거나 종료하여 애플리케이션 로드를 처리하기에 적절한 수의 EC를 유지할 수 있도록 하는 서비스 사용자가 정의하는 조건에 따라 EC2 개수를 자동으로 확장 또는 축소가 가능 모니터링을 통해 비정상 인스턴스를 탐지하고 교체할 수 있음 수요가 급증할 경우 EC2 수를 자동으로 늘려 성능을 유지하고 수요가 적을 경우 수를 줄여 비용을 절감 ELB의 대상그룹을 Auto Scaling Group( ASG )에 포함시켜 자동생성된 EC2로 하여금 트래픽 부하분산을 하도록 설정가능 수요 변화가 예측 나응한 경우 예약된 일정을 통해 정해싲 시간에 늘리거나 줄이도록 설정이 가능 ASG 내 손상된 인스턴스가 발견될 경우, Auto Scaling은 이를 자동으로 종료하고 새로운 인스턴스로 교체  ELB를 사용하는 경우, ELB가 손상된 인스턴스를 트래픽 요청 대상에서 분리시킨 후, Auto Scaling이 이를 새로운 인스턴스로 교체   비정상 서버 탐지 후 Auto Scaling이 새로운 인스턴스를 In Service 상태를 만들기까지 5분 이내 소요   AWS Auto Scaling 그룹.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/openstack/glance/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/openstack/glance/</guid>
-      <description>Glance   운영체제 이미지를 관리하는 Glance  이미지 서비스인 Glance는 Nova에서 생성하는 인스턴스의 운영체제에 해당하는 이미지를 관리 가상머신을 생성해 컴퓨터를 대신 사용, 이 때 필요한 운영체제의 이미지 파일을 Glance이 다양한 하이퍼바이저에서 사용할 수 있는 VM 이미지를 관리 및 VM에 설치된 운영체제를 보관, 관리 함  논리 아키텍처의 Glance  Glance 사용자들은 glance-api로 이미지를 등록, 삭제, 관리할 수 있음 glance-api는 glance-registry와 Glance database에서 이미지를 관리함 이미지를 등록할 때는 glance-registry로 Glance database에 저장됨 등록된 이미지를 사용할 때는 Glance database에 바로 사용을 요청 관리자는 운영하려는 운영체제의 이미지를 glance-registry로 Glance database에 등록 이미 저장된 이미지만으로도 인스턴스를 생성할 수 있음, 즉 Glance는 Nova 옆에 항상 따라다님  가상 머신 이미지 포맷  대체적으로 이미지를 내려받아 Glance에 등록할 때는 raw 포맷이나, qcow2 포맷으로 등록함  aki: 아마존 커널 이미지 ami: 아마존 머신 이미지 ari: 아마존 ram 디스크 이미지 iso: 광학 디스크나 CD-ROM의 데이터 콘텐츠를 지원하는 아카이브 포맷 qcow2: QEMU 에뮬레이터가 지원하는 포맷, 동적으로 확장할 수 있으며, Copy on Write를 지원 raw: 구조화되지 않은 디스크 포맷 vdi: VirtalBox 모니터와 QEMU 에뮬레이터가 지원하는 디스크 포맷 vhd: VHD 디스크 포맷은 VMware, Xen 마이크로소프트, VirtualBox 같은 가상 머신 모니터가 사용하는 일반적인 디스크 포맷 vhdx: VHDX 디스크 포맷은 큰 디스크 크기를 지원하는 VHD 형식의 향상된 버전 vmdk: 일반적인 디스크 포맷으로 여러 가상 머신 모니터가 지원    컨테이너 포맷(container Format)  컨테이너 포맷은 VM 이미지가 실제 VM 메타데이터를 포함하는 파일 포맷인지를 나타냄  aki: 아마존 커널 이미지 ami: 아마존 머신 이미지 bare: 아마존 ram 디스크 이미지 docker: Docker 컨테이너 포맷 ova: tar 파일의 OVF 패키지 ovf: OVF 컨테이너 포맷    지원하는 운영체제 이미지  오픈스택 Nova에서 인스턴스를 생성할 때는 이미 하이퍼바이저에서 생성한 가상 머신에 운영체제를 설치한 이미지를 Glance에 등록시키고, 등록시킨 이미지를 이용해서 인스턴스를 생성  Glance 구조  이미지를 저장하면 glance-registry로 Glance DB에 저장 주의사항  오픈스택 이미지를 생성할 때는 VMware처럼 운영체제 설치 파일(iso)로 가상머신을 생성하는 것이 아니라 이미 운영체제가 이미 설치가 된 가상머신을 이미지로 등록해야 함 따라서 이미지는 클라우드 전용이미지를 사용하는 것이 좋다.</description>
     </item>
     
     <item>

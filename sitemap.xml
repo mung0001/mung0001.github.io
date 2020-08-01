@@ -108,6 +108,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/keystone/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/system/mail/</loc>
   </url>
   
@@ -129,6 +133,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/docker/docker-3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/glance/</loc>
   </url>
   
   <url>
@@ -188,10 +196,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/keystone/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/3tier/</loc>
   </url>
   
@@ -213,10 +217,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/network/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/glance/</loc>
   </url>
   
   <url>
