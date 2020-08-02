@@ -255,6 +255,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>Nova</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstack/nova/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstack/nova/</guid>
+      <description>가상의 서버를 생성한느 서비스 : Nova   가상의 서버를 생성한느 서비스 : Nova   Nova는 compute 서비스의 핵심 compute 서비스란, 가상머신이 필요한 자원을 할당하고, 관리하는 서비스로 하이퍼바이저, 메시지 Queue, 인스턴스 접속을 하는 콘솔 등의 다양한 기능이 유기적으로 연결되어 가상 서버를 생성할 수 있는 시스템을 구성하는 시스템     Nova 서비스의 고려사항     고려사항 설명     CPU compute 서비스가 동작할 호스트 시스템의 cpu가 기본적으로 자체 하드웨어 가상화를 지원이 필수   Hypervisor 서비스에 사용할 하이퍼바이저를 맞게 설정해야 하며, 기본적으로 사용하는 Hypervisor은 KVM/QEMU   Storage compute 서비스를 통해 인스턴스가 생성되면서 시스템의 디스크 용량의 제한을 가할 수 있음, 이를 위해 넉넉한 공간이 필요   Overcommit 기본적으로 자원을 할당하는 경우 1:1이 아닌 CPU는 16:1, Memory는 1.</description>
+    </item>
+    
+    <item>
       <title>AWS EC2 생성</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/ec2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -272,6 +281,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_migrate/</guid>
       <description>AWS Migrate   AWS Application Discovery Service    AWS Application Discovery Service는 서버로부터 구성, 사용 및 동작 데이터를 수집하여 제공함으로써 워크로를 효율적 관리를 도와주는 서비스 기업의 고객이 사내 데이터 센터에 대한 정보를 수집하여 마이그레이션 프로젝트를 계획하는 데 도움을 줌 데이터 센터 마이그레이션을 계획하는 작업에는 상호 의존성이 높은 수천 개의 워크로드가 수반 되어지는 짐 수집된 데이터는 AWS Application Discovey Service 데이터 스토어에 암호화된 형태로 보관되어짐   AWS Application Discovery Service의 이점  마이그레이션 계획 수립을 위한 신뢰할 수 있는 검색  Application Discovey Service는 서버 사양 정보, 성능 데이터, 실행 프로세스 및 네트워크 연결 세부 정보를 수집, 이러한 데이터는 AWS로 마이그레이션하기 전에 상세한 비용 추정을 수행하거나 계획을 위해 서버를 애플리케이션으로 그룹화하는 데 사용될 수 있음   Migration Hub와 통합  AWS Application Discovery Service는 AWS Migration Hub와 통합되므로 마이그레이션 추적이 간소화 및 Hub를 통한 마이그레이션 상태 추적이 가능   암호화로 데이터 보호  AWS Application Discovery Service는 수집한 데이터를 AWS로 전송할 때와 Application Discovery Service 데이터 스토어에 저장할 때 모두 암호화   마이그레이션 전문가의 지원  AWS Professional Services와 APN 마이그레이션 파트너는 수많은 엔터프라이즈 고객이 클라우드로의 마이그레이션을 성공적으로 완료하도록 지원     AWS DMS ( Database Migration Service )    AWS Database Migration Service는 데이터베이스를 AWS로 빠르고 안전하게 마이그레이션할 수 있도록 지원하는 서비스 이그레이션하는 동안 소스 데이터베이스가 변함없이 운영되어 해당 데이터베이스를 사용하는 애플리케이션의 가동 중지 시간을 최소화 AWS Database Migration Service는 Oracle에서 Oracle로의 마이그레이션과 같은 동종 마이그레이션뿐 아니라 Oracle 또는 Microsoft SQL Server에서 Amazon Aurora로의 마이그레이션과 같은 이기종 데이터베이스 플랫폼 간의 마이그레이션도 지원 데이터베이스를 Amazon Aurora, Amazon Redshift, Amazon DynamoDB 또는 Amazon DocumentDB(MongoDB 호환 가능)로 마이그레이션하는 경우 6개월 동안 DMS를 무료로 제공   AWS DMS의 이점  간편한 사용  AWS Management Console에서 클릭 몇 번으로 데이터베이스 마이그레이션을 시작 마이그레이션이 시작되면, 마이그레이션 프로세스 도중에 소스 데이터베이스에 발생한 데이터 변경을 자동으로 복제하는 것을 비롯하여 마이그레이션 프로세스의 모든 복잡성을 DMS에서 관리   최소한의 가동 중단  AWS Database Migration Service는 사실상 가동 중단 시간 없이 데이터베이스를 AWS로 마이그레이션하도록 지원 마이그레이션하는 동안 소스 데이터베이스에 발생한 모든 데이터 변경 사항은 지속적으로 대상 데이터베이스에 복제되므로, 마이그레이션하는 동안 소스 데이터베이스가 변함없이 운영   널리 사용되는 데이터베이스 지원  AWS Database Migration Service를 사용하면 가장 널리 사용되는 상용 및 오픈 소스 데이터베이스 플랫폼에서 또는 이를 대상으로 데이터를 마이그레이션 가능   저렴한 비용  마이그레이션 프로세스 중에 사용한 컴퓨팅 리소스와 추가 로그 스토리지에 대한 비용만 지불 라바이트 규모의 데이터베이스를 3 USD라는 저렴한 비용   빠르고 쉬운 설정  마이그레이션 태스크는 AWS Database Migration Service가 마이그레이션을 실행하는 데 사용할 파라미터를 정의하는 곳 마이그레이션 태스크에는 소스 및 대상 데이터베이스에 대한 연결 설정과 더불어 마이그레이션 프로세스를 실행하는 데 사용할 복제 인스턴스 선택이 포함 동일한 태스크를 사용하여 실제로 마이그레이션을 수행하기 전에 테스트를 실행가능   안정성  AWS Database Migration Service는 복원력과 자가 복구 기능 존재 소스 및 대상 데이터베이스, 네트워크 연결성 및 복제 인스턴스를 지속적으로 모니터링     AWS SMS ( Server Migration Service )    AWS Server Migration Service는 온프레미스 VMware vSphere, Microsoft Hyper-V/SCVMM 및 Azure 가상 머신을 AWS 클라우드로 자동으로 마이그레이션하는 서비스 AWS SMS는 서버 VM을 Amazon EC2에 바로 배포할 수 있는 클라우드 호스팅된 Amazon 머신 이미지(AMI)를 증분 방식으로 복제하는 서비스   AWS SMS의 이점  클라우드 마이그레이션 프로세스가 단순화  마이그레이션이 시작되면 AWS SMS은(는) 복잡한 마이그레이션 프로세스를 관리하여 라이브 서버 볼륨의 AWS로 복제하고 새로운 AMI를 정기적으로 생성하는 작업 등을 자동화   여러 서버 마이그레이션 조율  AWS SMS는 복제 일정을 예약하고 애플리케이션을 구성하는 서버 그룹에 대한 진행 상황을 추적할 수 있도록 하여 서버 마이그레이션을 조율가능   서버 마이그레이션 증분 테스트  증분 복제 지원 기능을 통해 AWS SMS은(는) 마이그레이션된 서버에 대한 테스트를 신속하게 수행하고 확장가능 AWS SMS은(는) 증분 변경 사항을 온프레미스 서버에 복제한 후 그 차이만 클라우드로 전송하기 때문에 일부 변경 사항만 반복적으로 테스트를 통해 절약 가능   가장 많이 사용되는 운영 체제 지원  Windows 및 대표적인 몇 가지 Linux 배포판을 포함하는 운영 체제 이미지 복제를 지원   가동 중지 최소화  증분 AWS SMS 복제는 최종 전환 중 애플리케이션 가동 중지로 인한 비즈니스 영향을 최소화     AWS SMS 제한사항</description>
+    </item>
+    
+    <item>
+      <title>Neutron</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstack/neutron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstack/neutron/</guid>
+      <description>네트워크를 관리하는 서비스: Neutron   네트워크를 관리하는 서비스: Neutron  Neutron은 네트워크 서비스로 여러 노드에 여러 프로세스를 배치하는 독립형 서비스 프로세스는 서로 및 다른 OpenStack의 서비스와 상화 작용     Neutron의 논리 아키텍처      구성요소 기능     neutron-server network api의 기능 및 네트워크 확장 기능을 서비스하며, 각 포트의 대한 모델 및 Pfmf 지정, AMQP를 사용하여 데이터베이스와 통신하는 플러그인을 통해 수행   neutron-L2-agent OVS 가상 Bridge 사이에서데이터 패킷을 전달하기 위한 중계장치   neutron-l3-agent 태넌트 네트워크에서 VM의 외부 네트워크 엑세서를 위한 L3/ NAT 전달을 제공   neutron-dhcp-agent 테넌트 네트워크에 DHCP 서비스를 제공, DHCP agent는 메시지 큐에 엑세스할 수 있는 권한이 필요   Queue 다른 서비스 간의 통신의 역할을 수행   Neutron Database Neutron 서비스를 수행하기 위한 일련의 정보들은 보관, 관리하는 DB   Neutron 3rd Party Plugin Neutron 서비스의 안정적인 통신 역할을 수행   plugin agent 각 compute node에서 실행되며 로컬 vswitch을 구성 및 관리   network provider services 테넌트 네트워크에 추가 네트워킹 서비스를 제공      Neutron은 다양한 네트워크 플러그인이나 네트워크 모델을 지원 사용자는 Neutron API를 이용해 neutron-server로 IP 할당을 요청 neutron-server 들어온 요청을 Queue로 다시 요청 Queue는 neutron-dhcp-agent와 Neutron 3rd Party plugin으로 IP 할당 지시를 내림 neutron-dhcp-agent와 Neutron 3rd Party Plugin은 지시 받은 작업 수행을 시작 neutron-server는 수시로 작업 상태를 Neutron database에 저장 할당된 IP를 인스턴스에서 사용 가능     Neutron의 네트워킹 프로세스   neutron-server에 의해 명령을 요청을 받음 plugin을 토대로 Messae queue를 통해 각 agent의 기능을 수행 이와 함께 SDN 서비스를 수행     Neutron network의 종류  네트워크의 종류 | 기능 &amp;mdash; | &amp;mdash; Management network | OpenStack 구성 요소 간의 내부 통신에 사용, 기본적으로 IP 주소는 데이터 센터 내에서만 사용이 가능 Guest network | 클라우드 배포 내에서 인스턴스 데이터 통신에 사용되며, 네트워킹 플러그인 및 테넌트가 만든 가상 네트워크의 구성 선택에 따라 변동 External network | 외부에서 인스턴스에 대한 엑세스를 위해 제공되는 네트워크 API network | OpneStack API를 외부에 노출시키는 네트워크</description>
     </item>
     
     <item>
@@ -406,33 +424,12 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/openstack/nova/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/openstack/nova/</guid>
-      <description>Nova   가상 서버를 생성하는 컴퓨트 Nova   오픈 스택 Nova는 컴퓨트 서비스의 핵심이며, 하이퍼바이저, 메시지 Queue, 인스턴스 접속을 하는 콘솔 등의 다양한 기능이 유기적으로 연결되어 가상 서버를 생성할 수 있는 시스템을 구성
-논리 아키텍처 Nova  Nova는 대시보드나 콘솔에서 호출하는 nova-api에서 시작 Queue를 이용해 nova-compute에 인스턴스를 생성하라는 명령을 전달 nova-compute는 하이퍼바이저 라이브러리를 이용해 하이퍼바이저에 인스턴스를 생성하려는 명령어를 전달 하이퍼바이저가 인스턴스를 생성 생성된 인스턴스는 nova-api로 접근할 수 있으며 Nova의 몯느 기능은 메시지 Queue로 처리할 수 있음  Nova가 지원하는 하이퍼바이저의 종류  기본 하이퍼바이저는 KVM과 QEMU 프로바이더가 테스트하는 Hyper-V, VMware, XenServer, Sen via libvirt 몇 번의 테스트만 하는 하이퍼바이저 드라이버인 베어메탈, Docker, LXC via libvirt  노드별로 설치되는 Nova  nova-api: Nova의 REST API 서버를 담당 nova-cert: X509 인증서 서비스를 제공하는 서버 데이터 데몬 nova-conductor: 코디네이션과 데이터베이스 쿼리를 지원하는 서버 데몬 nova-consoleauth: nova-console 인증을 제공 nova-novncproxy: novnc-console과 호환되는 웹 소켓 프록시 nova-scheduler: VM 인스턴스를 실행할 컴퓨터 노드를 선택하는 역할을 수행 nova-novaclient: nova REST API를 사용하는 클라이언트 프로그램 컴퓨터 노드에 설치  nova-compute-kvm: 인스턴스(가상 머신)와 관련된 모든 프로세스를 처리 python-guestfs: 파일 생성 기능을 지원하는 Python 라이브러리 qemu-kvm: KVM 하이퍼바이저      </description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://mung0001.github.io/docs/cloudcomputing/openstack/swift/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstack/swift/</guid>
       <description>Swift   오브젝트 스토리지 Swift   다른 서비스와는 다르게 단독으로 구성되며, 클라우드 스토리지 서비스를 구축 할 수 있음
 논리 아키텍처의 Swift  오픈스택 Swift는 swift-proxy-server, swift-account-server, swift-container-server, swift-object-server로 구성 swift-proxy-server는 swift-account-server, swift-container-server, swift-object-server를 관리 어카운트, 컨테이너는 별도의 메타데이터가 데이터베이스로 관리됨 오브젝트는 저장 공간에 직접 저장되는 방식으로 설계되어 있음 swift-proxy-server는 오픈스택의 Object API를 제공 사용자는 API를 사용해 데이터를 저장하거나 내려받을 수 있음  Swift의 논리적 구성 요소  Swift의 구성은 스토리지 공간 여러 개를 합쳐 하나의 커다란 공간으로 가상화하고, 그 안에서 사용자만의 별도 스토리지 공간이 있는 것처럼 다시 가상화를 진행 사용자는 특성에 따라 데이터를 분류해서 저장할 컨테이너를 생성하고 해당 컨테이너에 데이터를 저장 swift-proxy-server는 스토리지 노드 여러 개를 관리하며 사용자 인증을 담당, 최근에는 Keystone으로 인증을 처리하며, 프록시 서버와 함께 설치되기도 함 스토리지 노드에는 swift-account-server, swift,compute-server, swift-object-server가 실행되며 실제 메타데이터파일이나 오브젝트에 해당하는 데이터 파일을 저장  Swift의 특징  인증: 사용자의 인증을 담당하는 기능 어카운트(Account): 사용자 계정 및 컨테이너를 관리 컨테이너: 저장 공간 단위로 컨테이너 안의 오브젝트 정보를 관리 오브젝트: 실제 데이터  Swift Ring  Swift 역시도 Nova를 구성할 떄와 마찬가지로 스토리지 노드가 여러 대 있음 각 스토리지 노드에는 swift-account-server, swift-container-server, swift-object-server가 실행됨 서버들은 관리자가 설정한 해당 포트로 서로 통신 스토리지 노드 중 하나라도 손상이 되면 데이터를 잃지 않도록 데이터 복제(Replica)프로세스가 함께 실행됨 스토리지 파일은 자신이 관리하는 데이터를 서로 공유하려고 Ring인 파일이 어느 노드에, 어떤 데이터가 들어 있는 지를 인지함 Ring파일은 프록시 노드에서 생성해 모든 스토리지 노드가 동일하게 가지고 있음 Ring 파일에는 디바이스 정보가 들어 있는데,  디바이스를 구분하는 ID 존(Zone) 번호 스토리지 노드 IP 포트 디바이스 이름 디바이스 비중 기타 디바이스 정보    Swift의 데이터 관리 방법  Swift는 사용자 게정을 관리하는 어카운트, 디렉터리 개념의 컨테이너, 실제 파일을 표현하는 오브젝트로 구성 Swift는 어카운트가 컨테이너를 포함하고, 컨테이너가 오브젝트를 포함하도록 관리함 보통 Swift에서는 프록시 노드 한 대에 스토리지 노드 다섯 대를 구성하기를 권장 프록시 노드들은 로드밸런서로 묶여 있어 사용자는 특정 URL 하나만 호출해도 스토리지 서비스를 자유롭게 사용가능 파일을 올릴 때는 설정된 리플리카로 여러 스토리지 노드로 분산해서 저장, 다운로드 시 그 중 한 곳을 사용  Swift와 Keystone  Swift에는 SwAuth를 이용하는 인증 방법과 Keystone을 이용하는 인증 방법이 있음 최근에는 Keystone을 이용해서 주로 인증하며, Keystone에는 프로젝트, 사용자, 롤이 있음 관리자(admin, swiftoperator)는 사용자와 컨테이너를 생성, 삭제할 수 있음 관리자는 오브젝트도 올리기, 내려받기, 삭제를 할 수 있음 일반 사용자(member)은 사용자와 컨테이너를 생성할 수 없음 일반 사용자는 관리자가 미리 생성해서 권한을 준 컨테이너만 사용할 수 있음 일반 사용자는 관리자가 설정한 권한으로 오브젝트 목록을 확인할 수 있음 일반 사용자는 관리자가 설장한 권한으로 데이터를 올리고 내릴 수 있음 특정 사용자에게 관리자(admin) 권한을 부여하려면 리셀러어드민(ResellerAdmin) 롤을 주어야 함 해당 사용자는 관리자가 할 수 있는 기능을 모두 사용할 수 있음  Swift의 이레이저 코딩(Eraure Coding) 기능과 스토리지 정책   스토리지 저장 공간을 효율적으로 관리하는 것이 이레이져 코딩</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/openstack/neutron/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/openstack/neutron/</guid>
-      <description>Neutron   네트워크를 관리하는 Neutron   폴섬 버전에서는 Quantum, 그리즐리 버전에서는 Neutron으로 릴리스 되었음
-  기존 오픈스택의 네트워크 서비스는 nova-network가 담당했으나, SDN(Software Defined Network) 개념이 들어오면서 별도의 네트워크 프로젝트로 분리되었음
-논리 아키텍처의 Neutron  Neutron은 neutron-server, Neutron L2 Agent* 및 neutron-l3-agent*, neutron-dhcp-agent, Queue, Neutron Database, Neutron 3rd Party Plugin으로 구성 Neutron은 다양한 네트워크 플러그인이나 네트워크 모델을 지원  사용자는 Neutron API를 이용해 neutron-server로 IP 할당을 요청 neutron-server 들어온 요청을 Queue로 다시 요청 Queue는 neutron-dhcp-agent와 Neutron 3rd Party plugin으로 IP 할당 지시를 내림 neutron-dhcp-agent와 Neutron 3rd Party Plugin은 지시 받은 작업 수행을 시작 neutron-server는 수시로 작업 상태를 Neutron database에 저장 할당된 IP를 인스턴스에서 사용 가능    Neutron이 지원하는 플러그인의 종류  사이트 참조  Neutron과 VRRP, DVR  VRRP(Virtual Router Redundancy Protocl)로 랜에서 정적으로 설정된 기본 라우터를 사용할 때, 하나 이상의 백업 라우터를 사용하는 방법을 제공하는 인터넷 프로토콜 DVR(Distributed Virtual Router)이란 VRRP 기능을 향상시키고, 분산 라우팅 기능과 HA(High Availability), 로드밸런싱 기능을 사용할 수 있음 기존 레거시 HA 라우터와 마찬가지로 DVR/ SNAT(Static NAT), HA 라우터는 다른 노드에서 실행되는 L3 Agent의 백업 DVR/ SNAT 라우터에서 SNAT 서비스 장애를 빠르게 해결 가능     오픈스택 네트워크 구조</description>
     </item>
     
     <item>
