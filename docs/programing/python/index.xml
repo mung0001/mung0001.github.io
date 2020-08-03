@@ -1,35 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Python on 뭉게뭉게</title>
-    <link>https://mung0001.github.io/docs/programing/python/</link>
-    <description>Recent content in Python on 뭉게뭉게</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>kr-ko</language>
-    
-	<atom:link href="https://mung0001.github.io/docs/programing/python/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/python/code/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/python/code/</guid>
-      <description>메일 자동화  이미지 크롤링 from urllib.request import urlopenfrom urllib.parse import quote_plusfrom bs4 import BeautifulSoupfrom selenium import webdriverimport timebaseUrl = &amp;#39;https://www.instagram.com/explore/tags/&amp;#39;plusUrl = input(&amp;#39;검색할 태그를 입력하세요 : &amp;#39;)url = baseUrl + quote_plus(plusUrl)driver = webdriver.Chrome(&amp;#39;C:\\chromedriver.exe&amp;#39;)driver.get(url)time.sleep(3)html = driver.page_sourcesoup = BeautifulSoup(html)insta = soup.select(&amp;#39;.v1Nh3.kIKUG._bz0w&amp;#39;)n = 1for i in insta:print(&amp;#39;https://www.instagram.com&amp;#39;+ i.a[&amp;#39;href&amp;#39;])imgUrl = i.select_one(&amp;#39;.KL4Bh&amp;#39;).img[&amp;#39;src&amp;#39;]with urlopen(imgUrl) as f:with open(&amp;#39;C:\\test\\&amp;#39; + plusUrl + str(n) + &amp;#39;.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/python/python/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/python/python/</guid>
-      <description>python 내장함수  ...abs abs(x)는 어떤 숫자를 입력받았을 때, 그 숫자의 절댓값을 돌려주는 함수
-&amp;gt;&amp;gt;&amp;gt; abs(3)3&amp;gt;&amp;gt;&amp;gt; abs(-3)3   all all(x)는 반복 가능한(iterable) 자료형 x를 입력 인수로 받으며 이 x가 모두 참이면 True, 거짓이 하나라도 있으면 False를 반환
-※ 반복 가능한 자료형이란 for문으로 그 값을 출력할 수 있는 것을 의미한다. 리스트, 튜플, 문자열, 딕셔너리, 집합 등이 있다.
-&amp;gt;&amp;gt;&amp;gt; all([1, 2, 3])True&amp;gt;&amp;gt;&amp;gt; all([1, 2, 3, 0])False  any any(x)는 x 중 하나라도 참이 있으면 True를 돌려주고, x가 모두 거짓일 때에만 False를 돌려준다.</description>
-    </item>
-    
-  </channel>
-</rss>
