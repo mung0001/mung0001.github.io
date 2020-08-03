@@ -156,10 +156,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/gcptraining/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/googlecloudplatform/</loc>
   </url>
   
@@ -177,6 +173,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_migrate/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/gcptraining/</loc>
   </url>
   
   <url>
@@ -264,10 +264,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/docker/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/network/</loc>
   </url>
   
@@ -292,11 +288,15 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/dockertraining/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/docker/</loc>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/docs/system/linux/mount/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/dockertraining/</loc>
   </url>
   
   <url>
