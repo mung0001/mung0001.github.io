@@ -230,14 +230,5 @@
       <description>AWS 끄투온라인 서버 구축    AWS 끄투온라인 서버 구축      끄투 온라인은 오픈소스의 끝말잇기 게임입니다.      EC2를 생성합니다. EC2 생성은 EC2 생성을 참조해주세요.     OS 유형 disk security group     Ubuntu18.04 t2.mini 8 all-open      인스턴스를 생성 후, 아래와 같이 진행합니다.  $ sudo apt -y update$ sudo apt -y upgrade$ sudo apt -y install node.</description>
     </item>
     
-    <item>
-      <title>SAA 요약정리</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/sao/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/sao/</guid>
-      <description>SAA 요약정리  정리를 들어가기 전 핵심요소  자격 시험의 합격과 실패는 현장에서의 실무 경험과 실습 중심의 학습, 시험에 필요한 세부적인 정보와 숫자를 얼마나 잘 기억하는지에 달려 있다. AWS SAA는 핵심 AWS 서비스 구성 요소와 운영은 물론 서비스 간의 상호작용 방식도 이해가 필요 기본적인 공부는 Amazon의 공식문서 및 여러 실습 경험을 필요로 한다.    AWS SAA 참고자료      시험영역 출제 비율     1.</description>
-    </item>
-    
   </channel>
 </rss>

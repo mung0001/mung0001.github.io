@@ -44,10 +44,10 @@
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/programing/shell/base/</link>
+      <link>https://mung0001.github.io/docs/programing/shell/shell-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/programing/shell/base/</guid>
+      <guid>https://mung0001.github.io/docs/programing/shell/shell-2/</guid>
       <description>****    ****         #</description>
     </item>
     
@@ -122,17 +122,8 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/programing/shell/shell-1/</guid>
-      <description>Shell Script    Shell Script의 개요   UNIX/ Linux 소개 및 특징   UNIX  1969년 AT&amp;amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다 벨연구소는 대학과 연구기관에 UNIX를 활용할 수 있도록 라이선스를 제공하였으며, 버클리 대학교에서는 UNIX에 네트워크 프로토콜인 TCP/IP 등 다양한 기능을 보강하여 BSD 배포본을 제작하고 이후 파생되는 많은 UNIX에 영향을 끼쳤다.      Linux  1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원생에 의해 커널이 개발된 이래, 1984년부터 리처드 스토람에 의해 추진된 GNU 프로젝트의 다양한 소프트웨어들이 합쳐진 운영체제가 Linux이다.</description>
-    </item>
-    
-    <item>
-      <title>Shell 학습 환경 구축</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell-2/</guid>
-      <description>Shell 학습 환경 구축   기본적인 준비 프로그램   x86에 설치되지 않는 UNIX/Linux 버전은 사용이 불가능하다.(IMB의 AIX, HP의 HP-UX, SUN의 SPARC CPU 버전 Solaris 등) VMware 또는 VirtualBox 설치 기본 용량 cpu 1/1, ram 1GB, HDD 8GB(VDI, 동적할당) PuTTY를 통해 ssh 접속 PuTTY의 문자를 UTF-으로 변경
-   운영체제 이미지 파일 다운로드 구분 | 운영체제/ 배포본 | 웹 사이트 주소 UNIX | solaris | http://www.oracle.com/kr/index.html | FreeBSD | http://www.</description>
+      <description>Shell Script    Shell Script의 개요   UNIX/ Linux 소개 및 특징   UNIX   1969년 AT&amp;amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다
+  벨연구소는 대학과 연구기관에 UNIX를 활용할 수 있도록 라이선스를 제공하였으며, 버클리 대학교에서는 UNIX에 네트워크 프로토콜인 TCP/IP 등 다양한 기능을 보강하여 BSD 배포본을 제작하고 이후 파생되는 많은 UNIX에 영향을 끼쳤다.</description>
     </item>
     
     <item>
@@ -190,6 +181,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell-3/</guid>
+      <description>****    ****         #</description>
+    </item>
+    
+    <item>
       <title>AWS CLI 활용</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/cli/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -235,6 +235,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell-4/</guid>
+      <description>****    ****         #</description>
+    </item>
+    
+    <item>
       <title>AWS Network</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -261,6 +270,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstack/nova/</guid>
       <description>가상의 서버를 생성하는 서비스 : Nova   가상의 서버를 생성하는 서비스 : Nova   Nova는 compute 서비스의 핵심 compute 서비스란, 가상머신이 필요한 자원을 할당하고, 관리하는 서비스로 하이퍼바이저, 메시지 Queue, 인스턴스 접속을 하는 콘솔 등의 다양한 기능이 유기적으로 연결되어 가상 서버를 생성할 수 있는 시스템을 구성하는 시스템     Nova 서비스의 고려사항     고려사항 설명     CPU compute 서비스가 동작할 호스트 시스템의 cpu가 기본적으로 자체 하드웨어 가상화를 지원이 필수   Hypervisor 서비스에 사용할 하이퍼바이저를 맞게 설정해야 하며, 기본적으로 사용하는 Hypervisor은 KVM/QEMU   Storage compute 서비스를 통해 인스턴스가 생성되면서 시스템의 디스크 용량의 제한을 가할 수 있음, 이를 위해 넉넉한 공간이 필요   Overcommit 기본적으로 자원을 할당하는 경우 1:1이 아닌 CPU는 16:1, Memory는 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell-5/</guid>
+      <description>****    ****         #</description>
     </item>
     
     <item>
@@ -293,6 +311,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell-6/</guid>
+      <description>****    ****         #</description>
+    </item>
+    
+    <item>
       <title>AWS AMI 생성</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/ami/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -320,6 +347,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell-7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell-7/</guid>
+      <description>****    ****         #</description>
+    </item>
+    
+    <item>
       <title>AWS Elastic IP 할당</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/eip/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -335,6 +371,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_management/</guid>
       <description>AWS Management   Amazon CloudWatch    AWS 클라우드 리소스와 AWS에서 실행되는 애플리케이션을 위한 모니터링 서비스 리소스 및 애플리케이션에 대해 측정할 수 있는 변수인 지표를 수집하고 추적 가능 사용중인 모든 AWS 서비스에 대한 지표가 자동적으로 표시디며, 사용자 지정 대시보드를 통해 사용자 지정 애플리케이션에 대한 지표를 표시하고 지정 집합 표시 가능 지표는 Cloudwatch에 게시된 시간 순서별 데이터 요소 세트이며, 모니터링할 변수 ( 가령 EC2의 CPU 사용량은 EC2가 제공하는 하나의 지표 ) 기본 모니터링과 세부 모니터링으로 나뉘며, 가각 5분과 1분 주기로 수집함 기본 모니터링은 자동활성화이지만, 세부 모니터링은 선택사항 기본적으로 CPU, Network, Disk, Status Check 등을 수집 ( Memory 항목이 없음 ) 지표 데이터의 보존기간  기간 60초 미만의 경우, 3시간 기간 60초의 경우, 15일 기간 300초의 경우 63일 기간 3600초의 경우, 455일   AWS CLI 혹은 API를 이용하여, Cloudwatch에 사용자 정의 지표 게시 가능 경보기능을 사용하여 어떤 지표가 일정기간동안 일정값에 도달할 경우 각 서비스가 취해야할 행동을 정의할 수 있음 모니터링하기로 선택한 측정치가 정의한 임계값을 초과할 경우 하나 이상의자동화 작업을 수행하도록 구성 EC2의 경우, 경보에 따라, 인스턴스 중비, 복구, 종료, 재부팅 가능   Cloudwatch Agent  EC2에 Agent를 설치하게 되면 더 많은 시스템 수준 지표를 수집할 수 있음 온프레미스 서버 또한 Cloudwatch Agent 사용 가능 Memory 항목 포함 Cloudwatch Agent는 로그를 수집할 수 있으며, 후술할 Cloudwatch Logs 기능 사용 가능   Cloudwatch Logs  EC2( Agent에서 수집된 ), CloudTrail, Route 53, Route 53, VPC flow Log 등 기타 소스에서 발생한 로그 파일을 모니터링, 저장 및 엑세스하는 기능 Cloudwatch Agent를 사용하여 로그를 수집 Cloudwatch Log Insights를 사용하여 CloudWatch Logs에서 로그 데이터를 대화식으로 검색해 분석할 수 있음 Agent는 기본적으로 5초마다 로그 데이터를 전송   Cloudwatch Events  AWS 각 서비스의 이벤트가 사용자가 지정한 이벤트패턴과 일치하거나 일정이 트리거될 경우, 사용자가 월하는 기능을 발동시키도록 하는 기능 이번트 소스와 대상으로 나뉨 이벤트 소스: AWS 환경에서 발생하는 이벤트이며, 가령 S3의 경우 오브젝트 등록, 삭제 등을 들 수 있음 대상: 이벤트 발생시 해야할 행동을 정의하는 것이며, SNS 전송 혹은 람다, SQS 게시 등을 설정할 수 있음 이벤트 소스에 해당하는 규칙이 트리거될 경우 대상에 해당하는 서비스를 실행시킴 이벤트가 시스템에 생성해 둔 규칙과 일치하는 경우, AWS Lambda 함수를 자동으로 호출하고, 해당 이벤트를 Amazon Kinesis 스트림에 전달하고, Amazon SNS 주제를 알림&amp;rsquo; having 1=1##    AWS CloudFormation    인프라를 관리 간소화를 목적으로 하는 서비스 AWS의 리소스를 일일이 설정하지 않고 해당 서비스의 프로비져닝과 설정을 미리 구성하여 반복작업을 줄이도록 도와주는 역할 EC2, Auto Scaling Group으로부터 ELB, RDS, S3 등을 사전에 구성하여 한 번의 클릭으로 다수의 서비스를 빠르게 생성할 수 있음 생성된 리소스 모음은 다른 계정 혹은 다른 리전에 옮겨 사용 가능   Stack  하나의 단위로 관리할 수 있는 AWS 리소스들의 모음 스택을 생성, 업데이트 또는 삭제하여 리소스 모음을 생성, 업데이트, 삭제가 가능 스택에서 실행중인 리소스를 변경해야 하는 경우 스택을 업데이트할 수 있는 데, 이 업데이트된 세트를 변경세트라 칭함 스택을 삭제하는 경우 삭제할 스택을 지정하면 해당 스택과 스택 내 모든 리소스를 삭제 AWS에서 리소스를 삭제할 수 없는 경우 스택이 삭제 스택의 리소스 중 하나라도 성공적으로 생성되지 않은 경우 성공적으로 생성한 모든 리소스를 모두 삭제함 ( Automatic rollback on error )   Template   스택을 구성하는 AWS 리소스를 JSON 혹은 YAML 형식으로 선언한 텍스트 파일</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell-8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell-8/</guid>
+      <description>****    ****         #</description>
     </item>
     
     <item>
@@ -734,10 +779,10 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
     
     <item>
       <title>SAA 요약정리</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/sao/</link>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/sao/</guid>
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa/</guid>
       <description>SAA 요약정리  정리를 들어가기 전 핵심요소  자격 시험의 합격과 실패는 현장에서의 실무 경험과 실습 중심의 학습, 시험에 필요한 세부적인 정보와 숫자를 얼마나 잘 기억하는지에 달려 있다. AWS SAA는 핵심 AWS 서비스 구성 요소와 운영은 물론 서비스 간의 상호작용 방식도 이해가 필요 기본적인 공부는 Amazon의 공식문서 및 여러 실습 경험을 필요로 한다.    AWS SAA 참고자료      시험영역 출제 비율     1.</description>
     </item>
     

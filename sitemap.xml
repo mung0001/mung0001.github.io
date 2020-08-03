@@ -24,7 +24,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/programing/shell/base/</loc>
+    <loc>https://mung0001.github.io/docs/programing/shell/shell-2/</loc>
   </url>
   
   <url>
@@ -80,10 +80,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/programing/shell/shell-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/system/snort/</loc>
   </url>
   
@@ -120,11 +116,19 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/programing/shell/shell-3/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/cli/</loc>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_database/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/</loc>
   </url>
   
   <url>
@@ -140,6 +144,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/programing/shell/shell-4/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_network/</loc>
   </url>
   
@@ -148,7 +156,19 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/gcptraining/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/googlecloudplatform/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/nova/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/shell/shell-5/</loc>
   </url>
   
   <url>
@@ -164,6 +184,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/programing/shell/shell-6/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/ami/</loc>
   </url>
   
@@ -176,11 +200,23 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/programing/shell/shell-7/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/eip/</loc>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_management/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/microsoftazure/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/programing/shell/shell-8/</loc>
   </url>
   
   <url>
@@ -192,11 +228,11 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/horizon/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/azuretraining/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/horizon/</loc>
   </url>
   
   <url>
@@ -236,7 +272,15 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/s3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/</loc>
   </url>
   
   <url>
@@ -245,6 +289,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/swift/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/dockertraining/</loc>
   </url>
   
   <url>
@@ -392,7 +440,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/sao/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa/</loc>
   </url>
   
   <url>
