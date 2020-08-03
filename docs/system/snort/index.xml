@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Snort on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/docs/system/snort/</link>
+    <description>Recent content in Snort on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    
+	<atom:link href="https://mung0001.github.io/docs/system/snort/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/system/snort/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/snort/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</guid>
+      <description>시스템통합 관리 침입 탐지 시스템(IDS) &amp;ndash; Snort 이용    주된 기능
+  탐지(Detection)
+  잘못된 패킷을 감지하면 사용자에게 알림(주체적으로 처리하지 X, only 안내)
+       탐지 종류 2가지
+  (1)오용 탐지	알고 있는 것 탐지
+  (2)이상 탐지	모르는 것도 탐지(100% 탐지 X)
+  너무 민감하게 처리하면 필요한 정보도 차단하는 실수를 할 수 있음
+       설치위치 ( 성능이 달라짐 )</description>
+    </item>
+    
+  </channel>
+</rss>

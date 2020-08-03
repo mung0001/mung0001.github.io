@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shell Script    Shell Script의 개요   UNIX/ Linux 소개 및 특징   UNIX  1969년 AT&amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다 벨연구소는 대학과 연구기관에 UNIX를 활용할 수 있도록 라이선스를 제공하였으며, 버클리 대학교에서는 UNIX에 네트워크 프로토콜인 TCP/IP 등 다양한 기능을 보강하여 BSD 배포본을 제작하고 이후 파생되는 많은 UNIX에 영향을 끼쳤다.      Linux  1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원생에 의해 커널이 개발된 이래, 1984년부터 리처드 스토람에 의해 추진된 GNU 프로젝트의 다양한 소프트웨어들이 합쳐진 운영체제가 Linux이다."><meta property="og:title" content="Shell Script" />
+<meta property="og:description" content="Shell Script    Shell Script의 개요   UNIX/ Linux 소개 및 특징   UNIX  1969년 AT&amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다 벨연구소는 대학과 연구기관에 UNIX를 활용할 수 있도록 라이선스를 제공하였으며, 버클리 대학교에서는 UNIX에 네트워크 프로토콜인 TCP/IP 등 다양한 기능을 보강하여 BSD 배포본을 제작하고 이후 파생되는 많은 UNIX에 영향을 끼쳤다.      Linux  1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원생에 의해 커널이 개발된 이래, 1984년부터 리처드 스토람에 의해 추진된 GNU 프로젝트의 다양한 소프트웨어들이 합쳐진 운영체제가 Linux이다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/programing/shell/shell-1/" />
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.32fce556db151d9f2651be74912748ae0df5df4503b56f173a2a318b2290e610.js" integrity="sha256-MvzlVtsVHZ8mUb50kSdIrg3130UDtW8XOioxiyKQ5hA="></script>
+<!--
+
+-->
+
+  
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<img style="padding-left: 3%; padding-right: 1%;"src = "https://github.com/mung0001/source/blob/master/static/Go/Golang.jpg?raw=true" width="90%" height="13%" >
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+  <div>
+    Comment : 내 직장도 뭉게뭉게
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/cloudcomputing/" class="">CloudComputing</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/" class="collapsed ">Amazon Web Service</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/openstack/" class="collapsed ">OpenStack</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/docker/" class="collapsed ">Docker</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/programing/" class="">Programing</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/python/" class="collapsed ">Python</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/shell/" class="collapsed ">Shell</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/base/" class="">Base</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-1/" class="active">Shell Script</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-2/" class="">Shell 학습 환경 구축</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/network/" class="">Network</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/" class="collapsed ">정리전</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/system/" class="">System</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Project</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/project/mini/" class="collapsed ">M Ini</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Shell Script</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#shell-script의-개요"><strong>Shell Script의 개요</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#unix-linux-소개-및-특징"><strong>UNIX/ Linux 소개 및 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#쉘의-역할-및-특징"><strong>쉘의 역할 및 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#shell의-종류"><strong>Shell의 종류</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-script-1"><strong>Shell Script</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#쉘-스크립트-활용-시-이점"><strong>쉘 스크립트 활용 시 이점</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#posixportable-operating-system-interface"><strong>POSIX(Portable Operating System Interface)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="shell-script"><strong>Shell Script</strong></h1>
+<h1 id="heading"></h1>
+<p> </p>
+<h1 id="heading-1"></h1>
+<h2 id="shell-script의-개요"><strong>Shell Script의 개요</strong></h2>
+<hr>
+<h1 id="heading-2"></h1>
+<h3 id="unix-linux-소개-및-특징"><strong>UNIX/ Linux 소개 및 특징</strong></h3>
+<h1 id="heading-3"></h1>
+<ul>
+<li><strong>UNIX</strong>
+<ul>
+<li><strong>1969년 AT&amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다</strong></li>
+<li><strong>벨연구소는 대학과 연구기관에 UNIX를 활용할 수 있도록 라이선스를 제공하였으며, 버클리 대학교에서는 UNIX에 네트워크 프로토콜인 TCP/IP 등 다양한 기능을 보강하여 BSD 배포본을 제작하고 이후 파생되는 많은 UNIX에 영향을 끼쳤다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-4"></h1>
+<ul>
+<li><strong>Linux</strong>
+<ul>
+<li><strong>1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원생에 의해 커널이 개발된 이래, 1984년부터 리처드 스토람에 의해 추진된 GNU 프로젝트의 다양한 소프트웨어들이 합쳐진 운영체제가 Linux이다.</strong></li>
+<li><strong>개인용 데스크톱 환경뿐만 아니라 안드로이드 등 스마트폼에서부터 기업용 엔터프라이즈 환경에 이르기까지 다양한 플랫폼에 이식되어 활용중이다.</strong></li>
+<li><strong>대표적인 리눅스 배포판에는 데비안, 레드햇, 슬렉웨어, SUSE, 우분투, 젠투가 있으며 그밖에도 다양한 배포본들이 파생되어 개발되고 있다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-5"></h1>
+<p> </p>
+<h1 id="heading-6"></h1>
+<h3 id="쉘의-역할-및-특징"><strong>쉘의 역할 및 특징</strong></h3>
+<h1 id="heading-7"></h1>
+<ul>
+<li><strong>쉘은 운영체제에서 커널(Kernel)과 사용자 사이의 인터페이스, 즉 가교 역할을 하는 프로그램으로, 운영체제의 내부 명령어나 응용프로그램을 실행하는 것을 지원</strong></li>
+<li><strong>시스템을 전체적으로 보면 운영체제는 결국 하드웨어의 한 부분인 저장장치의 일부에 저장</strong></li>
+<li><strong>운영체제를 좀 더 세부적으로 살펴보면, 운영체제가 설치되어 있는 저장장치(DISK 등)를 비롯하여 모니터, 그래픽카드, NIC 등 시스템에 직간접적으로 연결되는 하드웨어를 통제하는 커널과 이러한 커널과 사용자 및 응용 프로그램 사이에서의 명령을 전달을 담당하는 쉘로 구분</strong></li>
+<li><strong>운영체제 마다 기본적으로 다양한 쉘을 제공하고 있고 사용자가 별도의 쉘을 설치해서 활용</strong></li>
+<li><strong>CDE(Common Desktop Environment)</strong>
+<ul>
+<li><strong>공통 데스크톱 환경(CDE)은 유닉스를 위한 그래픽 데스크톱 환경이며 모티프 위젯 툴킷을 도입하고 있다.</strong></li>
+<li><strong>유닉스 표준화 단체들 가운데 하나인 공통 개방형 소프트웨어 환경이 지정한 유닉스 GUI 규격이다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-8"></h1>
+<p> </p>
+<h1 id="heading-9"></h1>
+<h2 id="shell의-종류"><strong>Shell의 종류</strong></h2>
+<h1 id="heading-10"></h1>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>개발자</th>
+<th>설치 위치</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sh</td>
+<td>Stephen Bouren</td>
+<td>/bin/sh</td>
+<td>대부분의 UNIX 및 Linux에 설치되어 있는 쉘</td>
+</tr>
+<tr>
+<td>bash</td>
+<td>Brain, Chet Ramey</td>
+<td>/bin/bash</td>
+<td>Linux의 기본 쉘로 sh와 호환</td>
+</tr>
+<tr>
+<td>ksh</td>
+<td>David Kron</td>
+<td>/bin/ksh</td>
+<td>1980년대 밸 연구서에서 개발, 부동 소수점 계산이 가능</td>
+</tr>
+<tr>
+<td>csh</td>
+<td>Bill Joy</td>
+<td>/bin/csh</td>
+<td>C언어와 비슷한 스타일로 Script를 작성 가능</td>
+</tr>
+<tr>
+<td>tcsh</td>
+<td>Ken Greer</td>
+<td>/bin/tcsh</td>
+<td>csh에 커맨드 히스토리 등 추가 기능을 보완</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-11"></h1>
+<ul>
+<li><strong>Shell 종류 확인 명령어</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ ps -p $$
+
+$ tail /etc/passwrd
+user01:x:500:500::/home/user01:/bin/bash
+# 마지막 필드에 기술된 쉘의 경로를 통해 확인가능
+</code></pre></div><h1 id="heading-12"></h1>
+<p> </p>
+<h1 id="heading-13"></h1>
+<h3 id="shell-script-1"><strong>Shell Script</strong></h3>
+<ul>
+<li><strong>컴퓨터 사용의 편의성을 확보한 GUI 기반의 실행 환경인 Windows 초기 버전이 있었지만 DOS를 통해 구동되는 DOS의 확장 프로그램 수준이었기 때문에 일반 사용자가 쉽게 사용하기에는 어려움이 있었다.</strong></li>
+<li><strong>이러한 번거로움을 조금이나마 해소하고자 DOS 구성 시 메모리 구성 및 드라이버 로딩을 케이스별로 메뉴로 구성하여 케이스별로 선택할 수 있는 배치 파일을 만들어 활용하는 사람들이 있었다.</strong></li>
+<li><strong>그 당시의 배치 파일을 지금의 쉘 스크립트와 비슷한 개념으로 이해하면 된다.</strong></li>
+<li><strong>쉘 스크립트 : 운영체제의 쉘에서 사용할 수 있는 명령어를 해석하고 그 결과를 커널에게 전달하는 프로그램</strong></li>
+<li><strong>쉘 : 사용자가 내린 명령어를 해석하고 그 결과를 커널에게 전달하는 프로그램</strong></li>
+</ul>
+<h1 id="heading-14"></h1>
+<p> </p>
+<h1 id="heading-15"></h1>
+<h3 id="쉘-스크립트-활용-시-이점"><strong>쉘 스크립트 활용 시 이점</strong></h3>
+<h1 id="heading-16"></h1>
+<ul>
+<li><strong>반복 작업에 대한 자동화 기능</strong>
+<ul>
+<li><strong>쉘 스크립트를 활용하는 가장 큰 장점은 관리자의 번거로움을 덜 수 있다.</strong></li>
+<li><strong>스케줄 설정과 같이 주기적으로 수행하는 단순한 작업에 단순한 작업에 쉘 스크립트를 활용하면 관리자가 일일이 타이핑하지 않아도 된다.</strong></li>
+</ul>
+</li>
+<li><strong>기존의 명령어를 사용자만의 명령어로 보완</strong>
+<ul>
+<li><strong>기본적으로 UNIX/Linux는 POSIX라는 표준 규약을 준수하지만 모든 명령어가 통일된 것은 아니기 때문에 운영체제 마다 명령 옵션이나 결과 형식에 약간의 차이가 있다.</strong></li>
+<li><strong>운영체제에서 제공하는 명령어 실행 결과를 사용자가 원하는 형식으로 재구성해야 할 때가 있다.</strong></li>
+<li><strong>예시</strong>
+<ul>
+<li><strong>운영체제가 다른 시스템에서 동일한 형태의 로그를 추출해야 할 때가 있다.</strong></li>
+<li><strong>이 경우, 쉘 스크립트를 이용하여 기존의 명령어의 결과를 원하는 형태의 결과로 표시할 수 있다.</strong></li>
+<li><strong>이를 위해 입출력 재지정(Rdirection)을 활용</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>손쉽고 빠른 개발 및 보완이 가능</strong>
+<ul>
+<li><strong>기본적으로, 쉘 스크립트 자체는 운영체제의 명령어 등을 묶어서 프로그램화한 후 인터프리터 방식으로 수행되기 때문에 별도의 컴파일러를 설치할 필요가 없다.</strong></li>
+<li><strong>운영체제의 명령어들을 잘 알고 있다면 손쉽고 빠른 개발 및 보완이 가능</strong></li>
+<li><strong>필요한 절차를 기술하는 것</strong></li>
+<li><strong>시스템 관리자가 관리하는 여러 대의 서버 및 원격지에 있는 서버를 설정하거나 패치할 때 쉘 스크립트를 활용하면 설정 및 패치 작업을 보다 더 효율적으로 할 수 있다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-17"></h1>
+<p> </p>
+<h1 id="heading-18"></h1>
+<h3 id="posixportable-operating-system-interface"><strong>POSIX(Portable Operating System Interface)</strong></h3>
+<ul>
+<li><strong>서로 다른 UNIX OS의 공통 API를 정리하여 이식성이 높은 유닉스 응용 프로그램을 개발하기 위한 목적으로 IEEE가 책정한 어플리케이션 인터페이스 규격</strong></li>
+<li><strong>대부분의 시스템들이 AT&amp;T에서 개발된 UNIX에 뿌리를 두고 있지만 시간이 흐르면서 다양한 제조사와 개발자의 손을 거치면서 운영체제별 의존성 문제가 발생</strong></li>
+<li><strong>POSIX는 운영체제별 의존성 문제를 해결하기 위해 서로 다른 UNIX 운영체제에서 공통 API를 정리하여 운영체제간 이식성이 높은 UNIX 응용 프로그램을 개발하기 위한 목적으로 제정된 API 규격</strong></li>
+</ul>
+<h1 id="heading-19"></h1>
+<p> </p>
+<h1 id="heading-20"></h1>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#shell-script의-개요"><strong>Shell Script의 개요</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#unix-linux-소개-및-특징"><strong>UNIX/ Linux 소개 및 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#쉘의-역할-및-특징"><strong>쉘의 역할 및 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#shell의-종류"><strong>Shell의 종류</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-script-1"><strong>Shell Script</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#쉘-스크립트-활용-시-이점"><strong>쉘 스크립트 활용 시 이점</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#posixportable-operating-system-interface"><strong>POSIX(Portable Operating System Interface)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AWS Security    기본적으로 AWS의 보안적 요소는 설비, 인프라 등과 관련된 물리적인 부분과 네트워크 인프라 등은 AWS가 책임을 지고 보안 대책을 수행합니다. 이러한 인프라 위의 OS, 애플리케이션, 네트워크 설정, 계정 관리 등은 사용자가 책임을 져야 하는 공유 책임 모델의 구조를 띄고 있습니다.    AWS가 제공하는 기본적인 보안 서비스      AWS 제공 서비스 서비스 개요     통신 경로 암호화 AWS 매니지먼트 콘솔로의 접속 또는 API를 사용할 때 HTTPS를 사용해 데이터를 암호화합니다."><meta property="og:title" content="AWS Security" />
+<meta property="og:description" content="AWS Security    기본적으로 AWS의 보안적 요소는 설비, 인프라 등과 관련된 물리적인 부분과 네트워크 인프라 등은 AWS가 책임을 지고 보안 대책을 수행합니다. 이러한 인프라 위의 OS, 애플리케이션, 네트워크 설정, 계정 관리 등은 사용자가 책임을 져야 하는 공유 책임 모델의 구조를 띄고 있습니다.    AWS가 제공하는 기본적인 보안 서비스      AWS 제공 서비스 서비스 개요     통신 경로 암호화 AWS 매니지먼트 콘솔로의 접속 또는 API를 사용할 때 HTTPS를 사용해 데이터를 암호화합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_security/" />
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.32fce556db151d9f2651be74912748ae0df5df4503b56f173a2a318b2290e610.js" integrity="sha256-MvzlVtsVHZ8mUb50kSdIrg3130UDtW8XOioxiyKQ5hA="></script>
+<!--
+
+-->
+
+  
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<img style="padding-left: 3%; padding-right: 1%;"src = "https://github.com/mung0001/source/blob/master/static/Go/Golang.jpg?raw=true" width="90%" height="13%" >
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+  <div>
+    Comment : 내 직장도 뭉게뭉게
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/cloudcomputing/" class="">CloudComputing</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/" class="collapsed ">Amazon Web Service</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws%EB%9E%80/" class="">AWS와 Cloud Computing</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_computing/" class="">AWS Computing</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_database/" class="">AWS Database</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_storage/" class="">AWS Storage</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_network/" class="">AWS Network</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_migrate/" class="">AWS Migrate</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_developer/" class="">AWS Developer</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_management/" class="">AWS Management</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_security/" class="active">AWS Security</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_analysis/" class="">AWS Analysis</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_as/" class="">AWS AutoScaling</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/test/" class="">Test</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/%EB%B0%B0%ED%8F%AC/" class="">배포</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws-%EA%B3%84%EC%A0%95/" class="">AWS 계정</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws%EC%9A%94%EA%B8%88/" class="">AWS 요금</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/basic/" class="">Base</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_cli/" class="">AWS CLI</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/aws_sdk/" class="">AWS SDK</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/openstack/" class="collapsed ">OpenStack</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/docker/" class="collapsed ">Docker</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/programing/" class="">Programing</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/python/" class="collapsed ">Python</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/shell/" class="collapsed ">Shell</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/network/" class="">Network</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/" class="collapsed ">정리전</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/system/" class="">System</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Project</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/project/mini/" class="collapsed ">M Ini</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>AWS Security</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#amazon-inspector"><strong>Amazon Inspector</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-artfact"><strong>AWS Artfact</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-certificatemanager"><strong>AWS CertificateManager</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ssl-tls-https"><strong>SSL/ TLS, HTTPS</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-cloudhsm"><strong>AWS CloudHSM</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-directoryservice"><strong>AWS DirectoryService</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-iam"><strong>AWS IAM</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#정책--policy-"><strong>정책 ( Policy )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#역할--role-"><strong>역할 ( Role )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#그룹-사용자"><strong>그룹&amp; 사용자</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#특징"><strong>특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#amazon-cognito"><strong>Amazon Cognito</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-kms--key-management-service-"><strong>AWS KMS ( Key Management Service )</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-organizations"><strong>AWS Organizations</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-shield"><strong>AWS Shield</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shield의-종류"><strong>Shield의 종류</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-waf--web-application-firewall-"><strong>AWS WAF ( Web Application Firewall )</strong></a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="aws-security"><strong>AWS Security</strong></h1>
+<hr>
+<h1 id="heading"></h1>
+<ul>
+<li><strong>기본적으로 AWS의 보안적 요소는 설비, 인프라 등과 관련된 물리적인 부분과 네트워크 인프라 등은 AWS가 책임을 지고 보안 대책을 수행합니다. 이러한 인프라 위의 OS, 애플리케이션, 네트워크 설정, 계정 관리 등은 사용자가 책임을 져야 하는 공유 책임 모델의 구조를 띄고 있습니다.</strong></li>
+</ul>
+<h1 id="heading-1"></h1>
+<ul>
+<li><strong>AWS가 제공하는 기본적인 보안 서비스</strong></li>
+</ul>
+<h1 id="heading-2"></h1>
+<table>
+<thead>
+<tr>
+<th>AWS 제공 서비스</th>
+<th>서비스 개요</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>통신 경로 암호화</td>
+<td>AWS 매니지먼트 콘솔로의 접속 또는 API를 사용할 때 HTTPS를 사용해 데이터를 암호화합니다.</td>
+</tr>
+<tr>
+<td>Security Group&amp; NetworkACL</td>
+<td>인스턴스들의 보안 그룹과 서브넷들의 통신 허가/ 거부 설정을 하는 네트워크 ACL을 사용해 예상하지 못하는 통신을 사전차단합니다.</td>
+</tr>
+<tr>
+<td>Identity and Access Management( IAM )</td>
+<td>사용자의 역할을 분리하고 최소한의 권한만을 부여하여 보안을 유지합니다.</td>
+</tr>
+<tr>
+<td>Multi Factor Authentication ( MFA )</td>
+<td>AWS 계정 또는 IAM 계정에 일회성 비밀번호 인증을 추가합니다.</td>
+</tr>
+<tr>
+<td>Virtual Private Cloud ( VPC )</td>
+<td>퍼블릭 클라우드에 프라이빗 환경을 구축합니다. 다른 거점에서 VPN으로 접속할 수도 있습니다.</td>
+</tr>
+<tr>
+<td>Direct Connect ( 전용선 연결 )</td>
+<td>On Premise 환경에서 AWS 전용선을 통해 직접 연결하여 데이터 도청, 변조 등의 위험을 줄일 수 있습니다.</td>
+</tr>
+<tr>
+<td>데이터 암호화</td>
+<td>EBS, S3, Glacier, Redshift, RDS에 저장하고 있는 데이터 또는 객체를 암호화할 수 있습니다.</td>
+</tr>
+<tr>
+<td>Hardware Security Module ( CloudHSM )</td>
+<td>암호화 키를 안전하게 저장하고 관리합니다.</td>
+</tr>
+<tr>
+<td>Trusted Advisor</td>
+<td>AWS 지원이 제공하는 서비스 중에 하나로, 각종 서비스의 설정과 운용 상황을 확인해서 개선할 부분을 제공해줍니다.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-3"></h1>
+<h2 id="amazon-inspector"><strong>Amazon Inspector</strong></h2>
+<hr>
+<p><img src="/AWS/Analysis/" alt="AWS" /></p>
+<h1 id="heading-4"></h1>
+<ul>
+<li>Amazon Inspector는 AWS에 배포된 애플리케이션의 보안 및 규정 준수를 개선하는데 도움이 되는 자동 보안 평가 서비스</li>
+<li>모범 사례로부터 애플리케이션의 노출, 취약성 및 편차를 자동으로 평가</li>
+<li>심각도 수준에 따라 우선순위가 지정된 상세한 보안 평가 결과 목록을 생성</li>
+<li>Amazon EC2 인스턴스의 의도하지 않은 네트워크 접근성과 이 EC2 인스턴스의 취약성을 확인</li>
+<li>Amazon Inspector 평가는 일반 보안 모범 사례 및 취약성 정의에 매핑된 사전 정의 규칙 패키지로 제공</li>
+</ul>
+<h1 id="heading-5"></h1>
+<p> </p>
+<h2 id="aws-artfact"><strong>AWS Artfact</strong></h2>
+<hr>
+<p><img src="/AWS/Security/" alt="AWS" /></p>
+<h1 id="heading-6"></h1>
+<ul>
+<li>AWS Artifact는 자신에게 해당되는 규정 준수와 관련된 정보를 제공하는 신뢰할 수 있는 중앙 리소스</li>
+<li>AWS 보안 및 규정 준수 보고서와 엄선된 온라인 계약에 대한 온디맨드 액세스를 제공</li>
+<li>보고서에는 SOC(Service Organization Control) 보고서와 PCI(Payment Card Industry) 보고서, 그리고 여러 지역의 인정 기구와 규정 준수 기관에서 AWS 보안 제어의 구현 및 운영 효율성을 입증하는 인증서가 포함</li>
+</ul>
+<h1 id="heading-7"></h1>
+<p> </p>
+<h2 id="aws-certificatemanager"><strong>AWS CertificateManager</strong></h2>
+<hr>
+<p><img src="/AWS/Security/" alt="AWS" /></p>
+<h1 id="heading-8"></h1>
+<ul>
+<li>AWS Certificate Manager는 AWS 서비스 및 연결된 내부 리소스에 사용할 공인 및 사설 SSL/TLS(Secure Sockets Layer/전송 계층 보안) 인증서를 손쉽게 프로비저닝, 관리 및 배포할 수 있도록 지원하는 서비스</li>
+<li>AWS Certificate Manager는 SSL/TLS 인증서를 구매, 업로드 및 갱신하는 데 드는 시간 소모적인 수동 프로세스를 대신 처리</li>
+</ul>
+<h3 id="ssl-tls-https"><strong>SSL/ TLS, HTTPS</strong></h3>
+<blockquote>
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>SSL/ TLS, HTTPS</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <hr>
+<h3 id="ssl-tls--secure-soket-layer-transport-layer-security-"><strong>SSL/ TLS ( Secure Soket Layer, Transport Layer Security )</strong></h3>
+<p><img src="/AWS/53/ST.png" alt="SSL/TLS"></p>
+<ul>
+<li>상위 계층 메시지를 분할, 압축하고 메시지 인증 코드 ( MAC )추가 및 암호화하는 작업을 수행하는 프로토콜</li>
+<li>Handshake 프로토콜에서 클라이언트와 서버는 상대방을 확인하고 사용할 키 교환 방식, 암호화 방식, 생성에 필요한 값 등을 전달하여 암호화 채널 수립을 위한 항목들을 협상</li>
+<li>단말 ( PC, server 등 )과 단만간의 암호화 통신을 위한 프로토콜</li>
+<li>SSLv1은 최초의 버전으로서 문제가 많아 발표되지 않고 사장됨</li>
+<li>SSLv2부터 공개가 되었으며 보다더 나은 버전인 SSLv3가 나왔으면 이를 기반으로 TLSv1 생성</li>
+<li>TLSv1.0 v1.1, v1.2, v1.3이 나왔지만 아직 많은 브라우저에서 TLSv3을 지원하지 않음</li>
+</ul>
+<h1 id="heading"></h1>
+<h3 id="ssl-handshake"><strong>SSL handshake</strong></h3>
+<p><img src="/AWS/Se/3Hand.png" alt="3Hand"></p>
+<ul>
+<li>Client Hello: Client가 Server에게 자신이 사용가능한 Random byte( 대칭키 생성에 사용됨 ), Session ID, S니/ TLS 버전이 포함된 Cipher suite list를 전달</li>
+<li>Server Hello: Server 가 Client가 보낸 Cipher suite List 중 하나를 선택해 전달</li>
+<li>Client Key exchange: 키 교환 실시 ( 실제 데이터 암호화에 사용할 키를 전달하여, S니 인증서에서 추출된 공개키로 암호화 )</li>
+<li>Server certificate: 서버의 인증서를 클라이언트에게 전송</li>
+<li>Sever hello done: 서버 전달 종료</li>
+<li>Change cipher Specs, Finished: 이후 보내는 메시지들은 협상된 암호화 알고리즘에 따라 보낼 것임을 통보</li>
+<li>Finished, Change cipher Specs: 클라이언트가 보낸 메시지를 확인 후, handshake를 종료하고 하나의 대칭키로 통신한다고 통보</li>
+</ul>
+
+    </div>
+  </label>
+</div>
+
+</blockquote>
+<h1 id="heading-9"></h1>
+<h1 id="heading-10"></h1>
+<p> </p>
+<h2 id="aws-cloudhsm"><strong>AWS CloudHSM</strong></h2>
+<hr>
+<p><img src="/AWS/Security/" alt="AWS" /></p>
+<h1 id="heading-11"></h1>
+<ul>
+<li>AWS CloudHSM은 AWS 클라우드에서 자체 암호화 키를 손쉽게 생성 및 사용할 수 있도록 지원하는 클라우드 기반 하드웨어 보안 모듈(HSM)</li>
+<li>사용자를 위해 하드웨어 프로비저닝, 소프트웨어 패치, 고가용성, 백업 등 시간 소모적인 관리 작업을 자동화하는 완전관리형 서비스</li>
+<li>CloudHSM에서는 FIPS 140-2 레벨 3 인증 HSM을 사용하여 자체 암호화 키를 관리가능</li>
+<li>모든 키를 대부분의 상용 HSM으로 내보내기 가능</li>
+<li>CloudHSM을 사용하면 선결제 비용 없이 온디맨드로 HSM 용량을 추가 및 제거하여 신속하게 확장/축소가능</li>
+</ul>
+<blockquote>
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>CloudHSM</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <h3 id="사용방법"><strong>사용방법</strong></h3>
+<p><img src="/AWS/Security/HSM.png" alt="AWS"></p>
+<ul>
+<li>AWS CloudHSM은 자체 Amazon Virtual Private Cloud(VPC)에서 실행되므로, Amazon EC2 인스턴스에서 실행되는 애플리케이션에 손쉽게 HSM을 사용</li>
+<li>CloudHSM에서는 표준 VPC 보안 제어 기능을 사용하여 HSM에 대한 액세스를 관리가 가능</li>
+<li>애플리케이션은 HSM 클라이언트 소프트웨어가 설정한 상호 인증된 SSL 채널을 사용하여 HSM에 연결</li>
+<li>HSM은 고객의 EC2 인스턴스와 가까운 Amazon 데이터 센터에 위치하므로, 온프레미스 HSM과 비교하여 애플리케이션과 HSM 간 네트워크 지연 시간을 줄일 수 있음</li>
+<li>업무 분리 및 역할 기반 액세스 제어는 AWS CloudHSM의 설계에 내제</li>
+</ul>
+<ol>
+<li>AWS에서 하드웨어 보안 모듈(HSM) 어플라이언스를 관리하지만, 고객의 키에 대한 액세스 권한이 없음</li>
+<li>고객이 자체 키를 제어하고 관리</li>
+<li>애플리케이션 성능이 개선</li>
+<li>다중 AZ(가용 영역)에 제공되는 변조 방지 하드웨어에 키를 안전하게 저장</li>
+<li>고객의 HSM은 고객의 Virtual Private Cloud(VPC)에 상주하며 다른 AWS 워크로드와 격리</li>
+</ol>
+    </div>
+  </label>
+</div>
+
+</blockquote>
+<h1 id="heading-12"></h1>
+<p> </p>
+<h2 id="aws-directoryservice"><strong>AWS DirectoryService</strong></h2>
+<hr>
+<p><img src="/AWS/Security/" alt="AWS" /></p>
+<h1 id="heading-13"></h1>
+<ul>
+<li>AWS Directory Service는 다른 AWS 서비스에서 Amazon Cloud Directory 및 Microsoft Active Directory(AD)를 사용할 수 있는 몇 가지 방법을 제공하는 서비스</li>
+<li>사용자, 그룹 및 디바이스에 대한 정보를 저장하고, 관리자는 이를 사용하여 정보 및 리소스에 대한 액세스를 관리</li>
+<li>AWS Directory Service는 클라우드에서 기존 Microsoft AD 또는 LDAP(Lightweight Directory Access Protocol)–인식 애플리케이션을 사용하려는 고객에게 다양한 디렉터리 선택 옵션을 제공</li>
+</ul>
+<h1 id="heading-14"></h1>
+<p> </p>
+<h2 id="aws-iam"><strong>AWS IAM</strong></h2>
+<hr>
+<h1 id="heading-15"></h1>
+<p><img src="/IAM/IAM.png" alt="IAM" /></p>
+<ul>
+<li>AWS 리소스에 대한 엑세스를 안전하게 제어할 수 있는 서비스로 IAM을 사용하여 리소스를 사용하도록 권한을 부여하거나 인증된 대상을 제어</li>
+<li>IAM 정책은 &ldquo;Action ( 어떤 서비스에 )&quot;, &ldquo;Resource ( 어떤 기능 또는 범위를 )&quot;, &ldquo;Effect ( 허가할 것인가 )&ldquo;라는 3가지 규칙을 기반으로 AWS 서비스를 사용하는 데 필요한 권한을 설정</li>
+<li>주요기능
+<ul>
+<li>AWS 계정에 대한 공유 엑세스</li>
+<li>서비스별 세분화된 권한 제공 가능</li>
+<li>EC2에서 실행되는 앱을 위한 AWS 리소스 엑세스 권한 제공</li>
+<li>멀티 팩터 인증 ( MFA )</li>
+<li>자격 증명 연동</li>
+</ul>
+</li>
+<li>AWS 서비스들은 IAM Role을 할당받아 권한을 부여받을 수 있음</li>
+<li>Access Key와 Secret Access Key를 직접 입력하지 않고 권한 부여 가능</li>
+<li>IAM 사용자 계정을 만들어 사용자에게 적절한 권한을 부여하고 사용 가능한 서비스를 제한할 수 있음</li>
+<li>사용자와 그룹은 N : N 의 관계가 성립이 가능</li>
+</ul>
+<h1 id="heading-16"></h1>
+<h3 id="정책--policy-"><strong>정책 ( Policy )</strong></h3>
+<ul>
+<li>User, Group, Role이 사용할 수 있는 권한의 범위를 지정하는 것</li>
+<li>S3FullAccess, Administrator Access 등 다양한 엑세스 권한이 이미 정의되어 있으며 이를 ‘AWS 관리형 이라 함</li>
+<li>사용자 정의 정책 생성
+<ul>
+<li>JSON 형식 또는 직접 선택을 통해 사용자 정의 정책 선택 가능</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-17"></h1>
+<h3 id="역할--role-"><strong>역할 ( Role )</strong></h3>
+<ul>
+<li>특정 권한을 가진 계정에 생성할 수 있는 IAM 자격증명</li>
+<li>역할에는 다음과 같은 주체가 있음
+<ul>
+<li>AWS 계정의 IAM 사용자</li>
+<li>AWS의 서비스 ( EC2, RDS, ELB 등 )</li>
+<li>외부 자격 증명 공급자 서비스에 의해 인증된 외부 사용자</li>
+</ul>
+</li>
+<li>역할 생성시 IAM 사용자, 서비스, 외부 사용자 등 주체를 정해야 함</li>
+<li>하나의 역할에는 다수의 정책을 연결할 수 있음</li>
+<li>생성된 역할을 서비스 혹은 IAM 사용자 등에 연결</li>
+<li>Region에 국한되지 않고 사용 가능</li>
+<li>신규 유저는 생성시 아무런 권한이 없으며 Access Key와 Secret Access Key가 할당</li>
+<li>각 키는 최초 생성시에만 볼 수 있으며 즉시 보관해야 함</li>
+</ul>
+<h1 id="heading-18"></h1>
+<h3 id="그룹-사용자"><strong>그룹&amp; 사용자</strong></h3>
+<ul>
+<li>사용자는 IAM 사용자를 의미하여 관리자 계정에 의해 부여받은 권한에 한해 제한된 서비스에 접근할 수 있는 계정을 의미</li>
+<li>콘솔 로그인과 프로그래밍 엑세스 가능 여부를 선택하여 생성 가능</li>
+<li>콘솔 로그인이 승인된 경우, 별도의 링크를 통해 콘솔에 로그인 할 수 있음</li>
+<li>각 사용자마다 정책을 부여할 수 있음</li>
+<li>사용자 모두에게 일일이 부여하기 힘들거나 그룹단위로 통제하고 싶은 경우, Group을 사용할 수 있음</li>
+<li>그룹은 이미 생성된 사용자와 권한을 설정할 수 있으며, 그룹 내 모든 사용자는 그룹의 권한을 적용받음</li>
+</ul>
+<h1 id="heading-19"></h1>
+<h3 id="특징"><strong>특징</strong></h3>
+<ul>
+<li><strong>권한</strong>
+<ul>
+<li>AWS의 서비스나 자원에 어떤 작업을 할 수 있는지 명시해두는 규칙</li>
+<li>&quot; 서울 리전에 있는 모든 EC2를 조회할 수 있다&rdquo; 와 같은 항목이 하나의 권한을 칭한다.</li>
+</ul>
+</li>
+<li><strong>정책</strong>
+<ul>
+<li>권한들의 모음으로, 사용자나 권한들에 직접 적용은 불가능하며, 권한들로 만든 정책을 적용</li>
+<li>정책은 사용자, 그룹, 역할에 적용할 수 있다.</li>
+</ul>
+</li>
+<li><strong>사용자</strong>
+<ul>
+<li>사용자는 AWS의 기능과 자원을 이용하는 객체, 사용자별로 어떤 권한을 가졌는지 세분화해서 지정할 수 있으며, 사용자는 AWS Console에 접근할 수 있는 사람일 수도 있고, 자동화되어 실행되는 프로그램일 수도 있다. 접속하는 사용자인 경우에는 비밀번화가 제공되지만, 프로그램인 경우에는 액세스 키 ID와 비밀 엑세스 키가 제공된다.</li>
+</ul>
+</li>
+<li><strong>그룹</strong>
+<ul>
+<li>여러 사용자에게 공통으로 권한을 부여할 수 있게 만들어진 개념이다. 하나의 그룹에 여러 명의 사용자를 지정이 가능</li>
+</ul>
+</li>
+<li><strong>역할</strong>
+<ul>
+<li>어떤 행위를 하는 객체에 여러 정책을 적용한다는 점에서 사용자와 비슷ㅎ자ㅣ만 객체가 사용자가 아닌 서비스나 다른 AWS 계정의 사용자라는 점에서 차이가 있다. 사용자가 아닌 특정 서비스에서 생성한 객체에 권한을 부여하는 데 사용</li>
+</ul>
+</li>
+<li><strong>인스턴스 프로파일</strong>
+<ul>
+<li>사용자가 사람을 구분하고 그 사람에 권한을 주기 위한 개념이었따면, 인스턴스 프로파일은 EC2 인스턴스를 구분하고 그 인스턴스에 권한을 주기 위한 개념</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-20"></h1>
+<p> </p>
+<h2 id="amazon-cognito"><strong>Amazon Cognito</strong></h2>
+<hr>
+<p><img src="/AWS/Cognito/Cognito01.png" alt="AWS" /></p>
+<h1 id="heading-21"></h1>
+<ul>
+<li>Amazon Cognito는 웹 및 모바일 앱에 대한 인증, 권한 부여 및 사용자 관리를 제공</li>
+<li>사용자는 사용자 이름과 암호를 사용하여 직접 로그인하거나 Facebook, Amazon, Google 또는 Apple 같은 타사를 통해 로그인가능</li>
+<li>Cognito를 사용한 사용자 인증과 접속허가 종류
+<ul>
+<li>Identity Provider를 사용한 인증</li>
+<li>Cognito를 사용한 Credential 발행</li>
+<li>IAM 규칙</li>
+</ul>
+</li>
+<li>Cognito는 SQLite 데이터베이스를 사용, 시간적으로 마지막에 수정된 데이터를 우선적으로 하는 방침을 가짐</li>
+<li>Cognito는 Identity Pool 단위를 사용</li>
+</ul>
+<h1 id="heading-22"></h1>
+<p> </p>
+<h2 id="aws-kms--key-management-service-"><strong>AWS KMS ( Key Management Service )</strong></h2>
+<hr>
+<p><img src="/AWS/Security/" alt="AWS" /></p>
+<h1 id="heading-23"></h1>
+<ul>
+<li>AWS Key Management Service(AWS KMS)는 데이터 암호화에 사용하는 암호화 키인 고객 마스터 키(CMK)를 쉽게 생성하고 제어할 수 있게 해주는 관리형 서비스</li>
+</ul>
+<h1 id="heading-24"></h1>
+<p> </p>
+<h2 id="aws-organizations"><strong>AWS Organizations</strong></h2>
+<hr>
+<p><img src="/AWS/Security/" alt="AWS" /></p>
+<h1 id="heading-25"></h1>
+<ul>
+<li>AWS Organizations는 AWS의 워크로드가 증가하고 확장됨에 따라 환경을 중앙에서 관리하는 서비스</li>
+<li>계정 생성을 자동화하고, 비즈니스 요구를 반영하도록 계정 그룹을 생성하고, 거버넌스를 위해 이러한 그룹에 정책을 적용이 가능</li>
+<li>AWS 계정에 대해 단일 결제 방법을 설정하여 결제 과정을 간소화가 가능</li>
+<li>WS Organizations는 모든 AWS 고객이 추가 비용 없이 사용가능</li>
+</ul>
+<h1 id="heading-26"></h1>
+<p> </p>
+<h2 id="aws-shield"><strong>AWS Shield</strong></h2>
+<hr>
+<h1 id="heading-27"></h1>
+<ul>
+<li>분산 서비스 거부 공격( DDoS )으로부터 웹 어플리케이션을 보호하는 서비스</li>
+<li>Cloudfront와 통합되어 있기 때문에 AWS의 서비스가 아니더라도 Cloudfront의 origin이라면 보호가 가능</li>
+</ul>
+<h1 id="heading-28"></h1>
+<h3 id="shield의-종류"><strong>Shield의 종류</strong></h3>
+<ul>
+<li><strong>Shield Stanard</strong>
+<ul>
+<li>기본적으로 적용되는 서비스로 설정을 하지 않아도 AWS 서비스에 활성화 되어있음</li>
+</ul>
+</li>
+<li><strong>Shield Advanced</strong>
+<ul>
+<li>추가 비용을 내고 추가적인 서비스를 제공받는 것으로 L7 트래픽 모니터링, 사후 분석 등의 기능을 제공</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-29"></h1>
+<p> </p>
+<h2 id="aws-waf--web-application-firewall-"><strong>AWS WAF ( Web Application Firewall )</strong></h2>
+<hr>
+<p><img src="/AWS/Security/WAF.png" alt="AWS" /></p>
+<h1 id="heading-30"></h1>
+<ul>
+<li>웹 방화벽으로 Cloudfront와 ALB를 통해 서비스를 제공 ( ALB와 Cloudfront를 직접 지정하여 웹방화벽을 제공 )</li>
+<li>WAF을 활용하면 다양한 종류의 웹 공격에 대한 정보를 지닌 Rule을 선택하여 활성화하거나, 특정 Ip의 요청을 막을 수 있음</li>
+</ul>
+<blockquote>
+<blockquote class="book-hint warning">
+  <h3 id="웹방화벽"><strong>웹방화벽</strong></h3>
+<ul>
+<li>방화벽이 L4/ L4 Layer의 방어 ( IP와 Port 차단 )을 이용</li>
+<li>웹 방화벽은 L7( HTTP 헤더, HTTP 본문, URI 문자열, SQL 명령어, 스크립팅 )을 이용한 공격을 방어</li>
+</ul>
+</blockquote>
+
+</blockquote>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#amazon-inspector"><strong>Amazon Inspector</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-artfact"><strong>AWS Artfact</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-certificatemanager"><strong>AWS CertificateManager</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ssl-tls-https"><strong>SSL/ TLS, HTTPS</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-cloudhsm"><strong>AWS CloudHSM</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-directoryservice"><strong>AWS DirectoryService</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-iam"><strong>AWS IAM</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#정책--policy-"><strong>정책 ( Policy )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#역할--role-"><strong>역할 ( Role )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#그룹-사용자"><strong>그룹&amp; 사용자</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#특징"><strong>특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#amazon-cognito"><strong>Amazon Cognito</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-kms--key-management-service-"><strong>AWS KMS ( Key Management Service )</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-organizations"><strong>AWS Organizations</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-shield"><strong>AWS Shield</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shield의-종류"><strong>Shield의 종류</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-waf--web-application-firewall-"><strong>AWS WAF ( Web Application Firewall )</strong></a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OS on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/categories/os/</link>
+    <description>Recent content in OS on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mung0001.github.io/categories/os/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Window 10 무설치 정품인증</title>
+      <link>https://mung0001.github.io/posts/window10/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/posts/window10/</guid>
+      <description>Window 10 무설치 정품인증    단순히 Window 10의 명령프롬프트를 사용하여 간단하게 윈도우 인증을 완료하는 방법을 알려드리겠습니다.    명령프롬프트를 사용한 정품인증   먼저 검색 or 실행 ( Window 키 + R )에서 dxdiag 또는 winver를 검색 후, 운영체제의 버전을 확인해주세요. 위의 그림은 winver를 통해 확인한 모습입니다.      다음으로는 인증 키의 설정을 위해 위의 그림과 같이 명령 프롬프트를 관리자 권한으로 실행합니다.      아래의 명령어를 입력해주세요.</description>
+    </item>
+    
+  </channel>
+</rss>

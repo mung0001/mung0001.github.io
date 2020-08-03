@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/posts/</link>
+    <description>Recent content in Blog on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mung0001.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lambda</title>
+      <link>https://mung0001.github.io/posts/lambda/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/posts/lambda/</guid>
+      <description>Lambda   Lambda는 기본적으로 AWS의 서비스 중 하나인 Lambda를 의미하며 일반적으로 서버리스 아키텍처로 사용됩니다.
+  여기서 서버리스 아키텍처란 실행을 위해 서버에 직접 접근하지 않는 새로운 종류의 소프트웨어 아키텍처를 의미합니다.
+  Lambda는 AWS 기반에서 자바스크립트, 파이썬, C#, 자바로 작성한 코드를 실행하는 컴퓨팅 서비스입로, 소스 코드는 압축되어 메모리, 디스크 공간과 CPU가 할당된 격리된 컨테이너에 배포됩니다.
+  그럼 본격적으로 Lambda에 대해 알아보도록 하겠습니다.
+     Server or Serverless   Server  상단의 그림은 기본적인 3 tier 애플리케이션의 구조입니다.</description>
+    </item>
+    
+    <item>
+      <title>Window 10 무설치 정품인증</title>
+      <link>https://mung0001.github.io/posts/window10/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/posts/window10/</guid>
+      <description>Window 10 무설치 정품인증    단순히 Window 10의 명령프롬프트를 사용하여 간단하게 윈도우 인증을 완료하는 방법을 알려드리겠습니다.    명령프롬프트를 사용한 정품인증   먼저 검색 or 실행 ( Window 키 + R )에서 dxdiag 또는 winver를 검색 후, 운영체제의 버전을 확인해주세요. 위의 그림은 winver를 통해 확인한 모습입니다.      다음으로는 인증 키의 설정을 위해 위의 그림과 같이 명령 프롬프트를 관리자 권한으로 실행합니다.      아래의 명령어를 입력해주세요.</description>
+    </item>
+    
+    <item>
+      <title>테스트</title>
+      <link>https://mung0001.github.io/posts/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/posts/goisforlovers/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/posts/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/posts/base/</guid>
+      <description>****          **** </description>
+    </item>
+    
+  </channel>
+</rss>
