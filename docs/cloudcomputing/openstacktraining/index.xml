@@ -10,5 +10,52 @@
 	<atom:link href="https://mung0001.github.io/docs/cloudcomputing/openstacktraining/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>DevStack</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/devstack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/devstack/</guid>
+      <description>DevStack Stein 설치  DevStack   Devbian 계열 ( ex : Ubuntu )의 OpenStack 자동화 설치 툴   DevStack 설치   Update Ubuntu System  $ sudo apt -y update$ sudo apt -y upgrade$ sudo apt -y dist-upgrade# Ubuntu의 시스템 및 패키지를 업데이트 합니다.$ sudo init 6# 시스템을 재시작합니다.    Add Stack User  $ sudo useradd -s /bin/bash -d /opt/stack -m stack# devstack 설치를 위해 stack 유저를 생성합니다.</description>
+    </item>
+    
+    <item>
+      <title>Packstack</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/packstack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/packstack/</guid>
+      <description>Packstack Stein 설치  Packstack   Redhat 계열 ( ex : CentOS )의 OpenStack 자동화 설치 툴     Packstack stain 설치   기본적으로 PackStack은 올인원 or 다중노드로 구성할 수 있으며, 여기서는 올인원으로 설치를 진행하며, 다중노드에 대한 설정은 추가하도록 하겠습니다.   설치사양     OS CPU RAM DISK     CenOS7 4/ 2 10240 100G      만약 다중 노드에 경우 소스를 분산시키고 각 노드에 설정을 추가합니다.</description>
+    </item>
+    
+    <item>
+      <title>Openstack Stain Manual 설치</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-stein/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-stein/</guid>
+      <description>Openstack Stain Manual 설치    1. 시스템 및 네트워크 구성   여기서는 Nat 네트워크를 외부, host1 대역을 내부로 사용하여 Openstack을 구축해보도록 하겠습니다.    운영체제 및 네트워크 구성  Hypervisor : Vmware Workstation 15 OS : CentOS7      노드 구성     OS Hostname Network Interface Network Interface2 CPU RAM DISK     CentOS7 controller Nat ( 192.168.10.100 ) HOST1 ( 10.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-%EB%AA%85%EB%A0%B9%EC%96%B4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-%EB%AA%85%EB%A0%B9%EC%96%B4/</guid>
+      <description>OpenStack 명령어 입력시, 옵션이 많으니 사용 시 사전에 확인할 것
+대부분의 명령어 입력은 기본 값으로 진행 compute service   인스턴스 리스트 출력  openstack server list  인스턴스 생성  openstack server create --image [] --flavor [] --key-name [] --network [] [ server_name ]  인스턴스 제거  openstack server delete [ 서버 이름 ]  인스턴스 시작  openstack server start [ 서버 이름 ]  인스턴스 정지  openstack server stop [ 서버 이름 ]   인스턴스 상세설명  openstack server show [ 서버 이름 ]  인스턴스 수정  openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack       openstack  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack%EC%84%A4%EC%B9%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack%EC%84%A4%EC%B9%98/</guid>
+      <description>OpenStack   설치 방법  메뉴얼을 이용한 설치 자동화 툴을 이용한 설치 ( Packstack, Devstack )      packstack을 이용한 설치   0. 설치환경
+   Hostname IP 운영체제 cpu 메모리 디스크      controller 192.168.1.98 CentOS7 2 4 50gb    compute 192.168.1.99 CentOS7 2 4 200gb    network 192.168.1.100 CentOS7 1 2 50gb                1.</description>
+    </item>
+    
   </channel>
 </rss>
