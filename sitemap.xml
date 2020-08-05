@@ -12,6 +12,66 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-10/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-11/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-12/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-13/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-15/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-16/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-17/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-18/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-4/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-5/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-6/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-7/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-8/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-9/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/openstack/</loc>
   </url>
   
@@ -28,11 +88,15 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/start/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-1/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/aws%EB%9E%80/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/start/</loc>
   </url>
   
   <url>
@@ -272,7 +336,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/aws_as/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/%EC%A0%95%EB%A6%AC%EC%A0%84/aws_as/</loc>
   </url>
   
   <url>
@@ -285,10 +349,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa/</loc>
   </url>
   
   <url>
@@ -360,19 +420,19 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/test/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/%EC%A0%95%EB%A6%AC%EC%A0%84/test/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/%EB%B0%B0%ED%8F%AC/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/%EC%A0%95%EB%A6%AC%EC%A0%84/%EB%B0%B0%ED%8F%AC/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/aws-%EA%B3%84%EC%A0%95/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/%EC%A0%95%EB%A6%AC%EC%A0%84/aws-%EA%B3%84%EC%A0%95/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/aws%EC%9A%94%EA%B8%88/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/%EC%A0%95%EB%A6%AC%EC%A0%84/aws%EC%9A%94%EA%B8%88/</loc>
   </url>
   
   <url>
@@ -380,7 +440,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/basic/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/%EC%A0%95%EB%A6%AC%EC%A0%84/basic/</loc>
   </url>
   
   <url>
@@ -416,11 +476,11 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/aws_cli/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/%EC%A0%95%EB%A6%AC%EC%A0%84/aws_cli/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/aws_sdk/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/%EC%A0%95%EB%A6%AC%EC%A0%84/aws_sdk/</loc>
   </url>
   
   <url>
@@ -565,7 +625,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/network/snort/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</loc>
+    <loc>https://mung0001.github.io/docs/network/snort/snort/</loc>
   </url>
   
   <url>
@@ -650,6 +710,10 @@
   
   <url>
     <loc>https://mung0001.github.io/posts/base/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/awssaa/aws%EB%9E%80/</loc>
   </url>
   
   <url>
