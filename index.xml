@@ -468,21 +468,21 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     
     <item>
       <title></title>
+      <link>https://mung0001.github.io/docs/network/mail/mail-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/network/mail/mail-server/</guid>
+      <description>Mail 서버 생성   단계  SSL 보안 인증서 발급받기  도메인 주소   메일서버 설치   Ubuntu 18.04
+   SSL 보안 인증서 발급받기  1. 도메인 주소 설정  SSL 보안 인증서를 사용하기 위해서는 http://도메인으로 해당 사이트에 접근이 가능해아합니다. 이미 도메인 주소가 있으신 분은 그것을 사용하고, 없으신 분은 Link에서 무료 도메인을 사용하시면 됩니다.   2. SSL  무료 SSL을 생성합니다.  $ sudo apt-get install -y postfix# postfix 설치   VMware에 NAS 설치   Vmware에서 Custom으로 Virtual Machine을 설치합니다.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/3tier/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/3tier/</guid>
       <description>Loacal 3Tier 구현    OS, 구현 프로그램  Ubuntu18.04 Apache2 Tomcat8 Mysql5.8 GNS3   IP 대역  10.10.10.0/24 Public 20.20.20.0/24 Private 30.30.30.0/24 Private2  Public 대역 10.10.10.10 Apache1 10.10.10.11 Apache2  Private 대역 20.20.20.20 Tomcat1 20.20.20.21 Tomcat2  Public 대역 30.30.30.30 Mysql1 30.30.30.30 Mysql2     sudo vi /etc/netplan/50-cloud-init.yamlnetwork:version: 2ethernets:ens33:dhcp6: noaddresses:- [ IP addresses ]gateway4: [ gateway ]nameservers:addresses: [ [nameserver] ]$ sudo netplan apply$ hostname -l아키텍처 사진</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/system/mail/mail-server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/system/mail/mail-server/</guid>
-      <description>Mail 서버 생성   단계  SSL 보안 인증서 발급받기  도메인 주소   메일서버 설치   Ubuntu 18.04
-   SSL 보안 인증서 발급받기  1. 도메인 주소 설정  SSL 보안 인증서를 사용하기 위해서는 http://도메인으로 해당 사이트에 접근이 가능해아합니다. 이미 도메인 주소가 있으신 분은 그것을 사용하고, 없으신 분은 Link에서 무료 도메인을 사용하시면 됩니다.   2. SSL  무료 SSL을 생성합니다.  $ sudo apt-get install -y postfix# postfix 설치   VMware에 NAS 설치   Vmware에서 Custom으로 Virtual Machine을 설치합니다.</description>
     </item>
     
     <item>
@@ -860,6 +860,22 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
+      <link>https://mung0001.github.io/docs/network/snort/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/network/snort/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</guid>
+      <description>시스템통합 관리 침입 탐지 시스템(IDS) &amp;ndash; Snort 이용    주된 기능
+  탐지(Detection)
+  잘못된 패킷을 감지하면 사용자에게 알림(주체적으로 처리하지 X, only 안내)
+       탐지 종류 2가지
+  (1)오용 탐지	알고 있는 것 탐지
+  (2)이상 탐지	모르는 것도 탐지(100% 탐지 X)
+  너무 민감하게 처리하면 필요한 정보도 차단하는 실수를 할 수 있음
+       설치위치 ( 성능이 달라짐 )</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/sdn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1078,22 +1094,6 @@ This document is a brief primer on using Go templates.</description>
       
       <guid>https://mung0001.github.io/docs/system/linux/linux/</guid>
       <description>Linux   Linux 기초   유닉스 기반의 컴퓨터 운영체제의 한 종류 핀란드 헬싱키 대학의 대학원생 리누스 토발즈가 1991년에 개발 오픈 소스의 운영체제 대표적인 리눅스 기관 GNU 높은 이식성과 확정성 ( C언어 기반 ) 안전성과 신뢰성 ( 국제적이고 개방적으로 개발되었기 때문에 문제점에 대한 대처가 빠름 ) 계층적 파일 시스템 ( 최상위 디렉토리가 존재하고 모든 것들은 해당 디렉토리 하부에 존재 )   유닉스 운영체제 종류  리눅스의 구성요소   명령어 : 사용자가 원하는 프로그램을 콜링</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/system/snort/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/system/snort/%E3%84%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%86%B5%ED%95%A9/</guid>
-      <description>시스템통합 관리 침입 탐지 시스템(IDS) &amp;ndash; Snort 이용    주된 기능
-  탐지(Detection)
-  잘못된 패킷을 감지하면 사용자에게 알림(주체적으로 처리하지 X, only 안내)
-       탐지 종류 2가지
-  (1)오용 탐지	알고 있는 것 탐지
-  (2)이상 탐지	모르는 것도 탐지(100% 탐지 X)
-  너무 민감하게 처리하면 필요한 정보도 차단하는 실수를 할 수 있음
-       설치위치 ( 성능이 달라짐 )</description>
     </item>
     
     <item>
