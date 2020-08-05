@@ -256,6 +256,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/heat/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/3tier/</loc>
   </url>
   
@@ -300,6 +304,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/trove/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/docker/</loc>
   </url>
   
@@ -309,14 +317,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/dockertraining/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/heat/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/trove/</loc>
   </url>
   
   <url>
