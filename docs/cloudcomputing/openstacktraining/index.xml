@@ -20,12 +20,120 @@
     </item>
     
     <item>
+      <title>OpenStack Ussuri : Overview</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-01/</guid>
+      <description>OpenStack Ussuri : Overview  OpenStack Ussuri : Overview    OpenStack Ussuri 설치는 위의 그림과 표에 맞춰 설치가 진행됩니다. minimal 기본 설치는 keystone, glance, nova, neutron, cinder, horizon이며 여기서는 가능한 모든 서비스를 설치하도록 하겠습니다.      OS HOST NAME CPU/thead RAM DISK Network Interface-1 Network Interface-2      CentOS8 controller 4/8 6144 100G Nat host1    CentOS8 network 2/4 2048 40G Nat host1    CentOS8 compute 4/8 6144 40G   host1    CentOS8 storage1 1/2 6144 50G   host1    CentOS8 storage2 1/2 6144 50G   host1    CentOS8 storage3 1/2 6144 50G   host1         Service Code Name Description     Identity Service Keystone User Management   Compute Service Nova Virtual Machine Management   Image Service Glance Manages Virtual image like kernel image or disk image   Dashboard Horizon Provides GUI console via Web browser   Object Storage Swift Provides Cloud Storage   Block Storage Cinder Storage Management for Virtual Machine   Network Service Neutron Virtual Networking Management   Orchestration Service Heat Provides Orchestration function for Virtual Machine   Metering Service Ceilometer Provides the function of Usage measurement for accounting   Database Service Trove Database resource Management   Data Processing Service Sahara Provides Data Processing function   Bare Metal Provisioning Ironic Provides Bare Metal Provisioning function   Messaging Service Zaqar Provides Messaging Service function   Shared File System Manila Provides File Sharing Service   DNS Service Designate Provides DNS Server Service   Key Manager Service Barbican Provides Key Management Service      </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri Overview</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-06/</guid>
+      <description>OpenStack Ussuri  OpenStack Ussuri  </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri Overview</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-07/</guid>
+      <description>OpenStack Ussuri  OpenStack Ussuri  </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri Overview</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-08/</guid>
+      <description>OpenStack Ussuri  OpenStack Ussuri  </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri Overview</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-09/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-09/</guid>
+      <description>OpenStack Ussuri  OpenStack Ussuri  </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri Overview</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-10/</guid>
+      <description>OpenStack Ussuri  OpenStack Ussuri  </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri Overview</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-11/</guid>
+      <description>OpenStack Ussuri  OpenStack Ussuri  </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri Overview</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-12/</guid>
+      <description>OpenStack Ussuri  OpenStack Ussuri  </description>
+    </item>
+    
+    <item>
       <title>Packstack</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/packstack/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/packstack/</guid>
       <description>Packstack Stein 설치  Packstack   Redhat 계열 ( ex : CentOS )의 OpenStack 자동화 설치 툴     Packstack stain 설치   기본적으로 PackStack은 올인원 or 다중노드로 구성할 수 있으며, 여기서는 올인원으로 설치를 진행하며, 다중노드에 대한 설정은 추가하도록 하겠습니다.   설치사양     OS CPU RAM DISK     CenOS7 4/ 2 10240 100G      만약 다중 노드에 경우 소스를 분산시키고 각 노드에 설정을 추가합니다.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : 기본 환경설정</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-02/</guid>
+      <description>OpenStack Ussuri : 기본 환경설정   ----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached | -----------------------  OpenStack Ussuri : 기본 환경설정  Controller MariaDB 설차  $ controller&amp;gt; dnf module -y install mariadb:10.3$ controller&amp;gt; vi /etc/my.cnf.d/charaset.cnf[mysqld]character-set-server = utf8mb4[client]default-character-set = utf8mb4# mariadb를 설치 후, charaset 설정을 변경하기 위해 파일을 수정합니다.$ controller&amp;gt; systemctl restart --now mariadb$ controller&amp;gt; systemctl enable --now mariadb# DB를 재시작 합니다.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Keystone</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-03/</guid>
+      <description>OpenStack Ussuri : Keystone   ----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached Keystone | | httpd | -----------------------  OpenStack Ussuri : Keystone   Keystone은 OpenStack에서 인증 서비스를 구성하고 있습니다. Keystone에 대한 자세한 설명은 Keystone을 참조해주세요.   Keystone 유저와 DB를 생성합니다.  $ controller&amp;gt; mysql -u root -p$ MariaDB&amp;gt; create database keystone; $ MariaDB&amp;gt; grant all privileges on keystone.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Glance</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-04/</guid>
+      <description>OpenStack Ussuri : Glance   ----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached Keystone | | httpd Glance | -----------------------  OpenStack Ussuri : Glance   Glance는 OpenStack에서 이미지 생성에 필요한 Iamge 관리 서비스를 구성하고 있습니다. Glance에 자세한 설명은 Glance를 참조해주세요.   Glance service 및 User 생성 $ contoller (keystone)&amp;gt; openstack user create --domain default --project service --password qwer1234 glance+---------------------+----------------------------------+| Field | Value |+---------------------+----------------------------------+| default_project_id | 7c10c02365be496fb47f12bfd40fe4a7 || domain_id | default || enabled | True || id | 03f5b16a7be84cb688617d1943c8fe8c || name | glance || options | {} || password_expires_at | None |+---------------------+----------------------------------+$ contoller (keystone)&amp;gt; openstack role add --project service --user glance admin$ contoller (keystone)&amp;gt; openstack service create --name glance --description &amp;#34;OpenStack Image service&amp;#34; image+-------------+----------------------------------+| Field | Value |+-------------+----------------------------------+| description | OpenStack Image service || enabled | True || id | af365771c17a4a25ae1d0c659e2dc0eb || name | glance || type | image |+-------------+----------------------------------+$ contoller (keystone)&amp;gt; openstack endpoint create --region RegionOne image public http://controller:9292+--------------+----------------------------------+| Field | Value |+--------------+----------------------------------+| enabled | True || id | cc65faecd7b042ffafd0f262cd7547df || interface | public || region | RegionOne || region_id | RegionOne || service_id | af365771c17a4a25ae1d0c659e2dc0eb || service_name | glance || service_type | image || url | http://controller:9292 |+--------------+----------------------------------+$ contoller (keystone)&amp;gt; openstack endpoint create --region RegionOne image internal http://controller:9292+--------------+----------------------------------+| Field | Value |+--------------+----------------------------------+| enabled | True || id | ea41c7b17c844e658ac83c547eddcf6d || interface | internal || region | RegionOne || region_id | RegionOne || service_id | af365771c17a4a25ae1d0c659e2dc0eb || service_name | glance || service_type | image || url | http://controller:9292 |+--------------+----------------------------------+$ contoller (keystone)&amp;gt; openstack endpoint create --region RegionOne image admin http://controller:9292+--------------+----------------------------------+| Field | Value |+--------------+----------------------------------+| enabled | True || id | 1393a64ef0ec428ba437602ac5b390f6 || interface | admin || region | RegionOne || region_id | RegionOne || service_id | af365771c17a4a25ae1d0c659e2dc0eb || service_name | glance || service_type | image || url | http://controller:9292 |+--------------+----------------------------------+   Glance 유저의 DB를 생성합니다.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri Overview</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-05/</guid>
+      <description>OpenStack Ussuri  OpenStack Ussuri  </description>
     </item>
     
     <item>
