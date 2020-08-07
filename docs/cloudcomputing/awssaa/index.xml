@@ -92,16 +92,6 @@
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-3/</guid>
-      <description>****  ****       ~
-    </description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -176,6 +166,16 @@
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-2/</guid>
       <description>2장 Amazon Elastic Compute Cloud와 Amazon Elastic Block Store  2장의 목표  복원력은 갖춘 아키텍처 설계  안정적이고, 복원력을 갖춘 스토리지를 선택 어떻게 고가용성 및/ 또는 내결함성을 갖춘 아키텍처를 설계할지를 결정      성능이 뛰어난 아키텍처 정의  성능이 뛰어난 스토리지 및 데이터베이스를 선택 탄력성과 확장성을 갖춘 솔루션을 설계      안전한 애플리케이션 및 아키텍처 설명  어떻게 애플리케이션 티어를 보호할지를 결정 어떻게 데이터를 보호할지 결정   비용에 최적화된 아키텍처 설계  어떻게 비용에 최적화된 스토리지를 설계할지를 결정 어떻게 비용에 최적화된 컴퓨팅을 설계할지 결정       EC2 인스턴스    EC2는 물리 서버의 기능을 함축적으로 가상화한 실제 서버와 유사하게 작동</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-3/</guid>
+      <description>****  ****       ~
+    </description>
     </item>
     
     <item>
