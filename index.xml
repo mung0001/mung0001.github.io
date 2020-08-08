@@ -716,7 +716,7 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-02/</guid>
-      <description>OpenStack Ussuri : 기본 환경설정   ----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached | -----------------------  OpenStack Ussuri : 기본 환경설정  Controller MariaDB 설차  $ controller&amp;gt; dnf module -y install mariadb:10.3$ controller&amp;gt; vi /etc/my.cnf.d/charaset.cnf[mysqld]character-set-server = utf8mb4[client]default-character-set = utf8mb4# mariadb를 설치 후, charaset 설정을 변경하기 위해 파일을 수정합니다.$ controller&amp;gt; systemctl restart --now mariadb$ controller&amp;gt; systemctl enable --now mariadb# DB를 재시작 합니다.</description>
+      <description>OpenStack Ussuri : 기본 환경설정   ----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached | -----------------------  OpenStack Ussuri : 기본 환경설정   앞 기본 환경설정을 모든 노드에서 진행한 후, DB, RabbitMQ, Memcached는 controller에서만 설치를 진행합니다.  $ all&amp;gt; $ controller&amp;gt;$ controller ~(keystone)&amp;gt;$ compute&amp;gt;$ network&amp;gt;# 위와 같은 호스트를 주의헤 주세요 !# (keystone)은 keystone 설치 후 인증 받은 터미널입니다.</description>
     </item>
     
     <item>
