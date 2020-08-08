@@ -93,16 +93,6 @@
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-4/</guid>
-      <description>****  ****       ~
-    </description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -198,6 +188,16 @@
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-1/</guid>
       <description>SAA 요약정리  정리를 들어가기 전 핵심요소  자격 시험의 합격과 실패는 현장에서의 실무 경험과 실습 중심의 학습, 시험에 필요한 세부적인 정보와 숫자를 얼마나 잘 기억하는지에 달려 있다. AWS SAA는 핵심 AWS 서비스 구성 요소와 운영은 물론 서비스 간의 상호작용 방식도 이해가 필요 기본적인 공부는 Amazon의 공식문서 및 여러 실습 경험을 필요로 한다.    AWS SAA 참고자료      시험영역 출제 비율     1.</description>
+    </item>
+    
+    <item>
+      <title>4장 VPC</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-4/</guid>
+      <description>4장 Amazon Virtual Private Cloud  ****       ~
+    </description>
     </item>
     
     <item>
@@ -343,7 +343,7 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-3/</guid>
-      <description>3장 Amazon Simple Storage Service와 Amazon Glacier Storage Service  2장의 목표   복원력을 갖춘 아키텍처 설계
+      <description>3장 Amazon Simple Storage Service와 Amazon Glacier Storage Service   2장의 목표   복원력을 갖춘 아키텍처 설계
  안정적이고/ 복원력을 갖춘 스로티리지를 선택한다. 어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다. 어떻게 고가용성 및 내결함성을 갖춘 아키텍처를 설계할지 결정한다.    성능이 뛰어난 아키텍처 정의
  성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다.    안전한 애플리케이션 및 아키텍처 설명
  어떻게 애플리케이션 티어를 보호할지 결정한다.</description>
