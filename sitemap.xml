@@ -340,10 +340,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/devstack/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/network/</loc>
   </url>
   
@@ -404,23 +400,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-13/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-11/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-01/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-15/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/packstack/</loc>
   </url>
   
   <url>
@@ -472,11 +452,23 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-11/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-12/</loc>
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-13/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-14/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-15/</loc>
   </url>
   
   <url>
@@ -568,6 +560,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/devstack/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/awstraining/game/</loc>
   </url>
   
@@ -577,6 +573,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/%EC%A0%95%EB%A6%AC%EC%A0%84/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/packstack/</loc>
   </url>
   
   <url>

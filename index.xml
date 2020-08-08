@@ -664,15 +664,6 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
-      <title>DevStack</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/devstack/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/devstack/</guid>
-      <description>DevStack Stein 설치  DevStack   Devbian 계열 ( ex : Ubuntu )의 OpenStack 자동화 설치 툴   DevStack 설치   Update Ubuntu System  $ sudo apt -y update$ sudo apt -y upgrade$ sudo apt -y dist-upgrade# Ubuntu의 시스템 및 패키지를 업데이트 합니다.$ sudo init 6# 시스템을 재시작합니다.    Add Stack User  $ sudo useradd -s /bin/bash -d /opt/stack -m stack# devstack 설치를 위해 stack 유저를 생성합니다.</description>
-    </item>
-    
-    <item>
       <title>AWS S3 생성</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/s3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -702,48 +693,12 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
-      <title>OpenStack Ussuri : Designate</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-13/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-13/</guid>
-      <description>OpenStack Ussuri : Designate  OpenStack Ussuri : Designate  </description>
-    </item>
-    
-    <item>
-      <title>OpenStack Ussuri : Gnnoch</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-11/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-11/</guid>
-      <description>OpenStack Ussuri : Gnnoch  OpenStack Ussuri : Gnnoch  </description>
-    </item>
-    
-    <item>
       <title>OpenStack Ussuri : Overview</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-01/</guid>
       <description>OpenStack Ussuri : Overview  OpenStack Ussuri : Overview    OpenStack Ussuri 설치는 위의 그림과 표에 맞춰 설치가 진행됩니다. minimal 기본 설치는 keystone, glance, nova, neutron, cinder, horizon이며 여기서는 가능한 모든 서비스를 설치하도록 하겠습니다.      OS HOST NAME CPU/thead RAM DISK Network Interface-1 Network Interface-2      CentOS8 controller 4/8 6144 100G Nat host1    CentOS8 network 2/4 2048 40G Nat host1    CentOS8 compute 4/8 6144 40G   host1    CentOS8 storage1 1/2 6144 50G   host1    CentOS8 storage2 1/2 6144 50G   host1    CentOS8 storage3 1/2 6144 50G   host1         Service Code Name Description     Identity Service Keystone User Management   Compute Service Nova Virtual Machine Management   Image Service Glance Manages Virtual image like kernel image or disk image   Dashboard Horizon Provides GUI console via Web browser   Object Storage Swift Provides Cloud Storage   Block Storage Cinder Storage Management for Virtual Machine   Network Service Neutron Virtual Networking Management   Orchestration Service Heat Provides Orchestration function for Virtual Machine   Metering Service Ceilometer Provides the function of Usage measurement for accounting   Database Service Trove Database resource Management   Data Processing Service Sahara Provides Data Processing function   Bare Metal Provisioning Ironic Provides Bare Metal Provisioning function   Messaging Service Zaqar Provides Messaging Service function   Shared File System Manila Provides File Sharing Service   DNS Service Designate Provides DNS Server Service   Key Manager Service Barbican Provides Key Management Service      </description>
-    </item>
-    
-    <item>
-      <title>OpenStack Ussuri : Rally</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-15/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-15/</guid>
-      <description>OpenStack Ussuri : Rally  OpenStack Ussuri : Rally  </description>
-    </item>
-    
-    <item>
-      <title>Packstack</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/packstack/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/packstack/</guid>
-      <description>Packstack Stein 설치  Packstack   Redhat 계열 ( ex : CentOS )의 OpenStack 자동화 설치 툴     Packstack stain 설치   기본적으로 PackStack은 올인원 or 다중노드로 구성할 수 있으며, 여기서는 올인원으로 설치를 진행하며, 다중노드에 대한 설정은 추가하도록 하겠습니다.   설치사양     OS CPU RAM DISK     CenOS7 4/ 2 10240 100G      만약 다중 노드에 경우 소스를 분산시키고 각 노드에 설정을 추가합니다.</description>
     </item>
     
     <item>
@@ -756,7 +711,7 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
-      <title>OpenStack Ussuri : 기본 환경설정</title>
+      <title>OpenStack Ussuri : 환경설정</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-02/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -860,12 +815,30 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
-      <title>OpenStack Ussuri : Brabican</title>
+      <title>OpenStack Ussuri : Gnnoch</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-11/</guid>
+      <description>OpenStack Ussuri : Gnnoch  OpenStack Ussuri : Gnnoch  </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Trove</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-12/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-12/</guid>
-      <description>OpenStack Ussuri : Brabican  OpenStack Ussuri : Brabican  </description>
+      <description>OpenStack Ussuri : Trove  OpenStack Ussuri : Trove  </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Designate</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-13/</guid>
+      <description>OpenStack Ussuri : Designate  OpenStack Ussuri : Designate  </description>
     </item>
     
     <item>
@@ -875,6 +848,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-14/</guid>
       <description>OpenStack Ussuri : Brabican  OpenStack Ussuri : Brabican  </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Rally</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-15/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-15/</guid>
+      <description>OpenStack Ussuri : Rally  OpenStack Ussuri : Rally  </description>
     </item>
     
     <item>
@@ -1093,12 +1075,30 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
     </item>
     
     <item>
+      <title>DevStack</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/devstack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/devstack/</guid>
+      <description>DevStack Stein 설치  DevStack   Devbian 계열 ( ex : Ubuntu )의 OpenStack 자동화 설치 툴   DevStack 설치   Update Ubuntu System  $ sudo apt -y update$ sudo apt -y upgrade$ sudo apt -y dist-upgrade# Ubuntu의 시스템 및 패키지를 업데이트 합니다.$ sudo init 6# 시스템을 재시작합니다.    Add Stack User  $ sudo useradd -s /bin/bash -d /opt/stack -m stack# devstack 설치를 위해 stack 유저를 생성합니다.</description>
+    </item>
+    
+    <item>
       <title>EC2 끄투온라인 서버 구축</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/game/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awstraining/game/</guid>
       <description>AWS 끄투온라인 서버 구축    AWS 끄투온라인 서버 구축      끄투 온라인은 오픈소스의 끝말잇기 게임입니다.      EC2를 생성합니다. EC2 생성은 EC2 생성을 참조해주세요.     OS 유형 disk security group     Ubuntu18.04 t2.mini 8 all-open      인스턴스를 생성 후, 아래와 같이 진행합니다.  $ sudo apt -y update$ sudo apt -y upgrade$ sudo apt -y install node.</description>
+    </item>
+    
+    <item>
+      <title>Packstack</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/packstack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/packstack/</guid>
+      <description>Packstack Stein 설치  Packstack   Redhat 계열 ( ex : CentOS )의 OpenStack 자동화 설치 툴     Packstack stain 설치   기본적으로 PackStack은 올인원 or 다중노드로 구성할 수 있으며, 여기서는 올인원으로 설치를 진행하며, 다중노드에 대한 설정은 추가하도록 하겠습니다.   설치사양     OS CPU RAM DISK     CenOS7 4/ 2 10240 100G      만약 다중 노드에 경우 소스를 분산시키고 각 노드에 설정을 추가합니다.</description>
     </item>
     
     <item>
