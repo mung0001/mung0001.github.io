@@ -702,6 +702,24 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>OpenStack Ussuri : Designate</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-13/</guid>
+      <description>OpenStack Ussuri : Designate  OpenStack Ussuri : Designate  </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Gnnoch</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-11/</guid>
+      <description>OpenStack Ussuri : Gnnoch  OpenStack Ussuri : Gnnoch  </description>
+    </item>
+    
+    <item>
       <title>OpenStack Ussuri : Overview</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -711,21 +729,12 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
-      <title>OpenStack Ussuri Overview</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-11/</link>
+      <title>OpenStack Ussuri : Rally</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-15/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-11/</guid>
-      <description>OpenStack Ussuri  OpenStack Ussuri  </description>
-    </item>
-    
-    <item>
-      <title>OpenStack Ussuri Overview</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-12/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-12/</guid>
-      <description>OpenStack Ussuri  OpenStack Ussuri  </description>
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-15/</guid>
+      <description>OpenStack Ussuri : Rally  OpenStack Ussuri : Rally  </description>
     </item>
     
     <item>
@@ -848,6 +857,33 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-10/</guid>
       <description>OpenStack Ussuri : Heat  OpenStack Ussuri : Heat  </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Brabican</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-12/</guid>
+      <description>OpenStack Ussuri : Brabican  OpenStack Ussuri : Brabican  </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Brabican</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-14/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-14/</guid>
+      <description>OpenStack Ussuri : Brabican  OpenStack Ussuri : Brabican  </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Manila</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-16/</guid>
+      <description>OpenStack Ussuri : Manila  OpenStack Ussuri : Manila  </description>
     </item>
     
     <item>
