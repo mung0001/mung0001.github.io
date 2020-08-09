@@ -333,7 +333,7 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-3/</guid>
-      <description>3장 Amazon Simple Storage Service와 Amazon Glacier Storage Service   2장의 목표   복원력을 갖춘 아키텍처 설계
+      <description>3장 Amazon Simple Storage Service와 Amazon Glacier Storage Service   3장의 목표   복원력을 갖춘 아키텍처 설계
  안정적이고/ 복원력을 갖춘 스로티리지를 선택한다. 어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다. 어떻게 고가용성 및 내결함성을 갖춘 아키텍처를 설계할지 결정한다.    성능이 뛰어난 아키텍처 정의
  성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다.    안전한 애플리케이션 및 아키텍처 설명
  어떻게 애플리케이션 티어를 보호할지 결정한다.</description>
@@ -399,8 +399,7 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-4/</guid>
-      <description>4장 Amazon Virtual Private Cloud  ****       ~
-    </description>
+      <description>4장 Amazon Virtual Private Cloud   4장의 목표   복원력을 갖춘 아키텍처 설계  어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.      안전한 어플리케이션 및 아키텍처 설계  단일 VPC 어플리케이션을 위한 네트워킹 인프라르 정의한다. 단일 VPC 애플리케이션을 위한 네트워킹 인프라르 정의한다.       Virtual Private Cloud ( 이하 VPC )    VPC란 EC2의 네트워크 계층으로, EC2 인스턴스를 비롯한 여러 AWS 서비스에 네트워크 리소스를 담을 수 있는 가상의 네트워크를 의미한다.</description>
     </item>
     
     <item>
