@@ -108,6 +108,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/lm/lm-1/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/network/network/natwork-1/</loc>
   </url>
   
@@ -164,6 +168,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/lm/lm-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/network/mail/</loc>
   </url>
   
@@ -201,6 +209,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/glance/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/system/lm/lm-3/</loc>
   </url>
   
   <url>
@@ -340,11 +352,19 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/lm/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/network/</loc>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/database/sqld/</loc>
   </url>
   
   <url>
@@ -361,6 +381,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/trove/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/database/</loc>
   </url>
   
   <url>
@@ -785,11 +809,31 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/lm/lm-0/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/%EA%B0%80%EC%83%81%ED%99%94/</loc>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/docs/network/sophos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/database/sqld/sqld-0/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/database/sqld/sqld-1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/database/sqld/sqld-2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/database/sqld/sqld-3/</loc>
   </url>
   
 </urlset>

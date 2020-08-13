@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux master 2급 on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/docs/system/lm/</link>
+    <description>Recent content in Linux master 2급 on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    
+	<atom:link href="https://mung0001.github.io/docs/system/lm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux 일반</title>
+      <link>https://mung0001.github.io/docs/system/lm/lm-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/lm/lm-1/</guid>
+      <description>1. 리눅스의 개요   리눅스의 특징 및 장단점   특징   오픈 소스 운영체제이다.
+  멀티유저(다중사용자), 멀티테스킹(다중작업) 운영체제이다.
+  다중스레드를 지원하는 네트워크 운영체제이다.
+  여러 종류의 파일시스템을 지원하는 운영체제이다.
+       장단점   리눅스는 유닉스와 완벽하게 호환 가능하다.
+  리눅스는 PC용 운영체제보다 안정적이다.
+  하드웨어 기능을 효과적으로 사용한다.
+  리눅스는 오픈 소스 운영체제이다.
+  공개 운영체제이기 때문에 문제점 발생 시 기술지원을 받기 어렵다.</description>
+    </item>
+    
+    <item>
+      <title>Linux 운영 및 관리</title>
+      <link>https://mung0001.github.io/docs/system/lm/lm-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/lm/lm-2/</guid>
+      <description>Section 1. 권한 및 그룹 설정
+ 리눅스 시스템은 모든 파일과 디렉터리에는 접근권한과 소유권이 부여된다. 명령어 ‘ls –l’ 은 파일 속성을 나타낸다. 속성 필드 중 첫 번째 필드는 파일이나 디렉터리의 허가권, 세번째와 네번째 필드는 파일 이나 디렉터리의 소유권을 나타낸다. 파일의 허가권이나 소유권을 설정하는 명령어는 chmod, chown, chgrp, umask 등이 있다. 소유권 관련 명령어 소유권은 임의의 파일 또는 디렉터리에 대한 사용자와 그룹들의 소유 권한을 나타낸 것 이다. 그룹은 사용자들의 시스템 운영 특성에 따라 묶어 놓은 것으로, 같은 그룹에 속한 사용자 들은 파일 또는 디렉터리에 대해 동일한 소유권과 직접 권한을 갖는다.</description>
+    </item>
+    
+    <item>
+      <title>Linux 활용</title>
+      <link>https://mung0001.github.io/docs/system/lm/lm-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/lm/lm-3/</guid>
+      <description>Linux 일반   X-windows 개념 및 사용법   X-window란 우리가 흔히 사용하고 있는 Window와 같이 GUI 환경을 제공하는 서비스를 의미한다. Ubuntu, CentOS 등의 Redhat, Debian 계열의 Linux 운영체제 또한 GUI 환경으로 설치가 가능하다.     X-윈도우의 특징과 구성 요소   개념과 특징   리눅스 환경의 각종 애플리케이션과 유틸리티에 대해 그래픽 사용자 인터페이스를 제공한다.
+  플랫폼과 독립적으로 작동하는 그래픽 시스템이다.
+  X-윈도우는 X11, X, X Windows System이라 한다.</description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://mung0001.github.io/docs/system/lm/lm-0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/lm/lm-0/</guid>
+      <description>****  ****       </description>
+    </item>
+    
+  </channel>
+</rss>

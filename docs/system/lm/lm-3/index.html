@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Linux 일반   X-windows 개념 및 사용법   X-window란 우리가 흔히 사용하고 있는 Window와 같이 GUI 환경을 제공하는 서비스를 의미한다. Ubuntu, CentOS 등의 Redhat, Debian 계열의 Linux 운영체제 또한 GUI 환경으로 설치가 가능하다.     X-윈도우의 특징과 구성 요소   개념과 특징   리눅스 환경의 각종 애플리케이션과 유틸리티에 대해 그래픽 사용자 인터페이스를 제공한다.
+  플랫폼과 독립적으로 작동하는 그래픽 시스템이다.
+  X-윈도우는 X11, X, X Windows System이라 한다."><meta property="og:title" content="Linux 활용" />
+<meta property="og:description" content="Linux 일반   X-windows 개념 및 사용법   X-window란 우리가 흔히 사용하고 있는 Window와 같이 GUI 환경을 제공하는 서비스를 의미한다. Ubuntu, CentOS 등의 Redhat, Debian 계열의 Linux 운영체제 또한 GUI 환경으로 설치가 가능하다.     X-윈도우의 특징과 구성 요소   개념과 특징   리눅스 환경의 각종 애플리케이션과 유틸리티에 대해 그래픽 사용자 인터페이스를 제공한다.
+  플랫폼과 독립적으로 작동하는 그래픽 시스템이다.
+  X-윈도우는 X11, X, X Windows System이라 한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/lm/lm-3/" />
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.0f99c3e235ccd31302a8445d8a7bc22ea77ddf92807cc98e31a55e091435b603.js" integrity="sha256-D5nD4jXM0xMCqERdinvCLqd935KAfMmOMaVeCRQ1tgM="></script>
+<!--
+
+-->
+
+  
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<img style="padding-left: 3%; padding-right: 1%;"src = "https://github.com/mung0001/source/blob/master/static/Go/Golang.jpg?raw=true" width="90%" height="13%" >
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/cloudcomputing/" class="">CloudComputing</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/amazonwebservice/" class="collapsed ">Amazon Web Service</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/googlecloudplatform/" class="collapsed ">Google Cloud Platform</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/microsoftazure/" class="collapsed ">Microsoft Azure</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/openstack/" class="collapsed ">OpenStack</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/docker/" class="collapsed ">Docker</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/cloudcomputing/%EC%A0%95%EB%A6%AC%EC%A0%84/" class="collapsed ">정리전</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/programing/" class="">Programing</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/python/" class="collapsed ">Python</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/shell/" class="collapsed ">Shell</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/network/" class="">Network</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/" class="collapsed ">정리전</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/system/" class="">System</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/lm/" class="collapsed ">Linux master 2급</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/lm/lm-1/" class="">Linux 일반</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/lm/lm-2/" class="">Linux 운영 및 관리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/lm/lm-3/" class="active">Linux 활용</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/lm/lm-0/" class="">Linux</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/database/" class="">Database</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Project</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/project/mini/" class="collapsed ">M Ini</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Linux 활용</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux-일반"><strong>Linux 일반</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#x-windows-개념-및-사용법"><strong>X-windows 개념 및 사용법</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#x-윈도우의-특징과-구성-요소"><strong>X-윈도우의 특징과 구성 요소</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#윈도우-매니저와-데스크톱-환경"><strong>윈도우 매니저와 데스크톱 환경</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#x-윈도우-활용"><strong>X-윈도우 활용</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#x-윈도우-응용-프로그램"><strong>X-윈도우 응용 프로그램</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#인터넷-활용"><strong>인터넷 활용</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="linux-일반"><strong>Linux 일반</strong></h2>
+<hr>
+<h1 id="heading"></h1>
+<h2 id="x-windows-개념-및-사용법"><strong>X-windows 개념 및 사용법</strong></h2>
+<h1 id="heading-1"></h1>
+<ul>
+<li><strong>X-window란 우리가 흔히 사용하고 있는 Window와 같이 GUI 환경을 제공하는 서비스를 의미한다.</strong></li>
+<li><strong>Ubuntu, CentOS 등의 Redhat, Debian 계열의 Linux 운영체제 또한 GUI 환경으로 설치가 가능하다.</strong></li>
+</ul>
+<h1 id="heading-2"></h1>
+<p> </p>
+<h1 id="heading-3"></h1>
+<h3 id="x-윈도우의-특징과-구성-요소"><strong>X-윈도우의 특징과 구성 요소</strong></h3>
+<h1 id="heading-4"></h1>
+<ul>
+<li><strong>개념과 특징</strong>
+<ul>
+<li>
+<p><strong>리눅스 환경의 각종 애플리케이션과 유틸리티에 대해 그래픽 사용자 인터페이스를 제공한다.</strong></p>
+</li>
+<li>
+<p><strong>플랫폼과 독립적으로 작동하는 그래픽 시스템이다.</strong></p>
+</li>
+<li>
+<p><strong>X-윈도우는 X11, X, X Windows System이라 한다.</strong></p>
+</li>
+<li>
+<p><strong>네트워크 기반의 그래픽 환경을 지원한다.</strong></p>
+</li>
+<li>
+<p><strong>이기종 시스템 사이에서도 사용 가능하다.</strong></p>
+</li>
+<li>
+<p><strong>스크롤바, 아이콘, 색상 등 그래픽 환경 자원들이 특정 형태로 정의되어 있지 않다.</strong></p>
+</li>
+<li>
+<p><strong>디스플레이 장치에 의존적이지 않으며 원하는 인터페이스를 만들 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>X-윈도우는 네트워크 프로토콜 기반의 클라이언트/서버 시스템이다.</strong></p>
+</li>
+<li>
+<p><strong>서버 프로그램과 클라이언트 프로그램으로 나누어 작동한다.</strong></p>
+</li>
+<li>
+<p><strong>서버는 클라이언트들의 디스플레이에 관한 접근 허용, 클라이언트 간의 자원 공유, 네트워크 메시지 전달, 클라이언트와 입출력 기기와의 중계를 담당한다.</strong></p>
+</li>
+<li>
+<p><strong>클라이언트는 애플리케이션으로 X 서버가 제공하는 기능들을 이용한다.</strong></p>
+</li>
+<li>
+<p><strong>오픈 데스크톱 환경으로 KDE, GNMOE, XFCE 등이 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-5"></h1>
+<p> </p>
+<ul>
+<li><strong>구성요소의 종류</strong>
+<ul>
+<li>
+<p><strong>Xprotocol</strong></p>
+</li>
+<li>
+<p><strong>Xlib</strong></p>
+</li>
+<li>
+<p><strong>XCB</strong></p>
+</li>
+<li>
+<p><strong>Xtoolkit</strong></p>
+</li>
+<li>
+<p><strong>XFree86</strong></p>
+</li>
+<li>
+<p><strong>XF86Config</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-6"></h1>
+<p> </p>
+<ul>
+<li><strong>X-윈도우 설정과 실행 파일 ( /etc/inittab )</strong>
+<ul>
+<li>
+<p><strong>init 프로세스가 읽는 파일로, init 프로세스가 무엇을 해야 할 것인가를 결정한다.</strong></p>
+</li>
+<li>
+<p><strong>리눅스 사용 환경을 초기화한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-7"></h1>
+<p> </p>
+<ul>
+<li><strong>X-윈도우 실행</strong>
+<ul>
+<li>
+<p><strong>그래픽 환경이 아닌 터미널 윈도우로 로그인한 경우에는 몇 개의 프로그램을 실행해야한다.</strong></p>
+</li>
+<li>
+<p><strong>터미널 윈도우의 명령어 프롬프트상에서 다음의 명령어를 실행시켜야 한다.</strong></p>
+</li>
+<li>
+<p><strong>startx는 X-윈도우를 실행하는 스크립트로 시스템 환경을 초기화하고 xinit을 호출한다.</strong></p>
+</li>
+<li>
+<p><strong>startx 실행 시 인자값을 xinit에 전달하는 옵션은 ‘&ndash;‘ 이다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-8"></h1>
+<p> </p>
+<ul>
+<li><strong>환경변수 DISPLAY</strong>
+<ul>
+<li>
+<p><strong>환경 변수는 프로세스가 컴퓨터에서 동작하는 방식에 영향을 주는 동적인 값이다.</strong></p>
+</li>
+<li>
+<p><strong>셸에서 정의되고 실행하는 동안 프로그램에 필요한 변수이다.</strong></p>
+</li>
+<li>
+<p><strong>환경 변수 DISPLAY는 현재 X-윈도우 Display 위치를 지정할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>형식: export DISPLAY=IP주소:디스플레이번호.스크린번호</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-9"></h1>
+<p> </p>
+<h1 id="heading-10"></h1>
+<h3 id="윈도우-매니저와-데스크톱-환경"><strong>윈도우 매니저와 데스크톱 환경</strong></h3>
+<h1 id="heading-11"></h1>
+<ul>
+<li><strong>윈도우 매니저</strong>
+<ul>
+<li>
+<p><strong>윈도우 매니저는 X window상에서 창의 배치와 표현을 담당하는 시스템 프로그램이다.</strong></p>
+</li>
+<li>
+<p><strong>창 열기와 닫기, 창의 생성 위치, 창 크기 조정, 창의 외양과 테두리를 변화시킬 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>라이브러리는 Xlib와 XCB를 사용한다.</strong></p>
+</li>
+<li>
+<p><strong>윈도우 매니저의 대표적인 종류로는 fvwm, twm, mw, windowMaker, AfterStep 등이 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-12"></h1>
+<p> </p>
+<ul>
+<li><strong>데스크톱 환경</strong>
+<ul>
+<li>
+<p><strong>GUI사용자에게 제공하는 인터페이스 스타일로 데스크톱 관리자라고도 한다.</strong></p>
+</li>
+<li>
+<p><strong>윈도우 매니저, 파일 관리자, 도움말, 제어판 등 다양한 도구를 제공하는 패키지 형태의 프로그램이다.</strong></p>
+</li>
+<li>
+<p><strong>아이콘, 창, 도구모음, 폴더, 배경화면, 데스크톱 위젯도 제공한다.</strong></p>
+</li>
+<li>
+<p><strong>드래그 앤 드롭과 프로세스 간의 통보 기능을 지원한다.</strong></p>
+</li>
+<li>
+<p><strong>대표적인 데스크톱 환경에는 KDE, GNOME, LXDE, Xfce 등이 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-13"></h1>
+<p> </p>
+<ul>
+<li><strong>디스플레이 매니저</strong>
+<ul>
+<li>
+<p><strong>X window system 상에서 작동하는 프로그램이다.</strong></p>
+</li>
+<li>
+<p><strong>디스플레이 매니저 종류들로는 XDM, GDM, KDM 등이 있다.</strong></p>
+</li>
+<li>
+<p><strong>로컬 또는 리모트 컴퓨터의 X server의 접속과 세션 시작을 담당한다.</strong></p>
+</li>
+<li>
+<p><strong>사용자에게 그래픽 로그인 화면을 띄워주고 아이디와 패스워드를 입력받아 인증을 진행하고 인증이 정상적으로 완료되면 세션을 시작한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-14"></h1>
+<p> </p>
+<h1 id="heading-15"></h1>
+<h3 id="x-윈도우-활용"><strong>X-윈도우 활용</strong></h3>
+<h1 id="heading-16"></h1>
+<ul>
+<li><strong>원격지에서 X 클라이언트 이용</strong></li>
+</ul>
+<h1 id="heading-17"></h1>
+<ul>
+<li><strong>xhost</strong>
+<ul>
+<li>
+<p><strong>명령어 xhost는 X 서버에 접속할 수 있는 클라이언트를 지정하거나 해제한다.</strong></p>
+</li>
+<li>
+<p><strong>X 서버에게 디스플레이를 요청 시 해당 요청에 대해 허용 여부를 호스트 단위로 제어한다.</strong></p>
+</li>
+<li>
+<p><strong>xhost [+|-] [IP|도메인명]</strong></p>
+</li>
+<li>
+<p><strong>환경변수 DISPLAY로 X 서버 프로그램이 실행될 때 표시되는 클라이언트 주소를 지정한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-18"></h1>
+<p> </p>
+<ul>
+<li><strong>xauth</strong>
+<ul>
+<li>
+<p><strong>.Xauthority 파일의 쿠키 내용을 추가, 삭제, 리스트를 출력하는 유틸리티이다.</strong></p>
+</li>
+<li>
+<p><strong>xhost가 호스트 기반 인증 방식을 사용하기 위해 필요한 유틸리티라면 xauth는 MMC방식의 인증방식을 사용하기 위한 필수 유틸리티이다.</strong></p>
+</li>
+<li>
+<p><strong>원격지에서 접속하는 X클라이언트를 허가할 때 IP 주소나 호스트명이 아닌 X-윈도우 실행 시에 생성되는 키 값으로 인증할 때 사용한다.</strong></p>
+</li>
+<li>
+<p><strong>사용자 인증 기반을 지원하기 위해 각 사용자에게 네트워크화 된 홈 디렉터리에 파일 $HOME/.Xauthority에 대해 읽기 및 쓰기 권한이 있어야 한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-19"></h1>
+<p> </p>
+<h1 id="heading-20"></h1>
+<h3 id="x-윈도우-응용-프로그램"><strong>X-윈도우 응용 프로그램</strong></h3>
+<h1 id="heading-21"></h1>
+<ul>
+<li><strong>오피스</strong>
+<ul>
+<li>
+<p><strong>LibreOffice: 오피스 프로그램 피키지</strong></p>
+</li>
+<li>
+<p><strong>gedit: 텍스트 편집 프로그램</strong></p>
+</li>
+<li>
+<p><strong>kwrite: KDE 기반의 텍스트 편집기</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-22"></h1>
+<p> </p>
+<ul>
+<li><strong>그래픽</strong>
+<ul>
+<li>
+<p><strong>GIMP: 이미지 편집 프로그램</strong></p>
+</li>
+<li>
+<p><strong>ImageMagick: 이미지 생성 및 편집을 지원하는 프로그램</strong></p>
+</li>
+<li>
+<p><strong>eog: GNOM의 이미지 뷰어 프로그램</strong></p>
+</li>
+<li>
+<p><strong>kolourpaint: Ubuntu 이미지 편집 프로그램</strong></p>
+</li>
+<li>
+<p><strong>gThumb: GNOME 데스크톱 이미지 뷰어 프로그램</strong></p>
+</li>
+<li>
+<p><strong>gwenview: KDE의 기본 이미지 뷰어</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-23"></h1>
+<p> </p>
+<ul>
+<li><strong>멀티미디어</strong>
+<ul>
+<li>
+<p><strong>Totem: GNOME 기반의 사운드 및 비디오 재생 프로그램</strong></p>
+</li>
+<li>
+<p><strong>RHYTHMBOX: 통합형 음악 관리 프로그램</strong></p>
+</li>
+<li>
+<p><strong>CHEESE: GNOME 기반의 카메라 동영상 프로그램</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-24"></h1>
+<p> </p>
+<ul>
+<li><strong>개발</strong>
+<ul>
+<li><strong>ECLIPSE: 통합 개발 환경으로 자바를 비롯한 다양한 언어를 지원</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-25"></h1>
+<p> </p>
+<ul>
+<li><strong>기타</strong>
+<ul>
+<li>
+<p><strong>Dolphine: KDE용 파일 관리자</strong></p>
+</li>
+<li>
+<p><strong>KSnapshot: 스크린샷 프로그램</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-26"></h1>
+<p> </p>
+<h1 id="heading-27"></h1>
+<h3 id="인터넷-활용"><strong>인터넷 활용</strong></h3>
+<h1 id="heading-28"></h1>
+<ul>
+<li><strong>네트워크 분류</strong></li>
+</ul>
+<h1 id="heading-29"></h1>
+<p>lan(Local Area Network)</p>
+<ul>
+<li>근거리 통신망을 연결하는 네트워크이다.</li>
+<li>학교나, 회사등 가까운 지역을 묶는 소규모 네트워크이다.
+man(MetroPolice Area Network)</li>
+<li>도시권 통신망을 연결하는 네트워크이다.</li>
+<li>LAN과 WAN의 중간크기이다.
+wan(Wide Area Network)</li>
+<li>국가, 대륙 등과 같이 넓은 지역을 연결하는 네트워크이다.</li>
+<li>거리의 제한은 없으나 다양한 경로를 경유해 도달하므로 속도가 느리고 전송 에러율도
+높다.
+san(Storage Area Network)</li>
+<li>스토리지를 위해 고안된 스토리지 전용 고속 네트워크이다.</li>
+<li>파이버 채널을 이용하여 구성되는 저장장치 네트워크이다.</li>
+<li>호스트 컴퓨터의 종류에 구애받지 않고 별도의 연결된 저장장치 사이에 대용량의 데이터
+를 전송시킬 수 있는 고속 네트워크이다.</li>
+<li>서버가 클라이언트로부터 받은 파일 I/O 요청을 직접 블록 I/O로 전환하여 SAN에 연결
+된 스토리지로 저장한다.
+네트워크 개요
+LAN 토폴로지</li>
+<li>토폴로지는 호스트 및 장비들의 물리적인 배치 형태이다.</li>
+<li>토폴로지는 성형, 망형, 버스형, 링형, 트리형 등이 있다.
+성형</li>
+<li>중앙 컴퓨터에 여러 대의 컴퓨터가 허브 또는 스위치와 같은 장비로 연결</li>
+<li>중앙 집중식 형태로 네트워크 확장에 용이</li>
+<li>고속의 대규모 네트워크에 적합</li>
+<li>관리하는 중앙 컴퓨터 고장 시 전체 네트워크 사용이 불가능
+망형</li>
+<li>모든 노드가 서로 일대일로 연결된 형태</li>
+<li>대량의 데이터를 송수신할 경우 적합</li>
+<li>장애 발생 시 다른 시스템에 영향이 적고 우회할 수 있는 경로가 존재하여 가장 신뢰성
+이 높은 방식</li>
+<li>회선 구축 비용이 많이 듬
+버스형</li>
+<li>하나의 통신회선에 여러 컴퓨터를 연결해서 전송</li>
+<li>연결된 컴퓨터 수에 따라 네트워크 성능이 변동</li>
+<li>단말기 추가 및 제거가 용이하며 설치 비용이 저렴</li>
+<li>노드 수 증가 시 트래픽 증가로 병목현상 발생, 네트워크 성능 저하 초래</li>
+<li>문제가 발생한 노드의 위치를 파악하기 어려움
+링형</li>
+<li>각 노드가 좌우의 인접한 노드와 연결되어 원형을 이룬 형태</li>
+<li>앞의 컴퓨터로부터 수신한 내용을 다음컴퓨터로 재전송하는 방법</li>
+<li>토큰패싱이라는 방법을 통해 데이터 전송</li>
+<li>고속네트워크로 자주 네트워크 환경이 바뀌지 않는 경우 구성</li>
+<li>분산제어와 검사 및 회복이 가능</li>
+<li>네트워크 전송상의 충돌이 없고 노드 숫자가 증가하더라도 망 성능의 저하가 적음</li>
+<li>논리적인 순환형 토폴로지로 하나의 노드장애가 전체 토폴로지에 영향</li>
+<li>노드의 추가 및 삭제가 용이하지 않음
+트리형</li>
+<li>버스형과 성형 토폴로지의 확장 형태</li>
+<li>백본과 같은 공통 배선에 적절한 분기장치를 사용하여 링크를 덧붙여 나갈 수 있는 구조</li>
+<li>트래픽 양 증가 시 병목 현상의 가능성 증대
+매체 접근 제어 방식</li>
+<li>CSMA/CD: 단말기가 전송로의 신호 유무를 조사하고 다른 단말기가 신호를 송출하는지
+확인한다.</li>
+<li>토큰패싱: 토큰의 흐름에 의해 전송 순서가 결정된다. 토큰패싱은 free token과 busy
+token을 이용하여 매체 접근을 제어한다.
+네트워크 장비
+케이블</li>
+<li>보호 외피나 외장 안에 두 개 이상의 전선이나 광섬유로 묶여 있는 것이다.</li>
+<li>TP 케이블, 동축 케이블, 광섬유 케이블 등을 사용할 수 있다.
+리피터</li>
+<li>신호의 재생 및 증폭기능을 수행하여 물리적인 거리를 확장시킨다.
+허브</li>
+<li>신호를 노드에 전달해 주는 장비이다.</li>
+<li>네트워크 확장, 다른 허브와의 상호 연결, 신호의 증폭 등의 기능을 제공한다.
+LAN카드</li>
+<li>네트워크에 접속할 수 있도록 컴퓨터 내에 설치되는 확장 카드이다.</li>
+<li>전기신호로부터 데이터를 송신하고 변환하며, 데이터를 전기신호로 변환하여 송신한다.</li>
+<li>MAC 주소를 이용하여 데이터의 수신 여부를 판별한다.
+브릿지</li>
+<li>모든 수신 프레임을 일단 버퍼에 저장하고, 주소에 따라 목적지 포트로 프레임을 전달하
+는 장비이다.</li>
+<li>큰 네트워크를 단일 네트워크상의 트래픽 감소 등과 같은 작고 관리하기 쉬운 Segment
+로 나눌 필요가 있을 때 사용한다.</li>
+<li>전기적으로 신호의 재생 및 패킷의 송수신 어드레스를 분석하여 패킷의 통과 여부를 판
+정하는 필터링을 작용한다.
+스위치</li>
+<li>브릿지와 비슷한 기능을 갖는 장비이다.</li>
+<li>소프트웨어 기반인 처리 방식으로 브릿지보다 빠르게 데이터를 전송한다.</li>
+<li>맥 주소 테이블을 기반으로 프레임 전송한다.</li>
+<li>스위칭 허브는 전용매체교환 기술을 이용하여 트래픽 병목 현상을 제거하고, 포트별로 속
+도가 전용으로 보장된다.
+라우터</li>
+<li>OSI모델의 물리 계층, 데이터링크 계층, 네트워크 계층의 기능을 지원하는 장치이다.</li>
+<li>서로 다른 통신망과 프로토콜을 사용하는 네트워크 간의 통신을 가능하게 한다.</li>
+<li>LAN을 연결시켜주는 망 연동 장치로서 통신망에서 정보를 전송하기 위해 경로를 설정하
+는 역할을 제공하는 핵심적인 통신장비이다.</li>
+<li>목적지로 향하는 최적의 경로 설정 데이터를 목적지까지 전달하는 기능을 수행한다.
+게이트웨이</li>
+<li>서로 다른 형태의 네트워크를 상호 접속하는 장치이다.</li>
+<li>서로 다른 통신망이나 프로토콜을 사용하는 네트워크 간의 통신을 가능하게 하는 장비를
+통칭한다.</li>
+<li>데이터 포맷 등 두 개의 시스템 사이에서 중계자 역할을 수행한다.
+UTP 케이블링</li>
+<li>다이렉트 케이블</li>
+<li>크로스오버 케이블
+프로토콜 개요와 기능
+OSI7 모델과 TCP/IP모델
+OSI 7 모델 기능 TCP/IP 모델
+7 응용 계층 사용자에게 다양한 네트워크 서비스를 제공하
+기 위해 User Interface를 제공, UI로 데이터를
+생성
+응용 계층
+6 표현 계층 부호화, 압축, 암호화 기능
+5 세션 계층 종단 간 애플리케이션들의 연결 설정, 유지,
+해제
+4 전송 계층 종단 간 열결, 응용 계층 사이에 논리적인 통
+로 제공
+전송 계층
+3 네트워크 계층 논리적인 주소를 사용
+경로 관리, 최적 경로 결정
+인터넷 층
+2 데이터링크 계층 데이터 전송을 위한 형식 결정
+데이터 전송을 위하여 Media에 접근하는 방법
+제공
+오류 검출 기능 제공
+네트워크 인터페이스
+층
+1 물리 계층 물리적인 연결, 전기적, 기계적, 기능적 절차적
+인 수단 제공
+계층별 프로토콜</li>
+<li>프로토콜은 특정 통신 기능을 수행하기 위한 규약이다. 이것은 두 노드 사이의 정보 교환
+시 발생하는 통신상의 에러를 피하기 위하여 합리적인 통제를 한다.</li>
+<li>프로토콜 구성요소는 형식, 의미, 순서이다.
+형식: 데이터 포맷, 부호화 및 신호 레벨 등
+의미: 특정 패턴을 어떻게 해석하고, 어떤 동작을 할 것인가 결정
+순서: 속도 일치 및 순서 제어 등</li>
+<li>인터넷/네트워크 계층 프로토콜: IP, ICMP, IGMP, ARP, RARP</li>
+<li>전송 계층 프로토콜: TCP, UDP</li>
+<li>응용 계층 프로토콜: SMTP, POP, Telnet, SSH, FTP, HTTP, SNMP, TFTP, DHCP
+IP주소와 도메인
+IPv4 주소 체계</li>
+<li>IPv4 주소는 4개의 옥탯으로 구성된다.</li>
+<li>각 옥탯은 8비트이므로 IPv4는 총 32비트이다.</li>
+<li>클래스 E는 240~255 사이의 대역에 있으며 IP 주소 부족을 위해 예약해 놓은 것이다.</li>
+<li>IP주소는 네트워크 ID와 호스트 ID로 구성되어 있다.</li>
+<li>서브넷 마스크는 네트워크 부분과 호스트 부분을 구분해주는 값이다. 이것은 효율적인 네
+트워크 분리를 가능하게 한다.
+서브넷팅</li>
+<li>서브넷은 특정 네트워크를 여러 개의 네트워크, 브로드캐스트 도메인을 나누는 것이다.</li>
+<li>IP주소의 부족 현상을 해소하기 위한 방안이다.</li>
+<li>서브넷팅은 디폴트 서브넷 마스크를 기준으로 해서 네트워크 ID비트수를 늘리고 호스트
+ID 비트수를 줄이는 것이다. 이때 기준에서 늘어난 네트워크 ID비트는 서브넷ID라 부른다.
+IPv6 주소 체계
+구분 IPv4 IPv6
+IP주소 비트수 32비트 64비트
+IP주소 방식 지정 주소 방식
+일반주소
+브로드캐스트주소
+자동 설정 주소 방식
+유니캐스트주소
+멀티캐스트주소
+애니캐스트주소
+IP헤더 길이 20바이트 ~ 60바이트 40바이트와 확장필드 이용
+기능 IP헤더를 이용한 기본 기능 암호 및 인증 가능
+QoS 관련 기능
+보안 기능
+Section 4. 인터넷 서비스의 종류
+WWW 서비스</li>
+<li>프로토콜 HTTP를 기반으로 한 멀티미디어와 하이퍼텍스트를 통합한 정보 검색 시스템이
+다.</li>
+<li>다양한 그래픽 유저 인터페이스를 사용하는 것이 가능하다.</li>
+<li>WWW 서비스는 분산 클라이언트-서버 모델을 기반으로 한다.</li>
+<li>표준 웹 프로토콜(HTTP, XML, SOAP, WSDL, UDDI)을 기본으로 하여 서로 다른 개발 환경과
+운영체제에서도 상호 통신이 가능하다.
+메일 서비스</li>
+<li>전자 메일 시스템은 컴퓨터 사용자끼리 편지를 주고받는 서비스이며 MTA, MUA, MDA로
+구성된다.</li>
+<li>메일 클라이언트에서 송신은 SMTP, 수신은 POP3 또는 IMAP4를 이용한다.</li>
+<li>메일을 보내거나 메일 서버간의 메시지 교환은 SMTP프로토콜을 사용하고, 메일 서버에
+도착한 메일을 사용자 컴퓨터에서 확인할 때에는 POP3과 IMAP를 사용한다.</li>
+<li>MIME(Multipurpose Internet Mail Extensionn)은 멀티미디어 전자우편을 위한 표준으로, 멀
+티미디어 데이터를 ASCII 형식으로 변환할 필요 없이 인터넷 전자 우편으로 송신하기 위
+한 SMTP의 확장 규격이다.
+FTP 서비스</li>
+<li>FTP(File Transafer Protocol) TCP/IP에 의해 제공되는 호스트 간의 파일 복사를 위한 프로토
+콜이다.</li>
+<li>FTP의 통신 모드는 패시브 모드와 액티브 모드로 구분한다.</li>
+<li>FTP는 20번(일반 데이터 전송용)과 21번(제어 데이터 전송용) 포트 번호를 사용한다.</li>
+<li>FTP는 사용자계정을 가진 사용자들의 접속과 익명의 로그인을 허용하고 있다.</li>
+<li>익명은 공개 소프트웨어를 제공하는 FTP서버에 접속할 때 입력할 수 있는 계정이다.
+DNS(Domain Name System) 서비스</li>
+<li>호스트 이름을 기반으로 IP주소를 변환하거나 IP주소를 기반으로 호스트 이름을 변환시켜
+주는 프로토콜이다.</li>
+<li>DNS에서는 도메인명을 분산된 트리 형태의 계층적 구조로 관리한다.
+Telnet과 SSH 서비스</li>
+<li>네트워크상에 있는 다른 컴퓨터에 로그인하거나 원격 시스템에서 명령 실행, 파일 복사
+등을 제공하는 서비스이다.</li>
+<li>Telnet과 ssh는 사용자가 서버에 접속하여 서버 관리, 파일 편집 등을 Text모드 환경에서
+시스템 명령을 실행하고 결과를 화면을 통해 볼 수 있다.</li>
+<li>Telnet은 서버와 주고받는 정보를 Byte 스트림 형식으로 전송하고, ssh는 DES, RSA 등의
+암호화기법을 사용해서 전송한다. 따라서 Telnet보다 ssh가 안전한 데이터 전송을 보장한
+다.</li>
+<li>ssh는 암호화뿐만 아니라 압축 기술도 제공한다. 암호화를 통해서 늘어난 데이터의 크기
+를 압축하여 사용자와 서버가 송수신하는 것을 가능하게 한다.
+NFS(Network File System)</li>
+<li>네트워크 기반에 다른 시스템과 파일 시스템을 공유하기 위한 클라이언트/서버 프로그램
+이다.</li>
+<li>1984년 썬 마이크로시스템즈 사에서 개발하였다.</li>
+<li>원격지에 있는 리눅스 서버의 특정 디렉터리를 로컬 시스템의 하위 디렉터리처럼 사용할
+수 있다.</li>
+<li>다른 컴퓨터의 파일 시스템을 마운트하고 공유하여 자신의 디렉터리인 것처럼 사용할 수
+있게 해준다.</li>
+<li>NFS는 portmap이 먼저 수행되어 있어야만 NFS 서비스가 실행된다. portmap은 NIS, NFS
+등 RPC(Remote Procedure Call) 연결에 관여하는 데몬이다.</li>
+<li>NFS 서비스는 nfsd, rpc.mounted, rpc, statd, rpc.rockd, rpc.rquotad 데몬들이 구동된다.
+RPC(Remote Procedure Call)</li>
+<li>동적으로 서비스와 포트를 연결할 때 사용하는 방법이다.</li>
+<li>기본적으로 포트와 서비스가 정적으로 구성될때는 /etc/services 파일을 참조하지만 동적
+으로 포트를 할당받아 사용할 때는 RPC 인 rpcbind를 사용한다.
+Section 5. 인터넷 서비스 설정
+네트워크 인터페이스 설정</li>
+<li>리눅스는 다양한 네트워크를 지원한다.</li>
+<li>일반적으로 네트워크 인터페이스는 자동으로 인식되지만 자동으로 인식되지 않을 경우
+수동으로 설정해야 한다.</li>
+<li>네트워크 인터페이스 수동 설정 방법은 컴파일된 인터페이스 모듈을 커널에 적재하는 것
+이다.
+네트워크 설정 파일들</li>
+<li>/etc/sysconfig/network: 네트워크의 기본 정보가 설정되어 있는 파일이다.</li>
+<li>/etc/sysconfig/network-scripts/ifcfg-ethX: 지정된 네트워크 인터페이스의 네트워크 환경
+설정 정보가 저장된다.</li>
+<li>/etc/resolv.conf: 기본적으로 사용할 도메인명과 네임서버를 설정한다.</li>
+<li>/etc/hosts: IP 주소와 도메인 주소를 1:1로 등록하여 도에밍네 대한 IP 주소를 조회하도록
+한다.</li>
+<li>/etc/host.conf: DNS 서비스를 제공할 때 먼저 이 파일을 검사하여 파일의 설정에 따라 서
+비스한다.
+네트워크 설정
+IP 주소 설정</li>
+<li>네트워크 설정 파일로 주소 설정: 파일 /etc/sysconfig/network 또는
+/etc/sysconfig/network-scripts/ifcfg-ethX로 IP 주소를 설정한다.</li>
+<li>명령어를 이용한 주소 설정: 명령어 ifconfig를 이용하여 IP주소를 할당한다.</li>
+<li>유틸리티를 이용한 주소 설정: netconfig, system-config-network, redhat-config-network등
+의 다양한 유틸리티를 이용하여 주소를 설정한다.
+라우팅 테이블 설정 및 관리</li>
+<li>라우팅이란 송신 패킷이 목적지까지 전송할 수 있도록 경로를 설정하는 작업이다.</li>
+<li>송신 패킷은 라우팅 테이블에 목적지 경로 정보가 있다면 해당 경로로 패킷을 전송한다.</li>
+<li>명령어 route는 라우팅 테이블을 설정하거나 확인한다.</li>
+<li>목적지 경로가 라우팅 테이블에 없다면 디폴트게이트웨이로 트래픽을 전송할 수 있게 라
+우팅 테이블을 설정할 수 있다.
+네트워크 관련 명령어</li>
+<li>TCP/IP주소 설정 정보 확인: ifconfig, nslookup</li>
+<li>네트워크 경로 상태 확인: ping, traceroute</li>
+<li>네트워크 연결 상태 확인: netstat</li>
+<li>라우팅 테이블 확인: route</li>
+<li>NIC 상태 확인: ethtool, mii-tool, arp
+Section 6. 기술 동향
+리눅스 동향</li>
+<li>1991년, 초기 리눅스는 주로 서버로 이용되었다.</li>
+<li>현재의 리눅스 활용 분야는 크게 서버, 데스크톱 및 개발, 임베디드 분야로 나눌 수 있다.
+리눅스 관련 기술
+클러스터링</li>
+<li>여러 개의 시스템이 하나의 거대한 시스템으로 보이게 만드는 기술이다.</li>
+<li>여러 개의 컴퓨터를 네트워크를 통해 연결하여 하나의 컴퓨터처럼 동작하도록 제작한 시
+스템이다.</li>
+<li>클러스터 노드와 클러스터 관리자로 구성된다.</li>
+<li>고계산용 클러스터, 부하분산 클러스터, 고가용성 클러스터 종류가 있다.
+임베디드 시스템</li>
+<li>컴퓨터의 하드웨어 제어인 프로세스, 메모리 입출력장치와 하드웨어를 제어하는 소프트웨
+어가 조합되어 특정한 목적을 수행하는 시스템이다.</li>
+<li>미리 정해진 특정한 기능을 수행하도록 프로그램이 내장되어 있는 시스템이다.</li>
+<li>하드웨어와 소프트웨어를 포함하는 특정한 응용시스템이다.</li>
+<li>개인 휴대 정보 단말, 지리 정보 시스템, 정보가전, 게임기기 등의 시스템을 통칭한다.</li>
+<li>하드웨어로는 프로세서/컨트롤러, 메모리, I/O장치, 네트워크 장치, 센서 등이다.</li>
+<li>소프트웨어로는 운영체제, 시스템 S/W, 응용 S/W 이다.</li>
+<li>실시간 처리를 지원한다.</li>
+<li>소형, 경량 및 저전력을 지원한다.
+Section 7. 활용 기술
+리눅스 서버 분야
+서버 가상화</li>
+<li>서버를 구성하는 모든 자원의 가상화를 의미한다.</li>
+<li>하나의 물리적 서버 호스트에서 여러 개의 서버 운영 체제를 게스트로 실행할 수 있게
+해주는 소프트웨어 아키텍처이다.</li>
+<li>서버들을 하나의 서버로 통합하여 가상환경을 구동시킴으로써 물리서버 및 공간을 절감
+한다.</li>
+<li>서버 자원 통합 운영으로 하드웨어 가용성을 증가시킨다.</li>
+<li>손쉬운 이중화구성과 유연한 자원 할당으로 시스템 가용성과 안정성을 확보한다.</li>
+<li>통합 구축, 공동 활용, 유지 관리, 전력 및 관리 비용 등 중복 투자 방비 및 예산을 절감
+한다.
+클라우드 컴퓨팅</li>
+<li>공유 구성이 가능한 컴퓨팅 리소스의 통합으로 어디서나 간편하게 요청에 따라 네트워크
+를 통해 접근하는 것을 가능하게 한다.</li>
+<li>사업자와 직접 상호 작용하지 않고 사용자의 개별 관리 화면을 통해 서비스를 이용할 수
+있다.</li>
+<li>사업자의 컴퓨팅 리소스를 여러 사용자가 공유하는 형태로 이용한다.</li>
+<li>필요에 다라 필요한 만큼의 스케일업과 스케일다운이 가능하다.
+IaaS(Infrastructure as a Service): 서버나 스토리지 같은 하드웨어 자원만을 임대해 주는 클
+라우드 서비스이다.
+Paas(Platform as a Service): 소프트웨어 서비스를 개발하기 위한 플랫폼을 제공하는 클라
+우드 서비스이다.
+SaaS(Software as a Service): 클라우드 환경에서 동작하는 응용 프로그램을 서비스 형태로
+제공한다.</li>
+<li>사설 클라우드, 공유 클라우드, 하이브리드 클라우드 모델이 있다.
+빅데이터</li>
+<li>기존 데이터베이스 관리 도구의 데이터 수집, 저장, 관리, 분석 역량을 넘어서는 데이터이
+다.</li>
+<li>다양한 종류의 대규모 데이터로부터 저렴한 비용으로 가치를 추출하고 데이터의 빠른 수
+집, 발굴 분석을 지원할 수 있도록 고안된 차세대 기술 및 아키텍처이다.</li>
+<li>볼륨, 속도, 다양성의 3대 요소가 있다.
+임베디드 시스템
+모바일</li>
+<li>스마트폰의 OS란 스마트폰을 구성하고 있는 하드웨어 부품인 메모리, LCD, CPU 등의 기
+계적인 부품들을 효율적으로 관리 및 구동하게 하며, 사용자와의 편리한 의사소통을 위해
+만들어진 다양한 프로그램들이 구동될 수 있도록 하는 소프트웨어 플랫폼이다.</li>
+<li>대표적으로 안드로이드와 iOS가 있다.</li>
+<li>리눅스 기반의 공개형 운영체제로 마에모, 모블린, 미고, 리모, 타이벤, iOS 가 있다.
+스마트TV</li>
+<li>텔레비전에 인터넷 접속 기능이 결합되어, 각종 애플리케이션을 설치하여 TV방송 시청이
+외의 다양한 기능을 활용할 수 있는 다기능 TV이다.</li>
+<li>인터넷 TV 또는 커넥티드 TV라고도 불린다.
+IVI(In Vehicle Infotainment)</li>
+<li>인포테인먼트란 정보와 오락의 합성어로 정보전달에 오락성을 가미한 시스템이다.</li>
+<li>내비게이션이나 계기판, AV 시스템, DMB, MP3, 오디오 및 외부 기기와의 연결까지 가능한
+통합적인 차량 내부 시스템을 포함한다.</li>
+<li>GENIVI 표준 플랫폼 기반의 인포테인먼트 시스템이다.</li>
+<li>운전자 편의성 및 안전성을 증대시킨다.</li>
+<li>GENIVI(GENEVA In Vehicle Infotainment)는 오픈 소스 기반 플랫폼 얼라이언스로 차량 멀
+티미디어 플랫폼 표준화 활동이다.</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux-일반"><strong>Linux 일반</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#x-windows-개념-및-사용법"><strong>X-windows 개념 및 사용법</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#x-윈도우의-특징과-구성-요소"><strong>X-윈도우의 특징과 구성 요소</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#윈도우-매니저와-데스크톱-환경"><strong>윈도우 매니저와 데스크톱 환경</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#x-윈도우-활용"><strong>X-윈도우 활용</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#x-윈도우-응용-프로그램"><strong>X-윈도우 응용 프로그램</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#인터넷-활용"><strong>인터넷 활용</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
