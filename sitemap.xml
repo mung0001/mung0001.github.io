@@ -64,10 +64,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/openstack/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/gns3/</loc>
   </url>
   
@@ -576,10 +572,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-%EB%AA%85%EB%A0%B9%EC%96%B4/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/network/network/base/</loc>
   </url>
   
@@ -709,10 +701,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack%EC%84%A4%EC%B9%98/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/hidden/</loc>
   </url>
   
@@ -817,11 +805,11 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/network/sophos/</loc>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/openstack/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/database/sqld/sqld-0/</loc>
+    <loc>https://mung0001.github.io/docs/network/sophos/</loc>
   </url>
   
   <url>
@@ -834,6 +822,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/database/sqld/sqld-3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/database/sqld/sqld-0/</loc>
   </url>
   
 </urlset>
