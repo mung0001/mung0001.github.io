@@ -7,7 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Docker 환경구축    이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다.    Docker 설치     Ubuntu 18.04   $ sudo apt update -y$ sudo apt install –y apt-transport-https$ sudo apt install -y ca-certificates curl software-properties-common# 의존성 패키지 설치$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -$ sudo add-apt-repository &#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&#34;# 도커 패키지 저장소 등록$ sudo apt update -y$ sudo apt install -y docker-ce# 도커 설치$ docker version   CentOS 7   $ sudo yum update -y$ sudo yum install –y docker docker-registry epel-release jq# 도커 설치 및 도커 레지스트리 설치$ systemctl enable docker$ systemctl start docker$ systemctl status docker# 도커 자동시작 설정 및 확인$ sudo yum remove docker \docker-client \docker-client-latest \docker-common \docker-latest \docker-latest-logrotate \docker-engine# 도커 구버전 제거   ">
 
-<meta name="robots" content="index,follow"><meta property="og:title" content="Docker 환경구축" />
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/cloudcomputing/docker/docker-2/><meta property="og:title" content="Docker 환경구축" />
 <meta property="og:description" content="Docker 환경구축    이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다.    Docker 설치     Ubuntu 18.04   $ sudo apt update -y$ sudo apt install –y apt-transport-https$ sudo apt install -y ca-certificates curl software-properties-common# 의존성 패키지 설치$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -$ sudo add-apt-repository &#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&#34;# 도커 패키지 저장소 등록$ sudo apt update -y$ sudo apt install -y docker-ce# 도커 설치$ docker version   CentOS 7   $ sudo yum update -y$ sudo yum install –y docker docker-registry epel-release jq# 도커 설치 및 도커 레지스트리 설치$ systemctl enable docker$ systemctl start docker$ systemctl status docker# 도커 자동시작 설정 및 확인$ sudo yum remove docker \docker-client \docker-client-latest \docker-common \docker-latest \docker-latest-logrotate \docker-engine# 도커 구버전 제거   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/cloudcomputing/docker/docker-2/" />

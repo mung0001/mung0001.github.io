@@ -7,7 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Loacal 3Tier 구현    OS, 구현 프로그램  Ubuntu18.04 Apache2 Tomcat8 Mysql5.8 GNS3   IP 대역  10.10.10.0/24 Public 20.20.20.0/24 Private 30.30.30.0/24 Private2  Public 대역 10.10.10.10 Apache1 10.10.10.11 Apache2  Private 대역 20.20.20.20 Tomcat1 20.20.20.21 Tomcat2  Public 대역 30.30.30.30 Mysql1 30.30.30.30 Mysql2     sudo vi /etc/netplan/50-cloud-init.yamlnetwork:version: 2ethernets:ens33:dhcp6: noaddresses:- [ IP addresses ]gateway4: [ gateway ]nameservers:addresses: [ [nameserver] ]$ sudo netplan apply$ hostname -l아키텍처 사진">
 
-<meta name="robots" content="index,follow"><meta property="og:title" content="" />
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/3tier/><meta property="og:title" content="" />
 <meta property="og:description" content="Loacal 3Tier 구현    OS, 구현 프로그램  Ubuntu18.04 Apache2 Tomcat8 Mysql5.8 GNS3   IP 대역  10.10.10.0/24 Public 20.20.20.0/24 Private 30.30.30.0/24 Private2  Public 대역 10.10.10.10 Apache1 10.10.10.11 Apache2  Private 대역 20.20.20.20 Tomcat1 20.20.20.21 Tomcat2  Public 대역 30.30.30.30 Mysql1 30.30.30.30 Mysql2     sudo vi /etc/netplan/50-cloud-init.yamlnetwork:version: 2ethernets:ens33:dhcp6: noaddresses:- [ IP addresses ]gateway4: [ gateway ]nameservers:addresses: [ [nameserver] ]$ sudo netplan apply$ hostname -l아키텍처 사진" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/3tier/" />
