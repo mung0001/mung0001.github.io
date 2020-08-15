@@ -855,7 +855,7 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-12/</guid>
-      <description>OpenStack Ussuri : Trove  OpenStack Ussuri : Trove          핡 service 및 User 생성  핡 유저의 DB를 생성합니다.  $ controller&amp;gt; mysql -u root -p$ MariaDB&amp;gt; create database 핡; $ MariaDB&amp;gt; grant all privileges on 핡.* to 핡@&amp;#39;localhost&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; grant all privileges on 핡.* to 핡@&amp;#39;%&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; flush privileges; $ MariaDB&amp;gt; exit;</description>
+      <description>OpenStack Ussuri : Trove  OpenStack Ussuri : Trove          Trove service 및 User 생성  Trove 유저의 DB를 생성합니다.  $ controller&amp;gt; mysql -u root -p$ MariaDB&amp;gt; create database trove; $ MariaDB&amp;gt; grant all privileges on trove.* to trove@&amp;#39;localhost&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; grant all privileges on trove.* to trove@&amp;#39;%&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; flush privileges; $ MariaDB&amp;gt; exit;</description>
     </item>
     
     <item>
@@ -864,16 +864,16 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-13/</guid>
-      <description>OpenStack Ussuri : Designate  OpenStack Ussuri : Designate          핡 service 및 User 생성  핡 유저의 DB를 생성합니다.  $ controller&amp;gt; mysql -u root -p$ MariaDB&amp;gt; create database 핡; $ MariaDB&amp;gt; grant all privileges on 핡.* to 핡@&amp;#39;localhost&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; grant all privileges on 핡.* to 핡@&amp;#39;%&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; flush privileges; $ MariaDB&amp;gt; exit;</description>
+      <description>OpenStack Ussuri : Designate  OpenStack Ussuri : Designate          Designate service 및 User 생성  Designate 유저의 DB를 생성합니다.  $ controller&amp;gt; mysql -u root -p$ MariaDB&amp;gt; create database designate; $ MariaDB&amp;gt; grant all privileges on designate.* to designate@&amp;#39;localhost&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; grant all privileges on designate.* to designate@&amp;#39;%&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; flush privileges; $ MariaDB&amp;gt; exit;</description>
     </item>
     
     <item>
-      <title>OpenStack Ussuri : Brabican</title>
+      <title>OpenStack Ussuri : Barbican</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-14/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-14/</guid>
-      <description>OpenStack Ussuri : Brabican  OpenStack Ussuri : Brabican          핡 service 및 User 생성  핡 유저의 DB를 생성합니다.  $ controller&amp;gt; mysql -u root -p$ MariaDB&amp;gt; create database 핡; $ MariaDB&amp;gt; grant all privileges on 핡.* to 핡@&amp;#39;localhost&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; grant all privileges on 핡.* to 핡@&amp;#39;%&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; flush privileges; $ MariaDB&amp;gt; exit;</description>
+      <description>OpenStack Ussuri : Barbican  OpenStack Ussuri : Barbican   Barbican은 키 관리 서비스 입니다. 비밀 데이터의 안전한 저장, 프로비저닝 및 관리를 제공합니다. 여기에는 대칭 키, 비대칭 키, 인증서 및 원시 바이너리 데이터와 같은 키 자료가 포함됩니다. 자세한 설명은 Barbican을 참조해주세요.     Barbican service 및 User 생성 $ controller ~(keystone)&amp;gt; openstack user create --domain default --project service --password qwer1234 barbican$ controller ~(keystone)&amp;gt; openstack role add --project service --user barbican admin$ controller ~(keystone)&amp;gt; openstack service create --name barbican --description &amp;#34;OpenStack Key Manager&amp;#34; key-manager$ controller ~(keystone)&amp;gt; openstack endpoint create --region RegionOne key-manager public http://controller:9311$ controller ~(keystone)&amp;gt; openstack endpoint create --region RegionOne key-manager internal http://controller:9311dnf --enablerepo=centos-openstack-ussuri,PowerTools,epel -y install openstack-barbicanopenstack endpoint create --region RegionOne key-manager admin http://controller:9311   Barbican 유저의 DB를 생성합니다.</description>
     </item>
     
     <item>
@@ -882,7 +882,7 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-15/</guid>
-      <description>OpenStack Ussuri : Rally  OpenStack Ussuri : Rally          핡 service 및 User 생성  핡 유저의 DB를 생성합니다.  $ controller&amp;gt; mysql -u root -p$ MariaDB&amp;gt; create database 핡; $ MariaDB&amp;gt; grant all privileges on 핡.* to 핡@&amp;#39;localhost&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; grant all privileges on 핡.* to 핡@&amp;#39;%&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; flush privileges; $ MariaDB&amp;gt; exit;</description>
+      <description>OpenStack Ussuri : Rally  OpenStack Ussuri : Rally          Rally service 및 User 생성  Rally 유저의 DB를 생성합니다.  $ controller&amp;gt; mysql -u root -p$ MariaDB&amp;gt; create database rally; $ MariaDB&amp;gt; grant all privileges on Rally.* to rally@&amp;#39;localhost&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; grant all privileges on Rally.* to rally@&amp;#39;%&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; flush privileges; $ MariaDB&amp;gt; exit;</description>
     </item>
     
     <item>
@@ -891,7 +891,7 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-16/</guid>
-      <description>OpenStack Ussuri : Manila  OpenStack Ussuri : Manila          핡 service 및 User 생성  핡 유저의 DB를 생성합니다.  $ controller&amp;gt; mysql -u root -p$ MariaDB&amp;gt; create database 핡; $ MariaDB&amp;gt; grant all privileges on 핡.* to 핡@&amp;#39;localhost&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; grant all privileges on 핡.* to 핡@&amp;#39;%&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; flush privileges; $ MariaDB&amp;gt; exit;</description>
+      <description>OpenStack Ussuri : Manila  OpenStack Ussuri : Manila          Manila service 및 User 생성  Manila 유저의 DB를 생성합니다.  $ controller&amp;gt; mysql -u root -p$ MariaDB&amp;gt; create database manila; $ MariaDB&amp;gt; grant all privileges on manila.* to manila@&amp;#39;localhost&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; grant all privileges on manila.* to manila@&amp;#39;%&amp;#39; identified by &amp;#39;qwer1234&amp;#39;; $ MariaDB&amp;gt; flush privileges; $ MariaDB&amp;gt; exit;</description>
     </item>
     
     <item>
@@ -1455,6 +1455,15 @@ This document is a brief primer on using Go templates.</description>
     </item>
     
     <item>
+      <title>SQL 개요</title>
+      <link>https://mung0001.github.io/docs/database/sqld/sqld-0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/database/sqld/sqld-0/</guid>
+      <description>****  ****       </description>
+    </item>
+    
+    <item>
       <title>SQLD</title>
       <link>https://mung0001.github.io/docs/database/sqld/sqld-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1482,15 +1491,6 @@ This document is a brief primer on using Go templates.</description>
 데이터 모델링의 중요성 및 유의점 - 중복 : 같은 시간 같은 데이터 제공 - 비유연성 : 사소한 업무변화에 데이터 모델이 수시로 변경되면 안됨 - 비일관성 : 신용 상태에 대한 갱신 없이 고객의 납부 이력 정보 갱신 안됨
 데이터 모델링 개념적, 논리적, 물리적 데이터 모델링
 데이터 독립성 요소 외부 스키마 : 개개 사용자가 보는 개인적 DB 스키마 개념 스키마 : 모든 사용자 관점을 통합한 전체 DB 내부 스키마 : 물리적 장치에서 데이터가 실제적 저장</description>
-    </item>
-    
-    <item>
-      <title>SQLD 개요</title>
-      <link>https://mung0001.github.io/docs/database/sqld/sqld-0/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/database/sqld/sqld-0/</guid>
-      <description>****  ****       </description>
     </item>
     
   </channel>
