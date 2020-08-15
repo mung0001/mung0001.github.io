@@ -13,126 +13,6 @@
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-10/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-10/</guid>
-      <description>****  ****       ~
-    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-11/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-11/</guid>
-      <description>****  ****       ~
-    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-12/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-12/</guid>
-      <description>****  ****       ~
-    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-13/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-13/</guid>
-      <description>****  ****       ~
-    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-15/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-15/</guid>
-      <description>****  ****       ~
-    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-16/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-16/</guid>
-      <description>****  ****       ~
-    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-17/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-17/</guid>
-      <description>****  ****       ~
-    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-18/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-18/</guid>
-      <description>****  ****       ~
-    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-6/</guid>
-      <description>****  ****       ~
-    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-7/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-7/</guid>
-      <description>****  ****       ~
-    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-8/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-8/</guid>
-      <description>****  ****       ~
-    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-9/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-9/</guid>
-      <description>****  ****       ~
-    </description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/gns3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -165,19 +45,6 @@
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-1/</guid>
       <description>SAA 요약정리  정리를 들어가기 전 핵심요소  자격 시험의 합격과 실패는 현장에서의 실무 경험과 실습 중심의 학습, 시험에 필요한 세부적인 정보와 숫자를 얼마나 잘 기억하는지에 달려 있다. AWS SAA는 핵심 AWS 서비스 구성 요소와 운영은 물론 서비스 간의 상호작용 방식도 이해가 필요 기본적인 공부는 Amazon의 공식문서 및 여러 실습 경험을 필요로 한다.    AWS SAA 참고자료      시험영역 출제 비율     1.</description>
-    </item>
-    
-    <item>
-      <title>5장 데이터베이스</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-5/</guid>
-      <description>5장 데이터베이스   5장의 목표   복원력을 갖춘 아키텍처 설계   안정적이고/ 복원력을 갖춘 스토리지를 선택한다.
-  어떻게 AWS 서비스를 사용해 결합 해제 매커니즘을 설계할지 결정한다.
-  어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.
-  어떻게 고 가용성 및/ 내결함성을 갖춘 아키텍처를 설계할지 결정한다.
-      성능이 뛰어난 아키텍처 정의  성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다.</description>
     </item>
     
     <item>
@@ -468,6 +335,19 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>5장 데이터베이스</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-5/</guid>
+      <description>5장 데이터베이스   5장의 목표   복원력을 갖춘 아키텍처 설계   안정적이고/ 복원력을 갖춘 스토리지를 선택한다.
+  어떻게 AWS 서비스를 사용해 결합 해제 매커니즘을 설계할지 결정한다.
+  어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.
+  어떻게 고 가용성 및/ 내결함성을 갖춘 아키텍처를 설계할지 결정한다.
+      성능이 뛰어난 아키텍처 정의  성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다.</description>
+    </item>
+    
+    <item>
       <title>AWS EC2 생성</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/ec2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -503,6 +383,16 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/programing/shell/shell-6/</guid>
       <description>****    ****         #</description>
+    </item>
+    
+    <item>
+      <title>6장 인증과 권한</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-6/</guid>
+      <description>6장 인증과 권한 부여 - AWS Identity and Access Management  ****       ~
+    </description>
     </item>
     
     <item>
@@ -542,6 +432,16 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>7장 AWS 관리도구</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-7/</guid>
+      <description>7장 CrouTail, CloudWatch, AWS Config  ****       ~
+    </description>
+    </item>
+    
+    <item>
       <title>AWS Elastic IP 할당</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/eip/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -575,6 +475,16 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/programing/shell/shell-8/</guid>
       <description>****    ****         #</description>
+    </item>
+    
+    <item>
+      <title>8장 DNS와 네트워크 라우팅</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-8/</guid>
+      <description>8장 DNS와 네트워크 라우팅 : Amazon Route 53과 Amazon CloudFront  ****       ~
+    </description>
     </item>
     
     <item>
@@ -672,6 +582,16 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>10장 성능 효율성 핵심 요소</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-10/</guid>
+      <description>10장 성능 효율성 핵심 요소  ****       ~
+    </description>
+    </item>
+    
+    <item>
       <title>AWS 3Tier 구현</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/awstraining/3tier/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -687,6 +607,16 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/%EC%A0%95%EB%A6%AC%EC%A0%84/aws_as/</guid>
       <description>Auto Scaling  Auto Scaling  EC2 인스턴스를 자동으로 시작하거나 종료하여 애플리케이션 로드를 처리하기에 적절한 수의 EC를 유지할 수 있도록 하는 서비스 사용자가 정의하는 조건에 따라 EC2 개수를 자동으로 확장 또는 축소가 가능 모니터링을 통해 비정상 인스턴스를 탐지하고 교체할 수 있음 수요가 급증할 경우 EC2 수를 자동으로 늘려 성능을 유지하고 수요가 적을 경우 수를 줄여 비용을 절감 ELB의 대상그룹을 Auto Scaling Group( ASG )에 포함시켜 자동생성된 EC2로 하여금 트래픽 부하분산을 하도록 설정가능 수요 변화가 예측 나응한 경우 예약된 일정을 통해 정해싲 시간에 늘리거나 줄이도록 설정이 가능 ASG 내 손상된 인스턴스가 발견될 경우, Auto Scaling은 이를 자동으로 종료하고 새로운 인스턴스로 교체  ELB를 사용하는 경우, ELB가 손상된 인스턴스를 트래픽 요청 대상에서 분리시킨 후, Auto Scaling이 이를 새로운 인스턴스로 교체   비정상 서버 탐지 후 Auto Scaling이 새로운 인스턴스를 In Service 상태를 만들기까지 5분 이내 소요   AWS Auto Scaling 그룹.</description>
+    </item>
+    
+    <item>
+      <title>11장 보안 핵심 요소</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-11/</guid>
+      <description>11장 보안 핵심 요소  ****       ~
+    </description>
     </item>
     
     <item>
@@ -708,6 +638,36 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>12장 비용 최적화 핵심 요소</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-12/</guid>
+      <description>12장 비용 최적화 핵심 요소  ****       ~
+    </description>
+    </item>
+    
+    <item>
+      <title>13장 운영 우수성 핵심 요소</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-13/</guid>
+      <description>13장 운영 우수성 핵심 요소  ****       ~
+    </description>
+    </item>
+    
+    <item>
+      <title>14장 평가문제 정리</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-15/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-15/</guid>
+      <description>14장 평가문제 정리  ****       ~
+    </description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://mung0001.github.io/docs/system/linux/mount/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -716,6 +676,16 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <description>Linux HD Mount   디스크의 구조 1. 물리적 구조
  스핀들 : 디스크는 하나의 스핀들을 기준으로 여러 개의 플래터로 구성되어 있고 스핀들은 여러 개의 플랫터를 회전시키는 역할을 한다. 플래터 : 플래터는 마그네틱으로 코딩되어져 있고 연속으로 구성되어 있다. 헤더 : 회전중인 플래터에 데이터를 읽거나 쓰기 위해서는 엑세스 암에 부착된 헤더를 이용하여 엑세스 한다.   2. 논리적 구조
  섹터 : 플래터의 가장 작은 단위, 일반적으로 1섹터의 크기는 512바이트 트랙 : 섹터가 모여 하나의 원을 구성 실린더 : 트랙의 스택 구조 파티션 : MBR의 파티션 테이블(64바이트)에 정보가 저장, 주 파티션 (16바이트, 4개까지 생성이 가능), 확장 파티션 생성이 가능 논리적 구조 크기 비교 : 섹터 &amp;lt; 트랙 &amp;lt; 실린더 &amp;lt; 실린더 그룹 or 파티션 &amp;lt; 디스크   3.</description>
+    </item>
+    
+    <item>
+      <title>15장 기출문제 정리</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-16/</guid>
+      <description>15장 기출문제 정리  ****       ~
+    </description>
     </item>
     
     <item>
@@ -1407,6 +1377,16 @@ This document is a brief primer on using Go templates.</description>
       
       <guid>https://mung0001.github.io/posts/base/</guid>
       <description>****          **** </description>
+    </item>
+    
+    <item>
+      <title>9장 안정성 핵심 요소</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-9/</guid>
+      <description>9장 안정성 핵심 요소  ****       ~
+    </description>
     </item>
     
     <item>
