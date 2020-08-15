@@ -5,15 +5,21 @@
   <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="****  ****       ~
-    ">
+<meta name="description" content="5장 데이터베이스   5장의 목표   복원력을 갖춘 아키텍처 설계   안정적이고/ 복원력을 갖춘 스토리지를 선택한다.
+  어떻게 AWS 서비스를 사용해 결합 해제 매커니즘을 설계할지 결정한다.
+  어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.
+  어떻게 고 가용성 및/ 내결함성을 갖춘 아키텍처를 설계할지 결정한다.
+      성능이 뛰어난 아키텍처 정의  성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다.">
 
 
 
 <meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/cloudcomputing/awssaa/saa-5/><meta property="og:title" content="" />
-<meta property="og:description" content="****  ****       ~
-    " />
+<link rel="canonical" href=/docs/cloudcomputing/awssaa/saa-5/><meta property="og:title" content="5장 데이터베이스" />
+<meta property="og:description" content="5장 데이터베이스   5장의 목표   복원력을 갖춘 아키텍처 설계   안정적이고/ 복원력을 갖춘 스토리지를 선택한다.
+  어떻게 AWS 서비스를 사용해 결합 해제 매커니즘을 설계할지 결정한다.
+  어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.
+  어떻게 고 가용성 및/ 내결함성을 갖춘 아키텍처를 설계할지 결정한다.
+      성능이 뛰어난 아키텍처 정의  성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/cloudcomputing/awssaa/saa-5/" />
 
@@ -21,7 +27,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.33e8028fcb46d86e9e59809042901f9e558761523545fc0ea72aa792811f636c.js" integrity="sha256-M&#43;gCj8tG2G6eWYCQQpAfnlWHYVI1RfwOpyqnkoEfY2w="></script>
+<script defer src="/en.search.min.a4805dfddb37dbe2c50422cd0a1da7e94a58ed79db61ec9684517b09bde5c305.js" integrity="sha256-pIBd/ds32&#43;LFBCLNCh2n6UpY7XnbYeyWhFF7Cb3lwwU="></script>
 <!--
 
 -->
@@ -257,16 +263,6 @@
         <li >
 
   
-  <a href="/docs/cloudcomputing/awssaa/saa-5/" class="active">S a a 5</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
   <a href="/docs/cloudcomputing/awssaa/saa-6/" class="">S a a 6</a>
   
 
@@ -308,6 +304,16 @@
 
   
   <a href="/docs/cloudcomputing/awssaa/saa-1/" class="">1장 AWS의 핵심 서비스</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/cloudcomputing/awssaa/saa-5/" class="active">5장 데이터베이스</a>
   
 
 </li>
@@ -1103,7 +1109,7 @@
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>S a a 5</strong>
+  <strong>5장 데이터베이스</strong>
 
   <label for="toc-control">
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -1117,7 +1123,95 @@
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading-1">****</a></li>
+    <li><a href="#5장의-목표"><strong>5장의 목표</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터베이스"><strong>데이터베이스</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#관계형-데이터베이스"><strong>관계형 데이터베이스</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#열과-속성"><strong>열과 속성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#다중-테이블-사용"><strong>다중 테이블 사용</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#sql"><strong>SQL</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-쿼리"><strong>데이터 쿼리</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-저장"><strong>데이터 저장</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#온라인-트랙잭션-처리와-온라인-분석-처리"><strong>온라인 트랙잭션 처리와 온라인 분석 처리</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#oltp"><strong>OLTP</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#olap"><strong>OLAP</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#amazone-relational-database-server--이하-rds-"><strong>Amazone Relational Database Server ( 이하 RDS )</strong></a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -1130,20 +1224,440 @@
 
       
       
-  <article class="markdown"><h1 id="heading">****</h1>
+  <article class="markdown"><h1 id="5장-데이터베이스"><strong>5장 데이터베이스</strong></h1>
 <hr>
-<h2 id="heading-1">****</h2>
+<h1 id="heading"></h1>
+<h2 id="5장의-목표"><strong>5장의 목표</strong></h2>
+<h1 id="heading-1"></h1>
+<ul>
+<li><strong>복원력을 갖춘 아키텍처 설계</strong>
 <ul>
 <li>
-<hr>
+<p><strong>안정적이고/ 복원력을 갖춘 스토리지를 선택한다.</strong></p>
+</li>
+<li>
+<p><strong>어떻게 AWS 서비스를 사용해 결합 해제 매커니즘을 설계할지 결정한다.</strong></p>
+</li>
+<li>
+<p><strong>어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.</strong></p>
+</li>
+<li>
+<p><strong>어떻게 고 가용성 및/ 내결함성을 갖춘 아키텍처를 설계할지 결정한다.</strong></p>
+</li>
+</ul>
 </li>
 </ul>
 <h1 id="heading-2"></h1>
-<p>~<a href="/AWS/SAA/SAA.png"></a></p>
 <ul>
-<li><strong><a href=""></a></strong></li>
+<li><strong>성능이 뛰어난 아키텍처 정의</strong>
+<ul>
+<li><strong>성능이 뛰어난 스토리지 및 데이터베이스를 선택한다.</strong></li>
+<li><strong>탄력성과 확장성을 갖춘 솔루션을 설계한다.</strong></li>
+</ul>
+</li>
 </ul>
 <h1 id="heading-3"></h1>
+<p> </p>
+<h1 id="heading-4"></h1>
+<h3 id="데이터베이스"><strong>데이터베이스</strong></h3>
+<h1 id="heading-5"></h1>
+<ul>
+<li>
+<p><strong>데이터베이스를 사용하면 어플리케이션을 데이터를 저장하고 구성하며, 신속하게 검색할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>단층 파일(Flat File)에 데이터를 저장할 수도 있지만, 데이터양이 증가하게 디면 검색 속도가 느려지는 단점이 있으며, 개발자는 데이터를 저장하고 검색하기 위해 직접 파일 시스템에서 작업하는 대신, 데이터베이스로 작업을 수행함으로써 애플리케이션 개발에 집중하는 것이 가능하다.</strong></p>
+</li>
+<li>
+<p><strong>데이터베이스에 기반한 애플리케이션을 구현할 때, 애플리케이션의 가용성과 성능은 데이터베이스 선택과 구성 방법에 다려 있으며, 데이터베이스는 관계형과 비관계형 두 가지로 나뉘어 지며, 사용자는 데이터 저장, 구성, 검색 방법에 따라 애플리케이션에 가장 적합한 데이터베이스를 선택할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>데이터베이스에 장애가 발생할 때 데이터를 보호 및 복구하는 방법 뿐이 아닌, 애플리케이션의 필요한 수준의 성능과 안정성을 얻기 위해 AWS가 제공하는 데이터베이스 서비스를 학습한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-6"></h1>
+<p> </p>
+<h1 id="heading-7"></h1>
+<h3 id="관계형-데이터베이스"><strong>관계형 데이터베이스</strong></h3>
+<h1 id="heading-8"></h1>
+<ul>
+<li>
+<p><strong>관계형 데이터베이스는 하나 이상의 테이블을 포함한 열과 행이 있어 스프레드시트로 시각화가 가능한 데이터베이스를 의미한다.</strong></p>
+</li>
+<li>
+<p><strong>관계형 데이터베이스 테이블에서 열은 속성, 행은 레코드 또는 튜플이라고 한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-9"></h1>
+<p> </p>
+<h3 id="열과-속성"><strong>열과 속성</strong></h3>
+<h1 id="heading-10"></h1>
+<ul>
+<li>
+<p><strong>관계형 데이터베이스 테이블에 데이털르 추가하기 전에, 각 열의 이름과 입력될 데이터의 형식을 사전에 정의해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>열에는 순서가 있으며, 테이블을 생성한 후에는 이 순서를 변경할 수는 없다.</strong></p>
+</li>
+<li>
+<p><strong>열의 순서를 정하려면 테이블에 있는 속성 간에 관계를 만들어야 하며, 여기에서 관계형 데이터베이스라는 용어가 등자하게 되었다.</strong></p>
+</li>
+<li>
+<p><strong>하단은 테이블의 예시를 나타낸다.</strong></p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>사원 ID(숫자)</th>
+<th>부서(문자열)</th>
+<th>성(문자열)</th>
+<th>이름(문자열)</th>
+<th>셍일(날짜)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>전산</td>
+<td>Smith</td>
+<td>Charlotte</td>
+<td>7-16-87</td>
+</tr>
+<tr>
+<td>102</td>
+<td>마케팅</td>
+<td>Colson</td>
+<td>Thomas</td>
+<td>7-4-00</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>데이터는 각 열에서 정의된 형식에 반드시 일치해야 하며, 이와 다르게 숫자에 문자열을 입력하는 등의 작업을 진행할 경우 오류가 발생하게 된다.</strong></li>
+<li><strong>관계형 데이터베이스의 이점은 데이터를 어떻게 쿼리할지 이해할 필요가 없다는 것이며, 데이터가 일관된 형식으로 존재하는 한 필요한 데이털르 원하는 방식으로 얻기 위해 여러 쿼리를 가공할 수 있다.</strong></li>
+<li><strong>관계형 데이터베이스는 임의의 열에 데이터를 쿼리하고 사용자가 데이터를 제공 방식을 지정해야 하는 애플리케이션에 적합하다.</strong></li>
+</ul>
+<h1 id="heading-11"></h1>
+<p> </p>
+<h1 id="heading-12"></h1>
+<h3 id="다중-테이블-사용"><strong>다중 테이블 사용</strong></h3>
+<h1 id="heading-13"></h1>
+<ul>
+<li>
+<p><strong>모든 데이터를 단일 테이블에 저장하면 불피요한 중복이 생기기 때문에 데이터베이스가 불필요하게 커지고 쿼리 속도가 느려지므로, 일반적으로 애플리케이션은 다중 테이블을 연결해서 사용한다.</strong></p>
+</li>
+<li>
+<p><strong>하단은 상단의 테이블을 원하는 자료를 모아 생성한 테이블이다.</strong></p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>부서 ID(숫자)</th>
+<th>부서명(문자열)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>전산</td>
+</tr>
+<tr>
+<td>20</td>
+<td>마케팅</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>사원 테이블의 각 사원 레코드에 부서명을 입력하는 대신 부서 테이블에 레코드를 하나를 생성한 후, 사원 테이블의 사원 ID를 통해 각 부서를 참조하는 것이 가능하다.</strong></li>
+<li><strong>이러한 관계에서 부서 테이블은 상위 테이블(Prarent Table)이며, 사원 테이블은 하위 테이블(Child Table)이다.</strong></li>
+<li><strong>사원 테이블의 부서 열에 있는 값은 부서 테이블의 부서 ID를 참조한다.</strong></li>
+<li><strong>여기서 부서 ID는 기본 키(Primary Key)라 하며, 기본 키는 행을 고유하게 식별하기 위해서 테이블 내에서 유일해야 한다.</strong></li>
+<li><strong>사원 테이블은 부서 ID를 외래 키(Foregin Key)로 참조한다.</strong></li>
+<li><strong>데이터베이스가 여러 테이블의 열이 어떻게 연관됐는지 알 수 있도록 기본 키와 외래 키를 반드시 정해야 하며, 데이터베이스는 외래 키 제약 조건을 활성화해 하위 테이블이 외래 키를 참조할 때 해당 키가 상위 테이블에도 존재하는 지 확인해야 한다.</strong></li>
+</ul>
+<h1 id="heading-14"></h1>
+<p> </p>
+<h1 id="heading-15"></h1>
+<h3 id="sql"><strong>SQL</strong></h3>
+<h1 id="heading-16"></h1>
+<ul>
+<li>
+<p><strong>관계형 데이터베이스에서는 구조화 질의 언어 SQL(Structured Query Language)를 사용해 데이터를 저장하고 쿼리하고 유지 관리 작업을 수행하므로 SQL 데이터베이스라고 불린다.</strong></p>
+</li>
+<li>
+<p><strong>SQL문은 관계형 데이터베이스 관리 시스템(RDBMS, Relational Database Management System) 마다 조금씩 차이가 있으며, 이는 주요 프로그래밍 언어들에 SQL 문을 만들고 데이터베이스에 입출력하는 라이브러리가 이기 때문으로, AWS 아키텍처로써 SQL까지는 알 필요는 없지만 AWS 관리형 데이터베이스에 작업하기 위한 일반적인 SQL 용어의 개념은 이해할 필요가 있다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-17"></h1>
+<p> </p>
+<h1 id="heading-18"></h1>
+<h3 id="데이터-쿼리"><strong>데이터 쿼리</strong></h3>
+<h1 id="heading-19"></h1>
+<ul>
+<li>
+<p><strong>SELECT 문은 SQL 데이터베이스에서 데이터를 쿼리하는 데 사용되며, 데이터베이스에서 조회하고 싶은 특정 열을 지정할 뿐 아니라 모든 열에서 값을 기반으로 쿼리가 가능하다.</strong></p>
+</li>
+<li>
+<p><strong>테이블의 에측 가능한 구조와 외래 키 제약 조건을 사용해서 SELECT 문과 함께 JOIN 절을 사용해 여러 테이블의 데이터를 결합할 수 있다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-20"></h1>
+<p> </p>
+<h1 id="heading-21"></h1>
+<h3 id="데이터-저장"><strong>데이터 저장</strong></h3>
+<h1 id="heading-22"></h1>
+<ul>
+<li><strong>INSERT 문을 사용하면 테이블에 직접 데이터를 삽입할 수 있으며, 대량의 레코드를 저장해야 할 때 COPY 명령을 사용하면 적절하게 형식을 ㅁ맞춘 파일에서 지정한 테이블로 데이터를 복사할 수 있다.</strong></li>
+</ul>
+<h1 id="heading-23"></h1>
+<p> </p>
+<h1 id="heading-24"></h1>
+<h3 id="온라인-트랙잭션-처리와-온라인-분석-처리"><strong>온라인 트랙잭션 처리와 온라인 분석 처리</strong></h3>
+<h1 id="heading-25"></h1>
+<ul>
+<li><strong>관계형 데이터베이스는 구성에 따라 온라인 트랜잭션 처리(OLTP, OnLine Transaction Processing)과 온라인 분석 처리(OLAP, Online Analytical Processing)</strong></li>
+</ul>
+<h1 id="heading-26"></h1>
+<p> </p>
+<h1 id="heading-27"></h1>
+<h3 id="oltp"><strong>OLTP</strong></h3>
+<h1 id="heading-28"></h1>
+<ul>
+<li>
+<p><strong>OLTP 데이터베이스는 초당 몇 회씩 순차적으로 데이터를 버번하게 읽고 쓰는 애플리케이션에 적합하며, OLTP 데이터베이스는 빠른 쿼리에 최적화 되어 있다.</strong></p>
+</li>
+<li>
+<p><strong>OLTP 데이터베이스는 정기적이고 예측 가능한 경향이 있으며, 요구조건에 따라 메모리가 상당량 필요할 수 있으며, 이는 빠른 액세스를 위해 자주 사용하는 테이블의 일부를 메모리에 저장하기 때문이다.</strong></p>
+</li>
+<li>
+<p><strong>OLTP 데이터베이스는 1분당 수백 건의 주문을 처리해야 하는 온라인 주문 시스템을 지원하는 데 적합하다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-29"></h1>
+<p> </p>
+<h3 id="olap"><strong>OLAP</strong></h3>
+<h1 id="heading-30"></h1>
+<ul>
+<li>
+<p><strong>OLAP 데이터베이스는 복잡한 대형 데이터 세트 쿼리에 최적화 되어 있으며, 상단하 스토리지와 컴퓨팅이 필요하여 데이터웨어하우징 애플리케이션으르 구축하여 여러 OLTP 데이터베이스를 단일 OLAP 데이터베이스로 모으는 것이 일반적이다.</strong></p>
+</li>
+<li>
+<p><strong>보통 대형 OLAP 데이터베이스에서는 복잡한 쿼리로 인한 컴퓨팅 부하를 여러 데이터베이스 서버가 나눠 처리하며, 파티셔닝이라는 프로세스에서 각 서버는 데이터베이스 일부를 맡아 처리한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-31"></h1>
+<p> </p>
+<h1 id="heading-32"></h1>
+<h3 id="amazone-relational-database-server--이하-rds-"><strong>Amazone Relational Database Server ( 이하 RDS )</strong></h3>
+<h1 id="heading-33"></h1>
+<ul>
+<li>
+<p><strong>RDS는 클라우드에서 관계형 데이터베이스 시스템을 실행할 수 있게 하는 관리형 데이터베이스 서비스로, 데이터베이스 시스템 설정, 백업 수행, 고 가용성 보장, 데이터베이스와 기반 운영체제 패치 적용 등과 같은 작업을 수행한다.</strong></p>
+</li>
+<li>
+<p><strong>RDS를 사용하면 데이터베이스 장애로부터 복구, 데이터 복원, 데이터베이스 확장을 쉽게 사용하여 애플리케이션이 요구하는 수준의 가용성과 성능을 달성할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>RDS를 사용해 데이터베이스를 배포할 때, 격리된 데이터베이스 환경인 데이터베이스 인스턴스 구성에서부 시작한다. 데이터베이스 인스턴스는 지정한 가상 프라이빗 클라우드(VPC)에 존재하나, EC2 인스턴스와는 다르게 AWS가 전적으로 데이터베이스 인스턴스를 관리한다. SSH를 사용해 엑세스할 수 없으며, EC2 인스턴스 사이에서도 보이지 않는다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-34"></h1>
+<p> </p>
+<ul>
+<li><strong>데이터베이스 엔진</strong>
+<ul>
+<li>
+<p><strong>데이터베이스 엔진은 데이터베이스에 데이터를 저장, 구성, 반환하는 소프트웨어이며, 데이터베이스 인스턴스는 하나의 데이터베이스 엔진만 실행한다.</strong></p>
+</li>
+<li>
+<p><strong>RDS는 다음 여섯 가지 데이터베이스 엔진 중에서 선택할 수 있다.</strong></p>
+<ul>
+<li><strong>MySQL</strong>
+<ul>
+<li><strong>MySQL은 블로그 및 전자상거래와 같은 OLTP 애플리케이션으로 설계되었으며, RDS는 5.5, 5.6, 5.6 등 최신 MySQL Community Edition 버전을 제공한다.</strong></li>
+<li><strong>MySQL은 myISAM과 InnoDB 두 가지 스토리지 엔진에서 하나를 선택할 수 있지만, 유일하게 RDS 관리형 자동 백업과 호환할 수 있는 엔진은 InnoDB이다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-35"></h1>
+<ul>
+<li><strong>Maria DB</strong>
+<ul>
+<li><strong>Maria DB는 MySQL과 바이너리 수준의 호환성을 가지면서 기능을 향상한 데이터베이스이다.</strong></li>
+<li><strong>Maria DB는 오라클이 MySQL을 개발한 회사를 인수한 이후, MySQL의 미래를 우려해서 개발되었으며, MariaDB는 XtraDB와 InnoDB 스토리지 엔진을 지원하지만, AWS에서는 RDS와의 호환성을 최대화하기 위해 InnoDB를 사용할 것이 권장된다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-36"></h1>
+<ul>
+<li><strong>Oracle</strong>
+<ul>
+<li><strong>Oracle은 가장 널리된 DBMS로 일부 애플리케이션은 데이터베이스사양으로 Oracle을 데이터베이스로 명시하기도 한다. RDS는 다음 Oracle 데이터베이스 에디션을 제공한다.</strong></li>
+<li><strong>Standare Edition One(SE1)</strong></li>
+<li><strong>Standare Edition Two(SE2)</strong></li>
+<li><strong>Standare Edition(SE)</strong></li>
+<li><strong>Enterprise Edition One(SE)</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-37"></h1>
+<ul>
+<li><strong>PostgreSQL</strong>
+<ul>
+<li><strong>PostgreSQL은 Oracle과 호환되는 오픈 소스 데이터베이스이며, Oracle 기반으로 애플리케이션을 제작하였어도, 비용을 위해 PostgreSQL을 선택하기도 한다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-38"></h1>
+<ul>
+<li><strong>Amazone Aurora</strong>
+<ul>
+<li><strong>Amazon Aurora는 Amazon이 MySQL과 PostgreSQL과 바이이너리 수준의 호환성을 가지면서 기능을 향상시킨 데이터베이스이며, 가상 스토리지 계층을 사용해서 하부 스토리지 쓰기 횟수를 줄이기 때문에 MySQL, PostgreSQL보다 쓰기 성능이 우수하며 하단의 세 가디 에디션을 제공한다.</strong></li>
+<li><strong>MySQL 5.6-compatible</strong></li>
+<li><strong>MySQL 5.7-compatible</strong></li>
+<li><strong>PostgreSQL compatible</strong></li>
+<li><strong>Aurora는 에디션에 따라서 PostgreSQL이나 MySQL과 부러오기/ 내보내기 도구, 스냅샷에서 호환되며, 두 오픈 소스 데이터베이스에서 언할하게 마이그레이션 할 수 있도록 설게되어 있다.</strong></li>
+<li><strong>Aurora는 MySQL 호한 에디션에서 InnoDB 스토리지 엔진만 지원하며, MySQL에서 사용할 수 있는 Aurora Backtrack 기능으로 데이터베이스를 지난 72시간 이내 특정 시점으로 단 몇 초 만에 복구가 가능하다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-39"></h1>
+<ul>
+<li><strong>Microsoft SQL Server</strong>
+<ul>
+<li><strong>여러 Microsoft SQL Server과 Express, Web, Standard, Enterprise 에디션을 사용할 수 있으며, 다양한 기능을 사용해서 데이터베이스 업그레이드를 수행하지 않고도 온프레미스에 배포된 기존 SQL 데이터베이스를 RDS로 마이그레이션 할 수 있다.</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-40"></h1>
+<p> </p>
+<ul>
+<li><strong>라이센스 고려사항</strong>
+<ul>
+<li>
+<p><strong>RDS는 데이터베이스 엔진을 실행하는 데 필요한 두 가지 소프트웨어 라이선스 모델을 제공하며, 라이센스가 포함된 모델은 RDS 인스턴스 요금에 라이센스 비용이 포함되여 제공된다.</strong></p>
+</li>
+<li>
+<p><strong>기존 보유 라이센스 사용(BTOL : Bring Your Own License)모델을 선택하려면 실행 중인 데이터베이스 엔진의 라이센스를 확보해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>라이센스가 포함된 모델 MariaDB나 MySQL은 GNU GPL(General Public License)v2.0을 사용하며, PostgreSQL은 PostgreSQL 라이선스를 사용하고, 별도의 라이선스 비용은 없다.</strong></p>
+</li>
+<li>
+<p><strong>RDS에서 실행하는 Microsoft SQL 서버의 모든 버전과 에디션은 라이선스를 포함하며, Oracle Database Standard Edition One과 Oracle Database Standard Edition Tow도 라이선스를 포함하고 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-41"></h1>
+<p> </p>
+<ul>
+<li><strong>데이터베이스 옵션 그룹</strong>
+<ul>
+<li>
+<p><strong>데이터베이스 엔진은 데이터베이스 관리와 보안 향상을 지원하는 다양한 기능을 제공한다.</strong></p>
+</li>
+<li>
+<p><strong>옵션 그룹은 옵션이라는 관리 및 보안 기능을 지정해서 하나 이상의 인스턴스에 적용할 수 있게 한다.</strong></p>
+</li>
+<li>
+<p><strong>옵션을 사용하려면 메모리가 더 필요하므로 인스턴스에 충반한 메모리가 있는지 확인하고 필요한 것만 활성화 해야한다.</strong></p>
+</li>
+<li>
+<p><strong>옵션 그룹에서 사용 가능한 옵션들은 데이터베이스 엔진마다 다르며, Microsoft SQL Server와 Oracle은 TDE를 제공해 스토리지에 쓰기를 수행하기 전에 엔진이 데이터를 암호화하게 한다.</strong></p>
+</li>
+<li>
+<p><strong>MySQL과 MariaDB는 데이터베이스 사용자 로그인 쿼리 활동을 기록하게 하는 감사 플러그인을 제공한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-42"></h1>
+<p> </p>
+<ul>
+<li><strong>데이터베이스 인스턴스 클래스</strong>
+<ul>
+<li>
+<p><strong>데이터베이스 인스턴스를 시작할 때 처리 성능, 메모리, 네트워크 대역폭, 디스크 처리량이 어느 정도 필요한지를 결정해야 하며, RDS는 여러 데이터베이스를 다양한 성능 요구 사항을 충족하기 위해 다양한 데이터베이스 인스턴스 클래스를 제공한다.</strong></p>
+</li>
+<li>
+<p><strong>선택을 잘못 했거나 요구 사항이 변경될 때 인스턴스를 다른 클래스로 전환할 수도 있으며, RDS 데이터베이스 인스턴스 클래스를 다음의 세 가지 유형으로 분류한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-43"></h1>
+<ul>
+<li><strong>표준</strong>
+<ul>
+<li><strong>256G 메모리</strong></li>
+<li><strong>64v CPU</strong></li>
+<li><strong>25Gbps 네트워크 대역폭</strong></li>
+<li><strong>10.000Mbps(1.280Mbps) 디스크 처리량</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-44"></h1>
+<ul>
+<li><strong>메모리 최적화 (대용량의 처리량)</strong>
+<ul>
+<li><strong>3.940GB 메모라</strong></li>
+<li><strong>128 vCPU</strong></li>
+<li><strong>25Gbps 네트워크 대역폭</strong></li>
+<li><strong>14.000Mbps(1.750P 디스크 처리향</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-45"></h1>
+<ul>
+<li><strong>순간확장 가능 (개발 및 테스트 용도)</strong>
+<ul>
+<li><strong>32GB 메모리</strong></li>
+<li><strong>8 vCPU</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-46"></h1>
+<p> </p>
+<ul>
+<li><strong>스토리지</strong>
+<ul>
+<li>
+<p><strong>데이터베이스 인스턴스에 적합한 스토리지 선택은 충분한 디스크 공간 확보 이상으로 중요하다.</strong></p>
+</li>
+<li>
+<p><strong>데이터베이스 기반 애플리케이션의 성능 요구사항을 충족하기 위해서는 얼마나 빠른 스토리지를 선택할지도 판단해야 한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-47"></h1>
+<p> </p>
+<ul>
+<li><strong>IOPS의 이해</strong>
+<ul>
+<li>
+<p><strong>AWS는 초당 입력/ 출력 작업(IOPS, Input/ Output Operations Per Second)를 사용해 스토리지 성능을 측정한다.</strong></p>
+</li>
+<li>
+<p><strong>입출력 작업은 스토리지 읽기 또는 쓰기 작업으로 다른 모든 조건이 같을 때, IOPS가 큰 데이터베이스는 데이터를 저장하고 검색하는 속도가 더 빠르다.</strong></p>
+</li>
+<li>
+<p><strong>RDS는 스토리지 타입에 따라 IOPS를 할당할 수 있으나, 임계 값을 초과할 수는 없다.</strong></p>
+</li>
+<li>
+<p><strong>데이터베이스 스토리지의 속도는 할당된 IOPS 수에 제한되며, 단일 I/O 작업에서 전송할 수 있는 데이터의 양은 데이터베이스 엔진이 사용하는 페이지 크기에 달려 있어, 요구되는 IOPS 수준을 파악하려면 먼저 필요한 디스크 처리량을 확인해야 한다.</strong></p>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
 </article>
  
       
@@ -1178,7 +1692,95 @@
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading-1">****</a></li>
+    <li><a href="#5장의-목표"><strong>5장의 목표</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터베이스"><strong>데이터베이스</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#관계형-데이터베이스"><strong>관계형 데이터베이스</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#열과-속성"><strong>열과 속성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#다중-테이블-사용"><strong>다중 테이블 사용</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#sql"><strong>SQL</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-쿼리"><strong>데이터 쿼리</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-저장"><strong>데이터 저장</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#온라인-트랙잭션-처리와-온라인-분석-처리"><strong>온라인 트랙잭션 처리와 온라인 분석 처리</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#oltp"><strong>OLTP</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#olap"><strong>OLAP</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#amazone-relational-database-server--이하-rds-"><strong>Amazone Relational Database Server ( 이하 RDS )</strong></a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
