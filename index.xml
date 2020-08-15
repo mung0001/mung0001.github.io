@@ -58,6 +58,16 @@
     </item>
     
     <item>
+      <title>CloudComputing과 AWS</title>
+      <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws%EB%9E%80/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws%EB%9E%80/</guid>
+      <description>AWS 란?   Amazon Web Services ( AWS )  AWS  AWS는 Amazon에서 제공하는 클라우드 서비스로, 네트워크를 기반으로 가상 컴퓨터와 스토리지를 비롯한 다양한 서비스를 제공 합니다.    Cloud Computing 와 AWS    AWS에 대해 공부하기 앞서, 우리는 Cloud Computing이 무엇이고, 어떠한 개념에 대해 알고 있어야 합니다. 그 이유는 AWS가 클라우드 컴퓨티 그 자체이기 때문이죠.
+  클라우드 컴퓨팅 ( Cloud Computing : 이하 클라우드 )은 컴퓨터 리소스의 이용 형태로, 클라우드는 컴퓨터의 계산 리소스, 스토리지, 애플리케이션 처리를 네트워크 기반 서비스로 제공하는 것을 뜻 합니다.</description>
+    </item>
+    
+    <item>
       <title>Docker란?</title>
       <link>https://mung0001.github.io/docs/cloudcomputing/docker/docker-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -136,6 +146,18 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/network/sophos/sophos_1/</guid>
       <description>Sophos 설치    구성환경    Sophos는 nat을 외부대역으로 Host 2 ( 20.20.20.0/24 )를 내부대역으로 갖습니다. Sophos의 설치를 위해 내부 대역 ( Host 2 )의 Win 7을 통해 설치를 진행합니다.      Sophos 설치를 위한 Vm을 설정합니다.       운영체제 버전에서 Other Linux 2.6x kernel을 선택합니다. 그 후 RAM 1G 디스크 20G 외에는 기본 값으로 진행합니다.      위 그림과 같이 설정이 생성이 완료되면 설정을 위해 Edit virtual machine settings를 클릭합니다.</description>
+    </item>
+    
+    <item>
+      <title>SQLD</title>
+      <link>https://mung0001.github.io/docs/database/sqld/sqld-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/database/sqld/sqld-3/</guid>
+      <description>데이터 모델링의 이해
+데이터 모델링의 중요성 및 유의점 - 중복 : 같은 시간 같은 데이터 제공 - 비유연성 : 사소한 업무변화에 데이터 모델이 수시로 변경되면 안됨 - 비일관성 : 신용 상태에 대한 갱신 없이 고객의 납부 이력 정보 갱신 안됨
+데이터 모델링 개념적, 논리적, 물리적 데이터 모델링
+데이터 독립성 요소 외부 스키마 : 개개 사용자가 보는 개인적 DB 스키마 개념 스키마 : 모든 사용자 관점을 통합한 전체 DB 내부 스키마 : 물리적 장치에서 데이터가 실제적 저장</description>
     </item>
     
     <item>
@@ -1390,16 +1412,6 @@ This document is a brief primer on using Go templates.</description>
     </item>
     
     <item>
-      <title>CloudComputing과 AWS</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws%EB%9E%80/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws%EB%9E%80/</guid>
-      <description>AWS 란?   Amazon Web Services ( AWS )  AWS  AWS는 Amazon에서 제공하는 클라우드 서비스로, 네트워크를 기반으로 가상 컴퓨터와 스토리지를 비롯한 다양한 서비스를 제공 합니다.    Cloud Computing 와 AWS   AWS에 대해 공부하기 앞서, 우리는 Cloud Computing이 무엇이고, 어떠한 개념에 대해 알고 있어야 합니다. 그 이유는 AWS가 클라우드 컴퓨티 그 자체 이기 때문이죠.
-  클라우드 컴퓨팅 ( Cloud Computing : 이하 클라우드 )은 컴퓨터 리소스의 이용 형태로, 클라우드는 컴퓨터의 계산 리소스, 스토리지, 애플리케이션 처리를 네트워크 기반 서비스로 제공하는 것을 뜻 합니다.</description>
-    </item>
-    
-    <item>
       <title>Linux master 개요</title>
       <link>https://mung0001.github.io/docs/system/lm/lm-0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1459,18 +1471,6 @@ This document is a brief primer on using Go templates.</description>
       
       <guid>https://mung0001.github.io/docs/database/sqld/sqld-2/</guid>
       <description>****  ****       </description>
-    </item>
-    
-    <item>
-      <title>SQLD</title>
-      <link>https://mung0001.github.io/docs/database/sqld/sqld-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/database/sqld/sqld-3/</guid>
-      <description>****  ****       1장. 데이터 모델링의 이해
-데이터 모델링의 중요성 및 유의점 - 중복 : 같은 시간 같은 데이터 제공 - 비유연성 : 사소한 업무변화에 데이터 모델이 수시로 변경되면 안됨 - 비일관성 : 신용 상태에 대한 갱신 없이 고객의 납부 이력 정보 갱신 안됨
-데이터 모델링 개념적, 논리적, 물리적 데이터 모델링
-데이터 독립성 요소 외부 스키마 : 개개 사용자가 보는 개인적 DB 스키마 개념 스키마 : 모든 사용자 관점을 통합한 전체 DB 내부 스키마 : 물리적 장치에서 데이터가 실제적 저장</description>
     </item>
     
   </channel>

@@ -36,6 +36,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws%EB%9E%80/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/</loc>
   </url>
   
@@ -85,6 +89,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/network/sophos/sophos_1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/database/sqld/sqld-3/</loc>
   </url>
   
   <url>
@@ -785,10 +793,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws%EB%9E%80/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/system/lm/lm-0/</loc>
   </url>
   
@@ -814,10 +818,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/database/sqld/sqld-2/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/database/sqld/sqld-3/</loc>
   </url>
   
 </urlset>

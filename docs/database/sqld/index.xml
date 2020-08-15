@@ -11,6 +11,18 @@
     
     
     <item>
+      <title>SQLD</title>
+      <link>https://mung0001.github.io/docs/database/sqld/sqld-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/database/sqld/sqld-3/</guid>
+      <description>데이터 모델링의 이해
+데이터 모델링의 중요성 및 유의점 - 중복 : 같은 시간 같은 데이터 제공 - 비유연성 : 사소한 업무변화에 데이터 모델이 수시로 변경되면 안됨 - 비일관성 : 신용 상태에 대한 갱신 없이 고객의 납부 이력 정보 갱신 안됨
+데이터 모델링 개념적, 논리적, 물리적 데이터 모델링
+데이터 독립성 요소 외부 스키마 : 개개 사용자가 보는 개인적 DB 스키마 개념 스키마 : 모든 사용자 관점을 통합한 전체 DB 내부 스키마 : 물리적 장치에서 데이터가 실제적 저장</description>
+    </item>
+    
+    <item>
       <title>SQL 개요</title>
       <link>https://mung0001.github.io/docs/database/sqld/sqld-0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -35,18 +47,6 @@
       
       <guid>https://mung0001.github.io/docs/database/sqld/sqld-2/</guid>
       <description>****  ****       </description>
-    </item>
-    
-    <item>
-      <title>SQLD</title>
-      <link>https://mung0001.github.io/docs/database/sqld/sqld-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/database/sqld/sqld-3/</guid>
-      <description>****  ****       1장. 데이터 모델링의 이해
-데이터 모델링의 중요성 및 유의점 - 중복 : 같은 시간 같은 데이터 제공 - 비유연성 : 사소한 업무변화에 데이터 모델이 수시로 변경되면 안됨 - 비일관성 : 신용 상태에 대한 갱신 없이 고객의 납부 이력 정보 갱신 안됨
-데이터 모델링 개념적, 논리적, 물리적 데이터 모델링
-데이터 독립성 요소 외부 스키마 : 개개 사용자가 보는 개인적 DB 스키마 개념 스키마 : 모든 사용자 관점을 통합한 전체 DB 내부 스키마 : 물리적 장치에서 데이터가 실제적 저장</description>
     </item>
     
   </channel>
