@@ -5,13 +5,13 @@
   <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="OpenStack Ussuri : Barbican  OpenStack Ussuri : Barbican   Barbican은 키 관리 서비스 입니다. 비밀 데이터의 안전한 저장, 프로비저닝 및 관리를 제공합니다. 여기에는 대칭 키, 비대칭 키, 인증서 및 원시 바이너리 데이터와 같은 키 자료가 포함됩니다. 자세한 설명은 Barbican을 참조해주세요.     Barbican service 및 User 생성 $ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 barbican$ controller ~(keystone)&gt; openstack role add --project service --user barbican admin$ controller ~(keystone)&gt; openstack service create --name barbican --description &#34;OpenStack Key Manager&#34; key-manager$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne key-manager public http://controller:9311$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne key-manager internal http://controller:9311dnf --enablerepo=centos-openstack-ussuri,PowerTools,epel -y install openstack-barbicanopenstack endpoint create --region RegionOne key-manager admin http://controller:9311   Barbican 유저의 DB를 생성합니다.">
+<meta name="description" content="OpenStack Ussuri : Barbican  OpenStack Ussuri : Barbican   Barbican은 키 관리 서비스 입니다. 비밀 데이터의 안전한 저장, 프로비저닝 및 관리를 제공합니다. 여기에는 대칭 키, 비대칭 키, 인증서 및 원시 바이너리 데이터와 같은 키 자료가 포함됩니다. 자세한 설명은 Barbican을 참조해주세요.     Barbican service 및 User 생성 $ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 barbican&#43;---------------------&#43;----------------------------------&#43;| Field | Value |&#43;---------------------&#43;----------------------------------&#43;| default_project_id | b470c69e28db47cdbfc81e06cc67f627 || domain_id | default || enabled | True || id | bc85b317bd7c4cc1a4d5aee81c383421 || name | barbican || options | {} || password_expires_at | None |&#43;---------------------&#43;----------------------------------&#43;$ controller ~(keystone)&gt; openstack role add --project service --user barbican admin$ controller ~(keystone)&gt; openstack service create --name barbican --description &#34;OpenStack Key Manager&#34; key-manager-------------------------------------------------&#43;| Field | Value |&#43;-------------&#43;----------------------------------&#43;| description | OpenStack Key Manager || enabled | True || id | ec2cbdda740a4887b5737fe885b4b86e || name | barbican || type | key-manager |&#43;-------------&#43;----------------------------------&#43;$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne key-manager public http://controller:9311&#43;--------------&#43;----------------------------------&#43;| Field | Value |&#43;--------------&#43;----------------------------------&#43;| enabled | True || id | 3254f8ccb5894560ab3dea0268dddd03 || interface | public || region | RegionOne || region_id | RegionOne || service_id | ec2cbdda740a4887b5737fe885b4b86e || service_name | barbican || service_type | key-manager || url | http://controller:9311 |&#43;--------------&#43;----------------------------------&#43;$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne key-manager internal http://controller:9311&#43;--------------&#43;----------------------------------&#43;| Field | Value |&#43;--------------&#43;----------------------------------&#43;| enabled | True || id | 37a440f72212422ca7c590e322afe56c || interface | internal || region | RegionOne || region_id | RegionOne || service_id | ec2cbdda740a4887b5737fe885b4b86e || service_name | barbican || service_type | key-manager || url | http://controller:9311 |&#43;--------------&#43;----------------------------------&#43;$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne key-manager admin http://controller:9311&#43;--------------&#43;----------------------------------&#43;| Field | Value |&#43;--------------&#43;----------------------------------&#43;| enabled | True || id | 2ad3a9aabcb840cc832470039ee37b00 || interface | admin || region | RegionOne || region_id | RegionOne || service_id | ec2cbdda740a4887b5737fe885b4b86e || service_name | barbican || service_type | key-manager || url | http://controller:9311 |&#43;--------------&#43;----------------------------------&#43;   Barbican 유저의 DB를 생성합니다.">
 
 
 
 <meta name="robots" content="index,follow">
 <link rel="canonical" href=/docs/cloudcomputing/openstacktraining/openstack-ussuri-14/><meta property="og:title" content="OpenStack Ussuri : Barbican" />
-<meta property="og:description" content="OpenStack Ussuri : Barbican  OpenStack Ussuri : Barbican   Barbican은 키 관리 서비스 입니다. 비밀 데이터의 안전한 저장, 프로비저닝 및 관리를 제공합니다. 여기에는 대칭 키, 비대칭 키, 인증서 및 원시 바이너리 데이터와 같은 키 자료가 포함됩니다. 자세한 설명은 Barbican을 참조해주세요.     Barbican service 및 User 생성 $ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 barbican$ controller ~(keystone)&gt; openstack role add --project service --user barbican admin$ controller ~(keystone)&gt; openstack service create --name barbican --description &#34;OpenStack Key Manager&#34; key-manager$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne key-manager public http://controller:9311$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne key-manager internal http://controller:9311dnf --enablerepo=centos-openstack-ussuri,PowerTools,epel -y install openstack-barbicanopenstack endpoint create --region RegionOne key-manager admin http://controller:9311   Barbican 유저의 DB를 생성합니다." />
+<meta property="og:description" content="OpenStack Ussuri : Barbican  OpenStack Ussuri : Barbican   Barbican은 키 관리 서비스 입니다. 비밀 데이터의 안전한 저장, 프로비저닝 및 관리를 제공합니다. 여기에는 대칭 키, 비대칭 키, 인증서 및 원시 바이너리 데이터와 같은 키 자료가 포함됩니다. 자세한 설명은 Barbican을 참조해주세요.     Barbican service 및 User 생성 $ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 barbican&#43;---------------------&#43;----------------------------------&#43;| Field | Value |&#43;---------------------&#43;----------------------------------&#43;| default_project_id | b470c69e28db47cdbfc81e06cc67f627 || domain_id | default || enabled | True || id | bc85b317bd7c4cc1a4d5aee81c383421 || name | barbican || options | {} || password_expires_at | None |&#43;---------------------&#43;----------------------------------&#43;$ controller ~(keystone)&gt; openstack role add --project service --user barbican admin$ controller ~(keystone)&gt; openstack service create --name barbican --description &#34;OpenStack Key Manager&#34; key-manager-------------------------------------------------&#43;| Field | Value |&#43;-------------&#43;----------------------------------&#43;| description | OpenStack Key Manager || enabled | True || id | ec2cbdda740a4887b5737fe885b4b86e || name | barbican || type | key-manager |&#43;-------------&#43;----------------------------------&#43;$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne key-manager public http://controller:9311&#43;--------------&#43;----------------------------------&#43;| Field | Value |&#43;--------------&#43;----------------------------------&#43;| enabled | True || id | 3254f8ccb5894560ab3dea0268dddd03 || interface | public || region | RegionOne || region_id | RegionOne || service_id | ec2cbdda740a4887b5737fe885b4b86e || service_name | barbican || service_type | key-manager || url | http://controller:9311 |&#43;--------------&#43;----------------------------------&#43;$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne key-manager internal http://controller:9311&#43;--------------&#43;----------------------------------&#43;| Field | Value |&#43;--------------&#43;----------------------------------&#43;| enabled | True || id | 37a440f72212422ca7c590e322afe56c || interface | internal || region | RegionOne || region_id | RegionOne || service_id | ec2cbdda740a4887b5737fe885b4b86e || service_name | barbican || service_type | key-manager || url | http://controller:9311 |&#43;--------------&#43;----------------------------------&#43;$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne key-manager admin http://controller:9311&#43;--------------&#43;----------------------------------&#43;| Field | Value |&#43;--------------&#43;----------------------------------&#43;| enabled | True || id | 2ad3a9aabcb840cc832470039ee37b00 || interface | admin || region | RegionOne || region_id | RegionOne || service_id | ec2cbdda740a4887b5737fe885b4b86e || service_name | barbican || service_type | key-manager || url | http://controller:9311 |&#43;--------------&#43;----------------------------------&#43;   Barbican 유저의 DB를 생성합니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/cloudcomputing/openstacktraining/openstack-ussuri-14/" />
 
@@ -19,7 +19,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.1facec2e484835c0d52e595836df1eb7f5d63619d48cee4a1ca0a949b49e99e9.js" integrity="sha256-H6zsLkhINcDVLllYNt8et/XWNhnUjO5KHKCpSbSemek="></script>
+<script defer src="/en.search.min.e75ff9c1b02d505984b37bad1e9f3c8d980e9b11fbf6c6da0abbdbc6dd085a07.js" integrity="sha256-51/5wbAtUFmEs3utHp88jZgOmxH79sbaCrvbxt0IWgc="></script>
 <!--
 
 -->
@@ -1307,6 +1307,14 @@
       </ul>
     </li>
   </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#확인"><strong>확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
 
@@ -1332,17 +1340,74 @@
 <h1 id="heading-3"></h1>
 <h3 id="barbican-service-및-user-생성"><strong>Barbican service 및 User 생성</strong></h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 barbican
++---------------------+----------------------------------+
+| Field               | Value                            |
++---------------------+----------------------------------+
+| default_project_id  | b470c69e28db47cdbfc81e06cc67f627 |
+| domain_id           | default                          |
+| enabled             | True                             |
+| id                  | bc85b317bd7c4cc1a4d5aee81c383421 |
+| name                | barbican                         |
+| options             | <span style="color:#75715e">{}</span>                               |
+| password_expires_at | None                             |
++---------------------+----------------------------------+
 
 $ controller ~(keystone)&gt; openstack role add --project service --user barbican admin
-
 $ controller ~(keystone)&gt; openstack service create --name barbican --description &#34;OpenStack Key Manager&#34; key-manager
+-------------------------------------------------+
+| Field       | Value                            |
++-------------+----------------------------------+
+| description | OpenStack Key Manager            |
+| enabled     | True                             |
+| id          | ec2cbdda740a4887b5737fe885b4b86e |
+| name        | barbican                         |
+| type        | key-manager                      |
++-------------+----------------------------------+
 
 $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne key-manager public http://controller:9311
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | 3254f8ccb5894560ab3dea0268dddd03 |
+| interface    | public                           |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | ec2cbdda740a4887b5737fe885b4b86e |
+| service_name | barbican                         |
+| service_type | key-manager                      |
+| url          | http://controller:9311           |
++--------------+----------------------------------+
 
 $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne key-manager internal http://controller:9311
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | 37a440f72212422ca7c590e322afe56c |
+| interface    | internal                         |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | ec2cbdda740a4887b5737fe885b4b86e |
+| service_name | barbican                         |
+| service_type | key-manager                      |
+| url          | http://controller:9311           |
++--------------+----------------------------------+
 
-dnf --enablerepo=centos-openstack-ussuri,PowerTools,epel -y install openstack-barbicanopenstack endpoint create --region RegionOne key-manager admin http://controller:9311
-
+$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne key-manager admin http://controller:9311
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | 2ad3a9aabcb840cc832470039ee37b00 |
+| interface    | admin                            |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | ec2cbdda740a4887b5737fe885b4b86e |
+| service_name | barbican                         |
+| service_type | key-manager                      |
+| url          | http://controller:9311           |
++--------------+----------------------------------+
 </code></pre></div><h1 id="heading-4"></h1>
 <p> </p>
 <h1 id="heading-5"></h1>
@@ -1359,6 +1424,7 @@ $ MariaDB&gt; exit;
 <h1 id="heading-8"></h1>
 <h3 id="contoller-node-barbican-설치"><strong>contoller node Barbican 설치</strong></h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ controller ~(keystone)&gt; dnf --enablerepo=centos-openstack-ussuri,PowerTools,epel -y install openstack-barbican
+# Barbucan 서비스 및 관련 모듈을 설치합니다.
 
 $ controller ~(keystone)&gt; vi /etc/barbican/barbican.conf
 [DEFAULT]
@@ -1403,6 +1469,110 @@ $ controller ~(keystone)&gt; firewall-cmd --add-port=9311/tcp --permanent
 $ controller ~(keystone)&gt; firewall-cmd --reload
 # 방화벽을 설정합니다.
 </code></pre></div><h1 id="heading-9"></h1>
+<p> </p>
+<h1 id="heading-10"></h1>
+<h3 id="확인"><strong>확인</strong></h3>
+<h1 id="heading-11"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ controller ~(keystone)&gt; openstack secret store --name secret01 --payload secretkey
++---------------+------------------------------------------------------------------------+
+| Field         | Value                                                                  |
++---------------+------------------------------------------------------------------------+
+| Secret href   | http://controller:9311/v1/secrets/86cbaa20-0cb9-479f-82ed-80a02f34b83d |
+| Name          | secret01                                                               |
+| Created       | None                                                                   |
+| Status        | None                                                                   |
+| Content types | None                                                                   |
+| Algorithm     | aes                                                                    |
+| Bit length    | 256                                                                    |
+| Secret type   | opaque                                                                 |
+| Mode          | cbc                                                                    |
+| Expiration    | None                                                                   |
++---------------+------------------------------------------------------------------------+
+
+$ controller ~(keystone)&gt; openstack secret list
++------------------------------------------------------------------------+----------+---------------------------+--------+---------------------------+-----------+------------+-------------+------+------------+
+| Secret href                                                            | Name     | Created                   | Status | Content types             | Algorithm | Bit length | Secret type | Mode | Expiration |
++------------------------------------------------------------------------+----------+---------------------------+--------+---------------------------+-----------+------------+-------------+------+------------+
+| http://controller:9311/v1/secrets/86cbaa20-0cb9-479f-82ed-80a02f34b83d | secret01 | 2020-08-16T09:00:00+00:00 | ACTIVE | <span style="color:#75715e">{</span><span style="color:#e6db74">&#39;default&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;text/plain&#39;</span><span style="color:#75715e">}</span> | aes       |        256 | opaque      | cbc  | None       |
++------------------------------------------------------------------------+----------+---------------------------+--------+---------------------------+-----------+------------+-------------+------+------------+
+
+$ controller ~(keystone)&gt; openstack secret get http://controller:9311/v1/secrets/86cbaa20-0cb9-479f-82ed-80a02f34b83d
++---------------+------------------------------------------------------------------------+
+| Field         | Value                                                                  |
++---------------+------------------------------------------------------------------------+
+| Secret href   | http://controller:9311/v1/secrets/86cbaa20-0cb9-479f-82ed-80a02f34b83d |
+| Name          | secret01                                                               |
+| Created       | 2020-08-16T09:00:00+00:00                                              |
+| Status        | ACTIVE                                                                 |
+| Content types | <span style="color:#75715e">{</span><span style="color:#e6db74">&#39;default&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;text/plain&#39;</span><span style="color:#75715e">}</span>                                              |
+| Algorithm     | aes                                                                    |
+| Bit length    | 256                                                                    |
+| Secret type   | opaque                                                                 |
+| Mode          | cbc                                                                    |
+| Expiration    | None                                                                   |
++---------------+------------------------------------------------------------------------+
+# get 뒤에는 키 생성시 생성되는 값을 입력해주셔야 됩니다 !
+
+$ controller ~(keystone)&gt; openstack secret get http://controller:9311/v1/secrets/86cbaa20-0cb9-479f-82ed-80a02f34b83d --payload
++---------+-----------+
+| Field   | Value     |
++---------+-----------+
+| Payload | secretkey |
++---------+-----------+
+
+$ controller ~(keystone)&gt; openstack secret order create --name secret02 --algorithm aes --bit-length 256 --mode cbc --payload-content-type application/octet-stream key
++----------------+-----------------------------------------------------------------------+
+| Field          | Value                                                                 |
++----------------+-----------------------------------------------------------------------+
+| Order href     | http://controller:9311/v1/orders/ffe9a05e-db5e-4b7d-8b5a-86f1349863c3 |
+| Type           | Key                                                                   |
+| Container href | N/A                                                                   |
+| Secret href    | None                                                                  |
+| Created        | None                                                                  |
+| Status         | None                                                                  |
+| Error code     | None                                                                  |
+| Error message  | None                                                                  |
++----------------+-----------------------------------------------------------------------+
+
+$ controller ~(keystone)&gt; openstack secret order list
++-----------------------------------------------------------------------+------+----------------+------------------------------------------------------------------------+---------------------------+--------+------------+---------------+
+| Order href                                                            | Type | Container href | Secret href                                                            | Created                   | Status | Error code | Error message |
++-----------------------------------------------------------------------+------+----------------+------------------------------------------------------------------------+---------------------------+--------+------------+---------------+
+| http://controller:9311/v1/orders/ffe9a05e-db5e-4b7d-8b5a-86f1349863c3 | Key  | N/A            | http://controller:9311/v1/secrets/4c3e2e5b-3585-44ae-901a-25dee6ede5a7 | 2020-08-16T09:08:06+00:00 | ACTIVE | None       | None          |
++-----------------------------------------------------------------------+------+----------------+------------------------------------------------------------------------+---------------------------+--------+------------+---------------+
+
+$ controller ~(keystone)&gt; openstack secret order get http://controller:9311/v1/orders/ffe9a05e-db5e-4B7D-8B5A-86f1349863c3
++----------------+------------------------------------------------------------------------+
+| Field          | Value                                                                  |
++----------------+------------------------------------------------------------------------+
+| Order href     | http://controller:9311/v1/orders/ffe9a05e-db5e-4b7d-8b5a-86f1349863c3  |
+| Type           | Key                                                                    |
+| Container href | N/A                                                                    |
+| Secret href    | http://controller:9311/v1/secrets/4c3e2e5b-3585-44ae-901a-25dee6ede5a7 |
+| Created        | 2020-08-16T09:08:06+00:00                                              |
+| Status         | ACTIVE                                                                 |
+| Error code     | None                                                                   |
+| Error message  | None                                                                   |
++----------------+------------------------------------------------------------------------+
+# get 뒤에는 키 생성시 생성되는 값을 입력해주셔야 됩니다 !
+
+$ controller ~(keystone)&gt; openstack secret get http://controller:9311/v1/secrets/4c3e2e5b-3585-44ae-901a-25dee6ede5a7
++---------------+------------------------------------------------------------------------+
+| Field         | Value                                                                  |
++---------------+------------------------------------------------------------------------+
+| Secret href   | http://controller:9311/v1/secrets/4c3e2e5b-3585-44ae-901a-25dee6ede5a7 |
+| Name          | secret02                                                               |
+| Created       | 2020-08-16T09:08:06+00:00                                              |
+| Status        | ACTIVE                                                                 |
+| Content types | <span style="color:#75715e">{</span><span style="color:#e6db74">&#39;default&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/octet-stream&#39;</span><span style="color:#75715e">}</span>                                |
+| Algorithm     | aes                                                                    |
+| Bit length    | 256                                                                    |
+| Secret type   | symmetric                                                              |
+| Mode          | cbc                                                                    |
+| Expiration    | None                                                                   |
++---------------+------------------------------------------------------------------------+
+# get 뒤에는 키 생성시 생성되는 값을 입력해주셔야 됩니다 !
+</code></pre></div><h1 id="heading-12"></h1>
 <p> </p>
 </article>
  
@@ -1461,6 +1631,14 @@ $ controller ~(keystone)&gt; firewall-cmd --reload
     <li>
       <ul>
         <li><a href="#contoller-node-barbican-설치"><strong>contoller node Barbican 설치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#확인"><strong>확인</strong></a></li>
       </ul>
     </li>
   </ul>
