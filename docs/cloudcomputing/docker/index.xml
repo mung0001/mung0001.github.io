@@ -27,7 +27,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/docker/docker-2/</guid>
-      <description>Docker 환경구축    이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다.    Docker 설치     Ubuntu 18.04   $ sudo apt update -y$ sudo apt install –y apt-transport-https$ sudo apt install -y ca-certificates curl software-properties-common# 의존성 패키지 설치$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -$ sudo add-apt-repository &amp;#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&amp;#34;# 도커 패키지 저장소 등록$ sudo apt update -y$ sudo apt install -y docker-ce# 도커 설치$ docker version   CentOS 7   $ sudo yum update -y$ sudo yum install –y docker docker-registry epel-release jq# 도커 설치 및 도커 레지스트리 설치$ systemctl enable docker$ systemctl start docker$ systemctl status docker# 도커 자동시작 설정 및 확인$ sudo yum remove docker \docker-client \docker-client-latest \docker-common \docker-latest \docker-latest-logrotate \docker-engine# 도커 구버전 제거   </description>
+      <description>Docker 환경구축    이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다. 설치에 대한 자세한 설명은 Docker docs를 참고해주세요.    Docker 설치    Docker는 기본적으로 Linux 플랫폼, MacOS, Window 10을 지원하고 있습니다. Docker 지원 DESKTOP     Docker 지원 SERVER      Debian 설치   Debian 환경   Debian계열 Linux에 Docker Engine을 설치 하기 위해서는 하단의 요구조건을 충족해야 합니다.</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/docker/base/</guid>
-      <description>****    ****          예제 1. 다음의 인스턴스를 생성해보세요.  예제 1. 답안↕ 사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다. 정책에서 admin의 권한을 선택 후 생성합니다.  </description>
+      <description>****    ****          </description>
     </item>
     
   </channel>
