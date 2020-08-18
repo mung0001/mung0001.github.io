@@ -1152,7 +1152,12 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
       <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/posts/azure/</guid>
-      <description>Microsoft Azure Virtual Training Day: Fundamentals 1        </description>
+      <description>Microsoft Azure Virtual Training Day: Fundamentals 1   목차  1. 클라우드 개념 **2. ** **3. ** **4. **
+ 클라우드 컴퓨팅   Compute poewer : 리눅스 서버나 웹 프로그램
+  Storage : 저장 및 데이터베이스 역할
+  Networking - 클라우드 제공사와 우리 회사의 사이의 안전한 연결
+  Analytis - 이치 혹은 성능 데이터를 시각화
+     왜 클라우드 서비스인가?   온-프레미스 환경은 고정비용이지만 퍼블릭 환경은 유동적으로 비용우위를 가질 수 있다.</description>
     </item>
     
     <item>
