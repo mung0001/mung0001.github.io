@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://mung0001.github.io/</loc>
-    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -52,11 +52,11 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/system/linux/</loc>
+    <loc>https://mung0001.github.io/docs/system/lm/lm-1/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/system/lm/lm-1/</loc>
+    <loc>https://mung0001.github.io/docs/system/nas/</loc>
   </url>
   
   <url>
@@ -113,6 +113,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/cloudcomputing/openstack/keystone/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/system/linux/</loc>
   </url>
   
   <url>
@@ -608,22 +612,62 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/tags/azure/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/categories/azure/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/posts/azure/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/tags/azure-traing/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/categories/azure-traing/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/posts/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/categories/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/tags/microsoft-azure/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/categories/microsoft-azure/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/tags/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/tags/aws/</loc>
     <lastmod>2020-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/categories/aws/</loc>
-    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/posts/</loc>
-    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/categories/</loc>
     <lastmod>2020-07-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -639,11 +683,6 @@
   
   <url>
     <loc>https://mung0001.github.io/tags/serverless/</loc>
-    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/tags/</loc>
     <lastmod>2020-07-06T00:00:00+00:00</lastmod>
   </url>
   

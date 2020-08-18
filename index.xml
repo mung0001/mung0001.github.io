@@ -6,7 +6,7 @@
     <description>Recent content on 뭉게뭉게</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mung0001.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -1144,6 +1144,15 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
       
       <guid>https://mung0001.github.io/docs/cloudcomputing/openstacktraining/packstack/</guid>
       <description>Packstack Stein 설치  Packstack   Redhat 계열 ( ex : CentOS )의 OpenStack 자동화 설치 툴     Packstack stain 설치   기본적으로 PackStack은 올인원 or 다중노드로 구성할 수 있으며, 여기서는 올인원으로 설치를 진행하며, 다중노드에 대한 설정은 추가하도록 하겠습니다.   설치사양     OS CPU RAM DISK     CenOS7 4/ 2 10240 100G      만약 다중 노드에 경우 소스를 분산시키고 각 노드에 설정을 추가합니다.</description>
+    </item>
+    
+    <item>
+      <title>Azure Fundamentaks 1</title>
+      <link>https://mung0001.github.io/posts/azure/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/posts/azure/</guid>
+      <description>Microsoft Azure Virtual Training Day: Fundamentals 1        </description>
     </item>
     
     <item>

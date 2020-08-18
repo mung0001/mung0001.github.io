@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Azure Traing on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/categories/azure-traing/</link>
+    <description>Recent content in Azure Traing on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Tue, 18 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mung0001.github.io/categories/azure-traing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Azure Fundamentaks 1</title>
+      <link>https://mung0001.github.io/posts/azure/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/posts/azure/</guid>
+      <description>Microsoft Azure Virtual Training Day: Fundamentals 1        </description>
+    </item>
+    
+  </channel>
+</rss>
