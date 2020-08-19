@@ -6,7 +6,7 @@
     <description>Recent content on 뭉게뭉게</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Tue, 18 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mung0001.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -1147,17 +1147,26 @@ aws help aws cli 를 이용하기 전에 앞서 만든 AWS IAM 사용자를 추�
     </item>
     
     <item>
+      <title>Azure Fundamentaks 2</title>
+      <link>https://mung0001.github.io/posts/azure2/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/posts/azure2/</guid>
+      <description>Microsoft Azure Virtual Training Day: Fundamentals 2        </description>
+    </item>
+    
+    <item>
       <title>Azure Fundamentaks 1</title>
       <link>https://mung0001.github.io/posts/azure/</link>
       <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/posts/azure/</guid>
-      <description>Microsoft Azure Virtual Training Day: Fundamentals 1   목차  1. 클라우드 개념 **2. ** **3. ** **4. **
+      <description>Microsoft Azure Virtual Training Day: Fundamentals 1   목차  1. 클라우드 컴퓨팅 2. 클라우드 서비스의 종류 3. 클라우드 서비스의 유형 4. Azure 핵심 서비스와 아키텍처
  클라우드 컴퓨팅   Compute poewer : 리눅스 서버나 웹 프로그램
   Storage : 저장 및 데이터베이스 역할
   Networking - 클라우드 제공사와 우리 회사의 사이의 안전한 연결
   Analytis - 이치 혹은 성능 데이터를 시각화
-     왜 클라우드 서비스인가?   온-프레미스 환경은 고정비용이지만 퍼블릭 환경은 유동적으로 비용우위를 가질 수 있다.</description>
+     왜 클라우드 서비스인가?</description>
     </item>
     
     <item>
