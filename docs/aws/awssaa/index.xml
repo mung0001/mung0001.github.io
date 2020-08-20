@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS SAA 시험정리 on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/docs/aws/awssaa/</link>
+    <description>Recent content in AWS SAA 시험정리 on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    
+	<atom:link href="https://mung0001.github.io/docs/aws/awssaa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1장 AWS의 핵심 서비스</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-1/</guid>
+      <description>SAA 요약정리  정리를 들어가기 전 핵심요소  자격 시험의 합격과 실패는 현장에서의 실무 경험과 실습 중심의 학습, 시험에 필요한 세부적인 정보와 숫자를 얼마나 잘 기억하는지에 달려 있다. AWS SAA는 핵심 AWS 서비스 구성 요소와 운영은 물론 서비스 간의 상호작용 방식도 이해가 필요 기본적인 공부는 Amazon의 공식문서 및 여러 실습 경험을 필요로 한다.    AWS SAA 참고자료      시험영역 출제 비율     1.</description>
+    </item>
+    
+    <item>
+      <title>2장 EC2와 EBS</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-2/</guid>
+      <description>2장 Amazon Elastic Compute Cloud와 Amazon Elastic Block Store  2장의 목표  복원력은 갖춘 아키텍처 설계  안정적이고, 복원력을 갖춘 스토리지를 선택 어떻게 고가용성 및/ 또는 내결함성을 갖춘 아키텍처를 설계할지를 결정      성능이 뛰어난 아키텍처 정의  성능이 뛰어난 스토리지 및 데이터베이스를 선택 탄력성과 확장성을 갖춘 솔루션을 설계      안전한 애플리케이션 및 아키텍처 설명  어떻게 애플리케이션 티어를 보호할지를 결정 어떻게 데이터를 보호할지 결정   비용에 최적화된 아키텍처 설계  어떻게 비용에 최적화된 스토리지를 설계할지를 결정 어떻게 비용에 최적화된 컴퓨팅을 설계할지 결정       EC2 인스턴스    EC2는 물리 서버의 기능을 함축적으로 가상화한 실제 서버와 유사하게 작동</description>
+    </item>
+    
+    <item>
+      <title>3장 S3와 Glacier</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-3/</guid>
+      <description>3장 Amazon Simple Storage Service와 Amazon Glacier Storage Service   3장의 목표   복원력을 갖춘 아키텍처 설계
+ 안정적이고/ 복원력을 갖춘 스로티리지를 선택한다. 어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다. 어떻게 고가용성 및 내결함성을 갖춘 아키텍처를 설계할지 결정한다.    성능이 뛰어난 아키텍처 정의
+ 성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다.    안전한 애플리케이션 및 아키텍처 설명
+ 어떻게 애플리케이션 티어를 보호할지 결정한다.</description>
+    </item>
+    
+    <item>
+      <title>4장 VPC</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-4/</guid>
+      <description>4장 Amazon Virtual Private Cloud   4장의 목표   복원력을 갖춘 아키텍처 설계  어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.      안전한 어플리케이션 및 아키텍처 설계  단일 VPC 어플리케이션을 위한 네트워킹 인프라르 정의한다. 단일 VPC 애플리케이션을 위한 네트워킹 인프라르 정의한다.       Virtual Private Cloud ( 이하 VPC )    VPC란 EC2의 네트워크 계층으로, EC2 인스턴스를 비롯한 여러 AWS 서비스에 네트워크 리소스를 담을 수 있는 가상의 네트워크를 의미한다.</description>
+    </item>
+    
+    <item>
+      <title>5장 데이터베이스</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-5/</guid>
+      <description>5장 데이터베이스   5장의 목표   복원력을 갖춘 아키텍처 설계   안정적이고/ 복원력을 갖춘 스토리지를 선택한다.
+  어떻게 AWS 서비스를 사용해 결합 해제 매커니즘을 설계할지 결정한다.
+  어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.
+  어떻게 고 가용성 및/ 내결함성을 갖춘 아키텍처를 설계할지 결정한다.
+      성능이 뛰어난 아키텍처 정의  성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다.</description>
+    </item>
+    
+    <item>
+      <title>6장 인증과 권한</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-6/</guid>
+      <description>6장 인증과 권한 부여 - AWS Identity and Access Management  ****       ~
+    </description>
+    </item>
+    
+    <item>
+      <title>7장 AWS 관리도구</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-7/</guid>
+      <description>7장 CrouTail, CloudWatch, AWS Config  ****       ~
+    </description>
+    </item>
+    
+    <item>
+      <title>8장 DNS와 네트워크 라우팅</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-8/</guid>
+      <description>8장 DNS와 네트워크 라우팅 : Amazon Route 53과 Amazon CloudFront  ****       ~
+    </description>
+    </item>
+    
+    <item>
+      <title>9장 안정성 핵심요소</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-9/</guid>
+      <description>9장 안정성 핵심 요소  ****       ~
+    </description>
+    </item>
+    
+    <item>
+      <title>10장 성능 효율성 핵심요소</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-10/</guid>
+      <description>10장 성능 효율성 핵심 요소  ****       ~
+    </description>
+    </item>
+    
+    <item>
+      <title>11장 보안 핵심요소</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-11/</guid>
+      <description>11장 보안 핵심 요소  ****       ~
+    </description>
+    </item>
+    
+    <item>
+      <title>12장 비용 최적화 핵심요소</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-12/</guid>
+      <description>12장 비용 최적화 핵심 요소  ****       ~
+    </description>
+    </item>
+    
+    <item>
+      <title>13장 운영 우수성 핵심요소</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-13/</guid>
+      <description>13장 운영 우수성 핵심 요소  ****       ~
+    </description>
+    </item>
+    
+    <item>
+      <title>14장 평가문제 정리</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-14/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-14/</guid>
+      <description>14장 평가문제 정리  ****       ~
+    </description>
+    </item>
+    
+    <item>
+      <title>15장 기출문제 정리</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa-15/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa-15/</guid>
+      <description>15장 기출문제 정리  ****       ~
+    </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Docker 환경구축    이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다. 설치에 대한 자세한 설명은 Docker docs를 참고해주세요.    Docker 설치    Docker는 기본적으로 Linux 플랫폼, MacOS, Window 10을 지원하고 있습니다. Docker 지원 DESKTOP     Docker 지원 SERVER      Debian 설치   Debian 환경   Debian계열 Linux에 Docker Engine을 설치 하기 위해서는 하단의 요구조건을 충족해야 합니다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/docker/docker/docker-2/><meta property="og:title" content="Docker 환경구축" />
+<meta property="og:description" content="Docker 환경구축    이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다. 설치에 대한 자세한 설명은 Docker docs를 참고해주세요.    Docker 설치    Docker는 기본적으로 Linux 플랫폼, MacOS, Window 10을 지원하고 있습니다. Docker 지원 DESKTOP     Docker 지원 SERVER      Debian 설치   Debian 환경   Debian계열 Linux에 Docker Engine을 설치 하기 위해서는 하단의 요구조건을 충족해야 합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/docker/docker/docker-2/" />
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.164cf1a73aaed3403cf8684931787848e938959ce4c0474c8ef5544c3a6d51c8.js" integrity="sha256-Fkzxpzqu00A8&#43;GhJMXh4SOk4lZzkwEdMjvVUTDptUcg="></script>
+<!--
+
+-->
+
+  
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS Docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure Docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP Docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/navercloudplatform/" class="collapsed ">NCP Docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/ncptraining/" class="collapsed ">NCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/docker/docker/docker-1/" class="">Docker란?</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/docker/docker/docker-2/" class="active">Docker 환경구축</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/docker/docker/docker-3/" class="">Docker 이미지와 컨테이너</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/docker/docker/base/" class="">Base</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/programing/" class="">Programing</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/python/" class="collapsed ">Python</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/shell/" class="collapsed ">Shell</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/network/" class="">Network</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/" class="collapsed ">정리전</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/system/" class="">System</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/nas/" class="collapsed ">NAS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/lm/" class="collapsed ">Linux master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/database/" class="">Database</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Project</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/project/mini/" class="collapsed ">M Ini</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Docker 환경구축</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#docker-설치"><strong>Docker 설치</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#debian-설치"><strong>Debian 설치</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#debian-환경"><strong>Debian 환경</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#debian-구-버전-docker-삭제"><strong>Debian 구 버전 Docker 삭제</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#debian-docker-실치"><strong>Debian Docker 실치</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#저장소를-이용한-설치"><strong>저장소를 이용한 설치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#centos-7"><strong>CentOS 7</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="docker-환경구축"><strong>Docker 환경구축</strong></h1>
+<hr>
+<h1 id="heading"></h1>
+<ul>
+<li><strong>이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다.</strong></li>
+<li><strong>설치에 대한 자세한 설명은 <a href="https://docs.docker.com/engine/install/">Docker docs</a>를 참고해주세요.</strong></li>
+</ul>
+<h1 id="heading-1"></h1>
+<blockquote>
+<h2 id="docker-설치"><strong>Docker 설치</strong></h2>
+</blockquote>
+<h1 id="heading-2"></h1>
+<ul>
+<li><strong>Docker는 기본적으로 Linux 플랫폼, MacOS, Window 10을 지원하고 있습니다.</strong></li>
+<li><strong>Docker 지원 DESKTOP</strong>
+<img src="/Docker/Docker06.png" alt="" /></li>
+</ul>
+<h1 id="heading-3"></h1>
+<ul>
+<li><strong>Docker 지원 SERVER</strong>
+<img src="/Docker/Docker08.png" alt="" /></li>
+</ul>
+<h1 id="heading-4"></h1>
+<p> </p>
+<h1 id="heading-5"></h1>
+<h2 id="debian-설치"><strong>Debian 설치</strong></h2>
+<hr>
+<h1 id="heading-6"></h1>
+<h3 id="debian-환경"><strong>Debian 환경</strong></h3>
+<h1 id="heading-7"></h1>
+<ul>
+<li><strong>Debian계열 Linux에 Docker Engine을 설치 하기 위해서는 하단의 요구조건을 충족해야 합니다.</strong>
+<ul>
+<li><strong>Debian Buster 10 or Debian Stretch 9/ Raspbian Streetch</strong></li>
+<li><strong>x86_64 or amd 64, armhf, arm64</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-8"></h1>
+<p> </p>
+<h1 id="heading-9"></h1>
+<h3 id="debian-구-버전-docker-삭제"><strong>Debian 구 버전 Docker 삭제</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ sudo apt-get remove docker docker-engine docker.io containerd runc
+# 기존 Docker 패키지를 삭제합니다.
+# /var/lib/docker/의 존재하는 이미지, 컨테이너, 볼륨 및 네트워크를 포함한 컨텐츠들은 보존됩니다.
+</code></pre></div><h1 id="heading-10"></h1>
+<p> </p>
+<h1 id="heading-11"></h1>
+<h2 id="debian-docker-실치"><strong>Debian Docker 실치</strong></h2>
+<h1 id="heading-12"></h1>
+<ul>
+<li><strong>Docker는 하단과 같이 다양한 방법으로 Docker Engine의 설치가 가능합니다.</strong>
+<ul>
+<li><strong>Docker 레포지터리를 등록 후 설치</strong></li>
+<li><strong>DEB 패키지를 다운로드 후, 수동으로 설치 및 관리</strong></li>
+<li><strong>테스트 및 개발 환경에서의 편의 스크립트를 이용한 설치</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-13"></h1>
+<h3 id="저장소를-이용한-설치"><strong>저장소를 이용한 설치</strong></h3>
+<h1 id="heading-14"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ sudo apt update -y
+
+$ sudo apt-get -y install \
+apt-transport-https \
+ca-certificates \
+curl \
+gnupg-agent \
+software-properties-common
+# 의존성 패키지를 설치 합니다.
+
+$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+# Docker의 공식 GPG 키를 추가합니다.
+
+$ sudo apt-key fingerprint 0EBFCD88
+pub   rsa4096 2017-02-22 [SCEA]
+      9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid           [ unknown] Docker Release (CE deb) &lt;docker@docker.com&gt;
+sub   rsa4096 2017-02-22 [S]
+# 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88 키가 정상적으로 등록 되었는 지 확인합니다.
+
+$ sudo add-apt-repository \
+&#34;deb [arch=arm64] https://download.docker.com/linux/debian \
+$(lsb_release -cs) \
+stable&#34;
+# docker stable 레포지터리를 등록합니다.
+
+$ sudo apt-get update
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+# docker를 설치합니다.
+
+$ sudo apt update -y
+
+$ sudo apt install -y docker-ce
+# Docker 설치
+
+$ docker version
+</code></pre></div><h1 id="heading-15"></h1>
+<p> </p>
+<h1 id="heading-16"></h1>
+<h3 id="centos-7"><strong>CentOS 7</strong></h3>
+<hr>
+<h1 id="heading-17"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ sudo yum update -y
+$ sudo yum install –y docker docker-registry epel-release jq
+# Docker 설치 및 Docker 레지스트리 설치
+
+$ systemctl enable docker
+$ systemctl start docker
+$ systemctl status docker
+# Docker 자동시작 설정 및 확인
+
+$ sudo yum remove docker \
+		    docker-client \
+		    docker-client-latest \
+		    docker-common \
+		    docker-latest \
+		    docker-latest-logrotate \
+		    docker-engine
+# Docker 구버전 제거
+</code></pre></div><h1 id="heading-18"></h1>
+<p> </p>
+<h1 id="heading-19"></h1>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#docker-설치"><strong>Docker 설치</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#debian-설치"><strong>Debian 설치</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#debian-환경"><strong>Debian 환경</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#debian-구-버전-docker-삭제"><strong>Debian 구 버전 Docker 삭제</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#debian-docker-실치"><strong>Debian Docker 실치</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#저장소를-이용한-설치"><strong>저장소를 이용한 설치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#centos-7"><strong>CentOS 7</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
