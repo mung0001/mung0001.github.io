@@ -5,13 +5,13 @@
   <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="OpenStack Ussuri : Rally  OpenStack Ussuri : Rally   Rally는 오픈스택 소스를 GUI 환경으로 보여주는 서비스입니다. Rally의 자세한 설명은 Rally를 참조해주세요.     Rally 유저의 DB를 생성합니다.  $ controller&gt; mysql -u root -p$ MariaDB&gt; create database rally; $ MariaDB&gt; grant all privileges on Rally.* to rally@&#39;localhost&#39; identified by &#39;qwer1234&#39;; $ MariaDB&gt; grant all privileges on Rally.* to rally@&#39;%&#39; identified by &#39;qwer1234&#39;; $ MariaDB&gt; flush privileges; $ MariaDB&gt; exit;   Rally 설치 $ controller ~(keystone)&gt; dnf --enablerepo=centos-openstack-ussuri,PowerTools,epel -y install openstack-rally openstack-rally-plugins python3-fixtures# Rally 서비스 및 관련 모듈을 설치합니다.">
+<meta name="description" content="OpenStack Ussuri : Rally  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | | Swift-proxy || L2 agent L3 agent | | NFS | | Heat API || metadata agent | ----------------------- | API-CFN || Neutron Server | | Heat Engine || Gnocchi Trove API | | Designate Services || Barbican API | -----------------------| Rally |----------------------- OpenStack Ussuri : Rally   Rally는 오픈스택 소스를 GUI 환경으로 보여주는 서비스입니다.">
 
 
 
 <meta name="robots" content="index,follow">
 <link rel="canonical" href=/docs/openstack/openstacktraining/openstack-ussuri-15/><meta property="og:title" content="OpenStack Ussuri : Rally" />
-<meta property="og:description" content="OpenStack Ussuri : Rally  OpenStack Ussuri : Rally   Rally는 오픈스택 소스를 GUI 환경으로 보여주는 서비스입니다. Rally의 자세한 설명은 Rally를 참조해주세요.     Rally 유저의 DB를 생성합니다.  $ controller&gt; mysql -u root -p$ MariaDB&gt; create database rally; $ MariaDB&gt; grant all privileges on Rally.* to rally@&#39;localhost&#39; identified by &#39;qwer1234&#39;; $ MariaDB&gt; grant all privileges on Rally.* to rally@&#39;%&#39; identified by &#39;qwer1234&#39;; $ MariaDB&gt; flush privileges; $ MariaDB&gt; exit;   Rally 설치 $ controller ~(keystone)&gt; dnf --enablerepo=centos-openstack-ussuri,PowerTools,epel -y install openstack-rally openstack-rally-plugins python3-fixtures# Rally 서비스 및 관련 모듈을 설치합니다." />
+<meta property="og:description" content="OpenStack Ussuri : Rally  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | | Swift-proxy || L2 agent L3 agent | | NFS | | Heat API || metadata agent | ----------------------- | API-CFN || Neutron Server | | Heat Engine || Gnocchi Trove API | | Designate Services || Barbican API | -----------------------| Rally |----------------------- OpenStack Ussuri : Rally   Rally는 오픈스택 소스를 GUI 환경으로 보여주는 서비스입니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-15/" />
 
@@ -19,7 +19,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.164cf1a73aaed3403cf8684931787848e938959ce4c0474c8ef5544c3a6d51c8.js" integrity="sha256-Fkzxpzqu00A8&#43;GhJMXh4SOk4lZzkwEdMjvVUTDptUcg="></script>
+<script defer src="/en.search.min.0da8b84ae9726c81edd43379be19bb7d3d798ff64755ce8760a1e0d46e654681.js" integrity="sha256-Dai4SulybIHt1DN5vhm7fT15j/ZHVc6HYKHg1G5lRoE="></script>
 <!--
 
 -->
@@ -1502,26 +1502,41 @@
       
   <article class="markdown"><h1 id="openstack-ussuri--rally"><strong>OpenStack Ussuri : Rally</strong></h1>
 <h1 id="heading"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"> -----------------------         -----------------------        -----------------------
+|  [ Controller Node ]  |       |    [ Compute Node ]   |      |   [ Network Node ]    | 
+|                       |       |        Libvirt        |      |     Open vSwitch      |
+| MariaDB    RabbitMQ   |       |      Nova compute     |      |       L2 Agent        |
+| Memcached  Keystone   |       |      Open vSwitch     |      |       L3 Agent        |
+| httpd      Cinder API |       |       L2 Agent        |      |     metadata agent    |
+| Nova-API   Compute    |       |      Cinder-LVM       |      |      Swift-proxy      |
+| L2 agent   L3 agent   |       |          NFS          |      |       Heat API        |
+| metadata agent        |        -----------------------       |        API-CFN        |
+| Neutron Server        |                                      |      Heat Engine      |
+| Gnocchi    Trove API  |                                      |   Designate Services  |
+| Barbican API          |                                       -----------------------
+| Rally                 |
+ -----------------------
+</code></pre></div><h1 id="heading-1"></h1>
 <h2 id="openstack-ussuri--rally-1"><strong>OpenStack Ussuri : Rally</strong></h2>
-<h1 id="heading-1"></h1>
+<h1 id="heading-2"></h1>
 <ul>
 <li><strong>Rally는 오픈스택 소스를 GUI 환경으로 보여주는 서비스입니다.</strong></li>
 <li><strong>Rally의 자세한 설명은 <a href="">Rally</a>를 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-2"></h1>
-<p> </p>
 <h1 id="heading-3"></h1>
-<h3 id="rally-유저의-db를-생성합니다"><strong>Rally 유저의 DB를 생성합니다.</strong></h3>
+<p> </p>
 <h1 id="heading-4"></h1>
+<h3 id="rally-유저의-db를-생성합니다"><strong>Rally 유저의 DB를 생성합니다.</strong></h3>
+<h1 id="heading-5"></h1>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ controller&gt; mysql -u root -p
 $ MariaDB&gt; create database rally;  
 $ MariaDB&gt; grant all privileges on Rally.* to rally@&#39;localhost&#39; identified by &#39;qwer1234&#39;; 
 $ MariaDB&gt; grant all privileges on Rally.* to rally@&#39;%&#39; identified by &#39;qwer1234&#39;; 
 $ MariaDB&gt; flush privileges; 
 $ MariaDB&gt; exit;
-</code></pre></div><h1 id="heading-5"></h1>
+</code></pre></div><h1 id="heading-6"></h1>
 <p> </p>
-<h1 id="heading-6"></h1>
+<h1 id="heading-7"></h1>
 <h3 id="rally-설치"><strong>Rally 설치</strong></h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ controller ~(keystone)&gt; dnf --enablerepo=centos-openstack-ussuri,PowerTools,epel -y install openstack-rally openstack-rally-plugins python3-fixtures
 # Rally 서비스 및 관련 모듈을 설치합니다.
@@ -1658,7 +1673,7 @@ HINTS:
 
 * To get raw JSON output of task results, run:
         rally task report 887a0d20-37ad-4351-aeca-00f646634552 --json --out output.json
-</code></pre></div><h1 id="heading-7"></h1>
+</code></pre></div><h1 id="heading-8"></h1>
 <p> </p>
 </article>
  
