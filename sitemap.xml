@@ -440,6 +440,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-stein/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-01/</loc>
   </url>
   
@@ -508,11 +512,19 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/devstack/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-11/</loc>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-12/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/packstack/</loc>
   </url>
   
   <url>
@@ -568,10 +580,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-stein/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/aws/awstraining/base/</loc>
   </url>
   
@@ -584,19 +592,11 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/devstack/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/aws/awstraining/game/</loc>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/docs/project/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/packstack/</loc>
   </url>
   
   <url>

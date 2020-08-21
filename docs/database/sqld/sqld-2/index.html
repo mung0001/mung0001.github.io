@@ -19,7 +19,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.cfb7bbff5b4f95ef07312bb7af7ca6277fa7ba5253dd8c06cc3d794ad6c9b287.js" integrity="sha256-z7e7/1tPle8HMSu3r3ymJ3&#43;nulJT3YwGzD15StbJsoc="></script>
+<script defer src="/en.search.min.7d2a60549546973295be10cee0e8184998b489a7b7703e5233dd3a912789bc8e.js" integrity="sha256-fSpgVJVGlzKVvhDO4OgYSZi0iae3cD5SM906kSeJvI4="></script>
 <!--
 
 -->
@@ -971,7 +971,7 @@
     
 
   
-  <a href="/docs/database/sqld/" class="collapsed ">SQLD</a>
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
   
 
 
@@ -1250,6 +1250,14 @@
     <li>
       <ul>
         <li><a href="#from-절-join-형태"><strong>FROM 절 JOIN 형태</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#계층형-질의"><strong>계층형 질의</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -2143,7 +2151,11 @@ WHERE E.SAL BETWEEN S.LOSAL AND S.HSAL;
 <h1 id="heading-76"></h1>
 <p> </p>
 <h1 id="heading-77"></h1>
-<p>계층형 질의 : 테이블에 계층형 데이터가 존재하는 경우 데이터를 조회하기 위해 사용</p>
+<h3 id="계층형-질의"><strong>계층형 질의</strong></h3>
+<h1 id="heading-78"></h1>
+<ul>
+<li><strong>테이블에 계층형 데이터가 존재하는 경우 데이터를 조회하기 위해 사용</strong></li>
+</ul>
 <p>SATRT WITH : 계층 구조 전개의 시작 위치 지정
 CONNECT BY : 다음에 전개될 자식 데이터 지정
 PRIOR : CONNECT BY 절에 사용되며, 현재 읽은 칼럼을 지정한다. PRIOR 자식 = 부모 형태를 사용하면 계층구조에서 부모 데이터에서 자식 데이터(부모-&gt;자식) 방향으로 전개하는 순방향 전개를 한다. 반대는 역방향 전개
@@ -2177,13 +2189,13 @@ CONNECT_BY_ROOT : 현재 전개할 데이터의 루트 데이터를 표시한다
 CREATE VIEW V_PLAYER_TEAM AS
 DROP VIEW V_PLAYER_TEAM;</li>
 </ul>
-<h1 id="heading-78"></h1>
+<h1 id="heading-79"></h1>
 <p> 
 ROLLUP : Subtotal을 생성하기 위해 사용, Grouping Columns의 수를 N이라고 했을 때 N+1 Level의 Subtotal이 생성된다. 인수 순서에 주의</p>
 <p>GROUPING : Subtotal의 total을 생성</p>
 <p>CUBE : 결합 가능한 모든 값에 대하여 다차원 집계를 생성, ROLLUP에 비해 시스템에 부하 심함</p>
 <p>GROUPING SETS : 인수들에 대한 개별 집계를 구할 수 있다, 다양한 소계 집합 생성 가능</p>
-<h1 id="heading-79"></h1>
+<h1 id="heading-80"></h1>
 <p> 
 윈도우 함수 : 행과 행간의 관계를 정의하거나 행과 행간을 비교, 연산하는 함수</p>
 <p>RANK : 특정 항목에 대한 순위를 구하는 함수, 동일한 값에 대해서는 동일한 순위를 부여(1,2,2,4)</p>
@@ -2207,7 +2219,7 @@ ex)본인의 급여보다 50 이하가 적거나 150 이하로 많은 급여를 
 <p>PERCENT_RANK : 파티션별 윈도우에서 제일 먼저 나오는 것을 0, 제일 늦게 나오는 것을 1로 하여 행의 순서별 백분율을 구한다. 0&gt;=,&lt;=1</p>
 <p>CUME_DIST : 현재 행보다 작거나 같은 건수에 대한 누적백분율을 구한다. &gt;0, &lt;=1
 NTILE : 파티션별 전체 건수를 인수 값으로 N등분한 결과를 구할 수 있다.</p>
-<h1 id="heading-80"></h1>
+<h1 id="heading-81"></h1>
 <p> 
 DCL : 유저 생성하고 권한을 제어할 수 있는 명령어</p>
 <p>Oracle과 SQL Server의 사용자 아키텍처 차이
@@ -2253,7 +2265,7 @@ CREATE Procedure schema_NAME.Procedure_name</p>
 <p>CREATE Trigger Trigger_name</p>
 <p>프로시저와 트리거의 차이점
 프로시저는 BEGIN~END 절 내에 COMMIT, ROLLBACK과 같은 트랜잭션 종료 명령어 사용가능, DB 트리거는 BEGIN~END 절 내에 사용 불가</p>
-<h1 id="heading-81"></h1>
+<h1 id="heading-82"></h1>
 <p> 
 옵티마이저 : 사용자가 질의한 SQL문에 대해 최적의 실행 방법을 결정하는 역할 수행</p>
 <p>규칙기반 옵티마이저
@@ -2262,7 +2274,7 @@ CREATE Procedure schema_NAME.Procedure_name</p>
 현재 대부분의 DB에서 사용, SQL문을 처리하는데 필요한 비용이 가장 적은 실행계획을 선택하는 방식, 비용이란 SQL문을 처리하기 위해 예상되는 소요시간 또는 자원 사용량을 의미, 테이블,인덱스,칼럼 등 다양한 객체 통계정보와 시스템 통계정보 등을 이용한다.</p>
 <p>실행계획
 SQL에서 요구한 사항을 처리하기 위한 절차와 방법을 의미, 실행계획을 구성하는 요소에는 조인 순서, 조인 기법, 액세스 기법, 최적화 정보, 연산 등이 있다.</p>
-<h1 id="heading-82"></h1>
+<h1 id="heading-83"></h1>
 <p> 
 인덱스 : 원하는 데이터를 쉽게 찾을 수 있도록 돕는 책의 찾아보기와 유사한 개념, 검색 성능의 최적화를 목적으로 두고 있지만 느려질 수 있다는 단점이 존재</p>
 <p>B-TREE 인덱스에서 원하는 값을 찾는 과정</p>
@@ -2283,11 +2295,13 @@ SQL에서 요구한 사항을 처리하기 위한 절차와 방법을 의미, �
 <p>인덱스 유일 스캔 : 유일 인덱스를 사용하여 단 하나의 데이터를 추출하는 방식(중복X, 구성 칼럼에 대해 모두 ‘=’ 로 값이 주어진 경우에만 가능)</p>
 <p>인덱스 범위 스캔 : 인덱스를 이용하여 한 건 이상의 데이터를 추출하는 방식</p>
 <p>인덱스 역순 범위 스캔 : 인덱스의 리프 블록의 양방향 링크를 이용하여 내림차순으로 데이터를 읽는다</p>
-<h1 id="heading-83"></h1>
+<h1 id="heading-84"></h1>
 <p> 
 NL Join : 프로그래밍에서 사용하는 중첩된 반복문과 유사한 방식으로 조인을 수행, 랜덤 액세스 방식으로 데이터를 읽는다.
 Sort Merge Join : 조인 칼럼을 기준으로 데이터를 정렬하여 조인을 수행, 스캔 방식으로 데이터 읽음.
 Hash Join : CPU 작업 위주로 처리, 해슁 기법 이용, NL Join의 랜덤 액세스 문제와 SMJ의 정렬 작업 부담을 해결하기 위한 대안으로 등장</p>
+<h1 id="heading-85"></h1>
+<p> </p>
 </article>
  
       
@@ -2417,6 +2431,14 @@ Hash Join : CPU 작업 위주로 처리, 해슁 기법 이용, NL Join의 랜덤
     <li>
       <ul>
         <li><a href="#from-절-join-형태"><strong>FROM 절 JOIN 형태</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#계층형-질의"><strong>계층형 질의</strong></a></li>
       </ul>
     </li>
   </ul>

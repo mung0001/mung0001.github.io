@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Openstack Stain Manual 설치</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-stein/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-stein/</guid>
+      <description>Openstack Stain Manual 설치    1. 시스템 및 네트워크 구성   여기서는 Nat 네트워크를 외부, host1 대역을 내부로 사용하여 Openstack을 구축해보도록 하겠습니다.    운영체제 및 네트워크 구성  Hypervisor : Vmware Workstation 15 OS : CentOS7      노드 구성     OS Hostname Network Interface Network Interface2 CPU RAM DISK     CentOS7 controller Nat ( 192.168.10.100 ) HOST1 ( 10.</description>
+    </item>
+    
+    <item>
       <title>OpenStack Ussuri : Overview</title>
       <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -101,6 +110,15 @@
     </item>
     
     <item>
+      <title>DevStack</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/devstack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/devstack/</guid>
+      <description>DevStack Stein 설치  DevStack   Devbian 계열 ( ex : Ubuntu )의 OpenStack 자동화 설치 툴   DevStack 설치   Update Ubuntu System  $ sudo apt -y update$ sudo apt -y upgrade$ sudo apt -y dist-upgrade# Ubuntu의 시스템 및 패키지를 업데이트 합니다.$ sudo init 6# 시스템을 재시작합니다.    Add Stack User  $ sudo useradd -s /bin/bash -d /opt/stack -m stack# devstack 설치를 위해 stack 유저를 생성합니다.</description>
+    </item>
+    
+    <item>
       <title>OpenStack Ussuri : Gnocch</title>
       <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-11/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -116,6 +134,15 @@
       
       <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-12/</guid>
       <description>! 아직 수정 중 문제있음 OpenStack Ussuri : Trove  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | | Swift-proxy || L2 agent L3 agent | | NFS | | Heat API || metadata agent | ----------------------- | API-CFN || Neutron Server | | Heat Engine || Gnocchi Trove API | ---------------------------------------------- --------------------------------- | [ Storage Node 1, 2, 3 ] | | | | Swift-account-auditor || Swift-account-replicator || Swift-account || Swift-container-auditor || Swift-container-replicator || Swift-container-updater || Swift-container || Swift-object-auditor || Swift-object-replicator || Swift-object-updater || Swift-swift-object |--------------------------------- OpenStack Ussuri : Trove   Trove는 관리형 데이터베이스 서비스 입니다.</description>
+    </item>
+    
+    <item>
+      <title>Packstack</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/packstack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/packstack/</guid>
+      <description>Packstack Stein 설치  Packstack   Redhat 계열 ( ex : CentOS )의 OpenStack 자동화 설치 툴     Packstack stain 설치   기본적으로 PackStack은 올인원 or 다중노드로 구성할 수 있으며, 여기서는 올인원으로 설치를 진행하며, 다중노드에 대한 설정은 추가하도록 하겠습니다.   설치사양     OS CPU RAM DISK     CenOS7 4/ 2 10240 100G      만약 다중 노드에 경우 소스를 분산시키고 각 노드에 설정을 추가합니다.</description>
     </item>
     
     <item>
@@ -152,33 +179,6 @@
       
       <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-16/</guid>
       <description>OpenStack Ussuri : Manila  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | | Swift-proxy || L2 agent L3 agent | | NFS | | Heat API || metadata agent | | Manila Share | | API-CFN || Neutron Server | ----------------------- | Heat Engine || Gnocchi Trove API | | Designate Services || Barbican API | -----------------------| Rally Manila API |----------------------- OpenStack Ussuri : Manila   Manila는 OpenStack에서 맡는 서비스입니다.</description>
-    </item>
-    
-    <item>
-      <title>Openstack Stain Manual 설치</title>
-      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-stein/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-stein/</guid>
-      <description>Openstack Stain Manual 설치    1. 시스템 및 네트워크 구성   여기서는 Nat 네트워크를 외부, host1 대역을 내부로 사용하여 Openstack을 구축해보도록 하겠습니다.    운영체제 및 네트워크 구성  Hypervisor : Vmware Workstation 15 OS : CentOS7      노드 구성     OS Hostname Network Interface Network Interface2 CPU RAM DISK     CentOS7 controller Nat ( 192.168.10.100 ) HOST1 ( 10.</description>
-    </item>
-    
-    <item>
-      <title>DevStack</title>
-      <link>https://mung0001.github.io/docs/openstack/openstacktraining/devstack/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/devstack/</guid>
-      <description>DevStack Stein 설치  DevStack   Devbian 계열 ( ex : Ubuntu )의 OpenStack 자동화 설치 툴   DevStack 설치   Update Ubuntu System  $ sudo apt -y update$ sudo apt -y upgrade$ sudo apt -y dist-upgrade# Ubuntu의 시스템 및 패키지를 업데이트 합니다.$ sudo init 6# 시스템을 재시작합니다.    Add Stack User  $ sudo useradd -s /bin/bash -d /opt/stack -m stack# devstack 설치를 위해 stack 유저를 생성합니다.</description>
-    </item>
-    
-    <item>
-      <title>Packstack</title>
-      <link>https://mung0001.github.io/docs/openstack/openstacktraining/packstack/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/packstack/</guid>
-      <description>Packstack Stein 설치  Packstack   Redhat 계열 ( ex : CentOS )의 OpenStack 자동화 설치 툴     Packstack stain 설치   기본적으로 PackStack은 올인원 or 다중노드로 구성할 수 있으며, 여기서는 올인원으로 설치를 진행하며, 다중노드에 대한 설정은 추가하도록 하겠습니다.   설치사양     OS CPU RAM DISK     CenOS7 4/ 2 10240 100G      만약 다중 노드에 경우 소스를 분산시키고 각 노드에 설정을 추가합니다.</description>
     </item>
     
   </channel>
