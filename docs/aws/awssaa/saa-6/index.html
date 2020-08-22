@@ -9,7 +9,7 @@
   어떻게 데이터르 보호하맂 결정한다.
          AWS 리소스는 기업의 소중한 자산이므로 엄격하게 보호돼야 한다.
   그렇다고 관리자와 고객조차 액세스 할 수 없을 정도로 보안 수준을 높일 수도 없다.
-  노은 보안 수준을 유지하면서 관리자와 고객의 액세스는 허용할 수 있는 완벽한 절충점이 IAM이다.">
+  높은 보안 수준을 유지하면서 관리자와 고객의 액세스는 허용할 수 있는 완벽한 절충점이 IAM이다.">
 
 
 
@@ -19,7 +19,7 @@
   어떻게 데이터르 보호하맂 결정한다.
          AWS 리소스는 기업의 소중한 자산이므로 엄격하게 보호돼야 한다.
   그렇다고 관리자와 고객조차 액세스 할 수 없을 정도로 보안 수준을 높일 수도 없다.
-  노은 보안 수준을 유지하면서 관리자와 고객의 액세스는 허용할 수 있는 완벽한 절충점이 IAM이다." />
+  높은 보안 수준을 유지하면서 관리자와 고객의 액세스는 허용할 수 있는 완벽한 절충점이 IAM이다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/aws/awssaa/saa-6/" />
 
@@ -27,7 +27,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.a1deb2bd8694513beae0b8a0119c13826dc51968efaf3111143dd3794aeac29e.js" integrity="sha256-od6yvYaUUTvq4LigEZwTgm3FGWjvrzERFD3TeUrqwp4="></script>
+<script defer src="/en.search.min.0f3ebbd0039e090d80c802e1e1965a1e20ade12bca248f38d2c22b1f21b0861f.js" integrity="sha256-Dz670AOeCQ2AyALh4ZZaHiCt4SvKJI840sIrHyGwhh8="></script>
 <!--
 
 -->
@@ -120,7 +120,7 @@
     
 
   
-  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS Docs</a>
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
   
 
 
@@ -374,7 +374,7 @@
     
 
   
-  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure Docs</a>
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
   
 
 
@@ -449,7 +449,7 @@
     
 
   
-  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP Docs</a>
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
   
 
 
@@ -524,7 +524,7 @@
     
 
   
-  <a href="/docs/ncp/navercloudplatform/" class="collapsed ">NCP Docs</a>
+  <a href="/docs/ncp/navercloudplatform/" class="collapsed ">NCP docs</a>
   
 
 
@@ -674,7 +674,7 @@
     
 
   
-  <a href="/docs/docker/docker/" class="collapsed ">Docker</a>
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
   
 
 
@@ -1332,7 +1332,7 @@
 <p><strong>그렇다고 관리자와 고객조차 액세스 할 수 없을 정도로 보안 수준을 높일 수도 없다.</strong></p>
 </li>
 <li>
-<p><strong>노은 보안 수준을 유지하면서 관리자와 고객의 액세스는 허용할 수 있는 완벽한 절충점이 IAM이다.</strong></p>
+<p><strong>높은 보안 수준을 유지하면서 관리자와 고객의 액세스는 허용할 수 있는 완벽한 절충점이 IAM이다.</strong></p>
 </li>
 <li>
 <p><strong>IAM은 사용자의 요청을 인증 (Authentification),해서 정당하게 사용하는 것을 확인하고 권한 부여 (Authorization)로 필요한 만큼 정확하게 액세스 할 수 있게 할 수 있다.</strong></p>
@@ -1374,7 +1374,27 @@
 <h1 id="heading-6"></h1>
 <ul>
 <li>
+<p><strong>새 AWS 계정을 만들면 하나의 자격 증명이 같이 만들어지며, 이 자격 증명은 루트 사용자이다.</strong></p>
+</li>
+<li>
+<p><strong>루트는 기본적으로 계정에 연결된 서비스와 리소스 전체에 완전한 권한을 가지고 있으며, 오직 루트 사용자만이 모든 서비스에 완벽하게 액세스 할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>루트의 모든 권한을 가지고 있는 사용자는 해커에 공격에 매우 위험하며, 이 경우 계정 전체가 위험에 빠질 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>AWS는 보안 취약점 노출을 줄이기 위해 루트 계정을 철저하게 보호하고 일상적 작업에 필요한 구체적 권한을 다른 사용자에게 위임하는 것을 제안한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-7"></h1>
+<p> </p>
+<ul>
+<li><strong>IAM 정책</strong>
+<ul>
+<li>
 <hr>
+</li>
+</ul>
 </li>
 </ul>
 </article>
