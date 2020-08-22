@@ -40,6 +40,16 @@
     </item>
     
     <item>
+      <title>Docker 기본 명령어</title>
+      <link>https://mung0001.github.io/docs/docker/docker/docker-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/docker/docker/docker-4/</guid>
+      <description>Doker 기본 명령어   docker 명령어의 기본 형식 $ docker + &amp;lt; 명령어 &amp;gt;$ sudo usermod -aG docker ${USER}$ sudo service docker restart# user을 docker 그룹에 넣음 항상 root 권한으로 실행     Docker search 명령으로 이미지 검색 $ sudo docker search &amp;lt; 이미지 이름 &amp;gt;  보통 ubuntu, centos, redis 등 os나 프로그램 이름을 가진 이미지가 공식 이미지
+  나머지는 사용자들이 만들어서 공개한 이미지</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://mung0001.github.io/docs/docker/docker/base/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

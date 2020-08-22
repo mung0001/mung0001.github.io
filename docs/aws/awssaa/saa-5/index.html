@@ -27,7 +27,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.7d2a60549546973295be10cee0e8184998b489a7b7703e5233dd3a912789bc8e.js" integrity="sha256-fSpgVJVGlzKVvhDO4OgYSZi0iae3cD5SM906kSeJvI4="></script>
+<script defer src="/en.search.min.5f48e84fca7345bc4c54f3957f3c6100637bbfb3d5dba4fdfff36e162cdc0a19.js" integrity="sha256-X0joT8pzRbxMVPOVfzxhAGN7v7PV26T9//NuFizcChk="></script>
 <!--
 
 -->
@@ -1437,6 +1437,18 @@
       </ul>
     </li>
   </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#요약"><strong>요약</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#시험핵심"><strong>시험핵심</strong></a></li>
+  </ul>
 </nav>
 
 
@@ -2505,11 +2517,300 @@
 <li><strong>처리용량</strong>
 <ul>
 <li>
-<hr>
+<p><strong>테이블을 만들 때 애플리테이션에 필요한 초당 읽기 및 쓰기 횟수를 지정해야 하며, 이를 프로비저닝된 처리량이라 한다.</strong></p>
+</li>
+<li>
+<p><strong>DynamoDB는 테이블을을 만들 때 지정한 읽기 용량 단위 (Read Capacity Unitss : RCU) 및 쓰기 용량 단위 (Write Capacity Units : WCU) 갯수로 파티션을 예약한다.</strong></p>
+</li>
+<li>
+<p><strong>최대 4KB 크기의 항목을 기준으로 할 때, 1개의 RCU는 1개의 강력한 일관된 초당읽리를 제공하며, 일관된 읽기를 매초 8KB를 읽으려면 2개의 RCU가 필요하다.</strong></p>
+</li>
+<li>
+<p><strong>1개의 RCU는 초당 2개의 최종적 일관된 읽기를 제공하며, 최종적 일관된 읽기를 매초 8KB 항목을 읽으려면 1개의 RCU만 있으면 된다.</strong></p>
+</li>
+<li>
+<p><strong>데이터 쓰기의 경우, 1개의 WCU는 최대 1KB 크기의 항목 1개 쓰기를 제공하며, 1KB 미만인 항목을 초당 100개 쓰기 해야 한다면, 100개 WCU가 필요하다. 2KB 항목을 초당 10개 쓰기 위해서는 20개의 WCU가 필요하다.</strong></p>
+</li>
+<li>
+<p><strong>DynamoDB가 제공하는 최대 처리 용량은 사용자가 지정하며, 이를 초과하면 DynamoDB요청을 차단하고, &lsquo;HTTP 400(bad request)&rsquo; 오류를 발생시킬 수 있다. AWS SDK는 조정 후 요청 재시도 기능을 지원하므로, 요청을 조정해서 애플리케이션이 데이터를 읽거나 쓰는 것을 막을 수는 있지만, 애플리케이션의 반응 속도는 느려지게 된다.</strong></p>
 </li>
 </ul>
 </li>
 </ul>
+<h1 id="heading-86"></h1>
+<p> </p>
+<ul>
+<li><strong>Auto Scaling</strong>
+<ul>
+<li>
+<p><strong>테이블에 얼마만큼 처리량을 프로비저닝해야 할지 정확하지 않거나 시간에 따라 처리량의 요구가 달라질 것으로 예상할 때, Auto Scaling을 구성해서 정해 놓은 임계치에 가깝게 도달하면 자동으로 프로비저닝된 처리량을 증가하게 할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>Auto Scaling을 구성할 때 최소/ 최대 RCU와 WCU를 지정하고, 목표 사용률을 지정한다.</strong></p>
+</li>
+<li>
+<p><strong>DynamoDB는 RCU와 WCU를 자동으로 조정해서 이 목표 사용률에 따라 사용률을 유지한다.</strong></p>
+</li>
+<li>
+<p><strong>예를 들어 70%, 최소 10 RCU, 최대 50 RCU로 설정하는 경우, 21 RCU를 소비할 때 Auto Scaling은 프로비저닝된 용량을 약 30 RCU로 조정한다.</strong></p>
+</li>
+<li>
+<p><strong>소비자가 14 RCU로 떨어지면 Auto Scaling은 프로비저닝된 처리량을 20 RCU로 축소한다.</strong></p>
+</li>
+<li>
+<p><strong>적절한 사용률을 설정하면 작업에 균형을 이룰 수 있으나, 사용률을 높게 설정할수록 프로비정된 용량을 초과할 가능성은 커지고, 요청이 제한될 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>반면 사용률을 너무 낮게 설정하면 필요하지 않은 용량에 비용을 지급하게 된다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-87"></h1>
+<p> </p>
+<ul>
+<li><strong>예약 용령</strong>
+<ul>
+<li><strong>100 이상의 WCU나 RCU가 필요할 때 예약 처리 용량을 구매해서 비용을 절약할 수 있다. RCU와 WCU를 별도로 예약해야 하며, 각각 100,000유닛으로 제한되 있으며, 1년이나 3년 사용 기간을 약정하고 선불로 지급한다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-88"></h1>
+<p> </p>
+<ul>
+<li><strong>데이터 읽기</strong>
+<ul>
+<li>
+<p><strong>DynamoDB는 테이블에서 두 가지 방식으로 데이터를 읽는다.</strong></p>
+</li>
+<li>
+<p><strong>스캔은 모든 테이블 항목을 나열하며, 읽기 집약적 작업이므로 프로비저닝된 용량 단위를 모두 사용할 가능성이 있다.</strong></p>
+</li>
+<li>
+<p><strong>쿼리는 파티션 키값을 기반으로 항목을 반환하며, 쿼리를 수행할 때 검색하는 파티션의 키의 값은 항목의 갑과 정확히 일치해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>테이블에 정렬 키가 포함되어 있으면, 정렬 키로도 쿼리할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>정렬 키를 사용하면 정확한 값, 키보다 크거나 작은 값, 값의 범위, 값의 시작 등으로 더 유연하게 검색을 수행할 수 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-89"></h1>
+<p> </p>
+<ul>
+<li><strong>보조 인덱스</strong>
+<ul>
+<li>
+<p><strong>보조 인덱스는 DynamoDB에서 데이터를 쿼리할 때 발생하는 두 가지 문제를 해결한다.</strong></p>
+</li>
+<li>
+<p><strong>사용자는 특정 항목을 쿼리할 때 파티션 키를 정확하게 지정해야한 한다.</strong></p>
+</li>
+<li>
+<p><strong>보조 인덱스를 만들 때 기본 테이블에서 인덱스로 복사할 속성을 선택할 수 있는 데, 이를 프로젝션된 속성 (Projected Attributes)라고 한다.</strong></p>
+</li>
+<li>
+<p><strong>보조 인덱스는 항상 기본 테이블의 파티션 키와 정렬 키 속성을 포함하며, 파티션 키와 정렬 키, 키 값만은 선택해서 복사하거나 키 값에 다른 속성을 추가해서 필요한 방식으로 데이터를 추출할 수 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-90"></h1>
+<p> </p>
+<ul>
+<li><strong>글로벌 보조 인덱스</strong>
+<ul>
+<li>
+<p><strong>테이블을 만든 후에 언제든지 글로벌 보조 인덱스 (Global Secondary Index)를 만들 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>글로벌 보조 인덱스에서 파티션 키와 해시 키는 기본 테이블과 다를 수 있지만, 기본 키 선택과 같은 규칙이 여전히 적용된다.</strong></p>
+</li>
+<li>
+<p><strong>인덱스의 기본 키는 고유하게 유지해야 하고, 복합 기본 키를 사용하면 파티션 키에서 같은 값을 가진 항목이 같은 파티션에 저장된다.</strong></p>
+</li>
+<li>
+<p><strong>글로벌 보조 인덱스에서 읽을 때는 항상 읽기 일관성이 유지되며, 항모을 테이블에 추가하더라도 즉시 보조 인덱스로 복사되지 않을 수 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-91"></h1>
+<p> </p>
+<ul>
+<li><strong>로컬 보조 인덱스</strong>
+<ul>
+<li>
+<p><strong>로컬 보조 인덱스 (Local Secondary Index : LSI)는 기본 테이블과 동시에 만들어져야 하며 일단 만들면 삭제할 수 없다.</strong></p>
+</li>
+<li>
+<p><strong>파티션 키는 항상 기본 테이블과 같아야 하지만, 정령 키는 다룰 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>예를 들어 기본 테이블에 LastName이 파티션 키이고 FirstName이 정렬 키이면, 파티션 키를 LastName이고 정렬 키를 BirthYear로 하는 로컬 보조 인덱스를 만들 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>로컬 보조 인덱스의 읽기 시간을 얼마에 지정하냐에 ㄸ라 강력한 일관성 또는 최종적 일관성이 될 수 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-92"></h1>
+<p> </p>
+<h1 id="heading-93"></h1>
+<h3 id="요약"><strong>요약</strong></h3>
+<h1 id="heading-94"></h1>
+<ul>
+<li>
+<p><strong>관계형 데이터베이스 또는 비관계형 데이터베이스의 사용 여부는 애플리케이션의 속성에 달려 있다.</strong></p>
+</li>
+<li>
+<p><strong>관계형 데이터베이스는 오랫동안 사용되어 왔으며, 많은 애플리케이션 개발자들은 기본적으로 관게형 데이터베이스에 맞게 데이터를 설계한다.</strong></p>
+</li>
+<li>
+<p><strong>애플리케이션은 특정 데이터베이스의 SDK를 사용해 데이터베이스와 상호 작용하므로 애플리케이션의 요구에 따라 특정 데이터베이스 엔진이 필요하게 된다.</strong></p>
+</li>
+<li>
+<p><strong>이러한 이유로 AWS RDS는 가장 널리 사용되는 6개 데이터베이스 엔진과 광범위한 버전 호환성을 지원함, 이는 애플리케이션을 변경하지 않고 기존 데이터베이스를 가져와서 RDS로 옮길 수 있도록 하려는 것이다.</strong></p>
+</li>
+<li>
+<p><strong>비관계형 데이터베이스는 최근에 창안되었으며, DynamoDBsms Amazon이 소유권을 가지고 있는 비관계형 데이터베이스 서비스이다.</strong></p>
+</li>
+<li>
+<p><strong>보통 관계형 데이터베이스용으로 설계된 애플리케이션과는 달리 온프레미스에서 배포해 사용하던 비관게형 데이터베이스용 애플리케이션은 대부분 코드를 변겨해야 DynamoDB로 이식할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>따라서 DynamoDB를 사용하는 애플리케이션을 개발하거나 재개발할 때 개발자에게 데이터베이스를 설계하는 법을 자문할 수도 있다.</strong></p>
+</li>
+<li>
+<p><strong>이 경우 파티션 키, 정렬 키, 데이터 형식을 선택하는 방법과 애플리에키션 성능 요구를 충족하기 위해 처리 용량을 할당하는 법을 이해하는 것이 중요하다.</strong></p>
+</li>
+<li>
+<p><strong>AWS 아키텍트는 적절한 데이터베이스와 AWS 서비스를 사용해서 성능 및 가용성 요구사항을 결정하고 올바르게 구현해야 한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-95"></h1>
+<p> </p>
+<h1 id="heading-96"></h1>
+<h2 id="시험핵심"><strong>시험핵심</strong></h2>
+<h1 id="heading-97"></h1>
+<ul>
+<li><strong>관계형 데이터베이스와 비관계형 데이터베이스의 차이점을 이해한다.</strong>
+<ul>
+<li>
+<p><strong>관계형 데이터베이스에서는 테이블을 생성하기 전에 속성을 정해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>테이블에 입력하는 모든 데이터는 사전에 정한 속성과 부합해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>데이터를 읽고 쓰는 데 SQL을 사용하므로 이를 SQL 데이터베이스라고도 한다.</strong></p>
+</li>
+<li>
+<p><strong>비 관계형 데이터베이스에서 테이블을 만들 때 요구하는 것은 기본 키 속성뿐이다.</strong></p>
+</li>
+<li>
+<p><strong>테이블의 모든 항목은 기본 키를 포함해야 한다는 것만 제외하면 속성을 다양하게 가질 수 있다는 유연성도 있다.</strong></p>
+</li>
+<li>
+<p><strong>비관계형 데이터베이스 또는 NoSQL 데이터베이스는 비정형 데이터를 저장한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-98"></h1>
+<p> </p>
+<ul>
+<li><strong>RDS가 지원하는 여러 데이터베이스 엔진을 파악하자</strong>
+<ul>
+<li>
+<p><strong>RDS는 MySQL, MariaDB, Oracle, PostgreSQL, Amazon Aurora, Microsoft SQL Server와 같이 많이 사용되는 대부분 데이터베이스 엔진을 지원한다.</strong></p>
+</li>
+<li>
+<p><strong>기본 보유 라이센스 사용과 라이센스 포함된 모델의 차이점을 이해해야 하며, 어떤 데이터베이스 엔진이 어떤 라이센스 모델을 지원하는 지 파악해야 한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-99"></h1>
+<p> </p>
+<ul>
+<li><strong>특정 스토리지 요구 사항에 맞는 인스턴스 클래스와 스토리지 유형으르 선택할 수 있어야 한다.</strong>
+<ul>
+<li>
+<p><strong>메모리와 스토리지가 관계형 데이터베이스의 제약 요인이 되는 경향이 있으므로 데이터베이스의 성능 요구 사항을 기반으로 올바른 인스턴스 클래스와 스토리지 유형을 선택하는 방법을 알고 있어야 한다.</strong></p>
+</li>
+<li>
+<p><strong>표준, 메모리 최적화, 순간 확장 가능의 세 가지 인스턴스 클래스를 파악해야 하며, 또한 세 클래스의 범용 SSD(gp2), 프로비저닝된 IOPS SSD(io1), 마그네틱 세 가지 스토리지 유형과 어떤 관련이 있는지 알아야 한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-100"></h1>
+<p> </p>
+<ul>
+<li><strong>다른 AZ와 읽기 전용 복제본의 차이점을 이해한다.</strong>
+<ul>
+<li>
+<p><strong>다중 AZ와 읽기 전용 복제본 모두 추가 데이터베이스 인스턴스를 만든다는 점에서는 연관되지만, 몇 가지 주요 차이점이 존재한다.</strong></p>
+</li>
+<li>
+<p><strong>읽기 전용 복제보은 쿼리를 처리할 수 있지만, 다중 AZ 배포에서 예비 인스턴스는 불가능하다.</strong></p>
+</li>
+<li>
+<p><strong>마스터 인스턴스는 읽기 전용 복제본에 비동기로 복제하지만, 다중 AZ 구성에서는 기본 인스턴스에서 예비 인스턴스로 동기로 데이터 복제가 이루어 진다.</strong></p>
+</li>
+<li>
+<p><strong>Auroa 복제본은 작동 방식과 Aurora 다중 AZ가 다른 데이터베이스 엔진의 AZ와 어떻게 다른지 이해해야 한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-101"></h1>
+<p> </p>
+<ul>
+<li><strong>DynamoDB 테이블에 적합한 기본 키 형식을 결정할 수 있어야 한다.</strong>
+<ul>
+<li>
+<p><strong>DynamoDB 테이블은 두 가지 종류의 기본 키를 제공한다.</strong></p>
+</li>
+<li>
+<p><strong>단순 기본 키 파티션 키로만 구성되며 단일 값을 가지고 있다. DynamoDB는 파티션 키의 값에 따라 항목을 파티션에 분산시킨다.</strong></p>
+</li>
+<li>
+<p><strong>단순 기본 키를 사용할 때 파티션 키는 테이블 내에서 고유해야 하며, 복합 기본 키는 파티션 키와 정렬 키로 구성된다.</strong></p>
+</li>
+<li>
+<p><strong>파티션 키는 고유할 필요는 없지만, 파티션 키와 정렬 키의 조합은 고유해야한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-102"></h1>
+<p> </p>
+<ul>
+<li><strong>DynamoDB 처리 용량이 어떻게 작동하는지 파악한다.</strong>
+<ul>
+<li>
+<p><strong>테이블을 생성할 때 쓰기 용량 단위와 읽기 용량 단위로 처리용량을 지저해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>다음 두 가지의 따라 읽기 작업이 읽기 용량 단위를 얼마나 소모할지 결정된다.</strong></p>
+<ul>
+<li><strong>읽기 작업이 강력하게 읽관적인지 최종적으로 일관적인지와 1초에 읽을 데이터의 용량이다.</strong></li>
+<li><strong>최대 4KB 크기 항모글 강력한 일관된 읽기 작업을 할 때 하나의 읽기 용량을 단위로 사용한다.</strong></li>
+<li><strong>최종적으로 일관된 읽기작업은 그 절반을 소비한다.</strong></li>
+<li><strong>쓰기 용량 단위 하나를 사용해 쓰기 작업을 하면 초당 하나의 1KB 항목을 쓸 수 있다.</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-103"></h1>
+<p> </p>
 </article>
  
       
@@ -2697,6 +2998,18 @@
         <li><a href="#dynamodb"><strong>DynamoDB</strong></a></li>
       </ul>
     </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#요약"><strong>요약</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#시험핵심"><strong>시험핵심</strong></a></li>
   </ul>
 </nav>
 

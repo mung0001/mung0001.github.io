@@ -68,8 +68,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/aws/awssaa/saa-6/</guid>
-      <description>6장 인증과 권한 부여 - AWS Identity and Access Management  ****       ~
-    </description>
+      <description>6장 인증과 권한 부여 - AWS Identity and Access Management   6장의 목표   안전한 애플리케이션 및 아키텍처 설명   어떻게 애플리케이션 티어를 보호할지 결정한다.
+  어떻게 데이터르 보호하맂 결정한다.
+         AWS 리소스는 기업의 소중한 자산이므로 엄격하게 보호돼야 한다.
+  그렇다고 관리자와 고객조차 액세스 할 수 없을 정도로 보안 수준을 높일 수도 없다.
+  노은 보안 수준을 유지하면서 관리자와 고객의 액세스는 허용할 수 있는 완벽한 절충점이 IAM이다.</description>
     </item>
     
     <item>
