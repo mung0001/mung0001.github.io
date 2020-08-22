@@ -388,6 +388,17 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>Dockerfile</title>
+      <link>https://mung0001.github.io/docs/docker/docker/docker-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/docker/docker/docker-5/</guid>
+      <description>Dockerfile   Dockerfile      도커는 이미지를 만들기 위해 Dockerfile 이라는 이미지 빌드용 DSL (Domain Specific Language 파일을 사용합니다.)
+  DSL은 단순한 텍스트 파일로 일반적으로 소스와 함께 관리됩니다.
+  $ sudo docker build &amp;lt;OPTIONS&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;URL&amp;gt;$ sudo docker build -t Mydocker .   Dockerfile 내부 살펴보기   하단 외의 추가적으로 궁금한 사항들은 Docker docs를 참조해주세요. Dockerfile 예시  # 1. ubuntu 설치 (패키지 업데이트 + 만든사람 표시)FROM ubuntu:18.</description>
+    </item>
+    
+    <item>
       <title>Neutron</title>
       <link>https://mung0001.github.io/docs/openstack/openstack/neutron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -446,6 +457,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>Docker Compose</title>
+      <link>https://mung0001.github.io/docs/docker/docker/docker-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/docker/docker/docker-6/</guid>
+      <description>Docker Compose    도커는 복잡한 설정을 쉽게 관리하기 위해 YAML방식의 설정파일을 이용한 Docker Compose라는 툴을 제공합니다.   Docker compose 설치 $ curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose$ chmod +x /usr/local/bin/docker-compose# docker-compose downloaddocker-compose version 1.9.0, build 2585387docker-py version: 1.10.6CPython version: 2.7.9OpenSSL version: OpenSSL 1.0.1t 3 May 2016$ docker-compose version# 확인   Docker Compose로 wordpress 생성 $ vi docker-compose.</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://mung0001.github.io/docs/programing/shell/shell-7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -489,6 +509,18 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/openstack/openstack/ceilometer/</guid>
       <description>리소스를 사용량과 부하를 관리하는 서비스 : Ceilometer   리소스를 사용량과 부하를 관리하는 서비스 : Ceilometer    Ceilometer은 각 서비스들의 예상 부하에 따라 추가 작업과 노드를 관리하는 역할을 수행 클라우드에서 배포된 자원의 사용량과 성능을 측정해 사용자가 자원 상태를 모니터링 할 수 있는 기능을 제공 Ceilomete는 리버티 버전에서 기존에 알람 서비스를 하던 부분을 aodh로 분리      핵심 서비스 역할     Polling agent OpenStack 서비스를 폴링하고 미터를 빌드하도록 설계된 데몬 프로세스   Notification agent 메시지 큐에서 알림을 듣고 이벤트 및 샘플로 변환하며 파이프 라인 조치를 적용하도록 설계된 데몬 프로세스       Ceilometer로 표준화 및 수집 된 데이터는 다양한 대상으로 전송 Gnocchi는 이러한 스토리지 및 쿼리를 최적화하기 위해 시계열 형식으로 측정 데이터를 캡처하도록 개발 Aodh는 사용자 정의 규칙이 깨졋을 때 경고를 보낼 수 있는 경보 서비스 Ceilomter은 이와 같이 리소스를 감시 및 예상하여 다른 작업을 수행할 수 있도록 하는 서비스를 의미     데이터 수집    위의 그림과 같이 Polling agents에서 각 서비스들의 API의 리소스를 읽어 데이터를 수집 Notification agents는 Polling agents에서 수집한 데이터들을 토대로 Ceilomter 서비스 혹은 Events로 변환하는 역할을 수행     데이터 처리    수집된 데이터를 토대로 Notification bus를 통해 엔드 포인트로 재분배하여 이벤트 및 샘플로 처리하느 역할을 수행     데이터 요청    데이터의 요청은 수집된 자료들을 토대로 서로 데이터를 주고 받으며, Polling agents라는 클라우드 컨트롤러에서 처리되며, 여러 플러그인을 사용하여 데이터를 통신합니다.</description>
+    </item>
+    
+    <item>
+      <title>Docker Swarm</title>
+      <link>https://mung0001.github.io/docs/docker/docker/docker-7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/docker/docker/docker-7/</guid>
+      <description>Docker Swarm     Swarm은 Docker와 별개로 개발되었지만 Docker 1.12 버전부터 Swarm mode라는 이름으로 합쳐졌습니다.
+  도커에 모든 게 내장되어 다른 툴을 설치할 필요가 없고 도커 명령어와 compose를 그대로 사용할 수 있어 다른 툴에 비해 압도적으로 쉬우며 편리합니다.
+  기능이 단순하고 필요한 것만 구현되어 있어 세부적인 컨트롤의 난이도는 높은 편입니다.
+     Docker Swarm 용어절리   Swarm   정식 명칭은 도커 1.</description>
     </item>
     
     <item>
@@ -1043,7 +1075,43 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/docker/docker/base/</guid>
-      <description>****    ****          </description>
+      <description>****        </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/docker/docker/docker-10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/docker/docker/docker-10/</guid>
+      <description>****        </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/docker/docker/docker-11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/docker/docker/docker-11/</guid>
+      <description>****        </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/docker/docker/docker-8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/docker/docker/docker-8/</guid>
+      <description>****        </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/docker/docker/docker-9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/docker/docker/docker-9/</guid>
+      <description>****        </description>
     </item>
     
     <item>
