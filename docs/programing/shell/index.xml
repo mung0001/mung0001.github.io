@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Shell on 뭉게뭉게</title>
+    <title>Shell Script on 뭉게뭉게</title>
     <link>https://mung0001.github.io/docs/programing/shell/</link>
-    <description>Recent content in Shell on 뭉게뭉게</description>
+    <description>Recent content in Shell Script on 뭉게뭉게</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
     
@@ -11,76 +11,75 @@
     
     
     <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell-2/</guid>
-      <description>****    ****         #</description>
-    </item>
-    
-    <item>
       <title>Shell Script</title>
       <link>https://mung0001.github.io/docs/programing/shell/shell-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/programing/shell/shell-1/</guid>
-      <description>Shell Script    Shell Script의 개요   UNIX/ Linux 소개 및 특징   UNIX   1969년 AT&amp;amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다
+      <description>Shell Programming    Shell Script의 개요   UNIX/ Linux 소개 및 특징   UNIX   1969년 AT&amp;amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다
   벨연구소는 대학과 연구기관에 UNIX를 활용할 수 있도록 라이선스를 제공하였으며, 버클리 대학교에서는 UNIX에 네트워크 프로토콜인 TCP/IP 등 다양한 기능을 보강하여 BSD 배포본을 제작하고 이후 파생되는 많은 UNIX에 영향을 끼쳤다.</description>
     </item>
     
     <item>
-      <title></title>
+      <title>UNIX/ Linux 개념과 명령어</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell-2/</guid>
+      <description>Shell Programming  UNIX/ Linux 기본 명령어와 개념  Redirection &amp;amp; Pipes  $ &amp;lt;File Descriptor&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;Redirection&amp;gt;$ &amp;lt;File Descriptor&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;Redirection&amp;gt; &amp;lt;Pipe&amp;gt; &amp;lt;File Descriptor&amp;gt; ...ex) $ cat /log/var/message | grep ERR# cat = &amp;lt;File Descripotr&amp;gt;# /log/var/message = &amp;lt;PATH&amp;gt;# | = &amp;lt;Redirection&amp;gt;  File Descriptor   Process가 File이나 Device를 access 하기 위해 사용
+  Standard File Descriptor
+  stdin(standard input) : 표준 입력 (예시 : 키보드)</description>
+    </item>
+    
+    <item>
+      <title>Shell Script 문법</title>
       <link>https://mung0001.github.io/docs/programing/shell/shell-3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/programing/shell/shell-3/</guid>
-      <description>****    ****         #</description>
+      <description>Shell Programming    Shell 문법  Shell 변수    Shell 에서 변수는 사용할 때 선언
+  변수에 초기 값을 대입할 때 변수를 만들게 된다.
+  모든 변수는 문자열로 간주
+  숫자 값을 가지는 경우에도 문자열로 간주
+  변수는 대소문자가 구별 (Linux 시스템의 특성)
+  변수에 값이 부여될 때를 제외하고, 변수를 사용할 경우 변수 앞에 &amp;lsquo;$&#39;의 표시를 붙여야 한다.
+  변수에 부여된 값은 echo 명령을 통해 확인 가능</description>
     </item>
     
     <item>
-      <title></title>
+      <title>UNIX/ Linux 시스템 관리</title>
       <link>https://mung0001.github.io/docs/programing/shell/shell-4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/programing/shell/shell-4/</guid>
-      <description>****    ****         #</description>
+      <description>Shell Programming    UNIX/ Linux 시스템 관리         #</description>
     </item>
     
     <item>
-      <title></title>
+      <title>Shell Script System Management</title>
       <link>https://mung0001.github.io/docs/programing/shell/shell-5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/programing/shell/shell-5/</guid>
-      <description>****    ****         #</description>
+      <description>Shell Programming    Shell System Management         #</description>
     </item>
     
     <item>
-      <title></title>
+      <title>Shell Script System Security</title>
       <link>https://mung0001.github.io/docs/programing/shell/shell-6/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/programing/shell/shell-6/</guid>
-      <description>****    ****         #</description>
+      <description>Shell Programming    Shell Script System Security         #</description>
     </item>
     
     <item>
-      <title></title>
+      <title>Shell Customizing</title>
       <link>https://mung0001.github.io/docs/programing/shell/shell-7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/programing/shell/shell-7/</guid>
-      <description>****    ****         #</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell-8/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell-8/</guid>
-      <description>****    ****         #</description>
+      <description>Shell Programming    Customizing         #</description>
     </item>
     
   </channel>
