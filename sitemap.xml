@@ -80,6 +80,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/openstack/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/programing/python/</loc>
   </url>
   
@@ -456,10 +460,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-stein/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-01/</loc>
   </url>
   
@@ -528,7 +528,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/devstack/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-stein/</loc>
   </url>
   
   <url>
@@ -537,10 +537,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-12/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/packstack/</loc>
   </url>
   
   <url>
@@ -560,7 +556,15 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/devstack/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/aws/awstraining/owncloud/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/packstack/</loc>
   </url>
   
   <url>
@@ -870,14 +874,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/system/lm/lm-0/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/openstack/openstack/%EA%B0%80%EC%83%81%ED%99%94/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/openstack/openstack/openstack/</loc>
   </url>
   
   <url>
