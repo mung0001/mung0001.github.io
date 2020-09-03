@@ -5,13 +5,19 @@
   <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="데이터 모델링   데이터 모델링의 이해   데이터 모델링의 중요성 및 유의점  중복 : 같은 시간 같은 데이터 제공 비유연성 : 사소한 업무변화에 데이터 모델이 수시로 변경되면 안됨 비일관성 : 신용 상태에 대한 갱신 없이 고객의 납부 이력 정보 갱신 안됨       데이터 모델링  개념적, 논리적, 물리적 데이터 모델링       데이터 독립성 요소  외부 스키마 : 개개 사용자가 보는 개인적 DB 스키마 개념 스키마 : 모든 사용자 관점을 통합한 전체 DB 내부 스키마 : 물리적 장치에서 데이터가 실제적 저장       데이터 독립성  논리적 독립성 : 개념 스키마가 변경되어도 외부 스키마에 영향 x 물리적 독립성 : 내부스키마가 변경되어도 외부/개념 스키마는 영향 x Mapping(사상) : 상호 독립적인 개념을 연결시켜주는 다리        데이터 모델링의 3요소">
+<meta name="description" content="데이터 모델링   데이터 모델링의 이해   데이터 모델링이란 현실에 존재하는 것을 데이터베이스에 사용할 수 있도록 모델링하는 과정     데이터 모델링의 중요성 및 유의점   중복 : 같은 시간 같은 데이터 제공
+  비유연성 : 사소한 업무변화에 데이터 모델이 수시로 변경되면 안됨
+  비일관성 : 신용 상태에 대한 갱신 없이 고객의 납부 이력 정보 갱신 안됨
+        데이터 모델링">
 
 
 
 <meta name="robots" content="index,follow">
 <link rel="canonical" href=/docs/database/sqld/sqld-1/><meta property="og:title" content="SQLD : 데이터 모델링" />
-<meta property="og:description" content="데이터 모델링   데이터 모델링의 이해   데이터 모델링의 중요성 및 유의점  중복 : 같은 시간 같은 데이터 제공 비유연성 : 사소한 업무변화에 데이터 모델이 수시로 변경되면 안됨 비일관성 : 신용 상태에 대한 갱신 없이 고객의 납부 이력 정보 갱신 안됨       데이터 모델링  개념적, 논리적, 물리적 데이터 모델링       데이터 독립성 요소  외부 스키마 : 개개 사용자가 보는 개인적 DB 스키마 개념 스키마 : 모든 사용자 관점을 통합한 전체 DB 내부 스키마 : 물리적 장치에서 데이터가 실제적 저장       데이터 독립성  논리적 독립성 : 개념 스키마가 변경되어도 외부 스키마에 영향 x 물리적 독립성 : 내부스키마가 변경되어도 외부/개념 스키마는 영향 x Mapping(사상) : 상호 독립적인 개념을 연결시켜주는 다리        데이터 모델링의 3요소" />
+<meta property="og:description" content="데이터 모델링   데이터 모델링의 이해   데이터 모델링이란 현실에 존재하는 것을 데이터베이스에 사용할 수 있도록 모델링하는 과정     데이터 모델링의 중요성 및 유의점   중복 : 같은 시간 같은 데이터 제공
+  비유연성 : 사소한 업무변화에 데이터 모델이 수시로 변경되면 안됨
+  비일관성 : 신용 상태에 대한 갱신 없이 고객의 납부 이력 정보 갱신 안됨
+        데이터 모델링" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/database/sqld/sqld-1/" />
 
@@ -19,7 +25,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.1a8b3f7da337bc243ab826bc6567ba0fc43962cc791d9ac1fbddd8e2fa2a2297.js" integrity="sha256-Gos/faM3vCQ6uCa8ZWe6D8Q5Ysx5HZrB&#43;93Y4voqIpc="></script>
+<script defer src="/en.search.min.2e94daf79e4cd48391c2d6583d41f52c6f70fc380ea47332f205741cc7d592f7.js" integrity="sha256-LpTa955M1IORwtZYPUH1LG9w/DgOpHMy8gV0HMfVkvc="></script>
 <!--
 
 -->
@@ -1007,7 +1013,7 @@
         <li >
 
   
-  <a href="/docs/database/sqld/sqld-2/" class="">SQLD</a>
+  <a href="/docs/database/sqld/sqld-2/" class="">SQLD : SQL 기본</a>
   
 
 </li>
@@ -1202,42 +1208,49 @@
 <h3 id="데이터-모델링의-이해"><strong>데이터 모델링의 이해</strong></h3>
 <h1 id="heading-1"></h1>
 <ul>
-<li><strong>데이터 모델링의 중요성 및 유의점</strong>
-<ul>
-<li><strong>중복 : 같은 시간 같은 데이터 제공</strong></li>
-<li><strong>비유연성 : 사소한 업무변화에 데이터 모델이 수시로 변경되면 안됨</strong></li>
-<li><strong>비일관성 : 신용 상태에 대한 갱신 없이 고객의 납부 이력 정보 갱신 안됨</strong></li>
-</ul>
-</li>
+<li><strong>데이터 모델링이란 현실에 존재하는 것을 데이터베이스에 사용할 수 있도록 모델링하는 과정</strong></li>
 </ul>
 <h1 id="heading-2"></h1>
 <p> </p>
 <ul>
-<li><strong>데이터 모델링</strong>
+<li><strong>데이터 모델링의 중요성 및 유의점</strong>
 <ul>
-<li><strong>개념적, 논리적, 물리적 데이터 모델링</strong></li>
+<li>
+<p><strong>중복 : 같은 시간 같은 데이터 제공</strong></p>
+</li>
+<li>
+<p><strong>비유연성 : 사소한 업무변화에 데이터 모델이 수시로 변경되면 안됨</strong></p>
+</li>
+<li>
+<p><strong>비일관성 : 신용 상태에 대한 갱신 없이 고객의 납부 이력 정보 갱신 안됨</strong></p>
+</li>
 </ul>
 </li>
 </ul>
 <h1 id="heading-3"></h1>
 <p> </p>
 <ul>
-<li><strong>데이터 독립성 요소</strong>
+<li>
+<p><strong>데이터 모델링</strong></p>
 <ul>
-<li><strong>외부 스키마 : 개개 사용자가 보는 개인적 DB 스키마</strong></li>
-<li><strong>개념 스키마 : 모든 사용자 관점을 통합한 전체 DB</strong></li>
-<li><strong>내부 스키마 : 물리적 장치에서 데이터가 실제적 저장</strong></li>
+<li><strong>개념적, 논리적, 물리적 데이터 모델링</strong></li>
 </ul>
 </li>
 </ul>
 <h1 id="heading-4"></h1>
 <p> </p>
 <ul>
-<li><strong>데이터 독립성</strong>
+<li><strong>데이터 독립성 요소 : 스키마</strong>
 <ul>
-<li><strong>논리적 독립성 : 개념 스키마가 변경되어도 외부 스키마에 영향 x</strong></li>
-<li><strong>물리적 독립성 : 내부스키마가 변경되어도 외부/개념 스키마는 영향 x</strong></li>
-<li><strong>Mapping(사상) : 상호 독립적인 개념을 연결시켜주는 다리</strong></li>
+<li>
+<p><img src="/DB/SQL/SQLD01.png" alt="" /></p>
+</li>
+<li>
+<p><strong>스키마란 데이터베이스의 구조와 제약 조건에 관한 전반적인 명세를 기바술한 메타데이터의 집합</strong></p>
+</li>
+<li>
+<p><strong>스키마는 데이터베이스를 구성하는 개체(Entity), 속성(Attribute), 관계(Relationship) 및 데이터 조작 시 데이터 값들이 갖는 제약 조건 등에 관해 전박적으로 정의</strong></p>
+</li>
 </ul>
 </li>
 </ul>
@@ -1245,98 +1258,113 @@
 <p> </p>
 <ul>
 <li>
-<p><strong>데이터 모델링의 3요소</strong></p>
+<p><strong>사용자의 관점에 따른 스키마의 종류</strong></p>
 <ul>
-<li><strong>어떤 것(Things)</strong></li>
-<li><strong>성격(Attributes)</strong></li>
-<li><strong>관계(Relationships)</strong></li>
-</ul>
+<li>
+<p><strong>외부 스키마 : 개개인 사용자가 보는 개인적 DB 스키마</strong></p>
 </li>
 <li>
-<p><strong>데이터 모델링은 프로젝트에 참여한 모두가 숙지</strong></p>
-<ul>
-<li><strong>엔터티 : 집합</strong></li>
-<li><strong>인스턴스 : 단수</strong></li>
+<p><strong>개념 스키마 : 모든 사용자 관점을 통합한 전체 DB</strong></p>
+</li>
+<li>
+<p><strong>내부 스키마 : 물리적 장치에서 데이터가 실제적 저장</strong></p>
+</li>
 </ul>
 </li>
 </ul>
 <h1 id="heading-6"></h1>
 <p> </p>
 <ul>
-<li><strong>데이터 모델 표기법</strong>
+<li><strong>데이터 독립성</strong>
 <ul>
-<li><strong>1976년 피터첸이 Entity Relationship Model 개발</strong></li>
+<li>
+<p><strong>논리적 독립성 : 개념 스키마가 변경되어도 외부 스키마에 영향 x</strong></p>
+</li>
+<li>
+<p><strong>물리적 독립성 : 내부스키마가 변경되어도 외부/개념 스키마는 영향 x</strong></p>
+</li>
+<li>
+<p><strong>Mapping(사상) : 상호 독립적인 개념을 연결시켜주는 다리</strong></p>
+</li>
 </ul>
 </li>
 </ul>
 <h1 id="heading-7"></h1>
 <p> </p>
 <ul>
-<li><strong>모델링의 특징</strong>
+<li><strong>데이터 모델링의 3요소</strong>
 <ul>
-<li><strong>추상화</strong></li>
-<li><strong>단순화</strong></li>
-<li><strong>정확화</strong></li>
+<li>
+<p><strong>어떤 것(Things)</strong></p>
+</li>
+<li>
+<p><strong>성격(Attributes)</strong></p>
+</li>
+<li>
+<p><strong>관계(Relationships)</strong></p>
+</li>
 </ul>
 </li>
 </ul>
 <h1 id="heading-8"></h1>
 <p> </p>
 <ul>
-<li><strong>Entity Relationship Diagram 작업순서</strong>
-<strong>- 엔터티 그림</strong>
-<strong>- 엔터티 배치</strong>
-<strong>- 엔터티 관계설정</strong>
-<strong>- 관계명 기술</strong>
-<strong>- 관계의 참여도 기술</strong>
-<strong>- 관계필수여부</strong></li>
+<li><strong>데이터 모델링은 프로젝트에 참여한 모두가 숙지</strong>
+<ul>
+<li><strong>엔터티 : 집합</strong></li>
+<li><strong>인스턴스 : 단수</strong></li>
+</ul>
+</li>
 </ul>
 <h1 id="heading-9"></h1>
 <p> </p>
 <ul>
-<li><strong>좋은 데이터 모델의 요소</strong>
-<strong>- 완전성 : 업무에 필요한 모든 데이터가 모델에 정의</strong>
-<strong>- 중복배제 : 하나의 DB내에 동일한 사실은 한번만.</strong>
-<strong>- 업무규칙 : 많은 규칙을 사용자가 공유하도록 제공</strong>
-<strong>- 데이터 재사용 : 데이터가 독립적으로 설계돼야 함</strong>
-<strong>- 의사소통 : 업무규칙은 엔터티,서브타입,속성,관계 등의 형태로 최대한 자세히 표현</strong>
-<strong>- 통합성 : 동일한 데이터는 한 번만 정의, 참조활용</strong></li>
+<li>
+<p><strong>데이터 모델 표기법</strong></p>
+<ul>
+<li><strong>1976년 피터첸이 Entity Relationship Model 개발</strong></li>
+</ul>
+</li>
 </ul>
 <h1 id="heading-10"></h1>
 <p> </p>
 <ul>
-<li><strong>엔터티의 특징</strong>
+<li><strong>모델링의 특징</strong>
 <ul>
-<li><strong>엔터티 : 업무에 필요하고 유용한 정보를 저장하고 관리하기 위한 집합적인 것, 보이지 않는 개념 포함</strong>
-<strong>- 반드시 해당 업무에서 필요하고 관리하고자 함</strong>
-<strong>- 유일한 식별자에 의해 식별 가능</strong>
-<strong>- 두 개 이상의 인스턴스의 집합</strong>
-<strong>- 업무 프로세스에 의해 이용되어야 함</strong>
-<strong>- 반드시 속성이 있어야 함</strong>
-<strong>- 다른 엔터티와 최소 1개 이상의 관계가 있어야 함</strong></li>
+<li>
+<p><strong>추상화</strong></p>
+</li>
+<li>
+<p><strong>단순화</strong></p>
+</li>
+<li>
+<p><strong>정확화</strong></p>
+</li>
 </ul>
 </li>
 </ul>
 <h1 id="heading-11"></h1>
 <p> </p>
 <ul>
-<li><strong>엔터티의 분류</strong>
+<li><strong>Entity Relationship Diagram 작업순서</strong>
 <ul>
 <li>
-<p><strong>유무형에 따른 분류 : 유형, 개념, 사건 엔터티</strong></p>
-<ul>
-<li><strong>유형:물리적 형태 ex)사원, 물품, 강사</strong></li>
-<li><strong>개념:개념적 정보 ex)조직, 보험상품</strong></li>
-<li><strong>사건:업무 수행시 발생 ex)주문, 청구, 미납</strong></li>
-</ul>
+<p><strong>엔터티 그림</strong></p>
 </li>
 <li>
-<p><strong>발생시점에 따른 분류 : 기본/키, 중심, 행위 엔터티</strong></p>
-<ul>
-<li><strong>기본:그 업무에 원래 존재하는 정보, 타 엔터티의 부모 역할, 자신의 고유한 주식별자 가짐 ex)사원,부서</strong></li>
-<li><strong>중심:기본 엔터티로부터 발생, 다른 엔터티와의 관계로 많은 행위 엔터티 생성 ex)계약, 사고, 주문</strong></li>
-<li><strong>행위:2개 이상의 부모엔터티로부터 발생, 자주 바뀌거나 양이 증가 ex)주문목록, 사원변경이력</strong></li>
-</ul>
+<p><strong>엔터티 배치</strong></p>
+</li>
+<li>
+<p><strong>엔터티 관계설정</strong></p>
+</li>
+<li>
+<p><strong>관계명 기술</strong></p>
+</li>
+<li>
+<p><strong>관계의 참여도 기술</strong></p>
+</li>
+<li>
+<p><strong>관계필수여부</strong></p>
 </li>
 </ul>
 </li>
@@ -1344,13 +1372,110 @@
 <h1 id="heading-12"></h1>
 <p> </p>
 <ul>
-<li><strong>엔터티의 명명</strong>
+<li><strong>좋은 데이터 모델의 요소</strong>
+<ul>
+<li>
+<p><strong>완전성 : 업무에 필요한 모든 데이터가 모델에 정의</strong></p>
+</li>
+<li>
+<p><strong>중복배제 : 하나의 DB내에 동일한 사실은 한번만.</strong></p>
+</li>
+<li>
+<p><strong>업무규칙 : 많은 규칙을 사용자가 공유하도록 제공</strong></p>
+</li>
+<li>
+<p><strong>데이터 재사용 : 데이터가 독립적으로 설계돼야 함</strong></p>
+</li>
+<li>
+<p><strong>의사소통 : 업무규칙은 엔터티,서브타입,속성,관계 등의 형태로 최대한 자세히 표현</strong></p>
+</li>
+<li>
+<p><strong>통합성 : 동일한 데이터는 한 번만 정의, 참조활용</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-13"></h1>
+<p> </p>
+<ul>
+<li><strong>엔터티의 특징</strong>
+<ul>
+<li>
+<p><strong>엔터티 : 업무에 필요하고 유용한 정보를 저장하고 관리하기 위한 집합적인 것, 보이지 않는 개념 포함</strong></p>
+</li>
+<li>
+<p><img src="/DB/SQL/SQLD02.png" alt="" /></p>
+</li>
+<li>
+<p><strong>반드시 해당 업무에서 필요하고 관리하고자 함</strong></p>
+</li>
+<li>
+<p><strong>유일한 식별자에 의해 식별 가능</strong></p>
+</li>
+<li>
+<p><strong>두 개 이상의 인스턴스의 집합</strong></p>
+</li>
+<li>
+<p><strong>업무 프로세스에 의해 이용되어야 함</strong></p>
+</li>
+<li>
+<p><strong>반드시 속성이 있어야 함</strong></p>
+</li>
+<li>
+<p><strong>다른 엔터티와 최소 1개 이상의 관계가 있어야 함</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-14"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>엔터티의 분류</strong></p>
+</li>
+<li>
+<p><strong>유무형에 따른 분류 : 유형, 개념, 사건 엔터티</strong></p>
+<ul>
+<li>
+<p><strong>유형:물리적 형태 ex)사원, 물품, 강사</strong></p>
+</li>
+<li>
+<p><strong>개념:개념적 정보 ex)조직, 보험상품</strong></p>
+</li>
+<li>
+<p><strong>사건:업무 수행시 발생 ex)주문, 청구, 미납</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-15"></h1>
+<p> </p>
+<ul>
+<li><strong>발생시점에 따른 분류 : 기본/키, 중심, 행위 엔터티</strong>
+<ul>
+<li>
+<p><strong>기본:그 업무에 원래 존재하는 정보, 타 엔터티의 부모 역할, 자신의 고유한 주식별자 가짐 ex)사원,부서</strong></p>
+</li>
+<li>
+<p><strong>중심:기본 엔터티로부터 발생, 다른 엔터티와의 관계로 많은 행위 엔터티 생성 ex)계약, 사고, 주문</strong></p>
+</li>
+<li>
+<p><strong>행위:2개 이상의 부모엔터티로부터 발생, 자주 바뀌거나 양이 증가 ex)주문목록, 사원변경이력</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-16"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>엔터티의 명명</strong></p>
 <ul>
 <li><strong>현업업무에서 사용하는 용어 사용, 약어 사용금지, 단수명사 사용, 고유한 이름 사용, 생성의미대로 부여</strong></li>
 </ul>
 </li>
 </ul>
-<h1 id="heading-13"></h1>
+<h1 id="heading-17"></h1>
 <p> </p>
 <ul>
 <li><strong>속성</strong>
@@ -1367,18 +1492,27 @@
 <li>
 <p><strong>한 개의 속성은 1개의 속성값을 가짐</strong></p>
 </li>
-<li>
-<p><strong>속성의 분류 : 기본, 설계, 파생 속성</strong></p>
+</ul>
+</li>
+</ul>
+<h1 id="heading-18"></h1>
+<p> </p>
 <ul>
-<li><strong>기본: 업무로부터 추출한 모든 일반적인 속성</strong></li>
-<li><strong>설계: 업무를 규칙화하기 위해 새로 만들거나 변형, 정의하는 속성 ex)일련번호</strong></li>
-<li><strong>파생: 다른 속성에 영향을 받아 발생하는 속성, 빠른 성능을 낼 수 있도록 원래 속성의 값을 계산 ex)합</strong></li>
-</ul>
+<li><strong>속성의 분류 : 기본, 설계, 파생 속성</strong>
+<ul>
+<li>
+<p><strong>기본: 업무로부터 추출한 모든 일반적인 속성</strong></p>
+</li>
+<li>
+<p><strong>설계: 업무를 규칙화하기 위해 새로 만들거나 변형, 정의하는 속성 ex)일련번호</strong></p>
+</li>
+<li>
+<p><strong>파생: 다른 속성에 영향을 받아 발생하는 속성, 빠른 성능을 낼 수 있도록 원래 속성의 값을 계산 ex)합</strong></p>
 </li>
 </ul>
 </li>
 </ul>
-<h1 id="heading-14"></h1>
+<h1 id="heading-19"></h1>
 <p> </p>
 <ul>
 <li><strong>도메인</strong>
@@ -1387,28 +1521,37 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-15"></h1>
+<h1 id="heading-20"></h1>
 <p> </p>
 <ul>
 <li><strong>속성의 명명</strong>
 <ul>
-<li><strong>- 해당업무에서 사용하는 이름 부여</strong></li>
-<li><strong>- 서술식 속성명은 사용 금지</strong></li>
-<li><strong>- 약어 사용 금지</strong></li>
-<li><strong>- 전체 데이터모델에서 유일성 확보</strong></li>
+<li>
+<p><strong>해당업무에서 사용하는 이름 부여</strong></p>
+</li>
+<li>
+<p><strong>서술식 속성명은 사용 금지</strong></p>
+</li>
+<li>
+<p><strong>약어 사용 금지</strong></p>
+</li>
+<li>
+<p><strong>전체 데이터모델에서 유일성 확보</strong></p>
+</li>
 </ul>
 </li>
 </ul>
-<h1 id="heading-16"></h1>
+<h1 id="heading-21"></h1>
 <p> </p>
 <ul>
-<li><strong>관계</strong>
+<li>
+<p><strong>관계</strong></p>
 <ul>
 <li><strong>엔터티의 인스턴스 사이의 논리적인 연관성으로서 존재의 형태로서나 행위로서 서로에게 연관성이 부여된 상태</strong></li>
 </ul>
 </li>
 </ul>
-<h1 id="heading-17"></h1>
+<h1 id="heading-22"></h1>
 <p> </p>
 <ul>
 <li><strong>패어링</strong>
@@ -1417,58 +1560,95 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-18"></h1>
+<h1 id="heading-23"></h1>
 <p> </p>
 <ul>
-<li><strong>UML에는 연관관계와 의존관계가 있는데, 연관(존재적)관계는 항상 이용하는 관계이고 의존관계는 상대방 행위에 의해 발생하는 관계이다.</strong></li>
+<li><strong>UML에는 연관관계와 의존관계가 있는데, 연관(존재적)관계는 항상 이용하는 관계이고 의존관계는 상대방 행위에 의해 발생하는 관계를 의미</strong></li>
+</ul>
+<h1 id="heading-24"></h1>
+<p> </p>
+<ul>
 <li><strong>ERD에서는 존재적 관계와 행위에 의한 관계를 구분하지 않고 표기했지만 UML에서는 이를 구분하여 연관관계는 실선, 의존관계는 점선으로 표현</strong></li>
 </ul>
-<h1 id="heading-19"></h1>
+<h1 id="heading-25"></h1>
 <p> </p>
-<h1 id="heading-20"></h1>
+<h1 id="heading-26"></h1>
 <ul>
 <li><strong>관계의 표기법</strong>
 <ul>
-<li><strong>관계명 : 관계의 이름</strong></li>
-<li><strong>관계차수 : 1:1, 1:M, M:N</strong></li>
-<li><strong>관계선택성(관계선택사양) : 필수관계, 선택관계</strong></li>
+<li>
+<p><strong>관계명 : 관계의 이름</strong></p>
+</li>
+<li>
+<p><strong>관계차수 : 1:1, 1:M, M:N</strong></p>
+</li>
+<li>
+<p><strong>관계선택성(관계선택사양) : 필수관계, 선택관계</strong></p>
+</li>
 </ul>
 </li>
 </ul>
-<h1 id="heading-21"></h1>
+<h1 id="heading-27"></h1>
 <p> </p>
 <ul>
 <li><strong>관계 체크사항</strong>
-<strong>- 2개의 엔터티 사이에 관심있는 연관 규칙o?</strong>
-<strong>- 2개의 엔터티 사이에 정보의 조합 발생o?</strong>
-<strong>- 업무기술서,장표에 관계연결에 대한 규칙 서술o?</strong>
-<strong>- 업무기술서,장표에 관계연결을 가능케 하는 동사o?</strong></li>
+<ul>
+<li>
+<p><strong>2개의 엔터티 사이에 관심있는 연관 규칙o?</strong></p>
+</li>
+<li>
+<p><strong>2개의 엔터티 사이에 정보의 조합 발생o?</strong></p>
+</li>
+<li>
+<p><strong>업무기술서,장표에 관계연결에 대한 규칙 서술o?</strong></p>
+</li>
+<li>
+<p><strong>업무기술서,장표에 관계연결을 가능케 하는 동사o?</strong></p>
+</li>
 </ul>
-<h1 id="heading-22"></h1>
+</li>
+</ul>
+<h1 id="heading-28"></h1>
 <p> </p>
 <ul>
 <li><strong>식별자</strong>
 <ul>
-<li><strong>엔터티내에서 인스턴스를 구분하는 구분자</strong></li>
-<li><strong>식별자는 논리 데이터 모델링 단계에 사용</strong></li>
-<li><strong>Key는 물리 데이터 모델링 단계에 사용</strong></li>
+<li>
+<p><strong>엔터티내에서 인스턴스를 구분하는 구분자</strong></p>
+</li>
+<li>
+<p><strong>식별자는 논리 데이터 모델링 단계에 사용</strong></p>
+</li>
+<li>
+<p><strong>Key는 물리 데이터 모델링 단계에 사용</strong></p>
+</li>
 </ul>
 </li>
 </ul>
-<h1 id="heading-23"></h1>
+<h1 id="heading-29"></h1>
 <p> </p>
 <ul>
 <li><strong>식별자의 특징</strong>
 <ul>
-<li><strong>유일성, 최소성, 불변성, 존재성</strong>
-<strong>-  주식별자에 의해 모든 인스턴스들이 유일하게 구분</strong>
-<strong>-  주식별자를 구성하는 속성의 수는 유일성을 만족하는 최소의 수가 되어야 함</strong>
-<strong>-  지정된 주식별자의 값은 자주 변하지 않아야 함</strong>
-<strong>-  주식별자가 지정이 되면 반드시 값이 들어와야 함</strong></li>
+<li>
+<p><strong>유일성, 최소성, 불변성, 존재성</strong></p>
+</li>
+<li>
+<p><strong>주식별자에 의해 모든 인스턴스들이 유일하게 구분</strong></p>
+</li>
+<li>
+<p><strong>주식별자를 구성하는 속성의 수는 유일성을 만족하는 최소의 수가 되어야 함</strong></p>
+</li>
+<li>
+<p><strong>지정된 주식별자의 값은 자주 변하지 않아야 함</strong></p>
+</li>
+<li>
+<p><strong>주식별자가 지정이 되면 반드시 값이 들어와야 함</strong></p>
+</li>
 </ul>
 </li>
 </ul>
-<h1 id="heading-24"></h1>
+<h1 id="heading-30"></h1>
 <p> </p>
 <ul>
 <li><strong>식별자 분류</strong>
@@ -1504,7 +1684,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-25"></h1>
+<h1 id="heading-31"></h1>
 <p> </p>
 <ul>
 <li><strong>주식별자 도출기준</strong>
@@ -1515,7 +1695,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-26"></h1>
+<h1 id="heading-32"></h1>
 <p> </p>
 <ul>
 <li><strong>식별자 관계</strong>
@@ -1525,7 +1705,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-27"></h1>
+<h1 id="heading-33"></h1>
 <p> </p>
 <ul>
 <li><strong>비식별자</strong>
@@ -1551,11 +1731,11 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-28"></h1>
+<h1 id="heading-34"></h1>
 <p> </p>
-<h1 id="heading-29"></h1>
+<h1 id="heading-35"></h1>
 <h3 id="데이터-모델과-성능"><strong>데이터 모델과 성능</strong></h3>
-<h1 id="heading-30"></h1>
+<h1 id="heading-36"></h1>
 <ul>
 <li><strong>성능 데이터 모델링</strong>
 <ul>
@@ -1571,7 +1751,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-31"></h1>
+<h1 id="heading-37"></h1>
 <p> </p>
 <ul>
 <li><strong>성능 데이터 모델링 고려사항 순서</strong>
@@ -1597,7 +1777,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-32"></h1>
+<h1 id="heading-38"></h1>
 <p> </p>
 <ul>
 <li><strong>기본적으로 데이터는 속성간의 함수종속성에 근거하여 정규화되어야 한다. 정규화는 선택이 아니라 필수사항</strong>
@@ -1620,7 +1800,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-33"></h1>
+<h1 id="heading-39"></h1>
 <p> </p>
 <ul>
 <li><strong>반정규화 절차</strong>
@@ -1637,7 +1817,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-34"></h1>
+<h1 id="heading-40"></h1>
 <p> </p>
 <ul>
 <li><strong>반정규화 대상조사</strong>
@@ -1657,7 +1837,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-35"></h1>
+<h1 id="heading-41"></h1>
 <p> </p>
 <ul>
 <li><strong>다른 방법유도 검토</strong>
@@ -1677,42 +1857,66 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-36"></h1>
+<h1 id="heading-42"></h1>
 <p> </p>
-<h1 id="heading-37"></h1>
+<h1 id="heading-43"></h1>
 <h3 id="반정규화의-기법테이블-칼럼-관계"><strong>반정규화의 기법(테이블, 칼럼, 관계)</strong></h3>
-<h1 id="heading-38"></h1>
-<ul>
-<li><strong>테이블 반정규화</strong>
+<h1 id="heading-44"></h1>
 <ul>
 <li>
-<p><strong>테이블 병합(1:1관계, 1:M관계, 슈퍼/서브타입)</strong></p>
+<p><strong>테이블 반정규화</strong></p>
 <ul>
-<li><strong>1:1관계를 통합하여 성능향상</strong></li>
-<li><strong>1:M관계를 통합하여 성능향상</strong></li>
-<li><strong>슈퍼/서브 관계를 통합하여 성능향상</strong></li>
-</ul>
+<li><strong>테이블 병합(1:1관계, 1:M관계, 슈퍼/서브타입)</strong>
+<ul>
+<li>
+<p><strong>1:1관계를 통합하여 성능향상</strong></p>
 </li>
 <li>
-<p><strong>테이블분할(수직분할, 수평분할)</strong></p>
-<ul>
-<li><strong>칼럼단위 테이블을 디스크 I/O를 분산처리하기 위해 테이블을 1:1로 분리하여 성능향상</strong></li>
-<li><strong>로우단위로 집중 발생되는 트랜잭션을 분석하여 디스크 I/O 및 데이터 접근의 효율성을 높여 성능을 향상하기 위해 로우단위로 테이블을 쪼갬</strong></li>
-</ul>
+<p><strong>1:M관계를 통합하여 성능향상</strong></p>
 </li>
 <li>
-<p><strong>테이블추가(중복, 통계, 이력, 부분테이블 추가)</strong></p>
+<p><strong>슈퍼/서브 관계를 통합하여 성능향상</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-45"></h1>
+<p> </p>
 <ul>
-<li><strong>다른 업무이거나 서버가 다른 경우 동일한 테이블구조를 중복하여 원격조인을 제거하여 성능 향상</strong></li>
-<li><strong>SUM, AVG 등을 미리 수행하여 계산해 둠으로써 조회 시 성능을 향상</strong></li>
-<li><strong>이력테이블 중에서 마스터 테이블에 존재하는 레코드를 중복하여 이력테이블에 존재시켜 성능 향상</strong></li>
-<li><strong>하나의 테이블의 전체 칼럼 중 자주 이용하는 집중화된 칼럼들이 있을 때 디스크 I/O를 줄이기 위해 해당 칼럼들을 모아놓은 별도의 반정규화된 테이블을 생성</strong></li>
-</ul>
+<li><strong>테이블분할(수직분할, 수평분할)</strong>
+<ul>
+<li>
+<p><strong>칼럼단위 테이블을 디스크 I/O를 분산처리하기 위해 테이블을 1:1로 분리하여 성능향상</strong></p>
+</li>
+<li>
+<p><strong>로우단위로 집중 발생되는 트랜잭션을 분석하여 디스크 I/O 및 데이터 접근의 효율성을 높여 성능을 향상하기 위해 로우단위로 테이블을 쪼갬</strong></p>
 </li>
 </ul>
 </li>
 </ul>
-<h1 id="heading-39"></h1>
+<h1 id="heading-46"></h1>
+<p> </p>
+<ul>
+<li><strong>테이블추가(중복, 통계, 이력, 부분테이블 추가)</strong>
+<ul>
+<li>
+<p><strong>다른 업무이거나 서버가 다른 경우 동일한 테이블구조를 중복하여 원격조인을 제거하여 성능 향상</strong></p>
+</li>
+<li>
+<p><strong>SUM, AVG 등을 미리 수행하여 계산해 둠으로써 조회 시 성능을 향상</strong></p>
+</li>
+<li>
+<p><strong>이력테이블 중에서 마스터 테이블에 존재하는 레코드를 중복하여 이력테이블에 존재시켜 성능 향상</strong></p>
+</li>
+<li>
+<p><strong>하나의 테이블의 전체 칼럼 중 자주 이용하는 집중화된 칼럼들이 있을 때 디스크 I/O를 줄이기 위해 해당 칼럼들을 모아놓은 별도의 반정규화된 테이블을 생성</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-47"></h1>
 <p> </p>
 <ul>
 <li><strong>칼럼 반정규화</strong>
@@ -1732,7 +1936,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-40"></h1>
+<h1 id="heading-48"></h1>
 <p> </p>
 <ul>
 <li><strong>관계 반정규화</strong>
@@ -1755,7 +1959,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-41"></h1>
+<h1 id="heading-49"></h1>
 <p> </p>
 <ul>
 <li><strong>PK에 의해 테이블을 분할하는 방법(파티셔닝)</strong>
@@ -1766,7 +1970,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-42"></h1>
+<h1 id="heading-50"></h1>
 <p> </p>
 <ul>
 <li><strong>테이블에 대한 수평/수직분할의 절차</strong>
@@ -1786,14 +1990,14 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-43"></h1>
+<h1 id="heading-51"></h1>
 <p> </p>
 <h3 id="슈퍼서브-타입-모델"><strong>슈퍼/서브 타입 모델</strong></h3>
-<h1 id="heading-44"></h1>
+<h1 id="heading-52"></h1>
 <ul>
 <li><strong>업무를 구성하는 데이터의 특징을 공통과 차이점의 특징을 고려하여 효과적 표현</strong></li>
 </ul>
-<h1 id="heading-45"></h1>
+<h1 id="heading-53"></h1>
 <p> </p>
 <ul>
 <li><strong>슈퍼/서브 타입 데이터 모델의 변환기술</strong>
@@ -1810,7 +2014,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-46"></h1>
+<h1 id="heading-54"></h1>
 <p> </p>
 <ul>
 <li><strong>인덱스 특성을 고려한 PK/FK DB 성능향상</strong>
@@ -1824,7 +2028,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-47"></h1>
+<h1 id="heading-55"></h1>
 <p> </p>
 <ul>
 <li><strong>분산 DB</strong>
@@ -1834,7 +2038,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-48"></h1>
+<h1 id="heading-56"></h1>
 <p> </p>
 <ul>
 <li><strong>분산 DB를 만족하기 위한 6가지 투명성</strong>
@@ -1860,7 +2064,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-49"></h1>
+<h1 id="heading-57"></h1>
 <p> </p>
 <ul>
 <li>
@@ -1869,7 +2073,7 @@
 <p><strong>단점 : 비용증가, 오류의 잠재성 증대, 설계 관리의 복잡성, 불규칙한 응답 속도, 통제의 어려움, 데이터 무결성 위협</strong></p>
 </li>
 </ul>
-<h1 id="heading-50"></h1>
+<h1 id="heading-58"></h1>
 <p> </p>
 <ul>
 <li><strong>분산 DB 적용 기법</strong>
@@ -1889,7 +2093,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-51"></h1>
+<h1 id="heading-59"></h1>
 <p> </p>
 <ul>
 <li><strong>테이블 복제 분산 : 동일한 테이블을 다른 지역이나 서버에서 동시에 생성하여 관리하는 유형</strong>
@@ -1899,7 +2103,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-52"></h1>
+<h1 id="heading-60"></h1>
 <p> </p>
 <ul>
 <li><strong>테이블 요약 분산 : 지역 간에 또는 서버 간에 데이터가 비슷하지만 서로 다른 유형으로 존재하는 경우</strong>
@@ -1909,7 +2113,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-53"></h1>
+<h1 id="heading-61"></h1>
 <p> </p>
 <ul>
 <li><strong>분산 DB 설계를 고려해야 하는 경우</strong>
@@ -1932,7 +2136,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-54"></h1>
+<h1 id="heading-62"></h1>
 <p> </p>
 </article>
  
