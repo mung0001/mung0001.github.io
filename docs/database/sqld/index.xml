@@ -37,7 +37,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/database/sqld/sqld-2/</guid>
-      <description>SQL 기본  SQL 기본   DataBase  특정 기업이나 조직 또는 개인이 필요에 의해 데이터를 일정한 형태로 저장해 놓은 것을 의미한다.       DBMS  효율적인 데이터 관리 뿐만 아니라 예기치 못한 사건으로 인한 데이터의 손상을 피하고, 필요시 필요한 데이터를 복구하기 위한 강력한 기능의 SW       DB 발전  1960 : 플로우차트 중심의 개발, 파일구조 사용 1970 : DB 관리기법이 처음 태동, 계층-망형 DB등장 1980 : 관계형 DB 상용화, Oracle, Sybase 등장 1990 : 객체 관계형 DB로 발전       SQL  관계형 DB에서 데이터 정의, 조작, 제어를 위해 사용하는 언어       SQL 문장들의 종류   DML : SELECT, INSERT, UPDATE, DELETE 등 데이터 조작어</description>
+      <description>SQL 기본  SQL 기본    DataBase
+ 특정 기업이나 조직 또는 개인이 필요에 의해 데이터를 일정한 형태로 저장해 놓은 것을 의미한다.        DBMS
+ 효율적인 데이터 관리 뿐만 아니라 예기치 못한 사건으로 인한 데이터의 손상을 피하고, 필요시 필요한 데이터를 복구하기 위한 강력한 기능의 SW(SoftWare)       DB 발전   1960 : 플로우차트 중심의 개발, 파일구조 사용</description>
     </item>
     
   </channel>

@@ -25,7 +25,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.2e94daf79e4cd48391c2d6583d41f52c6f70fc380ea47332f205741cc7d592f7.js" integrity="sha256-LpTa955M1IORwtZYPUH1LG9w/DgOpHMy8gV0HMfVkvc="></script>
+<script defer src="/en.search.min.3a66e82cc7eb8c44bee04c34ec66224c9980d6f934cc38d4b17f679f2c18afc5.js" integrity="sha256-OmboLMfrjES&#43;4Ew07GYiTJmA1vk0zDjUsX9nnywYr8U="></script>
 <!--
 
 -->
@@ -1939,38 +1939,21 @@
 <h1 id="heading-48"></h1>
 <p> </p>
 <ul>
-<li><strong>관계 반정규화</strong>
+<li><strong>PK에 의해 테이블을 분할하는 방법(파티셔닝)</strong>
 <ul>
 <li>
-<p><strong>중복관계 추가 : 데이터를 처리하기 위한 여러 경로를 거쳐 조인이 가능하지만 이 때 발생할 수 있는 성능저하를 예방하기 위해 추가적인 관계를 맺는 방법</strong></p>
+<p><strong>RANGE PARTITION : 대상 테이블이 날짜 또는 숫자값으로 분리가 가능하고 각 영역별로 트랜잭션이 분리되는 경우</strong></p>
 </li>
 <li>
-<p><strong>로우 체이닝 : 로우의 길이가 너무 길어서 데이터 블록 하나에 데이터가 모두 저장되지 않고 두 개 이상의 블록에 걸쳐 하나의 로우가 저장되어 있는 형태</strong></p>
+<p><strong>LIST PARTITION : 지점, 사업소 등 핵심적인 코드값으로 PK가 구성되어 있고 대량의 데이터가 있는 테이블의 경우</strong></p>
 </li>
 <li>
-<p><strong>로우 마이그레이션 : 데이터블록에서 수정이 발생하면 수정된 데이터를 해당 데이터 블록에서 저장하지 못하고 다른 블록의 빈 공간을 찾아 저장하는 방식</strong></p>
-</li>
-<li>
-<p><strong>로우 체이닝과 로우 마이그레이션이 발생하여 많은 블록에 데이터가 저장되면 DB 메모리에서 디스크 I/O가 발생할 때 많은 I/O가 발생하여 성능저하 발생</strong></p>
-</li>
-<li>
-<p><strong>트랜잭션을 분석하여 적절하게 1:1관계로 분리함으로써 성능향상이 가능하도록 해야 한다.</strong></p>
+<p><strong>HASH PARTITION : 지정된 HASH 조건에 따라 해시 알고리즘이 적용되어 테이블이 분리</strong></p>
 </li>
 </ul>
 </li>
 </ul>
 <h1 id="heading-49"></h1>
-<p> </p>
-<ul>
-<li><strong>PK에 의해 테이블을 분할하는 방법(파티셔닝)</strong>
-<ul>
-<li><strong>RANGE PARTITION : 대상 테이블이 날짜 또는 숫자값으로 분리가 가능하고 각 영역별로 트랜잭션이 분리되는 경우</strong></li>
-<li><strong>LIST PARTITION : 지점, 사업소 등 핵심적인 코드값으로 PK가 구성되어 있고 대량의 데이터가 있는 테이블의 경우</strong></li>
-<li><strong>HASH PARTITION : 지정된 HASH 조건에 따라 해시 알고리즘이 적용되어 테이블이 분리</strong></li>
-</ul>
-</li>
-</ul>
-<h1 id="heading-50"></h1>
 <p> </p>
 <ul>
 <li><strong>테이블에 대한 수평/수직분할의 절차</strong>
@@ -1990,20 +1973,25 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-51"></h1>
+<h1 id="heading-50"></h1>
 <p> </p>
 <h3 id="슈퍼서브-타입-모델"><strong>슈퍼/서브 타입 모델</strong></h3>
-<h1 id="heading-52"></h1>
+<h1 id="heading-51"></h1>
 <ul>
-<li><strong>업무를 구성하는 데이터의 특징을 공통과 차이점의 특징을 고려하여 효과적 표현</strong></li>
+<li>
+<p><strong>슈퍼/ 서브 타입 모델을 사용하는 이유</strong></p>
+<ul>
+<li><strong>업무를 구성하는 데이터의 특징의 상관관계와 차이점을 고려하여 효과적 표현하기 위함</strong></li>
 </ul>
-<h1 id="heading-53"></h1>
+</li>
+</ul>
+<h1 id="heading-52"></h1>
 <p> </p>
 <ul>
 <li><strong>슈퍼/서브 타입 데이터 모델의 변환기술</strong>
 <ul>
 <li>
-<p><strong>개별로 발생되는 트랜잭션에 대해서는 개별 테이블로 구성(OneToOne Type)</strong></p>
+<p><strong>개별로 발생되는 트랜잭션에 대해서는 개별 테이블로 구성(One To One Type)</strong></p>
 </li>
 <li>
 <p><strong>슈퍼타입+서브타입에 대해 발생되는 트랜잭션에 대해서는 슈퍼+서브타입 테이블로 구성(Plus Type)</strong></p>
@@ -2014,7 +2002,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-54"></h1>
+<h1 id="heading-53"></h1>
 <p> </p>
 <ul>
 <li><strong>인덱스 특성을 고려한 PK/FK DB 성능향상</strong>
@@ -2028,17 +2016,21 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-55"></h1>
+<h1 id="heading-54"></h1>
 <p> </p>
 <ul>
 <li><strong>분산 DB</strong>
 <ul>
-<li><strong>여러 곳으로 분산되어있는 DB를 하나의 가상 시스템으로 사용할 수 있도록 한 DB</strong></li>
-<li><strong>논리적으로 동일한 시스템에 속하지만, 컴퓨터 네트워크를 통해 물리적으로 분산되어 있는 데이터집합</strong></li>
+<li>
+<p><strong>여러 곳으로 분산되어있는 DB를 하나의 가상 시스템으로 사용할 수 있도록 한 DB</strong></p>
+</li>
+<li>
+<p><strong>논리적으로 동일한 시스템에 속하지만, 컴퓨터 네트워크를 통해 물리적으로 분산되어 있는 데이터집합</strong></p>
+</li>
 </ul>
 </li>
 </ul>
-<h1 id="heading-56"></h1>
+<h1 id="heading-55"></h1>
 <p> </p>
 <ul>
 <li><strong>분산 DB를 만족하기 위한 6가지 투명성</strong>
@@ -2064,16 +2056,61 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-57"></h1>
+<h1 id="heading-56"></h1>
 <p> </p>
 <ul>
+<li><strong>분산 DB 장-단점</strong>
+<h1 id="heading-57"></h1>
+<ul>
+<li><strong>장점</strong>
+<ul>
 <li>
-<p><strong>분산 DB 장-단점</strong>
-<strong>장점 : 지역 자치성, 신뢰성 가용성, 효용성 융통성, 빠른 응답속도, 비용절감, 각 지역 사용자 요구 수용</strong></p>
-<p><strong>단점 : 비용증가, 오류의 잠재성 증대, 설계 관리의 복잡성, 불규칙한 응답 속도, 통제의 어려움, 데이터 무결성 위협</strong></p>
+<p><strong>지역 자치성</strong></p>
+</li>
+<li>
+<p><strong>신뢰성 가용성</strong></p>
+</li>
+<li>
+<p><strong>효용성 융통성</strong></p>
+</li>
+<li>
+<p><strong>빠른 응답속도</strong></p>
+</li>
+<li>
+<p><strong>각 지역 사용자 요구 수용</strong></p>
+</li>
+</ul>
 </li>
 </ul>
 <h1 id="heading-58"></h1>
+<p> </p>
+<ul>
+<li><strong>단점</strong>
+<ul>
+<li>
+<p><strong>비용증가</strong></p>
+</li>
+<li>
+<p><strong>오류의 잠재성 증대</strong></p>
+</li>
+<li>
+<p><strong>설계 관리의 복잡성</strong></p>
+</li>
+<li>
+<p><strong>불규칙한 응답 속도</strong></p>
+</li>
+<li>
+<p><strong>통제의 어려움</strong></p>
+</li>
+<li>
+<p><strong>데이터 무결성 위협</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-59"></h1>
 <p> </p>
 <ul>
 <li><strong>분산 DB 적용 기법</strong>
@@ -2093,27 +2130,51 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-59"></h1>
-<p> </p>
-<ul>
-<li><strong>테이블 복제 분산 : 동일한 테이블을 다른 지역이나 서버에서 동시에 생성하여 관리하는 유형</strong>
-<ul>
-<li><strong>부분복제 : 마스터 DB에서 테이블의 일부의 내용만 다른 지역이나 서버에 위치</strong></li>
-<li><strong>광역복제 : 마스터 DB 테이블의 내용을 각 지역이나 서버에 존재</strong></li>
-</ul>
-</li>
-</ul>
 <h1 id="heading-60"></h1>
 <p> </p>
 <ul>
-<li><strong>테이블 요약 분산 : 지역 간에 또는 서버 간에 데이터가 비슷하지만 서로 다른 유형으로 존재하는 경우</strong>
+<li><strong>테이블 복제 분산</strong>
 <ul>
-<li><strong>분석요약 : 동일한 테이블 구조를 가지고 있으면서 분산되어 있는 동일한 내용의 데이터를 이용하여 통합된 데이터를 산출하는 방식</strong></li>
-<li><strong>통합요약 : 분산되어 있는 다른 내용의 데이터를 이용하여 통합된 데이터를 산출하는 방식</strong></li>
+<li>
+<p><strong>동일한 테이블을 다른 지역이나 서버에서 동시에 생성하여 관리하는 유형</strong></p>
+</li>
+<li>
+<p><strong>테이블 복제 분산의 종류</strong></p>
+<ul>
+<li>
+<p><strong>부분복제 : 마스터 DB에서 테이블의 일부의 내용만 다른 지역이나 서버에 위치</strong></p>
+</li>
+<li>
+<p><strong>광역복제 : 마스터 DB 테이블의 내용을 각 지역이나 서버에 존재</strong></p>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <h1 id="heading-61"></h1>
+<p> </p>
+<ul>
+<li><strong>테이블 요약 분산</strong>
+<ul>
+<li>
+<p><strong>지역 간에 또는 서버 간에 데이터가 비슷하지만 서로 다른 유형으로 존재하는 경우</strong></p>
+</li>
+<li>
+<p><strong>테이블 요약 분산의 종류</strong></p>
+<ul>
+<li>
+<p><strong>분석요약 : 동일한 테이블 구조를 가지고 있으면서 분산되어 있는 동일한 내용의 데이터를 이용하여 통합된 데이터를 산출하는 방식</strong></p>
+</li>
+<li>
+<p><strong>통합요약 : 분산되어 있는 다른 내용의 데이터를 이용하여 통합된 데이터를 산출하는 방식</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-62"></h1>
 <p> </p>
 <ul>
 <li><strong>분산 DB 설계를 고려해야 하는 경우</strong>
@@ -2136,7 +2197,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-62"></h1>
+<h1 id="heading-63"></h1>
 <p> </p>
 </article>
  
