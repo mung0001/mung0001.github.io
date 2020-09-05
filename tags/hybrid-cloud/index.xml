@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hybrid Cloud on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/tags/hybrid-cloud/</link>
+    <description>Recent content in Hybrid Cloud on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mung0001.github.io/tags/hybrid-cloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/posts/hybridecloud/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/posts/hybridecloud/</guid>
+      <description>****          **** </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/posts/privatecloud/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/posts/privatecloud/</guid>
+      <description>****          **** </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/posts/publiccloud/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/posts/publiccloud/</guid>
+      <description>****          **** </description>
+    </item>
+    
+    <item>
+      <title>클라우드란? (CloudComputing)</title>
+      <link>https://mung0001.github.io/posts/cloud/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/posts/cloud/</guid>
+      <description>클라우드란?   클라우드 (Cloud)    클라우드의 영어 ‘Cloud’는 우리가 흔히 알고 있는 &amp;lsquo;구름’을 뜻합니다. 컴퓨터 파일을 저장할 때 작업한 컴퓨터 내부에 있는 공간이 아니라 인터넷을 통하여 중앙 컴퓨터에 저장할 수 있는 데 이 공간을 클라우드라 합나다.
+  즉, 클라우드를 정의하기는 모호한 면이 있지만, 기본적으로 각각 고유한 기능을 가진 서버의 글로벌 네트워크를 설명하는 데 사용되는 용어입니다.
+  클라우드는 실제 엔터티가 아니지만 함께 연결되어 하나의 에코시스템으로 작동하게 되어 있는 ​전 세계에 분산된 원격 서버의 광대한 네트워크로, 이러한 서버는 데이터의 저장 및 관리, 애플리케이션 실행 또는 스트리밍 비디오, 웹 메일, 오피스 생산성 소프트웨어 또는 소셜 미디어와 같은 미디어와 같은 콘텐츠 또는 서비스를 제공하도록 설계되어 있습니다.</description>
+    </item>
+    
+  </channel>
+</rss>
