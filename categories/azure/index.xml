@@ -17,8 +17,11 @@
       <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/azure/microsoftazure/azure/</guid>
-      <description>Microsoft Azure Virtual Training Day: Fundamentals   목차  1. 클라우드 컴퓨팅 2. 클라우드 서비스의 종류 3. 클라우드 서비스의 유형 4. Azure 핵심 서비스와 아키텍처
- 클라우드 컴퓨팅   Compute poewer : 리눅스 서버나 웹 프로그램
+      <description>Microsoft Azure Virtual Training Day: Fundamentals   목차 1. 클라우드 컴퓨팅
+2. 클라우드 서비스의 종류
+3. 클라우드 서비스의 유형
+4. Azure 핵심 서비스와 아키텍처
+   클라우드 컴퓨팅    Compute power : 리눅스 서버나 웹 프로그램
   Storage : 저장 및 데이터베이스 역할
   Networking - 클라우드 제공사와 우리 회사의 사이의 안전한 연결
   Analytis - 이치 혹은 성능 데이터를 시각화
