@@ -234,16 +234,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
-      <title>Azure : Core Service</title>
+      <title>Azure : Region</title>
       <link>https://mung0001.github.io/docs/azure/azuretraining/azure01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/azure/azuretraining/azure01/</guid>
-      <description>Microsoft Azure Core Service   Azure 글로벌 인프라 아키텍처   Region    Azure는 전 셰계에 위차한 데이터 센터로 구성
-  최소 한 개 이상의 데이터 센터를 포함
-  데이터 센터는 서로 근접한 위치에 있어 네트워크의 대기 시간이 짧은 특징을 가짐
-     Region Pairs   각 Azure region은 다른 region과 페어링 연결되어 있음
-  paired region은 사이의 데이터 센터들은 적어도 300마일의 거리가 떨어져 있음</description>
+      <description>Azure 글로벌 인프라 아키텍처   Microsoft Geography     Azure는 전 세계를 지정학적 경계 또는 국가 경계로 정의되는 지리적 위치로 분할합니다.
+  Azure Geography란 일반적으로 데이터 상주성 및 규정 준수 경계를 유지하는 두 개 이상의 Azure 지역을 포함하고 있는 별도의 시장을 의미합니다.
+  Azure Geography을 사용하면 아래와 같은 이점을 가질 수 있습니다.
+  지리적 위치를 통해 특정 데이터 상주성 및 규정 준수 요구 사항이 있는 고객은 데이터와 애플리케이션을 가깝게 유지할 수 있습니다.</description>
     </item>
     
     <item>
