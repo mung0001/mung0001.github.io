@@ -8,13 +8,8 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/azure/microsoftazure/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -42,10 +37,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/azure/azuretraining/azure01/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/azure/azuretraining/base-copy-2/</loc>
   </url>
   
@@ -55,6 +46,14 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/azure/azuretraining/base/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/azure00/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/</loc>
   </url>
   
   <url>
@@ -123,7 +122,7 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/azure/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -140,6 +139,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/aws/awstraining/iam/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/azure01/</loc>
   </url>
   
   <url>
@@ -319,6 +322,11 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/</loc>
+    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/aws/awssaa/saa-8/</loc>
   </url>
   
@@ -328,10 +336,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/aws/amazonwebservice/aws_security/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/azure/azuretraining/</loc>
   </url>
   
   <url>
@@ -383,6 +387,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure00/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/docker/</loc>
   </url>
   
@@ -411,6 +419,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure01/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/openstack/openstacktraining/</loc>
   </url>
   
@@ -427,6 +439,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure02/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/database/sqld/sqld-2/</loc>
   </url>
   
@@ -435,7 +451,19 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure10/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure03/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/aws/awssaa/saa-14/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure04/</loc>
   </url>
   
   <url>
@@ -451,7 +479,27 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure05/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/docker/dockertraining/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure06/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure07/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure08/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure09/</loc>
   </url>
   
   <url>
@@ -706,37 +754,37 @@
   
   <url>
     <loc>https://mung0001.github.io/tags/azure/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/categories/azure/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/azure2/</loc>
+    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/tags/azure-traing/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/categories/azure-traing/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/tags/microsoft-azure/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/categories/microsoft-azure/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
