@@ -37,10 +37,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/azure/azuretraining/base-copy-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/azure/azuretraining/base-copy/</loc>
   </url>
   
@@ -54,10 +50,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/azure/microsoftazure/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/azure/azuretraining/base-copy-3/</loc>
   </url>
   
   <url>
@@ -195,6 +187,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/aws/amazonwebservice/aws_storage/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/azure02/</loc>
   </url>
   
   <url>
@@ -695,6 +691,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/base-copy-3/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/aws/awstraining/game/</loc>
   </url>
   
@@ -818,7 +818,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/azure/azuretraining/azure2/</loc>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/azure12/</loc>
     <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url>
   

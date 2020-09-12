@@ -16,7 +16,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/azure/microsoftazure/azure00/</guid>
-      <description>Azure Computing    Azure Computing은 애플리케이션 및 서비스를 호스팅하는 다양한 옵션을 제공합니다.     Azure Virtual Machines   Azure에서 호스팅되는 Windows 또는 Linux VM(가상 머신)     Azure Virtual Machine Scale Sets   Azure에서 호스팅되는 Windows 또는 Linux VM의 크기 조정     Azure Kubernetes Service   컨테이너화된 서비스를 실행하는 VM 클러스터 관리를 사용하도록 설정     Azure Service Fabric  분산형 시스템 플랫폼.</description>
+      <description>Azure Computing     Azure Computing은 클라우드 기반의 애플리케이션을 실행하기 이한 주문형 컴퓨팅 서비스로 가상 머신 및 컨테이너를 통해 멀티 코어 프로세서, 슈퍼 컴퓨팅 리소스를 제공합니다.
+  Azure Computing은 애플리케이션 및 서비스를 호스팅하는 다양한 옵션을 제공합니다.
+     Azure Virtual Machines     가상 머신 또는 VM은 무리적 컴퓨터의 소프트웨어 에뮬레이션입니다.
+  VM에는 가상 프로세서, 메모리, 스토리지 및 네트워킹 리소스가 포함됩니다.</description>
     </item>
     
     <item>
@@ -25,7 +28,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/azure/microsoftazure/azure01/</guid>
-      <description>Azure Networking    Azure Networking은 컴퓨팅 리소스를 연결하고 애플리케이션에 대한 액세스를 제공하는 것으로 Microsoft Azure 데이터 센터의 서비스 및 기능을 외부 환경에 연결하는 다양한 옵션이 포함되어 있습니다.     Azure Virtual Network   수신 VPN(가상 사설망) 연결에 VM을 연결합니다.     Azure Load Balancer   애플리케이션 또는 서비스 엔드포인트에 대한 인바운드 및 아웃바운드 연결의 균형을 맞춥니다.     Azure Application Gateway   애플리케이션 보안을 강화하는 동시에 앱 서버 팜 제공을 최적화합니다.</description>
+      <description>Azure Networking    Azure Networking은 컴퓨팅 리소스를 연결하고 애플리케이션에 대한 액세스를 제공하는 것으로 Microsoft Azure 데이터 센터의 서비스 및 기능을 외부 환경에 연결하는 다양한 옵션이 포함되어 있습니다.     Azure Virtual Network   수신 VPN(가상 사설망) 연결에 VM을 연결합니다.     Azure Load Balancer     Azure Load Balancer는 사용자를 위한 유지 관리를 Azure에서 담당하는 서비스 입니다.
+  인바운 및 아웃바운드의 시나리오에 맟춰 해당 TCP, UDP 포트로 접근하는 각 트래픽을 부하분산합니다.</description>
     </item>
     
     <item>
@@ -47,7 +51,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/azure/microsoftazure/azure10/</guid>
-      <description>Azure DataBase    Azure에서는 다양한 형식과 볼륨의 데이터를 저장하도록 여러 데이터베이스 서비스를 제공합니다.     Azure Cosmos DB	NoSQL   옵션을 지원하는 글로벌 분산형 데이터베이스     Azure SQL Database   자동 크기 조정과 필수 인텔리전스, 강력한 보안을 통해 완벽하게 ### 관리되는 관계형 데이터베이스입니다.     Azure Database for MySQL   고가용성과 보안이 포함된 완벽하게 관리되고 확장 가능한 MySQL 관계형 데이터베이스     Azure Database for PostgreSQL   고가용성과 보안을 제공하며 완벽하게 관리되고 확장 가능한 PostgreSQL관계형 데이터베이스입니다.</description>
+      <description>Azure DataBase     Azure DataBase는 기존 스토리지 문제를 해결하기 위해 클라우드에 데이터를 저장하는 것을 고려합니다.
+  하지만 보안, 백업 및 재해 복구에 대한 우려가 존재합니다.
+  Azure에서는 다양한 형식과 볼륨의 데이터를 저장하도록 여러 데이터베이스 서비스를 제공합니다.
+     Azure Database의 특징    Azure Database의 이점
+  자동화된 백업 및 복구
+  전 세계에서 복제
+  데이터 분석 지원</description>
     </item>
     
     <item>

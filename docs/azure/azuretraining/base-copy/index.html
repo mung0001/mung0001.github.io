@@ -5,13 +5,19 @@
   <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="****   ****         ****        ">
+<meta name="description" content="****   ****         ****         Azure 논리적 아키텍처 이해하기  구독  Azure의 논리 구조    구독은 Azure 제품 및 서비스에 대한 인증되고 승인된 엑세스를 제공
+  구독은 청구 및 접근제어 관련된 기능을 제공
+  한 Azure 계정은 한 개 혹은 여러 게의 구독을 가질 수 있음
+  Azure라는 건물에서 각 층별로 리소스를 사용하는 것과 빗대어 생각">
 
 
 
 <meta name="robots" content="index,follow">
 <link rel="canonical" href=/docs/azure/azuretraining/base-copy/><meta property="og:title" content="Azure " />
-<meta property="og:description" content="****   ****         ****        " />
+<meta property="og:description" content="****   ****         ****         Azure 논리적 아키텍처 이해하기  구독  Azure의 논리 구조    구독은 Azure 제품 및 서비스에 대한 인증되고 승인된 엑세스를 제공
+  구독은 청구 및 접근제어 관련된 기능을 제공
+  한 Azure 계정은 한 개 혹은 여러 게의 구독을 가질 수 있음
+  Azure라는 건물에서 각 층별로 리소스를 사용하는 것과 빗대어 생각" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/azure/azuretraining/base-copy/" />
 
@@ -19,7 +25,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.ab6083d62d2a75efefe8748c5f570b88301aac6d8c2324962ae444351c1dab50.js" integrity="sha256-q2CD1i0qde/v6HSMX1cLiDAarG2MIySWKuRENRwdq1A="></script>
+<script defer src="/en.search.min.31c21c0c4ef0abcd7178e0fb019963f77cdfc9d451c88c6226a1fed0d332ebab.js" integrity="sha256-McIcDE7wq81xeOD7AZlj93zfydRRyIxiJqH&#43;0NMy66s="></script>
 <!--
 
 -->
@@ -249,16 +255,6 @@
         <li >
 
   
-  <a href="/docs/azure/azuretraining/base-copy-2/" class="">Azure </a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
   <a href="/docs/azure/azuretraining/base-copy/" class="active">Azure </a>
   
 
@@ -289,16 +285,6 @@
         <li >
 
   
-  <a href="/docs/azure/azuretraining/base-copy-3/" class="">Azure 학생 계정생성</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
   <a href="/docs/azure/azuretraining/azure01/" class="">Azure : Region</a>
   
 
@@ -309,7 +295,27 @@
         <li >
 
   
-  <a href="/docs/azure/azuretraining/azure2/" class="">Azure Fundamentaks 2</a>
+  <a href="/docs/azure/azuretraining/azure02/" class="">Azure : 관리옵션</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/azure/azuretraining/base-copy-3/" class="">Azure 학생 계정생성</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/azure/azuretraining/azure12/" class="">Azure Fundamentaks 2</a>
   
 
 </li>
@@ -1205,6 +1211,166 @@
       </ul>
     </li>
   </ul>
+
+  <ul>
+    <li><a href="#azure-논리적-아키텍처-이해하기"><strong>Azure 논리적 아키텍처 이해하기</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#구독"><strong>구독</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure의-논리-구조"><strong>Azure의 논리 구조</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#괸리-그룹"><strong>괸리 그룹</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#리소스-그룹"><strong>리소스 그룹</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-resource-manger--arm"><strong>Azure Resource Manger : ARM</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#iot-솔루션-internet-of-things"><strong>IOT 솔루션 (Internet of Things)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#빅-데이터-분석-솔루션-big-data-and-analytics"><strong>빅 데이터 분석 솔루션 (Big data and analytics)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#인공지능-artificial-intelligence"><strong>인공지능 (Artificial Intelligence</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#서버리스-serveless-computing"><strong>서버리스 (Serveless computing)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#devops"><strong>DevOps</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#azure-관리-도구"><strong>Azure 관리 도구</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#네트워크-연결-보호"><strong>네트워크 연결 보호</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-네트워크-보안-솔루션-선택"><strong>Azure 네트워크 보안 솔루션 선택</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#핵심-azure-identity-서비스"><strong>핵심 Azure Identity 서비스</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#보안-도구"><strong>보안 도구</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-커버넌스-방법론"><strong>Azure 커버넌스 방법론</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#모니터링-및-리포트"><strong>모니터링 및 리포트</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#규정-준수-약관-및-요구사항"><strong>규정 준수 약관 및 요구사항</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-가격-책정-및-지원"><strong>Azure 가격 책정 및 지원</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-구매-및-관리"><strong>Azure 구매 및 관리</strong></a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
 
@@ -1237,7 +1403,735 @@
 </ul>
 <h1 id="heading-7"></h1>
 <p><img src="/Azure/Azure/Azure.png" alt="" /></p>
-</article>
+<h1 id="heading-8"></h1>
+<h2 id="azure-논리적-아키텍처-이해하기"><strong>Azure 논리적 아키텍처 이해하기</strong></h2>
+<h1 id="heading-9"></h1>
+<h3 id="구독"><strong>구독</strong></h3>
+<h1 id="heading-10"></h1>
+<h3 id="azure의-논리-구조"><strong>Azure의 논리 구조</strong></h3>
+<p><img src="/Azure/Azure3.png" alt="" /></p>
+<h1 id="heading-11"></h1>
+<ul>
+<li>
+<p><strong>구독은 Azure 제품 및 서비스에 대한 인증되고 승인된 엑세스를 제공</strong></p>
+</li>
+<li>
+<p><strong>구독은 청구 및 접근제어 관련된 기능을 제공</strong></p>
+</li>
+<li>
+<p><strong>한 Azure 계정은 한 개 혹은 여러 게의 구독을 가질 수 있음</strong></p>
+</li>
+<li>
+<p><strong>Azure라는 건물에서 각 층별로 리소스를 사용하는 것과 빗대어 생각</strong></p>
+</li>
+</ul>
+<h1 id="heading-12"></h1>
+<ul>
+<li><strong>비용</strong>
+<ul>
+<li>
+<p><strong>구독은 사용하는 모든 서비스의 비용을 지불하는 것과 연관이 있음</strong></p>
+</li>
+<li>
+<p><strong>예시로 층별(서비스)별 사용료</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-13"></h1>
+<p> </p>
+<ul>
+<li><strong>접근제어</strong>
+<ul>
+<li>
+<p><strong>구독은 특정 사용자와 특정 서비스의 권한에 대하 연관이 있음</strong></p>
+</li>
+<li>
+<p><strong>예시로 층별(서비스)별 접근권한</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-14"></h1>
+<p> </p>
+<ul>
+<li><strong>기술적 제한</strong>
+<ul>
+<li>
+<p><strong>특정 리소스를 만들어야 할때 특정 공간</strong></p>
+</li>
+<li>
+<p><strong>예시로 층별(서비스)를 서비스 한도</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-15"></h1>
+<p> </p>
+<h1 id="heading-16"></h1>
+<h3 id="괸리-그룹"><strong>괸리 그룹</strong></h3>
+<h1 id="heading-17"></h1>
+<ul>
+<li>
+<p><strong>하나의 관리 그룹은 여러 개의 구독을 포함할 수 있음</strong></p>
+</li>
+<li>
+<p><strong>구독은 관리그룹에서 적용된 사항을 상속받을 수 있음</strong></p>
+</li>
+<li>
+<p><strong>하나의 디렉토리에서 최대 10,000개의 관리 그룹을 지원할 수 있음</strong></p>
+</li>
+<li>
+<p><strong>관리 그룹은 최대 6개의 레벨의 트리구조를 지원함</strong></p>
+</li>
+</ul>
+<h1 id="heading-18"></h1>
+<p> </p>
+<h1 id="heading-19"></h1>
+<h3 id="리소스-그룹"><strong>리소스 그룹</strong></h3>
+<h1 id="heading-20"></h1>
+<ul>
+<li>
+<p><strong>동일한 라이프사이클을 가지는 여러 리소스에 대한 논리적 그룹</strong></p>
+</li>
+<li>
+<p><strong>리소스를 관리 가능한 단일 단위로 집계하는 컨테이너 역할</strong></p>
+</li>
+<li>
+<p><strong>모든 Azure 리소스는 하나의 리소스 그룹에만 존재</strong></p>
+</li>
+<li>
+<p><strong>RBAC을 토해 리소스 그룹 권한 관리 지원</strong></p>
+</li>
+</ul>
+<h1 id="heading-21"></h1>
+<p> </p>
+<h1 id="heading-22"></h1>
+<h3 id="azure-resource-manger--arm"><strong>Azure Resource Manger : ARM</strong></h3>
+<h1 id="heading-23"></h1>
+<ul>
+<li>
+<p><strong>Azure 구독 내의 리소스에 대한 생성, 구성, 관리 및 삭제되는 관리 계층을 제공</strong></p>
+</li>
+<li>
+<p><strong>리소스 및 리소스 그룹 생성, 구성 관리 및 삭제</strong></p>
+</li>
+<li>
+<p><strong>리소스 조직화</strong></p>
+</li>
+<li>
+<p><strong>엑세스 및 리소스 제어</strong></p>
+</li>
+<li>
+<p><strong>다양한 도구 및 SDK를 사용한 자동화 지원</strong></p>
+</li>
+</ul>
+<h1 id="heading-24"></h1>
+<p> </p>
+<h1 id="heading-25"></h1>
+<h3 id="iot-솔루션-internet-of-things"><strong>IOT 솔루션 (Internet of Things)</strong></h3>
+<h1 id="heading-26"></h1>
+<ul>
+<li>
+<p><strong>Azure IoT Central</strong></p>
+<ul>
+<li><strong>보다 손 쉬운 IOT 서비스 구축을 위한 SaaS 형태의 관리형 서비스,  (디바이스 연결, 모니터 그리고 관리 및 확장 지원)</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-27"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Azure IoT Hub</strong></p>
+<ul>
+<li><strong>클라우드 기반의 IOT 관리 플랫폼 서비스  (중앙 메시지 허브, 양방향 통신 및 관리)</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-28"></h1>
+<p> </p>
+<h1 id="heading-29"></h1>
+<h3 id="빅-데이터-분석-솔루션-big-data-and-analytics"><strong>빅 데이터 분석 솔루션 (Big data and analytics)</strong></h3>
+<h1 id="heading-30"></h1>
+<ul>
+<li>
+<p><strong>Azure Sysnapse Analytics</strong></p>
+<ul>
+<li><strong>클라우드 기반의 수십 페타의 데이터를 MPP기반으로 빠르게 처리할 수 있는 온 디맨드 분석을 지원하여 인사이트를 찾아낼 수 있는 솔루션</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-31"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Azure HDInsight</strong></p>
+<ul>
+<li><strong>오픈소스 기반의 Hadoop을 관리되는 형태의 서비스를 제공, 쉽고 빠르고 비용 효율적으로 데이터 처리가 가능</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-32"></h1>
+<p> </p>
+<h1 id="heading-33"></h1>
+<h3 id="인공지능-artificial-intelligence"><strong>인공지능 (Artificial Intelligence</strong></h3>
+<h1 id="heading-34"></h1>
+<ul>
+<li>
+<p><strong>Azure Machin Learning service</strong></p>
+<ul>
+<li><strong>SDK 기반으로 손쉽게 code를 작성하고 train, test, deploy, manage 및 track 할 수 있는 플랫폼을 제공</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-35"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Azure Machine Learning Studio)</strong></p>
+<ul>
+<li><strong>GUI 기반으로 코드 없이도 손쉽게 ML model을 만들고 테스트를 배퐇라 수 있는 플랫폼을 제공</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-36"></h1>
+<p> </p>
+<h1 id="heading-37"></h1>
+<h3 id="서버리스-serveless-computing"><strong>서버리스 (Serveless computing)</strong></h3>
+<h1 id="heading-38"></h1>
+<ul>
+<li>
+<p><strong>Azure Functions</strong></p>
+<ul>
+<li><strong>서비스를 위한 코드에 집중 (인프라 및 플랫폼으로 부터의 자유도 확보)</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-39"></h1>
+<p> </p>
+<ul>
+<li><strong>Azure Logic Apps</strong>
+<ul>
+<li>
+<p><strong>작업 및 비즈니스 프로세스를 자동화하고 오케스트레이션 할 수 있도록 서비스 제공</strong></p>
+</li>
+<li>
+<p><strong>엔터프라이즈 환경에서 앱, 데이터 긜고 시스템의 통합을 지원</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-40"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Azure Event Grid</strong></p>
+<ul>
+<li><strong>배포와 구독형태의 이벤트 소비를 위한 관리형 엔진 기반의 이벤트 라우팅 서비스</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-41"></h1>
+<p> </p>
+<h1 id="heading-42"></h1>
+<h3 id="devops"><strong>DevOps</strong></h3>
+<h1 id="heading-43"></h1>
+<ul>
+<li><strong>Azure DevOps services</strong>
+<ul>
+<li>
+<p><strong>클라우드 기반의 통합 개발 협업 서비스 (CI/CD) 제공</strong></p>
+</li>
+<li>
+<p><strong>파이프라인, Git 저장소, 오픈 소스 연계 등</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-44"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Azure DevTest Labs</strong></p>
+<ul>
+<li><strong>쉽고 빠르게 재사용 가능한 템플릿을 통해 배포하여 최신 개발 코드를 배포 및 테스트 가능</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-45"></h1>
+<p> </p>
+<h1 id="heading-46"></h1>
+<h2 id="azure-관리-도구"><strong>Azure 관리 도구</strong></h2>
+<h1 id="heading-47"></h1>
+<ul>
+<li>
+<p><strong>Azure Advisor</strong></p>
+<ul>
+<li><strong>배포된 Azure 리소스를 분석하고 가용성, 보안, 성능, 비용측면을 개선하는 방법을 제공</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-48"></h1>
+<p> </p>
+<ul>
+<li><strong>Azure quick start templates</strong>
+<ul>
+<li>
+<p><strong>사전에 code로 설정이 되어 있는 탬플릿을 토대로 리소스를 배포할 수 있게 도와주는 도구</strong></p>
+</li>
+<li>
+<p><strong>JSON 형태를 가지고 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-49"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>PowerShell</strong></p>
+<ul>
+<li><strong>Window 사용자를 위한 Shell로 Azure 서비스를 관리할 수 있다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-50"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Azure CLI</strong></p>
+<ul>
+<li><strong>BASH Shell을 사용하여 Azure 서비스를 관리할 수 있다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-51"></h1>
+<p> </p>
+<h1 id="heading-52"></h1>
+<h3 id="네트워크-연결-보호"><strong>네트워크 연결 보호</strong></h3>
+<h1 id="heading-53"></h1>
+<ul>
+<li><strong>심층보호 (Denfense in depth)</strong>
+<ul>
+<li>
+<p><strong>컴퓨터 시스템의 안전한 보호를 위한 대한 단계적 접근 방식을 구현</strong></p>
+</li>
+<li>
+<p><strong>여러 수준의 보호를 제공</strong></p>
+</li>
+<li>
+<p><strong>한 레이어에 대한 공격은 후속 레이어에서 격리</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-54"></h1>
+<p> </p>
+<ul>
+<li><strong>공동 책임 (Shared security)</strong>
+<ul>
+<li>
+<p><strong>고객이 제저아흔 데이터센터에서 클라우드 기반 데이터 센터로 마이그레이션하면 보안에 대한 책임 변경이 발생</strong></p>
+</li>
+<li>
+<p><strong>보안은 클라우드 공급자와 고객 간의 공통 관심사가 됨</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-55"></h1>
+<p> </p>
+<ul>
+<li><strong>방화벽 (Azure Firewall)</strong>
+<ul>
+<li>
+<p><strong>네트워크 리소스를 보호하기 위해 IP주소를 기반으로 서버 엑세스를 허용/ 거부하도록 하는 PaaS 형태의 방화벽 서비스</strong></p>
+</li>
+<li>
+<p><strong>인 바운드 및 아웃바운드 트래픽 필터링 규칙 적용</strong></p>
+</li>
+<li>
+<p><strong>고 가용성이 내장</strong></p>
+</li>
+<li>
+<p><strong>아웃바운드에서만 애플리케이션 레이어서의 프로텍션을 제공</strong></p>
+</li>
+<li>
+<p><strong>무제한 클라우드 확정성</strong></p>
+</li>
+<li>
+<p><strong>Azure 모니터 로깅을 사용</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-56"></h1>
+<p> </p>
+<ul>
+<li><strong>Azure Distributed Denial of Service (DDoS)</strong>
+<ul>
+<li>
+<p><strong>DDoS는 지속적인 공격으로 피해자의 리소스를 소모시켜 마비시키는 공격</strong></p>
+</li>
+<li>
+<p><strong>서비스 가용성에 영향을 미치기전에 원치 않는 네트워크 트래픽을 제공</strong></p>
+</li>
+<li>
+<p><strong>베이직은 기본적으로 제공</strong></p>
+</li>
+<li>
+<p><strong>스탠다드는 보다 나은 완화기능 (머신러닝 기반의 어댑티브 튜닝 등)</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-57"></h1>
+<p> </p>
+<ul>
+<li><strong>네트워크 보안 그룹 (Network Security Groups : NSGs)</strong>
+<ul>
+<li>
+<p><strong>Azure 가상 네트워크에서 Azure 리소스로의 네트어크 트래픽을 필터링</strong></p>
+</li>
+<li>
+<p><strong>소스 및 대상 IPㅈ소, 포트 및 프로토콜로 필터링하도록 인 바운드 및 아웃바운드 규칙의 설정이 가능</strong></p>
+</li>
+<li>
+<p><strong>필요에 따라 구독 한도 내에서 여러 규칙을 추가가능</strong></p>
+</li>
+<li>
+<p><strong>Azure는 세 NSG에 기본적인 기준, 보안 규칙을 적용</strong></p>
+</li>
+<li>
+<p><strong>우선 순위가 높은 규칙으로 기본 규칙 재정의 가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-58"></h1>
+<p> </p>
+<h1 id="heading-59"></h1>
+<h3 id="azure-네트워크-보안-솔루션-선택"><strong>Azure 네트워크 보안 솔루션 선택</strong></h3>
+<h1 id="heading-60"></h1>
+<ul>
+<li><strong>경계 레이어 (Perimeter layer)</strong>
+<ul>
+<li><strong>Azure DDoS 보호 및 Azure 방화벽을 통해 네트워크 경계를 보호</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-61"></h1>
+<p> </p>
+<ul>
+<li><strong>네트워크 레이어 (Networking layer)</strong>
+<ul>
+<li><strong>NSG(네트워크 보안 그룹) 인 바운드 및 아웃바운드 규칙을 사용하여 네트워크 리소스 간에 허용된 트래픽만 하용</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-62"></h1>
+<p> </p>
+<h1 id="heading-63"></h1>
+<h3 id="핵심-azure-identity-서비스"><strong>핵심 Azure Identity 서비스</strong></h3>
+<h1 id="heading-64"></h1>
+<ul>
+<li><strong>인증 및 권한 (Azure Active Deirctory : AAD)</strong>
+<ul>
+<li>
+<p><strong>Microsoft Azure의 클라우드 기반 신원 확인 및 접근 관리 서비스</strong></p>
+</li>
+<li>
+<p><strong>단일인증 (SSO)</strong></p>
+</li>
+<li>
+<p><strong>응용 프로그램 관리</strong></p>
+</li>
+<li>
+<p><strong>B2B (Federation)</strong></p>
+</li>
+<li>
+<p><strong>B2C (Consumer) ID 서비스</strong></p>
+</li>
+<li>
+<p><strong>디바이스 관리</strong></p>
+</li>
+<li>
+<p><strong>인증 (Authentication)</strong></p>
+<ul>
+<li><strong>리소스에 대한 엑세스를 원하는 사람 또는 서비스를 식별</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>권한부야 (Authoizotion)</strong></p>
+<ul>
+<li><strong>리소스에 대한 사용권한을 원하는 사람 또는 서비스에게 제공</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-65"></h1>
+<p> </p>
+<ul>
+<li><strong>다단계인증 (Azure Multi-Factor Authentication)</strong>
+<ul>
+<li>
+<p><strong>전체 인증을 위해 두 개 이상의 요소를 요구하여 신원 확인에 대한 추가 보안을 제공</strong></p>
+</li>
+<li>
+<p><strong>보통 세가지 범류로 분류</strong></p>
+<ul>
+<li>
+<p><strong>당신이 알고 있는 것</strong></p>
+</li>
+<li>
+<p><strong>당신이 가지고 있는 것</strong></p>
+</li>
+<li>
+<p><strong>당신 임을 증명할 수 있는 것</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-66"></h1>
+<p> </p>
+<h1 id="heading-67"></h1>
+<h3 id="보안-도구"><strong>보안 도구</strong></h3>
+<h1 id="heading-68"></h1>
+<ul>
+<li><strong>보안센터 (Azure Security Center)</strong>
+<ul>
+<li>
+<p><strong>Azure 온-프레미스 서비스에 대한 위협 보호 기능을 제공하는 모니터링 서비스</strong></p>
+</li>
+<li>
+<p><strong>구성된 설정, 리소스 및 네트워크에 따라 보안 권장사항을 제공</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-69"></h1>
+<p> </p>
+<ul>
+<li><strong>보안 센터 시용 시나리오</strong>
+<ul>
+<li>
+<p><strong>장애 시, 감지, 평가 및 진단 단계에서 보안 세터를 사용</strong></p>
+</li>
+<li>
+<p><strong>감지, 평가, 진단만 모니터링 나머지는 자기자신이 해결</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-70"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>키 자격증명 (Azure Key Vault)</strong></p>
+<ul>
+<li><strong>응용 프로그램 보안을 중앙 집중식 클라우드에 저장하여 액세스 권한을 안전하게 제어 (접근 등에 대한 로깅 및 관리)</strong>
+<ul>
+<li>
+<p><strong>비밀번호 관리</strong></p>
+</li>
+<li>
+<p><strong>키 관리</strong></p>
+</li>
+<li>
+<p><strong>인증서 관리</strong></p>
+</li>
+<li>
+<p><strong>하드웨어 보안 모듈 (HSM)을 지원하는 장비에 저장된 비밀번호 정보 가져오기 지원</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-71"></h1>
+<p> </p>
+<ul>
+<li><strong>정보보호 (Azure Information Protecton : AIP)</strong>
+<ul>
+<li>
+<p><strong>레이블을 적용하여 문서 및 전자 메일을 분류하고 보호</strong></p>
+</li>
+<li>
+<p><strong>관리자가 정의한 규칙 및 조건을 자동으로 사용 가능</strong></p>
+</li>
+<li>
+<p><strong>사용자가 수동으로 적용, 활용지원</strong></p>
+</li>
+<li>
+<p><strong>권장 사항에 따라 자동 및 수동 방법을 결합할 수 있음</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-72"></h1>
+<p> </p>
+<ul>
+<li><strong>고급위협보호 (Azure Advanced Threat Protection : ATP)</strong>
+<ul>
+<li>
+<p><strong>지능형 위협, 손상된 ID 및 악의적인 내부자 작업을 식별, 탐지 및 조사하기 위한 클라우드 기반 보안 솔루션</strong></p>
+</li>
+<li>
+<p><strong>Portal : 의심스러운 활동을 모니터링하고 대응하기 위한 전용 포털</strong></p>
+</li>
+<li>
+<p><strong>Sensorts : 도메인 컨트롤러에 직접 설치</strong></p>
+</li>
+<li>
+<p><strong>Cloud Service : Azure 인프라에서 실행</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-73"></h1>
+<p> </p>
+<h1 id="heading-74"></h1>
+<h3 id="azure-커버넌스-방법론"><strong>Azure 커버넌스 방법론</strong></h3>
+<h1 id="heading-75"></h1>
+<ul>
+<li><strong>정책 (Azure Policy)</strong>
+<ul>
+<li>
+<p><strong>Azure 리소스에 대한 규칙을 적용하기 위해 정책을 사용하여 회사 표준 및 서비스 수준 계약(SLA)을 준수할 수 있음</strong></p>
+</li>
+<li>
+<p><strong>정책을 준수하지 않는 Azure 리소스를 평가하고 식별</strong></p>
+</li>
+<li>
+<p><strong>스토리지, 네트워킹, 컴퓨팅, 보안 센터 및 모니터링과 같은 범주에서 기본 제공 정책 및 이니셔티브 정의를 제공</strong></p>
+</li>
+<li>
+<p><strong>정책 정의 &ndash;&gt; 리소스 정책 할당 &ndash;&gt; 평가 검토</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-76"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>정책 이니셔티브 (Policy Initiatives)</strong></p>
+<ul>
+<li><strong>이니셔티브는 Azure 정책과 함께 작동</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-77"></h1>
+<p> </p>
+<ul>
+<li><strong>역할 기반 액세스 제어 (RBAC)</strong>
+<ul>
+<li>
+<p><strong>Azure 리소스에 대한 세분화된 엑세스 관리 제어 기능</strong></p>
+</li>
+<li>
+<p><strong>팀 내에 책임을 분리하여 그 작업을 수행하는 데 필요한 사용자에게만 적당한 권한을 부여</strong></p>
+</li>
+<li>
+<p><strong>Azure 포털 및 리스스의 접근을 허용 및 거부하도록 설정 지원</strong></p>
+</li>
+</ul>
+</li>
+<li><strong>잠금 (Resource locks)</strong>
+<ul>
+<li>
+<p><strong>실수로 삭제하거나 수정하지 않도록 Azure 리소스를 보호</strong></p>
+</li>
+<li>
+<p><strong>Azure Portal 에서 구독, 리소스 구룹 또는 개별 리소스 수준에서 잠금을 관리 (상속 지원)</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-78"></h1>
+<p> </p>
+<ul>
+<li><strong>Azure Blueprints</strong>
+<ul>
+<li>
+<p><strong>Azure 리소스 및 정책들을 즉시 재생성 할 수 있도록 재사용 가능한 환경 정의를 만들 수 있다</strong></p>
+</li>
+<li>
+<p><strong>기본 제공 도구 및 아티팩트를 사용하여 배포를 감사하고 추적하고 규정 준수를 유지</strong></p>
+</li>
+<li>
+<p><strong>Blueprint를 특정 Azure DevOps 빌드 아디펙트 및 릴리스 파이프라인과 연결하여 엄격한 추적을 수행</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-79"></h1>
+<p> </p>
+<h1 id="heading-80"></h1>
+<h3 id="모니터링-및-리포트"><strong>모니터링 및 리포트</strong></h3>
+<h1 id="heading-81"></h1>
+<ul>
+<li><strong>태그 (Tags)</strong>
+<ul>
+<li>
+<p><strong>Azure 리소스에 대한 메타 데이타 지원</strong></p>
+</li>
+<li>
+<p><strong>{키-값} 쌍으로 구성</strong></p>
+</li>
+<li>
+<p><strong>논리적으로 리소스를 분류하기 위해 활용</strong></p>
+</li>
+<li>
+<p><strong>청구 혹은 관리용 데이터 분석에 용이</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-82"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>모니터 (Azure Monitor)</strong></p>
+<ul>
+<li><strong>클라우드 및 온-프레미스 환경에서 원격 데이터를 수집, 분석 및 사용하여 애플리케이션의 가용성과 성능을 극대화</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-83"></h1>
+<p> </p>
+<ul>
+<li><strong>서비스건강 (Azure Service Health)</strong></li>
+</ul>
+<h1 id="heading-84"></h1>
+<p> </p>
+<h1 id="heading-85"></h1>
+<h3 id="규정-준수-약관-및-요구사항"><strong>규정 준수 약관 및 요구사항</strong></h3>
+<h1 id="heading-86"></h1>
+<ul>
+<li><strong>Microsoft는 다른 클라우드 서비스 공급자보다 가장 포괄적인 compliance offerings (인증 및 증명)을 제공</strong></li>
+</ul>
+<h1 id="heading-87"></h1>
+<p> </p>
+<h1 id="heading-88"></h1>
+<h3 id="azure-가격-책정-및-지원"><strong>Azure 가격 책정 및 지원</strong></h3>
+<h1 id="heading-89"></h1>
+<h3 id="azure-구매-및-관리"><strong>Azure 구매 및 관리</strong></h3>
+<p><a href="https://azure.microsoft.com/ko-kr/support/plans/">https://azure.microsoft.com/ko-kr/support/plans/</a>
+<a href="https://azure.microsoft.com/ko-kr/resources/knowledge-center">https://azure.microsoft.com/ko-kr/resources/knowledge-center</a></p>
+<pre><code>살펴보기 목록
+Mircrosoft Learn https://docs.microsoft.com/ko-kr/learn/?ocid=AID3001216
+
+Azure 기본 과정 랩 https://github.com/MicrosoftLearningKoreanLab/AZ-900TKR-MicrosoftAzureFundamentals/
+
+Azure 기본 과정 온라인 https://docs.microsoft.com/ko-kr/learn/paths/azure-fundamentals/
+
+AZ-900 자격증 시험 https://docs.microsoft.com/ko-kr/learn/certifications/certification-exam-policies
+</code></pre></article>
  
       
 
@@ -1278,6 +2172,166 @@
     <li>
       <ul>
         <li><a href="#heading-5">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#azure-논리적-아키텍처-이해하기"><strong>Azure 논리적 아키텍처 이해하기</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#구독"><strong>구독</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure의-논리-구조"><strong>Azure의 논리 구조</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#괸리-그룹"><strong>괸리 그룹</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#리소스-그룹"><strong>리소스 그룹</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-resource-manger--arm"><strong>Azure Resource Manger : ARM</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#iot-솔루션-internet-of-things"><strong>IOT 솔루션 (Internet of Things)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#빅-데이터-분석-솔루션-big-data-and-analytics"><strong>빅 데이터 분석 솔루션 (Big data and analytics)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#인공지능-artificial-intelligence"><strong>인공지능 (Artificial Intelligence</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#서버리스-serveless-computing"><strong>서버리스 (Serveless computing)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#devops"><strong>DevOps</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#azure-관리-도구"><strong>Azure 관리 도구</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#네트워크-연결-보호"><strong>네트워크 연결 보호</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-네트워크-보안-솔루션-선택"><strong>Azure 네트워크 보안 솔루션 선택</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#핵심-azure-identity-서비스"><strong>핵심 Azure Identity 서비스</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#보안-도구"><strong>보안 도구</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-커버넌스-방법론"><strong>Azure 커버넌스 방법론</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#모니터링-및-리포트"><strong>모니터링 및 리포트</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#규정-준수-약관-및-요구사항"><strong>규정 준수 약관 및 요구사항</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-가격-책정-및-지원"><strong>Azure 가격 책정 및 지원</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-구매-및-관리"><strong>Azure 구매 및 관리</strong></a></li>
       </ul>
     </li>
   </ul>

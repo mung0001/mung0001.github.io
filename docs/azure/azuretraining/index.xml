@@ -13,20 +13,14 @@
     
     <item>
       <title>Azure </title>
-      <link>https://mung0001.github.io/docs/azure/azuretraining/base-copy-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/azure/azuretraining/base-copy-2/</guid>
-      <description>****   ****         ****        </description>
-    </item>
-    
-    <item>
-      <title>Azure </title>
       <link>https://mung0001.github.io/docs/azure/azuretraining/base-copy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/azure/azuretraining/base-copy/</guid>
-      <description>****   ****         ****        </description>
+      <description>****   ****         ****         Azure 논리적 아키텍처 이해하기  구독  Azure의 논리 구조    구독은 Azure 제품 및 서비스에 대한 인증되고 승인된 엑세스를 제공
+  구독은 청구 및 접근제어 관련된 기능을 제공
+  한 Azure 계정은 한 개 혹은 여러 게의 구독을 가질 수 있음
+  Azure라는 건물에서 각 층별로 리소스를 사용하는 것과 빗대어 생각</description>
     </item>
     
     <item>
@@ -50,6 +44,31 @@
     </item>
     
     <item>
+      <title>Azure : Region</title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/azure01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure01/</guid>
+      <description>Azure 글로벌 인프라 아키텍처   Microsoft Geography     Azure는 전 세계를 지정학적 경계 또는 국가 경계로 정의되는 지리적 위치로 분할합니다.
+  Azure Geography란 일반적으로 데이터 상주성 및 규정 준수 경계를 유지하는 두 개 이상의 Azure 지역을 포함하고 있는 별도의 시장을 의미합니다.
+  Azure Geography을 사용하면 아래와 같은 이점을 가질 수 있습니다.
+  지리적 위치를 통해 특정 데이터 상주성 및 규정 준수 요구 사항이 있는 고객은 데이터와 애플리케이션을 가깝게 유지할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>Azure : 관리옵션</title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/azure02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure02/</guid>
+      <description>Azure 관리옵션   Azure 관리옵션의 다양한 종류    Azure의 관리는 다양한 도구 및 플랫폼을 사용하여 Azure을 구성하고 관리할 수 있습니다.
+  명령줄, 언어별 SDK, 개발자 도구, 마이그레이션 도구 등에 제공되는 여러 도구가 있습니다.
+  하단은 가장 일상적으로 사용되는 관리 및 조작에 주로 사용되는 도구들입니다.
+  Azure Portal : GUI를 통해 Azure 조작
+  Azure PowerShell 및 Azure CLI : 명령줄 및 자동화 기반으로 Azure 조작</description>
+    </item>
+    
+    <item>
       <title>Azure 학생 계정생성</title>
       <link>https://mung0001.github.io/docs/azure/azuretraining/base-copy-3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -66,23 +85,11 @@
     </item>
     
     <item>
-      <title>Azure : Region</title>
-      <link>https://mung0001.github.io/docs/azure/azuretraining/azure01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure01/</guid>
-      <description>Azure 글로벌 인프라 아키텍처   Microsoft Geography     Azure는 전 세계를 지정학적 경계 또는 국가 경계로 정의되는 지리적 위치로 분할합니다.
-  Azure Geography란 일반적으로 데이터 상주성 및 규정 준수 경계를 유지하는 두 개 이상의 Azure 지역을 포함하고 있는 별도의 시장을 의미합니다.
-  Azure Geography을 사용하면 아래와 같은 이점을 가질 수 있습니다.
-  지리적 위치를 통해 특정 데이터 상주성 및 규정 준수 요구 사항이 있는 고객은 데이터와 애플리케이션을 가깝게 유지할 수 있습니다.</description>
-    </item>
-    
-    <item>
       <title>Azure Fundamentaks 2</title>
-      <link>https://mung0001.github.io/docs/azure/azuretraining/azure2/</link>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/azure12/</link>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure2/</guid>
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure12/</guid>
       <description>Microsoft Azure Virtual Training Day: Fundamentals 2   IOT 솔루션 (Internet of Things)   Azure IoT Central  보다 손 쉬운 IOT 서비스 구축을 위한 SaaS 형태의 관리형 서비스, (디바이스 연결, 모니터 그리고 관리 및 확장 지원)       Azure IoT Hub  클라우드 기반의 IOT 관리 플랫폼 서비스 (중앙 메시지 허브, 양방향 통신 및 관리)       빅 데이터 분석 솔루션 (Big data and analytics)   Azure Sysnapse Analytics  클라우드 기반의 수십 페타의 데이터를 MPP기반으로 빠르게 처리할 수 있는 온 디맨드 분석을 지원하여 인사이트를 찾아낼 수 있는 솔루션       Azure HDInsight  오픈소스 기반의 Hadoop을 관리되는 형태의 서비스를 제공, 쉽고 빠르고 비용 효율적으로 데이터 처리가 가능       인공지능 (Artificial Intelligence   Azure Machin Learning service  SDK 기반으로 손쉽게 code를 작성하고 train, test, deploy, manage 및 track 할 수 있는 플랫폼을 제공       Azure Machine Learning Studio  GUI 기반으로 코드 없이도 손쉽게 ML model을 만들고 테스트를 배퐇라 수 있는 플랫폼을 제공       서버리스 (Serveless computing)   Azure Functions  서비스를 위한 코드에 집중 (인프라 및 플랫폼으로 부터의 자유도 확보)       Azure Logic Apps  작업 및 비즈니스 프로세스를 자동화하고 오케스트레이션 할 수 있도록 서비스 제공 엔터프라이즈 환경에서 앱, 데이터 긜고 시스템의 통합을 지원       Azure Event Grid  배포와 구독형태의 이벤트 소비를 위한 관리형 엔진 기반의 이벤트 라우팅 서비스       DevOps   Azure DevOps services  클라우드 기반의 통합 개발 협업 서비스 (CI/CD) 제공 파이프라인, Git 저장소, 오픈 소스 연계 등       Azure DevTest Labs  쉽고 빠르게 재사용 가능한 템플릿을 통해 배포하여 최신 개발 코드를 배포 및 테스트 가능       Azure 관리 도구   Azure Advisor  배포된 Azure 리소스를 분석하고 가용성, 보안, 성능, 비용측면을 개선하는 방법을 제공       Azure quick start templates  사전에 code로 설정이 되어 있는 탬플릿을 토대로 리소스를 배포할 수 있게 도와주는 도구 JSON 형태를 가지고 있다.</description>
     </item>
     
