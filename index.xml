@@ -1313,6 +1313,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>Az-900 문제풀이</title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/az-900/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/az-900/</guid>
+      <description>Az-900 시험대비 문제풀이    다음 각 명령문에 대해 해당 명령문이 참이면 Yes 거짓이면 No를 선택하십시오.      문제 Yes No     PaaS는 Azure 서비스에서 모든 시스템의 제공하고 호스트는 웹, 애플리케이션을 모두 컨트롤 한다.       PaaS의 웹, 애플리케이션에서 자동으로 Scale ability를 수행한다.       PaaS는 솔루션은 사용자 지정 응용 프로그램에 기능을 지속적으로 추가하는 전문 개발 서비스를 제공한다.</description>
+    </item>
+    
+    <item>
       <title>Azure 학생 계정생성</title>
       <link>https://mung0001.github.io/docs/azure/azuretraining/base-copy-3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
