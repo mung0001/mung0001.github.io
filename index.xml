@@ -50,34 +50,11 @@
     
     <item>
       <title>Azure </title>
-      <link>https://mung0001.github.io/docs/azure/azuretraining/base-copy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/azure/azuretraining/base-copy/</guid>
-      <description>****   ****         ****         Azure 논리적 아키텍처 이해하기  구독  Azure의 논리 구조    구독은 Azure 제품 및 서비스에 대한 인증되고 승인된 엑세스를 제공
-  구독은 청구 및 접근제어 관련된 기능을 제공
-  한 Azure 계정은 한 개 혹은 여러 게의 구독을 가질 수 있음
-  Azure라는 건물에서 각 층별로 리소스를 사용하는 것과 빗대어 생각</description>
-    </item>
-    
-    <item>
-      <title>Azure </title>
       <link>https://mung0001.github.io/docs/azure/azuretraining/base/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/azure/azuretraining/base/</guid>
       <description>****   ****         ****        </description>
-    </item>
-    
-    <item>
-      <title>Azure : CloudComputing</title>
-      <link>https://mung0001.github.io/docs/azure/azuretraining/azure00/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure00/</guid>
-      <description>Microsoft Azure : CloudComputing   클라우드 컴퓨팅    클라우드 컴퓨팅은 스토리지 공간이나 CPU 주기와 같은 리소스를 다른 회사의 컴퓨터에 대여하는 서비스이며 사용한 만큼의 요금만을 지불합니다.
-  클라우드 공급 기업은 작업을 싱행하는 데 필요한 실제 하드웨어와 이 하드웨어를 최신 상태로 유지할 책임이 존재하며, 제공되는 컴퓨팅 서비스는 클라우드 공급자에 따라 달라지며, 일반적으로는 하단의 항목이 기본적으로 포함됩니다.
-     Compute power : 리눅스 서버나 웹 프로그램</description>
     </item>
     
     <item>
@@ -212,18 +189,6 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
-      <title>Azure : Region</title>
-      <link>https://mung0001.github.io/docs/azure/azuretraining/azure01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure01/</guid>
-      <description>Azure 글로벌 인프라 아키텍처   Microsoft Geography     Azure는 전 세계를 지정학적 경계 또는 국가 경계로 정의되는 지리적 위치로 분할합니다.
-  Azure Geography란 일반적으로 데이터 상주성 및 규정 준수 경계를 유지하는 두 개 이상의 Azure 지역을 포함하고 있는 별도의 시장을 의미합니다.
-  Azure Geography을 사용하면 아래와 같은 이점을 가질 수 있습니다.
-  지리적 위치를 통해 특정 데이터 상주성 및 규정 준수 요구 사항이 있는 고객은 데이터와 애플리케이션을 가깝게 유지할 수 있습니다.</description>
-    </item>
-    
-    <item>
       <title>Docker 환경구축</title>
       <link>https://mung0001.github.io/docs/docker/docker/docker-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -307,19 +272,6 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/aws/amazonwebservice/aws_storage/</guid>
       <description>AWS Storage   S3 ( Simple Storage Service )    웹 서비스 인터페이스( HTTP ) 를 이용하여 웹에서 언제 어디서나 원하는 양의 데이터를 저장하고 검색할 수 있는 스토리지 버킷( Bucket )과 객체 ( Object )로 나뉘며, 저장하고자 하는 모든 요소는 하나의 객체로 저장되고, 객체를 담는 곳이 버킷 S3 자체는 글로벌 서비스이지만 버킷을 생성 할 때에는 리전을 선택해야 함 객체는 객체 데이터와 메타 데이터로 나뉘며, 각자의 고유한 URL을 가지며 해당 URL로 접속 가능   버킷( Bucket )의 정의와 특징  객체를 담고 있는 구성 요소 크기는 무제한, 리전을 지정하여 버킷을 생성해야 함 버킷의 이름은 반드시 고유해야하며, 증복이 불가능 한번 설정된 버킷의 이름은 다른 계정에서 사용불가   객체( Object ) 의 정의와 특징  S3에 업로드되는 1개의 데이터를 객체라 함 키, 버전 ID, 값, 메타데이터 등으로 구성 객체 하나의 최소 크기는 1(0) byte ~ 5TB 스토리지 클래스, 암호화, 태그, 메타데이터, 객체 잠금 설정 가능 객체의 크기가 매우 클 경우 멀티파트 업로드를 통해 신속하게 업로드 가능   객체의 스토리지 클래스  객체의 접근빈도 및 저장기안에 따라 결정되는 객체의 특성 Standard Type : 클래스를 선택하지 않을 경우 선택되는 일반적인 클래스 Strandard_IA(Ifrequent Access ) : 자주 엑세스하지는 않지만 즉시 액세스할 수 있는 데이터여야하는 경우 선택되는 클래스 One Zone_iA : Standard_IA와 기능은 동일하나 Standard_IA의 경우 세 곳의 AZ에 저장되는 것과 달리 한 군데의 AZ에만 저장되어 해당 AZ가 파괴될 경우 정보 손실 가능성 존재 ( 저장 요금이 적음 ) Intelligent tiering : 엑세스 빈도가 불규칙하여 빈도를 가늠하기 어려운 경우 선택되는 클래스 Glancier : 검색이 아닌 저장이 주용도인 스토리지로 저장요금이 위 클래스들보다 훨씬 저렴한, 다만 저장이 주용도이기 때문에 검색이 3~ 5시간이 소요 Glacier Deep Archive : 10년 이상 저장할 데이터를 저장하는 스토리지 클래스   S3 사용  S3 생성↕ S3 생성 1.</description>
-    </item>
-    
-    <item>
-      <title>Azure : 관리옵션</title>
-      <link>https://mung0001.github.io/docs/azure/azuretraining/azure02/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure02/</guid>
-      <description>Azure 관리옵션   Azure 관리옵션의 다양한 종류    Azure의 관리는 다양한 도구 및 플랫폼을 사용하여 Azure을 구성하고 관리할 수 있습니다.
-  명령줄, 언어별 SDK, 개발자 도구, 마이그레이션 도구 등에 제공되는 여러 도구가 있습니다.
-  하단은 가장 일상적으로 사용되는 관리 및 조작에 주로 사용되는 도구들입니다.
-  Azure Portal : GUI를 통해 Azure 조작
-  Azure PowerShell 및 Azure CLI : 명령줄 및 자동화 기반으로 Azure 조작</description>
     </item>
     
     <item>
@@ -735,6 +687,18 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>Az-900 : CloudComputing</title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/azure00/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure00/</guid>
+      <description>Az-900 : CloudComputing   클라우드 컴퓨팅    클라우드 컴퓨팅은 스토리지 공간이나 CPU 주기와 같은 리소스를 다른 회사의 컴퓨터에 대여하는 서비스이며 사용한 만큼의 요금만을 지불합니다.
+  클라우드 공급 기업은 작업을 싱행하는 데 필요한 실제 하드웨어와 이 하드웨어를 최신 상태로 유지할 책임이 존재하며, 제공되는 컴퓨팅 서비스는 클라우드 공급자에 따라 달라지며, 일반적으로는 하단의 항목이 기본적으로 포함됩니다.
+     Compute power : 리눅스 서버나 웹 프로그램
+  Storage : 저장 및 데이터베이스 역할</description>
+    </item>
+    
+    <item>
       <title>Azure Computing</title>
       <link>https://mung0001.github.io/docs/azure/microsoftazure/azure00/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -772,6 +736,18 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/aws/awstraining/s3/</guid>
       <description>AWS S3 생성    이번 장에서는 S3를 생성해보도록 하겠습니다. S3 또한 중요한 개념이니, S3에 대한 학습을 원하는 분들은 AWS S3를 참조해주세요.    AWS S3 생성       AWS 서비스에서 S3를 검색합니다.      버킷 생성을 클릭합니다.      버킷의 이름과 리전을 선택합니다. 참고로 S3는 VPC에 영향을 받지 않습니다.      옵션을 선택합니다. 여기서는 기본 값으로 생성을 진행합니다.</description>
+    </item>
+    
+    <item>
+      <title>Az-900 : Region</title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/azure01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure01/</guid>
+      <description>Azure 글로벌 인프라 아키텍처   Microsoft Geography     Azure는 전 세계를 지정학적 경계 또는 국가 경계로 정의되는 지리적 위치로 분할합니다.
+  Azure Geography란 일반적으로 데이터 상주성 및 규정 준수 경계를 유지하는 두 개 이상의 Azure 지역을 포함하고 있는 별도의 시장을 의미합니다.
+  Azure Geography을 사용하면 아래와 같은 이점을 가질 수 있습니다.
+  지리적 위치를 통해 특정 데이터 상주성 및 규정 준수 요구 사항이 있는 고객은 데이터와 애플리케이션을 가깝게 유지할 수 있습니다.</description>
     </item>
     
     <item>
@@ -850,6 +826,19 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>Az-900 : 관리옵션</title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/azure02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure02/</guid>
+      <description>Azure 관리옵션   Azure 관리옵션의 다양한 종류    Azure의 관리는 다양한 도구 및 플랫폼을 사용하여 Azure을 구성하고 관리할 수 있습니다.
+  명령줄, 언어별 SDK, 개발자 도구, 마이그레이션 도구 등에 제공되는 여러 도구가 있습니다.
+  하단은 가장 일상적으로 사용되는 관리 및 조작에 주로 사용되는 도구들입니다.
+  Azure Portal : GUI를 통해 Azure 조작
+  Azure PowerShell 및 Azure CLI : 명령줄 및 자동화 기반으로 Azure 조작</description>
+    </item>
+    
+    <item>
       <title>Azure DataBase</title>
       <link>https://mung0001.github.io/docs/azure/microsoftazure/azure10/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -886,6 +875,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>Az-900 : 서비스</title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/azure12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure12/</guid>
+      <description>Az-900 : 서비스    서비스는 Link를 참조하세요.   IOT 솔루션 (Internet of Things)   Azure IoT Central  보다 손 쉬운 IOT 서비스 구축을 위한 SaaS 형태의 관리형 서비스, (디바이스 연결, 모니터 그리고 관리 및 확장 지원)       Azure IoT Hub  클라우드 기반의 IOT 관리 플랫폼 서비스 (중앙 메시지 허브, 양방향 통신 및 관리)       빅 데이터 분석 솔루션 (Big data and analytics)   Azure Sysnapse Analytics  클라우드 기반의 수십 페타의 데이터를 MPP기반으로 빠르게 처리할 수 있는 온 디맨드 분석을 지원하여 인사이트를 찾아낼 수 있는 솔루션       Azure HDInsight  오픈소스 기반의 Hadoop을 관리되는 형태의 서비스를 제공, 쉽고 빠르고 비용 효율적으로 데이터 처리가 가능       인공지능 (Artificial Intelligence   Azure Machin Learning service  SDK 기반으로 손쉽게 code를 작성하고 train, test, deploy, manage 및 track 할 수 있는 플랫폼을 제공       Azure Machine Learning Studio  GUI 기반으로 코드 없이도 손쉽게 ML model을 만들고 테스트를 배퐇라 수 있는 플랫폼을 제공       서버리스 (Serveless computing)   Azure Functions  서비스를 위한 코드에 집중 (인프라 및 플랫폼으로 부터의 자유도 확보)       Azure Logic Apps  작업 및 비즈니스 프로세스를 자동화하고 오케스트레이션 할 수 있도록 서비스 제공 엔터프라이즈 환경에서 앱, 데이터 긜고 시스템의 통합을 지원       Azure Event Grid  배포와 구독형태의 이벤트 소비를 위한 관리형 엔진 기반의 이벤트 라우팅 서비스       DevOps   Azure DevOps services  클라우드 기반의 통합 개발 협업 서비스 (CI/CD) 제공 파이프라인, Git 저장소, 오픈 소스 연계 등       Azure DevTest Labs  쉽고 빠르게 재사용 가능한 템플릿을 통해 배포하여 최신 개발 코드를 배포 및 테스트 가능       Azure 관리 도구   Azure Advisor  배포된 Azure 리소스를 분석하고 가용성, 보안, 성능, 비용측면을 개선하는 방법을 제공       Azure quick start templates  사전에 code로 설정이 되어 있는 탬플릿을 토대로 리소스를 배포할 수 있게 도와주는 도구 JSON 형태를 가지고 있다.</description>
+    </item>
+    
+    <item>
       <title>Azure Web</title>
       <link>https://mung0001.github.io/docs/azure/microsoftazure/azure04/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -913,6 +911,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <guid>https://mung0001.github.io/docs/aws/awssaa/saa-15/</guid>
       <description>15장 기출문제 정리  ****       ~
     </description>
+    </item>
+    
+    <item>
+      <title>Az-900 문제풀이</title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/az-900/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/az-900/</guid>
+      <description>Az-900 시험대비 문제풀이    다음 각 명령문에 대해 해당 명령문이 참이면 Yes 거짓이면 No를 선택하십시오.      문제 Yes No     PaaS는 Azure 서비스에서 모든 시스템의 제공하고 호스트는 웹, 애플리케이션을 모두 컨트롤 한다.       PaaS의 웹, 애플리케이션에서 자동으로 Scale ability를 수행한다.       PaaS는 솔루션은 사용자 지정 응용 프로그램에 기능을 지속적으로 추가하는 전문 개발 서비스를 제공한다.</description>
     </item>
     
     <item>
@@ -1313,15 +1320,6 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
-      <title>Az-900 문제풀이</title>
-      <link>https://mung0001.github.io/docs/azure/azuretraining/az-900/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/azure/azuretraining/az-900/</guid>
-      <description>Az-900 시험대비 문제풀이    다음 각 명령문에 대해 해당 명령문이 참이면 Yes 거짓이면 No를 선택하십시오.      문제 Yes No     PaaS는 Azure 서비스에서 모든 시스템의 제공하고 호스트는 웹, 애플리케이션을 모두 컨트롤 한다.       PaaS의 웹, 애플리케이션에서 자동으로 Scale ability를 수행한다.       PaaS는 솔루션은 사용자 지정 응용 프로그램에 기능을 지속적으로 추가하는 전문 개발 서비스를 제공한다.</description>
-    </item>
-    
-    <item>
       <title>Azure 학생 계정생성</title>
       <link>https://mung0001.github.io/docs/azure/azuretraining/base-copy-3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1367,15 +1365,6 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
   전공자라면 1주일도 충분히 가능하고, 비전공자여도 한 달이면 충분히 가능하다 생각됩니다.
        시험내용   기본적으로 시험범위가 상당히 넓어 초독에는 많은 시간이 필요하다 생각됩니다. 그렇기에 핵심키워드 위주로 공부하시고, 다독하시는 걸 추천드립니다.
   개정 후의 시험은 개정전과 많이 다르다고 공시되어 있지만, 또 그렇게 다르지도 않다고 많이들 말씀하셨습니다.</description>
-    </item>
-    
-    <item>
-      <title>Azure Fundamentaks 2</title>
-      <link>https://mung0001.github.io/docs/azure/azuretraining/azure12/</link>
-      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure12/</guid>
-      <description>Microsoft Azure Virtual Training Day: Fundamentals 2   IOT 솔루션 (Internet of Things)   Azure IoT Central  보다 손 쉬운 IOT 서비스 구축을 위한 SaaS 형태의 관리형 서비스, (디바이스 연결, 모니터 그리고 관리 및 확장 지원)       Azure IoT Hub  클라우드 기반의 IOT 관리 플랫폼 서비스 (중앙 메시지 허브, 양방향 통신 및 관리)       빅 데이터 분석 솔루션 (Big data and analytics)   Azure Sysnapse Analytics  클라우드 기반의 수십 페타의 데이터를 MPP기반으로 빠르게 처리할 수 있는 온 디맨드 분석을 지원하여 인사이트를 찾아낼 수 있는 솔루션       Azure HDInsight  오픈소스 기반의 Hadoop을 관리되는 형태의 서비스를 제공, 쉽고 빠르고 비용 효율적으로 데이터 처리가 가능       인공지능 (Artificial Intelligence   Azure Machin Learning service  SDK 기반으로 손쉽게 code를 작성하고 train, test, deploy, manage 및 track 할 수 있는 플랫폼을 제공       Azure Machine Learning Studio  GUI 기반으로 코드 없이도 손쉽게 ML model을 만들고 테스트를 배퐇라 수 있는 플랫폼을 제공       서버리스 (Serveless computing)   Azure Functions  서비스를 위한 코드에 집중 (인프라 및 플랫폼으로 부터의 자유도 확보)       Azure Logic Apps  작업 및 비즈니스 프로세스를 자동화하고 오케스트레이션 할 수 있도록 서비스 제공 엔터프라이즈 환경에서 앱, 데이터 긜고 시스템의 통합을 지원       Azure Event Grid  배포와 구독형태의 이벤트 소비를 위한 관리형 엔진 기반의 이벤트 라우팅 서비스       DevOps   Azure DevOps services  클라우드 기반의 통합 개발 협업 서비스 (CI/CD) 제공 파이프라인, Git 저장소, 오픈 소스 연계 등       Azure DevTest Labs  쉽고 빠르게 재사용 가능한 템플릿을 통해 배포하여 최신 개발 코드를 배포 및 테스트 가능       Azure 관리 도구   Azure Advisor  배포된 Azure 리소스를 분석하고 가용성, 보안, 성능, 비용측면을 개선하는 방법을 제공       Azure quick start templates  사전에 code로 설정이 되어 있는 탬플릿을 토대로 리소스를 배포할 수 있게 도와주는 도구 JSON 형태를 가지고 있다.</description>
     </item>
     
     <item>
