@@ -161,8 +161,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/aws/awssaa/saa-15/</guid>
-      <description>15장 기출문제 정리  ****       ~
-    </description>
+      <description>15장 기출문제 정리     문제 1 회사에는 산발적 인 사용 패턴이 있는 웹 응용 프로그램이 있습니다. 매월 초에 사용량이 많고 매주 초에 사용량이 많으며 주중에는 예측할 수없는 사용량이 있습니다. 응용 프로그램은 웹 서버와 데이터 센터 내부에서 실행되는 MySQL 데이터베이스 서버로 구성됩니다. 회사는 애플리케이션을 AWS 클라우드로 옮기고 데이터베이스 수정이 필요없는 비용 효율적인 데이터베이스 플랫폼을 선택해야 합니다.어떤 솔루션이 이러한 요구 사항을 충족합니까?A. Amazon DynamoDBB. MySQL 용 Amazon RDSC.</description>
     </item>
     
   </channel>
