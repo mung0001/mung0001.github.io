@@ -19,7 +19,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.3464addd321ed6a08be7144f01ba2226d3137722a1dc54a09e5c4103239807a0.js" integrity="sha256-NGSt3TIe1qCL5xRPAboiJtMTdyKh3FSgnlxBAyOYB6A="></script>
+<script defer src="/en.search.min.b39b597d351a5709532d6cef0e74419dc41bdb7c8c4ac5b30d4d9bec3a9fbb6b.js" integrity="sha256-s5tZfTUaVwlTLWzvDnRBncQb23yMSsWzDU2b7Dqfu2s="></script>
 <!--
 
 -->
@@ -2184,11 +2184,6 @@
         <li></li>
       </ul>
     </li>
-    <li><a href="#hahahugoshortcode-s112-hbhb">A. Amazon Aurora Global Database <br>
-B. Amazon DynamoDB global tables. <br>
-C. Amazon RDS for MySQL with Multi-AZ enabled. <br>
-D. Amazon RDS for MySQL with a cross-Region snapshot copy.
-HAHAHUGOSHORTCODE-s112-HBHB</a></li>
   </ul>
 
   <ul>
@@ -7379,7 +7374,7 @@ EC2 instances set up for Auto Scaling. Store the processed updates in Amazon Red
 C. Push score updates to an Amazon Simple Notification Service (Amazon SNS) topic. Subscribe an
 AWS Lambda function to the SNS topic to process the updates. Store the processed updates in a SOL
 database running on Amazon EC2. <br>
-D. Push score updates to an Amazon Simple Queue Service (Amazon SOS) queue. Use a fleet of
+D. Push score updates to an Amazon Simple Queue Service (Amazon SQS) queue. Use a fleet of
 Amazon EC2 instances with Auto Scaling to process the updates in the SQS queue. Store the
 processed updates in an Amazon RDS Multi-AZ DB instance.
 <div class="book-expand">
@@ -7425,7 +7420,7 @@ D. An AWS Lambda function can be deleted from the 220 100.16 0 20 network
 <p>A company needs to implement a relational database with a multi-Region disaster recovery
 Recovery Point Objective (RPO) of 1 second and an Recovery Time Objective (RTO) of 1 minute.
 Which AWS solution can achieve this?</p>
-<h2 id="hahahugoshortcode-s112-hbhb">A. Amazon Aurora Global Database <br>
+<p>A. Amazon Aurora Global Database <br>
 B. Amazon DynamoDB global tables. <br>
 C. Amazon RDS for MySQL with Multi-AZ enabled. <br>
 D. Amazon RDS for MySQL with a cross-Region snapshot copy.
@@ -7438,10 +7433,13 @@ D. Amazon RDS for MySQL with a cross-Region snapshot copy.
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
       <h4 id="answer-a">Answer: A</h4>
+<ul>
+<li>RPO 1초, RTO 1분의 특징을 가지는 데이터베이스 유형은 Aurora입니다.</li>
+</ul>
     </div>
   </label>
 </div>
-</h2>
+</p>
 <h1 id="heading-232"></h1>
 <p> </p>
 <h1 id="heading-233"></h1>
@@ -7586,7 +7584,10 @@ D. AWS Key Management Service (AWS KMS)
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h4 id="answer-b">Answer: B</h4>
+      <h4 id="answer-d">Answer: D</h4>
+<ul>
+<li>HSM이 가능한 서비스는 Key Management Service 입니다.</li>
+</ul>
     </div>
   </label>
 </div>
@@ -7615,6 +7616,9 @@ D. Deploy PostgreSQL on an Amazon EC2 instance that uses Amazon EBS Throughput O
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
       <h4 id="answer-c">Answer: C</h4>
+<ul>
+<li>설명은 MySQL의 대한 특징들입니다.</li>
+</ul>
     </div>
   </label>
 </div>
@@ -7679,7 +7683,7 @@ port
     </div>
   </label>
 </div>
-A E</p>
+</p>
 <h1 id="heading-248"></h1>
 <p> </p>
 <h1 id="heading-249"></h1>
@@ -7696,8 +7700,7 @@ the public subnets and associate it with the Application Load Balancer <br>
 C. Configure the Application Load Balancer in the public subnets. Configure the Auto Scaling group in
 the private subnets and associate it with the Application Load Balancer <br>
 D. Configure the Application Load Balancer in the private subnets. Configure the Auto Scaling group
-in the private subnets and associate it with the Application Load Balancer</p>
-<p>9
+in the private subnets and associate it with the Application Load Balancer
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -7775,7 +7778,7 @@ Configure read replicas in one of the European Regions
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h4 id="answer-c">Answer: C</h4>
+      <h4 id="answer-d">Answer: D</h4>
     </div>
   </label>
 </div>
@@ -7839,16 +7842,14 @@ workloads. You can direct this excess read traffic to one or more read replicas.
 Serving read traffic while the source DB instance is unavailable. In some cases, your source DB
 instance might not be able to take I/O requests, for example due to I/O suspension for backups or
 scheduled maintenance. In these cases, you can direct read traffic to your read replicas. For this use
-case, keep in mind that the data on the read replica might be &ldquo;stale&rdquo; because the source DB instance</p>
-<p>11
+case, keep in mind that the data on the read replica might be &ldquo;stale&rdquo; because the source DB instance
 is unavailable.
 Business reporting or data warehousing scenarios where you might want business reporting queries
 to run against a read replica, rather than your primary, production DB instance.
 Implementing disaster recovery. You can promote a read replica to a standalone instance as a
 disaster recovery solution if the source DB instance fails.
 <a href="https://aws.amazon.com/about-aws/whats-new/2018/01/amazon-rds-read-replicas-now-supportmulti-az-deploym">https://aws.amazon.com/about-aws/whats-new/2018/01/amazon-rds-read-replicas-now-supportmulti-az-deploym</a>
-<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html</a></p>
-
+<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html</a>
     </div>
   </label>
 </div>
@@ -7859,7 +7860,7 @@ disaster recovery solution if the source DB instance fails.
 <h4 id="question-125"><strong>QUESTION</strong></h4>
 <p>An application running on an Amazon EC2 instance in VPC-A needs to access files in another
 EC2 instance in VPC-B. Both are in separate. AWS accounts. The network administrator needs to
-design a solution to enable secure access to EC2 instance in VOC-B from VPC-A. The connectivity
+design a solution to enable secure access to EC2 instance in VPC-B from VPC-A. The connectivity
 should not have a single point of failure or bandwidth concerns.
 Which solution will meet these requirements?</p>
 <p>A. Set up a VPC peering connection between VPC-A and VPC-B. <br>
@@ -7875,7 +7876,7 @@ routes from VPC-B.
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h4 id="answer-d">Answer: D</h4>
+      <h4 id="answer-a">Answer: A</h4>
     </div>
   </label>
 </div>
@@ -7921,8 +7922,7 @@ Which data storage solution meets these requirements&rsquo;?</p>
 <p>A. Amazon Aurora Global Database <br>
 B. Amazon DynamoDB global tables <br>
 C. Amazon S3 with cross-Region replication and Amazon Athena <br>
-D. MySQL on Amazon EC2 instances with Amazon Elastic Block Store (Amazon EBS) snapshot
-replication
+D. MySQL on Amazon EC2 instances with Amazon Elastic Block Store Amazon EBS) snapshot replication
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -8019,8 +8019,10 @@ each AWS Region that exists globally.
 <h4 id="question-131"><strong>QUESTION</strong></h4>
 <p>A solution architect has created two IAM policies: Policy1 and Policy2. Both policies are
 attached to an IAM group.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Policy</span><span style="color:#ae81ff">1</span>
-{
+<ul>
+<li><strong>Policy1</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,    <span style="color:#f92672">&#34;Statement&#34;</span>: [
         {
             <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
@@ -8037,8 +8039,11 @@ attached to an IAM group.</p>
         }
     ]
 }
-<span style="color:#960050;background-color:#1e0010">Policy</span><span style="color:#ae81ff">1</span>
-{
+</code></pre></div><h1 id="heading-270"></h1>
+<ul>
+<li><strong>Policy1</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
     <span style="color:#f92672">&#34;Statement&#34;</span>: [
         {
@@ -8067,9 +8072,9 @@ D. Deleting logs from Amazon CloudWatch Logs
   </label>
 </div>
 </p>
-<h1 id="heading-270"></h1>
-<p> </p>
 <h1 id="heading-271"></h1>
+<p> </p>
+<h1 id="heading-272"></h1>
 <h4 id="question-132"><strong>QUESTION</strong></h4>
 <p>A company wants to optimize the cost of its data storage for data that is accessed quarterly.
 The company requires high throughput, low latency, and rapid access, when needed Which Amazon
@@ -8091,9 +8096,9 @@ D. Amazon S3 Standard (S3 Standard)
   </label>
 </div>
 </p>
-<h1 id="heading-272"></h1>
-<p> </p>
 <h1 id="heading-273"></h1>
+<p> </p>
+<h1 id="heading-274"></h1>
 <h4 id="question-133"><strong>QUESTION</strong></h4>
 <p>A company has a mobile game that reads most of its metadata from an Amazon RDS DB
 instance As the game increased in popularity developers noticed slowdowns related to the game&rsquo;s
@@ -8118,9 +8123,9 @@ D. Add an Amazon ElastiCache for Memcached layer in front of the database
   </label>
 </div>
 </p>
-<h1 id="heading-274"></h1>
-<p> </p>
 <h1 id="heading-275"></h1>
+<p> </p>
+<h1 id="heading-276"></h1>
 <h4 id="question-134"><strong>QUESTION</strong></h4>
 <p>A company&rsquo;s website provides users with downloadable historical performance reports. The
 website needs a solution that will scale to meet the company&rsquo;s website demands globally. The
@@ -8145,9 +8150,9 @@ D. Amazon Route 53 with internal Application Load Balances
   </label>
 </div>
 </p>
-<h1 id="heading-276"></h1>
-<p> </p>
 <h1 id="heading-277"></h1>
+<p> </p>
+<h1 id="heading-278"></h1>
 <h4 id="question-135"><strong>QUESTION</strong></h4>
 <p>A company has enabled AWS CloudTrail logs to deliver log files to an Amazon S3 bucket for
 each of its developer accounts. The company has created a central AWS account for streamlining
@@ -8174,14 +8179,14 @@ policy providing full permissions to the bucket.
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h4 id="answer-a">Answer: A</h4>
+      <h4 id="answer-c">Answer: C</h4>
     </div>
   </label>
 </div>
 </p>
-<h1 id="heading-278"></h1>
-<p> </p>
 <h1 id="heading-279"></h1>
+<p> </p>
+<h1 id="heading-280"></h1>
 <h4 id="question-136"><strong>QUESTION</strong></h4>
 <p>A company has several Amazon EC2 instances set up in a private subnet for security reasons
 These instances host applications that read and write large amounts of data to and from Amazon S3
@@ -8210,19 +8215,17 @@ the EC2 instances, allowing them to invoke the Lambda function.
   </label>
 </div>
 </p>
-<h1 id="heading-280"></h1>
-<p> </p>
 <h1 id="heading-281"></h1>
+<p> </p>
+<h1 id="heading-282"></h1>
 <h4 id="question-137"><strong>QUESTION</strong></h4>
 <p>A web application is deployed in the AWS Cloud It consists of a two-tier architecture that
 includes a web layer and a database layer The web server is vulnerable to cross-site scripting (XSS)
 attacks What should a solutions architect do to remediate the vulnerability?</p>
 <p>A. Create a Classic Load Balancer Put the web layer behind the load balancer and enable AWS WAF <br>
 B. Create a Network Load Balancer Put the web layer behind the load balancer and enable AWS WAF <br>
-C. Create an Application Load Balancer Put the web layer behind the load balancer and enable AWS
-WAF <br>
-D. Create an Application Load Balancer Put the web layer behind the load balancer and use AWS
-Shield Standard
+C. Create an Application Load Balancer Put the web layer behind the load balancer and enable AWS WAF <br>
+D. Create an Application Load Balancer Put the web layer behind the load balancer and use AWS Shield Standard
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -8251,9 +8254,9 @@ resources.
   </label>
 </div>
 </p>
-<h1 id="heading-282"></h1>
-<p> </p>
 <h1 id="heading-283"></h1>
+<p> </p>
+<h1 id="heading-284"></h1>
 <h4 id="question-138"><strong>QUESTION</strong></h4>
 <p>A company has an on-premises application that generates a large amount of time-sensitive
 data that is backed up to Amazon S3. The application has grown and there are user complaints about
@@ -8281,9 +8284,9 @@ limits from the account.
   </label>
 </div>
 </p>
-<h1 id="heading-284"></h1>
-<p> </p>
 <h1 id="heading-285"></h1>
+<p> </p>
+<h1 id="heading-286"></h1>
 <h4 id="question-139"><strong>QUESTION</strong></h4>
 <p>An application running on an Amazon EC2 instance needs to securely access tiles on an
 Amazon Elastic File System (Amazon I tile system. The EFS tiles are stored using encryption at rest.
@@ -8306,9 +8309,9 @@ access permission
   </label>
 </div>
 </p>
-<h1 id="heading-286"></h1>
-<p> </p>
 <h1 id="heading-287"></h1>
+<p> </p>
+<h1 id="heading-288"></h1>
 <h4 id="question-140"><strong>QUESTION</strong></h4>
 <p>A solutions architect is designing a customer-facing application. The application is expected to
 have a variable amount of reads and writes depending on the time of year and clearly defined access
@@ -8338,16 +8341,16 @@ retention period to at least 1 day.
   </label>
 </div>
 </p>
-<h1 id="heading-288"></h1>
-<p> </p>
 <h1 id="heading-289"></h1>
+<p> </p>
+<h1 id="heading-290"></h1>
 <h4 id="question-141"><strong>QUESTION</strong></h4>
 <p>Management has decided to deploy all AWS VPCs with IPv6 enabled After some time a
 solutions architect tries to launch a new instance and receives an error stating that there is not
 enough IP address space available in the subnet What should the solutions architect do to fix this?</p>
-<p>A. Check to make sure that only IPv6 was used during the VPC creation.
-B. Create a new IPv4 subnet with a larger range, and then launch the instance
-C. Create a new IPv6-only subnet with a larger range, and then launch the instance
+<p>A. Check to make sure that only IPv6 was used during the VPC creation. <br>
+B. Create a new IPv4 subnet with a larger range, and then launch the instance <br>
+C. Create a new IPv6-only subnet with a larger range, and then launch the instance <br>
 D. Disable the IPv4 subnet and migrate all instances to IPv6 only Once that is complete launch the
 instance
 <div class="book-expand">
@@ -8363,9 +8366,9 @@ instance
   </label>
 </div>
 </p>
-<h1 id="heading-290"></h1>
-<p> </p>
 <h1 id="heading-291"></h1>
+<p> </p>
+<h1 id="heading-292"></h1>
 <h4 id="question-142"><strong>QUESTION</strong></h4>
 <p>A solutions architect is designing the storage architecture for a new web application used for
 stonng and viewing engineering drawings. All application components will be deployed on the AWS
@@ -8390,9 +8393,9 @@ D. AWS Storage Gateway with Amazon ElastiCache
   </label>
 </div>
 </p>
-<h1 id="heading-292"></h1>
-<p> </p>
 <h1 id="heading-293"></h1>
+<p> </p>
+<h1 id="heading-294"></h1>
 <h4 id="question-143"><strong>QUESTION</strong></h4>
 <p>A company is hosting its static website in an Amazon S3 bucket, which is the origin for
 Amazon CioudFront.
@@ -8416,9 +8419,9 @@ locations of the countries that are served.
   </label>
 </div>
 </p>
-<h1 id="heading-294"></h1>
-<p> </p>
 <h1 id="heading-295"></h1>
+<p> </p>
+<h1 id="heading-296"></h1>
 <h4 id="question-144"><strong>QUESTION</strong></h4>
 <p>A company hosts a training site on a fleet of Amazon EC2 instances. The company anticipates
 that its new course, which consists of dozens of training videos on the site, will be extremely popular
@@ -8446,13 +8449,12 @@ the S3 bucket Create a user data script for the web servers to mount the file ga
   </label>
 </div>
 </p>
-<h1 id="heading-296"></h1>
-<p> </p>
 <h1 id="heading-297"></h1>
+<p> </p>
+<h1 id="heading-298"></h1>
 <h4 id="question-145"><strong>QUESTION</strong></h4>
-<p>A company needs to comply with a regulatory requirement that states all emails must Pe
-stored and archived externally for 7 years. An administrator has created compressed email files on
-premises and wants a managed service to transfer the files to AWS storage.
+<p>A company needs to comply with a regulatory requirement that states all emails must Pestored and archived externally for 7 years. An administrator has created compressed email files on
+premises and wants a managed service to transfer the files to AWS storage. <br>
 Which managed service should a solutions architect recommend?</p>
 <p>A. Amazon Elastic File System (Amazon EPS) <br>
 B. Amazon S3 Glacier <br>
@@ -8471,9 +8473,9 @@ D. AWS Storage Gateway
   </label>
 </div>
 </p>
-<h1 id="heading-298"></h1>
-<p> </p>
 <h1 id="heading-299"></h1>
+<p> </p>
+<h1 id="heading-300"></h1>
 <h4 id="question-146"><strong>QUESTION</strong></h4>
 <p>A solutions architect is developing a multiple-subnet VPC architecture. The solution will
 consist of six subnets in two Availability Zones. The subnets are defined as public, private and
@@ -8501,9 +8503,9 @@ different peering connection between the private subnets and the database subnet
   </label>
 </div>
 </p>
-<h1 id="heading-300"></h1>
-<p> </p>
 <h1 id="heading-301"></h1>
+<p> </p>
+<h1 id="heading-302"></h1>
 <h4 id="question-147"><strong>QUESTION</strong></h4>
 <p>A company is performing an AWS Well-Architected Framework review of an existing workload
 deployed on AWS. The review identified a public-facing website running on the same Amazon EC2
@@ -8543,9 +8545,9 @@ managed for you.
   </label>
 </div>
 </p>
-<h1 id="heading-302"></h1>
-<p> </p>
 <h1 id="heading-303"></h1>
+<p> </p>
+<h1 id="heading-304"></h1>
 <h4 id="question-148"><strong>QUESTION</strong></h4>
 <p>A company wants to host a scalable web application on AWS. The application will be accessed
 by users from different geographic regions of the world. Application users will be able to download
@@ -8569,9 +8571,9 @@ D. Use Amazon EC2 with Auto Scaling and Amazon ElastiCache to host the applicati
   </label>
 </div>
 </p>
-<h1 id="heading-304"></h1>
-<p> </p>
 <h1 id="heading-305"></h1>
+<p> </p>
+<h1 id="heading-306"></h1>
 <h4 id="question-149"><strong>QUESTION</strong></h4>
 <p>As part of budget planning, management wants a report of AWS billed items listed by user.
 The data will be used to create department budgets. A solutions architect needs to determine the
@@ -8594,9 +8596,9 @@ D. Modify a cost budget in AWS Budgets to alert with Amazon Simple Email Service
   </label>
 </div>
 </p>
-<h1 id="heading-306"></h1>
-<p> </p>
 <h1 id="heading-307"></h1>
+<p> </p>
+<h1 id="heading-308"></h1>
 <h4 id="question-150"><strong>QUESTION</strong></h4>
 <p>Which solution will improve the performance of the application when it is moved to AWS?</p>
 <p>A. Import the data into an Amazon DynamoDB table with provisioned capacity. Refactor the
@@ -8620,9 +8622,9 @@ instance of the cluster as an endpoint for the reports.
   </label>
 </div>
 </p>
-<h1 id="heading-308"></h1>
-<p> </p>
 <h1 id="heading-309"></h1>
+<p> </p>
+<h1 id="heading-310"></h1>
 <h4 id="question-151"><strong>QUESTION</strong></h4>
 <p>A company is using a tape backup solution to store its key application data offsite The daily
 data volume is around 50 TB The company needs to retain the backups for 7 years for regulatory
@@ -8649,9 +8651,9 @@ backup to Amazon S3 Glacier
   </label>
 </div>
 </p>
-<h1 id="heading-310"></h1>
-<p> </p>
 <h1 id="heading-311"></h1>
+<p> </p>
+<h1 id="heading-312"></h1>
 <h4 id="question-152"><strong>QUESTION</strong></h4>
 <p>A company has a multi-tier application that runs six front-end web servers in an Amazon EC2
 Auto Scaling group in a single Availability Zone behind an Application Load Balancer (ALB) A solutions
@@ -8690,9 +8692,9 @@ enabled zones.
   </label>
 </div>
 </p>
-<h1 id="heading-312"></h1>
-<p> </p>
 <h1 id="heading-313"></h1>
+<p> </p>
+<h1 id="heading-314"></h1>
 <h4 id="question-153"><strong>QUESTION</strong></h4>
 <p>A company is running a highly sensitive application on Amazon EC2 backed by an Amazon RDS
 database Compliance regulations mandate that all personally identifiable information (Pll) be
@@ -8719,9 +8721,9 @@ AWS Key Management Service (AWS KMS) keys to encrypt instance and database volum
   </label>
 </div>
 </p>
-<h1 id="heading-314"></h1>
-<p> </p>
 <h1 id="heading-315"></h1>
+<p> </p>
+<h1 id="heading-316"></h1>
 <h4 id="question-154"><strong>QUESTION</strong></h4>
 <p>A company has 700 TB of backup data stored in network attached storage (NAS) in its data
 center This backup data need to be accessible for infrequent regulatory requests and must be
@@ -8750,9 +8752,9 @@ DataSync task to copy files from the on-premises NAS storage lo Amazon S3 Glacie
   </label>
 </div>
 </p>
-<h1 id="heading-316"></h1>
-<p> </p>
 <h1 id="heading-317"></h1>
+<p> </p>
+<h1 id="heading-318"></h1>
 <h4 id="question-155"><strong>QUESTION</strong></h4>
 <p>An application requires a development environment (DEV) and production environment
 (PROD) for several years. The DEV instances will run for 10 hours each day during normal business
@@ -8776,9 +8778,9 @@ D. DEV with On-Demand Instances and PROD with Scheduled Reserved Instances
   </label>
 </div>
 </p>
-<h1 id="heading-318"></h1>
-<p> </p>
 <h1 id="heading-319"></h1>
+<p> </p>
+<h1 id="heading-320"></h1>
 <h4 id="question-156"><strong>QUESTION</strong></h4>
 <p>A company has established a new AWS account. The account is newly provisioned and no
 changed have been made to the default settings. The company is concerned about the security of the
@@ -8799,14 +8801,14 @@ use the root user for daily administration tasks.
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h4 id="answer-d">Answer: D</h4>
+      <h4 id="answer-b">Answer: B</h4>
     </div>
   </label>
 </div>
 </p>
-<h1 id="heading-320"></h1>
-<p> </p>
 <h1 id="heading-321"></h1>
+<p> </p>
+<h1 id="heading-322"></h1>
 <h4 id="question-157"><strong>QUESTION</strong></h4>
 <p>A company recently expanded globally and wants to make its application accessible to users
 in those geographic locations. The application is deploying on Amazon EC2 instances behind an
@@ -8825,14 +8827,14 @@ D. Configure an Amazon Route 53 multivalue answer routing policy
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h4 id="answer-b">Answer: B</h4>
+      <h4 id="answer-c">Answer: C</h4>
     </div>
   </label>
 </div>
 </p>
-<h1 id="heading-322"></h1>
-<p> </p>
 <h1 id="heading-323"></h1>
+<p> </p>
+<h1 id="heading-324"></h1>
 <h4 id="question-158"><strong>QUESTION</strong></h4>
 <p>A company hosts a static website within an Amazon S3 bucket. A solutions architect needs to
 ensure that data can be recovered in case of accidental deletion.
@@ -8870,9 +8872,9 @@ versions of the same key.
   </label>
 </div>
 </p>
-<h1 id="heading-324"></h1>
-<p> </p>
 <h1 id="heading-325"></h1>
+<p> </p>
+<h1 id="heading-326"></h1>
 <h4 id="question-159"><strong>QUESTION</strong></h4>
 <p>A company decides to migrate its three-tier web application from on premises to the AWS
 Cloud. The new database must be capable of dynamically scaling storage capacity and performing
@@ -8890,14 +8892,17 @@ D. Amazon DynamoDB on-demand
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h4 id="answer-d">Answer: D</h4>
+      <h4 id="answer-a">Answer: A</h4>
+<ul>
+<li>DynamoDB는 조인이 가능하지 않습니다. (NoSQL)</li>
+</ul>
     </div>
   </label>
 </div>
 </p>
-<h1 id="heading-326"></h1>
-<p> </p>
 <h1 id="heading-327"></h1>
+<p> </p>
+<h1 id="heading-328"></h1>
 <h4 id="question-160"><strong>QUESTION</strong></h4>
 <p>A web application must persist order data to Amazon S3 to support neat-real time processing.
 A solutions architect needs create an architecture that is both scalable and fault tolerant.
@@ -8928,9 +8933,9 @@ parses the payload and writes the data to Amazon S3
   </label>
 </div>
 </p>
-<h1 id="heading-328"></h1>
-<p> </p>
 <h1 id="heading-329"></h1>
+<p> </p>
+<h1 id="heading-330"></h1>
 <h4 id="question-161"><strong>QUESTION</strong></h4>
 <p>A company operates a website on Amazon EC2 Linux instances. Some of the instances are
 faring Troubleshooting points to insufficient swap space on the failed instances. The operations team
@@ -8957,9 +8962,9 @@ custom metric. Monitor SwapUtilization metrics in CloudWatch.
   </label>
 </div>
 </p>
-<h1 id="heading-330"></h1>
-<p> </p>
 <h1 id="heading-331"></h1>
+<p> </p>
+<h1 id="heading-332"></h1>
 <h4 id="question-162"><strong>QUESTION</strong></h4>
 <p>An application is running on Amazon EC2 instances Sensitive information required for the
 application is stored in an Amazon S3 bucket The bucket needs to be protected from internet access
@@ -8978,14 +8983,14 @@ E. Restrict users using the IAM policy to use the specific bucket
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h4 id="answer-d-e">Answer: D E</h4>
+      <h4 id="answer-a-c">Answer: A C</h4>
     </div>
   </label>
 </div>
 </p>
-<h1 id="heading-332"></h1>
-<p> </p>
 <h1 id="heading-333"></h1>
+<p> </p>
+<h1 id="heading-334"></h1>
 <h4 id="question-163"><strong>QUESTION</strong></h4>
 <p>Application developers have noticed that a production application is very slow when business
 reporting users run large production reports against the Amazon RDS instance backing the
@@ -9010,9 +9015,9 @@ D. Create a read replication and connect the business reports to it.
   </label>
 </div>
 </p>
-<h1 id="heading-334"></h1>
-<p> </p>
 <h1 id="heading-335"></h1>
+<p> </p>
+<h1 id="heading-336"></h1>
 <h4 id="question-164"><strong>QUESTION</strong></h4>
 <p>A company recently implemented hybrid cloud connectivity using AWS Direct Connect and is
 migrating data to Amazon S3. The company is looking for a fully managed solution that will automate
@@ -9035,14 +9040,17 @@ store data locally, and asynchronously back up point-in-lime snapshots to AWS.
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h4 id="answer-c">Answer: C</h4>
+      <h4 id="answer-a">Answer: A</h4>
+<ul>
+<li>DataSync는 온 프레미스에서 AWS로 실제 데이터를 전송하는 반면 Storage Gateway는 AWS로 전송되는 데이터에 대한 액세스를 유지합니다.</li>
+</ul>
     </div>
   </label>
 </div>
 </p>
-<h1 id="heading-336"></h1>
-<p> </p>
 <h1 id="heading-337"></h1>
+<p> </p>
+<h1 id="heading-338"></h1>
 <h4 id="question-165"><strong>QUESTION</strong></h4>
 <p>A company is preparing to deploy a data lake on AWS A solutions architect must define the
 encryption strategy tor data at rest m Amazon S3 The company&rsquo;s security policy states</p>
@@ -9052,14 +9060,10 @@ encryption strategy tor data at rest m Amazon S3 The company&rsquo;s security po
 <li>Auditing key usage must be possible
 What should the solutions architect recommend?</li>
 </ul>
-<p>A. Server-side encryption with AWS KMS managed keys (SSE-KMS) with customer managed customer
-master keys (CMKs) <br>
-B. Server-side encryption with AWS KMS managed keys (SSE-KMS) with AWS managed customer
-master keys (CMKs) <br>
-C. Server-side encryption with Amazon S3 managed keys (SSE-S3) with customer managed customer
-master keys (CMKs) <br>
-D. Server-side encryption with Amazon S3 managed keys (SSE-S3) with AWS managed customer
-master keys (CMKs)
+<p>A. Server-side encryption with AWS KMS managed keys (SSE-KMS) with customer managed customer master keys (CMKs) <br>
+B. Server-side encryption with AWS KMS managed keys (SSE-KMS) with AWS managed customer master keys (CMKs) <br>
+C. Server-side encryption with Amazon S3 managed keys (SSE-S3) with customer managed customer master keys (CMKs) <br>
+D. Server-side encryption with Amazon S3 managed keys (SSE-S3) with AWS managed customer master keys (CMKs)
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -9073,9 +9077,9 @@ master keys (CMKs)
   </label>
 </div>
 </p>
-<h1 id="heading-338"></h1>
-<p> </p>
 <h1 id="heading-339"></h1>
+<p> </p>
+<h1 id="heading-340"></h1>
 <h4 id="question-166"><strong>QUESTION</strong></h4>
 <p>A media company is evaluating the possibility of moving its systems to the AWS Cloud. The
 company needs at least 10 TB of storage with the maximum possible I/O performance for video
@@ -9098,14 +9102,14 @@ Amazon S3 Glacier for archival storage
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h4 id="answer-a">Answer: A</h4>
+      <h4 id="answer-d">Answer: D</h4>
     </div>
   </label>
 </div>
 </p>
-<h1 id="heading-340"></h1>
-<p> </p>
 <h1 id="heading-341"></h1>
+<p> </p>
+<h1 id="heading-342"></h1>
 <h4 id="question-167"><strong>QUESTION</strong></h4>
 <p>A security team wants to limit access to specific services or actions in all of the team&rsquo;s AWS
 accounts. All accounts belong to a large organization in AWS Organizations The solution must be
@@ -9150,23 +9154,16 @@ account root user.
   </label>
 </div>
 </p>
-<h1 id="heading-342"></h1>
-<p> </p>
 <h1 id="heading-343"></h1>
+<p> </p>
+<h1 id="heading-344"></h1>
 <h4 id="question-168"><strong>QUESTION</strong></h4>
-<p>A manufacturing company wants to implement predictive maintenance on its machinery
-equipment The company will install thousands of loT sensors that will send data to AWS in real time
-A solutions architect is tasked with implementing a solution that will receive events in an ordered
-manner for each machinery asset and ensure that data is saved for further processing at a later time
+<p>A manufacturing company wants to implement predictive maintenance on its machinery equipment The company will install thousands of loT sensors that will send data to AWS in real time A solutions architect is tasked with implementing a solution that will receive events in an ordered manner for each machinery asset and ensure that data is saved for further processing at a later time <br>
 Which solution would be MOST efficient?</p>
-<p>A. Use Amazon Kinesis Data Streams for real-time events with a partition for each equipment asset
-Use Amazon Kinesis Data Firehose to save data to Amazon S3  <br>
-B. Use Amazon Kinesis Data Streams for real-time events with a shard for each equipment asset Use
-Amazon Kinesis Data Firehose to save data to Amazon EBS  <br>
-C. Use an Amazon SQS FIFO queue for real-time events with one queue for each equipment asset
-Trigger an AWS Lambda function for the SQS queue to save data to Amazon EFS  <br>
-D. Use an Amazon SQS standard queue for real-time events with one queue for each equipment
-asset Trigger an AWS Lambda function from the SQS queue to save data to Amazon S3
+<p>A. Use Amazon Kinesis Data Streams for real-time events with a artition for each equipment asset Use Amazon Kinesis Data Firehose to save data to Amazon S3  <br>
+B. Use Amazon Kinesis Data Streams for real-time events with a shard for each equipment asset Use Amazon Kinesis Data Firehose to save data to Amazon EBS  <br>
+C. Use an Amazon SQS FIFO queue for real-time events with one queue for each equipment asset Trigger an AWS Lambda function for the SQS queue to save data to Amazon EFS  <br>
+D. Use an Amazon SQS standard queue for real-time events with one queue for each equipment asset Trigger an AWS Lambda function from the SQS queue to save data to Amazon S3
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -9176,7 +9173,9 @@ asset Trigger an AWS Lambda function from the SQS queue to save data to Amazon S
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
       <h4 id="answer-c">Answer: C</h4>
-<p>Explanation
+<ul>
+<li>Kinesis Firehose는 현재 s3 및 redshift 만 지원합니다.
+Explanation
 Amazon SQS Introduces FIFO Queues with Exactly-Once Processing and Lower Prices for Standard
 Queues You can now use Amazon Simple Queue Service (SQS) for applications that require messages
 to be processed in a strict sequence and exactly once using First-in, First-out (FIFO) queues. FIFO
@@ -9190,14 +9189,15 @@ supporting ordering and exactly-once processing. FIFO queues provide additional 
 prevent unintentional duplicates from being sent by message producers or from being received by
 message consumers. Additionally, message groups allow multiple separate ordered message streams
 within the same queue.
-<a href="https://aws.amazon.com/about-aws/whats-new/2016/11/amazon-sqs-introduces-fifo-queues-withexactly-once-pr">https://aws.amazon.com/about-aws/whats-new/2016/11/amazon-sqs-introduces-fifo-queues-withexactly-once-pr</a>
+<a href="https://aws.amazon.com/about-aws/whats-new/2016/11/amazon-sqs-introduces-fifo-queues-withexactly-once-pr">https://aws.amazon.com/about-aws/whats-new/2016/11/amazon-sqs-introduces-fifo-queues-withexactly-once-pr</a></li>
+</ul>
     </div>
   </label>
 </div>
 </p>
-<h1 id="heading-344"></h1>
-<p> </p>
 <h1 id="heading-345"></h1>
+<p> </p>
+<h1 id="heading-346"></h1>
 <h4 id="question-169"><strong>QUESTION</strong></h4>
 <p>A company has a hybrid application hosted on multiple on-premises servers with static IP
 addresses. There is already a VPN that provides connectivity between the VPC and the on-premises
@@ -9224,9 +9224,9 @@ traffic to the on-premises servers.
   </label>
 </div>
 </p>
-<h1 id="heading-346"></h1>
-<p> </p>
 <h1 id="heading-347"></h1>
+<p> </p>
+<h1 id="heading-348"></h1>
 <h4 id="question-170"><strong>QUESTION</strong></h4>
 <p>A company is migrating from an on-premises infrastructure to the AWS Cloud One of the
 company&rsquo;s applications stores files on a Windows file server farm that uses Distributed File System
@@ -9245,20 +9245,24 @@ D. AWS Storage Gateway
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
       <h4 id="answer-b">Answer: B</h4>
-<p>Explanation
+<ul>
+<li>Amazon FSx는 회사의 애플리케이션은 Windows 파일 서버 팜에 파일을 저장합니다.</li>
+<li>Amazon FSx는 비즈니스 애플리케이션 용 Windows 파일 서버용 Amazon FSx와 고성능 워크로드 용 Luster 용 Amazon FSx 중에서 선택할 수있는 두 가지 파일 시스템을 제공합니다.
+Explanation
 Migrating Existing Files to Amazon FSx for Windows File Server Using AWS DataSync We recommend
 using AWS DataSync to transfer data between Amazon FSx for Windows File Server file systems.
 DataSync is a data transfer service that simplifies, automates, and accelerates moving and replicating
 data between on-premises storage systems and other AWS storage services over the internet or AWS
 Direct Connect. DataSync can transfer your file system data and metadata, such as ownership, time
-stamps, and access permissions.
+stamps, and access permissions.</li>
+</ul>
     </div>
   </label>
 </div>
 </p>
-<h1 id="heading-348"></h1>
-<p> </p>
 <h1 id="heading-349"></h1>
+<p> </p>
+<h1 id="heading-350"></h1>
 <h4 id="question-171"><strong>QUESTION</strong></h4>
 <p>A company that operates a web application on premises is preparing to launch a newer
 version of the application on AWS. The company needs to route requests to either the AWS-hosted
@@ -9289,9 +9293,9 @@ Add hosts to each Auto Scaling group. Route with Amazon Route 53 based on the UR
   </label>
 </div>
 </p>
-<h1 id="heading-350"></h1>
-<p> </p>
 <h1 id="heading-351"></h1>
+<p> </p>
+<h1 id="heading-352"></h1>
 <h4 id="question-172"><strong>QUESTION</strong></h4>
 <p>A company built an application that lets users check in to places they visit, rank the places,
 and add reviews about their experiences The application is successful with a rapid increase in the
@@ -9321,9 +9325,9 @@ to the DynamoDB table Enable DynamoDB Accelerator to offload traffic from the ma
   </label>
 </div>
 </p>
-<h1 id="heading-352"></h1>
-<p> </p>
 <h1 id="heading-353"></h1>
+<p> </p>
+<h1 id="heading-354"></h1>
 <h4 id="question-173"><strong>QUESTION</strong></h4>
 <p>A company wants to use Amazon S3 for the secondary copy of its on-premises dataset. The
 company would rarely need to access this copy. The storage solution&rsquo;s cost should be minimal.
@@ -9340,14 +9344,14 @@ D. S3 One Zone-Infrequent Access (S3 One Zone-IA)
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h4 id="answer-c">Answer: C</h4>
+      <h4 id="answer-d">Answer: D</h4>
     </div>
   </label>
 </div>
 </p>
-<h1 id="heading-354"></h1>
-<p> </p>
 <h1 id="heading-355"></h1>
+<p> </p>
+<h1 id="heading-356"></h1>
 <h4 id="question-174"><strong>QUESTION</strong></h4>
 <p>A company is using Amazon DynamoDB with provisioned throughput for the database tier of
 its ecommerce website. During flash sales, customers experience periods of time when the database
@@ -9371,9 +9375,9 @@ D. Use Amazon Simple Queue Service (Amazon SQS) to queue transactions to DynamoD
   </label>
 </div>
 </p>
-<h1 id="heading-356"></h1>
-<p> </p>
 <h1 id="heading-357"></h1>
+<p> </p>
+<h1 id="heading-358"></h1>
 <h4 id="question-175"><strong>QUESTION</strong></h4>
 <p>A company has a mobile chat application with a data store based in Amazon DynamoDB.
 Users would like new messages to be read with as little latency as possible. A solutions architect
@@ -9395,14 +9399,14 @@ point to the Redis cache endpoint instead of DynamoDB.
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h4 id="answer-d">Answer: D</h4>
+      <h4 id="answer-a">Answer: A</h4>
     </div>
   </label>
 </div>
 </p>
-<h1 id="heading-358"></h1>
-<p> </p>
 <h1 id="heading-359"></h1>
+<p> </p>
+<h1 id="heading-360"></h1>
 <h4 id="question-176"><strong>QUESTION</strong></h4>
 <p>A company has a website deployed on AWS. The database backend is hosted on Amazon RDS
 for MySQL with a primary instance and five read replicas to support scaling needs. The read replicas
@@ -9432,22 +9436,18 @@ units (RCUs) to support the required throughput with on-demand capacity scaling 
   </label>
 </div>
 </p>
-<h1 id="heading-360"></h1>
-<p> </p>
 <h1 id="heading-361"></h1>
+<p> </p>
+<h1 id="heading-362"></h1>
 <h4 id="question-177"><strong>QUESTION</strong></h4>
 <p>A solution architect must design a solution that uses Amazon CloudFront with an Amazon S3
 to store a static website. The company security policy requires that all websites traffic be inspected
 by AWS WAF.
 How should the solution architect company with these requirements?</p>
-<p>A. Configure an S3 bucket policy to accept requests coming from the AWS WAF Amazon Resource
-Name (ARN) only <br>
-B. Configure Amazon CloudFront to forward all incoming requests to AWS WAF before requesting
-content from the S3 origin, <br>
-C. Configure a security group that allows Amazon CloudFront IP addresses to access Amazon S3 only
-Associate AWS WAF to CloudFront. <br>
-D. Configure Amazon CloudFront and Amazon S3 to use an origin access identity (OAI) to restrict
-access to the S3 bucket. Enable AWS WAF on the distribution.
+<p>A. Configure an S3 bucket policy to accept requests coming from the AWS WAF Amazon Resource Name (ARN) only <br>
+B. Configure Amazon CloudFront to forward all incoming requests to AWS WAF before requesting content from the S3 origin, <br>
+C. Configure a security group that allows Amazon CloudFront IP addresses to access Amazon S3 only Associate AWS WAF to CloudFront. <br>
+D. Configure Amazon CloudFront and Amazon S3 to use an origin access identity (OAI) to restrict access to the S3 bucket. Enable AWS WAF on the distribution.
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -9461,9 +9461,9 @@ access to the S3 bucket. Enable AWS WAF on the distribution.
   </label>
 </div>
 </p>
-<h1 id="heading-362"></h1>
-<p> </p>
 <h1 id="heading-363"></h1>
+<p> </p>
+<h1 id="heading-364"></h1>
 <h4 id="question-178"><strong>QUESTION</strong></h4>
 <p>A disaster response team is using drones to collect images ot recent storm damage. The
 response team&rsquo;s laptops lack the storage and compute capacity to transfer the images and process
@@ -9491,9 +9491,9 @@ Amazon S3 to process the images when connectivity becomes available.
   </label>
 </div>
 </p>
-<h1 id="heading-364"></h1>
-<p> </p>
 <h1 id="heading-365"></h1>
+<p> </p>
+<h1 id="heading-366"></h1>
 <h4 id="question-179"><strong>QUESTION</strong></h4>
 <p>A group requires permissions to list an Amazon S3 bucket and delete objects from that
 bucket. An administrator has created the following IAM policy to provide access to the bucket and
@@ -9514,7 +9514,7 @@ follows least-privilege access rules.</p>
         }
     ]
 }
-</code></pre></div><h1 id="heading-366"></h1>
+</code></pre></div><h1 id="heading-367"></h1>
 <p>A. Option A</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;Action&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> [
     <span style="color:#e6db74">&#34;s3:*Object&#34;</span>
@@ -9523,7 +9523,7 @@ follows least-privilege access rules.</p>
     <span style="color:#e6db74">&#34;arn:aws:s3:::bucket-name/*&#34;</span>
 ]<span style="color:#960050;background-color:#1e0010">,</span>
 <span style="color:#e6db74">&#34;Effect&#34;</span> <span style="color:#e6db74">&#34;Allow&#34;</span>
-</code></pre></div><h1 id="heading-367"></h1>
+</code></pre></div><h1 id="heading-368"></h1>
 <p>B. Option B</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;Action&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> [
     <span style="color:#e6db74">&#34;s3:*&#34;</span>
@@ -9532,7 +9532,7 @@ follows least-privilege access rules.</p>
     <span style="color:#e6db74">&#34;arn:aws:s3:::bucket-name/*&#34;</span>
 ]<span style="color:#960050;background-color:#1e0010">,</span>
 <span style="color:#e6db74">&#34;Effect&#34;</span> <span style="color:#e6db74">&#34;Allow&#34;</span>
-</code></pre></div><h1 id="heading-368"></h1>
+</code></pre></div><h1 id="heading-369"></h1>
 <p>C. Option C</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;Action&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> [
     <span style="color:#e6db74">&#34;s3:*DeleteObject&#34;</span>
@@ -9541,7 +9541,7 @@ follows least-privilege access rules.</p>
     <span style="color:#e6db74">&#34;arn:aws:s3:::bucket-name*&#34;</span>
 ]<span style="color:#960050;background-color:#1e0010">,</span>
 <span style="color:#e6db74">&#34;Effect&#34;</span> <span style="color:#e6db74">&#34;Allow&#34;</span>
-</code></pre></div><h1 id="heading-369"></h1>
+</code></pre></div><h1 id="heading-370"></h1>
 <p>D. Option D</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;Action&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> [
     <span style="color:#e6db74">&#34;s3:*DeleteObject&#34;</span>
@@ -9563,9 +9563,9 @@ follows least-privilege access rules.</p>
   </label>
 </div>
 
-<h1 id="heading-370"></h1>
-<p> </p>
 <h1 id="heading-371"></h1>
+<p> </p>
+<h1 id="heading-372"></h1>
 <h4 id="question-180"><strong>QUESTION</strong></h4>
 <p>A company&rsquo;s application hosted on Amazon EC2 instances needs to access an Amazon S3
 bucket. Due to data sensitivity, traffic cannot traverse the internet How should a solutions architect
@@ -9587,9 +9587,9 @@ D. Set up a site-to-site VPN connection between the VPC and the S3 bucket.
   </label>
 </div>
 </p>
-<h1 id="heading-372"></h1>
-<p> </p>
 <h1 id="heading-373"></h1>
+<p> </p>
+<h1 id="heading-374"></h1>
 <h4 id="question-181"><strong>QUESTION</strong></h4>
 <p>A company is preparing to store confidential data in Amazon S3. For compliance reasons, the
 data must be encrypted at rest. Encryption key usage must be logged for auditing purposes. Keys
@@ -9597,10 +9597,8 @@ must be rotated every year.
 Which solution meets these requirements and is the MOST operationally efficient?</p>
 <p>A. Server-side encryption with customer-provided keys (SSE-C) <br>
 B. Server-side encryption with Amazon S3 managed keys (SSE-S3) <br>
-C. Server-side encryption with AWS KMS (SSE-KMS) customer master keys (CMKs) with manual
-rotation <br>
-D. Server-side encryption with AWS KMS (SSE-KMS) customer master keys (CMKs) with automatic
-rotation
+C. Server-side encryption with AWS KMS (SSE-KMS) customer master keys (CMKs) with manual rotation <br>
+D. Server-side encryption with AWS KMS (SSE-KMS) customer master keys (CMKs) with automatic rotation
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -9614,9 +9612,9 @@ rotation
   </label>
 </div>
 </p>
-<h1 id="heading-374"></h1>
-<p> </p>
 <h1 id="heading-375"></h1>
+<p> </p>
+<h1 id="heading-376"></h1>
 <h4 id="question-182"><strong>QUESTION</strong></h4>
 <p>A company built an application that lets users check in to places they visit, rank the places,
 and add reviews about their experiences The application is successful with a rapid increase in the
@@ -9646,9 +9644,10 @@ to the DynamoDB table Enable DynamoDB Accelerator to offload traffic from the ma
   </label>
 </div>
 </p>
-<h1 id="heading-376"></h1>
-<p> </p>
+<hr>
 <h1 id="heading-377"></h1>
+<p> </p>
+<h1 id="heading-378"></h1>
 <h4 id="question-183"><strong>QUESTION</strong></h4>
 <p>A company is planning to migrate its virtual server-based workloads to AWS The company has
 internet-facing load balancers backed by application servers. The application servers rely on patches
@@ -9673,9 +9672,9 @@ E. Amazon Elastic File System (Amazon EFS) volumes
   </label>
 </div>
 </p>
-<h1 id="heading-378"></h1>
-<p> </p>
 <h1 id="heading-379"></h1>
+<p> </p>
+<h1 id="heading-380"></h1>
 <h4 id="question-184"><strong>QUESTION</strong></h4>
 <p>A solutions architect is designing a solution to access a catalog of images and provide users
 with the ability to submit requests to customize images Image customization parameters will be in
@@ -9729,9 +9728,9 @@ viewers are located. CloudFront has edge servers in locations all around the wor
   </label>
 </div>
 </p>
-<h1 id="heading-380"></h1>
-<p> </p>
 <h1 id="heading-381"></h1>
+<p> </p>
+<h1 id="heading-382"></h1>
 <h4 id="question-185"><strong>QUESTION</strong></h4>
 <p>A company has an application that posts messages to Amazon SQS Another application polls
 the queue and processes the messages in an l/O-intensive operation The company has a service level
@@ -9763,9 +9762,9 @@ policy based on the age of the oldest message in the SQS queue
   </label>
 </div>
 </p>
-<h1 id="heading-382"></h1>
-<p> </p>
 <h1 id="heading-383"></h1>
+<p> </p>
+<h1 id="heading-384"></h1>
 <h4 id="question-186"><strong>QUESTION</strong></h4>
 <p>A company hosts its web application on AWS using seven Amazon EC2 instances The
 company requires that the IP addresses of all healthy EC2 instances be returned in response to DNS
@@ -9788,9 +9787,9 @@ D. Geolocation routing policy
   </label>
 </div>
 </p>
-<h1 id="heading-384"></h1>
-<p> </p>
 <h1 id="heading-385"></h1>
+<p> </p>
+<h1 id="heading-386"></h1>
 <h4 id="question-187"><strong>QUESTION</strong></h4>
 <p>A company relies on an application that needs at least 4 Amazon EC2 instances during regular
 traffic and must scale up to 12 EC2 instances during peak loads. The application is critical to the
@@ -9818,9 +9817,9 @@ with all 8 in Availability Zone A
   </label>
 </div>
 </p>
-<h1 id="heading-386"></h1>
-<p> </p>
 <h1 id="heading-387"></h1>
+<p> </p>
+<h1 id="heading-388"></h1>
 <h4 id="question-188"><strong>QUESTION</strong></h4>
 <p>A company has recently updated its internal security standards. The company must now
 ensure all Amazon S3 buckets and Amazon Elastic Block Store (Amazon EBS) volumes are encrypted
@@ -9849,9 +9848,9 @@ Parameter Store.
   </label>
 </div>
 </p>
-<h1 id="heading-388"></h1>
-<p> </p>
 <h1 id="heading-389"></h1>
+<p> </p>
+<h1 id="heading-390"></h1>
 <h4 id="question-189"><strong>QUESTION</strong></h4>
 <p>An engineering team is developing and deploying AWS Lambda functions. The team needs to
 create roles and manage policies in AWS IAM to configure the permissions of the Lambda functions.
@@ -9878,9 +9877,9 @@ Lambda functions Allow the engineering team to assume this role.
   </label>
 </div>
 </p>
-<h1 id="heading-390"></h1>
-<p> </p>
 <h1 id="heading-391"></h1>
+<p> </p>
+<h1 id="heading-392"></h1>
 <h4 id="question-190"><strong>QUESTION</strong></h4>
 <p>A company wants to migrate its MySQL database from on premises to AWS. The company
 recently experienced a database outage that significantly impacted the business. To ensure this does
@@ -9908,9 +9907,9 @@ function to synchronously replicate the data to an Amazon RDS MySQL DB instance.
   </label>
 </div>
 </p>
-<h1 id="heading-392"></h1>
-<p> </p>
 <h1 id="heading-393"></h1>
+<p> </p>
+<h1 id="heading-394"></h1>
 <h4 id="question-191"><strong>QUESTION</strong></h4>
 <p>A company built a food ordering application that captures user data and stores it for future
 analysis The application&rsquo;s static front end is deployed on an Amazon EC2 instance The front-end
@@ -9941,9 +9940,9 @@ Scaling group and scale based on the queue depth to process and store the data i
   </label>
 </div>
 </p>
-<h1 id="heading-394"></h1>
-<p> </p>
 <h1 id="heading-395"></h1>
+<p> </p>
+<h1 id="heading-396"></h1>
 <h4 id="question-192"><strong>QUESTION</strong></h4>
 <p>A company is concerned that two NAT instances in use will no longer be able to support the
 traffic needed for the company&rsquo;s application. A solutions architect wants to implement a solution
@@ -9970,9 +9969,9 @@ Network Load Balancer.
   </label>
 </div>
 </p>
-<h1 id="heading-396"></h1>
-<p> </p>
 <h1 id="heading-397"></h1>
+<p> </p>
+<h1 id="heading-398"></h1>
 <h4 id="question-193"><strong>QUESTION</strong></h4>
 <p>A solutions architect needs to design a low-latency solution for a static single-page
 application accessed by users utilizing a custom domain name. The solution must be serverless,
@@ -9997,9 +9996,9 @@ E. Elastic Load Balancer
   </label>
 </div>
 </p>
-<h1 id="heading-398"></h1>
-<p> </p>
 <h1 id="heading-399"></h1>
+<p> </p>
+<h1 id="heading-400"></h1>
 <h4 id="question-194"><strong>QUESTION</strong></h4>
 <p>A company is processing data on a daily basis The results of the operations are stored in an
 Amazon S3 bucket, analyzed daily for one week, and then must remain immediately accessible for
@@ -10024,9 +10023,9 @@ One Zone-IA) after 30 days.
   </label>
 </div>
 </p>
-<h1 id="heading-400"></h1>
-<p> </p>
 <h1 id="heading-401"></h1>
+<p> </p>
+<h1 id="heading-402"></h1>
 <h4 id="question-195"><strong>QUESTION</strong></h4>
 <p>A company has a highly dynamic batch processing job that uses many Amazon EC2 instances
 to complete it.
@@ -10051,9 +10050,9 @@ D. Implement the processing on AWS Lambda
   </label>
 </div>
 </p>
-<h1 id="heading-402"></h1>
-<p> </p>
 <h1 id="heading-403"></h1>
+<p> </p>
+<h1 id="heading-404"></h1>
 <h4 id="question-196"><strong>QUESTION</strong></h4>
 <p>A company has a live chat application running on list on-premises servers that use
 WebSockets. The company wants to migrate the application to AWS Application traffic is
@@ -10081,9 +10080,9 @@ Amazon DynamoDB table as the data store Configure the DynamoDB table for provisi
   </label>
 </div>
 </p>
-<h1 id="heading-404"></h1>
-<p> </p>
 <h1 id="heading-405"></h1>
+<p> </p>
+<h1 id="heading-406"></h1>
 <h4 id="question-197"><strong>QUESTION</strong></h4>
 <p>A company hosts its core network services, including directory services and DNS. in its onpremises data center. The data center is connected to the AWS Cloud using AWS Direct Connect (DX)
 Additional AWS accounts are planned that will require quick, cost-effective, and consistent access to
@@ -10109,9 +10108,9 @@ network traffic to the on-premises servers
   </label>
 </div>
 </p>
-<h1 id="heading-406"></h1>
-<p> </p>
 <h1 id="heading-407"></h1>
+<p> </p>
+<h1 id="heading-408"></h1>
 <h4 id="question-198"><strong>QUESTION</strong></h4>
 <p>A company is experiencing growth as demand for its product has increased The company&rsquo;s
 existing purchasing application is slow when traffic spikes The application is a monolithic three tier
@@ -10138,9 +10137,9 @@ asynchronous AWS Lambda calls.
   </label>
 </div>
 </p>
-<h1 id="heading-408"></h1>
-<p> </p>
 <h1 id="heading-409"></h1>
+<p> </p>
+<h1 id="heading-410"></h1>
 <h4 id="question-199"><strong>QUESTION</strong></h4>
 <p>A company has a 143 TB MySQL database that it wants to migrate to AWS. The plan is to use
 Amazon Aurora MySQL as the platform going forward. The company has a 100 Mbps AWS Direct
@@ -10167,9 +10166,9 @@ import the data into Amazon S3 Import the data into Aurora
   </label>
 </div>
 </p>
-<h1 id="heading-410"></h1>
-<p> </p>
 <h1 id="heading-411"></h1>
+<p> </p>
+<h1 id="heading-412"></h1>
 <h4 id="question-200"><strong>QUESTION</strong></h4>
 <p>A company has an application workflow that uses an AWS Lambda function to download
 and decrypt files from Amazon S3 These files are encrypted using AWS Key Management Service
@@ -10197,13 +10196,13 @@ Lambda function.
   </label>
 </div>
 </p>
-<h1 id="heading-412"></h1>
-<p> </p>
 <h1 id="heading-413"></h1>
-<h2 id="question-201-300"><strong>QUESTION 201-300</strong></h2>
-<h1 id="heading-414"></h1>
 <p> </p>
+<h1 id="heading-414"></h1>
+<h2 id="question-201-300"><strong>QUESTION 201-300</strong></h2>
 <h1 id="heading-415"></h1>
+<p> </p>
+<h1 id="heading-416"></h1>
 <h4 id="question-201"><strong>QUESTION</strong></h4>
 <p>A company&rsquo;s application runs on Amazon EC2 instances behind an Application Load Balancer
 (ALB) The instances run in an Amazon EC2 Auto Scaling group across multiple Availability Zones On
@@ -10236,9 +10235,9 @@ and date.
   </label>
 </div>
 
-<h1 id="heading-416"></h1>
-<p> </p>
 <h1 id="heading-417"></h1>
+<p> </p>
+<h1 id="heading-418"></h1>
 <h4 id="question-202"><strong>QUESTION</strong></h4>
 <p>A company had a build server that is in an Auto Scaling group and often has multiple Linux
 instances running.
@@ -10261,9 +10260,9 @@ D. Amazon Elastic File System (Amazon EFS)
   </label>
 </div>
 </p>
-<h1 id="heading-418"></h1>
-<p> </p>
 <h1 id="heading-419"></h1>
+<p> </p>
+<h1 id="heading-420"></h1>
 <h4 id="question-203"><strong>QUESTION</strong></h4>
 <p>A company&rsquo;s website runs on Amazon EC2 instances behind an Application Load Balancer
 (ALB) The website has a mix of dynamic and static content Users around the globe are reporting that
@@ -10290,9 +10289,9 @@ and EC2 instances Then update an Amazon Route 53 record to point to the S3 bucke
   </label>
 </div>
 </p>
-<h1 id="heading-420"></h1>
-<p> </p>
 <h1 id="heading-421"></h1>
+<p> </p>
+<h1 id="heading-422"></h1>
 <h4 id="question-204"><strong>QUESTION</strong></h4>
 <p>A company is building a media-sharing application and decides to use Amazon S3 for
 storage. When a media file is uploaded the company starts a multi-step process to create thumbnails,
@@ -10325,9 +10324,9 @@ to poll the index for unprocess use the program to perform the processing
   </label>
 </div>
 </p>
-<h1 id="heading-422"></h1>
-<p> </p>
 <h1 id="heading-423"></h1>
+<p> </p>
+<h1 id="heading-424"></h1>
 <h4 id="question-205"><strong>QUESTION</strong></h4>
 <p>A solutions architect at an ecommerce company wants to back up application log data to
 Amazon S3 The solutions architect is unsure how frequently the logs will be accessed or which logs
@@ -10370,9 +10369,9 @@ Standard.
   </label>
 </div>
 </p>
-<h1 id="heading-424"></h1>
-<p> </p>
 <h1 id="heading-425"></h1>
+<p> </p>
+<h1 id="heading-426"></h1>
 <h4 id="question-206"><strong>QUESTION</strong></h4>
 <p>An online shopping application accesses an Amazon RDS Multi-AZ DB instance. Database
 performance is slowing down the application. After upgrading to the next-generation instance type,
@@ -10400,9 +10399,9 @@ query it first and query the database only if needed
   </label>
 </div>
 </p>
-<h1 id="heading-426"></h1>
-<p> </p>
 <h1 id="heading-427"></h1>
+<p> </p>
+<h1 id="heading-428"></h1>
 <h4 id="question-207"><strong>QUESTION</strong></h4>
 <p>What should a solutions architect do to ensure that all objects uploaded to an Amazon S3
 bucket are encrypted?</p>
@@ -10426,9 +10425,9 @@ header set
   </label>
 </div>
 </p>
-<h1 id="heading-428"></h1>
-<p> </p>
 <h1 id="heading-429"></h1>
+<p> </p>
+<h1 id="heading-430"></h1>
 <h4 id="question-208"><strong>QUESTION</strong></h4>
 <p>A company has been storing analytics data in an Amazon RDS instance for the past few
 years. The company asked a solutions architect to find a solution that allows users to access this data
@@ -10470,9 +10469,9 @@ the API Gateway tiered pricing model, you can reduce your cost as your API usage
   </label>
 </div>
 </p>
-<h1 id="heading-430"></h1>
-<p> </p>
 <h1 id="heading-431"></h1>
+<p> </p>
+<h1 id="heading-432"></h1>
 <h4 id="question-209"><strong>QUESTION</strong></h4>
 <p>A company&rsquo;s application is running on Amazon EC2 instances m a single Region in the event
 of a disaster a solutions architect needs to ensure that the resources can also be deployed to a
@@ -10523,9 +10522,9 @@ Once the new AMI is in an Available state the copy is complete.
   </label>
 </div>
 </p>
-<h1 id="heading-432"></h1>
-<p> </p>
 <h1 id="heading-433"></h1>
+<p> </p>
+<h1 id="heading-434"></h1>
 <h4 id="question-210"><strong>QUESTION</strong></h4>
 <p>A company runs a web service on Amazon CC2 instances behind an Application Load
 Balancer The instances run in an Amazon EC2 Auto Scaling group across two Availability 7ones I he
@@ -10549,9 +10548,9 @@ D. Change the Auto Scaling group to use eight servers across two Availability Zo
   </label>
 </div>
 </p>
-<h1 id="heading-434"></h1>
-<p> </p>
 <h1 id="heading-435"></h1>
+<p> </p>
+<h1 id="heading-436"></h1>
 <h4 id="question-211"><strong>QUESTION</strong></h4>
 <p>An operations team has a standard that states IAM policies should not be applied directly to
 users. Some new members have not been following this standard. The operation manager needs a
@@ -10574,9 +10573,9 @@ D. Run AWS Lambda when a user is modified
   </label>
 </div>
 </p>
-<h1 id="heading-436"></h1>
-<p> </p>
 <h1 id="heading-437"></h1>
+<p> </p>
+<h1 id="heading-438"></h1>
 <h4 id="question-212"><strong>QUESTION</strong></h4>
 <p>A solutions architect needs to design a managed storage solution for a company&rsquo;s
 application that includes high-performance machine learning This application runs on AWS Fargate
@@ -10603,9 +10602,9 @@ IAM role that allows Fargate to communicate with Amazon EBS
   </label>
 </div>
 </p>
-<h1 id="heading-438"></h1>
-<p> </p>
 <h1 id="heading-439"></h1>
+<p> </p>
+<h1 id="heading-440"></h1>
 <h4 id="question-213"><strong>QUESTION</strong></h4>
 <p>A company is using Amazon EC2 to run its big data analytics workloads. These variable
 workloads run each night, and it is critical they finish by the start of business the following day. A
@@ -10628,9 +10627,9 @@ D. On-Demand Instances
   </label>
 </div>
 </p>
-<h1 id="heading-440"></h1>
-<p> </p>
 <h1 id="heading-441"></h1>
+<p> </p>
+<h1 id="heading-442"></h1>
 <h4 id="question-214"><strong>QUESTION</strong></h4>
 <p>A company runs an application on Amazon EC2 Instances. The application is deployed in
 private subnets in three Availability Zones of the us-east-1 Region. The instances must be able to
@@ -10655,9 +10654,9 @@ D. Deploy an internet gateway in a public subnet of each Availability Zone.
   </label>
 </div>
 </p>
-<h1 id="heading-442"></h1>
-<p> </p>
 <h1 id="heading-443"></h1>
+<p> </p>
+<h1 id="heading-444"></h1>
 <h4 id="question-215"><strong>QUESTION</strong></h4>
 <p>A company has an application that calls AWS Lambda functions A recent code review found
 database credentials stored in the source code The database credentials need to be removed from
@@ -10685,9 +10684,9 @@ with a role that can retrieve the password from AWS KMS given its key ID
   </label>
 </div>
 </p>
-<h1 id="heading-444"></h1>
-<p> </p>
 <h1 id="heading-445"></h1>
+<p> </p>
+<h1 id="heading-446"></h1>
 <h4 id="question-216"><strong>QUESTION</strong></h4>
 <p>A development team is collaborating with another company to create an integrated
 product. The other company needs to access an Amazon Simple Queue Service (Amazon SQS) queue
@@ -10712,9 +10711,9 @@ company access to the SQS queue.
   </label>
 </div>
 </p>
-<h1 id="heading-446"></h1>
-<p> </p>
 <h1 id="heading-447"></h1>
+<p> </p>
+<h1 id="heading-448"></h1>
 <h4 id="question-217"><strong>QUESTION</strong></h4>
 <p>A company wants to run a hybrid workload for data processing. The data needs to be
 accessed by on-premises applications for local data processing using an NFS protocol, and must also
@@ -10741,9 +10740,9 @@ local storage in the AWS cloud, then perform analytics on this data in the cloud
   </label>
 </div>
 </p>
-<h1 id="heading-448"></h1>
-<p> </p>
 <h1 id="heading-449"></h1>
+<p> </p>
+<h1 id="heading-450"></h1>
 <h4 id="question-218"><strong>QUESTION</strong></h4>
 <p>A company has a multi-tier application deployed on several Amazon EC2 instances in an
 Auto Scaling group.
@@ -10773,9 +10772,9 @@ E. Configure the Auto Scaling group to use the average free memory as the scalin
   </label>
 </div>
 </p>
-<h1 id="heading-450"></h1>
-<p> </p>
 <h1 id="heading-451"></h1>
+<p> </p>
+<h1 id="heading-452"></h1>
 <h4 id="question-219"><strong>QUESTION</strong></h4>
 <p>A company uses Amazon S3 as its object storage solution. The company has thousands of S3
 it uses to store data. Some of the S3 bucket have data that is accessed less frequently than others. A
@@ -10799,9 +10798,9 @@ D. Use S3 One Zone-infrequent Access (S3 One Zone-IA).
   </label>
 </div>
 B</p>
-<h1 id="heading-452"></h1>
-<p> </p>
 <h1 id="heading-453"></h1>
+<p> </p>
+<h1 id="heading-454"></h1>
 <h4 id="question-220"><strong>QUESTION</strong></h4>
 <p>A company recently deployed a new auditing system to centralize information about
 operating system versions, patching, and installed software for Amazon EC2 instances. A solutions
@@ -10830,9 +10829,9 @@ terminated.
   </label>
 </div>
 </p>
-<h1 id="heading-454"></h1>
-<p> </p>
 <h1 id="heading-455"></h1>
+<p> </p>
+<h1 id="heading-456"></h1>
 <h4 id="question-221"><strong>QUESTION</strong></h4>
 <p>A solutions architect is designing a system to analyze the performance of financial markets
 while the markets are closed The system will run a series of compute-intensive jobs for 4 hours every
@@ -10856,9 +10855,9 @@ D. Scheduled Reserved Instances
   </label>
 </div>
 </p>
-<h1 id="heading-456"></h1>
-<p> </p>
 <h1 id="heading-457"></h1>
+<p> </p>
+<h1 id="heading-458"></h1>
 <h4 id="question-222"><strong>QUESTION</strong></h4>
 <p>A company maintains a searchable repository of items on its website Tie data is stored in an
 Amazon RDS for MySQL database table that contains over 10 million rows The database has 2 TB of
@@ -10883,9 +10882,9 @@ D. Enable Multi-AZ RDS read replicas with MySQL native asynchronous replication
   </label>
 </div>
 </p>
-<h1 id="heading-458"></h1>
-<p> </p>
 <h1 id="heading-459"></h1>
+<p> </p>
+<h1 id="heading-460"></h1>
 <h4 id="question-223"><strong>QUESTION</strong></h4>
 <p>An application hosted on AWS is experiencing performance problems, and the application
 vendor wants to perform an analysis of the log file to troubleshoot further. The log file is stored on
@@ -10922,9 +10921,9 @@ generating a presigned URL.
   </label>
 </div>
 </p>
-<h1 id="heading-460"></h1>
-<p> </p>
 <h1 id="heading-461"></h1>
+<p> </p>
+<h1 id="heading-462"></h1>
 <h4 id="question-224"><strong>QUESTION</strong></h4>
 <p>A company runs a website on Amazon EC2 instances behind an ELB Application Load
 Balancer. Amazon Route 53 is used for the DNS. The company wants to set up a backup website with
@@ -10949,9 +10948,9 @@ website.
   </label>
 </div>
 </p>
-<h1 id="heading-462"></h1>
-<p> </p>
 <h1 id="heading-463"></h1>
+<p> </p>
+<h1 id="heading-464"></h1>
 <h4 id="question-225"><strong>QUESTION</strong></h4>
 <p>A company hosts its product information webpages on AWS. The existing solution uses
 multiple Amazon C2 instances behind an Application Load Balancer in an Auto Scaling group. The
@@ -11003,9 +11002,9 @@ are now held (or cached) in multiple edge locations around the world.
   </label>
 </div>
 </p>
-<h1 id="heading-464"></h1>
-<p> </p>
 <h1 id="heading-465"></h1>
+<p> </p>
+<h1 id="heading-466"></h1>
 <h4 id="question-226"><strong>QUESTION</strong></h4>
 <p>A solutions architect is working on optimizing a legacy document management application
 running on Microsoft Windows Server in an on-premises data center. The application stores a large
@@ -11029,9 +11028,9 @@ D. Set up an Amazon Elastic Block Store (Amazon EBS) volume.
   </label>
 </div>
 </p>
-<h1 id="heading-466"></h1>
-<p> </p>
 <h1 id="heading-467"></h1>
+<p> </p>
+<h1 id="heading-468"></h1>
 <h4 id="question-227"><strong>QUESTION</strong></h4>
 <p>A company requires a durable backup storage solution for its on-premises database servers
 while ensuring on-premises applications maintain access to these backups for quick recovery. The
@@ -11059,9 +11058,9 @@ to Amazon S3 Glacier Deep Archive.
   </label>
 </div>
 </p>
-<h1 id="heading-468"></h1>
-<p> </p>
 <h1 id="heading-469"></h1>
+<p> </p>
+<h1 id="heading-470"></h1>
 <h4 id="question-228"><strong>QUESTION</strong></h4>
 <p>A company runs an application that uses multiple Amazon EC2 instances to gather data from
 its users The data is then processed and transferred to Amazon S3 for long-term storage A review of
@@ -11087,9 +11086,9 @@ D. Redesign the application to use an event-driven design with Amazon Simple Que
   </label>
 </div>
 </p>
-<h1 id="heading-470"></h1>
-<p> </p>
 <h1 id="heading-471"></h1>
+<p> </p>
+<h1 id="heading-472"></h1>
 <h4 id="question-229"><strong>QUESTION</strong></h4>
 <p>A solutions architect is helping a developer design a new ecommerce shopping cart
 application using AWS services. The developer is unsure of the current database schema and expects
@@ -11113,9 +11112,9 @@ D. Amazon SQS and Amazon Aurora PostgreSQL
   </label>
 </div>
 </p>
-<h1 id="heading-472"></h1>
-<p> </p>
 <h1 id="heading-473"></h1>
+<p> </p>
+<h1 id="heading-474"></h1>
 <h4 id="question-230"><strong>QUESTION</strong></h4>
 <p>A three-tier web application processes orders from customers. The web tier consists of
 Amazon EC2 instances behind an Application Load Balancer, a middle tier of three EC2 instances
@@ -11142,9 +11141,9 @@ depth.
   </label>
 </div>
 </p>
-<h1 id="heading-474"></h1>
-<p> </p>
 <h1 id="heading-475"></h1>
+<p> </p>
+<h1 id="heading-476"></h1>
 <h4 id="question-231"><strong>QUESTION</strong></h4>
 <p>A company built a food ordering application that captures user data and stores it for future
 analysis The application&rsquo;s static front end is deployed on an Amazon EC2 instance The front-end
@@ -11175,9 +11174,9 @@ Scaling group and scale based on the queue depth to process and store the data i
   </label>
 </div>
 </p>
-<h1 id="heading-476"></h1>
-<p> </p>
 <h1 id="heading-477"></h1>
+<p> </p>
+<h1 id="heading-478"></h1>
 <h4 id="question-232"><strong>QUESTION</strong></h4>
 <p>A solutions architect must design a solution for a persistent database that is being migrated
 from on-premises to AWS. The database requires 64,000 IOPS according to the database
@@ -11205,9 +11204,9 @@ system level that aggregates both volumes to achieve the IOPS requirements. <br>
   </label>
 </div>
 </p>
-<h1 id="heading-478"></h1>
-<p> </p>
 <h1 id="heading-479"></h1>
+<p> </p>
+<h1 id="heading-480"></h1>
 <h4 id="question-233"><strong>QUESTION</strong></h4>
 <p>A solutions architect is designing storage for a high performance computing (HPC)
 environment based on Amazon Linux. The workload stores and processes a large amount of
@@ -11248,9 +11247,9 @@ FSx for Lustre also allows you to also write the output of your HPC job back to 
   </label>
 </div>
 </p>
-<h1 id="heading-480"></h1>
-<p> </p>
 <h1 id="heading-481"></h1>
+<p> </p>
+<h1 id="heading-482"></h1>
 <h4 id="question-234"><strong>QUESTION</strong></h4>
 <p>A company&rsquo;s operations teams has an existing Amazon S3 bucket configured to notify an
 Amazon SQS queue when new object are created within the bucket. The development team also
@@ -11278,9 +11277,9 @@ events to the new topic Add subscription for both queue in the topic.
   </label>
 </div>
 </p>
-<h1 id="heading-482"></h1>
-<p> </p>
 <h1 id="heading-483"></h1>
+<p> </p>
+<h1 id="heading-484"></h1>
 <h4 id="question-235"><strong>QUESTION</strong></h4>
 <p>A marketing company is storing CSV files in an Amazon S3 bucket for statistical analysis An
 application on an Amazon EC2 instance needs permission to efficiently process the CSV data stored in
@@ -11304,9 +11303,9 @@ calls
   </label>
 </div>
 </p>
-<h1 id="heading-484"></h1>
-<p> </p>
 <h1 id="heading-485"></h1>
+<p> </p>
+<h1 id="heading-486"></h1>
 <h4 id="question-236"><strong>QUESTION</strong></h4>
 <p>A company stores call recordings on a monthly basis Statistically, the recorded data may be
 referenced randomly within a year but accessed rarely after 1 year Files that are newer than 1 year
@@ -11336,9 +11335,9 @@ retrieve them from Amazon S3 or S3 Glacier
   </label>
 </div>
 B</p>
-<h1 id="heading-486"></h1>
-<p> </p>
 <h1 id="heading-487"></h1>
+<p> </p>
+<h1 id="heading-488"></h1>
 <h4 id="question-237"><strong>QUESTION</strong></h4>
 <p>A company&rsquo;s web application is using multiple Linux Amazon EC2 instances and storing data
 on Amazon EBS volumes. The company is looking for a solution to increase the resiliency of the
@@ -11386,9 +11385,9 @@ when they are needed and terminating them when they aren&rsquo;t.
   </label>
 </div>
 </p>
-<h1 id="heading-488"></h1>
-<p> </p>
 <h1 id="heading-489"></h1>
+<p> </p>
+<h1 id="heading-490"></h1>
 <h4 id="question-238"><strong>QUESTION</strong></h4>
 <p>A company with facilities in North America. Europe, and Asia is designing new distributed
 application to optimize its global supply chain and manufacturing process. The orders booked on one
@@ -11412,9 +11411,9 @@ D. Use Amazon RDS for PostgreSQL with a cross-Region read replica
   </label>
 </div>
 </p>
-<h1 id="heading-490"></h1>
-<p> </p>
 <h1 id="heading-491"></h1>
+<p> </p>
+<h1 id="heading-492"></h1>
 <h4 id="question-239"><strong>QUESTION</strong></h4>
 <p>A company collects temperature, humidity, and atmospheric pressure data in cities across
 multiple continents.
@@ -11444,9 +11443,9 @@ in the centralized Region and run an analysis on the data daily.
   </label>
 </div>
 </p>
-<h1 id="heading-492"></h1>
-<p> </p>
 <h1 id="heading-493"></h1>
+<p> </p>
+<h1 id="heading-494"></h1>
 <h4 id="question-240"><strong>QUESTION</strong></h4>
 <p>A healthcare company stores highly sensitive patient records. Compliance requires that
 multiple copies be stored in different locations Each record must be stored for 7 years. The company
@@ -11475,9 +11474,9 @@ data to Amazon S3 Glacier Deep Archive using a lifecycle policy
   </label>
 </div>
 </p>
-<h1 id="heading-494"></h1>
-<p> </p>
 <h1 id="heading-495"></h1>
+<p> </p>
+<h1 id="heading-496"></h1>
 <h4 id="question-241"><strong>QUESTION</strong></h4>
 <p>A company running an on-premises application is migrating the application to AWS to
 increase its elasticity and availability. The current architecture uses a Microsoft SQL Server database
@@ -11506,9 +11505,9 @@ snapshots from RDS for the test database.
   </label>
 </div>
 </p>
-<h1 id="heading-496"></h1>
-<p> </p>
 <h1 id="heading-497"></h1>
+<p> </p>
+<h1 id="heading-498"></h1>
 <h4 id="question-242"><strong>QUESTION</strong></h4>
 <p>A solutions architect is designing a security solution for a company that wants to provide
 developers with individual AWS accounts through AWS Organizations, while also maintaining
@@ -11537,9 +11536,9 @@ Amazon Resource Name (ARN) in the master account.
   </label>
 </div>
 </p>
-<h1 id="heading-498"></h1>
-<p> </p>
 <h1 id="heading-499"></h1>
+<p> </p>
+<h1 id="heading-500"></h1>
 <h4 id="question-243"><strong>QUESTION</strong></h4>
 <p>A company has a website running on Amazon EC2 instances across two Availability Zones.
 The company is expecting spikes in traffic on specific holidays, and wants to provide a consistent user
@@ -11561,9 +11560,9 @@ D. Use scheduled scaling.
   </label>
 </div>
 </p>
-<h1 id="heading-500"></h1>
-<p> </p>
 <h1 id="heading-501"></h1>
+<p> </p>
+<h1 id="heading-502"></h1>
 <h4 id="question-244"><strong>QUESTION</strong></h4>
 <p>A solutions architect is designing a multi-Region disaster recovery solution for an application
 that will provide public API access. The application will use Amazon EC2 instances with a userdata
@@ -11592,9 +11591,9 @@ Region
   </label>
 </div>
 </p>
-<h1 id="heading-502"></h1>
-<p> </p>
 <h1 id="heading-503"></h1>
+<p> </p>
+<h1 id="heading-504"></h1>
 <h4 id="question-245"><strong>QUESTION</strong></h4>
 <p>An application runs on Amazon EC2 instances in private subnets. The application needs to
 access an Amazon DynamoDB table. What is the MOST secure way to access the table while ensuring
@@ -11616,9 +11615,9 @@ D. Use the internet gateway attached to the VPC.
   </label>
 </div>
 </p>
-<h1 id="heading-504"></h1>
-<p> </p>
 <h1 id="heading-505"></h1>
+<p> </p>
+<h1 id="heading-506"></h1>
 <h4 id="question-246"><strong>QUESTION</strong></h4>
 <p>A company has two VPCs named Management and Production. The Management VPC uses
 VPNs through a customer gateway to connect to a single device in the data center The Production
@@ -11643,9 +11642,9 @@ D. Add a second VPC peering connection between the Management VPC and the Produc
   </label>
 </div>
 </p>
-<h1 id="heading-506"></h1>
-<p> </p>
 <h1 id="heading-507"></h1>
+<p> </p>
+<h1 id="heading-508"></h1>
 <h4 id="question-247"><strong>QUESTION</strong></h4>
 <p>A company receives inconsistent service from its data center provider because the company
 is headquartered in an area affected by natural disasters. The company is not ready to fully migrate
@@ -11681,9 +11680,9 @@ VPC and the data center.
   </label>
 </div>
 </p>
-<h1 id="heading-508"></h1>
-<p> </p>
 <h1 id="heading-509"></h1>
+<p> </p>
+<h1 id="heading-510"></h1>
 <h4 id="question-248"><strong>QUESTION</strong></h4>
 <p>A company mandates that an Amazon S3 gateway endpoint must allow traffic to trusted
 buckets only Which method should a solutions architect implement to meet this requirement?</p>
@@ -11708,9 +11707,9 @@ to the Amazon Resource Name (ARN) of the trusted S3 buckets
   </label>
 </div>
 </p>
-<h1 id="heading-510"></h1>
-<p> </p>
 <h1 id="heading-511"></h1>
+<p> </p>
+<h1 id="heading-512"></h1>
 <h4 id="question-249"><strong>QUESTION</strong></h4>
 <p>A Solutions Architect must design a web application that will be hosted on AWS, allowing
 users to purchase access to premium, shared content that is stored in an S3 bucket. Upon payment,
@@ -11741,9 +11740,9 @@ origin to provide access to the file through signed URLs Design the application 
   </label>
 </div>
 </p>
-<h1 id="heading-512"></h1>
-<p> </p>
 <h1 id="heading-513"></h1>
+<p> </p>
+<h1 id="heading-514"></h1>
 <h4 id="question-250"><strong>QUESTION</strong></h4>
 <p>A company provides an API to its users that automates inquiries for tax computations based
 on item prices.
@@ -11771,9 +11770,9 @@ instance API Gateway accepts and passes the item names to the EC2 instance for t
   </label>
 </div>
 </p>
-<h1 id="heading-514"></h1>
-<p> </p>
 <h1 id="heading-515"></h1>
+<p> </p>
+<h1 id="heading-516"></h1>
 <h4 id="question-251"><strong>QUESTION</strong></h4>
 <p>A company uses Application Load Balancers (ALBs) in different AWS Regions. The ALBs
 receive inconsistent traffic that can spike and drop throughout the year The company&rsquo;s networking
@@ -11800,9 +11799,9 @@ address attached to the NLB.
   </label>
 </div>
 </p>
-<h1 id="heading-516"></h1>
-<p> </p>
 <h1 id="heading-517"></h1>
+<p> </p>
+<h1 id="heading-518"></h1>
 <h4 id="question-252"><strong>QUESTION</strong></h4>
 <p>A solution architect must migrate a Windows internet information Services (IIS) web
 application to AWS. The application currently relies on a file share hosted in the user&rsquo;s on-premises
@@ -11826,9 +11825,9 @@ D. Migrate the tile share to Amazon Elastic File System (Amazon EFS)
   </label>
 </div>
 </p>
-<h1 id="heading-518"></h1>
-<p> </p>
 <h1 id="heading-519"></h1>
+<p> </p>
+<h1 id="heading-520"></h1>
 <h4 id="question-253"><strong>QUESTION</strong></h4>
 <p>A company is building applications in containers. The company wants to migrate its onpremises development and operations services from its on-premises data center to AWS.
 Management states that production system must be cloud agnostic and use the same configuration
@@ -11855,9 +11854,9 @@ instance worker nodes.
   </label>
 </div>
 </p>
-<h1 id="heading-520"></h1>
-<p> </p>
 <h1 id="heading-521"></h1>
+<p> </p>
+<h1 id="heading-522"></h1>
 <h4 id="question-254"><strong>QUESTION</strong></h4>
 <p>A company currently operates a web application backed by an Amazon RDS MySQL
 database It has automated backups that are run daily and are not encrypted A security audit requires
@@ -11899,9 +11898,9 @@ Region that they are created in.
   </label>
 </div>
 </p>
-<h1 id="heading-522"></h1>
-<p> </p>
 <h1 id="heading-523"></h1>
+<p> </p>
+<h1 id="heading-524"></h1>
 <h4 id="question-255"><strong>QUESTION</strong></h4>
 <p>A company hosts its website on AWS. To address the highly variable demand, the company
 has implemented Amazon EC2 Auto Scaling. Management is concerned that the company is overprovisioning its infrastructure, especially at the front end of the three-tier application. A solutions
@@ -11924,9 +11923,9 @@ D. Use Auto Scaling with a target tracking scaling policy.
   </label>
 </div>
 </p>
-<h1 id="heading-524"></h1>
-<p> </p>
 <h1 id="heading-525"></h1>
+<p> </p>
+<h1 id="heading-526"></h1>
 <h4 id="question-256"><strong>QUESTION</strong></h4>
 <p>A company uses a legacy on-premises analytics application that operates on gigabytes of csv
 files and represents months of data The legacy application cannot handle the growing size of csv files
@@ -11958,9 +11957,9 @@ EFS to the company&rsquo;s S3 bucket.
   </label>
 </div>
 </p>
-<h1 id="heading-526"></h1>
-<p> </p>
 <h1 id="heading-527"></h1>
+<p> </p>
+<h1 id="heading-528"></h1>
 <h4 id="question-257"><strong>QUESTION</strong></h4>
 <p>A solutions architect is designing a solution where users will De directed to a backup static
 error page it the primary website is unavailable The primary website&rsquo;s DNS records are hosted in
@@ -12017,9 +12016,9 @@ distributing requests to all three endpoints.
   </label>
 </div>
 </p>
-<h1 id="heading-528"></h1>
-<p> </p>
 <h1 id="heading-529"></h1>
+<p> </p>
+<h1 id="heading-530"></h1>
 <h4 id="question-258"><strong>QUESTION</strong></h4>
 <p>A company has a legacy application that processes data in two parts The second part of the
 process takes longer than the first, so the company has decided to rewrite the application as two
@@ -12046,9 +12045,9 @@ microservice 2 to process messages from the queue
   </label>
 </div>
 </p>
-<h1 id="heading-530"></h1>
-<p> </p>
 <h1 id="heading-531"></h1>
+<p> </p>
+<h1 id="heading-532"></h1>
 <h4 id="question-259"><strong>QUESTION</strong></h4>
 <p>A company runs a multi-tier web application that hosts news content The application runs
 on Amazon EC2 instances behind an Application Load Balancer. The instances run in an EC2 Auto
@@ -12088,9 +12087,9 @@ a developer-friendly environment.
   </label>
 </div>
 </p>
-<h1 id="heading-532"></h1>
-<p> </p>
 <h1 id="heading-533"></h1>
+<p> </p>
+<h1 id="heading-534"></h1>
 <h4 id="question-260"><strong>QUESTION</strong></h4>
 <p>A company&rsquo;s application is running on Amazon EC2 instances within an Auto Scaling group
 behind an Elastic Load Balancer Based on the application&rsquo;s history, the company anticipates a spike in
@@ -12118,9 +12117,9 @@ there are auto scaling EC2_INSTANCE_LAUNCH events
   </label>
 </div>
 </p>
-<h1 id="heading-534"></h1>
-<p> </p>
 <h1 id="heading-535"></h1>
+<p> </p>
+<h1 id="heading-536"></h1>
 <h4 id="question-261"><strong>QUESTION</strong></h4>
 <p>A company is migrating a Linux-based web server group to AWS The web servers must
 access files in a shared file store for some content To meet the migration date, minimal changes can
@@ -12143,9 +12142,9 @@ mount them on all web servers.
   </label>
 </div>
 </p>
-<h1 id="heading-536"></h1>
-<p> </p>
 <h1 id="heading-537"></h1>
+<p> </p>
+<h1 id="heading-538"></h1>
 <h4 id="question-262"><strong>QUESTION</strong></h4>
 <p>A company wants to host a web application on AWS that will communicate to a database
 within a VPC. The application should be highly available.
@@ -12171,9 +12170,9 @@ web servers, and then deploy a database architecture in multiple Availability Zo
   </label>
 </div>
 </p>
-<h1 id="heading-538"></h1>
-<p> </p>
 <h1 id="heading-539"></h1>
+<p> </p>
+<h1 id="heading-540"></h1>
 <h4 id="question-263"><strong>QUESTION</strong></h4>
 <p>A company receives structured and semi-structured data from various sources once every
 day. A solutions architect needs to design a solution that leverages big data processing frameworks.
@@ -12197,9 +12196,9 @@ to store data
   </label>
 </div>
 </p>
-<h1 id="heading-540"></h1>
-<p> </p>
 <h1 id="heading-541"></h1>
+<p> </p>
+<h1 id="heading-542"></h1>
 <h4 id="question-264"><strong>QUESTION</strong></h4>
 <p>A company&rsquo;s web application is running on Amazon EC2 instances behind an Application
 Load Balancer. The company recently changed its policy, which now requires the application to be
@@ -12222,9 +12221,9 @@ D. Configure the network ACL for the subnet that contains the EC2 instances.
   </label>
 </div>
 </p>
-<h1 id="heading-542"></h1>
-<p> </p>
 <h1 id="heading-543"></h1>
+<p> </p>
+<h1 id="heading-544"></h1>
 <h4 id="question-265"><strong>QUESTION</strong></h4>
 <p>A company wants to migrate a workload to AWS. The chief information security officer
 requires that all data be encrypted at rest when stored in the cloud. The company wants complete
@@ -12250,9 +12249,9 @@ D. AWS Key Management Service (AWS KMS) with AWS managed customer master keys (C
   </label>
 </div>
 </p>
-<h1 id="heading-544"></h1>
-<p> </p>
 <h1 id="heading-545"></h1>
+<p> </p>
+<h1 id="heading-546"></h1>
 <h4 id="question-266"><strong>QUESTION</strong></h4>
 <p>A company hosts an application used to upload files to an Amazon S3 bucket Once
 uploaded, the files are processed to extract metadata, which takes less than 5 seconds. The volume
@@ -12280,9 +12279,9 @@ to Amazon S3. Invoke an AWS Lambda function to process the files.
   </label>
 </div>
 </p>
-<h1 id="heading-546"></h1>
-<p> </p>
 <h1 id="heading-547"></h1>
+<p> </p>
+<h1 id="heading-548"></h1>
 <h4 id="question-267"><strong>QUESTION</strong></h4>
 <p>A company hosts an online shopping application that stores all orders in an Amazon RDS for
 PostgreSQL Single-AZ DB instance Management wants to eliminate single points of failure and has
@@ -12311,9 +12310,9 @@ group size of two Use Amazon Route 53 weighted record sets to distribute request
   </label>
 </div>
 </p>
-<h1 id="heading-548"></h1>
-<p> </p>
 <h1 id="heading-549"></h1>
+<p> </p>
+<h1 id="heading-550"></h1>
 <h4 id="question-268"><strong>QUESTION</strong></h4>
 <p>A company&rsquo;s web application uses an Amazon RDS PostgreSQL DB instance to store its
 application data.
@@ -12353,9 +12352,9 @@ they do to any DB instance. Amazon RDS replicates all databases in the source DB
   </label>
 </div>
 </p>
-<h1 id="heading-550"></h1>
-<p> </p>
 <h1 id="heading-551"></h1>
+<p> </p>
+<h1 id="heading-552"></h1>
 <h4 id="question-269"><strong>QUESTION</strong></h4>
 <p>A company runs a high performance computing (HPC) workload on AWS. The workload
 required low-latency network performance and high network throughput with tightly coupled nodeto-node communication. The Amazon EC2 instances are properly sized for compute and storage
@@ -12378,9 +12377,9 @@ D. Choose the required capacity reservation while launching Amazon EC2 instances
   </label>
 </div>
 </p>
-<h1 id="heading-552"></h1>
-<p> </p>
 <h1 id="heading-553"></h1>
+<p> </p>
+<h1 id="heading-554"></h1>
 <h4 id="question-270"><strong>QUESTION</strong></h4>
 <p>A company has an application with a REST-based Interface that allows data to be received in
 near-real time from a third-party vendor Once received, the application processes and stores the
@@ -12410,9 +12409,9 @@ Service (Amazon ECS) using the EC2 launch type with an Auto Scaling group.
   </label>
 </div>
 </p>
-<h1 id="heading-554"></h1>
-<p> </p>
 <h1 id="heading-555"></h1>
+<p> </p>
+<h1 id="heading-556"></h1>
 <h4 id="question-271"><strong>QUESTION</strong></h4>
 <p>A solutions architect needs to ensure that all Amazon Elastic Block Store (Amazon EBS)
 volumes restored from unencrypted EBS snapshots are encrypted What should the solutions
@@ -12435,9 +12434,9 @@ encryption.
   </label>
 </div>
 </p>
-<h1 id="heading-556"></h1>
-<p> </p>
 <h1 id="heading-557"></h1>
+<p> </p>
+<h1 id="heading-558"></h1>
 <h4 id="question-272"><strong>QUESTION</strong></h4>
 <p>A company has an on-premises data center that is running out of storage capacity. The
 company wants to migrate its storage infrastructure to AWS while minimizing bandwidth costs The
@@ -12465,9 +12464,9 @@ snapshots of the data to Amazon S3.
   </label>
 </div>
 </p>
-<h1 id="heading-558"></h1>
-<p> </p>
 <h1 id="heading-559"></h1>
+<p> </p>
+<h1 id="heading-560"></h1>
 <h4 id="question-273"><strong>QUESTION</strong></h4>
 <p>A company stores user data in AWS. The data is used continuously with peak usage during
 business hours.
@@ -12492,9 +12491,9 @@ D. Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA)
   </label>
 </div>
 </p>
-<h1 id="heading-560"></h1>
-<p> </p>
 <h1 id="heading-561"></h1>
+<p> </p>
+<h1 id="heading-562"></h1>
 <h4 id="question-274"><strong>QUESTION</strong></h4>
 <p>An online photo application lets users upload photos and perform image editing operations
 The application offers two classes of service free and paid Photos submitted by paid users are
@@ -12521,9 +12520,9 @@ Amazon EC2 instances to prioritize visibility settings so paid photos are proces
   </label>
 </div>
 </p>
-<h1 id="heading-562"></h1>
-<p> </p>
 <h1 id="heading-563"></h1>
+<p> </p>
+<h1 id="heading-564"></h1>
 <h4 id="question-275"><strong>QUESTION</strong></h4>
 <p>A company plans to store sensitive user data on Amazon S3. Internal security compliance
 requirement mandata encryption of data before sending it to Amazon S3.
@@ -12545,9 +12544,9 @@ D. Client-side encryption with a master key stored in AWS Key Management Service
   </label>
 </div>
 </p>
-<h1 id="heading-564"></h1>
-<p> </p>
 <h1 id="heading-565"></h1>
+<p> </p>
+<h1 id="heading-566"></h1>
 <h4 id="question-276"><strong>QUESTION</strong></h4>
 <p>A company requires that all versions of objects in its Amazon S3 bucket be retained Current
 object versions will be frequently accessed during the first 30 days, after which they will be rarely
@@ -12579,9 +12578,9 @@ versions to S3 Glacier Deep Archive after 1 day
   </label>
 </div>
 </p>
-<h1 id="heading-566"></h1>
-<p> </p>
 <h1 id="heading-567"></h1>
+<p> </p>
+<h1 id="heading-568"></h1>
 <h4 id="question-277"><strong>QUESTION</strong></h4>
 <p>A company runs an application in a branch office within a small data closet with no
 virtualized compute resources. The application data is stored on an NFS volume. Compliance
@@ -12624,9 +12623,9 @@ Amazon Macie to discover and classify sensitive data.
   </label>
 </div>
 </p>
-<h1 id="heading-568"></h1>
-<p> </p>
 <h1 id="heading-569"></h1>
+<p> </p>
+<h1 id="heading-570"></h1>
 <h4 id="question-278"><strong>QUESTION</strong></h4>
 <p>Organizers for a global event want to put daily reports online as static HTML pages The
 pages are expected to generate millions of views from users around the world The files are stored in
@@ -12675,9 +12674,9 @@ mOrigins.h</p>
   </label>
 </div>
 </p>
-<h1 id="heading-570"></h1>
-<p> </p>
 <h1 id="heading-571"></h1>
+<p> </p>
+<h1 id="heading-572"></h1>
 <h4 id="question-279"><strong>QUESTION</strong></h4>
 <p>A database is on an Amazon RDS MYSQL 5.6 Multi-AZ DB instance that experience highly
 dynamic reads.
@@ -12702,9 +12701,9 @@ D. Implement Amazon ElastiCache to improve database query performance.
   </label>
 </div>
 </p>
-<h1 id="heading-572"></h1>
-<p> </p>
 <h1 id="heading-573"></h1>
+<p> </p>
+<h1 id="heading-574"></h1>
 <h4 id="question-280"><strong>QUESTION</strong></h4>
 <p>A data science team requires storage for nightly log processing. The size and number of logs
 is unknown and will persist for 24 hours only What is the MOST cost-effective solution?</p>
@@ -12725,9 +12724,9 @@ D. Amazon S3 One Zone-Infrequent Access {S3 One Zone-IA)
   </label>
 </div>
 </p>
-<h1 id="heading-574"></h1>
-<p> </p>
 <h1 id="heading-575"></h1>
+<p> </p>
+<h1 id="heading-576"></h1>
 <h4 id="question-281"><strong>QUESTION</strong></h4>
 <p>A media company has an application that tracks user clicks on its websites and performs
 analytics to provide near-real time recommendations. The application has a Heel of Amazon EC2
@@ -12759,9 +12758,9 @@ Amazon RDS to Amazon Aurora Serverless to persist the data
   </label>
 </div>
 </p>
-<h1 id="heading-576"></h1>
-<p> </p>
 <h1 id="heading-577"></h1>
+<p> </p>
+<h1 id="heading-578"></h1>
 <h4 id="question-282"><strong>QUESTION</strong></h4>
 <p>A company has deployed an API in a VPC behind an internet-facing Application Load
 Balancer (ALB) An application that consumes the API as a client is deployed in a second account in
@@ -12791,9 +12790,9 @@ using the private address
   </label>
 </div>
 </p>
-<h1 id="heading-578"></h1>
-<p> </p>
 <h1 id="heading-579"></h1>
+<p> </p>
+<h1 id="heading-580"></h1>
 <h4 id="question-283"><strong>QUESTION</strong></h4>
 <p>A product team is creating a new application that will store a large amount of data The data
 will be analyzed hourly and modified by multiple Amazon EC2 Linux instances The application team
@@ -12836,9 +12835,9 @@ and VPCs, while on-premises servers can access using AWS Direct Connect or AWS V
   </label>
 </div>
 </p>
-<h1 id="heading-580"></h1>
-<p> </p>
 <h1 id="heading-581"></h1>
+<p> </p>
+<h1 id="heading-582"></h1>
 <h4 id="question-284"><strong>QUESTION</strong></h4>
 <p>An application allows users at a company&rsquo;s headquarters to access product data The
 product data is stored in an Amazon RDS MySQL DB instance. The operations team has isolated an
@@ -12866,9 +12865,9 @@ storage resources as the source database
   </label>
 </div>
 </p>
-<h1 id="heading-582"></h1>
-<p> </p>
 <h1 id="heading-583"></h1>
+<p> </p>
+<h1 id="heading-584"></h1>
 <h4 id="question-285"><strong>QUESTION</strong></h4>
 <p>An application running on AWS uses an Amazon Aurora Multi-AZ deployment for its
 database When evaluating performance metrics, a solutions architect discovered that the database
@@ -12914,9 +12913,9 @@ documentation.</p>
   </label>
 </div>
 </p>
-<h1 id="heading-584"></h1>
-<p> </p>
 <h1 id="heading-585"></h1>
+<p> </p>
+<h1 id="heading-586"></h1>
 <h4 id="question-286"><strong>QUESTION</strong></h4>
 <p>A company is planning to migrate a business-critical dataset to Amazon S3. The current
 solution design uses a single S3 bucket in the us-east-1 Region with versioning enabled to store the
@@ -12964,9 +12963,9 @@ resources.
   </label>
 </div>
 </p>
-<h1 id="heading-586"></h1>
-<p> </p>
 <h1 id="heading-587"></h1>
+<p> </p>
+<h1 id="heading-588"></h1>
 <h4 id="question-287"><strong>QUESTION</strong></h4>
 <p>A company has an Amazon EC2 instance running on a private subnet that needs to access a
 public websites to download patches and updates. The company does not want external websites to
@@ -12994,9 +12993,9 @@ Attach the security group to the EC2 instance.
   </label>
 </div>
 </p>
-<h1 id="heading-588"></h1>
-<p> </p>
 <h1 id="heading-589"></h1>
+<p> </p>
+<h1 id="heading-590"></h1>
 <h4 id="question-288"><strong>QUESTION</strong></h4>
 <p>A company is preparing to launch a public-facing web application in the AWS Cloud The
 architecture consists of Amazon EC2 instances within a VPC behind an Elastic Load Balancer (ELB). A
@@ -13019,9 +13018,9 @@ D. Enable AWS Shield Advanced and assign the ELB to it
   </label>
 </div>
 </p>
-<h1 id="heading-590"></h1>
-<p> </p>
 <h1 id="heading-591"></h1>
+<p> </p>
+<h1 id="heading-592"></h1>
 <h4 id="question-289"><strong>QUESTION</strong></h4>
 <p>A company has global users accessing an application deployed in different AWS Regions,
 exposing public static IP addresses. The users are experiencing poor performance when accessing the
@@ -13044,9 +13043,9 @@ D. Set up an Amazon Route 53 geoproximity routing policy to route traffic.
   </label>
 </div>
 </p>
-<h1 id="heading-592"></h1>
-<p> </p>
 <h1 id="heading-593"></h1>
+<p> </p>
+<h1 id="heading-594"></h1>
 <h4 id="question-290"><strong>QUESTION</strong></h4>
 <p>A solution architect is performing a security review of a recently migrated workload. The
 workload is a web application that consists of amazon EC2 instances in an Auto Scaling group behind
@@ -13078,9 +13077,9 @@ for a DDoS attack Modify a network ACL to block identified source IP addresses
   </label>
 </div>
 </p>
-<h1 id="heading-594"></h1>
-<p> </p>
 <h1 id="heading-595"></h1>
+<p> </p>
+<h1 id="heading-596"></h1>
 <h4 id="question-291"><strong>QUESTION</strong></h4>
 <p>A company has no existing file share services. A new project requires access to file storage
 that is mountable as a drive for on-premises desktops. The file server must authenticate users to an
@@ -13103,9 +13102,9 @@ D. AWS Storage Gateway
   </label>
 </div>
 </p>
-<h1 id="heading-596"></h1>
-<p> </p>
 <h1 id="heading-597"></h1>
+<p> </p>
+<h1 id="heading-598"></h1>
 <h4 id="question-292"><strong>QUESTION</strong></h4>
 <p>What should the solutions architect recommend?</p>
 <p>A. Install MySQL on Amazon EC2 in the secondary Region <br>
@@ -13125,9 +13124,9 @@ D. Implement Amazon ElastiCache to improve database query performance
   </label>
 </div>
 </p>
-<h1 id="heading-598"></h1>
-<p> </p>
 <h1 id="heading-599"></h1>
+<p> </p>
+<h1 id="heading-600"></h1>
 <h4 id="question-293"><strong>QUESTION</strong></h4>
 <p>A gaming company has multiple Amazon EC2 instances in a single Availability Zone for its
 multiplayer game that communicates with users on Layer 4 The chief technology officer (CTO) wants
@@ -13194,9 +13193,9 @@ launches another instance to replace it.
   </label>
 </div>
 </p>
-<h1 id="heading-600"></h1>
-<p> </p>
 <h1 id="heading-601"></h1>
+<p> </p>
+<h1 id="heading-602"></h1>
 <h4 id="question-294"><strong>QUESTION</strong></h4>
 <p>A company is moving its legacy workload to the AWS Cloud. The workload files will be
 shared, appended, and frequently accessed through Amazon EC2 instances when they are first
@@ -13222,9 +13221,9 @@ D. Store the data using Amazon S3 with an S3 lifecycle policy enabled to move da
   </label>
 </div>
 </p>
-<h1 id="heading-602"></h1>
-<p> </p>
 <h1 id="heading-603"></h1>
+<p> </p>
+<h1 id="heading-604"></h1>
 <h4 id="question-295"><strong>QUESTION</strong></h4>
 <p>A company hosts an application on multiple Amazon EC2 instances The application
 processes messages from an Amazon SQS queue writes to an Amazon RDS table and deletes the
@@ -13248,9 +13247,9 @@ D. Use the ChangeMessageVisibility API call to increase the visibility timeout
   </label>
 </div>
 </p>
-<h1 id="heading-604"></h1>
-<p> </p>
 <h1 id="heading-605"></h1>
+<p> </p>
+<h1 id="heading-606"></h1>
 <h4 id="question-296"><strong>QUESTION</strong></h4>
 <p>A solutions architect is planning the deployment of a new static website. The solution must
 minimize costs and provide at least 99% availability. Which solution meets these requirements?</p>
@@ -13274,9 +13273,9 @@ Availability Zone.
   </label>
 </div>
 </p>
-<h1 id="heading-606"></h1>
-<p> </p>
 <h1 id="heading-607"></h1>
+<p> </p>
+<h1 id="heading-608"></h1>
 <h4 id="question-297"><strong>QUESTION</strong></h4>
 <p>A company is developing a real-time multiplier game that uses UDP for communications
 between client and servers in an Auto Scaling group Spikes in demand are anticipated during the day,
@@ -13302,9 +13301,9 @@ data storage
   </label>
 </div>
 </p>
-<h1 id="heading-608"></h1>
-<p> </p>
 <h1 id="heading-609"></h1>
+<p> </p>
+<h1 id="heading-610"></h1>
 <h4 id="question-298"><strong>QUESTION</strong></h4>
 <p>A company is using a fleet of Amazon EC2 instances to ingest data from on-premises data
 sources. The data is in JSON format and ingestion rates can be as high as 1 MB/s. When an EC2
@@ -13331,9 +13330,9 @@ Amazon ElastiCache for Redis. Subscribe to the Redis channel to query the data.
   </label>
 </div>
 </p>
-<h1 id="heading-610"></h1>
-<p> </p>
 <h1 id="heading-611"></h1>
+<p> </p>
+<h1 id="heading-612"></h1>
 <h4 id="question-299"><strong>QUESTION</strong></h4>
 <p>A company previously migrated its data warehouse solution to AWS. The company also has
 an AWS Direct Connect connection. Corporate office users query the data warehouse using a
@@ -13361,9 +13360,9 @@ Direct Connect connection at a location in the same Region.
   </label>
 </div>
 </p>
-<h1 id="heading-612"></h1>
-<p> </p>
 <h1 id="heading-613"></h1>
+<p> </p>
+<h1 id="heading-614"></h1>
 <h4 id="question-300"><strong>QUESTION</strong></h4>
 <p>A company has a web application with sporadic usage patterns. There is heavy usage at the
 beginning of each month, moderate usage at the start of each week, and unpredictable usage during
@@ -13388,13 +13387,13 @@ D. MySQL deployed on Amazon EC2 in an Auto Scaling group
   </label>
 </div>
 </p>
-<h1 id="heading-614"></h1>
-<p> </p>
 <h1 id="heading-615"></h1>
-<h2 id="question-301-"><strong>QUESTION 301-</strong></h2>
-<h1 id="heading-616"></h1>
 <p> </p>
+<h1 id="heading-616"></h1>
+<h2 id="question-301-"><strong>QUESTION 301-</strong></h2>
 <h1 id="heading-617"></h1>
+<p> </p>
+<h1 id="heading-618"></h1>
 <h4 id="question-301"><strong>QUESTION</strong></h4>
 <p>A company is using Site-to-Site VPN connections for secure connectivity to its AWS Cloud
 resources from on premises. Due to an increase in traffic across the VPN connections to the Amazon
@@ -13418,9 +13417,9 @@ default limit
   </label>
 </div>
 </p>
-<h1 id="heading-618"></h1>
-<p> </p>
 <h1 id="heading-619"></h1>
+<p> </p>
+<h1 id="heading-620"></h1>
 <h4 id="question-302"><strong>QUESTION</strong></h4>
 <p>A company runs an application using Amazon ECS. The application creates resized versions
 of an original image and then makes Amazon S3 API calls to store the resized images in Amazon S3.
@@ -13446,9 +13445,9 @@ cluster while logged in as this account.
   </label>
 </div>
 </p>
-<h1 id="heading-620"></h1>
-<p> </p>
 <h1 id="heading-621"></h1>
+<p> </p>
+<h1 id="heading-622"></h1>
 <h4 id="question-303"><strong>QUESTION</strong></h4>
 <p>A company has a three-tier environment on AWS that ingests sensor data from its users&rsquo;
 devices. The traffic flows through a Network Load Balancer (NLB) then to Amazon EC2 instances for
@@ -13472,9 +13471,9 @@ Management Service (AWS KMS)
   </label>
 </div>
 </p>
-<h1 id="heading-622"></h1>
-<p> </p>
 <h1 id="heading-623"></h1>
+<p> </p>
+<h1 id="heading-624"></h1>
 <h4 id="question-304"><strong>QUESTION</strong></h4>
 <p>A company Is reviewing Its AWS Cloud deployment to ensure its data is not accessed by
 anyone without appropriate authorization. A solutions architect is tasked with identifying all open
@@ -13497,9 +13496,9 @@ D. Enable Amazon S3 server access logging and configure Amazon CloudWatch Events
   </label>
 </div>
 </p>
-<h1 id="heading-624"></h1>
-<p> </p>
 <h1 id="heading-625"></h1>
+<p> </p>
+<h1 id="heading-626"></h1>
 <h4 id="question-305"><strong>QUESTION</strong></h4>
 <p>A company hosts an application on an Amazon EC2 instance that requires a maximum of
 200 GB storage space. The application is used infrequently, with peaks during mornings and evenings.
@@ -13524,9 +13523,9 @@ D. Amazon EBS Throughput Optimized HDD (st1)
   </label>
 </div>
 </p>
-<h1 id="heading-626"></h1>
-<p> </p>
 <h1 id="heading-627"></h1>
+<p> </p>
+<h1 id="heading-628"></h1>
 <h4 id="question-306"><strong>QUESTION</strong></h4>
 <p>A company is developing a video conversion application hosted on AWS. The application will
 be available in two tiers: a free tier and a paid tier. Users in the paid tier will have their videos
@@ -13550,9 +13549,9 @@ one for the free tier
   </label>
 </div>
 </p>
-<h1 id="heading-628"></h1>
-<p> </p>
 <h1 id="heading-629"></h1>
+<p> </p>
+<h1 id="heading-630"></h1>
 <h4 id="question-307"><strong>QUESTION</strong></h4>
 <p>A company recently released a new type of internet-connected sensor. The company is
 expecting lo sell thousands of sensors, which are designed to stream high volumes of data each
@@ -13580,9 +13579,9 @@ function, which then stores the data in Amazon DynamoDB.
   </label>
 </div>
 </p>
-<h1 id="heading-630"></h1>
-<p> </p>
 <h1 id="heading-631"></h1>
+<p> </p>
+<h1 id="heading-632"></h1>
 <h4 id="question-308"><strong>QUESTION</strong></h4>
 <p>A company is planning to use Amazon S3 lo store images uploaded by its users The images
 must be encrypted at rest in Amazon S3 The company does not want to spend time managing and
@@ -13628,9 +13627,9 @@ request.
   </label>
 </div>
 </p>
-<h1 id="heading-632"></h1>
-<p> </p>
 <h1 id="heading-633"></h1>
+<p> </p>
+<h1 id="heading-634"></h1>
 <h4 id="question-309"><strong>QUESTION</strong></h4>
 <p>A company has an application running on Amazon EC2 instances in a private subnet. The
 application needs to store and retrieve data in Amazon S3 To reduce costs, the company wants to
@@ -13652,9 +13651,9 @@ D. Deploy an S3 interface endpoint to access the S3 buckets.
   </label>
 </div>
 </p>
-<h1 id="heading-634"></h1>
-<p> </p>
 <h1 id="heading-635"></h1>
+<p> </p>
+<h1 id="heading-636"></h1>
 <h4 id="question-310"><strong>QUESTION</strong></h4>
 <p>A company wants to use an AWS Region as a disaster recovery location for its on-premises
 infrastructure. The company has 10 TB of existing data, and the on-premise data center has a 1 Gbps
@@ -13679,9 +13678,9 @@ center.
   </label>
 </div>
 </p>
-<h1 id="heading-636"></h1>
-<p> </p>
 <h1 id="heading-637"></h1>
+<p> </p>
+<h1 id="heading-638"></h1>
 <h4 id="question-311"><strong>QUESTION</strong></h4>
 <p>A company runs an online marketplace web application on AWS. The application serves
 hundreds of thousands of users during peak hours. The company needs a scalable, near-real-time
@@ -13716,9 +13715,9 @@ S3.
   </label>
 </div>
 </p>
-<h1 id="heading-638"></h1>
-<p> </p>
 <h1 id="heading-639"></h1>
+<p> </p>
+<h1 id="heading-640"></h1>
 <h4 id="question-312"><strong>QUESTION</strong></h4>
 <p>A company has multiple AWS accounts, for various departments. One of the departments
 wants to share an Amazon S3 bucket with all other department.
@@ -13740,9 +13739,9 @@ D. Create IAM users for each of the departments and configure a read-only IAM po
   </label>
 </div>
 </p>
-<h1 id="heading-640"></h1>
-<p> </p>
 <h1 id="heading-641"></h1>
+<p> </p>
+<h1 id="heading-642"></h1>
 <h4 id="question-313"><strong>QUESTION</strong></h4>
 <p>A bicycle sharing company is developing a multi-tier architecture to track the location of its
 bicycles during peak operating hours The company wants to use these data points in its existing
@@ -13766,9 +13765,9 @@ D. Use Amazon API Gateway with Amazon Kinesis Data Analytics
   </label>
 </div>
 </p>
-<h1 id="heading-642"></h1>
-<p> </p>
 <h1 id="heading-643"></h1>
+<p> </p>
+<h1 id="heading-644"></h1>
 <h4 id="question-314"><strong>QUESTION</strong></h4>
 <p>A company has hired a new cloud engineer who should not have access to an Amazon S3
 bucket named Company Confidential. the cloud engineer must be able to read from and write to an
@@ -13791,9 +13790,9 @@ D. Option D
   </label>
 </div>
 </p>
-<h1 id="heading-644"></h1>
-<p> </p>
 <h1 id="heading-645"></h1>
+<p> </p>
+<h1 id="heading-646"></h1>
 <h4 id="question-315"><strong>QUESTION</strong></h4>
 <p>A company is hosting multiple websites for several lines of business under its registered
 parent domain. Users accessing these websites will be routed to appropriate backend Amazon EC2
@@ -13822,9 +13821,9 @@ E. Amazon S3 website hosting
   </label>
 </div>
 </p>
-<h1 id="heading-646"></h1>
-<p> </p>
 <h1 id="heading-647"></h1>
+<p> </p>
+<h1 id="heading-648"></h1>
 <h4 id="question-316"><strong>QUESTION</strong></h4>
 <p>A company is migrating a NoSQL database cluster to Amazon EC2. The database
 automatically replicates data to maintain at least three copies of the data. I/O throughput of the
@@ -13846,9 +13845,9 @@ D. Compute optimized instances with Amazon Elastic Block Store (Amazon EBS) opti
   </label>
 </div>
 </p>
-<h1 id="heading-648"></h1>
-<p> </p>
 <h1 id="heading-649"></h1>
+<p> </p>
+<h1 id="heading-650"></h1>
 <h4 id="question-317"><strong>QUESTION</strong></h4>
 <p>An application uses an Amazon RDS MySQL DB instance. The RDS database is becoming low
 on disk space.
@@ -13872,9 +13871,9 @@ previous instance
   </label>
 </div>
 </p>
-<h1 id="heading-650"></h1>
-<p> </p>
 <h1 id="heading-651"></h1>
+<p> </p>
+<h1 id="heading-652"></h1>
 <h4 id="question-318"><strong>QUESTION</strong></h4>
 <p>An application runs on Amazon EC2 instances across multiple Availability Zones The
 instances run in an Amazon EC2 Auto Scaling group behind an Application Load Balancer The
@@ -13898,9 +13897,9 @@ D. Use scheduled scaling actions to scale up and scale down the Auto Scaling gro
   </label>
 </div>
 </p>
-<h1 id="heading-652"></h1>
-<p> </p>
 <h1 id="heading-653"></h1>
+<p> </p>
+<h1 id="heading-654"></h1>
 <h4 id="question-319"><strong>QUESTION</strong></h4>
 <p>A company is deploying an application in three AWS Regions using an Application Load
 Balancer Amazon Route 53 will be used to distribute traffic between these Regions.
@@ -13923,9 +13922,9 @@ D. Create a CNAME record with a geoproximity policy.
   </label>
 </div>
 </p>
-<h1 id="heading-654"></h1>
-<p> </p>
 <h1 id="heading-655"></h1>
+<p> </p>
+<h1 id="heading-656"></h1>
 <h4 id="question-320"><strong>QUESTION</strong></h4>
 <p>A company needs to share an Amazon S3 bucket with an external vendor. The bucket owner
 must be able to access all objects.
@@ -13947,9 +13946,9 @@ D. Create an IAM policy to require users to grant bucket-owner-full control when
   </label>
 </div>
 </p>
-<h1 id="heading-656"></h1>
-<p> </p>
 <h1 id="heading-657"></h1>
+<p> </p>
+<h1 id="heading-658"></h1>
 <h4 id="question-321"><strong>QUESTION</strong></h4>
 <p>A company&rsquo;s website is using an Amazon RDS MySQL Multi-AZ DB instance for its
 transactional data storage.
@@ -13985,9 +13984,9 @@ directly to Read Replicas, without those indexes being present on the master.
   </label>
 </div>
 </p>
-<h1 id="heading-658"></h1>
-<p> </p>
 <h1 id="heading-659"></h1>
+<p> </p>
+<h1 id="heading-660"></h1>
 <h4 id="question-322"><strong>QUESTION</strong></h4>
 <p>A company wants to optimize the cost of its data storage for data that is accessed quarterly.
 The company requires high throughput, low latency, and rapid access, when needed Which Amazon
@@ -14009,9 +14008,9 @@ D. Amazon S3 Standard-Infrequent Access (S3 Standard-IA)
   </label>
 </div>
 </p>
-<h1 id="heading-660"></h1>
-<p> </p>
 <h1 id="heading-661"></h1>
+<p> </p>
+<h1 id="heading-662"></h1>
 <h4 id="question-323"><strong>QUESTION</strong></h4>
 <p>A company runs a web service on Amazon EC2 instances behind an Application Load
 Balancer The instances run in an Amazon EC2 Auto Scaling group across two Availability Zones The
@@ -14035,9 +14034,9 @@ D. Change the Auto Scaling group to use eight servers across two Availability Zo
   </label>
 </div>
 </p>
-<h1 id="heading-662"></h1>
-<p> </p>
 <h1 id="heading-663"></h1>
+<p> </p>
+<h1 id="heading-664"></h1>
 <h4 id="question-324"><strong>QUESTION</strong></h4>
 <p>An application running on an Amazon EC2 instance needs to access an Amazon DynamoDB
 table Both the EC2 instance and the DynamoDB table are in the same AWS account A solutions
@@ -14065,9 +14064,9 @@ DynamoDB calls
   </label>
 </div>
 </p>
-<h1 id="heading-664"></h1>
-<p> </p>
 <h1 id="heading-665"></h1>
+<p> </p>
+<h1 id="heading-666"></h1>
 <h4 id="question-325"><strong>QUESTION</strong></h4>
 <p>A company must re-evaluate its need for the Amazon EC2 instances it currently has
 provisioned in an Auto Scaling group. At present, the Auto Scaling group is configured for minimum
@@ -14096,9 +14095,9 @@ Scaling group.
   </label>
 </div>
 </p>
-<h1 id="heading-666"></h1>
-<p> </p>
 <h1 id="heading-667"></h1>
+<p> </p>
+<h1 id="heading-668"></h1>
 <h4 id="question-326"><strong>QUESTION</strong></h4>
 <p>A company is preparing to migrate its on-premises application to AWS The application
 consists of application servers and a Microsoft SQL Server database The database cannot be migrated
@@ -14122,9 +14121,9 @@ D. Migrate the data to Amazon RDS for SQL Server in a cross Region Multi-AZ depl
   </label>
 </div>
 </p>
-<h1 id="heading-668"></h1>
-<p> </p>
 <h1 id="heading-669"></h1>
+<p> </p>
+<h1 id="heading-670"></h1>
 <h4 id="question-327"><strong>QUESTION</strong></h4>
 <p>A company is seeing access requests by some suspicious IP addresses. The security team
 discovers the requests are from different IP addresses under the same CIDR range.
@@ -14147,9 +14146,9 @@ rules.
   </label>
 </div>
 </p>
-<h1 id="heading-670"></h1>
-<p> </p>
 <h1 id="heading-671"></h1>
+<p> </p>
+<h1 id="heading-672"></h1>
 <h4 id="question-328"><strong>QUESTION</strong></h4>
 <p>A company is planning to transfer multiple terabytes of data to AWS. The data is collected
 offline from ships.
@@ -14172,9 +14171,9 @@ D. AWS Snowball Edge Compute Optimize
   </label>
 </div>
 </p>
-<h1 id="heading-672"></h1>
-<p> </p>
 <h1 id="heading-673"></h1>
+<p> </p>
+<h1 id="heading-674"></h1>
 <h4 id="question-329"><strong>QUESTION</strong></h4>
 <p>A company&rsquo;s near-real-time streaming application is running on AWS As (he data is ingested
 a job runs on the data and takes 30 minutes to complete The workload frequently experiences high
@@ -14199,9 +14198,9 @@ E. Use AWS Fargate with Amazon Elastic Container Service (Amazon ECS) to process
   </label>
 </div>
 </p>
-<h1 id="heading-674"></h1>
-<p> </p>
 <h1 id="heading-675"></h1>
+<p> </p>
+<h1 id="heading-676"></h1>
 <h4 id="question-330"><strong>QUESTION</strong></h4>
 <p>An Amazon EC2 administrator created the following policy associated with an IAM group
 containing several users.
@@ -15193,11 +15192,6 @@ D. Users cannot terminate an EC2 instance in the us-east-1 Region when the user&
         <li></li>
       </ul>
     </li>
-    <li><a href="#hahahugoshortcode-s112-hbhb">A. Amazon Aurora Global Database <br>
-B. Amazon DynamoDB global tables. <br>
-C. Amazon RDS for MySQL with Multi-AZ enabled. <br>
-D. Amazon RDS for MySQL with a cross-Region snapshot copy.
-HAHAHUGOSHORTCODE-s112-HBHB</a></li>
   </ul>
 
   <ul>
