@@ -909,7 +909,7 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/aws/awssaa/saa-15/</guid>
-      <description>15장 기출문제 정리    QUESTION 1-100   QUESTION A company has a web application with sporadic usage patterns. There is heavy usage at the beginning of each month, moderate usage at the start of each week, and unpredictable usage during the week. The application consists of a web server and a MySQL database server running inside the data center. The company would like to move the application to the AWS Cloud, and needs to select a cost-effective database platform that will not require database modifications.</description>
+      <description>15장 기출문제 정리   답들은 정확하지 않습니다. 공부하시면서 찾아보셔야 합니다.   QUESTION 1-100   QUESTION A company has a web application with sporadic usage patterns. There is heavy usage at the beginning of each month, moderate usage at the start of each week, and unpredictable usage during the week. The application consists of a web server and a MySQL database server running inside the data center. The company would like to move the application to the AWS Cloud, and needs to select a cost-effective database platform that will not require database modifications.</description>
     </item>
     
     <item>
