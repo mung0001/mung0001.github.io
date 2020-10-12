@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Infra engineer on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/docs/infra/infra/</link>
+    <description>Recent content in Infra engineer on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    
+	<atom:link href="https://mung0001.github.io/docs/infra/infra/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/infra/infra/infra03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/infra/infra/infra03/</guid>
+      <description>****    ****          </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/infra/infra/infra04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/infra/infra/infra04/</guid>
+      <description>****    ****          </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/infra/infra/infra05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/infra/infra/infra05/</guid>
+      <description>****    ****          </description>
+    </item>
+    
+    <item>
+      <title>Infra engineer란?</title>
+      <link>https://mung0001.github.io/docs/infra/infra/infra01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/infra/infra/infra01/</guid>
+      <description>Infra engineer    Infra enginner의 정의와 역할    Infra enginner란 Infra(infrastructure)와 enginner의 합성어로 IT의 기본 틀을 잡는 역할을 수행한다고 할 수 있습니다.
+  Architecture와 Infra의 차이는 아키텍처는 컴퓨터와 소프트웨어의 호환성, 더 나아가 최근에는 기업에 적합한 클라우드 컴퓨팅을 설계해준다 할 수 있으며, Infra enginner은 기본적인 하드웨어의 세팅(IDC, VDI)을 주로 다룬다고 할 수 있습니다.
+  하지만 최근 클라우드 시장이 급격하게 성장함에 따라, 사실상 Infra enginner의 영역이 줄어들고 있는 것은 사실이지만, 대부분의 IT시장의 기본이 되는 만큼 공부할 가치가 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>Server</title>
+      <link>https://mung0001.github.io/docs/infra/infra/infra02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/infra/infra/infra02/</guid>
+      <description>Server    Server Type   설치 장소나 용도가 다양하여 서버는 여러 모델이 존재합니다.    랙 마운트형 서버    랙 마운트형 서버는 데이터 센터나 서버 룸에 설치된 랙 안에 들어가는 서버로 19인치 랙에 수용하는 것을 전제로 하며, 기기는 1U, 2U처럼 유닛 단위로 사이즈가 정해져 있으며, 1U 높이가 1.75인치로 확장성을 위해 2U 사이즈 이상인 서버가 많습니다.     타워형 서버
+ 타워형 서버는 기본적으로 우리가 사용하고 있는 Desktop PC입니다.</description>
+    </item>
+    
+  </channel>
+</rss>
