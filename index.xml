@@ -244,6 +244,18 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>Roadmap</title>
+      <link>https://mung0001.github.io/docs/system/window/window01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window01/</guid>
+      <description>Windows Sever Roadmap   Windows Sever Roadmap    Windows Server을 사용하기 위한 준비
+  응용 프로그램 : VMware workstation
+  가상머신의 종류와 하드웨어 사양
+       FIRST SECOND THIRD Windows Client SERVERCORE     주 용도 서버 전용 서버/ 클라이언트 겸용 서버/ 클라이언트 겸용 클라이언트 전용 서버 코어 테스트 용도   Guest OS 종류 Windows Server 2016 Windows Server 2016 Windows Sever 2016 Windows Sever 2016 Windows Sever 2016   가상머신 FIRST SECOND THIRD WINCLIENT SEVERCORE   CPU 코어수/ 쓰레드 1/2 1/2 1/2 2/2 1/2   하드용량 100GB 60GB 60GB 60GB 60GB   메모리 할당 2048MB 2048MB 2048MB 2048MB 2048MB   네트워크 타입 NAT NAT NAT NAT NAT   CD/DVD O O O O O   Audio X X X O X   USB X X X O X   Printer X X X O X       가상머신의 네트워크   | FIRST | SECOND | THIRD | WINCLIENT | SEVERCORE &amp;mdash; | &amp;mdash; | &amp;mdash; | &amp;mdash; | &amp;mdash; | IP 주소 | 192.</description>
+    </item>
+    
+    <item>
       <title>Shell Script란?</title>
       <link>https://mung0001.github.io/docs/programing/shell/shell-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -260,6 +272,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/network/sophos/sophos_1/</guid>
       <description>Sophos 설치    구성환경    Sophos는 nat을 외부대역으로 Host 2 ( 20.20.20.0/24 )를 내부대역으로 갖습니다. Sophos의 설치를 위해 내부 대역 ( Host 2 )의 Win 7을 통해 설치를 진행합니다.      Sophos 설치를 위한 Vm을 설정합니다.       운영체제 버전에서 Other Linux 2.6x kernel을 선택합니다. 그 후 RAM 1G 디스크 20G 외에는 기본 값으로 진행합니다.      위 그림과 같이 설정이 생성이 완료되면 설정을 위해 Edit virtual machine settings를 클릭합니다.</description>
+    </item>
+    
+    <item>
+      <title>Window Server</title>
+      <link>https://mung0001.github.io/docs/system/window/window08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window08/</guid>
+      <description>****   ****         </description>
     </item>
     
     <item>
@@ -344,6 +365,25 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <description>Shell Programming  UNIX/ Linux 기본 명령어와 개념  Redirection &amp;amp; Pipes  $ &amp;lt;File Descriptor&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;Redirection&amp;gt;$ &amp;lt;File Descriptor&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;Redirection&amp;gt; &amp;lt;Pipe&amp;gt; &amp;lt;File Descriptor&amp;gt; ...ex) $ cat /log/var/message | grep ERR# cat = &amp;lt;File Descripotr&amp;gt;# /log/var/message = &amp;lt;PATH&amp;gt;# | = &amp;lt;Redirection&amp;gt;  File Descriptor   Process가 File이나 Device를 access 하기 위해 사용
   Standard File Descriptor
   stdin(standard input) : 표준 입력 (예시 : 키보드)</description>
+    </item>
+    
+    <item>
+      <title>Windows Server Install</title>
+      <link>https://mung0001.github.io/docs/system/window/window02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window02/</guid>
+      <description>Windows Server Install   설치순서   Windows Server 2016 ISO 다운로드 및 인스톨
+  관리자 비밀번호지정
+  평가기간 라이선스 확인
+  한글 언어팩 설치
+  VMware Tools 설치
+  네트워크 고정IP주소로 설정
+  컴퓨터 이름 변경
+  디스플에이 끄기 시간 조절
+  Internet Explorer 보안 설정 끄기
+  Administrator 암호 기간 제한 제거
+  자동 업데이트 기능 끄기</description>
     </item>
     
     <item>
@@ -444,6 +484,19 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>자동시작, 부팅, 종료</title>
+      <link>https://mung0001.github.io/docs/system/window/window03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window03/</guid>
+      <description>Windows Sever 부팅 및 종료   Windows Server 종료     Windows Server는 대체로 컴퓨터를 종료하는 일이 없으며, 만약 컴퓨터를 종료하거나 재부팅할 때는 왜 종료하는 이유를 선택하거나 입력해주어야 합니다.
+  이전에 종료 및 부팅된 이벤트 기록을 확인하기 위해서는 Windows의 Event Viewer에서 System View로 확인이 가능합니다.
+  이벤트 ID로도 검색이 가능합니다.
+     Windows의 부팅과정    전원
+  POST(Power On Self Test)</description>
+    </item>
+    
+    <item>
       <title>4장 VPC</title>
       <link>https://mung0001.github.io/docs/aws/awssaa/saa-4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -509,6 +562,18 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/programing/shell/shell-4/</guid>
       <description>Shell Programming    UNIX/ Linux 시스템 관리         #</description>
+    </item>
+    
+    <item>
+      <title>사용자 계정</title>
+      <link>https://mung0001.github.io/docs/system/window/window04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window04/</guid>
+      <description>Windows Server 사용자 계정   사용자 계정    Windows는 여러 명의 사용자가 존재할 수 있고, 각 사용자마다 별도의 환경을 구성할 수 있습니다.
+  컴퓨터의 자원들에 대한 사용권한을 각 사용자마다 제한할 수 있습니다.
+  독립 실행형 서버에서 생성한 사용자 계정을 로컬 사용자 계정이라 부르며, 이 계정으로는 AD(Active Directory) 도메인에 로그온할 수 없으며 현재 컴퓨터의 자원에만 접근할 수 있습니다.
+  독립 실행형 서버의 경우 기본적으로 Administrato와 Guest 사용자가 있습니다.</description>
     </item>
     
     <item>
@@ -586,6 +651,16 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>파일 및 폴더 관리</title>
+      <link>https://mung0001.github.io/docs/system/window/window05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window05/</guid>
+      <description>파일 및 폴더 관리   확장자 및 숨은 파일 보기   기본적으로 윈도우는 파일확장자 및 숨은 파일들은 표시되어 있게 설정되어있습니다.    이에 대한 설정을 위해 파일 탐색기 &amp;gt; 보기에서 설정하거나 혹은 옵션을 통해 설정합니다.       파일 및 폴더 공유    각 PC들은 네트워크를 통해 파일 및 폴더의 공유가 가능합니다.
+  이를 사용하기 위해 먼저 FIRST 서버에서 네트워크 설정으르 수행합니다.</description>
+    </item>
+    
+    <item>
       <title>6장 인증과 권한</title>
       <link>https://mung0001.github.io/docs/aws/awssaa/saa-6/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -656,6 +731,17 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>암호화</title>
+      <link>https://mung0001.github.io/docs/system/window/window06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window06/</guid>
+      <description>암호화   암호화               암호화 연습을 위해 C 에 암호화연습, 그 안에 암호화.txt에 중요파일을 기업 후 저장하고, 그냥.txt에 일반파일을 기입 후 저장합니다.
+  저장이 완료되면 암호화파일에 속성에서 고급 &amp;gt; 데이터 보호를 위한 암호화를 설정합니다.
+        파일만 암호화를 선택합니다.        설정이 완료되면 다음과 같이 암호화가 완료되며, 암호화시킨 유저만이 이 파일에 접근이 가능해집니다.</description>
+    </item>
+    
+    <item>
       <title>7장 AWS 관리도구</title>
       <link>https://mung0001.github.io/docs/aws/awssaa/saa-7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -723,6 +809,15 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/programing/shell/shell-7/</guid>
       <description>Shell Programming    Customizing         #</description>
+    </item>
+    
+    <item>
+      <title>Windows Shell</title>
+      <link>https://mung0001.github.io/docs/system/window/window07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window07/</guid>
+      <description>Windows Shell   Windows CLI   Windows Server는 GUI환경이 아닌 도스환경으로도 실행될 수 있으며, GUI 환경이 아닌 만큼 리소스의 낭비가 적은 특징을 가지고 있습니다.       명렁어   사용자 컴퓨터의 이름을 나타내는 명령어  $ hostname$ echo %computername%    입력 문자를 출력하는 명령어  $ echo Hello#     사용자 컴퓨터의 이름을 변경하는 명령어  $ netdom renamecomputer %COMPUTERNAME% /newname:CORE# 컴퓨터의 이름을 CORE로 변경    재부팅  $ shutdown /r /t 0# 0/ 초/ 안에 reboot를 진행# /s stop /r reboot /t time    네트워크 인터페이스 및 네트워크 정보 확인  $ ipconfig    DNS 확인  $ nslookup    화면의 텍스트를 지우는 명령어  $ cls     네트워크 shell 명령어  $ netshnetsh&amp;gt; interface ipv4 show interface# 인터페이스 관련 정보를 출력netsh&amp;gt; interface ipv4 set address name=&amp;#34;3&amp;#34; source=static address=192.</description>
     </item>
     
     <item>
