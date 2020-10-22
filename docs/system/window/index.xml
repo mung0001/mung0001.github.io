@@ -24,10 +24,10 @@
     
     <item>
       <title>Window Server</title>
-      <link>https://mung0001.github.io/docs/system/window/window08/</link>
+      <link>https://mung0001.github.io/docs/system/window/window14/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/system/window/window08/</guid>
+      <guid>https://mung0001.github.io/docs/system/window/window14/</guid>
       <description>****   ****         </description>
     </item>
     
@@ -103,6 +103,85 @@
       
       <guid>https://mung0001.github.io/docs/system/window/window07/</guid>
       <description>Windows Shell   Windows CLI   Windows Server는 GUI환경이 아닌 도스환경으로도 실행될 수 있으며, GUI 환경이 아닌 만큼 리소스의 낭비가 적은 특징을 가지고 있습니다.       명렁어   사용자 컴퓨터의 이름을 나타내는 명령어  $ hostname$ echo %computername%    입력 문자를 출력하는 명령어  $ echo Hello#     사용자 컴퓨터의 이름을 변경하는 명령어  $ netdom renamecomputer %COMPUTERNAME% /newname:CORE# 컴퓨터의 이름을 CORE로 변경    재부팅  $ shutdown /r /t 0# 0/ 초/ 안에 reboot를 진행# /s stop /r reboot /t time    네트워크 인터페이스 및 네트워크 정보 확인  $ ipconfig    DNS 확인  $ nslookup    화면의 텍스트를 지우는 명령어  $ cls     네트워크 shell 명령어  $ netshnetsh&amp;gt; interface ipv4 show interface# 인터페이스 관련 정보를 출력netsh&amp;gt; interface ipv4 set address name=&amp;#34;3&amp;#34; source=static address=192.</description>
+    </item>
+    
+    <item>
+      <title>백업과 복구</title>
+      <link>https://mung0001.github.io/docs/system/window/window08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window08/</guid>
+      <description>Windows Server 백업과 복구   Windows Server의 백업 기능    사고는 언제나 발생할 수 있으며, 이러한 사고를 대비하기 위한 방편 중에서 반드시 해야할 것이 백업입니다.
+  기존의 폴더 또는 파일을 다른 안전한 장소에 보관하여 문제가 생길기 백업했던 데이터를 원래대로 복원혹은 복구가 가느하도록 합니다.
+  Windows Server에서는 자체적으로 백업 기능을 제공하며, 백업은 대체로 별도의 하드디스크나 다른 컴퓨터의 공유 폴더에 하는 것이 효과적입니다.
+  복구는 삭제된 일부 폴더만 복구할 수도 있으며, 볼륨 전체를 복구할 수도 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>원격접속서버</title>
+      <link>https://mung0001.github.io/docs/system/window/window09/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window09/</guid>
+      <description>원격접속을 위한 TELNET Server, SSH Server   TELNET Server    TELNET 서버는 오랫동안 전통적으로 사용되어 온 원격 접속 서버로, 보안이 취약하지만 최근에는 보안 기능을 첨가하여 사용되어지고 있습니다.
+  기본적으로서버에 접속하기 이해서는 꼭 클라이언트 프로그램이 필요합니다.
+  서버 OS Windows라고 클라이언트 OS도 반드시 Windows일 필요는 없으며, 즉 서버의 OS와 클라이어트의 OS가 같을 할 필요는 없습니다.
+  Windows Server 2016부터는 내장된 TELNET 서버가 제거되어 직접 설치가 필요합니다.</description>
+    </item>
+    
+    <item>
+      <title>VNC Server</title>
+      <link>https://mung0001.github.io/docs/system/window/window10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window10/</guid>
+      <description>VNC Server   VNC Server    원격지에서 Windows 환경 자체를 사용할 수 있도록 제공하는 서버
+  Windows Server는 VNC 서버를 제공하지 않습니다.
+  오픈소스로 제공되므로별도의 추가 비용 없이 자유롭게 사용가능하지만, 텍스트만 전송되는 Telnet에 비해 속도가 느린 단점을 가지고 있습니다.
+         FIRST 서버에서 VNC를 설치합니다.
+  기본 값으로 설정 후, 설치를 진행합니다.
+        패스워드 입력시 12345를 입력합니다.</description>
+    </item>
+    
+    <item>
+      <title>SQL Server</title>
+      <link>https://mung0001.github.io/docs/system/window/window11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window11/</guid>
+      <description>SQL Server   데이터베이스의 정의   데이터의 저장 공간으로 자료가 저장되는 디스크 공간을 의미합니다.     Windows SQL Sever    Microsoft사에서 제작한 데이터베이스 관리 소프트웨어로 대용량 데이터를 운영하기에 적합한 툴로 인정받고 있습니다.
+  SQL Server 2016 주요 에디션
+     특징 Enterprise Standard Express     라이선스 유료 유료 무료   주용도 대규모 중소규모 소규모 혹은 개인   최대 CPU OS 지원 최대 개수 소켓 4개 또는 코어 16개 소켓 1개 또는 코어 4개   최대 RAM 사용량 OS 지원 최대 크기 128GB 1GB   DB 크기 524PB 524PB 10GB       SQL Server 실습   SQL Server 설치를 위해 FIRST 서버에서 SQL Server를 설치합니다.</description>
+    </item>
+    
+    <item>
+      <title>Windows Web Server</title>
+      <link>https://mung0001.github.io/docs/system/window/window12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window12/</guid>
+      <description>Windows Web Server IIS, FTP Server   IIS(Internet Information Services)   WIndows Server 2016에 내장되어 있는 웹 서버 및 FTP 서버는 IIS라는 이름으로제공됩니다.     IIS 실습   IIS 설치를 위해 FIRST Server에서 서버매니저 &amp;gt; 관리 &amp;gt; 역할 및 기능 추가를 선택합니다.       서버역할에서 Web Server IIS를 선택 후 킷을 포함하여 설치를 진행합니다.        역할 서비스 에서 Application Development &amp;gt; CGI 및 FTP Server를 설치하기 위해 체크 후, 설치합니다.</description>
+    </item>
+    
+    <item>
+      <title>Active Directory</title>
+      <link>https://mung0001.github.io/docs/system/window/window13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window13/</guid>
+      <description>Windows Active Directory   Windows Active Directory    일반적인 회사의 네트워크 상황을 Windows Server에서 구현하기 위한한 기술입니다.
+  네트워크 상으로 나누어져 있는 여러 자원을 중앙의 관리자가 통합하여 관리함으로써, 본사 및 지사의 직원들은 자신의 PC에 몯느 정보를 보관할 필요가 없어집니다.
+  한 PC에서 관리하는 만큼 타 지사에 출장을 가서도 자신의 아이디로 로그인만 하면 타인의 PC가 자신의 PC 환경과 동일하게 변경되어집니다.
+  PC가 있는 장소와 무관하게 회사의 어디서든지 회사 전체 자원을 편리하게 이용하기 위해 사용되어집니다.</description>
+    </item>
+    
+    <item>
+      <title>DNS</title>
+      <link>https://mung0001.github.io/docs/system/window/window15/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window15/</guid>
+      <description>****   ****         </description>
     </item>
     
   </channel>

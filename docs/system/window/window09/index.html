@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="원격접속을 위한 TELNET Server, SSH Server   TELNET Server    TELNET 서버는 오랫동안 전통적으로 사용되어 온 원격 접속 서버로, 보안이 취약하지만 최근에는 보안 기능을 첨가하여 사용되어지고 있습니다.
+  기본적으로서버에 접속하기 이해서는 꼭 클라이언트 프로그램이 필요합니다.
+  서버 OS Windows라고 클라이언트 OS도 반드시 Windows일 필요는 없으며, 즉 서버의 OS와 클라이어트의 OS가 같을 할 필요는 없습니다.
+  Windows Server 2016부터는 내장된 TELNET 서버가 제거되어 직접 설치가 필요합니다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/system/window/window09/><meta property="og:title" content="원격접속서버" />
+<meta property="og:description" content="원격접속을 위한 TELNET Server, SSH Server   TELNET Server    TELNET 서버는 오랫동안 전통적으로 사용되어 온 원격 접속 서버로, 보안이 취약하지만 최근에는 보안 기능을 첨가하여 사용되어지고 있습니다.
+  기본적으로서버에 접속하기 이해서는 꼭 클라이언트 프로그램이 필요합니다.
+  서버 OS Windows라고 클라이언트 OS도 반드시 Windows일 필요는 없으며, 즉 서버의 OS와 클라이어트의 OS가 같을 할 필요는 없습니다.
+  Windows Server 2016부터는 내장된 TELNET 서버가 제거되어 직접 설치가 필요합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/window/window09/" />
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.1148b291aa135b5753aea20bc934542f028f94ab9b35e50591a502305efab646.js" integrity="sha256-EUiykaoTW1dTrqILyTRULwKPlKubNeUFkaUCMF76tkY="></script>
+<!--
+
+-->
+
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/ncptraining/" class="collapsed ">NCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/system/" class="collapsed ">System Infra</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/network/" class="collapsed ">Network Infra</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Programming</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/python/" class="collapsed ">Python</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/" class="collapsed ">정리전</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/nas/" class="collapsed ">NAS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window01/" class="">Roadmap</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window14/" class="">Window Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window02/" class="">Windows Server Install</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window03/" class="">자동시작, 부팅, 종료</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window04/" class="">사용자 계정</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window05/" class="">파일 및 폴더 관리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window06/" class="">암호화</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window07/" class="">Windows Shell</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window08/" class="">백업과 복구</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window09/" class="active">원격접속서버</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window10/" class="">VNC Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window11/" class="">SQL Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window12/" class="">Windows Web Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window13/" class="">Active Directory</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window15/" class="">DNS</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/lm/" class="collapsed ">Linux master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Project</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/project/mini/" class="collapsed ">M Ini</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>원격접속서버</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#원격접속을-위한-telnet-server-ssh-server"><strong>원격접속을 위한 TELNET Server, SSH Server</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#telnet-server"><strong>TELNET Server</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#telnet-server-실습"><strong>TELNET Server 실습</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ssh-서버"><strong>SSH 서버</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ssh-server-실습"><strong>SSH Server 실습</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="원격접속을-위한-telnet-server-ssh-server"><strong>원격접속을 위한 TELNET Server, SSH Server</strong></h2>
+<hr>
+<h1 id="heading"></h1>
+<h3 id="telnet-server"><strong>TELNET Server</strong></h3>
+<h1 id="heading-1"></h1>
+<ul>
+<li>
+<p><strong>TELNET 서버는 오랫동안 전통적으로 사용되어 온 원격 접속 서버로, 보안이 취약하지만 최근에는 보안 기능을 첨가하여 사용되어지고 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>기본적으로서버에 접속하기 이해서는 꼭 클라이언트 프로그램이 필요합니다.</strong></p>
+</li>
+<li>
+<p><strong>서버 OS Windows라고 클라이언트 OS도 반드시 Windows일 필요는 없으며, 즉 서버의 OS와 클라이어트의 OS가 같을 할 필요는 없습니다.</strong></p>
+</li>
+<li>
+<p><strong>Windows Server 2016부터는 내장된 TELNET 서버가 제거되어 직접 설치가 필요합니다.</strong></p>
+</li>
+<li>
+<p><strong>또한 각각의 서버 프로그램은 자신에 맞는 별도의 클라이언트 프로그램이 필요합니다.</strong></p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Server</th>
+<th>Client</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>웹 서버(IIS)</td>
+<td>웹 클라이언트(Chrome, Internet Explorer, Safari, Firefox, Opera 등)</td>
+</tr>
+<tr>
+<td>텔넷 서버</td>
+<td>텔넷 클라이언트(telnet, Putty 등)</td>
+</tr>
+<tr>
+<td>FTP 서버(IIS)</td>
+<td>FTP 클라이언트(알드라이브, wsFTP, ftp, gftp 등)</td>
+</tr>
+<tr>
+<td>VNC 서버</td>
+<td>VNC 클라이언트(vncviewer, TightVNC 등)</td>
+</tr>
+<tr>
+<td>SQL 서버</td>
+<td>SQL 클라이언트(SQL Server Management Studio, ODBC등)</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-2"></h1>
+<p> </p>
+<h1 id="heading-3"></h1>
+<h3 id="telnet-server-실습"><strong>TELNET Server 실습</strong></h3>
+<h1 id="heading-4"></h1>
+<ul>
+<li>
+<p><strong>먼저 FIRST의 <a href="http://download.hanbit.co.kr/WIN2016/telnet_x64.exe">TELNET SERVER</a>을 설치합니다.</strong></p>
+</li>
+<li>
+<p><strong>UserNamme을 설정하고 설치를 기본 값으로 진행합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-5"></h1>
+<p><img src="/System/Window/Te01.png" alt="" /></p>
+<h1 id="heading-6"></h1>
+<p><img src="/System/Window/Te02.png" alt="" /></p>
+<h1 id="heading-7"></h1>
+<p> </p>
+<h1 id="heading-8"></h1>
+<ul>
+<li>
+<p><strong>설치가 완료되면 <code>컴퓨터 관리 &gt; 서비스 &gt; Pragma InetD</code>에서 동작하는 것을 확인하실 수 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>보통 실행되기 전의 서버를 서버, 실행 된 후의 서버를 서비스라 합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-9"></h1>
+<p><img src="/System/Window/Te03.png" alt="" /></p>
+<h1 id="heading-10"></h1>
+<p><img src="/System/Window/Te04.png" alt="" /></p>
+<h1 id="heading-11"></h1>
+<p> </p>
+<h1 id="heading-12"></h1>
+<ul>
+<li>
+<p><strong>일반적으로 서버에 접속하기 위해서는 TELNET의 Port(23)번이 허용되었는 지를 방화벽에서 확인해야합니다.</strong></p>
+</li>
+<li>
+<p><strong>이를 확인하기 위해서는 <code>제아판 &gt; Windows 방화벽 &gt; Windows 방화벽을 통해 앱 또는 기능 허용 &gt; Pragma ...</code>에서 확인하실 수 있습니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-13"></h1>
+<p><img src="/System/Window/Te05.png" alt="" /></p>
+<h1 id="heading-14"></h1>
+<p><img src="/System/Window/Te06.png" alt="" /></p>
+<h1 id="heading-15"></h1>
+<p> </p>
+<h1 id="heading-16"></h1>
+<ul>
+<li>
+<p><strong>다음으로는 클라이언트에서의 설치를 위해 WINCLIENT에 접속합니다.</strong></p>
+</li>
+<li>
+<p><strong>접속 후 <code>역할 및 기능 &gt; 기능 &gt; Telnet Client</code>를 설치합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-17"></h1>
+<p><img src="/System/Window/te07.png" alt="" /></p>
+<h1 id="heading-18"></h1>
+<p> </p>
+<h1 id="heading-19"></h1>
+<ul>
+<li>
+<p><strong>설치가 완료되면 cmd를 실행하며 <code>telnet 192.168.10.11(FIRST의 IP)</code>를 입력합니다.</strong></p>
+</li>
+<li>
+<p><strong>접속이 된 것을 확인하실 수 있습니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-20"></h1>
+<p><img src="/System/Window/Te08.png" alt="" /></p>
+<h1 id="heading-21"></h1>
+<p><img src="/System/Window/Te09.png" alt="" /></p>
+<h1 id="heading-22"></h1>
+<p><img src="/System/Window/Te10.png" alt="" /></p>
+<h1 id="heading-23"></h1>
+<p> </p>
+<h1 id="heading-24"></h1>
+<ul>
+<li><strong>접속이 완료되면 <code>mkdir C:\Hello!</code>를 입력하여 폴더를 생성합니다.</strong></li>
+</ul>
+<h1 id="heading-25"></h1>
+<p><img src="/System/Window/Te11.png" alt="" /></p>
+<h1 id="heading-26"></h1>
+<p> </p>
+<h1 id="heading-27"></h1>
+<ul>
+<li><strong>TELNET Server인 FIRTST의 C의 Hello! 서버가 생성된 것을 확인할 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-28"></h1>
+<p><img src="/System/Window/Te12.png" alt="" /></p>
+<h1 id="heading-29"></h1>
+<p> </p>
+<h1 id="heading-30"></h1>
+<h3 id="ssh-서버"><strong>SSH 서버</strong></h3>
+<h1 id="heading-31"></h1>
+<ul>
+<li>
+<p><strong>Telnet과 용도는 동일하지만 보안이 강화</strong></p>
+</li>
+<li>
+<p><strong>Windows Server는 SSH 서버를 포함하고 있지 않습니다.</strong></p>
+</li>
+<li>
+<p><strong>SSH 서버의 원리는 Telnet과 거의 동일하지만, 데이터를 전송할 때 암호화를 한다는 점에서 다릅니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-32"></h1>
+<p> </p>
+<h1 id="heading-33"></h1>
+<h3 id="ssh-server-실습"><strong>SSH Server 실습</strong></h3>
+<h1 id="heading-34"></h1>
+<ul>
+<li>
+<p><strong>FIRST 서버에 <a href="http://download.hanbit.co.kr/WIN2016/BvSshServer-Inst.exe">SSH Server</a>를 설치합니다.</strong></p>
+</li>
+<li>
+<p><strong>라이센스의 동의 후 개인적 사용용도로 설치합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-35"></h1>
+<p><img src="/System/Window/Shh01.png" alt="" /></p>
+<h1 id="heading-36"></h1>
+<p><img src="/System/Window/Shh02.png" alt="" /></p>
+<h1 id="heading-37"></h1>
+<p><img src="/System/Window/Shh03.png" alt="" /></p>
+<h1 id="heading-38"></h1>
+<p> </p>
+<h1 id="heading-39"></h1>
+<ul>
+<li>
+<p><strong>설치가 완료되면 설정을 위해 <code>Open easy settings &gt; Windows accoutss에서 계정</code>을 생성합니다.</strong></p>
+</li>
+<li>
+<p><strong>텔넷의 포트는 23이었지만, ssh는 22번 포트로 동작합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-40"></h1>
+<p><img src="/System/Window/Shh04.png" alt="" /></p>
+<h1 id="heading-41"></h1>
+<p><img src="/System/Window/Shh05.png" alt="" /></p>
+<h1 id="heading-42"></h1>
+<p><img src="/System/Window/Shh12.png" alt="" /></p>
+<h1 id="heading-43"></h1>
+<p> </p>
+<h1 id="heading-44"></h1>
+<ul>
+<li><strong>설정이 완료되면 Start Server를 실행하여 서버를 실행합니다.</strong></li>
+</ul>
+<h1 id="heading-45"></h1>
+<p><img src="/System/Window/Shh07.png" alt="" /></p>
+<h1 id="heading-46"></h1>
+<p> </p>
+<h1 id="heading-47"></h1>
+<ul>
+<li><strong>텔넷 서버와 동일하게 서비스 및 방화벽에서 실행을 확인할 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-48"></h1>
+<p><img src="/System/Window/Shh08.png" alt="" /></p>
+<h1 id="heading-49"></h1>
+<p><img src="/System/Window/Shh09.png" alt="" /></p>
+<h1 id="heading-50"></h1>
+<p> </p>
+<h1 id="heading-51"></h1>
+<ul>
+<li><strong>WinClinet에서 <a href="http://download.hanbit.co.kr/WIN2016/BvSshClient-Inst.exe">SSH Clinet</a>를 설치합니다.</strong></li>
+</ul>
+<h1 id="heading-52"></h1>
+<p><img src="/System/Window/Shh10.png" alt="" /></p>
+<h1 id="heading-53"></h1>
+<p><img src="/System/Window/Shh11.png" alt="" /></p>
+<h1 id="heading-54"></h1>
+<p> </p>
+<h1 id="heading-55"></h1>
+<ul>
+<li><strong>IP와 포트번호 계정을 입력 후 접속합니다.</strong></li>
+</ul>
+<h1 id="heading-56"></h1>
+<p><img src="/System/Window/Shh13.png" alt="" /></p>
+<h1 id="heading-57"></h1>
+<p> </p>
+<h1 id="heading-58"></h1>
+<ul>
+<li>
+<p><strong>접속된 것을 확인하실 수 있습니다.</strong></p>
+</li>
+<li>
+<p><strong><code>CD C:\</code>에 접속하시면 텔넷 서버에 접속해서 생성했던 Hello! 폴더를 확인하실 수 있습니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-59"></h1>
+<p><img src="/System/Window/Shh14.png" alt="" /></p>
+<h1 id="heading-60"></h1>
+<p><img src="/System/Window/Shh15.png" alt="" /></p>
+<h1 id="heading-61"></h1>
+<p> </p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#원격접속을-위한-telnet-server-ssh-server"><strong>원격접속을 위한 TELNET Server, SSH Server</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#telnet-server"><strong>TELNET Server</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#telnet-server-실습"><strong>TELNET Server 실습</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ssh-서버"><strong>SSH 서버</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ssh-server-실습"><strong>SSH Server 실습</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
