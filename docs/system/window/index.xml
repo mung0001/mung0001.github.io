@@ -19,16 +19,7 @@
       <description>Windows Sever Roadmap   Windows Sever Roadmap    Windows Server을 사용하기 위한 준비
   응용 프로그램 : VMware workstation
   가상머신의 종류와 하드웨어 사양
-       FIRST SECOND THIRD Windows Client SERVERCORE     주 용도 서버 전용 서버/ 클라이언트 겸용 서버/ 클라이언트 겸용 클라이언트 전용 서버 코어 테스트 용도   Guest OS 종류 Windows Server 2016 Windows Server 2016 Windows Sever 2016 Windows Sever 2016 Windows Sever 2016   가상머신 FIRST SECOND THIRD WINCLIENT SEVERCORE   CPU 코어수/ 쓰레드 1/2 1/2 1/2 2/2 1/2   하드용량 100GB 60GB 60GB 60GB 60GB   메모리 할당 2048MB 2048MB 2048MB 2048MB 2048MB   네트워크 타입 NAT NAT NAT NAT NAT   CD/DVD O O O O O   Audio X X X O X   USB X X X O X   Printer X X X O X       가상머신의 네트워크   | FIRST | SECOND | THIRD | WINCLIENT | SEVERCORE &amp;mdash; | &amp;mdash; | &amp;mdash; | &amp;mdash; | &amp;mdash; | IP 주소 | 192.</description>
-    </item>
-    
-    <item>
-      <title>Window Server</title>
-      <link>https://mung0001.github.io/docs/system/window/window14/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/system/window/window14/</guid>
-      <description>****   ****         </description>
+       FIRST SECOND THIRD Windows Client SERVERCORE     주 용도 서버 전용 서버/ 클라이언트 겸용 서버/ 클라이언트 겸용 클라이언트 전용 서버 코어 테스트 용도   Guest OS 종류 Windows Server 2016 Windows Server 2016 Windows Sever 2016 Windows Sever 2016 Windows Sever 2016   가상머신 FIRST SECOND THIRD WINCLIENT SEVERCORE   CPU 코어수/ 쓰레드 1/2 1/2 1/2 2/2 1/2   하드용량 100GB 60GB 60GB 60GB 60GB   메모리 할당 2048MB 2048MB 2048MB 2048MB 2048MB   네트워크 타입 NAT NAT NAT NAT NAT   CD/DVD O O O O O   Audio X X X O X   USB X X X O X   Printer X X X O X       가상머신의 네트워크       FIRST SECOND THIRD WINCLIENT SEVERCORE     IP 주소 192.</description>
     </item>
     
     <item>
@@ -155,7 +146,7 @@
     </item>
     
     <item>
-      <title>Windows Web Server</title>
+      <title>IIS</title>
       <link>https://mung0001.github.io/docs/system/window/window12/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -176,12 +167,63 @@
     </item>
     
     <item>
-      <title>DNS</title>
+      <title>DHCP Server</title>
+      <link>https://mung0001.github.io/docs/system/window/window14/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window14/</guid>
+      <description>DHCP Server   DHCP Server의 정의    DHCP란 Dynamic Host Configuration Protocol 서버가 하는 역할은 자신의 네트워크 안에 있는 클라이언트 컴퓨터가 부팅될 떄 자동으로 IP, Subnet, Gateway, DNS를 할당해 주는 역할을 수행합니다.
+  DHCP의 가장 큰 장점은 관리하기 편하고 이용자가 편하다는 장점을 가지고 있습니다.
+     DHCP Server 실습   DHCP 서버 설치를 위해 FIRST 서버에서 서비스 매니저 &amp;gt; 역할 및 기능 추가 &amp;gt; DHCP 서버를 설치합니다.</description>
+    </item>
+    
+    <item>
+      <title>DNS Server</title>
       <link>https://mung0001.github.io/docs/system/window/window15/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window15/</guid>
-      <description>****   ****         </description>
+      <description>DNS Server   DNS Server의 정의    DNS 서버란 Domain Name System으로 읽기 힘든 IP(192.168.10.123)을 사람이 읽기 쉽게 이름(www.xxx.xxx)으로 바꾸어주는 역할을 수행하는 기술입니다.
+  hosts 파일을 이용하여 네트워크를 접속할 수 있으며, 기하급수적으로 늘어나는 네트워크 상의 컴퓨터에 대한 모든 IP 정보를 파일 하나에 기록하는 것이 무리이기 때문에 전문적으로 해석해주는 서버 컴퓨터가 필요해졌습니다.
+     DNS Server 실습    FIRST 서버에서 cmd 창을 실행 후 nslookup을 입력합니다.</description>
+    </item>
+    
+    <item>
+      <title>Mail Server</title>
+      <link>https://mung0001.github.io/docs/system/window/window15-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window15-2/</guid>
+      <description>Mail Server   E-Mail 작동 개념    SMTP(Simple Mail Transfer Protocol)을 사용하여 클라이언트가 메일을 보내거나, 메일 서버끼리 메일을 주고 받습니다.
+  POP3(Post Office Protocol)을 사용하여 메일 서버에 도착되어 있는 메일을 클라이언트로 가져옵니다.
+  IMAP(Internet Mail Access Protocol)은 POP3와 동일합니다.
+     Mail Server 실습                                                                                                     </description>
+    </item>
+    
+    <item>
+      <title>WDS</title>
+      <link>https://mung0001.github.io/docs/system/window/window16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window16/</guid>
+      <description>Windows 배포 서비스   WDS(Windows Deployment Services)의 정의   WDS를 구성하면 사내 네트워크 안의 컴퓨터에서 Windows를 설치할 때 DVD 매체 없이도 자동 부팅 및 설치를 진행할 수 있습니다.     WDS로 구성할 수 있는 내용
+  설치할 컴퓨터의 디스크 분할 및 포맷
+  운영체제 설치 및 구성
+  설치의 단순화
+  회사 전체에 통일되고 일관적인 작업 환경을 제공
+       WDS의 장점</description>
+    </item>
+    
+    <item>
+      <title>Hyper-V</title>
+      <link>https://mung0001.github.io/docs/system/window/window17/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/window/window17/</guid>
+      <description>Windows 가상화   Hyper-V의 정의    Hyper-V는 Windows Server에 내장되어 있는 가상화 기술로, 최신의 인텔 및 AMD CPU의 강력한 하드웨어 가상화 기술로 사용되어지고 있습니다.
+  hosts 파일을 이용하여 네트워크를 접속할 수 있으며, 기하급수적으로 늘어나는 네트워크 상의 컴퓨터에 대한 모든 IP 정보를 파일 하나에 기록하는 것이 무리이기 때문에 전문적으로 해석해주는 서버 컴퓨터가 필요해졌습니다.
+  Hyper-V의 장점
+  하드웨어 사용률을 높여 물리적인 서버의 운영 및 유지 관리비용 감소</description>
     </item>
     
   </channel>

@@ -156,10 +156,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/system/window/window14/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/aws/awssaa/saa-2/</loc>
   </url>
   
@@ -564,11 +560,11 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/database/sqld/sqld-2/</loc>
+    <loc>https://mung0001.github.io/docs/system/window/window12/</loc>
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/system/window/window12/</loc>
+    <loc>https://mung0001.github.io/docs/database/sqld/sqld-2/</loc>
   </url>
   
   <url>
@@ -604,6 +600,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/window/window14/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/docker/docker/</loc>
   </url>
   
@@ -636,11 +636,23 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/window/window15-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure06/</loc>
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/window/window16/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure07/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/system/window/window17/</loc>
   </url>
   
   <url>
@@ -673,6 +685,18 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/programing/git/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/network/nm/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/network/nm/nm02/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/network/nm/nm01/</loc>
   </url>
   
   <url>
