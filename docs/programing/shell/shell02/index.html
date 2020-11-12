@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shell Programming    Quotes    Shell 중요한 핵심 개념 중 하나는 quotes라 할 수 있습니다.
+  shell에서 quotes는 숫자나 스트링 값을 구분하기 위한 용도로는 사용하지 않습니다.
+  1234, &ldquo;123&rdquo;, &lsquo;123&#39;은 모두 동일하며, abc, &ldquo;abc&rdquo;, &lsquo;abc&rsquo; 또한 차이가 없고 모두 스트링 문자열입니다.
+  Shell 에서 quotes는 다음과 같은 용도로 사용됩니다.
+  공백으로 분리되어 여러 개의 스트링을 하나의 인수로 만들 때(sed, awk 스크립트를 quotes을 이용해 작성하는 이유가 하나의 인수로 만들기 위해서입니다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/programing/shell/shell02/><meta property="og:title" content="Quotes" />
+<meta property="og:description" content="Shell Programming    Quotes    Shell 중요한 핵심 개념 중 하나는 quotes라 할 수 있습니다.
+  shell에서 quotes는 숫자나 스트링 값을 구분하기 위한 용도로는 사용하지 않습니다.
+  1234, &ldquo;123&rdquo;, &lsquo;123&#39;은 모두 동일하며, abc, &ldquo;abc&rdquo;, &lsquo;abc&rsquo; 또한 차이가 없고 모두 스트링 문자열입니다.
+  Shell 에서 quotes는 다음과 같은 용도로 사용됩니다.
+  공백으로 분리되어 여러 개의 스트링을 하나의 인수로 만들 때(sed, awk 스크립트를 quotes을 이용해 작성하는 이유가 하나의 인수로 만들기 위해서입니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/programing/shell/shell02/" />
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.eb1a53c25107acfbde2abb0c8048dec9b28a2e63b7da60fe1952d2302750710c.js" integrity="sha256-6xpTwlEHrPveKrsMgEjeybKKLmO32mD&#43;GVLSMCdQcQw="></script>
+<!--
+
+-->
+
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/ncptraining/" class="collapsed ">NCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/system/" class="collapsed ">System Infra</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/network/" class="collapsed ">Network Infra</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Programming</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/python/" class="collapsed ">Python</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-1/" class="">Shell Script란?</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-2/" class="">UNIX/ Linux 개념과 명령어</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-3/" class="">Shell Script 문법</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-4/" class="">UNIX/ Linux 시스템 관리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-5/" class="">Shell Script System Management</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-6/" class="">Shell Script System Security</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-7/" class="">Shell Customizing</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell04/" class="">Shell Customizing</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell05/" class="">Shell Customizing</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell06/" class="">Shell Customizing</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell07/" class="">Shell Customizing</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell08/" class="">Shell Customizing</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell01/" class="">Shell Basics</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell02/" class="active">Quotes</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell03/" class="">Variables</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell09/" class="">Fucnctions</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/" class="collapsed ">정리전</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/nas/" class="collapsed ">NAS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/lm/" class="collapsed ">Linux master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Project</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/project/mini/" class="collapsed ">M Ini</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Quotes</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#quotes"><strong>Quotes</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#특수-기능을-갖는-문자들"><strong>특수 기능을 갖는 문자들</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#특수기능을-갖는-문자나-단어를-escape-하는-방법"><strong>특수기능을 갖는 문자나 단어를 escape 하는 방법</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#no-quotes"><strong>No quotes</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#double-quotes-"><strong>Double quotes(&rdquo; &ldquo;)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#double-quotes에서-escape-되는-문자들"><strong>Double quotes에서 escape 되는 문자들</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#array와-관련된-특수기능"><strong>Array와 관련된 특수기능</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#null-변수값의-quote"><strong>null 변수값의 quote</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#single-quotes-"><strong>Single quotes(&rsquo; &lsquo;)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-"><strong>$&rsquo; &lsquo;</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#quotesㄹ르-서로-붙여-사용하기"><strong>Quotesㄹ르 서로 붙여 사용하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#escape-sequences"><strong>Escape Sequences</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="shell-programming"><strong>Shell Programming</strong></h1>
+<h1 id="heading"></h1>
+<p> </p>
+<h1 id="heading-1"></h1>
+<h2 id="quotes"><strong>Quotes</strong></h2>
+<h1 id="heading-2"></h1>
+<ul>
+<li>
+<p><strong>Shell 중요한 핵심 개념 중 하나는 quotes라 할 수 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>shell에서 quotes는 숫자나 스트링 값을 구분하기 위한 용도로는 사용하지 않습니다.</strong></p>
+</li>
+<li>
+<p><strong>1234, &ldquo;123&rdquo;, &lsquo;123'은 모두 동일하며, abc, &ldquo;abc&rdquo;, &lsquo;abc&rsquo; 또한 차이가 없고 모두 스트링 문자열입니다.</strong></p>
+</li>
+<li>
+<p><strong>Shell 에서 quotes는 다음과 같은 용도로 사용됩니다.</strong></p>
+<ul>
+<li>
+<p><strong>공백으로 분리되어 여러 개의 스트링을 하나의 인수로 만들 때(sed, awk 스크립트를 quotes을 이용해 작성하는 이유가 하나의 인수로 만들기 위해서입니다.</strong></p>
+</li>
+<li>
+<p><strong>라인 개행이나 둘 이상의 공백을 유지하기 위해</strong></p>
+</li>
+<li>
+<p><strong>단어분리, globbing을 방자하기 위해</strong></p>
+</li>
+<li>
+<p><strong>Shell 키워드, 메타문자, alias 와 같이 Shell 에서 특수기느을 하는 문자, 단어를 단순히 명령문의 스트링으로 만들하기 위해</strong></p>
+</li>
+<li>
+<p><strong>문자 그대로 스트링을 강조하기 위해</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>최종적으로 명령이 실행될 때는 사용된 quotes이 제거된 후에 인수가 전달됩니다.</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># args.sh</span>
+<span style="color:#75715e">#!/bin/bash</span>
+
+echo arg1 : <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+echo arg2 : <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span>
+
+
+$ ./arg.sh <span style="color:#ae81ff">111</span> <span style="color:#e6db74">&#34;111&#34;</span>
+arg1 : 111
+arg2 : 111
+
+$ ./arg.sh <span style="color:#ae81ff">111</span> 222
+arg1 : 111
+arg2 : 222
+
+$ ./arg.sh <span style="color:#e6db74">&#34;111 222&#34;</span>
+arg1 : <span style="color:#ae81ff">111</span> 222
+arg2 : 
+
+
+
+
+
+$ sed -n 1p; 2p; 3p file
+ERROR
+
+$ sed -n <span style="color:#e6db74">&#34;1p; 2p; 3p&#34;</span> file
+OK
+
+
+<span style="color:#75715e">#!/bin/bash</span>
+
+ls -al
+ls <span style="color:#e6db74">&#34;-al&#34;</span>
+<span style="color:#e6db74">&#34;ls&#34;</span> <span style="color:#e6db74">&#39;-al&#39;</span>
+<span style="color:#75715e"># 상단의 명령어들의 출력결과는 모두 동이하며 명령문에서는 사용된 quotes는 shell에 의해 해석된 후에 자동으로 제거됩니다.</span>
+</code></pre></div><h1 id="heading-3"></h1>
+<p> </p>
+<h1 id="heading-4"></h1>
+<h3 id="특수-기능을-갖는-문자들"><strong>특수 기능을 갖는 문자들</strong></h3>
+<h1 id="heading-5"></h1>
+<ul>
+<li><strong>하단의 세 문자는 Shell 메타문자로 명령행 상에서 특수한 기능을 가지고 있습니다.</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>문자</th>
+<th>기능</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$</td>
+<td>매개변수 확장, 산술 확장, 명령 치환에 사용</td>
+</tr>
+<tr>
+<td>` | 명령 치환에 사용 (backtick)</td>
+<td></td>
+</tr>
+<tr>
+<td>!</td>
+<td>history (프롬프트상에서만)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ AA<span style="color:#f92672">=</span>hello
+
+$ echo $AA world <span style="color:#e6db74">`</span>data +%Y<span style="color:#e6db74">`</span>
+hello world 2020
+<span style="color:#75715e"># $AA 변수가 확장이 되고 data가 명령치환됩니다.</span>
+
+$ echo <span style="color:#ae81ff">\$</span>AA world <span style="color:#ae81ff">\`</span>data +%Y<span style="color:#ae81ff">\`</span>
+$AA world <span style="color:#e6db74">`</span>data +%Y<span style="color:#e6db74">`</span>
+</code></pre></div><h1 id="heading-6"></h1>
+<p> </p>
+<h1 id="heading-7"></h1>
+<h3 id="특수기능을-갖는-문자나-단어를-escape-하는-방법"><strong>특수기능을 갖는 문자나 단어를 escape 하는 방법</strong></h3>
+<h1 id="heading-8"></h1>
+<ul>
+<li><strong>Shell에서는 escape 할때 <code>\</code> 문자 외에 quote를 사용할 수 있습니다. quote을 하면 특수기능이 없어지고 단순히 명령문을 위한 스트링으로 사용됩니다.</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ find * -type f <span style="color:#e6db74">&#39;(&#39;</span> -name <span style="color:#e6db74">&#34;*.log&#34;</span> -or -name <span style="color:#e6db74">&#34;*.bak&#34;</span> <span style="color:#e6db74">&#39;)&#39;</span> -exec rm -rf <span style="color:#f92672">{}</span> <span style="color:#e6db74">&#39;;&#39;</span>
+<span style="color:#75715e"># (  )  ; shell 메타문자를 quote하여 기능을 상실, find 명령을 위한 스트링이 됩니다.</span>
+<span style="color:#75715e"># \(  \) \;와 동일합니다.</span>
+
+$ echo hello <span style="color:#e6db74">&#39;&amp;&#39;</span>
+hello &amp;
+<span style="color:#75715e"># background 프로세스를 생성할 때 사용하는 &amp; 메타문자를 quote 하여 기능을 상실</span>
+
+$ echo hello world | tr <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#e6db74">&#39;\&#39;</span> n
+hello
+world
+<span style="color:#75715e"># escape 문자인 \를 quote 하여 기능을 상실, 결과적으로 \n이 됩니다.</span>
+<span style="color:#75715e"># \\n 한것과 동일합니다.</span>
+
+$ <span style="color:#e6db74">&#39;grep&#39;</span> 2015-07 data.txt
+<span style="color:#75715e"># grep 명령에 설정되어 있는 alias가 escape 됩니다.</span>
+</code></pre></div><h1 id="heading-9"></h1>
+<p> </p>
+<h1 id="heading-10"></h1>
+<h3 id="no-quotes"><strong>No quotes</strong></h3>
+<h1 id="heading-11"></h1>
+<ul>
+<li>
+<p><strong>No quotes 상태에서는 기본적으로 모든 문자가 escape 됩니다.</strong></p>
+</li>
+<li>
+<p><strong>따라서 shell 키워드, 메타문자, alias, glob 문자, quotes, whitespace 문자를 escape 하여 해당 기능을 disable 할 수 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>whitespace 문자는 space, tab, newline을 의미합니다.</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ echo <span style="color:#ae81ff">\a\b\c\d\ \!\@\$\%\^\&amp;\*\(\)\{\}\[\]\&lt;\&gt;\/\\</span>
+abcd !@$%^&amp;....
+
+$ echo <span style="color:#e6db74">&#34;\a\b\c\d&#34;</span>
+<span style="color:#ae81ff">\a\b\c\d</span>
+
+$ echo <span style="color:#e6db74">&#39;\a\b\c\d&#39;</span>
+<span style="color:#ae81ff">\a\b\c\d</span>
+</code></pre></div><h1 id="heading-12"></h1>
+<ul>
+<li>
+<p><strong>명령행 상에서 공백은 인수를 구분하는 데도 사용됩니다.</strong></p>
+</li>
+<li>
+<p><strong>둘 이상의 공백은 의미가 없으므로 하나의 공백으로 대체되며, no quotes 에서는 공백도 escape 할 수 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>공백은 escape하면 두 개의 인수가 하나가 됩니다.</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># args.sh</span>
+<span style="color:#75715e">#!/bin/bash</span>
+
+echo arg1 : <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+echo arg2 : <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span>
+
+$ ./args.sh hello world
+arg1 : hello
+arg2 : world
+
+$ ./args.sh hello<span style="color:#ae81ff">\ </span>world
+arg1 : hello world
+arg2 : 
+
+$ echo hello                   world
+hello world
+
+$ echo hello <span style="color:#ae81ff">\ \ \ \ \ \ \ </span>world
+hello       world
+
+
+$ echo -e foo<span style="color:#ae81ff">\t</span>bar<span style="color:#ae81ff">\n</span>123
+footbarn123
+
+$ echo -e foo<span style="color:#ae81ff">\\</span>tbar<span style="color:#ae81ff">\\</span>n123
+foo     bar
+123
+<span style="color:#75715e"># 모든 문자가 escape 되므로 t b 이 echo 명령에 전달된다.</span>
+<span style="color:#75715e"># \\t, \\n으로 \t, \n의 입출력이 가능하다.</span>
+
+
+$ date
+Sat Jul <span style="color:#ae81ff">18</span> 00:06:41 EST 2020
+
+$ echo hello !!
+echo hello date
+hello date
+
+$ echo hello <span style="color:#ae81ff">\!</span>!
+hello !!
+<span style="color:#75715e"># !를 사용해 history 확장기능을 사용할 수 있다</span>
+
+
+$ echo 111:222:333 | tr : <span style="color:#ae81ff">\n</span>
+111n222n333
+
+$ echo 111:222:333 | tr : <span style="color:#ae81ff">\\</span>n
+111
+222
+333
+<span style="color:#75715e"># tr : \\n을 사용하면 tr : &#39;\n&#39;과 같은 결과가 출력된다.</span>
+
+
+$ echo double quotes <span style="color:#ae81ff">\&#34;</span> , single quotes <span style="color:#ae81ff">\&#39;</span>
+double quotes <span style="color:#e6db74">&#34;, single quotes &#39;    
+</span><span style="color:#e6db74"># &#34;</span>, <span style="color:#960050;background-color:#1e0010">&#39;</span> 문자또한 <span style="color:#ae81ff">\를</span> 사용해 사용할 수 있다
+
+
+$ echo <span style="color:#e6db74">&#34;I like \
+</span><span style="color:#e6db74">&gt; winter and \
+</span><span style="color:#e6db74">&gt; snow&#34;</span>
+I like winter and snow
+<span style="color:#75715e"># 행의 마지막에 \를 붙이고 개행을 하면 \newline과 같이 되어 newline을 escape한 결과를 갖는다.</span>
+<span style="color:#75715e"># 이것을 backslash-newline이라 하며, \뒤에 다른 문자가 오면 안된다.</span>
+</code></pre></div><h1 id="heading-13"></h1>
+<p> </p>
+<h1 id="heading-14"></h1>
+<h3 id="double-quotes-"><strong>Double quotes(&rdquo; &ldquo;)</strong></h3>
+<h1 id="heading-15"></h1>
+<ul>
+<li>
+<p><strong>Double quotes 안에서는 <code>$ ```!</code> 특수기능을 하는 문자들이 해석되어 실행되고 공백과 개행이 유지됩니다.</strong></p>
+</li>
+<li>
+<p><strong>변수 사용 시에도 동일하게 적용되므로 quote를 하지 않으면 공백과 개형이 유지되지 않습니다.</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ echo <span style="color:#e6db74">&#34;I
+</span><span style="color:#e6db74">&gt; like
+</span><span style="color:#e6db74">&gt; winter    and     snow&#34;</span>
+I
+like
+winter  and snow
+<span style="color:#75715e"># 공백과 개행이 유지된다.</span>
+
+$ AA<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;thie  is  
+</span><span style="color:#e6db74">two lines&#34;</span>
+$ echo $AA
+thie is tow lines
+
+$ echo <span style="color:#e6db74">&#34;</span>$AA<span style="color:#e6db74">&#34;</span>
+this    is  
+two lines
+<span style="color:#75715e"># whitespace 문자들이 single space로 변경되고 공백과 개행이 유지되지 않는다.</span>
+<span style="color:#75715e"># quote를 하여 공백과 개행이 유지돤다.</span>
+</code></pre></div><h1 id="heading-16"></h1>
+<p> </p>
+<h1 id="heading-17"></h1>
+<h3 id="double-quotes에서-escape-되는-문자들"><strong>Double quotes에서 escape 되는 문자들</strong></h3>
+<h1 id="heading-18"></h1>
+<ul>
+<li>
+<p><strong><code> &quot; $ `` \ newline</code>는 double quotes에서 위의 문자들이 특수한 기능을 가지고 사용되기 때문에 <code>\</code> 문자로 escape 할 수가 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>single quotes와 비교해 보면 하단과 같다.</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ echo <span style="color:#e6db74">&#39;\$ \` \\&#39;</span>
+<span style="color:#ae81ff">\$</span> <span style="color:#ae81ff">\`</span> <span style="color:#ae81ff">\\</span>
+<span style="color:#75715e"># single quotes</span>
+
+$ echo <span style="color:#e6db74">&#34;</span>$<span style="color:#e6db74"> \` \\&#34;</span>
+$ <span style="color:#e6db74">`</span> <span style="color:#ae81ff">\</span>
+<span style="color:#75715e"># double quotes</span>
+
+$ echo <span style="color:#e6db74">&#39;quotes\ 
+</span><span style="color:#e6db74">test&#39;</span>
+quotes<span style="color:#ae81ff">\</span>
+test
+<span style="color:#75715e"># single quotes는 문자 그대로 표시된다.</span>
+
+
+$ echo <span style="color:#e6db74">&#34;quotes\
+</span><span style="color:#e6db74">test&#34;</span>
+quoteststest
+<span style="color:#75715e"># double quotes 에서는 newline이 escape되어 한줄로 표시된다.</span>
+</code></pre></div><ul>
+<li><strong>double quotes를 사용할 때 한 가지 주의해야될 사항은 <code>!</code> 문자를 이용한 command history 확장이 doduble quotes에서도 일어난다는 것으로, command history 기능이 사용되는 프로픔프트 상에서만 적용되는 것으로 함수나 스크립트 파일 실행시는 해당되지 않습니다.</strong></li>
+</ul>
+<h1 id="heading-19"></h1>
+<p> </p>
+<h1 id="heading-20"></h1>
+<h3 id="array와-관련된-특수기능"><strong>Array와 관련된 특수기능</strong></h3>
+<h1 id="heading-21"></h1>
+<ul>
+<li><strong>double quotes는 array와 관련해서 특수한 기능을 가지고 있는 데, 이는 전체 원소를 나타내는 <code>${arr[@]}</code>를 quote하면 그 의미는 <code>&quot;${arr[0]}&quot; &quot;${arr[1]}&quot; '${arr[2]}&quot;...</code>와 같게되며 <code>${arr[*]}</code>를 quote하면 그 의미는 <code>&quot;${arr[0]}X${arr[1]}X${arr[2]}X...&quot;</code>와 같게 된다. 여기서 <code>X</code>의 의미는 IFS 값의 첫 번째 문자를 의미한다.</strong></li>
+<li><strong><code>$@</code>, <code>$*</code> positional parameters 에서도 동일하게 적용된다.</strong></li>
+</ul>
+<h1 id="heading-22"></h1>
+<p> </p>
+<h1 id="heading-23"></h1>
+<h3 id="null-변수값의-quote"><strong>null 변수값의 quote</strong></h3>
+<h1 id="heading-24"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ AA<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+
+<span style="color:#75715e"># args.sh</span>
+<span style="color:#75715e">#!/bin/bash</span>
+
+<span style="color:#ae81ff">\$</span><span style="color:#ae81ff">0</span> : ~
+<span style="color:#ae81ff">\$</span><span style="color:#ae81ff">1</span> : <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+<span style="color:#ae81ff">\$</span><span style="color:#ae81ff">2</span> : <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span>
+<span style="color:#ae81ff">\$</span><span style="color:#ae81ff">3</span> : <span style="color:#e6db74">&#34;</span>$3<span style="color:#e6db74">&#34;</span>
+<span style="color:#ae81ff">\$</span><span style="color:#ae81ff">4</span> : <span style="color:#e6db74">&#34;</span>$4<span style="color:#e6db74">&#34;</span>
+
+$ ./args.sh <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> 4
+/root
+1
+2
+3
+4
+
+<span style="color:#ae81ff">\$</span><span style="color:#ae81ff">0</span> : ~
+<span style="color:#ae81ff">\$</span><span style="color:#ae81ff">1</span> : <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+<span style="color:#ae81ff">\$</span><span style="color:#ae81ff">2</span> : <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span>
+<span style="color:#ae81ff">\$</span><span style="color:#ae81ff">3</span> : <span style="color:#e6db74">&#34;</span>$AA<span style="color:#e6db74">&#34;</span>
+<span style="color:#ae81ff">\$</span><span style="color:#ae81ff">4</span> : <span style="color:#e6db74">&#34;</span>$4<span style="color:#e6db74">&#34;</span>
+/root
+1
+2
+
+4
+<span style="color:#75715e"># null 값 인수</span>
+</code></pre></div><ul>
+<li>
+<p><strong>가령 위와 같은 스크립트에서 <code>$comp</code> 변수의 값이 <code>-c</code>일 경우는 tmpfile이 컴파일된 오브젝트 파일이 되고 <code>$comp</code> 변수 값이 null일 경우는 링크가 완료된 실행파일을 만들고자 한다면 <code>$comp</code> 변수를 quote하는 것이 불가능하다.</strong></p>
+</li>
+<li>
+<p><strong>quote에 의해 null 값이 하나의 인수로 전달되어 두 번째와 같이 오류가 발생하기 때문이다.</strong></p>
+</li>
+<li>
+<p><strong>즉, 변수를 quote 하는 것은 오류 메시지 출력에도 영향을 끼칠 수 있으며, 변수를 quote 하면 좀 더 명확한 오류메시지가 출력된다. 따라서 명령문을 작성할 때는 변수를 quote 해서 사용하는 것이 보다 유리하다.</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ AA<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+
+$ echo hello 2&gt;&amp; $AA
+
+$ echo hello 2&gt;$ <span style="color:#e6db74">&#34;</span>$AA<span style="color:#e6db74">&#34;</span>
+<span style="color:#75715e"># quote를 하면 좀 더 명확한 오류메시지가 출력된다.</span>
+
+$ echo hello &gt; $AA
+bash: $AA: ambiguous redirect
+
+$ echo hello &gt; <span style="color:#e6db74">&#34;</span>$AA<span style="color:#e6db74">&#34;</span>
+bash: No such file or directory
+</code></pre></div><h1 id="heading-25"></h1>
+<p> </p>
+<h1 id="heading-26"></h1>
+<h3 id="single-quotes-"><strong>Single quotes(&rsquo; &lsquo;)</strong></h3>
+<h1 id="heading-27"></h1>
+<ul>
+<li>
+<p><strong>Single quotes(&rsquo; &lsquo;)는 별 다른 기능 없이 모든 문자를 그대로 표시하는 역할을 수행한다.</strong></p>
+</li>
+<li>
+<p><strong>escape도 수행되지 않으며 escape를 수행하기 위해서는 <code>$' '</code>을 사용해야한다.</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ AA<span style="color:#f92672">=</span>hello
+
+$ echo <span style="color:#e6db74">&#39;$AA world
+</span><span style="color:#e6db74">&gt;`date`
+</span><span style="color:#e6db74">&gt;\$AA
+</span><span style="color:#e6db74">&gt;&#39;</span>
+$AA world
+<span style="color:#e6db74">`</span>date<span style="color:#e6db74">`</span>
+<span style="color:#ae81ff">\$</span>AA
+<span style="color:#75715e"># &#39;&#39;사이에는 모든 문자를 그대로 표현한다.</span>
+
+$ echo <span style="color:#e6db74">&#39;foo&#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39;bar&#39;</span>
+foo<span style="color:#e6db74">&#39;bar
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">$ echo &#39;</span>foo<span style="color:#e6db74">&#39;&#34;&#39;</span><span style="color:#e6db74">&#34;&#39;bar&#39;
+</span><span style="color:#e6db74">foo&#39;bar
+</span><span style="color:#e6db74"># Single quotes의 사용이 필요한 경우는 `double quotes &#34;&#34;` 혹은 `\`를 사용한다.
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span>$<span style="color:#e6db74"> AA=100;
+</span><span style="color:#e6db74"></span>$<span style="color:#e6db74"> sh -c &#34;</span>AA<span style="color:#f92672">=</span>200; echo $AA<span style="color:#e6db74">&#34; 
+</span><span style="color:#e6db74">100
+</span><span style="color:#e6db74"># double quotes
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span>$<span style="color:#e6db74"> sh -c &#34;</span>AA<span style="color:#f92672">=</span>200; echo $AA<span style="color:#e6db74">&#34;
+</span><span style="color:#e6db74">200
+</span><span style="color:#e6db74"># single quotes
+</span></code></pre></div><h1 id="heading-28"></h1>
+<p> </p>
+<h1 id="heading-29"></h1>
+<h3 id="-"><strong>$&rsquo; &lsquo;</strong></h3>
+<h1 id="heading-30"></h1>
+<ul>
+<li>
+<p><strong><code>$' '</code>는 <code>' '</code>와 동이하지만 escape 문자를 사용할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>escape 문자가 처리되고 난 결과를 <code>$</code>가 제외된 <code>' '</code> 상태가 된다.</strong></p>
+</li>
+<li>
+<p><strong>sh에서는 사용할 수 없다.</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ echo <span style="color:#e6db74">$&#39;I like\n \&#39;winter\&#39; \tand\t\&#39;snow&#39;</span>
+I like
+<span style="color:#e6db74">&#39;winter&#39;</span>    and     <span style="color:#e6db74">&#39;snow&#39;</span>
+<span style="color:#75715e"># \n, \t \&#39; escape 문자가 사용</span>
+</code></pre></div><h1 id="heading-31"></h1>
+<p> </p>
+<h1 id="heading-32"></h1>
+<h3 id="quotesㄹ르-서로-붙여-사용하기"><strong>Quotesㄹ르 서로 붙여 사용하기</strong></h3>
+<h1 id="heading-33"></h1>
+<ul>
+<li>
+<p><strong>두 개의 quotes를 공백을 두지 않고 서로 붙이면 하나가 된다.</strong></p>
+</li>
+<li>
+<p><strong>이 원리는 변수를 포함하는 명령 스트링을 만들거나 함수에 전달할 인수를 하나로 만들 때 유용하게 사용할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>명령 스트링을 만들 때는 <code>' '</code>을 사용해 명령문을 작성하였는 데, 그 안에 <code>Shell 변수</code>를 사용할 일이 생기면 하단과 같이 <code>' '</code>을 분리한 후 double quotes 한 변수를 공백 없이 붙여 사용하면 된다.</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sed -E <span style="color:#e6db74">&#39;s/foo/bar/g&#39;</span>
+$ sed -E <span style="color:#e6db74">&#39;s/&#39;</span><span style="color:#e6db74">&#34;</span>$var1<span style="color:#e6db74">/</span>$var2<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#39;/g&#39;</span>
+</code></pre></div><h1 id="heading-34"></h1>
+<ul>
+<li>
+<p><strong>awk는 스크립트 내에서 <code>$</code> 문자를 사용하기 때문에 기본적으로 single quotes을 이용해 작성한다.</strong></p>
+</li>
+<li>
+<p><strong>하단의 경우를 보면 -exec 옵션에 <code>sh -c</code> 명령이 single quotes에 의해 작성되고 있는 데, 그 안에 있는 awk 명령에서도 single quotes이 사용되어지고 있으며, 이와 같은 경우 다음과 같이 일단 quotes을 분리한 후 <code>\'</code>나 <code>&quot;'&quot;</code>를 사용해 연결하면 <code>sh -c '...'</code> 내에서 실행되는 awk 명령에서도 single quotes를 사용할 수 있다.</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ find * -name <span style="color:#e6db74">&#39;Packages*&#39;</span> -type f -exec <span style="color:#ae81ff">\</span>
+sh -c <span style="color:#e6db74">&#39;echo $(nd5sum &#34;{}&#34; | awk &#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39;{print $1&#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39;}) $(stat -c %s &#34;{}&#34;) &#34;{}&#34;&#39;</span> <span style="color:#ae81ff">\;</span>
+
+
+
+$ ./args.sh <span style="color:#ae81ff">11</span> <span style="color:#e6db74">&#34;hello &#34;</span><span style="color:#e6db74">$&#39;$world \u2665&#39;</span> <span style="color:#ae81ff">33</span> 
+
+$0 : /root
+$1 : 11
+$2 : hello $world ♥
+$3 : 33
+$4 : 
+</code></pre></div><h1 id="heading-35"></h1>
+<p> </p>
+<h1 id="heading-36"></h1>
+<h3 id="escape-sequences"><strong>Escape Sequences</strong></h3>
+<h1 id="heading-37"></h1>
+<table>
+<thead>
+<tr>
+<th>Escape Sequence</th>
+<th>Character represented</th>
+<th>적용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\</td>
+<td>backslash</td>
+<td>*</td>
+</tr>
+<tr>
+<td>\a</td>
+<td>alert (bell)</td>
+<td>*</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>backspace</td>
+<td>*</td>
+</tr>
+<tr>
+<td>\e</td>
+<td>escape (ASCII 033)</td>
+<td>*</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>form feed</td>
+<td>*</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>newline</td>
+<td>*</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>carriage return</td>
+<td>*</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>horizontal tab</td>
+<td>*</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>vertical tab</td>
+<td>*</td>
+</tr>
+<tr>
+<td>'</td>
+<td>single quotes</td>
+<td>printf $ ' '</td>
+</tr>
+<tr>
+<td>&quot;</td>
+<td>double quotes</td>
+<td>*</td>
+</tr>
+<tr>
+<td>?</td>
+<td>question mark</td>
+<td>printf $ ' '</td>
+</tr>
+<tr>
+<td>&lt;NNN&gt;</td>
+<td>8비트 문자로 N은 8진수 값을 의미(1~3개)</td>
+<td>printf $&rsquo; '</td>
+</tr>
+<tr>
+<td>\0<!-- raw HTML omitted --></td>
+<td>8비트 문자로 N은 8진수 값을 의미(1~3개)</td>
+<td>echo</td>
+</tr>
+<tr>
+<td>\x<!-- raw HTML omitted --></td>
+<td>8비트 문자로 H은 16진수 값을 의미(1~2개)</td>
+<td>*</td>
+</tr>
+<tr>
+<td>\u<!-- raw HTML omitted --></td>
+<td>유니토드 문자로 H은 16진수 값을 의미(1~4개)</td>
+<td>*</td>
+</tr>
+<tr>
+<td>\u&lt;HHHHㅗㅗㅗㅗ&gt;</td>
+<td>유니토드 문자로 H은 16진수 값을 의미(1~8개)</td>
+<td>*</td>
+</tr>
+<tr>
+<td>\c</td>
+<td>이후의 스트링은 출력에서 제외</td>
+<td>*</td>
+</tr>
+<tr>
+<td>\cx</td>
+<td>ctrl-x 문자, 가령 $&rsquo;\cz'는 Ctrl-z(^Z)</td>
+<td>$&rsquo; '</td>
+</tr>
+</tbody>
+</table>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#quotes"><strong>Quotes</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#특수-기능을-갖는-문자들"><strong>특수 기능을 갖는 문자들</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#특수기능을-갖는-문자나-단어를-escape-하는-방법"><strong>특수기능을 갖는 문자나 단어를 escape 하는 방법</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#no-quotes"><strong>No quotes</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#double-quotes-"><strong>Double quotes(&rdquo; &ldquo;)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#double-quotes에서-escape-되는-문자들"><strong>Double quotes에서 escape 되는 문자들</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#array와-관련된-특수기능"><strong>Array와 관련된 특수기능</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#null-변수값의-quote"><strong>null 변수값의 quote</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#single-quotes-"><strong>Single quotes(&rsquo; &lsquo;)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-"><strong>$&rsquo; &lsquo;</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#quotesㄹ르-서로-붙여-사용하기"><strong>Quotesㄹ르 서로 붙여 사용하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#escape-sequences"><strong>Escape Sequences</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
