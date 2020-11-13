@@ -1805,18 +1805,6 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
-      <title>Fucnctions</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell09/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell09/</guid>
-      <description>Shell Programming    Functions    {;}, ()를 이용해 명령 그룹을 만들게 되면 같은 context에서 실행이 된다. 이것은 명령 그룹전체가 하나의 명령처럼 실행되는 것과 같은 효과가 있다.
-  앞에 함수명을 붙여서 함수정의를 하게 되면 일반 명령과 동일하게 사용될 수 있다.
-  {;}은 현재 shell에서 ()는 subshell에서 실행되므로 보통 함수를 정의할 때 {;}을 사용하지만 필요하다면 ()을 사용할 수도 있다.
-  $ echo hello world | read var; echo &amp;#34;$var&amp;#34;# 파이프로 인해 subshell에서 실행되어 &amp;#34;$var&amp;#34;는 값이 표시되지 않는다.</description>
-    </item>
-    
-    <item>
       <title>Exit Status</title>
       <link>https://mung0001.github.io/docs/programing/shell/shell05/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1854,7 +1842,116 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/programing/shell/shell08/</guid>
-      <description>Shell Programming    Commands  외부명령   /usr/bin/find 명령과 같이 시스템 디렉토리에 위치한 명령드롤, 여기에는 ELF 바이너리 실행파일뿐만 아닌, shell 스크립트, perl 스크립트, python 스크립트와 같은 텍스트 실행파일도 다수 포함되어 있으며 GNU coreutils 패키지에는 textutils, shelutils, fileutils 명령들이 포함되어 있다.  $ file /bin/* /usr/bin/* | grep -ic &amp;#34;text executable&amp;#34;643  #</description>
+      <description>Shell Programming    Commands  외부명령   /usr/bin/find 명령과 같이 시스템 디렉토리에 위치한 명령드롤, 여기에는 ELF 바이너리 실행파일뿐만 아닌, shell 스크립트, perl 스크립트, python 스크립트와 같은 텍스트 실행파일도 다수 포함되어 있으며 GNU coreutils 패키지에는 textutils, shelutils, fileutils 명령들이 포함되어 있다.  $ file /bin/* /usr/bin/* | grep -ic &amp;#34;text executable&amp;#34;643$ file /bin/* /usr/bin/* | grep -ic &amp;#34;shell script&amp;#34;129$ file /bin/* /usr/bin/* | grep -ic &amp;#34;python[0-9.</description>
+    </item>
+    
+    <item>
+      <title>Bourne Shell Builtins</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell09/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell09/</guid>
+      <description>Shell Programming    Functions  </description>
+    </item>
+    
+    <item>
+      <title>Bourne Shell Builtins</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell10/</guid>
+      <description>Shell Programming    Functions  </description>
+    </item>
+    
+    <item>
+      <title>Bourne Shell Builtins</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell11/</guid>
+      <description>Shell Programming    Functions  </description>
+    </item>
+    
+    <item>
+      <title>Bourne Shell Builtins</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell12/</guid>
+      <description>Shell Programming    Bourne Shell Builtins   Shell은 내부에 bultin 되어 제공되는 명령들로 외부에 파일로 존재하지 않으므로 sudo, env, find의 -exec 등으로 실행할 수 없고 shell 환경에서만 사용할 수 있다.     . (dot)    .은 as 어셈블러나 ld 링커에서 현재 위치를 나타내는 데 사용되며, shell 에서는 현재 위치에 filename, include 하는데 사용된다.
+  bash 에서는 동일한 기능의 source 명령을 추가로 제공하며, 가령 AA.</description>
+    </item>
+    
+    <item>
+      <title>Bourne Shell Builtins</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell13/</guid>
+      <description>Shell Programming    Functions  </description>
+    </item>
+    
+    <item>
+      <title>Bourne Shell Builtins</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell14/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell14/</guid>
+      <description>Shell Programming    Functions  </description>
+    </item>
+    
+    <item>
+      <title>Bourne Shell Builtins</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell15/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell15/</guid>
+      <description>Shell Programming    Functions  </description>
+    </item>
+    
+    <item>
+      <title>Bourne Shell Builtins</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell16/</guid>
+      <description>Shell Programming    Functions  </description>
+    </item>
+    
+    <item>
+      <title>Bourne Shell Builtins</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell17/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell17/</guid>
+      <description>Shell Programming    Functions  </description>
+    </item>
+    
+    <item>
+      <title>Bourne Shell Builtins</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell18/</guid>
+      <description>Shell Programming    Functions  </description>
+    </item>
+    
+    <item>
+      <title>Bourne Shell Builtins</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell19/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell19/</guid>
+      <description>Shell Programming    Bourne Shell Builtins  </description>
+    </item>
+    
+    <item>
+      <title>연습문제</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell100/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell100/</guid>
+      <description>Shell Programming    연슨문제 정리  구구단 # gugu.sh#!/bin/bashfor i in {1..9};dofor j in {1..9};doecho $i &amp;#34;X&amp;#34; $j &amp;#34;=&amp;#34; `expr $i \* $j`donedone   야구게임 #!/bin/bashSolution(){Solution=()i=0while [ $i -le 3 ];doSolution[$i]=$((RANDOM% 9+1))if [ $i -eq 3 ]; thenif [ ${Solution[3]} -eq ${Solution[0]} -o ${Solution[3]} -eq ${Solution[1]} -o ${Solution[3]} -eq ${Solution[2]} ]; thenSolution[$i]=$((RANDOM% 9+1))else((i++))fifiif [ $i -eq 2 ]; thenif [ ${Solution[2]} -eq ${Solution[0]} -o ${Solution[2]} -eq ${Solution[1]} ]; thenSolution[$i]=$((RANDOM% 9+1))else((i++))fifiif [ $i -eq 1 ]; thenif [ ${Solution[0]} -eq ${Solution[1]} ]; thenSolution[$i]=$((RANDOM% 9+1))else((i++))fifiif [ $i -eq 0 ]; then((i++))fidoneecho ${Solution[@]}}Count=0Score(){Out=0Ball=0Strike=0if [ $num1 -eq ${Solution[0]} ]; then((Strike++))elif [ $num1 -eq ${Solution[1]} -o $num1 -eq ${Solution[2]} -o $num1 -eq ${Solution[3]} ]; then((Ball++))else((Out++))fiif [ $num2 -eq ${Solution[1]} ]; then((Strike++))elif [ $num2 -eq ${Solution[0]} -o $num2 -eq ${Solution[2]} -o $num2 -eq ${Solution[3]} ]; then((Ball++))else((Out++))fiif [ $num3 -eq ${Solution[2]} ]; then((Strike++))elif [ $num3 -eq ${Solution[1]} -o $num3 -eq ${Solution[0]} -o $num3 -eq ${Solution[3]} ]; then((Ball++))else((Out++))fiif [ $num4 -eq ${Solution[3]} ]; then((Strike++))elif [ $num4 -eq ${Solution[1]} -o $num4 -eq ${Solution[2]} -o $num4 -eq ${Solution[0]} ]; then((Ball++))else((Out++))fiecho &amp;#34; Strike : $Strike&amp;#34;echo &amp;#34; Ball : $Ball&amp;#34;echo &amp;#34; Out : $Out&amp;#34;((Count++))if [ $Strike -eq 4 ]; thenecho &amp;#34;수고하셨습니다.</description>
     </item>
     
     <item>
