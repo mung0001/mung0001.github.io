@@ -83,51 +83,6 @@
     </item>
     
     <item>
-      <title>Shell Customizing</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell04/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell04/</guid>
-      <description>Shell Programming    Customizing         #</description>
-    </item>
-    
-    <item>
-      <title>Shell Customizing</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell05/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell05/</guid>
-      <description>Shell Programming    Customizing         #</description>
-    </item>
-    
-    <item>
-      <title>Shell Customizing</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell06/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell06/</guid>
-      <description>Shell Programming    Customizing         #</description>
-    </item>
-    
-    <item>
-      <title>Shell Customizing</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell07/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell07/</guid>
-      <description>Shell Programming    Customizing         #</description>
-    </item>
-    
-    <item>
-      <title>Shell Customizing</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell08/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell08/</guid>
-      <description>Shell Programming    Customizing         #</description>
-    </item>
-    
-    <item>
       <title>Shell Basics</title>
       <link>https://mung0001.github.io/docs/programing/shell/shell01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -165,6 +120,18 @@
     
     <item>
       <title>Fucnctions</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell04/</guid>
+      <description>Shell Programming    Functions    {;}, ()를 이용해 명령 그룹을 만들게 되면 같은 context에서 실행이 된다. 이것은 명령 그룹전체가 하나의 명령처럼 실행되는 것과 같은 효과가 있다.
+  앞에 함수명을 붙여서 함수정의를 하게 되면 일반 명령과 동일하게 사용될 수 있다.
+  {;}은 현재 shell에서 ()는 subshell에서 실행되므로 보통 함수를 정의할 때 {;}을 사용하지만 필요하다면 ()을 사용할 수도 있다.
+  $ echo hello world | read var; echo &amp;#34;$var&amp;#34;# 파이프로 인해 subshell에서 실행되어 &amp;#34;$var&amp;#34;는 값이 표시되지 않는다.</description>
+    </item>
+    
+    <item>
+      <title>Fucnctions</title>
       <link>https://mung0001.github.io/docs/programing/shell/shell09/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -173,6 +140,47 @@
   앞에 함수명을 붙여서 함수정의를 하게 되면 일반 명령과 동일하게 사용될 수 있다.
   {;}은 현재 shell에서 ()는 subshell에서 실행되므로 보통 함수를 정의할 때 {;}을 사용하지만 필요하다면 ()을 사용할 수도 있다.
   $ echo hello world | read var; echo &amp;#34;$var&amp;#34;# 파이프로 인해 subshell에서 실행되어 &amp;#34;$var&amp;#34;는 값이 표시되지 않는다.</description>
+    </item>
+    
+    <item>
+      <title>Exit Status</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell05/</guid>
+      <description>Shell Programming    Exit Status    터미널에서 명령을 단계적으로 실행해서 작업을 완성할 때는 여태까지 실행한 명령들이 모두 정상적으로 완료되었기 때문이다.
+  만약 특정 과정에서 오류가 발생했는지, 정상적으로 완료되었는 지를 확인해야하는 데, 이를 판단할 수 있는 방법이 종료 상태 값을 확인하는 방법으로, 실제 shell에서의 핵심 개념중 하나가 종료 상태 값(Exit status)이다.
+  Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반환하며, if while until &amp;amp;&amp;amp; || 모두 종료 상태 값을 사용해서 참, 거짓을 판단한다.</description>
+    </item>
+    
+    <item>
+      <title>Interactive</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell06/</guid>
+      <description>Shell Programming    Interactive    Shell이 실행되는 환경은 두가지로 사용자로부터 프로프트를 통해 직접 명령을 입력받아 실행시키는 interactive shell과 script 파일을 실행하는 것과 같은 non-interacgtive shell이 있다.
+  alais, job control과 같은 기능은 기본적으로 interactive shell에서 사용하기 위한 것으로 script를 실행할 때는 disable 된다.
+  case $- in*i*) echo interactive shell ;;*) echo non-interactive shell ;;esac# $- 변수는 set 명령에 의해 설정되어 있는 option flage를 담고 있다.</description>
+    </item>
+    
+    <item>
+      <title>etc</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell07/</guid>
+      <description>Shell Programming    etc  /proc    proc 디렉토리는 현재 시스템에서 실행되는 프로세스들에 대한 정보를 제공하기 위해 OS에서 제공하는 가상의 파일 시스템으로, 실제 파일 시스템이 존재하는 것이 아니다.
+  커널이 가지고 있는 정보는 사용자 프로그램에서 직접 접근할 수가 없으므로 system call을 통해 제공하는 방법도 생각해 볼 수 있겠으나 프로스세그 가지는 자료구조를 생각할 때 사용자가 쉽게 사용할 수 있도록 메모리상에 가상의 파일 시스템을 만들어 구조적으로 제공하는 역할을 수행한다.</description>
+    </item>
+    
+    <item>
+      <title>Commands</title>
+      <link>https://mung0001.github.io/docs/programing/shell/shell08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/shell/shell08/</guid>
+      <description>Shell Programming    Commands  외부명령   /usr/bin/find 명령과 같이 시스템 디렉토리에 위치한 명령드롤, 여기에는 ELF 바이너리 실행파일뿐만 아닌, shell 스크립트, perl 스크립트, python 스크립트와 같은 텍스트 실행파일도 다수 포함되어 있으며 GNU coreutils 패키지에는 textutils, shelutils, fileutils 명령들이 포함되어 있다.  $ file /bin/* /usr/bin/* | grep -ic &amp;#34;text executable&amp;#34;643  #</description>
     </item>
     
   </channel>
