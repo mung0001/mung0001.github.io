@@ -169,6 +169,29 @@
     </item>
     
     <item>
+      <title>Git</title>
+      <link>https://mung0001.github.io/docs/programing/git/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/git/git/</guid>
+      <description>Git과 Github  깃 ( git )    Git 공식 홈페이지 에서 다운로드
+  형상 관리 도구 ( Configuration Management Tool )인 분산형 관리 시스템
+  무료, 공개소프트웨어 서비스
+  소스코드를 주고 받을 필요 없이, 같은 파일을 여러 명이 동시에 작업하는 병렬 개발이 가능
+  분산 버전관리이기 때문에 인터넷이 연결되지 않은 곳에서도 개발을 진행할 수 있으며, 중앙 저장소가 날라가벌도 다시 원상복구가 가능
+     git의 특징   버전관리   깃에서 버전이란 문서를 수정하고 저장할 때마다 생기는 지점</description>
+    </item>
+    
+    <item>
+      <title>Golang 기본</title>
+      <link>https://mung0001.github.io/docs/programing/golang/golang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/golang/golang/</guid>
+      <description>Golang 설치  Go 공식 홈페이지에서 OS맞는 패키지를 설치   Golang Study 사이트  Go 기본 메뉴얼 가장 빨리 만나는 Go 언어 Go-tour    Go 기초 문법  중괄호 표기법  Go는 문법의 작성 스타일을 강제 Go의 대표적인 문법으로는 { } ( 중괄호 ) 표기 법이 있음 즉, 함수, 조건문, 반복문 등을 시작할 때는 반드시 같은 줄에서 시작   ; 세미콜론  마지막 구문의 세미클론을 생략 한 줄에 여러 구문을 사용할 때에는 세미콜론을 사용하여 나눔  fmt.</description>
+    </item>
+    
+    <item>
       <title>Home</title>
       <link>https://mung0001.github.io/docs/network/%EC%A0%95%EB%A6%AC%EC%A0%84/%EC%A0%95%EB%A6%AC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -204,10 +227,10 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     
     <item>
       <title>Linux 일반</title>
-      <link>https://mung0001.github.io/docs/system/lm/lm-1/</link>
+      <link>https://mung0001.github.io/docs/system/linux/lm-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/system/lm/lm-1/</guid>
+      <guid>https://mung0001.github.io/docs/system/linux/lm-1/</guid>
       <description>리눅스 일반   리눅스의 특징 및 장단점   특징   오픈 소스 운영체제이다.
   멀티유저(다중사용자), 멀티테스킹(다중작업) 운영체제이다.
   다중스레드를 지원하는 네트워크 운영체제이다.
@@ -241,6 +264,27 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
   IaaS(Infrastrcture as a Service): 서버, 스토리지, 네트워크를 가상화 환경으로 만 들어 필요에 따라 인프라 자원을 제공하는 서비스
   PaaS(Platform as a Service): 웹에서 개발 플랫폼을 제공하는 서비스
   SaaS(Software as a Service): 온디맨드 소프트웨어(On-demand Software)라고도 하며, 중앙에서 호스팅 되는 소프트웨어를 웹 브라우저 등 클라우이언트로 이용하는 서비스</description>
+    </item>
+    
+    <item>
+      <title>Python Code</title>
+      <link>https://mung0001.github.io/docs/programing/python/code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/python/code/</guid>
+      <description>메일 자동화  이미지 크롤링 from urllib.request import urlopenfrom urllib.parse import quote_plusfrom bs4 import BeautifulSoupfrom selenium import webdriverimport timebaseUrl = &amp;#39;https://www.instagram.com/explore/tags/&amp;#39;plusUrl = input(&amp;#39;검색할 태그를 입력하세요 : &amp;#39;)url = baseUrl + quote_plus(plusUrl)driver = webdriver.Chrome(&amp;#39;C:\\chromedriver.exe&amp;#39;)driver.get(url)time.sleep(3)html = driver.page_sourcesoup = BeautifulSoup(html)insta = soup.select(&amp;#39;.v1Nh3.kIKUG._bz0w&amp;#39;)n = 1for i in insta:print(&amp;#39;https://www.instagram.com&amp;#39;+ i.a[&amp;#39;href&amp;#39;])imgUrl = i.select_one(&amp;#39;.KL4Bh&amp;#39;).img[&amp;#39;src&amp;#39;]with urlopen(imgUrl) as f:with open(&amp;#39;C:\\test\\&amp;#39; + plusUrl + str(n) + &amp;#39;.</description>
+    </item>
+    
+    <item>
+      <title>Python 정리</title>
+      <link>https://mung0001.github.io/docs/programing/python/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/programing/python/python/</guid>
+      <description>python 내장함수  ...abs abs(x)는 어떤 숫자를 입력받았을 때, 그 숫자의 절댓값을 돌려주는 함수
+&amp;gt;&amp;gt;&amp;gt; abs(3)3&amp;gt;&amp;gt;&amp;gt; abs(-3)3   all all(x)는 반복 가능한(iterable) 자료형 x를 입력 인수로 받으며 이 x가 모두 참이면 True, 거짓이 하나라도 있으면 False를 반환
+※ 반복 가능한 자료형이란 for문으로 그 값을 출력할 수 있는 것을 의미한다. 리스트, 튜플, 문자열, 딕셔너리, 집합 등이 있다.
+&amp;gt;&amp;gt;&amp;gt; all([1, 2, 3])True&amp;gt;&amp;gt;&amp;gt; all([1, 2, 3, 0])False  any any(x)는 x 중 하나라도 참이 있으면 True를 돌려주고, x가 모두 거짓일 때에만 False를 돌려준다.</description>
     </item>
     
     <item>
@@ -321,10 +365,10 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     
     <item>
       <title>Linux 운영 및 관리</title>
-      <link>https://mung0001.github.io/docs/system/lm/lm-2/</link>
+      <link>https://mung0001.github.io/docs/system/linux/lm-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/system/lm/lm-2/</guid>
+      <guid>https://mung0001.github.io/docs/system/linux/lm-2/</guid>
       <description>리눅스 일반   권한 및 그룹 설정  리눅스 시스템은 모든 파일과 디렉터리에는 접근권한과 소유권이 부여된다. 명령어 ‘ls –l’ 은 파일 속성을 나타낸다. 속성 필드 중 첫 번째 필드는 파일이나 디렉터리의 허가권, 세번째와 네번째 필드는 파일이나 디렉터리의 소유권을 나타낸다. 파일의 허가권이나 소유권을 설정하는 명령어는 chmod, chown, chgrp, umask 등이 있다.    소유권 관련 명령어  소유권은 임의의 파일 또는 디렉터리에 대한 사용자와 그룹들의 소유 권한을 나타낸 것이다. 그룹은 사용자들의 시스템 운영 특성에 따라 묶어 놓은 것으로, 같은 그룹에 속한 사용자들은 파일 또는 디렉터리에 대해 동일한 소유권과 직접 권한을 갖는다.</description>
     </item>
     
@@ -432,17 +476,6 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
       
       <guid>https://mung0001.github.io/docs/openstack/openstack/glance/</guid>
       <description>이미지를 관리하는 서비스 : Glance   이미지를 관리하는 서비스 : Glance   Cloud Computing을 사용하기 위해서는 Virtual Machine을 생성하기 위한 이미지가 필요로 하며, Glance는 Nova에서 생성하는 인스턴스의 운영체제에 해당하는 이미지를 관리하는 서비스     Glance의 구성요소    Glance는 위의 그림과 같이 3가지의 구성요소로 이루어져 있다      구성요소 역할     Glance-api 이미지를 확인/ 복구/ 저장하는 등의 질의를 하기 이한 api 요청/ 응답을 담당   Glance-registry 이미지에 대한 메타데이터를 저장하고 처리하는 역할을 담당 및 Glance database에 저장된 데이터를 불러들이는 역할을 수행   Glance-database 이미지의 관련 정보들을 보관       논리 아키텍처의 Glance   Glance 사용자들은 glance-api로 이미지를 등록, 삭제, 관리 glance-api는 glance-registry와 Glance database에서 이미지를 관리 이미지를 등록할 때는 glance-registry로 Glance database에 저장 등록된 이미지를 사용할 때는 Glance database에 바로 사용을 요청 관리자는 운영하려는 운영체제의 이미지를 glance-registry로 Glance database에 등록     가상 머신 이미지 포맷   aki: 아마존 커널 이미지 ami: 아마존 머신 이미지 ari: 아마존 ram 디스크 이미지 iso: 광학 디스크나 CD-ROM의 데이터 콘텐츠를 지원하는 아카이브 포맷 qcow2: QEMU 에뮬레이터가 지원하는 포맷, 동적으로 확장할 수 있으며, Copy on Write를 지원 raw: 구조화되지 않은 디스크 포맷 vdi: VirtalBox 모니터와 QEMU 에뮬레이터가 지원하는 디스크 포맷 vhd: VHD 디스크 포맷은 VMware, Xen 마이크로소프트, VirtualBox 같은 가상 머신 모니터가 사용하는 일반적인 디스크 포맷 vhdx: VHDX 디스크 포맷은 큰 디스크 크기를 지원하는 VHD 형식의 향상된 버전 vmdk: 일반적인 디스크 포맷으로 여러 가상 머신 모니터가 지원     컨테이너 포맷(container Format)   aki: 아마존 커널 이미지 ami: 아마존 머신 이미지 bare: 아마존 ram 디스크 이미지 docker: Docker 컨테이너 포맷 ova: tar 파일의 OVF 패키지 ovf: OVF 컨테이너 포맷        Glance 명령어  현재 이미지 목록 확인  openstack image list  특정 이미지의 자세한 정보 확인  openstack image show [이미지 이름]  이미지 삭제  openstack image delete [이미지 이름]  이미지 추가  openstack image create --public --container-format bare --disk-format qcow2 --file [경로를 포함한 이미지 파일 이름] [이미지 이름]   커스텀 이미지 생성   xming 윈도우에 설치   CentOS 준비 후 CentOS에 가상머신 프로그램 설치 및 실행  $ yum install qemu kvm qemu-kvm libvirt virt-install bridge-utils virt-manager dejavu-lgc-sans-fonts virt-viewer$ systemctl restart libvirtd ISO 파일로 qcow2 각 이미지에 맞는 파일 생성  qemu-img create -f qcow2 [이미지 파일 위치] [이미지 파일 크기]qemu-img create -f qcow2 /test/centos7.</description>
-    </item>
-    
-    <item>
-      <title>Linux 활용</title>
-      <link>https://mung0001.github.io/docs/system/lm/lm-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/system/lm/lm-3/</guid>
-      <description>Linux 일반   X-windows 개념 및 사용법   X-window란 우리가 흔히 사용하고 있는 Window와 같이 GUI 환경을 제공하는 서비스를 의미한다. Ubuntu, CentOS 등의 Redhat, Debian 계열의 Linux 운영체제 또한 GUI 환경으로 설치가 가능하다.     X-윈도우의 특징과 구성 요소   개념과 특징   리눅스 환경의 각종 애플리케이션과 유틸리티에 대해 그래픽 사용자 인터페이스를 제공한다.
-  플랫폼과 독립적으로 작동하는 그래픽 시스템이다.
-  X-윈도우는 X11, X, X Windows System이라 한다.</description>
     </item>
     
     <item>
@@ -1782,6 +1815,17 @@ https://steemit.com/steemkr-guide/@snow-airline/steemkr-quick-start-guide
     </item>
     
     <item>
+      <title>Linux 활용</title>
+      <link>https://mung0001.github.io/docs/system/linux/lm-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/lm-3/</guid>
+      <description>Linux 일반   X-windows 개념 및 사용법   X-window란 우리가 흔히 사용하고 있는 Window와 같이 GUI 환경을 제공하는 서비스를 의미한다. Ubuntu, CentOS 등의 Redhat, Debian 계열의 Linux 운영체제 또한 GUI 환경으로 설치가 가능하다.     X-윈도우의 특징과 구성 요소   개념과 특징   리눅스 환경의 각종 애플리케이션과 유틸리티에 대해 그래픽 사용자 인터페이스를 제공한다.
+  플랫폼과 독립적으로 작동하는 그래픽 시스템이다.
+  X-윈도우는 X11, X, X Windows System이라 한다.</description>
+    </item>
+    
+    <item>
       <title>Variables</title>
       <link>https://mung0001.github.io/docs/programing/shell/shell03/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2194,20 +2238,6 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/programing/git/git/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/git/git/</guid>
-      <description>Git&amp;amp;&amp;amp; Github  깃 ( git )    Git 공식 홈페이지 에서 다운로드
-  형상 관리 도구 ( Configuration Management Tool )인 분산형 관리 시스템
-  무료, 공개소프트웨어 서비스
-  소스코드를 주고 받을 필요 없이, 같은 파일을 여러 명이 동시에 작업하는 병렬 개발이 가능
-  분산 버전관리이기 때문에 인터넷이 연결되지 않은 곳에서도 개발을 진행할 수 있으며, 중앙 저장소가 날라가벌도 다시 원상복구가 가능
-     git의 특징   버전관리   깃에서 버전이란 문서를 수정하고 저장할 때마다 생기는 지점</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://mung0001.github.io/docs/programing/git/hugo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -2220,36 +2250,6 @@ This document is a brief primer on using Go templates.</description>
      Hugo 적용    Hugo 환경변수 등록
   휴고 사이트 시작
   hugo new site testprojectcd testprojecthugo server -D  테마 적용    Hugo 테마 다운로드</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/golang/golang/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/golang/golang/</guid>
-      <description>Golang 설치  Go 공식 홈페이지에서 OS맞는 패키지를 설치   Golang Study 사이트  Go 기본 메뉴얼 가장 빨리 만나는 Go 언어 Go-tour    Go 기초 문법  중괄호 표기법  Go는 문법의 작성 스타일을 강제 Go의 대표적인 문법으로는 { } ( 중괄호 ) 표기 법이 있음 즉, 함수, 조건문, 반복문 등을 시작할 때는 반드시 같은 줄에서 시작   ; 세미콜론  마지막 구문의 세미클론을 생략 한 줄에 여러 구문을 사용할 때에는 세미콜론을 사용하여 나눔  fmt.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/python/code/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/python/code/</guid>
-      <description>메일 자동화  이미지 크롤링 from urllib.request import urlopenfrom urllib.parse import quote_plusfrom bs4 import BeautifulSoupfrom selenium import webdriverimport timebaseUrl = &amp;#39;https://www.instagram.com/explore/tags/&amp;#39;plusUrl = input(&amp;#39;검색할 태그를 입력하세요 : &amp;#39;)url = baseUrl + quote_plus(plusUrl)driver = webdriver.Chrome(&amp;#39;C:\\chromedriver.exe&amp;#39;)driver.get(url)time.sleep(3)html = driver.page_sourcesoup = BeautifulSoup(html)insta = soup.select(&amp;#39;.v1Nh3.kIKUG._bz0w&amp;#39;)n = 1for i in insta:print(&amp;#39;https://www.instagram.com&amp;#39;+ i.a[&amp;#39;href&amp;#39;])imgUrl = i.select_one(&amp;#39;.KL4Bh&amp;#39;).img[&amp;#39;src&amp;#39;]with urlopen(imgUrl) as f:with open(&amp;#39;C:\\test\\&amp;#39; + plusUrl + str(n) + &amp;#39;.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/programing/python/python/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/python/python/</guid>
-      <description>python 내장함수  ...abs abs(x)는 어떤 숫자를 입력받았을 때, 그 숫자의 절댓값을 돌려주는 함수
-&amp;gt;&amp;gt;&amp;gt; abs(3)3&amp;gt;&amp;gt;&amp;gt; abs(-3)3   all all(x)는 반복 가능한(iterable) 자료형 x를 입력 인수로 받으며 이 x가 모두 참이면 True, 거짓이 하나라도 있으면 False를 반환
-※ 반복 가능한 자료형이란 for문으로 그 값을 출력할 수 있는 것을 의미한다. 리스트, 튜플, 문자열, 딕셔너리, 집합 등이 있다.
-&amp;gt;&amp;gt;&amp;gt; all([1, 2, 3])True&amp;gt;&amp;gt;&amp;gt; all([1, 2, 3, 0])False  any any(x)는 x 중 하나라도 참이 있으면 True를 돌려주고, x가 모두 거짓일 때에만 False를 돌려준다.</description>
     </item>
     
     <item>
@@ -2341,10 +2341,10 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title>Linux master 개요</title>
-      <link>https://mung0001.github.io/docs/system/lm/lm-0/</link>
+      <link>https://mung0001.github.io/docs/system/linux/lm-0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/system/lm/lm-0/</guid>
+      <guid>https://mung0001.github.io/docs/system/linux/lm-0/</guid>
       <description>Linux master 개요   Linux master    Linux master란 KAIT에서 실시하는 국가공인 자격증 시험으로, 정보통신기술자격검정 시험입니다.
   기본적으로 Linux 전반에 대한 내용들을 시험보며, 1급, 2급으로 시험이 나누어져 있습니다.
   자격종류
