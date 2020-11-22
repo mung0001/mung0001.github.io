@@ -72,6 +72,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/linux/lm-0/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/system/linux/lm-1/</loc>
   </url>
   
@@ -636,6 +640,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/linux/linux01/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/network/nm/nm01/</loc>
   </url>
   
@@ -656,6 +664,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/linux/linux02/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/network/</loc>
   </url>
   
@@ -665,6 +677,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/ironic/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/system/linux/linux03/</loc>
   </url>
   
   <url>
@@ -692,11 +708,27 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/linux/linux04/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-06/</loc>
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/linux/linux05/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-07/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/system/linux/linux06/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/system/linux/linux07/</loc>
   </url>
   
   <url>
@@ -705,6 +737,10 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-09/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/system/linux/linux08/</loc>
   </url>
   
   <url>
@@ -1181,10 +1217,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/system/linux/linux/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/hidden/</loc>
   </url>
   
@@ -1193,7 +1225,7 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/system/linux/lm-0/</loc>
+    <loc>https://mung0001.github.io/docs/system/linux/linux/</loc>
   </url>
   
 </urlset>

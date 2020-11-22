@@ -125,6 +125,19 @@
     </item>
     
     <item>
+      <title>Linux master 개요</title>
+      <link>https://mung0001.github.io/docs/system/linux/lm-0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/lm-0/</guid>
+      <description>Linux master 개요   Linux master    Linux master란 KAIT에서 실시하는 국가공인 자격증 시험으로, 정보통신기술자격검정 시험입니다.
+  기본적으로 Linux 전반에 대한 내용들을 시험보며, 1급, 2급으로 시험이 나누어져 있습니다.
+  자격종류
+ 자격구분 : 공인민간자격 등록번호 : 2008-0268 공인번호 : 과학기술정보통신부 제 2018-10호    시험예약 및 기타 자세한 사항은 KAIT Linux master을 확인해주세요.
+     응시료     등급 차수 검정수수료     1급 1차 40.</description>
+    </item>
+    
+    <item>
       <title>Linux 일반</title>
       <link>https://mung0001.github.io/docs/system/linux/lm-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1316,6 +1329,15 @@
     </item>
     
     <item>
+      <title>Linux System Management</title>
+      <link>https://mung0001.github.io/docs/system/linux/linux01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/linux01/</guid>
+      <description>Linux   Linux System Management   Linux 시스템관리는 프로세스, 메모리 관리를 위해 주로 사용됩니다.     crontab   정기적으로 지정한 시간에 실행하고 싶은 명령어를 등록하여 사용되며, 스크립트를 통해 등록도 가능합니다.    주요 옵션     옵션 설명     -l 등록된 명령어 리스트 확인   -e 등록된 명령어 수정     crontab 등록   -e옵션으로 실행하면 크롭탭을 위한 파일이 열리며, vi에디터와 동일한 명령으로 필요한 명령어를 등록할 수 있습니다.</description>
+    </item>
+    
+    <item>
       <title>Network Master 2급 필기정리</title>
       <link>https://mung0001.github.io/docs/network/nm/nm01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1350,6 +1372,15 @@
     </item>
     
     <item>
+      <title>Linux Filesystem</title>
+      <link>https://mung0001.github.io/docs/system/linux/linux02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/linux02/</guid>
+      <description>Linux   Linux Filesystem   Filesystem은 각 파일들에 대한 관리를 다루는 명령어들입니다.     cd   cd는 디렉터리를 이동하는 명령어입니다.    주요 옵션     옵션 내용     . 현재위치   .. 상위 디렉토리   ~ 홈 디렉터리   - 이전 디렉토리   / 최상단(root) 디렉토리       cp   파일, 디렉터리를 복사하는 명령어입니다.</description>
+    </item>
+    
+    <item>
       <title>OpenStack Ussuri : 환경설정</title>
       <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-02/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1370,6 +1401,18 @@
   인증 요청 및 다른 오픈스택 서비스를 인증하는 오픈스택 인증 서비스(Keystone)
   이미지 및 이미지 메타데이터를 검색할 수 있는 오픈스택 이미지 서비스(Glance)
   DHCP 및 네트워크를 구성하는 오픈스택 네트워크 서비스(Neutron)</description>
+    </item>
+    
+    <item>
+      <title>Linux 압축</title>
+      <link>https://mung0001.github.io/docs/system/linux/linux03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/linux03/</guid>
+      <description>**Linux **   Linux 압축    Linux는 여러 압축포맷을 지원하며, 이를 통해 범용성있는 활용범위를 가지고 있습니다.
+  대표적인 사용예시로는 Linux는 압축을 통해 전체적인 백업 및 복구를 진행할 수 있습니다.
+     gzip, gunzip, zcat    gzip은 파일을 압축할 때 gunzip은 파일의 압축을 해제할 때 사용됩니다.
+  압축한 파일은 .gz의 확장자를 가지며, 파일, 디렉터리 단위로 압축되므로 여러 개의 파일을 압축하기 위해서는 tar 명령어를 사용합니다.</description>
     </item>
     
     <item>
@@ -1409,6 +1452,15 @@
     </item>
     
     <item>
+      <title>Linux 문자열 처리</title>
+      <link>https://mung0001.github.io/docs/system/linux/linux04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/linux04/</guid>
+      <description>Linux   Linux 문자열처리   Linux 문자열 처리는 입력 혹은 출력되는 문자열을 검색하거나, 혹은 데이터를 사용할 수 있도록 치환하는 명령어입니다.     awk   입력을 주어진 분리자(field seperator)로 분리하여 명령을 처리    주요 옵션     옵션 내용     F 문자열을 분리할 기준이 되는 분리문자 입력   v 파라미터 전달      내장함수     함수 설명     sub 지정한 문자열 치환   gsub 문자열 일괄 치환   index 주어진 무나열과 일치하는 문자의 인덱스를 반환   length 문자열의 길이를 반환   substr 시작위치에서 주어진 길이 만큼의 문자열을 반환   split 문자열을 분리하여 배열로 변환      사용예제  $ echo &amp;#34;i have a water.</description>
+    </item>
+    
+    <item>
       <title>OpenStack Ussuri : Neutron</title>
       <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-06/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1418,12 +1470,42 @@
     </item>
     
     <item>
+      <title>Linux 날짜</title>
+      <link>https://mung0001.github.io/docs/system/linux/linux05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/linux05/</guid>
+      <description>Linux   Linux 날짜   Linux 날짜는 날짜 처리를 위한 명령어 입니다.     date   date는 일자, 시간을 처리하는 명령어입니다.   주요 옵션     옵션 내용     -d 원하는 일자를 지정   + 출력 포맷을 지정      사용예제  $ date +%Y%m%d2020-11-21# 년월일 형태 $ date +\%Y\%m\%d2020-11-21# %를 지원하지 않는 환경(ex: crontab)에서는 특수기호로 입력 $ date +&amp;#34;%Y%m%d %H:%M:%S&amp;#34;2020-11-21 08:46:53# 년월일 시간 출력 $ date +%W06# 주차 계산 $ date +%Y-%m-%d -d &amp;#39;1 days ago&amp;#39;2020-11-20# 1일 전 $ date +%Y-%m-%d -d &amp;#39;+1days&amp;#39;2020-11-22# 1일 후 $ date +%Y-%m-%d -d &amp;#39;20190101 +1days&amp;#39;2020-11-22# 20201121 일자 지정후 1일 추가   </description>
+    </item>
+    
+    <item>
       <title>OpenStack Ussuri : Cinder</title>
       <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-07/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-07/</guid>
       <description>OpenStack Ussuri : Cinder  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | -----------------------| L2 agent L3 agent | | NFS | | metadata agent | ----------------------- | Neutron Server | -----------------------  OpenStack Ussuri : Cinder   Cinder는 OpenStack에서 전체적인 볼륨, 디스크를 관리하는 서비스입니다.</description>
+    </item>
+    
+    <item>
+      <title>Linux 파일처리</title>
+      <link>https://mung0001.github.io/docs/system/linux/linux06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/linux06/</guid>
+      <description>Linux   Linux 파일처리   Linux 파일처리는 각 파일들을 읽거나, 데이터를 수정하는 데 주로 사용됩니다.     file   파일의 타입을 확인합니다. 텍스트파일, 실행파일, 아카이브 파일 등의 파일 타입을 확인합니다.    주요 옵션     옵션 내용     -z 파일이 압축되어 있는 경우 압축되기 전의 파일 타입을 확인       head   head는 파일의 앞 부분을 출력하는 명령어입니다.</description>
+    </item>
+    
+    <item>
+      <title>Linux Network</title>
+      <link>https://mung0001.github.io/docs/system/linux/linux07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/linux07/</guid>
+      <description>Linux   Linux Network 처리    Linux 상의 Network는 OS와 함께 핵심요소 중 하나입니다.
+  Network 명령어를 통해 보다 편리하게 Network 요소들의 확인 및 관리가 가능합니다.
+     curl    curl은 여러 프로토콜을 이용하여 네트워크 명령을 전송하는 도구로, 지원되는 프로토콜 (HTTP,HTTPS,FTP,FTPS,SCP,SFTP,TFTP,DICT,TELNET,LDAP 또는 FILE) 중 하나를 사용하여 서버 간의 데이터를 전송할 수 있습니다.
+  프록시 지원, 사용자 인증, FTP 업로드, HTTP 캐시, SSL 연결, 파일 전송 이력 등과 같은 유용한 기능을 제공합니다.</description>
     </item>
     
     <item>
@@ -1442,6 +1524,15 @@
       
       <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-09/</guid>
       <description>OpenStack Ussuri : Swift  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | | Swift-proxy || L2 agent L3 agent | | NFS | -----------------------| metadata agent | ----------------------- | Neutron Server | ----------------------- --------------------------------- | [ Storage Node 1, 2, 3 ] | | | | Swift-account-auditor || Swift-account-replicator || Swift-account || Swift-container-auditor || Swift-container-replicator || Swift-container-updater || Swift-container || Swift-object-auditor || Swift-object-replicator || Swift-object-updater || Swift-swift-object |--------------------------------- OpenStack Ussuri : Swift   Swift는 우리가 흔히 사용하는 네이버 클라우드, 구글 드라이브와 같은 오브젝트 스토리지 서비스 입니다.</description>
+    </item>
+    
+    <item>
+      <title>Linux 형식파일</title>
+      <link>https://mung0001.github.io/docs/system/linux/linux08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/linux08/</guid>
+      <description>Linux   Linux 형식파일   Linux 형식파일은 xml, xmllint, json, jq 형식의 파일들을 처리하기 위한 명령어입니다..     jq   jq는 JSON 형식 파일을 포맷과 들여쓰기에 맞게 출력하고, xpath 형식으로 값을 확인할 수 있습니다.    사용예제  $ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}$ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39; | jq{&amp;#34;key1&amp;#34;: &amp;#34;val1&amp;#34;,&amp;#34;key2&amp;#34;: &amp;#34;val2&amp;#34;}# jq를 이용하면 JSON 형식의 문자열을 포맷에 맞게 출력 $ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39; | jq &amp;#39;.</description>
     </item>
     
     <item>
@@ -2039,15 +2130,6 @@ This document is a brief primer on using Go templates.</description>
     
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/system/linux/linux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/system/linux/linux/</guid>
-      <description>Linux   Linux 기초   유닉스 기반의 컴퓨터 운영체제의 한 종류 핀란드 헬싱키 대학의 대학원생 리누스 토발즈가 1991년에 개발 오픈 소스의 운영체제 대표적인 리눅스 기관 GNU 높은 이식성과 확정성 ( C언어 기반 ) 안전성과 신뢰성 ( 국제적이고 개방적으로 개발되었기 때문에 문제점에 대한 대처가 빠름 ) 계층적 파일 시스템 ( 최상위 디렉토리가 존재하고 모든 것들은 해당 디렉토리 하부에 존재 )   유닉스 운영체제 종류  리눅스의 구성요소   명령어 : 사용자가 원하는 프로그램을 콜링</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://mung0001.github.io/hidden/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -2066,16 +2148,12 @@ This document is a brief primer on using Go templates.</description>
     </item>
     
     <item>
-      <title>Linux master 개요</title>
-      <link>https://mung0001.github.io/docs/system/linux/lm-0/</link>
+      <title>Linux 개요</title>
+      <link>https://mung0001.github.io/docs/system/linux/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mung0001.github.io/docs/system/linux/lm-0/</guid>
-      <description>Linux master 개요   Linux master    Linux master란 KAIT에서 실시하는 국가공인 자격증 시험으로, 정보통신기술자격검정 시험입니다.
-  기본적으로 Linux 전반에 대한 내용들을 시험보며, 1급, 2급으로 시험이 나누어져 있습니다.
-  자격종류
- 자격구분 : 공인민간자격 등록번호 : 2008-0268 공인번호 : 과학기술정보통신부 제 2018-10호    시험예약 및 기타 자세한 사항은 KAIT Linux master을 확인해주세요.
-     응시료     등급 차수 검정수수료     1급 1차 40.</description>
+      <guid>https://mung0001.github.io/docs/system/linux/linux/</guid>
+      <description>Linux   Linux 기초   유닉스 기반의 컴퓨터 운영체제의 한 종류 핀란드 헬싱키 대학의 대학원생 리누스 토발즈가 1991년에 개발 오픈 소스의 운영체제 대표적인 리눅스 기관 GNU 높은 이식성과 확정성 ( C언어 기반 ) 안전성과 신뢰성 ( 국제적이고 개방적으로 개발되었기 때문에 문제점에 대한 대처가 빠름 ) 계층적 파일 시스템 ( 최상위 디렉토리가 존재하고 모든 것들은 해당 디렉토리 하부에 존재 )   유닉스 운영체제 종류  리눅스의 구성요소   명령어 : 사용자가 원하는 프로그램을 콜링</description>
     </item>
     
   </channel>

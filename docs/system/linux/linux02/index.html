@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Linux   Linux Filesystem   Filesystem은 각 파일들에 대한 관리를 다루는 명령어들입니다.     cd   cd는 디렉터리를 이동하는 명령어입니다.    주요 옵션     옵션 내용     . 현재위치   .. 상위 디렉토리   ~ 홈 디렉터리   - 이전 디렉토리   / 최상단(root) 디렉토리       cp   파일, 디렉터리를 복사하는 명령어입니다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/system/linux/linux02/><meta property="og:title" content="Linux Filesystem" />
+<meta property="og:description" content="Linux   Linux Filesystem   Filesystem은 각 파일들에 대한 관리를 다루는 명령어들입니다.     cd   cd는 디렉터리를 이동하는 명령어입니다.    주요 옵션     옵션 내용     . 현재위치   .. 상위 디렉토리   ~ 홈 디렉터리   - 이전 디렉토리   / 최상단(root) 디렉토리       cp   파일, 디렉터리를 복사하는 명령어입니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/linux/linux02/" />
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.d05f45c92fe36df92598847214e31995e03f5c28176e55d3a4be98003ef5d6ee.js" integrity="sha256-0F9FyS/jbfklmIRyFOMZleA/XCgXblXTpL6YAD711u4="></script>
+<!--
+
+-->
+
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/ncptraining/" class="collapsed ">NCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Programming</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/nas/" class="collapsed ">NAS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-0/" class="">Linux master 개요</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-1/" class="">Linux 일반</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-2/" class="">Linux 운영 및 관리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/mount/" class="">Mount</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux01/" class="">Linux System Management</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux02/" class="active">Linux Filesystem</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux03/" class="">Linux 압축</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux04/" class="">Linux 문자열 처리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux05/" class="">Linux 날짜</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux06/" class="">Linux 파일처리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux07/" class="">Linux Network</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux08/" class="">Linux 형식파일</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-3/" class="">Linux 활용</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux/" class="">Linux 개요</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/project/" class="">Project</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Linux Filesystem</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux-filesystem"><strong>Linux Filesystem</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#cd"><strong>cd</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#cp"><strong>cp</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-1"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#df"><strong>df</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-2"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#du"><strong>du</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-3"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#find"><strong>find</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-4"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#type-옵션"><strong>type 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#ln"><strong>ln</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-5"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#ls"><strong>ls</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-6"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#mkdir"><strong>mkdir</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-7"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#mv"><strong>mv</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-8"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#사용예제"><strong>사용예제</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#rm"><strong>rm</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-9"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="linux"><strong>Linux</strong></h1>
+<hr>
+<h1 id="heading"></h1>
+<h2 id="linux-filesystem"><strong>Linux Filesystem</strong></h2>
+<h1 id="heading-1"></h1>
+<ul>
+<li><strong>Filesystem은 각 파일들에 대한 관리를 다루는 명령어들입니다.</strong></li>
+</ul>
+<h1 id="heading-2"></h1>
+<p> </p>
+<h1 id="heading-3"></h1>
+<h2 id="cd"><strong>cd</strong></h2>
+<h1 id="heading-4"></h1>
+<ul>
+<li><strong>cd는 디렉터리를 이동하는 명령어입니다.</strong></li>
+</ul>
+<h1 id="heading-5"></h1>
+<p> </p>
+<h3 id="주요-옵션"><strong>주요 옵션</strong></h3>
+<h1 id="heading-6"></h1>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.</td>
+<td>현재위치</td>
+</tr>
+<tr>
+<td>..</td>
+<td>상위 디렉토리</td>
+</tr>
+<tr>
+<td>~</td>
+<td>홈 디렉터리</td>
+</tr>
+<tr>
+<td>-</td>
+<td>이전 디렉토리</td>
+</tr>
+<tr>
+<td>/</td>
+<td>최상단(root) 디렉토리</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-7"></h1>
+<p> </p>
+<h1 id="heading-8"></h1>
+<h2 id="cp"><strong>cp</strong></h2>
+<h1 id="heading-9"></h1>
+<ul>
+<li><strong>파일, 디렉터리를 복사하는 명령어입니다.</strong></li>
+</ul>
+<h1 id="heading-10"></h1>
+<p> </p>
+<h3 id="주요-옵션-1"><strong>주요 옵션</strong></h3>
+<h1 id="heading-11"></h1>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-f</td>
+<td>같은 이름의 파일이 존재할 경우 확인하지 않고 덮어씁니다.</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>같은 이름의 파일이 존재할 경우 확인합니다.</td>
+</tr>
+<tr>
+<td>-R</td>
+<td>디렉토리의 하위 파일들을 모두 복사합니다.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-12"></h1>
+<p> </p>
+<h1 id="heading-13"></h1>
+<h2 id="df"><strong>df</strong></h2>
+<h1 id="heading-14"></h1>
+<ul>
+<li><strong>df는 파일시스템의 디스크 사용량을 표시하는 명령어입니다.</strong></li>
+</ul>
+<h1 id="heading-15"></h1>
+<p> </p>
+<h3 id="주요-옵션-2"><strong>주요 옵션</strong></h3>
+<h1 id="heading-16"></h1>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>모든 파일시스템을 표사</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>사람이 읽을 수 있는 형태로 용량을 변환하여 표시</td>
+</tr>
+<tr>
+<td>-T</td>
+<td>파일 시스템의 타입을 표시</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-17"></h1>
+<p> </p>
+<h1 id="heading-18"></h1>
+<h2 id="du"><strong>du</strong></h2>
+<h1 id="heading-19"></h1>
+<ul>
+<li><strong>du는 파일과 디렉토리의 사용량을 표시하는 명령어입니다.</strong></li>
+</ul>
+<h1 id="heading-20"></h1>
+<p> </p>
+<h3 id="주요-옵션-3"><strong>주요 옵션</strong></h3>
+<h1 id="heading-21"></h1>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-b</td>
+<td>바이트 단위로 표시</td>
+</tr>
+<tr>
+<td>-k</td>
+<td>킬로바이트 단위로 표시</td>
+</tr>
+<tr>
+<td>-m</td>
+<td>메가바이트 단위로 표시</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>디스크 사용량의 합계를 표시</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>사람이 보기 편한 형태로 표시</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-22"></h1>
+<p> </p>
+<h1 id="heading-23"></h1>
+<h2 id="find"><strong>find</strong></h2>
+<h1 id="heading-24"></h1>
+<ul>
+<li><strong>find 명령어는 파일을 검색할 때 사용합니다.</strong></li>
+</ul>
+<h1 id="heading-25"></h1>
+<p> </p>
+<h3 id="주요-옵션-4"><strong>주요 옵션</strong></h3>
+<h1 id="heading-26"></h1>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-name</td>
+<td>검색할 이름을 지정 *도 사용가능</td>
+</tr>
+<tr>
+<td>-exec</td>
+<td>찾은 파일을 이용해서 다른 명령을 실행해야 할 때 사용</td>
+</tr>
+<tr>
+<td>-mtime</td>
+<td>수정시간을 이용하여 검색 n*24시간 전 수정파일</td>
+</tr>
+<tr>
+<td>-type</td>
+<td>찾는 파일의 타입을 지정</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-27"></h1>
+<p> </p>
+<h3 id="type-옵션"><strong>type 옵션</strong></h3>
+<h1 id="heading-28"></h1>
+<table>
+<thead>
+<tr>
+<th>상태</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>b</td>
+<td>블록형 특수파일</td>
+</tr>
+<tr>
+<td>c</td>
+<td>캐릭터형 특수 파일</td>
+</tr>
+<tr>
+<td>d</td>
+<td>디렉토리 파일</td>
+</tr>
+<tr>
+<td>f</td>
+<td>일반 파일</td>
+</tr>
+<tr>
+<td>I</td>
+<td>심롤릭 링크 파일</td>
+</tr>
+<tr>
+<td>p</td>
+<td>파이프</td>
+</tr>
+<tr>
+<td>s</td>
+<td>소켓</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-29"></h1>
+<p> </p>
+<h1 id="heading-30"></h1>
+<h2 id="ln"><strong>ln</strong></h2>
+<h1 id="heading-31"></h1>
+<ul>
+<li>
+<p><strong>ln은 파일, 디렉토리에 대한 링크를 생성할 때 사용하며, <code>-s</code> 옵션을 이용하면 심볼릭 링크를 생성하고, 사용하지 않으면 하드링크를 생성합니다.</strong></p>
+</li>
+<li>
+<p><strong>심볼릭 링크는 윈도우의 바로가기 파일과 동일한 역할을 수행하며, 원본 파일을 삭제할 경우 심볼릭 링크 또한 동작하지 않습니다.</strong></p>
+</li>
+<li>
+<p><strong>하드 링크는 같은 파일을 하나 더 생성하여 연결된 개념으로 원본을 수정하면 하드링크의 파일도 함께 수정됩니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-32"></h1>
+<p> </p>
+<h3 id="주요-옵션-5"><strong>주요 옵션</strong></h3>
+<h1 id="heading-33"></h1>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-s</td>
+<td>심볼릭 링크 파일을 생생</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-34"></h1>
+<p> </p>
+<h1 id="heading-35"></h1>
+<h2 id="ls"><strong>ls</strong></h2>
+<h1 id="heading-36"></h1>
+<ul>
+<li><strong>파일 엔트리(파일, 디렉토리) 정보를 표시합니다.</strong></li>
+</ul>
+<h1 id="heading-37"></h1>
+<p> </p>
+<h3 id="주요-옵션-6"><strong>주요 옵션</strong></h3>
+<h1 id="heading-38"></h1>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>모든 파일 엔트리 정보를 표시</td>
+</tr>
+<tr>
+<td>l</td>
+<td>파일타입, 퍼미션, 하드링크 수, 오너, 그룹, 파일사이즈 등의 정보를 표시</td>
+</tr>
+<tr>
+<td>R</td>
+<td>하위의 모든 정보를 표시</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-39"></h1>
+<p> </p>
+<h1 id="heading-40"></h1>
+<h2 id="mkdir"><strong>mkdir</strong></h2>
+<h1 id="heading-41"></h1>
+<ul>
+<li><strong>디렉토리를 생성하는 명령어입니다.</strong></li>
+</ul>
+<h1 id="heading-42"></h1>
+<p> </p>
+<h3 id="주요-옵션-7"><strong>주요 옵션</strong></h3>
+<h1 id="heading-43"></h1>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-p</td>
+<td>지정된 경로가 존재하지 않으면 자동으로 생성합니다.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-44"></h1>
+<p> </p>
+<h1 id="heading-45"></h1>
+<h2 id="mv"><strong>mv</strong></h2>
+<h1 id="heading-46"></h1>
+<ul>
+<li><strong>파일, 디렉토리를 이동하는 명령어로 이름을 변경하는데도 사용합니다.</strong></li>
+</ul>
+<h1 id="heading-47"></h1>
+<p> </p>
+<h3 id="주요-옵션-8"><strong>주요 옵션</strong></h3>
+<h1 id="heading-48"></h1>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-f</td>
+<td>같은 파일의 이름이 존재할 경우 확인하지 않고 덮어씁니다.</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>같은 파일의 이름이 존재할 경우 확인합니다.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-49"></h1>
+<p> </p>
+<h3 id="사용예제"><strong>사용예제</strong></h3>
+<table>
+<thead>
+<tr>
+<th>상태</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-50"></h1>
+<p> </p>
+<h1 id="heading-51"></h1>
+<h2 id="rm"><strong>rm</strong></h2>
+<h1 id="heading-52"></h1>
+<ul>
+<li><strong>파일, 디렉토리를 삭제합니다.</strong></li>
+</ul>
+<h1 id="heading-53"></h1>
+<p> </p>
+<h3 id="주요-옵션-9"><strong>주요 옵션</strong></h3>
+<h1 id="heading-54"></h1>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-f</td>
+<td>파일이 없는 경우에도 오류를 표시하지 않습니다.</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>디렉토리를 삭제합니다.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-55"></h1>
+<p> </p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux-filesystem"><strong>Linux Filesystem</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#cd"><strong>cd</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#cp"><strong>cp</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-1"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#df"><strong>df</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-2"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#du"><strong>du</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-3"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#find"><strong>find</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-4"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#type-옵션"><strong>type 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#ln"><strong>ln</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-5"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#ls"><strong>ls</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-6"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#mkdir"><strong>mkdir</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-7"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#mv"><strong>mv</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-8"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#사용예제"><strong>사용예제</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#rm"><strong>rm</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-9"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
