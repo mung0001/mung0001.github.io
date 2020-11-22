@@ -1,24 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Mail on 뭉게뭉게</title>
-    <link>https://mung0001.github.io/docs/network/mail/</link>
-    <description>Recent content in Mail on 뭉게뭉게</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>kr-ko</language>
-    
-	<atom:link href="https://mung0001.github.io/docs/network/mail/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/network/mail/mail-server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/network/mail/mail-server/</guid>
-      <description>Mail 서버 생성   단계  SSL 보안 인증서 발급받기  도메인 주소   메일서버 설치   Ubuntu 18.04
-   SSL 보안 인증서 발급받기  1. 도메인 주소 설정  SSL 보안 인증서를 사용하기 위해서는 http://도메인으로 해당 사이트에 접근이 가능해아합니다. 이미 도메인 주소가 있으신 분은 그것을 사용하고, 없으신 분은 Link에서 무료 도메인을 사용하시면 됩니다.   2. SSL  무료 SSL을 생성합니다.  $ sudo apt-get install -y postfix# postfix 설치   VMware에 NAS 설치   Vmware에서 Custom으로 Virtual Machine을 설치합니다.</description>
-    </item>
-    
-  </channel>
-</rss>

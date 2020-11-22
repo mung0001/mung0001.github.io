@@ -1,52 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Docker on 뭉게뭉게</title>
-    <link>https://mung0001.github.io/docs/cloudcomputing/docker/</link>
-    <description>Recent content in Docker on 뭉게뭉게</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>kr-ko</language>
-    
-	<atom:link href="https://mung0001.github.io/docs/cloudcomputing/docker/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Docker란?</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/docker/docker-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/docker/docker-1/</guid>
-      <description>Docker란?    Docker      도커란 컨테이너 기반의 오픈소스 가상화 플랫폼으로 컨테이너형 가상화 기술을 구현하기 위해 상주 어플리케이션과 이 어플리케이션을 조작하기 위한 명령행 도구로 구성되는 프로덕트입니다.
-  컨테이너라 하면 배에 실는 네모난 화물 수송용 박스를 생각할 수 있는데 각각의 컨테이너 안에는 다양한 화물을 넣을 수 있고 규격화되어 컨테이너선이나 트레일러등 다양한 운송수단으로 쉽게 옮길 수 있습니다.
-  서버에서 이야기하는 컨테이너도 이와 비슷한데 다양한 프로그램, 실행환경을 컨테이너로 추상화하고 동일한 인터페이스를 제공하여 프로그램의 배포 및 관리를 단순하게 해줍니다.</description>
-    </item>
-    
-    <item>
-      <title>Docker 환경구축</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/docker/docker-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/docker/docker-2/</guid>
-      <description>Docker 환경구축    이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다. 설치에 대한 자세한 설명은 Docker docs를 참고해주세요.    Docker 설치    Docker는 기본적으로 Linux 플랫폼, MacOS, Window 10을 지원하고 있습니다. Docker 지원 DESKTOP     Docker 지원 SERVER      Debian 설치   Debian 환경   Debian계열 Linux에 Docker Engine을 설치 하기 위해서는 하단의 요구조건을 충족해야 합니다.</description>
-    </item>
-    
-    <item>
-      <title>Docker 이미지와 컨테이너</title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/docker/docker-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/docker/docker-3/</guid>
-      <description>Docker 이미지와 컨테이너    Docker 이미지와 컨테이너    Docker 이미지  $ docker image --help$ docker image [ options ]   옵션 설명     build 이미지 빌드   history history 출력   inspect 임포트   load 로드   ls 이미지 리스트르 보여준다   prune 사용하지 않는 이미지를 제거   pull 저장소에서 이미지를 다운로드   push 저장소에 이미지를 업로드   rm 삭제   save tar로 이미지를 저장   tag 태그를 생성       $ docker pull [ options ] [ 레포지터리 : 태그 ]$ docker image pull [ options ] [ 레포지터리 : 태그 ]# 도커 이미지 다운로드$ docker images $ docker image list# 도커 이미지 리스트 리스트 출력$ docker image tags [ 기반이미지 : 태그 ] [ 새이미지 | 태그 ]# 도커 이미지에 태그 입력$ docker image push [ 레포지터리 : 태그 ]# 지정된 레포지터리에 업로드 도커 이미지의 태그는 버전을 구별하기 위한 역할을 수행합니다.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/cloudcomputing/docker/base/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/cloudcomputing/docker/base/</guid>
-      <description>****    ****          </description>
-    </item>
-    
-  </channel>
-</rss>
