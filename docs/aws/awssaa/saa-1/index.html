@@ -1,0 +1,2139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SAA 요약정리  정리를 들어가기 전 핵심요소  자격 시험의 합격과 실패는 현장에서의 실무 경험과 실습 중심의 학습, 시험에 필요한 세부적인 정보와 숫자를 얼마나 잘 기억하는지에 달려 있다. AWS SAA는 핵심 AWS 서비스 구성 요소와 운영은 물론 서비스 간의 상호작용 방식도 이해가 필요 기본적인 공부는 Amazon의 공식문서 및 여러 실습 경험을 필요로 한다.    AWS SAA 참고자료      시험영역 출제 비율     1.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/aws/awssaa/saa-1/><meta property="og:title" content="1장 AWS의 핵심 서비스" />
+<meta property="og:description" content="SAA 요약정리  정리를 들어가기 전 핵심요소  자격 시험의 합격과 실패는 현장에서의 실무 경험과 실습 중심의 학습, 시험에 필요한 세부적인 정보와 숫자를 얼마나 잘 기억하는지에 달려 있다. AWS SAA는 핵심 AWS 서비스 구성 요소와 운영은 물론 서비스 간의 상호작용 방식도 이해가 필요 기본적인 공부는 Amazon의 공식문서 및 여러 실습 경험을 필요로 한다.    AWS SAA 참고자료      시험영역 출제 비율     1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/aws/awssaa/saa-1/" />
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.693a0c9d102dd896d4abc74767d815b1ccfc1745a230412deefdc7153ed52b2e.js" integrity="sha256-aToMnRAt2JbUq8dHZ9gVscz8F0WiMEEt7v3HFT7VKy4="></script>
+<!--
+
+-->
+
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awssaa/saa-1/" class="active">1장 AWS의 핵심 서비스</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awssaa/saa-2/" class="">2장 EC2와 EBS</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awssaa/saa-3/" class="">3장 S3와 Glacier</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awssaa/saa-4/" class="">4장 VPC</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awssaa/saa-5/" class="">5장 데이터베이스</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awssaa/saa-6/" class="">6장 인증과 권한</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awssaa/saa-15/" class="">15장 기출문제 정리</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/ncptraining/" class="collapsed ">NCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Programming</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/nas/" class="collapsed ">NAS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/project/" class="">Project</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>1장 AWS의 핵심 서비스</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#정리를-들어가기-전-핵심요소"><strong>정리를 들어가기 전 핵심요소</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1장-aws의-핵심-서비스"><strong>1장 AWS의 핵심 서비스</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#클라우드-컴퓨팅과-가상화"><strong>클라우드 컴퓨팅과 가상화</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#확장성과-탄력성"><strong>확장성과 탄력성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-서비스의-범주"><strong>AWS 서비스의 범주</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-플랫폼-아키텍처"><strong>AWS 플랫폼 아키텍처</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-안정성과-규정"><strong>AWS 안정성과 규정</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws의-공동-책임-모델"><strong>AWS의 공동 책임 모델</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-책임의-따른-분류"><strong>AWS 책임의 따른 분류</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-작업"><strong>AWS 작업</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1장-요약"><strong>1장 요약</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="saa-요약정리"><strong>SAA 요약정리</strong></h1>
+<hr>
+<h2 id="정리를-들어가기-전-핵심요소"><strong>정리를 들어가기 전 핵심요소</strong></h2>
+<ul>
+<li><strong>자격 시험의 합격과 실패는 현장에서의 실무 경험과 실습 중심의 학습, 시험에 필요한 세부적인 정보와 숫자를 얼마나 잘 기억하는지에 달려 있다.</strong></li>
+<li><strong>AWS SAA는 핵심 AWS 서비스 구성 요소와 운영은 물론 서비스 간의 상호작용 방식도 이해가 필요</strong></li>
+<li><strong>기본적인 공부는 Amazon의 공식문서 및 여러 실습 경험을 필요로 한다.</strong></li>
+</ul>
+<h1 id="heading"></h1>
+<ul>
+<li><strong><a href="https://d0.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf">AWS SAA 참고자료</a></strong></li>
+</ul>
+<h1 id="heading-1"></h1>
+<table>
+<thead>
+<tr>
+<th>시험영역</th>
+<th>출제 비율</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 복원력을 갖춘 아키텍처 설계</td>
+<td>34%</td>
+</tr>
+<tr>
+<td>1-1. 안정적이고, 복원력을 갖춘 스토리지를 선택한다.</td>
+<td> </td>
+</tr>
+<tr>
+<td>1-2. 어떻게 AWS 서비스를 사용해 결합 해제 매커니즘을 설계할지 결정한다.</td>
+<td> </td>
+</tr>
+<tr>
+<td>1-3. 어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.</td>
+<td> </td>
+</tr>
+<tr>
+<td>1-4. 어떻게 고가용성 및/ 또는 내결함성을 갖춘 아키텍처를 설계할지를 결정한다.</td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>2. 성능이 뛰어난 아키텍처 정의</td>
+<td>24%</td>
+</tr>
+<tr>
+<td>2-1. 성능이 뛰어난 스토리지 및 데이터베이스르 선택한다.</td>
+<td> </td>
+</tr>
+<tr>
+<td>2-2. 캐싱을 적용해 성능을 개선한다.</td>
+<td> </td>
+</tr>
+<tr>
+<td>2-3. 탄력성과 확장성을 갖춘 솔루션을 설계한다.</td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>3. 안전한 애플리케이션 및 아키텍처 설명</td>
+<td>26%</td>
+</tr>
+<tr>
+<td>3-1. 어떻게 애플리케이션 티어를 보호할지 결장한다.</td>
+<td> </td>
+</tr>
+<tr>
+<td>3-2. 어떻게 데이터를 보호할지 결정한다.</td>
+<td> </td>
+</tr>
+<tr>
+<td>3-3. 단일 VPC 애플리케이션을 위한 네트워킹 인프라를 정의한다.</td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>4. 비용에 최적화된 아키텍처 설계</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>4-1. 어떻게 비용에 최적화된 스토리지를 설계할지 결정한다.</td>
+<td> </td>
+</tr>
+<tr>
+<td>4-2. 어떻게 비용에 최적화된 컴퓨팅을 설계할지 결정한다.</td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>5. 운영 면에서 탁월한 아키텍처 정의</td>
+<td>6%</td>
+</tr>
+<tr>
+<td>5.1 솔루션에서 운영 우수성을 지원할 수 있는 기능을 선택한다.</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-2"></h1>
+<p> </p>
+<h1 id="heading-3"></h1>
+<h2 id="1장-aws의-핵심-서비스"><strong>1장 AWS의 핵심 서비스</strong></h2>
+<h1 id="heading-4"></h1>
+<ul>
+<li><strong>1장의 핵심내용</strong>
+<ul>
+<li><strong>AWS 플랫폼 아키텍처와 그 기반 기술을 이해한다.</strong></li>
+<li><strong>AWS 관리 도구의 종류화 사용법을 이해한다.</strong></li>
+<li><strong>지원 플랜의 종류와, 선택하는 방법을 이해한다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-5"></h1>
+<p> </p>
+<h1 id="heading-6"></h1>
+<h3 id="클라우드-컴퓨팅과-가상화"><strong>클라우드 컴퓨팅과 가상화</strong></h3>
+<h1 id="heading-7"></h1>
+<p><img src="/AWS/SAA/SAA01.png" alt="" /></p>
+<ul>
+<li><strong>모든 클라우드  운영 기술의 토대는 가상화라고 할 수 있다.</strong></li>
+<li><strong>가상화란 단일 물리 서버를 하드웨어 리소스를 더 작은 단위로 나눌 수 있고, 물리 서버는 가상 머신 여러 개를 호스트할 수 있개 해주는 기술이다.</strong></li>
+<li><strong>이러한 가상화의 장점은 가상 서버를 짧은 시간만에 프로비저닝해서 프로젝트에 필요한 시간만 정확하게 실행하고, 언제든지 종료해서 사용하던 리소스를 다른 워크로드에 즉시 활용할 수 있다.</strong></li>
+<li><strong>클라우드 환경의 키워드는 확장성과 탄력성</strong></li>
+</ul>
+<h1 id="heading-8"></h1>
+<p> </p>
+<h1 id="heading-9"></h1>
+<h3 id="확장성과-탄력성"><strong>확장성과 탄력성</strong></h3>
+<p><img src="/AWS/SAA/SAA02.png" alt="" /></p>
+<h1 id="heading-10"></h1>
+<table>
+<thead>
+<tr>
+<th>키워드</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>확장성</td>
+<td>예기치 않은 수요가 발생하더라도 자동적으로 리소스츨 추가해서 효과적으로 대응할 수 있음</td>
+</tr>
+<tr>
+<td> </td>
+<td>AWS 에서는 수요에 능동적으로 대처할 수 있게 설게 된 Auto Scaling 서비스를 사용해서 머신 이미지를 신속히 복제 및사용</td>
+</tr>
+<tr>
+<td>탄력성</td>
+<td>수요를 관리한다는 목적에서는 학장성과 동일한 못적을 자기고 있지만, 탄력성은 수요가 떨어질 때 용량을 자동으로 줄이는 개념</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-11"></h1>
+<p> </p>
+<h1 id="heading-12"></h1>
+<h3 id="aws-서비스의-범주"><strong>AWS 서비스의 범주</strong></h3>
+<h1 id="heading-13"></h1>
+<ul>
+<li><strong>AWS 서비스의 서비스는 매우 다향하며, 현재도 그 범위가 확장되어가고 있다.</strong></li>
+</ul>
+<h1 id="heading-14"></h1>
+<p><img src="/AWS/SAA/SAA03.png" alt="" /></p>
+<h1 id="heading-15"></h1>
+<table>
+<thead>
+<tr>
+<th>범주</th>
+<th>기능</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>컴퓨팅</td>
+<td>데이터 센터에서 물리 서버가 하는 역할을 복제한 클라우드 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>Auto Scaling, 로드 밸런싱, 서버리스 아키텍처에 이르는 고급 기능을 제공</td>
+</tr>
+<tr>
+<td>네트워크</td>
+<td>애플케이션 연결, 엑세스 제어, 향상된 원격 연결</td>
+</tr>
+<tr>
+<td>스토리지</td>
+<td>빠른 액세스와 장기적인 백업 요구에 모두 적합하게 설계된 여러 종류의 스토리지 플랫폼</td>
+</tr>
+<tr>
+<td>데이터 베이스</td>
+<td>관계형, NoSQL, 캐싱 등 데이터 형식이 필요한 사용 사레에 사용할 수 있는 관리형 데이터 솔루션</td>
+</tr>
+<tr>
+<td>애플리케이션관 관리</td>
+<td>AWS 계정 서비스와 운영 리소스 모니터링, 감사, 구성</td>
+</tr>
+<tr>
+<td>보안과 자격 증명</td>
+<td>인증 및 권한 부여, 데이터 및 연결 암호화, 타사 인증 관리 시스템과 통합 등을 관리하는 서비스</td>
+</tr>
+<tr>
+<td>애플리케이션 통합</td>
+<td>결합 해제, API를 사용한 애플리케이션 개발 프로세스를 설계하기 위한 도구</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-16"></h1>
+<p> </p>
+<h1 id="heading-17"></h1>
+<ul>
+<li><strong>AWS 핵심 서비스</strong></li>
+</ul>
+<h1 id="heading-18"></h1>
+<table>
+<thead>
+<tr>
+<th>범주</th>
+<th>서비스</th>
+<th>기능</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Computing</td>
+<td>EC2</td>
+<td>AWS 상의 가상화된 인스턴스</td>
+</tr>
+<tr>
+<td> </td>
+<td>Lambda</td>
+<td>서버리스 애플리케이션</td>
+</tr>
+<tr>
+<td> </td>
+<td>Auto Scaling</td>
+<td>자동으로 인스턴스를 확장, 축소시키는 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>Elastic Load Balancing</td>
+<td>네트워크의 트래픽을 분산시켜주는 라우팅 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>Elastic Beanstalk</td>
+<td>컴퓨팅과 네트워킹 인프라를 프로비저닝하는 작업을 추상화한 관리형 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>Networking</td>
+<td>VPC</td>
+<td>사용자 개인의 프라이빗 네트워크를 생성하는 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>Direct Connect</td>
+<td>AWS 서비스의 전용선을 통해 직접 연결하는 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>Router 53</td>
+<td>AWS의 DNS서비스로 도메인 등록, 레코드 관리, 라우팅 프로토콜, 상태검사 등의 서비스를 제공</td>
+</tr>
+<tr>
+<td> </td>
+<td>CloudFront</td>
+<td>AWS에서 제공하는 분산 글로벌 콘텐츠 전송 네트워크 ( CDN )</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>S3</td>
+<td>저렴하고 안정적인 다목적 객체 스토리지 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>Glacier</td>
+<td>저렴하고 장기 저장할 수 있는 대형 데이터 아카이브를 제공하는 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>EBS</td>
+<td>EC2와 OS의 작업 데이터를 호스팅하는 가상의 데이터 드라이브 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>Storage Gateway</td>
+<td>AWS 클라우드 스토리지를 로컬 온프레미스 어플라이언스처럼 사용하는 하이브리드 스토리지 시스템</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>Database</td>
+<td>RDS</td>
+<td>관리형 데이터베이스 인스턴스로 Mysql, Oracle, Aurora 등의 다양한 엔진을 제공</td>
+</tr>
+<tr>
+<td> </td>
+<td>DynamoDB</td>
+<td>빠르고 유연하며, 확장성이 뛰어난 관리현 서비스로 비관계형 (NoSQL) 데이터 베이스 워크로드에 적합</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>Application management</td>
+<td>CloudWatch</td>
+<td>이벤트를 통해 프로세스 성능 및 활용률을 모니터링 하는 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>CloudFormation</td>
+<td>탬플릿을 사용하여 AWS 리소스에 대한 사용을 스크립트화 시켜 사용하는 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>CloudTrail</td>
+<td>계정내 모든 API 이벤트 기록을 수집하는 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>Config</td>
+<td>AWS 계정에서 변경 관리와 규정 준수를 지원하도록 설계된 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>Security, identification</td>
+<td>IAM</td>
+<td>AWS 계정의 사용자를 역할을 통해 관리하는 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>KMS</td>
+<td>AWS 리소스의 데이터를 보호하는 암호화 키를 생성하고 키사용을 관리하는 관리형 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>Directory Service</td>
+<td>AWS에서 자격 증면이나 관계를 정리할 때, Cognito, Microsoft AD도메인과 같은 자격 증명 공급자와 통합시키는 역할을 수행</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>Application Intergrated</td>
+<td>SNS</td>
+<td>자동으로 주제에 관한 알림을 다른 서비스로 보내는 알림 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>SWF</td>
+<td>수행해야하는 일련의작업을 조정하는 서비스로, 윤활유나 접착제의 역할을 수행</td>
+</tr>
+<tr>
+<td> </td>
+<td>SQS</td>
+<td>분산 시스템 내에서 이벤트 중심 메시징으로 결합을 해제해서 대형 프로세스의 개별 단계를 조정하는 서비스</td>
+</tr>
+<tr>
+<td> </td>
+<td>APT Gateway</td>
+<td>Application 구현에 필요한 API를 생성 및 관리하는 서비스</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-19"></h1>
+<p> </p>
+<h1 id="heading-20"></h1>
+<h3 id="aws-플랫폼-아키텍처"><strong>AWS 플랫폼 아키텍처</strong></h3>
+<h1 id="heading-21"></h1>
+<ul>
+<li><strong>AWS는 짧은 지연 시간 엑세스를 보장하는 것이 매우 중요하기 때문에, 이와 관련해서 CloudFront, Route53, Firewall Manager 등의 여러 서비스가 사용된다.</strong></li>
+<li><strong>AWS 계정 내의물리적 AWS 데이터 센터는 AZ ( Available Zone ), 가용영역이라 하며 아래와 같이 Region code로 표시된다.</strong></li>
+<li><strong>같은 Region 내의 가용 영역은 6개까지가능하며, 리전 내에는 일종의 네트워크 주소 공간인 VPC가 있는 데, 리소스는 이 VPC에 배포된다.</strong></li>
+<li><strong>VPC 내에 서브넷을 만들 어 특정 가용 영역과 연결시켜, 리소스를 효과적으로 격리하고 내구성을 높이기 위한 복제를 수행할 수 있다.</strong></li>
+<li><strong><a href="https://aws.amazon.com/ko/about-aws/global-infrastructure/regional-product-services/">AWS 리전의 종류</a></strong></li>
+</ul>
+<h1 id="heading-22"></h1>
+<table>
+<thead>
+<tr>
+<th>Region name</th>
+<th>Region code</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>미국 동부(오하이오)</td>
+<td>us-east-2</td>
+<td>us-east-2.amazonaws.com</td>
+</tr>
+<tr>
+<td>미국 동부(버지니아 북부)</td>
+<td>us-east-1</td>
+<td>us-east-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>미국 서부(캘리포니아 북부)</td>
+<td>us-west-1</td>
+<td>us-west-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>미국 서부(오레곤)</td>
+<td>us-west-2</td>
+<td>us-west-2.amazonaws.com</td>
+</tr>
+<tr>
+<td>아프리카(케이프타운)</td>
+<td>af-south-1</td>
+<td>af-south-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>아시아 태평양(홍콩)</td>
+<td>ap-east-1</td>
+<td>ap-east-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>아시아 태평양(뭄바이)</td>
+<td>ap-south-1</td>
+<td>ap-south-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>아시아 태평양(오사카-로컬)</td>
+<td>ap-northeast-3</td>
+<td>ap-northeast-3.amazonaws.com</td>
+</tr>
+<tr>
+<td>아시아 태평양(서울)</td>
+<td>ap-northeast-2</td>
+<td>ap-northeast-2.amazonaws.com</td>
+</tr>
+<tr>
+<td>아시아 태평양(싱가포르)</td>
+<td>ap-southeast-1</td>
+<td>ap-southeast-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>아시아 태평양(시드니)</td>
+<td>ap-southeast-2</td>
+<td>ap-southeast-2.amazonaws.com</td>
+</tr>
+<tr>
+<td>아시아 태평양(도쿄)</td>
+<td>ap-northeast-1</td>
+<td>ap-northeast-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>캐나다(중부)</td>
+<td>ca-central-1</td>
+<td>ca-central-1 .amazonaws.com</td>
+</tr>
+<tr>
+<td>중국(베이징)</td>
+<td>cn-north-1</td>
+<td>cn-north-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>중국(닝샤)</td>
+<td>cn-northwest-1</td>
+<td>cn-northwest-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>유럽(프랑크푸르트)</td>
+<td>eu-central-1</td>
+<td>eu-central-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>유럽(아일랜드)</td>
+<td>eu-west-1</td>
+<td>eu-west-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>유럽(런던)</td>
+<td>eu-west-2</td>
+<td>eu-west-2.amazonaws.com</td>
+</tr>
+<tr>
+<td>유럽(밀라노)</td>
+<td>eu-south-1</td>
+<td>eu-south-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>유럽(파리)</td>
+<td>eu-west-3</td>
+<td>eu-west-3.amazonaws.com</td>
+</tr>
+<tr>
+<td>유럽(스톡홀름)</td>
+<td>eu-north-1</td>
+<td>eu-north-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>중동(바레인)</td>
+<td>me-south-1</td>
+<td>me-south-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>남아메리카(상파울루)</td>
+<td>sa-east-1</td>
+<td>sa-east-1.amazonaws.com</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-23"></h1>
+<p> </p>
+<h1 id="heading-24"></h1>
+<h3 id="aws-안정성과-규정"><strong>AWS 안정성과 규정</strong></h3>
+<h1 id="heading-25"></h1>
+<ul>
+<li><strong>AWS의 대부분의 서비스는 기본 규정, 법률, 보안의 대한 기초 사항이 존재한다.</strong></li>
+<li><strong>AWS 보안과 안정성을 위해 수 많은 노력과 시도들을 해왔으며, 이에 관련된 내용은 <a href="https://aws.amazon.com/ko/compliance/programs/">AWS 규정</a>를 참조하길바란다.</strong></li>
+</ul>
+<h1 id="heading-26"></h1>
+<p> </p>
+<h1 id="heading-27"></h1>
+<h3 id="aws의-공동-책임-모델"><strong>AWS의 공동 책임 모델</strong></h3>
+<h1 id="heading-28"></h1>
+<ul>
+<li><strong>AWS의 서비스는 기본적으로 보안에 대학 책임은 AWS와 사용자가 책임을 분담하는 구조를 이루고 있다.</strong></li>
+<li><strong>클라우드 상의 인프라를 안정적으로 관리하는 일은 AWS의 책임이지만, AWS의 리소스를 사용하는 것은 사용자의 일이며, 그에 따른 책임도 사용자에게 있다.</strong></li>
+</ul>
+<h1 id="heading-29"></h1>
+<p> </p>
+<h1 id="heading-30"></h1>
+<h3 id="aws-책임의-따른-분류"><strong>AWS 책임의 따른 분류</strong></h3>
+<h1 id="heading-31"></h1>
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="사용자의-책임"><strong>사용자의 책임</strong></h2>
+<ul>
+<li><strong>클라우드 내부</strong>
+<ul>
+<li><strong>사용자의 데이터</strong></li>
+<li><strong>사용자 애플리케이션, 엑세스 관리</strong></li>
+<li><strong>운영 체제, 네트워크, 엑세스 구성</strong></li>
+<li><strong>데이터 암호화</strong></li>
+</ul>
+</li>
+</ul>
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="aws의-책임"><strong>AWS의 책임</strong></h2>
+<ul>
+<li><strong>클라우드 자체</strong>
+<ul>
+<li><strong>하드웨어와 네트워크 유지보수</strong></li>
+<li><strong>AWS 글로벌 인프라</strong></li>
+<li><strong>관리형 서비스</strong></li>
+</ul>
+</li>
+</ul>
+  </div>
+  
+</div>
+
+<h1 id="heading-32"></h1>
+<p> </p>
+<h1 id="heading-33"></h1>
+<h3 id="aws-작업"><strong>AWS 작업</strong></h3>
+<h1 id="heading-34"></h1>
+<ul>
+<li><strong>AWS 서비스를 실행하려면 해당 서비스를 관리할 도구가 있어야 한다.</strong></li>
+<li><strong>AWS 서비스는 기본적으로 GUI 환경을 제공하지만, 보다 복잡한 환경을 구현할 경우에는 전문적인 관리 도구를 사용해야 할 수도 있다.</strong></li>
+</ul>
+<h1 id="heading-35"></h1>
+<ul>
+<li><strong>AWS CLI</strong>
+<ul>
+<li><strong>AWS CLI를 사용하면 컴퓨터 명령줄에서 복잡한 AWS 작업을 실행할 수 있다.</strong></li>
+<li><strong>작동방식에 익숙해지면 GUI에 비해 간단하고 효율적인 작업이 가능해진다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-36"></h1>
+<ul>
+<li><strong>AWS SDK</strong>
+<ul>
+<li><strong>AWS 리소스에 엑세스하는 작업을 애플리케이션 코드에 통합하려면 쓰고 있는 언어에 맞는 SDk를 사용해야 한다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-37"></h1>
+<ul>
+<li><strong>기술지원 및 온라인 리소스</strong>
+<ul>
+<li><strong>AWS에는 다양한 유형의 지원이 있으며, 지원마다 어떤 내용이 있는 지 이해할 필요가 있다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-38"></h1>
+<ul>
+<li><strong>지원플랜</strong>
+<ul>
+<li>
+<p><strong>기본 플랜은 모든 계정에 무료로 제공되며, 문서, 백서, 지원 포럼 등의 고객 서비스에 요구할 수 있고, 청구 및 계정 지원 문제가 포함된다.</strong></p>
+</li>
+<li>
+<p><strong>개발자 플랜은 $29부터 시작하며, 계정 소유자 한 명만 일반적 지침과, 시스템 손상에 관해 문의할 수 있으며, 클라우드 지원 담당자가 응답한다.</strong></p>
+</li>
+<li>
+<p><strong>비즈니스 플랜은 $100 이상이며 문의할 수 있는 사용자 수에 제한이 없고, 신속한 응답을 보장한다. 시스템 손상, 개별적 지침, 문제 해결, 지원 API 등의 서비스를 제공한다.</strong></p>
+</li>
+<li>
+<p><strong>엔터프라이즈 지원 플랜은 다른 지원 모든 지원 플랜을 포함하며, 운영과 설계 검토를 위한 AWS 솔루션스 아키텍트 지원, 전담 기술 지원, 관리자 지원, 컨시어지 지원이 추가된다.</strong></p>
+</li>
+<li>
+<p><strong>엔터프라이즈 지원은 복잡한 미션 크리티컬 배포에 큰 도움이 될 수 있지만, 매월 최소 $15.000을 지급해야 한다.</strong></p>
+</li>
+<li>
+<p><strong><a href="https://aws.amazon.com/premiumsupport/compare-plans/">지원플랜 참고 사이트</a></strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-39"></h1>
+<ul>
+<li><strong>기타 지원 리소스</strong>
+<ul>
+<li><strong><a href="https://forums.aws.amazon.com/">AWS 커뮤니티 포럼</a></strong></li>
+<li><strong><a href="https://aws.amazon.com/documentation/">AWS 설명서</a></strong></li>
+<li><strong><a href="https://aws.amazon.com/architecture/well-architected/">AWS Well-Architected</a></strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-40"></h1>
+<p> </p>
+<h1 id="heading-41"></h1>
+<h3 id="1장-요약"><strong>1장 요약</strong></h3>
+<h1 id="heading-42"></h1>
+<ul>
+<li>
+<p><strong>클라우드 컴퓨팅은 물리적 리소스를 작고 유연한 가상 단위로 나누는 기술에 기반을 둔다.</strong></p>
+</li>
+<li>
+<p><strong>AWS는 거대한 물리적 리소스를 가상 단위로 나누어, 가장의 리소스를 종량제로 임대하여 저렴하게 제공해주는 서비스이다.</strong></p>
+</li>
+<li>
+<p><strong>AWS 장점은 탄력성과 확장성으로, 이는 자원의 소모를 자동적으로 유동적으로 비용을 최소화시킬 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>많은 AWS의 서비스들이 있으며, 이를 통해 거의 모든 디지털 요구사항을 처리할 수 있다. 또한 이러한 서비스들은 지금도 확장되어가고 있다.</strong></p>
+</li>
+<li>
+<p><strong>AWS 리소스는 Management Console과 AWS CLI로 관리할 수 있으며, AWS SDK로 생성한 코드로도 관리할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>기술 및 계정 지원에는 지원 플랜, 설명서, 포럼, 백서 등이 있다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-43"></h1>
+<p> </p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#정리를-들어가기-전-핵심요소"><strong>정리를 들어가기 전 핵심요소</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1장-aws의-핵심-서비스"><strong>1장 AWS의 핵심 서비스</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#클라우드-컴퓨팅과-가상화"><strong>클라우드 컴퓨팅과 가상화</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#확장성과-탄력성"><strong>확장성과 탄력성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-서비스의-범주"><strong>AWS 서비스의 범주</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-플랫폼-아키텍처"><strong>AWS 플랫폼 아키텍처</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-안정성과-규정"><strong>AWS 안정성과 규정</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws의-공동-책임-모델"><strong>AWS의 공동 책임 모델</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-책임의-따른-분류"><strong>AWS 책임의 따른 분류</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-작업"><strong>AWS 작업</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1장-요약"><strong>1장 요약</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

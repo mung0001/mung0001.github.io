@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenStack Training on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/docs/openstack/openstacktraining/</link>
+    <description>Recent content in OpenStack Training on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    
+	<atom:link href="https://mung0001.github.io/docs/openstack/openstacktraining/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OpenStack Ussuri : Overview</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-01/</guid>
+      <description>OpenStack Ussuri : Overview  OpenStack Ussuri : Overview    OpenStack Ussuri 설치는 위의 그림과 표에 맞춰 설치가 진행됩니다. minimal 기본 설치는 keystone, glance, nova, neutron, cinder, horizon이며 여기서는 가능한 모든 서비스를 설치하도록 하겠습니다.      OS HOST NAME CPU/thead RAM DISK Network Interface-1 Network Interface-2      CentOS8 controller 4/8 6144 100G Nat host1    CentOS8 network 2/4 2048 40G Nat host1    CentOS8 compute 4/8 4096 40G   host1    CentOS8 storage1 1/2 1024 50G   host1    CentOS8 storage2 1/2 1024 50G   host1    CentOS8 storage3 1/2 1024 50G   host1         Service Code Name Description     Identity Service Keystone User Management   Compute Service Nova Virtual Machine Management   Image Service Glance Manages Virtual image like kernel image or disk image   Dashboard Horizon Provides GUI console via Web browser   Object Storage Swift Provides Cloud Storage   Block Storage Cinder Storage Management for Virtual Machine   Network Service Neutron Virtual Networking Management   Orchestration Service Heat Provides Orchestration function for Virtual Machine   Metering Service Ceilometer Provides the function of Usage measurement for accounting   Database Service Trove Database resource Management   Data Processing Service Sahara Provides Data Processing function   Bare Metal Provisioning Ironic Provides Bare Metal Provisioning function   Messaging Service Zaqar Provides Messaging Service function   Shared File System Manila Provides File Sharing Service   DNS Service Designate Provides DNS Server Service   Key Manager Service Barbican Provides Key Management Service      </description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : 환경설정</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-02/</guid>
+      <description>OpenStack Ussuri : 기본 환경설정   ----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached | -----------------------  OpenStack Ussuri : 기본 환경설정   앞 기본 환경설정을 모든 노드에서 진행한 후, DB, RabbitMQ, Memcached는 controller에서만 설치를 진행합니다.  $ all&amp;gt; $ controller&amp;gt;$ controller ~(keystone)&amp;gt;$ compute&amp;gt;$ network&amp;gt;# 위와 같은 호스트를 주의헤 주세요 !# (keystone)은 keystone 설치 후 인증 받은 터미널입니다.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Keystone</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-03/</guid>
+      <description>OpenStack Ussuri : Keystone   ----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached Keystone | | httpd | -----------------------  OpenStack Ussuri : Keystone   Keystone은 OpenStack에서 인증 서비스를 구성하고 있습니다. Keystone에 대한 자세한 설명은 Keystone을 참조해주세요.   Keystone 유저와 DB를 생성합니다.  $ controller&amp;gt; mysql -u root -p$ MariaDB&amp;gt; create database keystone; $ MariaDB&amp;gt; grant all privileges on keystone.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Glance</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-04/</guid>
+      <description>OpenStack Ussuri : Glance  ----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached Keystone | | httpd Glance | -----------------------  OpenStack Ussuri : Glance   Glance는 OpenStack에서 이미지 생성에 필요한 Iamge 관리 서비스를 구성하고 있습니다. Glance에 자세한 설명은 Glance를 참조해주세요.   Glance service 및 User 생성 $ contoller ~(keystone)&amp;gt; openstack user create --domain default --project service --password qwer1234 glance+---------------------+----------------------------------+| Field | Value |+---------------------+----------------------------------+| default_project_id | 7c10c02365be496fb47f12bfd40fe4a7 || domain_id | default || enabled | True || id | 03f5b16a7be84cb688617d1943c8fe8c || name | glance || options | {} || password_expires_at | None |+---------------------+----------------------------------+$ contoller ~(keystone)&amp;gt; openstack role add --project service --user glance admin$ contoller ~(keystone)&amp;gt; openstack service create --name glance --description &amp;#34;OpenStack Image service&amp;#34; image+-------------+----------------------------------+| Field | Value |+-------------+----------------------------------+| description | OpenStack Image service || enabled | True || id | af365771c17a4a25ae1d0c659e2dc0eb || name | glance || type | image |+-------------+----------------------------------+$ contoller ~(keystone)&amp;gt; openstack endpoint create --region RegionOne image public http://controller:9292+--------------+----------------------------------+| Field | Value |+--------------+----------------------------------+| enabled | True || id | cc65faecd7b042ffafd0f262cd7547df || interface | public || region | RegionOne || region_id | RegionOne || service_id | af365771c17a4a25ae1d0c659e2dc0eb || service_name | glance || service_type | image || url | http://controller:9292 |+--------------+----------------------------------+$ contoller ~(keystone)&amp;gt; openstack endpoint create --region RegionOne image internal http://controller:9292+--------------+----------------------------------+| Field | Value |+--------------+----------------------------------+| enabled | True || id | ea41c7b17c844e658ac83c547eddcf6d || interface | internal || region | RegionOne || region_id | RegionOne || service_id | af365771c17a4a25ae1d0c659e2dc0eb || service_name | glance || service_type | image || url | http://controller:9292 |+--------------+----------------------------------+$ contoller ~(keystone)&amp;gt; openstack endpoint create --region RegionOne image admin http://controller:9292+--------------+----------------------------------+| Field | Value |+--------------+----------------------------------+| enabled | True || id | 1393a64ef0ec428ba437602ac5b390f6 || interface | admin || region | RegionOne || region_id | RegionOne || service_id | af365771c17a4a25ae1d0c659e2dc0eb || service_name | glance || service_type | image || url | http://controller:9292 |+--------------+----------------------------------+   Glance 유저의 DB를 생성합니다.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Nova</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-05/</guid>
+      <description>OpenStack Ussuri : Nova  ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | | | Libvirt || MariaDB RabbitMQ | | Nova-compute || Memcached Keystone | | Open vSwitch || httpd nova | | L2 Agent || Nova-API | ----------------------- -----------------------  OpenStack Ussuri : Nova   Nova는 OpenStack에서 인스턴스를 생성하는 서비스입니다. Nova에 대한 자세한 설명은 Nova를 참조해주세요.     Nova, ceilometer service 및 User 생성  $ controller ~(keystone)&amp;gt; openstack user create --domain default --project service --password qwer1234 nova+---------------------+----------------------------------+| Field | Value |+---------------------+----------------------------------+| default_project_id | 7c10c02365be496fb47f12bfd40fe4a7 || domain_id | default || enabled | True || id | f26027517d5e4b5b984b5db8d42398c8 || name | nova || options | {} || qwer1234_expires_at | None |+---------------------+----------------------------------+$ controller ~(keystone)&amp;gt; openstack user create --domain default --project service --password qwer1234 placement+---------------------+----------------------------------+| Field | Value |+---------------------+----------------------------------+| default_project_id | 7c10c02365be496fb47f12bfd40fe4a7 || domain_id | default || enabled | True || id | 2394500b4512456f9d9d5066a5ecb1f7 || name | placement || options | {} || qwer1234_expires_at | None |+---------------------+----------------------------------+$ controller ~(keystone)&amp;gt; openstack role add --project service --user nova admin$ controller ~(keystone)&amp;gt; openstack role add --project service --user placement admin$ controller ~(keystone)&amp;gt; openstack service create --name nova --description &amp;#34;OpenStack Compute service&amp;#34; compute+-------------+----------------------------------+| Field | Value |+-------------+----------------------------------+| description | OpenStack Compute service || enabled | True || id | 28d495eca718439f9dc6ce395e0720dc || name | nova || type | compute |+-------------+----------------------------------+$ controller ~(keystone)&amp;gt; openstack service create --name placement --description &amp;#34;OpenStack Compute Placement service&amp;#34; placement+-------------+-------------------------------------+| Field | Value |+-------------+-------------------------------------+| description | OpenStack Compute Placement service || enabled | True || id | 8515d3d046834de9b71b2938aae89898 || name | placement || type | placement |+-------------+-------------------------------------+$ controller ~(keystone)&amp;gt; openstack endpoint create --region RegionOne compute public http://controller:8774/v2.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Neutron</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-06/</guid>
+      <description>OpenStack Ussuri : Neutron  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Neutron | | L2 Agent | | metadata agent || Nova-API Compute | ----------------------- -----------------------| L2 agent L3 agent || metadata agent || Neutron Server | -----------------------  OpenStack Ussuri : Neutron   Neutron는 OpenStack에서 네트워크 전반을 관리하는 서비스입니다.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Cinder</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-07/</guid>
+      <description>OpenStack Ussuri : Cinder  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | -----------------------| L2 agent L3 agent | | NFS | | metadata agent | ----------------------- | Neutron Server | -----------------------  OpenStack Ussuri : Cinder   Cinder는 OpenStack에서 전체적인 볼륨, 디스크를 관리하는 서비스입니다.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Horizon</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-08/</guid>
+      <description>OpenStack : Horizon  OpenStack : Horizon   Horizon은 openstack에서 GUI 환경을 제공해주는 서비스입니다. Horizon에 대한 자세한 설명은 Horizon을 참조해주세요.   $ controller&amp;gt; dnf --enablerepo=centos-openstack-ussuri,PowerTools,epel -y install openstack-dashboard$ controller&amp;gt; vi /etc/openstack-dashboard/local_settingsALLOWED_HOSTS = [&amp;#39;*&amp;#39;,&amp;#39;&amp;#39;]# 모든 host의 접속이 가능하게 설정합니다.CACHES = {&amp;#39;default&amp;#39;: {&amp;#39;BACKEND&amp;#39;: &amp;#39;django.core.cache.backends.memcached.MemcachedCache&amp;#39;,&amp;#39;LOCATION&amp;#39;: &amp;#39;controller:11211&amp;#39;,},}SESSION_ENGINE = &amp;#34;django.contrib.sessions.backends.cache&amp;#34;OPENSTACK_HOST = &amp;#34;controller&amp;#34;OPENSTACK_KEYSTONE_URL = &amp;#34;http://controller:5000/v3&amp;#34;# openstack host와 SESSION 서버의 host를 지정합니다.TIME_ZONE = &amp;#34;Asia/Seoul&amp;#34;# 시간을 지정합니다.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Swift</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-09/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-09/</guid>
+      <description>OpenStack Ussuri : Swift  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | | Swift-proxy || L2 agent L3 agent | | NFS | -----------------------| metadata agent | ----------------------- | Neutron Server | ----------------------- --------------------------------- | [ Storage Node 1, 2, 3 ] | | | | Swift-account-auditor || Swift-account-replicator || Swift-account || Swift-container-auditor || Swift-container-replicator || Swift-container-updater || Swift-container || Swift-object-auditor || Swift-object-replicator || Swift-object-updater || Swift-swift-object |--------------------------------- OpenStack Ussuri : Swift   Swift는 우리가 흔히 사용하는 네이버 클라우드, 구글 드라이브와 같은 오브젝트 스토리지 서비스 입니다.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Heat</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-10/</guid>
+      <description>OpenStack Ussuri : Heat  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | | Swift-proxy || L2 agent L3 agent | | NFS | | Heat API || metadata agent | ----------------------- | API-CFN || Neutron Server | | Heat Engine |----------------------- -------------------------------------------------------- | [ Storage Node 1, 2, 3 ] | | | | Swift-account-auditor || Swift-account-replicator || Swift-account || Swift-container-auditor || Swift-container-replicator || Swift-container-updater || Swift-container || Swift-object-auditor || Swift-object-replicator || Swift-object-updater || Swift-swift-object |--------------------------------- OpenStack Ussuri : Heat   클라우딩 컴퓨팅이 꽃인 Orchestaration 기능을 수행하는 Heat 서비스를 설치해보도록 하겠습니다.</description>
+    </item>
+    
+    <item>
+      <title>Openstack Stain Manual 설치</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-stein/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-stein/</guid>
+      <description>Openstack Stain Manual 설치    1. 시스템 및 네트워크 구성   여기서는 Nat 네트워크를 외부, host1 대역을 내부로 사용하여 Openstack을 구축해보도록 하겠습니다.    운영체제 및 네트워크 구성  Hypervisor : Vmware Workstation 15 OS : CentOS7      노드 구성     OS Hostname Network Interface Network Interface2 CPU RAM DISK     CentOS7 controller Nat ( 192.168.10.100 ) HOST1 ( 10.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Gnocch</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-11/</guid>
+      <description>OpenStack Ussuri : Gnocch  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | | Swift-proxy || L2 agent L3 agent | | NFS | | Heat API || metadata agent | ----------------------- | API-CFN || Neutron Server | | Heat Engine || Gnocchi | ----------------------- ----------------------- --------------------------------- | [ Storage Node 1, 2, 3 ] | | | | Swift-account-auditor || Swift-account-replicator || Swift-account || Swift-container-auditor || Swift-container-replicator || Swift-container-updater || Swift-container || Swift-object-auditor || Swift-object-replicator || Swift-object-updater || Swift-swift-object |--------------------------------- OpenStack Ussuri : Gnnoch   Gnnoch     Gnocchi service 및 User 생성 $ controller ~(keystone)&amp;gt; openstack user create --domain default --project service --password qwer1234 gnocchi+---------------------+----------------------------------+| Field | Value |+---------------------+----------------------------------+| default_project_id | b470c69e28db47cdbfc81e06cc67f627 || domain_id | default || enabled | True || id | 3217be4917454641994660bd1f3ea007 || name | gnocchi || options | {} || password_expires_at | None |+---------------------+----------------------------------+$ controller ~(keystone)&amp;gt; openstack role add --project service --user gnocchi admin$ controller ~(keystone)&amp;gt; openstack service create --name gnocchi --description &amp;#34;Metric Service&amp;#34; metric-------------------------------------------------+| Field | Value |+-------------+----------------------------------+| description | Metric Service || enabled | True || id | 6ac9ec31386f4291b582bd5b504ac485 || name | gnocchi || type | metric |+-------------+----------------------------------+$ controller ~(keystone)&amp;gt; openstack endpoint create --region RegionOne metric public http://controller:8041+--------------+----------------------------------+| Field | Value |+--------------+----------------------------------+| enabled | True || id | 12f4410ed82240b0b1340d48b0627612 || interface | public || region | RegionOne || region_id | RegionOne || service_id | 6ac9ec31386f4291b582bd5b504ac485 || service_name | gnocchi || service_type | metric || url | http://controller:8041 |+-------------------------------------------------+$ controller ~(keystone)&amp;gt; openstack endpoint create --region RegionOne metric internal http://controller:8041+--------------+----------------------------------+| Field | Value |+--------------+----------------------------------+| enabled | True || id | 70f43453f93b407e94d2dd11ddce7260 || interface | internal || region | RegionOne || region_id | RegionOne || service_id | 6ac9ec31386f4291b582bd5b504ac485 || service_name | gnocchi || service_type | metric || url | http://controller:8041 |+--------------+----------------------------------+$ controller ~(keystone)&amp;gt; openstack endpoint create --region RegionOne metric admin http://controller:8041+--------------+----------------------------------+| Field | Value |+--------------+----------------------------------+| enabled | True || id | bb9a955359fd4af18599913465f46958 || interface | admin || region | RegionOne || region_id | RegionOne || service_id | 6ac9ec31386f4291b582bd5b504ac485 || service_name | gnocchi || service_type | metric || url | http://controller:8041 |+--------------+----------------------------------+ Gnocchi 유저의 DB를 생성합니다.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Trove</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-12/</guid>
+      <description>! 아직 수정 중 문제있음 OpenStack Ussuri : Trove  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | | Swift-proxy || L2 agent L3 agent | | NFS | | Heat API || metadata agent | ----------------------- | API-CFN || Neutron Server | | Heat Engine || Gnocchi Trove API | ---------------------------------------------- --------------------------------- | [ Storage Node 1, 2, 3 ] | | | | Swift-account-auditor || Swift-account-replicator || Swift-account || Swift-container-auditor || Swift-container-replicator || Swift-container-updater || Swift-container || Swift-object-auditor || Swift-object-replicator || Swift-object-updater || Swift-swift-object |--------------------------------- OpenStack Ussuri : Trove   Trove는 관리형 데이터베이스 서비스 입니다.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Designate</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-13/</guid>
+      <description>OpenStack Ussuri : Designate  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | | Swift-proxy || L2 agent L3 agent | | NFS | | Heat API || metadata agent | ----------------------- | API-CFN || Neutron Server | | Heat Engine || Gnocchi Trove API | | Designate Services |----------------------- ----------------------- OpenStack Ussuri : Designate   Designate는 OpenStack 서비스에서 DNS 서비스를 배포, 관리를 담당합니다.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Barbican</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-14/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-14/</guid>
+      <description>OpenStack Ussuri : Barbican  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | | Swift-proxy || L2 agent L3 agent | | NFS | | Heat API || metadata agent | ----------------------- | API-CFN || Neutron Server | | Heat Engine || Gnocchi Trove API | | Designate Services || Barbican API | ---------------------------------------------- OpenStack Ussuri : Barbican   Barbican은 키 관리 서비스 입니다.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Rally</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-15/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-15/</guid>
+      <description>OpenStack Ussuri : Rally  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | | Swift-proxy || L2 agent L3 agent | | NFS | | Heat API || metadata agent | ----------------------- | API-CFN || Neutron Server | | Heat Engine || Gnocchi Trove API | | Designate Services || Barbican API | -----------------------| Rally |----------------------- OpenStack Ussuri : Rally   Rally는 오픈스택 소스를 GUI 환경으로 보여주는 서비스입니다.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Ussuri : Manila</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-16/</guid>
+      <description>OpenStack Ussuri : Manila  ----------------------- ----------------------- -----------------------| [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch || MariaDB RabbitMQ | | Nova compute | | L2 Agent || Memcached Keystone | | Open vSwitch | | L3 Agent || httpd Cinder API | | L2 Agent | | metadata agent || Nova-API Compute | | Cinder-LVM | | Swift-proxy || L2 agent L3 agent | | NFS | | Heat API || metadata agent | | Manila Share | | API-CFN || Neutron Server | ----------------------- | Heat Engine || Gnocchi Trove API | | Designate Services || Barbican API | -----------------------| Rally Manila API |----------------------- OpenStack Ussuri : Manila   Manila는 OpenStack에서 맡는 서비스입니다.</description>
+    </item>
+    
+    <item>
+      <title>DevStack</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/devstack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/devstack/</guid>
+      <description>DevStack Stein 설치  DevStack   Devbian 계열 ( ex : Ubuntu )의 OpenStack 자동화 설치 툴   DevStack 설치   Update Ubuntu System  $ sudo apt -y update$ sudo apt -y upgrade$ sudo apt -y dist-upgrade# Ubuntu의 시스템 및 패키지를 업데이트 합니다.$ sudo init 6# 시스템을 재시작합니다.    Add Stack User  $ sudo useradd -s /bin/bash -d /opt/stack -m stack# devstack 설치를 위해 stack 유저를 생성합니다.</description>
+    </item>
+    
+    <item>
+      <title>Packstack</title>
+      <link>https://mung0001.github.io/docs/openstack/openstacktraining/packstack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/openstack/openstacktraining/packstack/</guid>
+      <description>Packstack Stein 설치  Packstack   Redhat 계열 ( ex : CentOS )의 OpenStack 자동화 설치 툴     Packstack stain 설치   기본적으로 PackStack은 올인원 or 다중노드로 구성할 수 있으며, 여기서는 올인원으로 설치를 진행하며, 다중노드에 대한 설정은 추가하도록 하겠습니다.   설치사양     OS CPU RAM DISK     CenOS7 4/ 2 10240 100G      만약 다중 노드에 경우 소스를 분산시키고 각 노드에 설정을 추가합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

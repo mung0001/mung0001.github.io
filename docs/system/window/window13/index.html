@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Windows Active Directory   Windows Active Directory    일반적인 회사의 네트워크 상황을 Windows Server에서 구현하기 위한한 기술입니다.
+  네트워크 상으로 나누어져 있는 여러 자원을 중앙의 관리자가 통합하여 관리함으로써, 본사 및 지사의 직원들은 자신의 PC에 몯느 정보를 보관할 필요가 없어집니다.
+  한 PC에서 관리하는 만큼 타 지사에 출장을 가서도 자신의 아이디로 로그인만 하면 타인의 PC가 자신의 PC 환경과 동일하게 변경되어집니다.
+  PC가 있는 장소와 무관하게 회사의 어디서든지 회사 전체 자원을 편리하게 이용하기 위해 사용되어집니다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/system/window/window13/><meta property="og:title" content="Active Directory" />
+<meta property="og:description" content="Windows Active Directory   Windows Active Directory    일반적인 회사의 네트워크 상황을 Windows Server에서 구현하기 위한한 기술입니다.
+  네트워크 상으로 나누어져 있는 여러 자원을 중앙의 관리자가 통합하여 관리함으로써, 본사 및 지사의 직원들은 자신의 PC에 몯느 정보를 보관할 필요가 없어집니다.
+  한 PC에서 관리하는 만큼 타 지사에 출장을 가서도 자신의 아이디로 로그인만 하면 타인의 PC가 자신의 PC 환경과 동일하게 변경되어집니다.
+  PC가 있는 장소와 무관하게 회사의 어디서든지 회사 전체 자원을 편리하게 이용하기 위해 사용되어집니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/window/window13/" />
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.693a0c9d102dd896d4abc74767d815b1ccfc1745a230412deefdc7153ed52b2e.js" integrity="sha256-aToMnRAt2JbUq8dHZ9gVscz8F0WiMEEt7v3HFT7VKy4="></script>
+<!--
+
+-->
+
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/ncptraining/" class="collapsed ">NCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Programming</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/nas/" class="collapsed ">NAS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window01/" class="">Roadmap</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window02/" class="">Windows Server Install</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window03/" class="">자동시작, 부팅, 종료</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window04/" class="">사용자 계정</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window05/" class="">파일 및 폴더 관리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window06/" class="">암호화</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window07/" class="">Windows Shell</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window08/" class="">백업과 복구</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window09/" class="">원격접속서버</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window10/" class="">VNC Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window11/" class="">SQL Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window12/" class="">IIS</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window13/" class="active">Active Directory</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window14/" class="">DHCP Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window15/" class="">DNS Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window15-2/" class="">Mail Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window16/" class="">WDS</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window17/" class="">Hyper-V</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/project/" class="">Project</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Active Directory</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#windows-active-directory"><strong>Windows Active Directory</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#windows-active-directory-1"><strong>Windows Active Directory</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#active-directory-용어"><strong>Active Directory 용어</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="windows-active-directory"><strong>Windows Active Directory</strong></h2>
+<hr>
+<h1 id="heading"></h1>
+<h3 id="windows-active-directory-1"><strong>Windows Active Directory</strong></h3>
+<h1 id="heading-1"></h1>
+<ul>
+<li>
+<p><strong>일반적인 회사의 네트워크 상황을 Windows Server에서 구현하기 위한한 기술입니다.</strong></p>
+</li>
+<li>
+<p><strong>네트워크 상으로 나누어져 있는 여러 자원을 중앙의 관리자가 통합하여 관리함으로써, 본사 및 지사의 직원들은 자신의 PC에 몯느 정보를 보관할 필요가 없어집니다.</strong></p>
+</li>
+<li>
+<p><strong>한 PC에서 관리하는 만큼 타 지사에 출장을 가서도 자신의 아이디로 로그인만 하면 타인의 PC가 자신의 PC 환경과 동일하게 변경되어집니다.</strong></p>
+</li>
+<li>
+<p><strong>PC가 있는 장소와 무관하게 회사의 어디서든지 회사 전체 자원을 편리하게 이용하기 위해 사용되어집니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-2"></h1>
+<p> </p>
+<h1 id="heading-3"></h1>
+<h3 id="active-directory-용어"><strong>Active Directory 용어</strong></h3>
+<h1 id="heading-4"></h1>
+<ul>
+<li>
+<p><strong>Directory Service</strong></p>
+<ul>
+<li><strong>분산된 네트워크 관련 자원 정보를 중앙의 저장소에 통합시켜 놓은 환경으로, 즉 사용자는 중앙의 저장소를 통해서 원하는 네트워크 자원에 대한 정보를 자동으로 취득하여 그 자원에 접근할 수 있게 됩니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-5"></h1>
+<ul>
+<li>
+<p><strong>Active Directory(AD)</strong></p>
+<ul>
+<li><strong>Diretory Service를 Windows Server에서 구현한 서비스입니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-6"></h1>
+<ul>
+<li>
+<p><strong>Active Directory 도메인 서비스 (Active Directory Domain Service, AD DS)</strong></p>
+<ul>
+<li><strong>컴퓨터, 사용자, 기타 주변 장치에 대한 정보를 네트워크 상에 저장하고 이러한 정보들을 관리자가 통합하여 관리하도록 하는 서비스입니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-7"></h1>
+<ul>
+<li>
+<p><strong>도메인</strong></p>
+<ul>
+<li><strong>AD의 가징 기본이 되는 단위로 서울 본사, 부산 지사 등이 각각 하나의 도메인을 의미</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-8"></h1>
+<ul>
+<li>
+<p><strong>트리와 포리스트</strong></p>
+<ul>
+<li><strong>트리는 도메인의 집합, 포리스트는 두 개 이상의 트리로 구성</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-9"></h1>
+<ul>
+<li>
+<p><strong>사이트</strong></p>
+<ul>
+<li><strong>도메인이 논리적 범주라면, 사이트는 물리적인 범주로 사이트는 지리적으로 떨어져 있으며, IP 주소대가 다른 묶음 정도를 의미</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-10"></h1>
+<ul>
+<li>
+<p><strong>트러스트</strong></p>
+<ul>
+<li><strong>도메인 또는 포레스트 사이에 신뢰할지 여부에 대한 관계를 나타내는 의미라 사용</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-11"></h1>
+<ul>
+<li>
+<p><strong>조직 구성 단위(Organizational Unit, OU)</strong></p>
+<ul>
+<li><strong>한 도메인 안에서 세부적인 단위로 나누는 것</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-12"></h1>
+<ul>
+<li>
+<p><strong>도메인 컨트롤러(Domain Controller, DC)</strong></p>
+<ul>
+<li><strong>로그인, 이용 권한 확인, 새로운 사용자 등록, 암호 변경 그룹 등을 처리한느기능을 하는 서버 도메인</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-13"></h1>
+<ul>
+<li>
+<p><strong>읽기 전용 도메인 컨트롤러(Read Only Dmain Controller, RODC)</strong></p>
+<ul>
+<li><strong>주 도메인 컨트롤러부터 데이터를 전송받아서 저장한 후 사용하지만 스스로 데이터를 추가하거나 변경하지는 않음</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-14"></h1>
+<ul>
+<li>
+<p><strong>글로벌 카탈로그(Global Catalog, 약자로 GC)</strong></p>
+<ul>
+<li><strong>트러스트 내의 도메인들에 포함딘 개체에 대한 정보를 수집하여 저장되는 통합 저장소</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-15"></h1>
+<ul>
+<li>
+<hr>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-16"></h1>
+<ul>
+<li>
+<hr>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-17"></h1>
+<ul>
+<li>
+<hr>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-18"></h1>
+<ul>
+<li>
+<hr>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-19"></h1>
+<ul>
+<li>
+<hr>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-20"></h1>
+<ul>
+<li>
+<hr>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-21"></h1>
+<p> </p>
+<h1 id="heading-22"></h1>
+<h1 id="heading-23"></h1>
+<p> </p>
+<h1 id="heading-24"></h1>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-25"></h1>
+<p><img src="/System/Window/AD0.png" alt="" />
+#</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#windows-active-directory"><strong>Windows Active Directory</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#windows-active-directory-1"><strong>Windows Active Directory</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#active-directory-용어"><strong>Active Directory 용어</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

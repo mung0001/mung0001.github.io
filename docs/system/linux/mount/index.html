@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Linux HD Mount   디스크의 구조 1. 물리적 구조
+ 스핀들 : 디스크는 하나의 스핀들을 기준으로 여러 개의 플래터로 구성되어 있고 스핀들은 여러 개의 플랫터를 회전시키는 역할을 한다. 플래터 : 플래터는 마그네틱으로 코딩되어져 있고 연속으로 구성되어 있다. 헤더 : 회전중인 플래터에 데이터를 읽거나 쓰기 위해서는 엑세스 암에 부착된 헤더를 이용하여 엑세스 한다.   2. 논리적 구조
+ 섹터 : 플래터의 가장 작은 단위, 일반적으로 1섹터의 크기는 512바이트 트랙 : 섹터가 모여 하나의 원을 구성 실린더 : 트랙의 스택 구조 파티션 : MBR의 파티션 테이블(64바이트)에 정보가 저장, 주 파티션 (16바이트, 4개까지 생성이 가능), 확장 파티션 생성이 가능 논리적 구조 크기 비교 : 섹터 &lt; 트랙 &lt; 실린더 &lt; 실린더 그룹 or 파티션 &lt; 디스크   3.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/system/linux/mount/><meta property="og:title" content="" />
+<meta property="og:description" content="Linux HD Mount   디스크의 구조 1. 물리적 구조
+ 스핀들 : 디스크는 하나의 스핀들을 기준으로 여러 개의 플래터로 구성되어 있고 스핀들은 여러 개의 플랫터를 회전시키는 역할을 한다. 플래터 : 플래터는 마그네틱으로 코딩되어져 있고 연속으로 구성되어 있다. 헤더 : 회전중인 플래터에 데이터를 읽거나 쓰기 위해서는 엑세스 암에 부착된 헤더를 이용하여 엑세스 한다.   2. 논리적 구조
+ 섹터 : 플래터의 가장 작은 단위, 일반적으로 1섹터의 크기는 512바이트 트랙 : 섹터가 모여 하나의 원을 구성 실린더 : 트랙의 스택 구조 파티션 : MBR의 파티션 테이블(64바이트)에 정보가 저장, 주 파티션 (16바이트, 4개까지 생성이 가능), 확장 파티션 생성이 가능 논리적 구조 크기 비교 : 섹터 &lt; 트랙 &lt; 실린더 &lt; 실린더 그룹 or 파티션 &lt; 디스크   3." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/linux/mount/" />
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.693a0c9d102dd896d4abc74767d815b1ccfc1745a230412deefdc7153ed52b2e.js" integrity="sha256-aToMnRAt2JbUq8dHZ9gVscz8F0WiMEEt7v3HFT7VKy4="></script>
+<!--
+
+-->
+
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/ncptraining/" class="collapsed ">NCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Programming</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/nas/" class="collapsed ">NAS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-1/" class="">Linux 일반</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-2/" class="">Linux 운영 및 관리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/mount/" class="active">Mount</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-3/" class="">Linux 활용</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux/" class="">Linux</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-0/" class="">Linux master 개요</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/project/" class="">Project</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Mount</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#디스크의-구조">디스크의 구조</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#linux-hd-추가">Linux HD 추가</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#raid--redundant-array-of-inexpensive-disks-">RAID ( Redundant Array of Inexpensive Disks )</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#raid-종류">RAID 종류</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#lvm">LVM</a></li>
+  </ul>
+</nav>
+
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="linux-hd-mount">Linux HD Mount</h1>
+<hr>
+<h1 id="heading"></h1>
+<h2 id="디스크의-구조">디스크의 구조</h2>
+<p><strong>1. 물리적 구조</strong></p>
+<ul>
+<li><strong>스핀들 :</strong> 디스크는 하나의 스핀들을 기준으로 여러 개의 플래터로 구성되어 있고 스핀들은 여러 개의 플랫터를 회전시키는 역할을 한다.</li>
+<li><strong>플래터 :</strong> 플래터는 마그네틱으로 코딩되어져 있고 연속으로 구성되어 있다.</li>
+<li><strong>헤더 :</strong> 회전중인 플래터에 데이터를 읽거나 쓰기 위해서는 엑세스 암에 부착된 헤더를 이용하여 엑세스 한다.</li>
+</ul>
+<h1 id="heading-1"></h1>
+<p><strong>2. 논리적 구조</strong></p>
+<ul>
+<li><strong>섹터 :</strong> 플래터의 가장 작은 단위, 일반적으로 1섹터의 크기는 512바이트</li>
+<li><strong>트랙 :</strong> 섹터가 모여 하나의 원을 구성</li>
+<li><strong>실린더 :</strong> 트랙의 스택 구조</li>
+<li><strong>파티션 :</strong> MBR의 파티션 테이블(64바이트)에 정보가 저장, 주 파티션 (16바이트, 4개까지 생성이 가능), 확장 파티션 생성이 가능</li>
+<li><strong>논리적 구조 크기 비교 :</strong> 섹터 &lt; 트랙 &lt; 실린더 &lt; 실린더 그룹 or 파티션 &lt; 디스크</li>
+</ul>
+<h1 id="heading-2"></h1>
+<p><strong>3. 디스크의 종류</strong></p>
+<ul>
+<li><strong>IDE :</strong> 과거에 사용하던 방식, 하나의 채널에 여러 개의 장치를 연결 가능, 병렬</li>
+<li><strong>SATA :</strong> IDE방식에서는 늘어날 수 있는 기기의 한계가 존재하며, 속도도 느리기 때문에 이러한 문제를 해결한 방식, 직렬</li>
+<li><strong>SCSI :</strong> 서버용으로 사용되는 방식, 데이터 안전성에 집중 및 부가기능 추가 별도으 컨트롤러 필요, 일반적으로 스카시로 읽음, 병렬</li>
+<li><strong>SAS :</strong> Serial Attached SCSI, scsi 타입의 직렬 연결 버전, 마찬가지로 별도의 컨트롤러 필요, SATA와 SCSI의 장점으로 만들어짐.</li>
+</ul>
+<h1 id="heading-3"></h1>
+<p> </p>
+<h1 id="heading-4"></h1>
+<h2 id="linux-hd-추가">Linux HD 추가</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ df -h
+# 용량 확인
+
+$ fdisk -l
+# 디스크 확인
+</code></pre></div><ul>
+<li><strong>VMware에 하드 5G HD2개 추가</strong></li>
+</ul>
+<h1 id="heading-5"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ echo &#34;- - -&#34; &gt; /sys/class/scsi_host/host[ n ]/scan
+# 디스크 인식
+</code></pre></div><p><img src="/System/LVM/LVM01.png" alt="LVM" /></p>
+<ul>
+<li><strong>그림과 같이 5G 섹터가 2개 추가됩니다.</strong></li>
+</ul>
+<h1 id="heading-6"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ fdisk [ /dev/sd* ] 
+# 디스크 이름
+
+Command (m for help): n
+# 새로운 파티션 생성
+
+Command (m for help): p or e
+# p = 주 파티션, e = 확장 파티션
+
+Command (m for help): number
+# 파티션 번호
+
+Command (m for help): start sector 
+# 시작 섹터 번호
+
+Command (m for help): partition size
+# 파티션의 크기
+
+Command (m for help): p
+# 확인
+
+Command (m for help): w
+# 저장
+
+Command (m for help): q
+# 저장하지 않고 종료
+</code></pre></div><p><img src="/System/LVM/LVM02.png" alt="LVM" /></p>
+<ul>
+<li><strong>파티션을 생성합니다.</strong></li>
+</ul>
+<h1 id="heading-7"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ mkfs /dev/sd*   # 생성 파티션 이름
+# 디스크 포맷
+
+$ mkfs -t ext4 /dev/sd*   # 생성 파티션 이름
+# 디스크의 타입을 ext4로 포맷
+</code></pre></div><ul>
+<li><strong>디스크를 포맷합니다.</strong></li>
+</ul>
+<h1 id="heading-8"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ mkdir disk1
+$ mount /dev/sd* disk1
+
+$ mkdir disk2
+$ mount /dev/sd* disk2
+
+$ mount
+$ df -h
+# 확인
+</code></pre></div><p><img src="/System/LVM/LVM03.png" alt="LVM" /></p>
+<ul>
+<li><strong>디스크를 마운트 합니다.</strong></li>
+</ul>
+<h1 id="heading-9"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ umount /dev/sd*
+# 디스크의 마운트를 해제 합니다.
+</code></pre></div><ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-10"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ vi /etc/fstab
+[ 장치명 ]  [ 마운트 포인트 ] FStype   [ 옵션 ] dump fsck
+</code></pre></div><p><img src="/System/LVM/LVM04.png" alt="LVM" /></p>
+<ul>
+<li><strong>자동 마운트 등록</strong></li>
+</ul>
+<h1 id="heading-11"></h1>
+<p> </p>
+<h1 id="heading-12"></h1>
+<h2 id="raid--redundant-array-of-inexpensive-disks-">RAID ( Redundant Array of Inexpensive Disks )</h2>
+<ul>
+<li>여러 디스크를 논리적으로 묶어 하나의 논리 디스크를 생성하는 것</li>
+</ul>
+<hr>
+<h1 id="heading-13"></h1>
+<h3 id="raid-종류">RAID 종류</h3>
+<ul>
+<li><strong>0 :</strong> 하나의 디스크에 데이터를 기록하면서 동시에 다른 디스크에는 나머지 데이터를 기록하는 방법, 읽기/ 쓰기 속도는 n배, 안정성은 1/n배, FT = 0</li>
+<li><strong>1 :</strong> 하나의 디스크에 기록되는 모든 데이터가 다른 디스크에 고스란히 복사되는 방법, 읽기, 쓰기 속도는 1배, 안전성은 n배, FT = n-1</li>
+<li><strong>2, 3, 4 :</strong> 최소 3개의 디스크가 필요하며 2개의 디스크는 raid 0 처럼 구성하고 하나의 디스크는 데이터를 복구하기 위한 패리티 값을 저장, 읽기 쓰기 속도는 n-1배, 안정성 n-2배, FT = 1, 레벨 2, 3, 4마다 각각 데이터 저장 박식이 조금씩 차이가 있다.</li>
+<li><strong>5 :</strong> 최소 3개의 디스크가 필요하며 2개의 디스크는 raid 0처럼 구성하고 하나의 디스크는 데이터를 복구하기 위한 패리티 값을 저장, 읽기/ 쓰기 속도는 n-1배, 안전성은 n-2배, FT = 1, 레벨 2, 3, 4와는 달리 패리티 값을 여러 디스크에 분산해서 저장</li>
+<li><strong>1 + 0 :</strong> 2개의 디스크를 먼저 raid 1로 묶고, 묶인 논리 디스크를 다시 raid 0으로 묶는 방법</li>
+<li><strong>0 + 1 :</strong> 2개의 디스크를 먼저 raid 0로 묶고, 묶인 논리 디스크를 다시 raid 1으로 묶는 방법</li>
+</ul>
+<h1 id="heading-14"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">madam [ 옵션 ]
+--create : 생성할 RAID 장치의 이름
+--level : RAID 레벨을 지정
+--raid--devices : RAID 추가될 실제 장치의 파티션 지정
+--detail : 특정 장치의 상세 내역을 출력
+# RAID 생성
+
+$ mdadm --manage [ RAID 장치명 ] --add [ 추가할 디스크 파티션 명 ]
+# 이미 구성되어진 RAID에 디스크 새로 추가
+
+$ madam --stop [ RAID 장치명 ]
+$ madam --zerosuperblock [ 파티션 장치명 ]
+# RAID 구성 삭제
+
+</code></pre></div><ul>
+<li><strong>RAID 명령어</strong></li>
+<li><strong>RAID 생성 후, 다시 포맷, 마운트 작업을 진행해야 됨</strong></li>
+</ul>
+<h1 id="heading-15"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ mdadm  --create  /dev/md/linear  --level linear  --raid-devices=2 /dev/sd* /dev/sd*
+# Linear : 디스크를 배열 형태로 단순하게 연결시킨 구조
+
+$ mdadm  --create  /dev/md/stripe  --level stripe  --raid-devices=2 /dev/sd* /dev/sd*
+# Stripte : 데이터의 내용을 분산 저장하여 속도가 빠르다, 안전성은 낮음
+</code></pre></div><p><img src="/System/LVM/LVM05.png" alt="LVM" />
+<img src="/System/LVM/LVM06.png" alt="LVM" /></p>
+<ul>
+<li><strong>RAID 0 구성</strong></li>
+</ul>
+<h1 id="heading-16"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ mdadm  --create  /dev/md/mirror  --level mirror --raid-devices=2 /dev/sd* /dev/sd*
+# RAID 1 구성
+</code></pre></div><ul>
+<li><strong>RAID 1 구성</strong></li>
+</ul>
+<h1 id="heading-17"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ mdadm  --create  /dev/md/raid5  --level=5 --raid-devices=3 /dev/sdh1 /dev/sdi1 /dev/sdj1
+# RAID 5 구성
+</code></pre></div><ul>
+<li><strong>RAID 5 구성</strong></li>
+</ul>
+<h1 id="heading-18"></h1>
+<p> </p>
+<h1 id="heading-19"></h1>
+<h2 id="lvm">LVM</h2>
+<ul>
+<li><strong>위와 같이 파티션만 생성 후 ( 단 생성시 타입을 LVM으로 변경 ( t -&gt; 8e ) )</strong></li>
+</ul>
+<h1 id="heading-20"></h1>
+<ul>
+<li><strong>PV 생성 및 확인</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ pvcreate [ 파티션명 ]
+# PV 생성
+
+$ pvscan
+# PV 확인
+
+$ pvdisplay [ 파티션명 ]
+# PV 확인
+</code></pre></div><h1 id="heading-21"></h1>
+<ul>
+<li><strong>VG 생성 및 확인</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ vgcreate  [ 볼륨그룹명 ]  [ 파티션명1 ] [ 파티션명2 ] [ 파티션명3 ]  ....
+# VG 생성
+
+$ vgscan
+# VG 확인
+
+$ vgdisplay  [ 볼륨그룹명 ]
+# VG 확인
+</code></pre></div><h1 id="heading-22"></h1>
+<ul>
+<li><strong>LV 생성 및 확인</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ lvcreate  -L [ 볼륨크기 ]  -n [ 볼륨명 ]  [ 볼륨그룹명 ]
+# LV 생성
+
+$ lvscan
+# LV 확인
+
+$ lvdisplay  [ 볼륨명 ]
+# LV 확인
+</code></pre></div><h1 id="heading-23"></h1>
+<ul>
+<li><strong>파일 시스템 적용 후 및 마운트</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ mkfs -t [ 파일 시스템의 타입 ] [ 볼륨 명 ]
+# 포맷
+
+$ mount [ 볼류 명 ] [ 마운트 포인트 ]
+# 마운트
+</code></pre></div><ul>
+<li><strong>상시 적용 또한 /etc/fstab에 수정을 통해 등록이 가능합니다.</strong></li>
+</ul>
+<h1 id="heading-24"></h1>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#디스크의-구조">디스크의 구조</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#linux-hd-추가">Linux HD 추가</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#raid--redundant-array-of-inexpensive-disks-">RAID ( Redundant Array of Inexpensive Disks )</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#raid-종류">RAID 종류</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#lvm">LVM</a></li>
+  </ul>
+</nav>
+
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

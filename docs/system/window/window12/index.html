@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Windows Web Server IIS, FTP Server   IIS(Internet Information Services)   WIndows Server 2016에 내장되어 있는 웹 서버 및 FTP 서버는 IIS라는 이름으로제공됩니다.     IIS 실습   IIS 설치를 위해 FIRST Server에서 서버매니저 &gt; 관리 &gt; 역할 및 기능 추가를 선택합니다.       서버역할에서 Web Server IIS를 선택 후 킷을 포함하여 설치를 진행합니다.        역할 서비스 에서 Application Development &gt; CGI 및 FTP Server를 설치하기 위해 체크 후, 설치합니다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/system/window/window12/><meta property="og:title" content="IIS" />
+<meta property="og:description" content="Windows Web Server IIS, FTP Server   IIS(Internet Information Services)   WIndows Server 2016에 내장되어 있는 웹 서버 및 FTP 서버는 IIS라는 이름으로제공됩니다.     IIS 실습   IIS 설치를 위해 FIRST Server에서 서버매니저 &gt; 관리 &gt; 역할 및 기능 추가를 선택합니다.       서버역할에서 Web Server IIS를 선택 후 킷을 포함하여 설치를 진행합니다.        역할 서비스 에서 Application Development &gt; CGI 및 FTP Server를 설치하기 위해 체크 후, 설치합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/window/window12/" />
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.693a0c9d102dd896d4abc74767d815b1ccfc1745a230412deefdc7153ed52b2e.js" integrity="sha256-aToMnRAt2JbUq8dHZ9gVscz8F0WiMEEt7v3HFT7VKy4="></script>
+<!--
+
+-->
+
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/ncptraining/" class="collapsed ">NCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Programming</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/nas/" class="collapsed ">NAS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window01/" class="">Roadmap</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window02/" class="">Windows Server Install</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window03/" class="">자동시작, 부팅, 종료</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window04/" class="">사용자 계정</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window05/" class="">파일 및 폴더 관리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window06/" class="">암호화</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window07/" class="">Windows Shell</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window08/" class="">백업과 복구</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window09/" class="">원격접속서버</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window10/" class="">VNC Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window11/" class="">SQL Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window12/" class="active">IIS</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window13/" class="">Active Directory</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window14/" class="">DHCP Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window15/" class="">DNS Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window15-2/" class="">Mail Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window16/" class="">WDS</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/window/window17/" class="">Hyper-V</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/project/" class="">Project</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>IIS</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#windows-web-server-iis-ftp-server"><strong>Windows Web Server IIS, FTP Server</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#iisinternet-information-services"><strong>IIS(Internet Information Services)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#iis-실습"><strong>IIS 실습</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#iis를-활용한-웹-사이트-구축"><strong>IIS를 활용한 웹 사이트 구축</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#xpressengine를-통한-웹-페이지-실습"><strong>XpressEngine를 통한 웹 페이지 실습</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#웹-하드-구축"><strong>웹 하드 구축</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#웹-사이트를-통한-웹-하드-구축"><strong>웹 사이트를 통한 웹 하드 구축</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="windows-web-server-iis-ftp-server"><strong>Windows Web Server IIS, FTP Server</strong></h2>
+<hr>
+<h1 id="heading"></h1>
+<h3 id="iisinternet-information-services"><strong>IIS(Internet Information Services)</strong></h3>
+<h1 id="heading-1"></h1>
+<ul>
+<li><strong>WIndows Server 2016에 내장되어 있는 웹 서버 및 FTP 서버는 IIS라는 이름으로제공됩니다.</strong></li>
+</ul>
+<h1 id="heading-2"></h1>
+<p> </p>
+<h1 id="heading-3"></h1>
+<h3 id="iis-실습"><strong>IIS 실습</strong></h3>
+<h1 id="heading-4"></h1>
+<ul>
+<li><strong>IIS 설치를 위해 FIRST Server에서 <code>서버매니저 &gt; 관리 &gt; 역할 및 기능 추가</code>를 선택합니다.</strong></li>
+</ul>
+<h1 id="heading-5"></h1>
+<p><img src="/System/Window/IIS01.png" alt="" /></p>
+<h1 id="heading-6"></h1>
+<p> </p>
+<h1 id="heading-7"></h1>
+<ul>
+<li><strong>서버역할에서 <code>Web Server IIS</code>를 선택 후 킷을 포함하여 설치를 진행합니다.</strong></li>
+</ul>
+<h1 id="heading-8"></h1>
+<p><img src="/System/Window/IIS02.png" alt="" /></p>
+<h1 id="heading-9"></h1>
+<p><img src="/System/Window/IIS03.png" alt="" /></p>
+<h1 id="heading-10"></h1>
+<p> </p>
+<h1 id="heading-11"></h1>
+<ul>
+<li><strong>역할 서비스 에서 <code>Application Development &gt; CGI</code> 및 <code>FTP Server</code>를 설치하기 위해 체크 후, 설치합니다.</strong></li>
+</ul>
+<h1 id="heading-12"></h1>
+<p><img src="/System/Window/IIS04.png" alt="" /></p>
+<h1 id="heading-13"></h1>
+<p> </p>
+<h1 id="heading-14"></h1>
+<ul>
+<li>
+<p><strong>설치가 완료되면 방화벽에 허용되었는 지와 서비스가 실행중인지를 확인합니다.</strong></p>
+</li>
+<li>
+<p><strong>IIS는 World Wide Web, FTP는 Microsoft FTP Service입니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-15"></h1>
+<p><img src="/System/Window/IIS05.png" alt="" /></p>
+<h1 id="heading-16"></h1>
+<p><img src="/System/Window/IIS06.png" alt="" /></p>
+<h1 id="heading-17"></h1>
+<p><img src="/System/Window/IIS07.png" alt="" /></p>
+<h1 id="heading-18"></h1>
+<p><img src="/System/Window/IIS08.png" alt="" /></p>
+<h1 id="heading-19"></h1>
+<p><img src="/System/Window/IIS09.png" alt="" /></p>
+<h1 id="heading-20"></h1>
+<p> </p>
+<h1 id="heading-21"></h1>
+<ul>
+<li><strong>설치가 완료되면 IIS를 설정을 위해 <code>서버 매니저 &gt; 도구 &gt; IIS 관리자</code>를 선택합니다.</strong></li>
+</ul>
+<h1 id="heading-22"></h1>
+<p><img src="/System/Window/IIS10.png" alt="" /></p>
+<h1 id="heading-23"></h1>
+<p> </p>
+<h1 id="heading-24"></h1>
+<ul>
+<li><strong>현재 FTP 서버가 등록되어 있지 않으므로 <code>사이트 &gt; FTP 사이트 추가</code>를 선택합니다.</strong></li>
+</ul>
+<h1 id="heading-25"></h1>
+<p><img src="/System/Window/IIS11.png" alt="" /></p>
+<h1 id="heading-26"></h1>
+<p> </p>
+<h1 id="heading-27"></h1>
+<ul>
+<li><strong>경로를 지정한 후 저장합니다.</strong></li>
+</ul>
+<h1 id="heading-28"></h1>
+<p><img src="/System/Window/IIS12.png" alt="" /></p>
+<h1 id="heading-29"></h1>
+<p> </p>
+<h1 id="heading-30"></h1>
+<ul>
+<li><strong>SSL은 사용하지 않을 것이므로 설정하지 않습니다.</strong></li>
+</ul>
+<h1 id="heading-31"></h1>
+<p><img src="/System/Window/IIS13.png" alt="" /></p>
+<h1 id="heading-32"></h1>
+<p> </p>
+<h1 id="heading-33"></h1>
+<ul>
+<li><strong>모두가 접속할 수 있도록 <code>익명, 모든 사용자, 읽기</code>를 설정합니다.</strong></li>
+</ul>
+<h1 id="heading-34"></h1>
+<p><img src="/System/Window/IIS14.png" alt="" /></p>
+<h1 id="heading-35"></h1>
+<p> </p>
+<h1 id="heading-36"></h1>
+<ul>
+<li><strong>WINCLIENT에서 <code>192.168.10.11</code>로 접속하면 IIS를 확인하실 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-37"></h1>
+<p><img src="/System/Window/IIS15.png" alt="" /></p>
+<h1 id="heading-38"></h1>
+<p> </p>
+<h1 id="heading-39"></h1>
+<ul>
+<li>
+<p><strong>위와 동일하게 FTP 서버 접속을 위해 WINCLIENT에서 <code>ftp 192.168.10.11</code>로 접속합니다.</strong></p>
+</li>
+<li>
+<p><strong>접속 후에는 <code>anonymous</code>(익명사용자) 및 패스워드는 그냥 엔터를 입력하여 접속합니다.</strong></p>
+</li>
+<li>
+<p><strong>접속이 확인할 수 있습니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-40"></h1>
+<p><img src="/System/Window/IIS16.png" alt="" /></p>
+<h1 id="heading-41"></h1>
+<p><img src="/System/Window/IIS17.png" alt="" /></p>
+<h1 id="heading-42"></h1>
+<p> </p>
+<h1 id="heading-43"></h1>
+<ul>
+<li>
+<p><strong>기본적으로 웹 사이트는 <code>IIS 괸라자 &gt; 사이트 Default Web Site &gt; 기본 문</code>에서 확인 및 설정이 가능합니다.</strong></p>
+</li>
+<li>
+<p><strong>이제 본격적인 IIS 활용을 진행해보도록 하겠습니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-44"></h1>
+<p><img src="/System/Window/IIS18.png" alt="" /></p>
+<h1 id="heading-45"></h1>
+<p> </p>
+<h1 id="heading-46"></h1>
+<h3 id="iis를-활용한-웹-사이트-구축"><strong>IIS를 활용한 웹 사이트 구축</strong></h3>
+<h1 id="heading-47"></h1>
+<ul>
+<li>
+<p><strong>IIS를 활용하면 웹 사이트를 구축할 수 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>웹 사이트 구축을 위해 필요한 기본적인 3요소</strong></p>
+<ul>
+<li>
+<p><strong>웹 서버 소프트웨어 : IIS, Apache 등</strong></p>
+</li>
+<li>
+<p><strong>웹 프로그래밍 언어 : ASP.NET, ASP, JSP, PHP 등</strong></p>
+</li>
+<li>
+<p><strong>데이터베이스 툴 : SQL Sefver, Oracle, MySQL 등</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-48"></h1>
+<ul>
+<li>
+<p><strong>WPI(Web Platform Installer) : Microsoft에서 제공하는 웹 플랫폼</strong></p>
+<ul>
+<li><strong>Internet Information Services(IIS), SQL Server Express, Net Framework, 오픈 소스인 PHP와 mySQL과 같은 소프트웨어 제공</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-49"></h1>
+<p> </p>
+<h1 id="heading-50"></h1>
+<h3 id="xpressengine를-통한-웹-페이지-실습"><strong>XpressEngine를 통한 웹 페이지 실습</strong></h3>
+<h1 id="heading-51"></h1>
+<ul>
+<li>
+<p><strong>먼저 FIRST Server에서 <a href="http://download.hanbit.co.kr/WIN2016/wpilauncher.exe">XpressEngine</a>를 설치합니다.</strong></p>
+</li>
+<li>
+<p><strong>설치 후, 창을 종류 후, <code>IIS 관리자 &gt; 사이트 &gt; Default Web Site &gt; 웹 플랫폼 관리자</code>를 선택합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-52"></h1>
+<p><img src="/System/Window/IIS20.png" alt="" /></p>
+<h1 id="heading-53"></h1>
+<p> </p>
+<h1 id="heading-54"></h1>
+<ul>
+<li>
+<p><strong>웹 서버를 실행하면 PHP를 검색하여 PHP 5.4.9를 설치합니다.</strong></p>
+</li>
+<li>
+<p><strong>PHP를 선택 후, 설치할 항목에서 IIS용 PHP 관리자를 제거합니다. (호환성 문제)</strong></p>
+</li>
+</ul>
+<h1 id="heading-55"></h1>
+<p><img src="/System/Window/IIS21.png" alt="" /></p>
+<h1 id="heading-56"></h1>
+<p><img src="/System/Window/IIS22.png" alt="" /></p>
+<h1 id="heading-57"></h1>
+<p> </p>
+<h1 id="heading-58"></h1>
+<ul>
+<li><strong>설정이 왼료되면 MySQl를 검색 후, MySQl 5.5버전을 추가 후 설치합니다.</strong></li>
+</ul>
+<h1 id="heading-59"></h1>
+<p><img src="/System/Window/IIS23.png" alt="" /></p>
+<h1 id="heading-60"></h1>
+<p> </p>
+<h1 id="heading-61"></h1>
+<ul>
+<li><strong>암호를 입력하고 설치를 진행합니다.</strong></li>
+</ul>
+<h1 id="heading-62"></h1>
+<p><img src="/System/Window/IIS24.png" alt="" /></p>
+<h1 id="heading-63"></h1>
+<p> </p>
+<h1 id="heading-64"></h1>
+<ul>
+<li><strong>설치가 완료되었습니다.</strong></li>
+</ul>
+<h1 id="heading-65"></h1>
+<p><img src="/System/Window/IIS25.png" alt="" /></p>
+<h1 id="heading-66"></h1>
+<p> </p>
+<h1 id="heading-67"></h1>
+<ul>
+<li><strong>설치가 완료되면 cmd를 시행하여 <code>mysql -u root -p</code> 실행하여 암호를 입력합니다.</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-MySQL" data-lang="MySQL">mysql<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">create</span> <span style="color:#66d9ef">database</span> xeDB;
+<span style="color:#75715e"># DB라는 데이터베이스 만듭니다.
+</span><span style="color:#75715e"></span>
+mysql<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">grant</span> <span style="color:#66d9ef">all</span> <span style="color:#66d9ef">privileges</span> <span style="color:#66d9ef">on</span> <span style="color:#f92672">*</span>.<span style="color:#f92672">*</span> <span style="color:#66d9ef">to</span> xebUser<span style="color:#f92672">@</span><span style="color:#e6db74">&#39;127.0.0.1&#39;</span> <span style="color:#66d9ef">identified</span> <span style="color:#66d9ef">by</span> <span style="color:#e6db74">&#39;1234&#39;</span>;
+<span style="color:#75715e"># WebUser라는 계정을 1234의 PW를 가지고 생성하고 자신의 모든 DB를 사용할 수 있는 권한을 부여합니다.
+</span><span style="color:#75715e"></span>
+mysql<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">exit</span>
+<span style="color:#75715e"># MySQL 쿼리를 종료합니다.
+</span></code></pre></div><h1 id="heading-68"></h1>
+<p><img src="/System/Window/IIS26.png" alt="" /></p>
+<h1 id="heading-69"></h1>
+<p> </p>
+<h1 id="heading-70"></h1>
+<ul>
+<li>
+<p><strong>DB 설정이 완료되면 <a href="http://download.hanbit.co.kr/WIN2016/xe.zip">Xe</a>를 다운받습니다.</strong></p>
+</li>
+<li>
+<p><strong>IIS의 기본 폴더인 <code>C:\inetpub\wwwroot\</code>에 붙여넣습니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-71"></h1>
+<p><img src="/System/Window/IIS27.png" alt="" /></p>
+<h1 id="heading-72"></h1>
+<p> </p>
+<h1 id="heading-73"></h1>
+<ul>
+<li>
+<p><strong>이어서 게시판은 모든 사용자가 사용해야 하기 때문에 권한에 대한 설정을 진행합니다.</strong></p>
+</li>
+<li>
+<p><strong>IUSR을 생성 후, 모든 권한을 부여합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-74"></h1>
+<p><img src="/System/Window/IIS28.png" alt="" /></p>
+<h1 id="heading-75"></h1>
+<p> </p>
+<h1 id="heading-76"></h1>
+<ul>
+<li><strong>WINCLIENT에서 <code>192.168.10.11/xe</code>로 접속하여 설정을 진행합니다.</strong></li>
+</ul>
+<h1 id="heading-77"></h1>
+<p><img src="/System/Window/IIS29.png" alt="" /></p>
+<h1 id="heading-78"></h1>
+<p> </p>
+<h1 id="heading-79"></h1>
+<ul>
+<li><strong>MySQL을 지정합니다.</strong></li>
+</ul>
+<h1 id="heading-80"></h1>
+<p><img src="/System/Window/IIS30.png" alt="" /></p>
+<h1 id="heading-81"></h1>
+<p> </p>
+<h1 id="heading-82"></h1>
+<ul>
+<li><strong>서버에서 설정했던 값들을 기입합니다.</strong></li>
+</ul>
+<h1 id="heading-83"></h1>
+<p><img src="/System/Window/IIS32.png" alt="" /></p>
+<h1 id="heading-84"></h1>
+<p> </p>
+<h1 id="heading-85"></h1>
+<ul>
+<li><strong>어드민 계정을 생성합니다.</strong></li>
+</ul>
+<h1 id="heading-86"></h1>
+<p><img src="/System/Window/IIS33.png" alt="" /></p>
+<h1 id="heading-87"></h1>
+<p> </p>
+<h1 id="heading-88"></h1>
+<ul>
+<li><strong>이제 다시 <code>192.168.10.11/xe</code>로 접속하면 다음과 같은 페이지를 확인하실 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-89"></h1>
+<p><img src="/System/Window/IIS34.png" alt="" /></p>
+<h1 id="heading-90"></h1>
+<p> </p>
+<h1 id="heading-91"></h1>
+<ul>
+<li><strong>게시판 생성을 위해 하단의 그림과 같이해 <code>사이트 메뉴 편집 &gt; 메뉴 추가 &gt; 게시판</code>을 추가합니다.</strong></li>
+</ul>
+<h1 id="heading-92"></h1>
+<p><img src="/System/Window/IIS35.png" alt="" /></p>
+<h1 id="heading-93"></h1>
+<p><img src="/System/Window/IIS36.png" alt="" /></p>
+<h1 id="heading-94"></h1>
+<p><img src="/System/Window/IIS37.png" alt="" /></p>
+<h1 id="heading-95"></h1>
+<p> </p>
+<h1 id="heading-96"></h1>
+<ul>
+<li><strong>로그아웃 후, 게스트의 궈한으로 Board에 접속하여 글을 작성합니다.</strong></li>
+</ul>
+<h1 id="heading-97"></h1>
+<p><img src="/System/Window/IIS38.png" alt="" /></p>
+<h1 id="heading-98"></h1>
+<p> </p>
+<h1 id="heading-99"></h1>
+<ul>
+<li><strong>게시판을 확인하실 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-100"></h1>
+<p><img src="/System/Window/IIS39.png" alt="" /></p>
+<h1 id="heading-101"></h1>
+<p> </p>
+<h1 id="heading-102"></h1>
+<h3 id="웹-하드-구축"><strong>웹 하드 구축</strong></h3>
+<h1 id="heading-103"></h1>
+<ul>
+<li><strong>웹 하드는 인터넷 상에서 디스크 공간을 사용하는 기능을 제공하는 사이트를 의미합니다.</strong></li>
+</ul>
+<h1 id="heading-104"></h1>
+<p> </p>
+<h1 id="heading-105"></h1>
+<h3 id="웹-사이트를-통한-웹-하드-구축"><strong>웹 사이트를 통한 웹 하드 구축</strong></h3>
+<h1 id="heading-106"></h1>
+<ul>
+<li>
+<p><strong>FIRST 서버에 <a href="http://download.hanbit.co.kr/WIN2016/pydio-core-6.4.2.zip">Pydio</a>를 설치합니다.</strong></p>
+</li>
+<li>
+<p><strong>Xe와 동일하게 사용권한을 수정 후, 폴더명을 접근을 쉽게 WebHard로 바꾸어줍니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-107"></h1>
+<p><img src="/System/Window/IIS40.png" alt="" /></p>
+<h1 id="heading-108"></h1>
+<p> </p>
+<h1 id="heading-109"></h1>
+<ul>
+<li><strong><code>C:\Window\Temp</code>폴더 또한 권한을 설정해줍니다.</strong></li>
+</ul>
+<h1 id="heading-110"></h1>
+<p><img src="/System/Window/IIS41.png" alt="" /></p>
+<h1 id="heading-111"></h1>
+<p> </p>
+<h1 id="heading-112"></h1>
+<ul>
+<li>
+<p><strong>설정이 완료되면 WINCLINT에서 <code>192.168.10.11/WebHard</code>에 접속합니다.</strong></p>
+</li>
+<li>
+<p><strong>접속이 완료되면 에러와 오류를 무시하고 설치를 진행합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-113"></h1>
+<p><img src="/System/Window/IIS43.png" alt="" /></p>
+<h1 id="heading-114"></h1>
+<p><img src="/System/Window/IIS44.png" alt="" /></p>
+<h1 id="heading-115"></h1>
+<p><img src="/System/Window/IIS45.png" alt="" /></p>
+<h1 id="heading-116"></h1>
+<p> </p>
+<h1 id="heading-117"></h1>
+<ul>
+<li><strong>데이터베이스는 새로 생성해도 되지만 기존의 XeDB와 유저르 사용해보겠습니다.</strong></li>
+</ul>
+<h1 id="heading-118"></h1>
+<p><img src="/System/Window/IIS46.png" alt="" /></p>
+<h1 id="heading-119"></h1>
+<p> </p>
+<h1 id="heading-120"></h1>
+<ul>
+<li><strong>설정이 완료되면 설치를 진행합니다.</strong></li>
+</ul>
+<h1 id="heading-121"></h1>
+<p><img src="/System/Window/IIS47.png" alt="" /></p>
+<h1 id="heading-122"></h1>
+<p> </p>
+<h1 id="heading-123"></h1>
+<ul>
+<li><strong>설치가 완료되면 `192.168.10.11/WebHard로 접소하면 접속이 완료됩니다.</strong></li>
+</ul>
+<h1 id="heading-124"></h1>
+<p><img src="/System/Window/IIS48.png" alt="" /></p>
+<h1 id="heading-125"></h1>
+<p> </p>
+<h1 id="heading-126"></h1>
+<ul>
+<li><strong>새로운 계정생성을 위해 우측의 메뉴에서 설정을 선택합니다.</strong></li>
+</ul>
+<h1 id="heading-127"></h1>
+<p><img src="/System/Window/IIS49.png" alt="" /></p>
+<h1 id="heading-128"></h1>
+<p> </p>
+<h1 id="heading-129"></h1>
+<ul>
+<li>
+<p><strong><code>People &gt; 새 사용자</code>를 선택하여 사용자를 생성합니다.</strong></p>
+</li>
+<li>
+<p><strong>생성된 사용자를 선택하면 사용자를 설정할 수 있습니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-130"></h1>
+<p><img src="/System/Window/IIS50.png" alt="" /></p>
+<h1 id="heading-131"></h1>
+<p><img src="/System/Window/IIS51.png" alt="" /></p>
+<h1 id="heading-132"></h1>
+<p> </p>
+<h1 id="heading-133"></h1>
+<ul>
+<li>
+<p><strong>재접속 후, 새로 생성된 유저로 접속하여 업로드 및 생성을 할 수 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>이와 같이 개인적으로 혹은 공유하는 폴더를 웹을 통해 관리할 수도 있습니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-134"></h1>
+<p><img src="/System/Window/IIS52.png" alt="" /></p>
+<h1 id="heading-135"></h1>
+<p><img src="/System/Window/IIS53.png" alt="" /></p>
+<h1 id="heading-136"></h1>
+<p> </p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#windows-web-server-iis-ftp-server"><strong>Windows Web Server IIS, FTP Server</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#iisinternet-information-services"><strong>IIS(Internet Information Services)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#iis-실습"><strong>IIS 실습</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#iis를-활용한-웹-사이트-구축"><strong>IIS를 활용한 웹 사이트 구축</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#xpressengine를-통한-웹-페이지-실습"><strong>XpressEngine를 통한 웹 페이지 실습</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#웹-하드-구축"><strong>웹 하드 구축</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#웹-사이트를-통한-웹-하드-구축"><strong>웹 사이트를 통한 웹 하드 구축</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

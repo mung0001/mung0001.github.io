@@ -1,0 +1,2581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shell Programming    연습문제 정리  구구단 # gugu.sh#!/bin/bashfor i in {1..9};dofor j in {1..9};doecho $i &#34;X&#34; $j &#34;=&#34; `expr $i \* $j`donedone   야구게임 #!/bin/bashSolution(){Solution=()i=0while [ $i -le 3 ];doSolution[$i]=$((RANDOM% 9&#43;1))if [ $i -eq 3 ]; thenif [ ${Solution[3]} -eq ${Solution[0]} -o ${Solution[3]} -eq ${Solution[1]} -o ${Solution[3]} -eq ${Solution[2]} ]; thenSolution[$i]=$((RANDOM% 9&#43;1))else((i&#43;&#43;))fifiif [ $i -eq 2 ]; thenif [ ${Solution[2]} -eq ${Solution[0]} -o ${Solution[2]} -eq ${Solution[1]} ]; thenSolution[$i]=$((RANDOM% 9&#43;1))else((i&#43;&#43;))fifiif [ $i -eq 1 ]; thenif [ ${Solution[0]} -eq ${Solution[1]} ]; thenSolution[$i]=$((RANDOM% 9&#43;1))else((i&#43;&#43;))fifiif [ $i -eq 0 ]; then((i&#43;&#43;))fidoneecho ${Solution[@]}}Count=0Score(){Out=0Ball=0Strike=0if [ $num1 -eq ${Solution[0]} ]; then((Strike&#43;&#43;))elif [ $num1 -eq ${Solution[1]} -o $num1 -eq ${Solution[2]} -o $num1 -eq ${Solution[3]} ]; then((Ball&#43;&#43;))else((Out&#43;&#43;))fiif [ $num2 -eq ${Solution[1]} ]; then((Strike&#43;&#43;))elif [ $num2 -eq ${Solution[0]} -o $num2 -eq ${Solution[2]} -o $num2 -eq ${Solution[3]} ]; then((Ball&#43;&#43;))else((Out&#43;&#43;))fiif [ $num3 -eq ${Solution[2]} ]; then((Strike&#43;&#43;))elif [ $num3 -eq ${Solution[1]} -o $num3 -eq ${Solution[0]} -o $num3 -eq ${Solution[3]} ]; then((Ball&#43;&#43;))else((Out&#43;&#43;))fiif [ $num4 -eq ${Solution[3]} ]; then((Strike&#43;&#43;))elif [ $num4 -eq ${Solution[1]} -o $num4 -eq ${Solution[2]} -o $num4 -eq ${Solution[0]} ]; then((Ball&#43;&#43;))else((Out&#43;&#43;))fiecho &#34; Strike : $Strike&#34;echo &#34; Ball : $Ball&#34;echo &#34; Out : $Out&#34;((Count&#43;&#43;))if [ $Strike -eq 4 ]; thenecho &#34;수고하셨습니다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/programing/shell/shell100/><meta property="og:title" content="연습문제" />
+<meta property="og:description" content="Shell Programming    연습문제 정리  구구단 # gugu.sh#!/bin/bashfor i in {1..9};dofor j in {1..9};doecho $i &#34;X&#34; $j &#34;=&#34; `expr $i \* $j`donedone   야구게임 #!/bin/bashSolution(){Solution=()i=0while [ $i -le 3 ];doSolution[$i]=$((RANDOM% 9&#43;1))if [ $i -eq 3 ]; thenif [ ${Solution[3]} -eq ${Solution[0]} -o ${Solution[3]} -eq ${Solution[1]} -o ${Solution[3]} -eq ${Solution[2]} ]; thenSolution[$i]=$((RANDOM% 9&#43;1))else((i&#43;&#43;))fifiif [ $i -eq 2 ]; thenif [ ${Solution[2]} -eq ${Solution[0]} -o ${Solution[2]} -eq ${Solution[1]} ]; thenSolution[$i]=$((RANDOM% 9&#43;1))else((i&#43;&#43;))fifiif [ $i -eq 1 ]; thenif [ ${Solution[0]} -eq ${Solution[1]} ]; thenSolution[$i]=$((RANDOM% 9&#43;1))else((i&#43;&#43;))fifiif [ $i -eq 0 ]; then((i&#43;&#43;))fidoneecho ${Solution[@]}}Count=0Score(){Out=0Ball=0Strike=0if [ $num1 -eq ${Solution[0]} ]; then((Strike&#43;&#43;))elif [ $num1 -eq ${Solution[1]} -o $num1 -eq ${Solution[2]} -o $num1 -eq ${Solution[3]} ]; then((Ball&#43;&#43;))else((Out&#43;&#43;))fiif [ $num2 -eq ${Solution[1]} ]; then((Strike&#43;&#43;))elif [ $num2 -eq ${Solution[0]} -o $num2 -eq ${Solution[2]} -o $num2 -eq ${Solution[3]} ]; then((Ball&#43;&#43;))else((Out&#43;&#43;))fiif [ $num3 -eq ${Solution[2]} ]; then((Strike&#43;&#43;))elif [ $num3 -eq ${Solution[1]} -o $num3 -eq ${Solution[0]} -o $num3 -eq ${Solution[3]} ]; then((Ball&#43;&#43;))else((Out&#43;&#43;))fiif [ $num4 -eq ${Solution[3]} ]; then((Strike&#43;&#43;))elif [ $num4 -eq ${Solution[1]} -o $num4 -eq ${Solution[2]} -o $num4 -eq ${Solution[0]} ]; then((Ball&#43;&#43;))else((Out&#43;&#43;))fiecho &#34; Strike : $Strike&#34;echo &#34; Ball : $Ball&#34;echo &#34; Out : $Out&#34;((Count&#43;&#43;))if [ $Strike -eq 4 ]; thenecho &#34;수고하셨습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/programing/shell/shell100/" />
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.693a0c9d102dd896d4abc74767d815b1ccfc1745a230412deefdc7153ed52b2e.js" integrity="sha256-aToMnRAt2JbUq8dHZ9gVscz8F0WiMEEt7v3HFT7VKy4="></script>
+<!--
+
+-->
+
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/ncptraining/" class="collapsed ">NCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Programming</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-1/" class="">Shell Script란?</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-2/" class="">UNIX/ Linux 개념과 명령어</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-3/" class="">Shell Script 문법</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-4/" class="">UNIX/ Linux 시스템 관리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-5/" class="">Shell Script System Management</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-6/" class="">Shell Script System Security</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell-7/" class="">Shell Customizing</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell01/" class="">Shell Basics</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell02/" class="">Quotes</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell03/" class="">Variables</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell04/" class="">Fucnctions</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell05/" class="">Exit Status</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell06/" class="">Interactive</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell07/" class="">etc</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell08/" class="">Commands</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell09/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell10/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell11/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell12/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell13/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell16/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell17/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell18/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell19/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell14/" class="">Test 연산자</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell15/" class="">SubShells</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell80/" class="">awk</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell90/" class="">sed</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/programing/shell/shell100/" class="active">연습문제</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/nas/" class="collapsed ">NAS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/project/" class="">Project</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>연습문제</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#연습문제-정리"><strong>연습문제 정리</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#구구단"><strong>구구단</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#야구게임"><strong>야구게임</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#network-정적-자동설정-스크립트"><strong>Network 정적 자동설정 스크립트</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#마운트-및-등록-스크립트"><strong>마운트 및 등록 스크립트</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#user-생성-스크립트"><strong>User 생성 스크립트</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pv-vg-lv-스크립트"><strong>PV VG LV 스크립트</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#파일에서-특정-단어를-찾아서-행을-변경하는-스크립트"><strong>파일에서 특정 단어를 찾아서 행을 변경하는 스크립트</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#예외처리"><strong>예외처리</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-19">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-22">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-25">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-28">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-31">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-34">****</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="shell-programming"><strong>Shell Programming</strong></h1>
+<h1 id="heading"></h1>
+<p> </p>
+<h1 id="heading-1"></h1>
+<h2 id="연습문제-정리"><strong>연습문제 정리</strong></h2>
+<h1 id="heading-2"></h1>
+<h3 id="구구단"><strong>구구단</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># gugu.sh</span>
+
+<span style="color:#75715e">#!/bin/bash</span>
+
+<span style="color:#66d9ef">for</span> i in <span style="color:#f92672">{</span>1..9<span style="color:#f92672">}</span>;
+<span style="color:#66d9ef">do</span>
+    <span style="color:#66d9ef">for</span> j in <span style="color:#f92672">{</span>1..9<span style="color:#f92672">}</span>;
+    <span style="color:#66d9ef">do</span>
+        echo $i <span style="color:#e6db74">&#34;X&#34;</span> $j <span style="color:#e6db74">&#34;=&#34;</span> <span style="color:#e6db74">`</span>expr $i <span style="color:#ae81ff">\*</span> $j<span style="color:#e6db74">`</span>
+    <span style="color:#66d9ef">done</span>
+<span style="color:#66d9ef">done</span>
+</code></pre></div><h1 id="heading-3"></h1>
+<p> </p>
+<h1 id="heading-4"></h1>
+<h3 id="야구게임"><strong>야구게임</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+
+Solution<span style="color:#f92672">(){</span>
+        Solution<span style="color:#f92672">=()</span>
+        i<span style="color:#f92672">=</span>0
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">[</span> $i -le <span style="color:#ae81ff">3</span> <span style="color:#f92672">]</span>;
+        <span style="color:#66d9ef">do</span>
+                Solution<span style="color:#f92672">[</span>$i<span style="color:#f92672">]=</span><span style="color:#66d9ef">$((</span>RANDOM% <span style="color:#ae81ff">9</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#66d9ef">))</span>
+
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $i -eq <span style="color:#ae81ff">3</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">${</span>Solution[3]<span style="color:#e6db74">}</span> -eq <span style="color:#e6db74">${</span>Solution[0]<span style="color:#e6db74">}</span> -o <span style="color:#e6db74">${</span>Solution[3]<span style="color:#e6db74">}</span> -eq <span style="color:#e6db74">${</span>Solution[1]<span style="color:#e6db74">}</span> -o <span style="color:#e6db74">${</span>Solution[3]<span style="color:#e6db74">}</span> -eq <span style="color:#e6db74">${</span>Solution[2]<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                                Solution<span style="color:#f92672">[</span>$i<span style="color:#f92672">]=</span><span style="color:#66d9ef">$((</span>RANDOM% <span style="color:#ae81ff">9</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#66d9ef">))</span>
+                        <span style="color:#66d9ef">else</span>
+                                <span style="color:#f92672">((</span>i++<span style="color:#f92672">))</span>
+                        <span style="color:#66d9ef">fi</span>
+                <span style="color:#66d9ef">fi</span>
+
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $i -eq <span style="color:#ae81ff">2</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">${</span>Solution[2]<span style="color:#e6db74">}</span> -eq <span style="color:#e6db74">${</span>Solution[0]<span style="color:#e6db74">}</span> -o <span style="color:#e6db74">${</span>Solution[2]<span style="color:#e6db74">}</span> -eq <span style="color:#e6db74">${</span>Solution[1]<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                                Solution<span style="color:#f92672">[</span>$i<span style="color:#f92672">]=</span><span style="color:#66d9ef">$((</span>RANDOM% <span style="color:#ae81ff">9</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#66d9ef">))</span>
+                        <span style="color:#66d9ef">else</span>
+                                <span style="color:#f92672">((</span>i++<span style="color:#f92672">))</span>
+                        <span style="color:#66d9ef">fi</span>
+                <span style="color:#66d9ef">fi</span>
+
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $i -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">${</span>Solution[0]<span style="color:#e6db74">}</span> -eq <span style="color:#e6db74">${</span>Solution[1]<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                                Solution<span style="color:#f92672">[</span>$i<span style="color:#f92672">]=</span><span style="color:#66d9ef">$((</span>RANDOM% <span style="color:#ae81ff">9</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#66d9ef">))</span>
+                        <span style="color:#66d9ef">else</span>
+                                <span style="color:#f92672">((</span>i++<span style="color:#f92672">))</span>
+                        <span style="color:#66d9ef">fi</span>
+                <span style="color:#66d9ef">fi</span>
+
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $i -eq <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        <span style="color:#f92672">((</span>i++<span style="color:#f92672">))</span>
+                <span style="color:#66d9ef">fi</span>
+
+        <span style="color:#66d9ef">done</span>
+        echo <span style="color:#e6db74">${</span>Solution[@]<span style="color:#e6db74">}</span>
+<span style="color:#f92672">}</span>
+
+Count<span style="color:#f92672">=</span>0
+
+Score<span style="color:#f92672">(){</span>
+
+        Out<span style="color:#f92672">=</span>0
+        Ball<span style="color:#f92672">=</span>0
+        Strike<span style="color:#f92672">=</span>0
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $num1 -eq <span style="color:#e6db74">${</span>Solution[0]<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                <span style="color:#f92672">((</span>Strike++<span style="color:#f92672">))</span>
+        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $num1 -eq <span style="color:#e6db74">${</span>Solution[1]<span style="color:#e6db74">}</span> -o $num1 -eq <span style="color:#e6db74">${</span>Solution[2]<span style="color:#e6db74">}</span> -o $num1 -eq <span style="color:#e6db74">${</span>Solution[3]<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                <span style="color:#f92672">((</span>Ball++<span style="color:#f92672">))</span>
+        <span style="color:#66d9ef">else</span>
+                <span style="color:#f92672">((</span>Out++<span style="color:#f92672">))</span>
+        <span style="color:#66d9ef">fi</span>
+
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $num2 -eq <span style="color:#e6db74">${</span>Solution[1]<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                <span style="color:#f92672">((</span>Strike++<span style="color:#f92672">))</span>
+        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $num2 -eq <span style="color:#e6db74">${</span>Solution[0]<span style="color:#e6db74">}</span> -o $num2 -eq <span style="color:#e6db74">${</span>Solution[2]<span style="color:#e6db74">}</span> -o $num2 -eq <span style="color:#e6db74">${</span>Solution[3]<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                <span style="color:#f92672">((</span>Ball++<span style="color:#f92672">))</span>
+        <span style="color:#66d9ef">else</span>
+                <span style="color:#f92672">((</span>Out++<span style="color:#f92672">))</span>
+        <span style="color:#66d9ef">fi</span>
+
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $num3 -eq <span style="color:#e6db74">${</span>Solution[2]<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                <span style="color:#f92672">((</span>Strike++<span style="color:#f92672">))</span>
+        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $num3 -eq <span style="color:#e6db74">${</span>Solution[1]<span style="color:#e6db74">}</span> -o $num3 -eq <span style="color:#e6db74">${</span>Solution[0]<span style="color:#e6db74">}</span> -o $num3 -eq <span style="color:#e6db74">${</span>Solution[3]<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                <span style="color:#f92672">((</span>Ball++<span style="color:#f92672">))</span>
+        <span style="color:#66d9ef">else</span>
+                <span style="color:#f92672">((</span>Out++<span style="color:#f92672">))</span>
+        <span style="color:#66d9ef">fi</span>
+
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $num4 -eq <span style="color:#e6db74">${</span>Solution[3]<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                <span style="color:#f92672">((</span>Strike++<span style="color:#f92672">))</span>
+        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $num4 -eq <span style="color:#e6db74">${</span>Solution[1]<span style="color:#e6db74">}</span> -o $num4 -eq <span style="color:#e6db74">${</span>Solution[2]<span style="color:#e6db74">}</span> -o $num4 -eq <span style="color:#e6db74">${</span>Solution[0]<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                <span style="color:#f92672">((</span>Ball++<span style="color:#f92672">))</span>
+        <span style="color:#66d9ef">else</span>
+                <span style="color:#f92672">((</span>Out++<span style="color:#f92672">))</span>
+        <span style="color:#66d9ef">fi</span>
+
+
+        echo <span style="color:#e6db74">&#34; Strike : </span>$Strike<span style="color:#e6db74">&#34;</span>
+        echo <span style="color:#e6db74">&#34; Ball : </span>$Ball<span style="color:#e6db74">&#34;</span>
+        echo <span style="color:#e6db74">&#34; Out : </span>$Out<span style="color:#e6db74">&#34;</span>
+
+
+        <span style="color:#f92672">((</span>Count++<span style="color:#f92672">))</span>
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $Strike -eq <span style="color:#ae81ff">4</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                echo <span style="color:#e6db74">&#34;수고하셨습니다.&#34;</span>
+                echo <span style="color:#e6db74">&#34;전체 게임판수 : </span>$Count<span style="color:#e6db74">&#34;</span>
+        <span style="color:#66d9ef">else</span>
+                Game_Start
+        <span style="color:#66d9ef">fi</span>
+<span style="color:#f92672">}</span>
+
+Game_Start<span style="color:#f92672">(){</span>
+    echo <span style="color:#e6db74">&#34;&#34;</span>
+    echo <span style="color:#e6db74">&#34;&#34;</span>
+    echo <span style="color:#e6db74">&#34;&#34;</span>
+    echo <span style="color:#e6db74">&#34;야구 게임의 Roll입니다!&#34;</span>
+    echo <span style="color:#e6db74">&#34;x x x x 형태로 원하는 숫자를 4개 입력하세요!&#34;</span>
+    echo <span style="color:#e6db74">&#34;숫자는 0 ~ 9의 숫자 중 하나로 구성되며 증복되면 안됩니다!&#34;</span>
+    echo <span style="color:#e6db74">&#34;5번째 이후에 숫자는 사라집니다!&#34;</span>
+    read num1 num2 num3 num4 num5
+    arg<span style="color:#f92672">=(</span>$num1 $num2 $num3 $num4 $num5<span style="color:#f92672">)</span>
+    Rule
+    Score
+<span style="color:#f92672">}</span>
+
+Rule<span style="color:#f92672">(){</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$num1<span style="color:#e6db74">&#34;</span> -o -z <span style="color:#e6db74">&#34;</span>$num2<span style="color:#e6db74">&#34;</span> -o -z <span style="color:#e6db74">&#34;</span>$num3<span style="color:#e6db74">&#34;</span> -o -z <span style="color:#e6db74">&#34;</span>$num4<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;형식에 맞게 다시 입력하세요!&#34;</span>
+        Game_Start
+    <span style="color:#66d9ef">fi</span>
+
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $num1 -ge <span style="color:#ae81ff">10</span> -o $num1 -le <span style="color:#ae81ff">0</span> -o $num2 -ge <span style="color:#ae81ff">10</span> -o $num2 -le <span style="color:#ae81ff">0</span> -o $num3 -ge <span style="color:#ae81ff">10</span> -o $num3 -le <span style="color:#ae81ff">0</span> -o $num4 -ge <span style="color:#ae81ff">10</span> -o $num4 -le <span style="color:#ae81ff">0</span> -o $num1 -eq $num2 -o $num1 -eq $num3 -o $num1 -eq $num4 -o $num2 -eq $num3 -o $num2 -eq $num4 -o $num3 -eq $num4 <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+        echo <span style="color:#e6db74">&#34;형식에 맞춰 다시 입력하세요!&#34;</span>
+        Game_Start
+    <span style="color:#66d9ef">fi</span>
+
+<span style="color:#f92672">}</span>
+
+main<span style="color:#f92672">(){</span>
+    Solution
+    Game_Start
+<span style="color:#f92672">}</span>
+
+main
+</code></pre></div><h1 id="heading-5"></h1>
+<p> </p>
+<h1 id="heading-6"></h1>
+<h3 id="network-정적-자동설정-스크립트"><strong>Network 정적 자동설정 스크립트</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>Network_Interface<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        echo <span style="color:#e6db74">&#34;
+</span><span style="color:#e6db74">        1. interface Type : dhcp or static ( default : static )
+</span><span style="color:#e6db74">        2. interface name : choose ( default : auto )
+</span><span style="color:#e6db74">        3. IP : xxx.xxx.xxx.xxx
+</span><span style="color:#e6db74">        4. Netmask : xxx.xxx.xxx.xxx
+</span><span style="color:#e6db74">        5. gateway : xxx.xxx.xxx.xxx
+</span><span style="color:#e6db74">        6. DNS : xxx.xxx.xxx.xxx  ( default : x )
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">        ex) static ens33 192.168.10.10 255.255.255.0 192.168.10.2 8.8.8.8
+</span><span style="color:#e6db74">        기본 값 입력을 원할시 : 0
+</span><span style="color:#e6db74">        &#34;</span>
+        read Interface_Type Interface_Name IP Netmask Gateway DNS
+        echo $Null
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $Interface_Type -eq <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                Interface_Type<span style="color:#f92672">=</span>static
+                        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Interface_Type !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;dhcp&#34;</span> -o $Interface_Type !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;static&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        echo <span style="color:#e6db74">&#34;Interface_Type을 잘못 입력했습니다.&#34;</span>
+                        echo <span style="color:#e6db74">&#34;처음으로 돌아갑니다.&#34;</span>
+                        Network_Interface
+        <span style="color:#66d9ef">fi</span>
+
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $Interface_Name <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                Interface_Which<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>ls /etc/sysconfig/network-scripts/ifcfg-* | grep ifcfg-e<span style="color:#e6db74">`</span>
+                Interface_Name<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>Interface_Which#*ifcfg-<span style="color:#e6db74">}</span>
+
+        <span style="color:#66d9ef">else</span>
+                Interface_Which<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>ls /etc/sysconfig/network-scripts/ifcfg-* | grep ifcfg-e<span style="color:#e6db74">`</span>
+
+        <span style="color:#66d9ef">fi</span>
+
+        UUID<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>cat $Interface_Which | grep UUID<span style="color:#e6db74">`</span>
+        UUID<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>UUID#*UUID=<span style="color:#e6db74">}</span>
+        <span style="color:#75715e"># 앞은 %%i* 키워드</span>
+        <span style="color:#75715e"># 뒤는 #*i 키워드</span>
+
+
+
+
+echo <span style="color:#e6db74">&#34;
+</span><span style="color:#e6db74">TYPE=Ethernet
+</span><span style="color:#e6db74">PROXY_METHOD=none
+</span><span style="color:#e6db74">BROWSER_ONLY=no
+</span><span style="color:#e6db74">BOOTPROTO=</span>$Interface_Type<span style="color:#e6db74">
+</span><span style="color:#e6db74">DEFROUTE=yes
+</span><span style="color:#e6db74">IPV4_FAILURE_FATAL=no
+</span><span style="color:#e6db74">IPV6INIT=yes
+</span><span style="color:#e6db74">IPV6_AUTOCONF=yes
+</span><span style="color:#e6db74">IPV6_DEFROUTE=yes
+</span><span style="color:#e6db74">IPV6_FAILURE_FATAL=no
+</span><span style="color:#e6db74">IPV6_ADDR_GEN_MODE=stable-privacy
+</span><span style="color:#e6db74">NAME=</span>$Interface_Name<span style="color:#e6db74">
+</span><span style="color:#e6db74">UUID=</span>$UUID<span style="color:#e6db74">
+</span><span style="color:#e6db74">DEVICE=</span>$Interface_Name<span style="color:#e6db74">
+</span><span style="color:#e6db74">ONBOOT=yes
+</span><span style="color:#e6db74">IPADDR=</span>$IP<span style="color:#e6db74">
+</span><span style="color:#e6db74">NETMASK=</span>$Netmask<span style="color:#e6db74">
+</span><span style="color:#e6db74">GATEWAY=</span>$Gateway<span style="color:#e6db74">
+</span><span style="color:#e6db74">DNS=</span>$DNS<span style="color:#e6db74">
+</span><span style="color:#e6db74">&#34;</span> &gt; <span style="color:#e6db74">&#34;</span>$Interface_Which<span style="color:#e6db74">&#34;</span>
+
+<span style="color:#f92672">}</span>
+
+
+main<span style="color:#f92672">(){</span>
+Network_Interface
+systemctl restart network
+<span style="color:#f92672">}</span>
+
+
+
+main
+
+</code></pre></div><h1 id="heading-7"></h1>
+<p> </p>
+<h1 id="heading-8"></h1>
+<h3 id="마운트-및-등록-스크립트"><strong>마운트 및 등록 스크립트</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">for</span> i in <span style="color:#f92672">{</span>1..32<span style="color:#f92672">}</span>;
+<span style="color:#66d9ef">do</span>
+        echo <span style="color:#e6db74">&#34;- - -&#34;</span> &gt; <span style="color:#e6db74">&#34;/sys/class/scsi_host/host</span>$i<span style="color:#e6db74">/scan&#34;</span>
+<span style="color:#66d9ef">done</span>
+
+
+Mount<span style="color:#f92672">(){</span> 
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> ! -d ~/Mountlist <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                mkdir ~/Mountlist
+                echo <span style="color:#e6db74">`</span>ls /dev/* &gt; ~/Mountlist/Mountlist.txt<span style="color:#e6db74">`</span>
+                Mount
+        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> -d ~/Mountlist -a ! -f ~/Mountlist/Mountlist.txt <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                echo <span style="color:#e6db74">`</span>ls /dev/* &gt; ~/Mountlist/Mountlist.txt<span style="color:#e6db74">`</span>
+                Mount
+        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> -d ~/Mountlist -a -f ~/Mountlist/Mountlist.txt <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                echo <span style="color:#e6db74">`</span>ls /dev/* &gt; ~/Mountlist/Mountlist2.txt<span style="color:#e6db74">`</span>
+        <span style="color:#66d9ef">fi</span>
+
+
+        diff ~/Mountlist/Mountlist.txt ~/Mountlist/Mountlist2.txt | grep /dev/ &gt; ~/Mountlist/Mount.txt
+        sed -e <span style="color:#e6db74">&#39;s/&gt; //g&#39;</span> ~/Mountlist/Mount.txt &gt; ~/Mountlist/Mount2.txt
+        rm -rf ~/Mountlist/Mount.txt
+        Mount<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>cat ~/Mountlist/Mount2.txt<span style="color:#e6db74">`</span>
+
+        fdisk
+<span style="color:#f92672">}</span>
+
+fdisk<span style="color:#f92672">(){</span>
+        echo 
+
+
+
+        Num<span style="color:#f92672">=</span>1
+        <span style="color:#66d9ef">for</span> i in $Mount;
+        <span style="color:#66d9ef">do</span>
+        cat ~/Mountlist/Partition.txt | grep Create &gt; ~/Mountlist/Create.txt
+        Create_Partition_Number<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>sed -e <span style="color:#e6db74">&#39;s/Create Partition Number 0~4 ://g&#39;</span> ~/Mountlist/Create.txt<span style="color:#e6db74">`</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$Create_Partition_Number<span style="color:#e6db74">&#34;</span> -o <span style="color:#e6db74">&#34;Create_Partition_Number&#34;</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                Create_Partition_Number<span style="color:#f92672">=</span>1
+        <span style="color:#66d9ef">fi</span>
+
+        cat ~/Mountlist/Partition.txt | grep type &gt; ~/Mountlist/Create.txt
+        Partition_type<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>sed -e <span style="color:#e6db74">&#39;s/Partition type ://g&#39;</span> ~/Mountlist/Create.txt<span style="color:#e6db74">`</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$Partition_type<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                Partition_type<span style="color:#f92672">=</span>p
+        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$Partition_type<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;p&#34;</span> -o <span style="color:#e6db74">&#34;</span>$Partition_type<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;e&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                echo <span style="color:#e6db74">&#34;잘못된 설정을 기입하여 기본설정으로 변경합니다.&#34;</span>
+                Partition_type<span style="color:#f92672">=</span>p
+        <span style="color:#66d9ef">fi</span>
+        
+        cat ~/Mountlist/Partition.txt | grep First &gt; ~/Mountlist/Create.txt
+        First_sector<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>sed -e <span style="color:#e6db74">&#39;s/First sector ://g&#39;</span> ~/Mountlist/Create.txt<span style="color:#e6db74">`</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$First_sector<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                First_sector<span style="color:#f92672">=</span>2048
+        <span style="color:#66d9ef">fi</span>
+        
+        cat ~/Mountlist/Partition.txt | grep Last &gt; ~/Mountlist/Create.txt
+        Last_sector<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>sed -e <span style="color:#e6db74">&#39;s/Last sector ://g&#39;</span> ~/Mountlist/Create.txt<span style="color:#e6db74">`</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$Last_sector<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                Last_sector<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>expr $First_sector + 10240<span style="color:#e6db74">`</span>
+        <span style="color:#66d9ef">fi</span>
+
+        cat ~/Mountlist/Partition.txt | grep Select &gt; ~/Mountlist/Create.txt
+        Select_Partition_Number<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>sed -e <span style="color:#e6db74">&#39;s/Select Partition Number ://g&#39;</span> ~/Mountlist/Create.txt<span style="color:#e6db74">`</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$Select_Partition_Number<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                Select_Partition_Number<span style="color:#f92672">=</span>8e
+        <span style="color:#66d9ef">fi</span>
+        
+
+        cat ~/Mountlist/Partition.txt | grep Point &gt; ~/Mountlist/Create.txt
+        Mount_Point<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>sed -e <span style="color:#e6db74">&#39;s/Mount Point ://g&#39;</span> ~/Mountlist/Create.txt<span style="color:#e6db74">`</span>
+
+
+        cat ~/Mountlist/Partition.txt | grep Filesystem &gt; ~/Mountlist/Create.txt
+        Mount_Filesystem<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>sed -e <span style="color:#e6db74">&#39;s/Mount Filesystem ://g&#39;</span> ~/Mountlist/Create.txt<span style="color:#e6db74">`</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$Mount_Filesystem<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                Mount_Filesystem<span style="color:#f92672">=</span>ext3
+        <span style="color:#66d9ef">fi</span>
+
+        echo <span style="color:#e6db74">&#34;살아있음!&#34;</span>
+        fdisk $i
+        
+                <span style="color:#66d9ef">for</span> go in n $Partition_type $Create_Partition_Number $First_sector $Last_sector t $Select_Partition_Number w;
+                <span style="color:#66d9ef">do</span>
+                        echo $go
+
+                <span style="color:#66d9ef">done</span>
+
+        mkfs.$Mount_Filesystem $i$Num
+        mount $Mount_Point
+
+        echo $i$Num     $Mount_Point    ext3    defaults        <span style="color:#ae81ff">0</span>       0
+        <span style="color:#f92672">(</span>NUM++<span style="color:#f92672">)</span> &gt;&gt; /etc/fstab
+        <span style="color:#66d9ef">done</span>
+        rm -rf ~/Mountlist/Mount2.txt ~/Mountlist/Create.txt
+
+<span style="color:#f92672">}</span>
+
+Main<span style="color:#f92672">(){</span>
+        Mount
+<span style="color:#f92672">}</span>
+
+Main
+
+
+~/Mountlist/Partition.txt
+
+Create Partition Number 0~4 :
+<span style="color:#75715e"># 생성할 파티션의 수</span>
+<span style="color:#75715e"># default : 1</span>
+
+Partition type : p
+<span style="color:#75715e"># 생성할 파티션 타입</span>
+<span style="color:#75715e"># default : p</span>
+
+Partition Number : 1
+<span style="color:#75715e"># 생성할 파티션의 번호</span>
+<span style="color:#75715e"># default : 1 2 3 4</span>
+
+First sector :
+<span style="color:#75715e"># 파티션의 시작용량할당</span>
+<span style="color:#75715e"># default : 2048</span>
+
+Last sector :
+<span style="color:#75715e"># 파티션의 끝사용용량할당</span>
+<span style="color:#75715e"># default : First sector + 10GB</span>
+<span style="color:#75715e"># + 1024KB</span>
+<span style="color:#75715e"># + 100MB</span>
+<span style="color:#75715e"># + 10GB</span>
+
+
+Select Partition Number : 
+<span style="color:#75715e"># dafault : 8e ( Linux LVM )</span>
+<span style="color:#75715e"># 82 : Linux swap</span>
+<span style="color:#75715e"># 83 : Linux</span>
+<span style="color:#75715e"># 83 : Linux LVM .....</span>
+
+Mount Point : ~/test
+<span style="color:#75715e"># 마운트할 장소</span>
+
+Mount Filesystem : ext3
+<span style="color:#75715e"># default ext3</span>
+</code></pre></div><h1 id="heading-9"></h1>
+<p> </p>
+<h1 id="heading-10"></h1>
+<h3 id="user-생성-스크립트"><strong>User 생성 스크립트</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+Useradd<span style="color:#f92672">(){</span>
+        UserName<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>awk <span style="color:#e6db74">&#39;/UserName/&#39;</span> UserTemplates.txt<span style="color:#e6db74">`</span>
+        UserName<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>UserName#*UserName :<span style="color:#e6db74">}</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z $UserName <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                echo <span style="color:#e6db74">&#34;User 이름을 확인하세요! &#34;</span>
+        <span style="color:#66d9ef">fi</span>
+        UserName<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>echo <span style="color:#e6db74">&#34; </span>$UserName<span style="color:#e6db74">&#34;</span> | tr -d <span style="color:#e6db74">&#39; &#39;</span><span style="color:#e6db74">`</span>
+
+
+        Password<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>awk <span style="color:#e6db74">&#39;/Password/&#39;</span> UserTemplates.txt<span style="color:#e6db74">`</span>
+        Password<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>Password#*Password :<span style="color:#e6db74">}</span>
+
+        UserShell<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>awk <span style="color:#e6db74">&#39;/UserShell/&#39;</span> UserTemplates.txt<span style="color:#e6db74">`</span> 
+        UserShell<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>UserShell#*UserShell :<span style="color:#e6db74">}</span>
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z $UserShell <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                UserShell<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/bin/bash&#39;</span>
+        <span style="color:#66d9ef">fi</span>
+
+        HomeWhich<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>awk <span style="color:#e6db74">&#39;/HomeWhich/&#39;</span> UserTemplates.txt<span style="color:#e6db74">`</span> 
+        HomeWhich<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>HomeWhich#*HomeWhich :<span style="color:#e6db74">}</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z $HomeWhich <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                HomeWhich<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/</span>$UserName<span style="color:#e6db74">&#34;</span>
+                HomeWhich<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>echo <span style="color:#e6db74">&#34;</span>$HomeWhich<span style="color:#e6db74">&#34;</span> | tr -d <span style="color:#e6db74">&#39; &#39;</span><span style="color:#e6db74">`</span>
+        <span style="color:#66d9ef">fi</span>
+
+        HomeDir<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>awk <span style="color:#e6db74">&#39;/HomeDir/&#39;</span> UserTemplates.txt<span style="color:#e6db74">`</span>
+        HomeDir<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>HomeDir#*HomeDir :<span style="color:#e6db74">}</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z $HomeDir <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                HomeDir<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;-m -d &#39;</span>
+        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $HomeDir <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;-M&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                HomeWhich<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>
+                HomeDir<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>
+        <span style="color:#66d9ef">else</span>
+                HomeDir<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;-m -d &#39;</span>
+        <span style="color:#66d9ef">fi</span>
+
+
+        UserGroup<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>awk <span style="color:#e6db74">&#39;/UserGroup/&#39;</span> UserTemplates.txt<span style="color:#e6db74">`</span> 
+        UserGroup<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>UserGroup#*UserGroup :<span style="color:#e6db74">}</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z $UserGroup <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                UserGroup<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;-N&#39;</span>
+        <span style="color:#66d9ef">fi</span>
+
+        UserUID<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>awk <span style="color:#e6db74">&#39;/UserUID/&#39;</span> UserTemplates.txt<span style="color:#e6db74">`</span> 
+        UserUID<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>UserUID#*UserUID :<span style="color:#e6db74">}</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> ! -z $UserUID <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                UserUID<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-u </span>$UserUID<span style="color:#e6db74">&#34;</span>
+        <span style="color:#66d9ef">fi</span>
+
+        GroupUID<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>awk <span style="color:#e6db74">&#39;/GroupUID/&#39;</span> UserTemplates.txt<span style="color:#e6db74">`</span> 
+        GroupUID<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>GroupUID#*GroupUID :<span style="color:#e6db74">}</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> ! -z $GroupUID <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                GroupUID<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-g </span>$GroupUID<span style="color:#e6db74">&#34;</span>
+        <span style="color:#66d9ef">fi</span>
+
+
+
+        useradd -n $UserName -s $UserShell $HomeDir $HomeWhich $UserGroup $UserUID $GroupUD
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> ! -z $Password <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                echo <span style="color:#e6db74">&#34;</span>$Password<span style="color:#e6db74">&#34;</span> | passwd --stdin <span style="color:#e6db74">&#34;</span>$UserName<span style="color:#e6db74">&#34;</span>
+                echo <span style="color:#e6db74">&#34;Password 설정완료&#34;</span>
+        <span style="color:#66d9ef">fi</span>
+
+
+<span style="color:#f92672">}</span>
+
+
+main<span style="color:#f92672">(){</span>
+Useradd
+
+<span style="color:#f92672">}</span>
+
+main
+
+
+UserTemplates.txt
+
+UserName :
+<span style="color:#75715e"># 유저의 이름 (필수 입력사항)</span>
+
+Password : 
+<span style="color:#75715e"># 로그인 시 사용할 비밀번호</span>
+<span style="color:#75715e"># default : 없음</span>
+
+UserShell :
+<span style="color:#75715e"># 유저가 사용할 쉘</span>
+<span style="color:#75715e"># default : /bin/bash</span>
+
+HomeDir :
+<span style="color:#75715e"># 홈 디렉터리 생성 여부 ( 생성 : -m | 생성안함 : -M )</span>
+<span style="color:#75715e"># default : m (생성)</span>
+
+HomeWhich :
+<span style="color:#75715e"># 홈 디렉터리의 위치</span>
+<span style="color:#75715e"># default : /home/</span>
+
+UserGroup : 
+<span style="color:#75715e"># 개인그룹 생성여부 (생성하지 않음 : -N)</span>
+<span style="color:#75715e"># default : -N</span>
+
+UserUID :
+<span style="color:#75715e"># UID를 수동으로 결정</span>
+<span style="color:#75715e"># default : auto</span>
+
+GroupUID :
+<span style="color:#75715e"># 수동으로 그룹 ID를 지정</span>
+<span style="color:#75715e"># default : auto</span>
+
+
+
+
+
+</code></pre></div><h1 id="heading-11"></h1>
+<p> </p>
+<h1 id="heading-12"></h1>
+<h3 id="pv-vg-lv-스크립트"><strong>PV VG LV 스크립트</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+
+PV<span style="color:#f92672">(){</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;PV 생성 및 제거&#34;</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;생성할 PV 디바이스 명을 입력하세요.&#34;</span>
+        echo <span style="color:#e6db74">&#34;뛰어쓰기로 구분됩니다.&#34;</span>
+        echo <span style="color:#e6db74">&#34;ex /dev/sda1 /dev/sda2 ...&#34;</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;삭제를 원할 시에는 앞에 -r을 입력하고 삭제할 PV 디바이스를 입력하세요.&#34;</span>
+        echo <span style="color:#e6db74">&#34;ex -r /dev/sda1 /dev sda2 ...&#34;</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;0. 메인메뉴로 돌아가기&#34;</span>
+        read PV
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">${</span>PV[0]<span style="color:#e6db74">}</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;-r&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>PV[@]<span style="color:#e6db74">}</span>;
+                <span style="color:#66d9ef">do</span>
+                        pvremove $i
+                        echo <span style="color:#e6db74">&#34;PV </span>$i의<span style="color:#e6db74"> 삭제가 완료되었습니다.&#34;</span>
+                <span style="color:#66d9ef">done</span>
+        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">${</span>PV[0] == <span style="color:#e6db74">&#34;0&#34;</span><span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                <span style="color:#66d9ef">continue</span>
+        <span style="color:#66d9ef">else</span>
+                <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>PV[@]<span style="color:#e6db74">}</span>;
+                <span style="color:#66d9ef">do</span>
+                        pvcreate $i
+                        echo <span style="color:#e6db74">&#34;PV의 </span>$i의<span style="color:#e6db74"> 생성이 완료되었습니다.&#34;</span>
+                <span style="color:#66d9ef">done</span>
+        <span style="color:#66d9ef">fi</span>
+        main
+<span style="color:#f92672">}</span>
+
+
+VG<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;VG 생성 및 제거&#34;</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;생성할 vg명과 디바이스를 순서에 맞게 입력하세요.&#34;</span>
+        echo <span style="color:#e6db74">&#34;뛰어쓰기로 구분됩니다.&#34;</span>
+        echo <span style="color:#e6db74">&#34;ex vg1 /dev/sda1 /dev/sda2 ...&#34;</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;삭제를 원할 시에는 앞에 -r을 입력하고 삭제할 VG 디바이스를 입력하세요.&#34;</span>
+        echo <span style="color:#e6db74">&#34;ex -r vg1 vg2 ...&#34;</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;0. 메인메뉴로 돌아가기&#34;</span>
+        read VG
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">${</span>VG[0]<span style="color:#e6db74">}</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;-r&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>PV[@]<span style="color:#e6db74">}</span>;
+                <span style="color:#66d9ef">do</span>
+                        vgremove $i
+                        echo <span style="color:#e6db74">&#34;VG </span>$i의<span style="color:#e6db74"> 삭제가 완료되었습니다.&#34;</span>
+                <span style="color:#66d9ef">done</span>
+        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">${</span>VG[0] == <span style="color:#e6db74">&#34;0&#34;</span><span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                <span style="color:#66d9ef">continue</span>
+        <span style="color:#66d9ef">else</span>
+                <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>PV[@]<span style="color:#e6db74">}</span>;
+                <span style="color:#66d9ef">do</span>
+                        vgcreate $i
+                        echo <span style="color:#e6db74">&#34;VG의 </span>$i의<span style="color:#e6db74"> 생성이 완료되었습니다.&#34;</span>
+                <span style="color:#66d9ef">done</span>
+        <span style="color:#66d9ef">fi</span>
+        main
+<span style="color:#f92672">}</span>
+
+
+LV<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;LV 생성 및 제거&#34;</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;lv 생성을 위해서는 lv의 용량, vg, lv명을 순서에 맞게 입력하세요.&#34;</span>
+        echo <span style="color:#e6db74">&#34;뛰어쓰기로 구분됩니다.&#34;</span>
+        echo <span style="color:#e6db74">&#34;ex -L 10G vg1 lv1&#34;</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span> 
+        echo <span style="color:#e6db74">&#34;lv 수정을 위해서는 앞에 -n을 입력하고 lv명 바뀔 lv명을 입력하세요.&#34;</span>
+        echo <span style="color:#e6db74">&#34;ex -n vg1 vvg1&#34;</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;lv의 용량을 수정하기 위해서는 앞에 -S를 입력 후 -L 이나 -I를 입력하세요.&#34;</span>
+        echo <span style="color:#e6db74">&#34;ex -S -L 12G lv1&#34;</span>
+        echo <span style="color:#e6db74">&#34;ex -S -L 1G lv1&#34;</span>
+        echo <span style="color:#e6db74">&#34;ex -S -I +100%FREE lv1&#34;</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;삭제를 원할 시에는 앞에 -r을 입력하고 삭제할 LV 명을 입력하세요.&#34;</span>
+        echo <span style="color:#e6db74">&#34;ex -r lv1 lv2 ...&#34;</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;0. 메인메뉴로 돌아가기&#34;</span>
+        read LV
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        PV
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>PV[@]<span style="color:#e6db74">}</span>
+                        <span style="color:#66d9ef">do</span>
+                                <span style="color:#e6db74">`</span><span style="color:#e6db74">&#34;echo pvscan | grep </span>$i<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">`</span>
+                        <span style="color:#66d9ef">done</span>
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        VG
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;3&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>VG[@]<span style="color:#e6db74">}</span>
+                        <span style="color:#66d9ef">do</span>
+                                <span style="color:#e6db74">`</span>echo <span style="color:#e6db74">&#34;vgscan | grep </span>$i<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">`</span>
+                        <span style="color:#66d9ef">done</span>
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;4&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        LV
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;5&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>LV[@]<span style="color:#e6db74">}</span>
+                        <span style="color:#66d9ef">do</span>
+                                <span style="color:#e6db74">`</span>echo <span style="color:#e6db74">&#34;lvscan | grep </span>$i<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">`</span>
+                        <span style="color:#66d9ef">done</span>
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;6&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        RAID
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;7&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>RAID[@]<span style="color:#e6db74">}</span>
+                        <span style="color:#66d9ef">do</span>
+                                <span style="color:#e6db74">`</span>echo <span style="color:#e6db74">&#34;raidscan | grep </span>$i<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">`</span>
+                        <span style="color:#66d9ef">done</span>
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;8&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        <span style="color:#f92672">((</span>Kron++<span style="color:#f92672">))</span>
+                <span style="color:#66d9ef">fi</span>
+
+
+
+
+
+        main
+<span style="color:#f92672">}</span>
+
+
+RAID<span style="color:#f92672">(){</span>
+
+
+        main
+<span style="color:#f92672">}</span>
+
+
+main<span style="color:#f92672">(){</span>
+
+        Korn<span style="color:#f92672">=</span>0
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">[</span> Korn <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#f92672">]</span>;
+        <span style="color:#66d9ef">do</span>
+                echo <span style="color:#e6db74">&#34;&#34;</span>
+                echo <span style="color:#e6db74">&#34;PV, VG, LV을 생성하기 위한 스크립트 파일입니다.&#34;</span>
+                echo <span style="color:#e6db74">&#34;&#34;</span>
+                echo <span style="color:#e6db74">&#34;0: PV 생성 및 제거&#34;</span>
+                echo <span style="color:#e6db74">&#34;1: PV 확인&#34;</span>
+                echo <span style="color:#e6db74">&#34;&#34;</span>
+                echo <span style="color:#e6db74">&#34;2: VG 생성 및 제거&#34;</span>
+                echo <span style="color:#e6db74">&#34;3: VG 확인&#34;</span>
+                echo <span style="color:#e6db74">&#34;&#34;</span>
+                echo <span style="color:#e6db74">&#34;4: LV 생성 및 제거&#34;</span>
+                echo <span style="color:#e6db74">&#34;5: LV 확인&#34;</span>
+                echo <span style="color:#e6db74">&#34;&#34;</span>
+                echo <span style="color:#e6db74">&#34;6: RAID 생성 및 제거&#34;</span>
+                echo <span style="color:#e6db74">&#34;7: RAID 확인&#34;</span>
+                echo <span style="color:#e6db74">&#34;&#34;</span>
+                echo <span style="color:#e6db74">&#34;8: 종료&#34;</span>
+                echo <span style="color:#e6db74">&#34;메뉴는 언제나 사용가능합니다.&#34;</span>
+                echo <span style="color:#e6db74">&#34;원하시는 메뉴를 선택해주세요.&#34;</span>
+                read Call
+
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        PV
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>PV[@]<span style="color:#e6db74">}</span>
+                                echo <span style="color:#e6db74">`</span>pvscan | grep $i<span style="color:#e6db74">`</span>
+                        <span style="color:#66d9ef">fi</span>
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        VG
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;3&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>VG[@]<span style="color:#e6db74">}</span>
+                                echo <span style="color:#e6db74">`</span>vgscan | grep $i<span style="color:#e6db74">`</span>
+                        <span style="color:#66d9ef">fi</span>
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;4&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        LV
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;5&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>LV[@]<span style="color:#e6db74">}</span>
+                                echo <span style="color:#e6db74">`</span>lvscan | grep $i<span style="color:#e6db74">`</span>
+                        <span style="color:#66d9ef">fi</span>
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;6&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        RAID
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;7&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>RAID[@]<span style="color:#e6db74">}</span>
+                                echo <span style="color:#e6db74">`</span>raidscan | grep $i<span style="color:#e6db74">`</span>
+                        <span style="color:#66d9ef">fi</span>
+                <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $Call <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;8&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+                        <span style="color:#f92672">((</span>Kron++<span style="color:#f92672">))</span>
+                <span style="color:#66d9ef">fi</span>
+
+        <span style="color:#66d9ef">done</span>
+<span style="color:#f92672">}</span>
+
+
+
+
+LVM.txt
+<span style="color:#75715e"># 정리 중</span>
+
+PVDevice: 
+<span style="color:#75715e"># PV 디바이스, 뛰어쓰기로 구분</span>
+<span style="color:#75715e"># ex /dev/sda1 /dev/sda2 /dev/sdb3....</span>
+
+VGDevice : 
+<span style="color:#75715e"># VG 디바이스, 뛰어쓰기로 구분</span>
+<span style="color:#75715e"># ex /dev/sda1 /dev/sda2 /dev/sdb3....</span>
+
+VGName :
+<span style="color:#75715e"># 생성할 VG의 이름, 뛰어쓰기로 구분</span>
+<span style="color:#75715e"># ex vg1 vg2 vg3 ...</span>
+
+LVSize : 
+<span style="color:#75715e"># 생성할 LV의 용량</span>
+
+LVDevice : 
+<span style="color:#75715e"># LV 디바이스, 뛰어쓰기로 구분</span>
+<span style="color:#75715e"># ex vg1 vg2 vg3 ...</span>
+
+LVName : 
+<span style="color:#75715e"># 생성할 LV의 이름, 뛰어쓰기로 구분</span>
+<span style="color:#75715e"># ex lv1 lv2 lv3 ...</span>
+
+
+
+
+</code></pre></div><h1 id="heading-13"></h1>
+<p> </p>
+<h1 id="heading-14"></h1>
+<h3 id="파일에서-특정-단어를-찾아서-행을-변경하는-스크립트"><strong>파일에서 특정 단어를 찾아서 행을 변경하는 스크립트</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># 옵션에 맞게 스크립트를 실행시키세요.</span>
+
+<span style="color:#75715e"># ex Change.sh [File] [Keyword] [변경할 키워드]</span>
+
+<span style="color:#75715e"># ex Change.sh /etc/httpd//condf/httpd.conf Listen Listen 81</span>
+
+<span style="color:#75715e"># 주의할 점은 띄어쓰기를 원할시 반드시 &#34;_&#34;로 표시해주세요.</span>
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z $1 -o -z $2 -o -z $3 <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+        echo <span style="color:#e6db74">&#34;Error : 잘못된 옵션을 입력하셨습니다.&#34;</span>
+<span style="color:#66d9ef">else</span>
+        Num<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>grep -n $2 $1 | sed <span style="color:#e6db74">&#39;/#/d&#39;</span><span style="color:#e6db74">`</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;변경 전 : </span>$Num<span style="color:#e6db74">&#34;</span> 
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        Num<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>Num%%:*<span style="color:#e6db74">}</span>
+
+        echo $3 &gt; ./Change.txt
+        Change<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>sed -e <span style="color:#e6db74">&#39;s/_/ /g&#39;</span> Change.txt<span style="color:#e6db74">`</span>
+        rm -rf ./Change.txt
+
+        Num<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>echo <span style="color:#e6db74">&#34;</span>$Num<span style="color:#e6db74"> s/.*/&#34;</span> | tr -d <span style="color:#e6db74">&#39; &#39;</span><span style="color:#e6db74">`</span>
+        sed -i <span style="color:#e6db74">&#34;</span>$Num$Change<span style="color:#e6db74">/g&#34;</span>  $1
+        Num<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>grep -n $Change $1 | sed <span style="color:#e6db74">&#39;/#/d&#39;</span><span style="color:#e6db74">`</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+        echo <span style="color:#e6db74">&#34;변경 후 : </span>$Num<span style="color:#e6db74">&#34;</span>
+        echo <span style="color:#e6db74">&#34;&#34;</span>
+
+
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><h1 id="heading-15"></h1>
+<p> </p>
+<h1 id="heading-16"></h1>
+<h3 id="예외처리"><strong>예외처리</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span><span style="color:#75715e"># 현재 공부중</span>
+
+<span style="color:#66d9ef">function</span> try<span style="color:#f92672">()</span>
+<span style="color:#f92672">{</span>
+    <span style="color:#f92672">[[</span> $- <span style="color:#f92672">=</span> *e* <span style="color:#f92672">]]</span>; SAVED_OPT_E<span style="color:#f92672">=</span>$?
+    set +e
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">function</span> throw<span style="color:#f92672">()</span>
+<span style="color:#f92672">{</span>
+    exit $1
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">function</span> catch<span style="color:#f92672">()</span>
+<span style="color:#f92672">{</span>
+    export ex_code<span style="color:#f92672">=</span>$?
+    <span style="color:#f92672">((</span> $SAVED_OPT_E <span style="color:#f92672">))</span> <span style="color:#f92672">&amp;&amp;</span> set +e
+    <span style="color:#66d9ef">return</span> $ex_code
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">function</span> throwErrors<span style="color:#f92672">()</span>
+<span style="color:#f92672">{</span>
+    set -e
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">function</span> ignoreErrors<span style="color:#f92672">()</span>
+<span style="color:#f92672">{</span>
+    set +e
+<span style="color:#f92672">}</span>
+
+
+</code></pre></div><h1 id="heading-17"></h1>
+<p> </p>
+<h1 id="heading-18"></h1>
+<h3 id="heading-19">****</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+</code></pre></div><h1 id="heading-20"></h1>
+<p> </p>
+<h1 id="heading-21"></h1>
+<h3 id="heading-22">****</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+</code></pre></div><h1 id="heading-23"></h1>
+<p> </p>
+<h1 id="heading-24"></h1>
+<h3 id="heading-25">****</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+</code></pre></div><h1 id="heading-26"></h1>
+<p> </p>
+<h1 id="heading-27"></h1>
+<h3 id="heading-28">****</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+</code></pre></div><h1 id="heading-29"></h1>
+<p> </p>
+<h1 id="heading-30"></h1>
+<h3 id="heading-31">****</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+</code></pre></div><h1 id="heading-32"></h1>
+<p> </p>
+<h1 id="heading-33"></h1>
+<h3 id="heading-34">****</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+</code></pre></div><h1 id="heading-35"></h1>
+<p> </p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#연습문제-정리"><strong>연습문제 정리</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#구구단"><strong>구구단</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#야구게임"><strong>야구게임</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#network-정적-자동설정-스크립트"><strong>Network 정적 자동설정 스크립트</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#마운트-및-등록-스크립트"><strong>마운트 및 등록 스크립트</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#user-생성-스크립트"><strong>User 생성 스크립트</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pv-vg-lv-스크립트"><strong>PV VG LV 스크립트</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#파일에서-특정-단어를-찾아서-행을-변경하는-스크립트"><strong>파일에서 특정 단어를 찾아서 행을 변경하는 스크립트</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#예외처리"><strong>예외처리</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-19">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-22">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-25">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-28">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-31">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-34">****</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

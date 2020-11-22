@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="EC2 동적 사이트 구축    이번 장에서는 EC2와 WordPress, RDS를 활용해 동적 사이트를 구축해보겠습니다. 이 장에서는 RDS 복제본 사용시 과금이 청구될 수 있습니다. 이를 원치 않는 분들은, RDS 설정 시, Multi-AZ 설정을 하지 않고, 1개의 Master RDS만 생성 후 진행하세요.    EC2 동적 사이트 구축       VPC     VPC 이름 IPv4 CIDR     VPC-WordPress 10.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/aws/awstraining/ec2site/><meta property="og:title" content="EC2 동적 사이트 구축" />
+<meta property="og:description" content="EC2 동적 사이트 구축    이번 장에서는 EC2와 WordPress, RDS를 활용해 동적 사이트를 구축해보겠습니다. 이 장에서는 RDS 복제본 사용시 과금이 청구될 수 있습니다. 이를 원치 않는 분들은, RDS 설정 시, Multi-AZ 설정을 하지 않고, 1개의 Master RDS만 생성 후 진행하세요.    EC2 동적 사이트 구축       VPC     VPC 이름 IPv4 CIDR     VPC-WordPress 10." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/aws/awstraining/ec2site/" />
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.693a0c9d102dd896d4abc74767d815b1ccfc1745a230412deefdc7153ed52b2e.js" integrity="sha256-aToMnRAt2JbUq8dHZ9gVscz8F0WiMEEt7v3HFT7VKy4="></script>
+<!--
+
+-->
+
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/start/" class="">AWS 시작하기</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/iam/" class="">AWS 사용자 계정 생성</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/cli/" class="">AWS CLI 활용</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/vpc/" class="">AWS 사용자 정의 VPC 생성</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/ec2/" class="">AWS EC2 생성</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/ami/" class="">AWS AMI 생성</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/eip/" class="">AWS Elastic IP 할당</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/elb/" class="">AWS ELB ( 2 Tier ) 생성</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/as/" class="">AWS AutoScaling</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/rds/" class="">AWS RDS 생성</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/3tier/" class="">AWS 3Tier 구현</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/s3/" class="">AWS S3 생성</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/owncloud/" class="">AWS OwnCloud</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/cloudformation/" class="">AWS CloudFormation</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/noserver/" class="">AWS 서버리스 사이트 구축</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/ebs/" class="">정리 중</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/cognito/" class="">AWS Cognito</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/ec2site/" class="active">EC2 동적 사이트 구축</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/elasticbeanstalk/" class="">Elastic Beanstalk 사이트 구축</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/ses/" class="">AWS SES 메일 시스템 구축</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/aws-lambda-crawling/" class="">AWS Lambda Crawling</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/aws/awstraining/game/" class="">EC2 끄투온라인 서버 구축</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/ncptraining/" class="collapsed ">NCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Programming</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/nas/" class="collapsed ">NAS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/project/" class="">Project</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>EC2 동적 사이트 구축</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ec2-동적-사이트-구축-1"><strong>EC2 동적 사이트 구축</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#ec2를-활용한-동적-사이트-구축"><strong>EC2를 활용한 동적 사이트 구축</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-rds-생성"><strong>1. RDS 생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#2-인스턴스-생성"><strong>2. 인스턴스 생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#3-elb-생성"><strong>3. ELB 생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#marketplace를-사용"><strong>Marketplace를 사용</strong></a></li>
+  </ul>
+</nav>
+
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="ec2-동적-사이트-구축"><strong>EC2 동적 사이트 구축</strong></h1>
+<hr>
+<h1 id="heading"></h1>
+<ul>
+<li><strong>이번 장에서는 EC2와 WordPress, RDS를 활용해 동적 사이트를 구축해보겠습니다.</strong>
+<blockquote class="book-hint warning">
+  <strong>이 장에서는 RDS 복제본 사용시 과금이 청구될 수 있습니다.</strong> <br>
+<strong>이를 원치 않는 분들은, RDS 설정 시, Multi-AZ 설정을 하지 않고, 1개의 Master RDS만 생성 후 진행하세요.</strong>
+</blockquote>
+</li>
+</ul>
+<h1 id="heading-1"></h1>
+<blockquote>
+<h2 id="ec2-동적-사이트-구축-1"><strong>EC2 동적 사이트 구축</strong></h2>
+</blockquote>
+<h1 id="heading-2"></h1>
+<p> </p>
+<h1 id="heading-3"></h1>
+<p><img src="/AWS/EC2/EC2Site01.png" alt="" /></p>
+<blockquote>
+<ul>
+<li><strong>VPC</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>VPC 이름</th>
+<th>IPv4 CIDR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VPC-WordPress</td>
+<td>10.0.0.0/16</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-4"></h1>
+<ul>
+<li><strong>Subnet</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Subnet 이름</th>
+<th>VPC</th>
+<th>AZ</th>
+<th>IPv4 CIDR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WordPress-Public-Subnet</td>
+<td>VPC-WordPress</td>
+<td>ap-northeast-a</td>
+<td>10.0.1.0/24</td>
+</tr>
+<tr>
+<td>WordPress-Public-Subnet2</td>
+<td>VPC-WordPress</td>
+<td>ap-northeast-c</td>
+<td>10.0.2.0/24</td>
+</tr>
+<tr>
+<td>RDS-Private-Subnet</td>
+<td>VPC-WordPress</td>
+<td>ap-northeast-a</td>
+<td>10.0.11.0/24</td>
+</tr>
+<tr>
+<td>RDS-Private-Subnet2</td>
+<td>VPC-WordPress</td>
+<td>ap-northeast-c</td>
+<td>10.0.12.0/24</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-5"></h1>
+<ul>
+<li><strong>Routing Table</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Routing Table 이름</th>
+<th>VPC</th>
+<th>Subnet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Public-rt</td>
+<td>VPC-WordPress</td>
+<td>WordPress-Public-Subnet, WordPress-Public-Subnet2</td>
+</tr>
+<tr>
+<td>Private-rt</td>
+<td>VPC-WordPress</td>
+<td>RDS-Private-Subnet, RDS-Private-Subnet2</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-6"></h1>
+<ul>
+<li><strong>보안 그룹</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>보안 그룹 이름</th>
+<th>VPC</th>
+<th>인 바운드 규칙</th>
+<th>아웃 바운드 규칙</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WordPress-sg</td>
+<td>VPC-WordPress</td>
+<td>SSH : 22/TCP : 0.0.0.0/24, HTTP : 80/TCP : 0.0.0.0/24</td>
+<td>모든 트래픽 : 0.0.0.0/0</td>
+<td></td>
+</tr>
+<tr>
+<td>RDS-sg</td>
+<td>VPC-WordPress</td>
+<td>WordPress-sg, 3306/TCP : WordPress-sg</td>
+<td>모든 트래픽 : 0.0.0.0/0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<ul>
+<li><strong>먼저 위의 아키텍처와 표와 같이 VPC와 서브넷을 생성해주세요.</strong></li>
+<li><strong>인터넷 게이트 생성 후, VPC에 연결하세요.</strong></li>
+<li><strong>모든 라우팅 테이블의 게이트웨이는 인터넷 게이트웨이로 지정해주세요.</strong></li>
+<li><strong><a href="https://mung0001.github.io/docs/cloudcomputing/awstraining/vpc/">VPC 사용자 정의 VPC 생성</a></strong></li>
+</ul>
+<h1 id="heading-7"></h1>
+<p> </p>
+<h1 id="heading-8"></h1>
+<h2 id="ec2를-활용한-동적-사이트-구축"><strong>EC2를 활용한 동적 사이트 구축</strong></h2>
+<hr>
+<h1 id="heading-9"></h1>
+<ul>
+<li><strong>기본적인 설정을 끝마치셨다면, 이제 동적 사이트 아래의 순서에 맞춰 구현해보겠습니다.</strong></li>
+</ul>
+<blockquote>
+<p><strong>1. RDS 생성</strong><br>
+<strong>2. 인스턴스 생성</strong><br>
+<strong>3. ELB 생성</strong></p>
+</blockquote>
+<h1 id="heading-10"></h1>
+<p> </p>
+<h1 id="heading-11"></h1>
+<h3 id="1-rds-생성"><strong>1. RDS 생성</strong></h3>
+<h1 id="heading-12"></h1>
+<p><img src="/AWS/EC2/EC2Site02.png" alt="" /><br>
+<img src="/AWS/EC2/EC2Site03.png" alt="" /></p>
+<ul>
+<li><strong>먼저 RDS 서브넷의 생성을 위해, RDS &gt; 서브넷 그룹 &gt; DB 서브넷 그룹을 위와 동일하게 생성합니다.</strong></li>
+</ul>
+<h1 id="heading-13"></h1>
+<p> </p>
+<h1 id="heading-14"></h1>
+<ul>
+<li><strong>아래의 형식에 맞춰 RDS를 생성합니다.</strong></li>
+<li><strong><a href="https://mung0001.github.io/docs/cloudcomputing/awstraining/rds/">RDS 설치 참고</a></strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>기본설정</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>설정 항목</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>License Model</td>
+<td>genral-publicl-license</td>
+</tr>
+<tr>
+<td>DB Engine Version</td>
+<td>5.7.28</td>
+</tr>
+<tr>
+<td>DB Instance Class</td>
+<td>db.t2.micro</td>
+</tr>
+<tr>
+<td>Multi-AZ Deployment</td>
+<td>General Purpose ( SSD )</td>
+</tr>
+<tr>
+<td>Allocated Storage</td>
+<td>20 GB</td>
+</tr>
+<tr>
+<td>DB 인스턴스 식별자</td>
+<td>WordPressDB</td>
+</tr>
+<tr>
+<td>마스터 사용자 ID, PW</td>
+<td>root/qwer1234</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-15"></h1>
+<ul>
+<li><strong>네트워크 설정</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>설정항목</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VPC</td>
+<td>VPC-WordPress</td>
+</tr>
+<tr>
+<td>Subnet Group</td>
+<td>rds-private</td>
+</tr>
+<tr>
+<td>Publicly Accessible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>AZ</td>
+<td>ap-northeast-2a</td>
+</tr>
+<tr>
+<td>VPC Security Groups</td>
+<td>RDS-sg</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-16"></h1>
+<ul>
+<li><strong>백업 설정</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>설정항목</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>백업 보존 기간</td>
+<td>1일</td>
+</tr>
+<tr>
+<td>백업 기간</td>
+<td>기본 설정 없음</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-17"></h1>
+<ul>
+<li><strong>유지 관리설정</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>설정항목</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>마이너 버전 자동 업그레이드</td>
+<td>사용</td>
+</tr>
+<tr>
+<td>유지 관리 기간</td>
+<td>기본 설정 없음</td>
+</tr>
+<tr>
+<td>삭제 방지</td>
+<td>삭제 방지 활성화 X</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<ul>
+<li><strong>개인 설정 및 이 이외 값을 기본 값을 유지합니다.</strong></li>
+</ul>
+<h1 id="heading-18"></h1>
+<p> </p>
+<h3 id="2-인스턴스-생성"><strong>2. 인스턴스 생성</strong></h3>
+<h1 id="heading-19"></h1>
+<ul>
+<li><strong>다음의 값으로 인스턴스를 생성합니다.</strong></li>
+</ul>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>설정 항목</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AMI</td>
+<td>Amazon Linux AMI</td>
+</tr>
+<tr>
+<td>Instance Type</td>
+<td>t2.micro</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>VPC-WordPress</td>
+</tr>
+<tr>
+<td>Subnet</td>
+<td>WordPress-Public</td>
+</tr>
+<tr>
+<td>Auto-asstign Public</td>
+<td>Enable</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>WordPress-a</td>
+</tr>
+<tr>
+<td>Security Group</td>
+<td>Wordpress-sg</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h1 id="heading-20"></h1>
+<p> </p>
+<h1 id="heading-21"></h1>
+<ul>
+<li><strong>생성이 완료되면 아래의 미들웨어들을 설치합니다.</strong></li>
+<li><strong>유저 이름은 ec2-user입니다.</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ sudo yum install -y php php-mysql php-gd php-mbstring
+# 관련 미들웨어를 설치합니다.
+
+$ sudo yum install -y mysql
+# mysql을 설치합니다.
+
+$ wget -O /tmp/wordpress-4.1-ja.tar.gz https://ko.wordpress.org/wordpress-4.6.1-ko_KR.tar.gz
+# wordpress-4.6.1...의 파일을 wordpress-4.1-ja.tar.gz의 이름으로 다운받습니다.
+
+$ sudo tar zxf /tmp/wordpress-4.1-ja.tar.gz -C /opt
+# wordpress 압축파일을 /opt에 압축을 해제합니다.
+
+$ sudo ln -s /opt/wordpress /var/www/html
+# 심볼릭 링크를 생성합니다.
+
+$ sudo chown -R apache:apache /opt/wordpress
+# wordpress의 소유 권한을 apache로 수정합니다.
+
+$ sudo chkconfig httpd on
+# httpd가 정상적으로 작동하는 지 체크합니다.
+
+$ sudo service httpd start
+$ httpd 서비스를 시작합니다.
+</code></pre></div><h1 id="heading-22"></h1>
+<p> </p>
+<h1 id="heading-23"></h1>
+<ul>
+<li><strong>설치가 완료되면 DB 접속을 위한 계정을 생성합니다.</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ mysql -u root -p -h [ RDS Endpoint ]
+$ password : qwer1234
+
+mysql&gt; create user &#39;wordpress-user&#39;@&#39;%&#39; identified by &#39;wordpress&#39;;
+mysql&gt; create database wordpress;
+mysql&gt; grant all privileges on wordpress.* to &#34;wordpress-user&#34;@&#34;%&#34;;
+mysql&gt; flush privileges;
+</code></pre></div><h1 id="heading-24"></h1>
+<p> </p>
+<h1 id="heading-25"></h1>
+<p><img src="/AWS/EC2/EC2Site04.png" alt="" /></p>
+<ul>
+<li><strong>계정 생성이 완료되었으면, http://인스턴스의 Public IP/wordpress/wp-admin/install.php로 접속합니다.</strong></li>
+</ul>
+<h1 id="heading-26"></h1>
+<p> </p>
+<h1 id="heading-27"></h1>
+<p><img src="/AWS/EC2/EC2Site05.png" alt="" /></p>
+<ul>
+<li><strong>데이터베이스, 사용자명, 비밀번호에 위에서 생성한 값들을 입력 후, 데이터베이스의 호스트에는 RDS의 엔드포인트 값을 입력합니다.</strong></li>
+</ul>
+<h1 id="heading-28"></h1>
+<p> </p>
+<h1 id="heading-29"></h1>
+<p><img src="/AWS/EC2/EC2Site06.png" alt="" /></p>
+<ul>
+<li><strong>설치를 실행합니다.</strong></li>
+</ul>
+<h1 id="heading-30"></h1>
+<p> </p>
+<h1 id="heading-31"></h1>
+<p><img src="/AWS/EC2/EC2Site07.png" alt="" /></p>
+<ul>
+<li><strong>사이트의 제목과 관리자명 등을 설정합니다.</strong></li>
+</ul>
+<h1 id="heading-32"></h1>
+<p> </p>
+<h1 id="heading-33"></h1>
+<p><img src="/AWS/EC2/EC2Site08.png" alt="" /></p>
+<ul>
+<li><strong>설정이 완료되면, 설정한 계정을 통해 로그인합니다.</strong></li>
+</ul>
+<h1 id="heading-34"></h1>
+<p> </p>
+<h1 id="heading-35"></h1>
+<p><img src="/AWS/EC2/EC2Site09.png" alt="" /></p>
+<ul>
+<li><strong>Wored Press의 설치가 완료되었습니다.</strong></li>
+</ul>
+<h1 id="heading-36"></h1>
+<p> </p>
+<h1 id="heading-37"></h1>
+<p><img src="/AWS/EC2/EC2Site11.png" alt="" /></p>
+<ul>
+<li><strong>생성이 완료되면 AMI 이미지를 생성합니다.</strong></li>
+<li><strong>AMI 이미지를 통해 동일한 인스턴스를 다른 가용영역에 생성합니다.</strong></li>
+</ul>
+<h1 id="heading-38"></h1>
+<p> </p>
+<h1 id="heading-39"></h1>
+<h3 id="3-elb-생성"><strong>3. ELB 생성</strong></h3>
+<h1 id="heading-40"></h1>
+<ul>
+<li><strong>80/tcp 외부로 ALB를 생성해주세요.</strong></li>
+<li><strong><a href="https://mung0001.github.io/docs/cloudcomputing/awstraining/elb/">ELB 생성 참고</a></strong></li>
+</ul>
+<h1 id="heading-41"></h1>
+<p> </p>
+<h1 id="heading-42"></h1>
+<p><img src="/AWS/EC2/EC2Site12.png" alt="" /></p>
+<ul>
+<li><strong>ELB의 DNS로의 접속이 확인되면, 대상그룹 또한 확인합니다.</strong></li>
+</ul>
+<h1 id="heading-43"></h1>
+<p> </p>
+<h1 id="heading-44"></h1>
+<p><img src="/AWS/EC2/EC2Site13.png" alt="" /></p>
+<ul>
+<li><strong>다음으로는 WordPress의 접속 IP를 변경해보겠습니다.</strong></li>
+<li><strong>WordPress의 관리자로 접속하여 설정 -&gt; 워드프레스 주소, 사이트 주소를 변경합니다.</strong></li>
+<li><strong>워드프레스 주소 : http://[ ALB DNS ]/wordpress</strong></li>
+<li><strong>사이트 주소 : http://[ ALB DNS ]</strong></li>
+<li><strong>ALB에서 Desciption -&gt; Edit stickiness에서 로드밸런서의 쿠키 값을 사용하도록 설정 후, 시간은 1800초로 설정합니다.</strong></li>
+</ul>
+<h1 id="heading-45"></h1>
+<p> </p>
+<h1 id="heading-46"></h1>
+<ul>
+<li><strong>이제 마지막으로 WordPress-sg의 80/tcp 포트의 대상을 0.0.0.0/0이 아닌, ALB를 대상으로 설정 및, SSH 접속을 해제하면 모든 설정이 완료됩니다.</strong></li>
+</ul>
+<h1 id="heading-47"></h1>
+<p> </p>
+<h1 id="heading-48"></h1>
+<h2 id="marketplace를-사용"><strong>Marketplace를 사용</strong></h2>
+<h1 id="heading-49"></h1>
+<ul>
+<li><strong>위 처럼 직접 구현하는 방법 외에도 이미 구현되어 있는 AMI를 구입하여 사용하는 방법도있습니다.</strong></li>
+</ul>
+<h1 id="heading-50"></h1>
+<p><img src="/AWS/EC2/EC2Site14.png" alt="" /></p>
+<ul>
+<li><strong>위 그림과 같이 Markplace에서 구입이 가능합니다.</strong></li>
+<li><strong>Marketplace로 구현을 할 경우, 이미 구축되어진 인프라를 사용하는 만큼, 간편하고 빠르게 사용할 수 있지만, 세부적인 사항에 대해서는 설정이 어렵다는 단점이 있습니다.</strong></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ec2-동적-사이트-구축-1"><strong>EC2 동적 사이트 구축</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#ec2를-활용한-동적-사이트-구축"><strong>EC2를 활용한 동적 사이트 구축</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-rds-생성"><strong>1. RDS 생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#2-인스턴스-생성"><strong>2. 인스턴스 생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#3-elb-생성"><strong>3. ELB 생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#marketplace를-사용"><strong>Marketplace를 사용</strong></a></li>
+  </ul>
+</nav>
+
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

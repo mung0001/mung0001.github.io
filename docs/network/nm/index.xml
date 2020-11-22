@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network Master on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/docs/network/nm/</link>
+    <description>Recent content in Network Master on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    
+	<atom:link href="https://mung0001.github.io/docs/network/nm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Network Master 2급 실기정리</title>
+      <link>https://mung0001.github.io/docs/network/nm/nm02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/network/nm/nm02/</guid>
+      <description>Network Master 2급   Network Master 실기정리   정리중입니다!  </description>
+    </item>
+    
+    <item>
+      <title>Network Master 2급 필기정리</title>
+      <link>https://mung0001.github.io/docs/network/nm/nm01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/network/nm/nm01/</guid>
+      <description>Network Master 2급   Network Master 필기정리  네트워크 개요  정보통신 (정보처리기능+정보전송기능)   개념   컴퓨터에 의한 정보처리기술과 정보전송기능이 통합된 형태
+  정보의 공유,변환,전송이 가능한 처리기술
+        특징
+  신속, 정확한 정보의전달.
+  신뢰성이 높고 광대역 전송이 가능.
+  정보 자원의 공유 및 이용.
+  거리와 시간의 한계 극복.
+  하드웨어 기술뿐만 아니라 소프트웨어 기술도 필요.</description>
+    </item>
+    
+  </channel>
+</rss>
