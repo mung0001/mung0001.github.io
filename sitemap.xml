@@ -72,14 +72,6 @@
   </url>
   
   <url>
-    <loc>https://mung0001.github.io/docs/system/linux/lm-0/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/system/linux/lm-1/</loc>
-  </url>
-  
-  <url>
     <loc>https://mung0001.github.io/docs/system/nas/</loc>
   </url>
   
@@ -161,10 +153,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/system/linux/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/system/linux/lm-2/</loc>
   </url>
   
   <url>
@@ -480,6 +468,10 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/linux/linux/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/network/mail/</loc>
   </url>
   
@@ -569,10 +561,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/docker/docker/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/system/linux/mount/</loc>
   </url>
   
   <url>
@@ -784,11 +772,19 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/linux/mount/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/programing/web/css/</loc>
   </url>
   
   <url>
     <loc>https://mung0001.github.io/docs/openstack/openstacktraining/devstack/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/system/linux/lm-0/</loc>
   </url>
   
   <url>
@@ -800,7 +796,19 @@
   </url>
   
   <url>
+    <loc>https://mung0001.github.io/docs/system/linux/lm-1/</loc>
+  </url>
+  
+  <url>
     <loc>https://mung0001.github.io/docs/openstack/openstacktraining/packstack/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/system/linux/lm-2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mung0001.github.io/docs/system/linux/lm-3/</loc>
   </url>
   
   <url>
@@ -857,10 +865,6 @@
   
   <url>
     <loc>https://mung0001.github.io/docs/programing/shell/shell02/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/system/linux/lm-3/</loc>
   </url>
   
   <url>
@@ -1222,10 +1226,6 @@
   
   <url>
     <loc>https://mung0001.github.io/posts/base/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mung0001.github.io/docs/system/linux/linux/</loc>
   </url>
   
 </urlset>

@@ -125,36 +125,6 @@
     </item>
     
     <item>
-      <title>Linux master 개요</title>
-      <link>https://mung0001.github.io/docs/system/linux/lm-0/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/system/linux/lm-0/</guid>
-      <description>Linux master 개요   Linux master    Linux master란 KAIT에서 실시하는 국가공인 자격증 시험으로, 정보통신기술자격검정 시험입니다.
-  기본적으로 Linux 전반에 대한 내용들을 시험보며, 1급, 2급으로 시험이 나누어져 있습니다.
-  자격종류
- 자격구분 : 공인민간자격 등록번호 : 2008-0268 공인번호 : 과학기술정보통신부 제 2018-10호    시험예약 및 기타 자세한 사항은 KAIT Linux master을 확인해주세요.
-     응시료     등급 차수 검정수수료     1급 1차 40.</description>
-    </item>
-    
-    <item>
-      <title>Linux 일반</title>
-      <link>https://mung0001.github.io/docs/system/linux/lm-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/system/linux/lm-1/</guid>
-      <description>리눅스 일반   리눅스의 특징 및 장단점   특징   오픈 소스 운영체제이다.
-  멀티유저(다중사용자), 멀티테스킹(다중작업) 운영체제이다.
-  다중스레드를 지원하는 네트워크 운영체제이다.
-  여러 종류의 파일시스템을 지원하는 운영체제이다.
-       장단점   리눅스는 유닉스와 완벽하게 호환 가능하다.
-  리눅스는 PC용 운영체제보다 안정적이다.
-  하드웨어 기능을 효과적으로 사용한다.
-  리눅스는 오픈 소스 운영체제이다.
-  공개 운영체제이기 때문에 문제점 발생 시 기술지원을 받기 어렵다.</description>
-    </item>
-    
-    <item>
       <title>Network</title>
       <link>https://mung0001.github.io/docs/network/network/natwork-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -293,15 +263,6 @@
       
       <guid>https://mung0001.github.io/docs/openstack/openstack/keystone/</guid>
       <description>인증을 관리하는 서비스 : Keyston   인증을 관리하는 서비스 : Keystone   Keystone은 인증 토큰을 비롯해 테넌트 및 사용자 관리, 서비스의 엔드포인트 URL 등을 관리하는 서비스 Keystone은 openstack의 백엔드에서 RBAD ( Role Based Access Control )을 통해 사용자의 접근을 제어하는 등의 인증 ( Identify ) 서비스로 사용되며 다음과 같은 기능으로 이루어져 있음     Keystone의 구성요소      구성요소 역할     user 사람 또는 오픈 스택 서비스를 이용하는 서비스 ( nova, neutron, cinder 등 )을 의미     User은 특정 프로젝트에 할당할 수 있으며, 증복을 허용하지 않음         Authentication 사용자의 신분을 확인하는 절차로, 특정 값을 통해 Keystone이 이를 검증     보통 인증을 위한 자료로는 ID, PW가 사용되며 Keystone은 인증확인 시 인증토큰을 방행         Token RBAD의 신분을 증명하기 위해 사용되는 텍스트 데이터   Token type fernet, uuid, pki, pkiz     어떤 자원에 접근이 가능한지 범위가 지정되어 있음 ( 시간 제한 있음 )         Project Keystone V2까지 Tenant라는 이름으로 사용 ( V3 이후 Project )     어떤 자원이나 어플리케이션에 대한 권리를 가진 보안그룹     프로젝트는 특정 도메인에 의해 소유         Endpoint 사용자가 서비스를 이용하기 위해 연결정보를 제공하는 접근 가능한 네트워크 주소 ( URL )   EndPoint type admin, internal, public         Role 사용자가 어떤 동작을 수행하도록 허용하는 규칙     사용자가 가지는 역할은 사용자에게 발행된 토큰을 통해 확인     사용자가 서비스를 호출하면, 서비스는 토큰에 저장된 사용자의 역할을 해석하여 허용유무 결정         Domain 구성요소를 효과적으로 관리하기 위한 사용자, 그룹, 프로젝트의 집합     사용자들은 한 도메인의 관리자의 권한 등을 부여받는 방식으로 역할을 부여가능     Domain, Project, Group, User, Rule 개념과 관계  Keystone은 위에도 언급하였 듯이 사용자 인증 부분과 서비스 인증 부분을 관리 사용자일 때는 사용자 ID와 패스워드, 사용자 권한의 롤( Roll )을 등록 서비스일 때는 서비스를 등록하고 해당 서비스의 엔드포인트 URL을 등록  도메인(Domain)은 서로 분리되어 있음 각 도메인에는 프로젝트와 사용자가 있음 프로젝트는 사용자를 가질 수 있음 사용자에게는 롤이 있으며, 여러 프로젝트의 구성원이 될 수 있음 관리자 롤(Admin Role)을 가진 사용자끼리, 일반 사용자롤(Member Role)을 가진 사용자간의 그룹핑(Grouping)을 할 수 있음       Keystone의 논리 아키텍처   Keystone의 논리 아키텍처는 토큰(Token), 카탈로그(Catalog), 정책(Poliy), 인증(Identity) 으로 구성      구성요소 역할     Token Backend 사용자별 토큰을 관리   Catalog Backend 오픈스택에서 모든 서비스의 엔드포인트 URL을 관리   Policy Backend 테넌트, 사용자 계정, 롤 등을 관리   Identity Backend 사용자 인증을 관리       Openstack에서 Keystone 위치    Openstack Keystone은 모든 서비스를 관장하는 위치 모든 User, Service는 Keystone의 인증을 통해서만 요청, 응답이 가능 Keystone은 타인이나 해커에게서 시스템을 안전하게 보호하고 사용자 등록, 삭제, 권한 관리, 사용자가 접근할 수 있는 서비스 포인트 관리와 다른 API들의 인증 등의 전체적인 인증 프로세스를 관리하는 역할을 수행    </description>
-    </item>
-    
-    <item>
-      <title>Linux 운영 및 관리</title>
-      <link>https://mung0001.github.io/docs/system/linux/lm-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/system/linux/lm-2/</guid>
-      <description>리눅스 일반   권한 및 그룹 설정  리눅스 시스템은 모든 파일과 디렉터리에는 접근권한과 소유권이 부여된다. 명령어 ‘ls –l’ 은 파일 속성을 나타낸다. 속성 필드 중 첫 번째 필드는 파일이나 디렉터리의 허가권, 세번째와 네번째 필드는 파일이나 디렉터리의 소유권을 나타낸다. 파일의 허가권이나 소유권을 설정하는 명령어는 chmod, chown, chgrp, umask 등이 있다.    소유권 관련 명령어  소유권은 임의의 파일 또는 디렉터리에 대한 사용자와 그룹들의 소유 권한을 나타낸 것이다. 그룹은 사용자들의 시스템 운영 특성에 따라 묶어 놓은 것으로, 같은 그룹에 속한 사용자들은 파일 또는 디렉터리에 대해 동일한 소유권과 직접 권한을 갖는다.</description>
     </item>
     
     <item>
@@ -1007,6 +968,15 @@
     </item>
     
     <item>
+      <title>Linux 개요</title>
+      <link>https://mung0001.github.io/docs/system/linux/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/linux/</guid>
+      <description>Linux   Linux 기초   유닉스 기반의 컴퓨터 운영체제의 한 종류 핀란드 헬싱키 대학의 대학원생 리누스 토발즈가 1991년에 개발 오픈 소스의 운영체제 대표적인 리눅스 기관 GNU 높은 이식성과 확정성 ( C언어 기반 ) 안전성과 신뢰성 ( 국제적이고 개방적으로 개발되었기 때문에 문제점에 대한 대처가 빠름 ) 계층적 파일 시스템 ( 최상위 디렉토리가 존재하고 모든 것들은 해당 디렉토리 하부에 존재 )   유닉스 운영체제 종류  리눅스의 구성요소   명령어 : 사용자가 원하는 프로그램을 콜링</description>
+    </item>
+    
+    <item>
       <title>SQL 개요</title>
       <link>https://mung0001.github.io/docs/database/sqld/sqld-0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1206,17 +1176,6 @@
     </item>
     
     <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/system/linux/mount/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/system/linux/mount/</guid>
-      <description>Linux HD Mount   디스크의 구조 1. 물리적 구조
- 스핀들 : 디스크는 하나의 스핀들을 기준으로 여러 개의 플래터로 구성되어 있고 스핀들은 여러 개의 플랫터를 회전시키는 역할을 한다. 플래터 : 플래터는 마그네틱으로 코딩되어져 있고 연속으로 구성되어 있다. 헤더 : 회전중인 플래터에 데이터를 읽거나 쓰기 위해서는 엑세스 암에 부착된 헤더를 이용하여 엑세스 한다.   2. 논리적 구조
- 섹터 : 플래터의 가장 작은 단위, 일반적으로 1섹터의 크기는 512바이트 트랙 : 섹터가 모여 하나의 원을 구성 실린더 : 트랙의 스택 구조 파티션 : MBR의 파티션 테이블(64바이트)에 정보가 저장, 주 파티션 (16바이트, 4개까지 생성이 가능), 확장 파티션 생성이 가능 논리적 구조 크기 비교 : 섹터 &amp;lt; 트랙 &amp;lt; 실린더 &amp;lt; 실린더 그룹 or 파티션 &amp;lt; 디스크   3.</description>
-    </item>
-    
-    <item>
       <title>15장 기출문제 정리</title>
       <link>https://mung0001.github.io/docs/aws/awssaa/saa-15/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1334,7 +1293,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/linux/linux01/</guid>
-      <description>Linux   Linux System Management   Linux 시스템관리는 프로세스, 메모리 관리를 위해 주로 사용됩니다.     crontab   정기적으로 지정한 시간에 실행하고 싶은 명령어를 등록하여 사용되며, 스크립트를 통해 등록도 가능합니다.    주요 옵션     옵션 설명     -l 등록된 명령어 리스트 확인   -e 등록된 명령어 수정     crontab 등록   -e옵션으로 실행하면 크롭탭을 위한 파일이 열리며, vi에디터와 동일한 명령으로 필요한 명령어를 등록할 수 있습니다.</description>
+      <description>Linux   Linux System Management   Linux 시스템관리는 프로세스, 메모리 관리를 위해 주로 사용됩니다.      crontab   정기적으로 지정한 시간에 실행하고 싶은 명령어를 등록하여 사용되며, 스크립트를 통해 등록도 가능합니다.   주요 옵션     옵션 설명     -l 등록된 명령어 리스트 확인   -e 등록된 명령어 수정     crontab 등록   -e옵션으로 실행하면 크롭탭을 위한 파일이 열리며, vi에디터와 동일한 명령으로 필요한 명령어를 등록할 수 있습니다.</description>
     </item>
     
     <item>
@@ -1377,7 +1336,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/linux/linux02/</guid>
-      <description>Linux   Linux Filesystem   Filesystem은 각 파일들에 대한 관리를 다루는 명령어들입니다.     cd   cd는 디렉터리를 이동하는 명령어입니다.    주요 옵션     옵션 내용     . 현재위치   .. 상위 디렉토리   ~ 홈 디렉터리   - 이전 디렉토리   / 최상단(root) 디렉토리       cp   파일, 디렉터리를 복사하는 명령어입니다.</description>
+      <description>Linux   Linux Filesystem   Filesystem은 각 파일들에 대한 관리를 다루는 명령어들입니다.      cd   cd는 디렉터리를 이동하는 명령어입니다.   주요 옵션     옵션 내용     . 현재위치   .. 상위 디렉토리   ~ 홈 디렉터리   - 이전 디렉토리   / 최상단(root) 디렉토리        cp   파일, 디렉터리를 복사하는 명령어입니다.</description>
     </item>
     
     <item>
@@ -1411,7 +1370,7 @@
       <guid>https://mung0001.github.io/docs/system/linux/linux03/</guid>
       <description>**Linux **   Linux 압축    Linux는 여러 압축포맷을 지원하며, 이를 통해 범용성있는 활용범위를 가지고 있습니다.
   대표적인 사용예시로는 Linux는 압축을 통해 전체적인 백업 및 복구를 진행할 수 있습니다.
-     gzip, gunzip, zcat    gzip은 파일을 압축할 때 gunzip은 파일의 압축을 해제할 때 사용됩니다.
+      gzip, gunzip, zcat    gzip은 파일을 압축할 때 gunzip은 파일의 압축을 해제할 때 사용됩니다.
   압축한 파일은 .gz의 확장자를 가지며, 파일, 디렉터리 단위로 압축되므로 여러 개의 파일을 압축하기 위해서는 tar 명령어를 사용합니다.</description>
     </item>
     
@@ -1457,7 +1416,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/linux/linux04/</guid>
-      <description>Linux   Linux 문자열처리   Linux 문자열 처리는 입력 혹은 출력되는 문자열을 검색하거나, 혹은 데이터를 사용할 수 있도록 치환하는 명령어입니다.     awk   입력을 주어진 분리자(field seperator)로 분리하여 명령을 처리    주요 옵션     옵션 내용     F 문자열을 분리할 기준이 되는 분리문자 입력   v 파라미터 전달      내장함수     함수 설명     sub 지정한 문자열 치환   gsub 문자열 일괄 치환   index 주어진 무나열과 일치하는 문자의 인덱스를 반환   length 문자열의 길이를 반환   substr 시작위치에서 주어진 길이 만큼의 문자열을 반환   split 문자열을 분리하여 배열로 변환      사용예제  $ echo &amp;#34;i have a water.</description>
+      <description>Linux   Linux 문자열처리   Linux 문자열 처리는 입력 혹은 출력되는 문자열을 검색하거나, 혹은 데이터를 사용할 수 있도록 치환하는 명령어입니다.      awk   입력을 주어진 분리자(field seperator)로 분리하여 명령을 처리   주요 옵션     옵션 내용     F 문자열을 분리할 기준이 되는 분리문자 입력   v 파라미터 전달     내장함수     함수 설명     sub 지정한 문자열 치환   gsub 문자열 일괄 치환   index 주어진 무나열과 일치하는 문자의 인덱스를 반환   length 문자열의 길이를 반환   substr 시작위치에서 주어진 길이 만큼의 문자열을 반환   split 문자열을 분리하여 배열로 변환     사용예제  $ echo &amp;#34;i have a water.</description>
     </item>
     
     <item>
@@ -1475,7 +1434,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/linux/linux05/</guid>
-      <description>Linux   Linux 날짜   Linux 날짜는 날짜 처리를 위한 명령어 입니다.     date   date는 일자, 시간을 처리하는 명령어입니다.   주요 옵션     옵션 내용     -d 원하는 일자를 지정   + 출력 포맷을 지정      사용예제  $ date +%Y%m%d2020-11-21# 년월일 형태 $ date +\%Y\%m\%d2020-11-21# %를 지원하지 않는 환경(ex: crontab)에서는 특수기호로 입력 $ date +&amp;#34;%Y%m%d %H:%M:%S&amp;#34;2020-11-21 08:46:53# 년월일 시간 출력 $ date +%W06# 주차 계산 $ date +%Y-%m-%d -d &amp;#39;1 days ago&amp;#39;2020-11-20# 1일 전 $ date +%Y-%m-%d -d &amp;#39;+1days&amp;#39;2020-11-22# 1일 후 $ date +%Y-%m-%d -d &amp;#39;20190101 +1days&amp;#39;2020-11-22# 20201121 일자 지정후 1일 추가   </description>
+      <description>Linux   Linux 날짜   Linux 날짜는 날짜 처리를 위한 명령어 입니다.      date   date는 일자, 시간을 처리하는 명령어입니다.   주요 옵션     옵션 내용     -d 원하는 일자를 지정   + 출력 포맷을 지정     사용예제  $ date +%Y%m%d2020-11-21# 년월일 형태 $ date +\%Y\%m\%d2020-11-21# %를 지원하지 않는 환경(ex: crontab)에서는 특수기호로 입력 $ date +&amp;#34;%Y%m%d %H:%M:%S&amp;#34;2020-11-21 08:46:53# 년월일 시간 출력 $ date +%W06# 주차 계산 $ date +%Y-%m-%d -d &amp;#39;1 days ago&amp;#39;2020-11-20# 1일 전 $ date +%Y-%m-%d -d &amp;#39;+1days&amp;#39;2020-11-22# 1일 후 $ date +%Y-%m-%d -d &amp;#39;20190101 +1days&amp;#39;2020-11-22# 20201121 일자 지정후 1일 추가  </description>
     </item>
     
     <item>
@@ -1493,7 +1452,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/linux/linux06/</guid>
-      <description>Linux   Linux 파일처리   Linux 파일처리는 각 파일들을 읽거나, 데이터를 수정하는 데 주로 사용됩니다.     file   파일의 타입을 확인합니다. 텍스트파일, 실행파일, 아카이브 파일 등의 파일 타입을 확인합니다.    주요 옵션     옵션 내용     -z 파일이 압축되어 있는 경우 압축되기 전의 파일 타입을 확인       head   head는 파일의 앞 부분을 출력하는 명령어입니다.</description>
+      <description>Linux   Linux 파일처리   Linux 파일처리는 각 파일들을 읽거나, 데이터를 수정하는 데 주로 사용됩니다.      file   파일의 타입을 확인합니다. 텍스트파일, 실행파일, 아카이브 파일 등의 파일 타입을 확인합니다.   주요 옵션     옵션 내용     -z 파일이 압축되어 있는 경우 압축되기 전의 파일 타입을 확인        head   head는 파일의 앞 부분을 출력하는 명령어입니다.</description>
     </item>
     
     <item>
@@ -1504,7 +1463,7 @@
       <guid>https://mung0001.github.io/docs/system/linux/linux07/</guid>
       <description>Linux   Linux Network 처리    Linux 상의 Network는 OS와 함께 핵심요소 중 하나입니다.
   Network 명령어를 통해 보다 편리하게 Network 요소들의 확인 및 관리가 가능합니다.
-     curl    curl은 여러 프로토콜을 이용하여 네트워크 명령을 전송하는 도구로, 지원되는 프로토콜 (HTTP,HTTPS,FTP,FTPS,SCP,SFTP,TFTP,DICT,TELNET,LDAP 또는 FILE) 중 하나를 사용하여 서버 간의 데이터를 전송할 수 있습니다.
+      curl    curl은 여러 프로토콜을 이용하여 네트워크 명령을 전송하는 도구로, 지원되는 프로토콜 (HTTP,HTTPS,FTP,FTPS,SCP,SFTP,TFTP,DICT,TELNET,LDAP 또는 FILE) 중 하나를 사용하여 서버 간의 데이터를 전송할 수 있습니다.
   프록시 지원, 사용자 인증, FTP 업로드, HTTP 캐시, SSL 연결, 파일 전송 이력 등과 같은 유용한 기능을 제공합니다.</description>
     </item>
     
@@ -1532,7 +1491,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/linux/linux08/</guid>
-      <description>Linux   Linux 형식파일   Linux 형식파일은 xml, xmllint, json, jq 형식의 파일들을 처리하기 위한 명령어입니다..     jq   jq는 JSON 형식 파일을 포맷과 들여쓰기에 맞게 출력하고, xpath 형식으로 값을 확인할 수 있습니다.    사용예제  $ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}$ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39; | jq{&amp;#34;key1&amp;#34;: &amp;#34;val1&amp;#34;,&amp;#34;key2&amp;#34;: &amp;#34;val2&amp;#34;}# jq를 이용하면 JSON 형식의 문자열을 포맷에 맞게 출력 $ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39; | jq &amp;#39;.</description>
+      <description>Linux   Linux 형식파일   Linux 형식파일은 xml, xmllint, json, jq 형식의 파일들을 처리하기 위한 명령어입니다..      jq   jq는 JSON 형식 파일을 포맷과 들여쓰기에 맞게 출력하고, xpath 형식으로 값을 확인할 수 있습니다.   사용예제  $ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}$ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39; | jq{&amp;#34;key1&amp;#34;: &amp;#34;val1&amp;#34;,&amp;#34;key2&amp;#34;: &amp;#34;val2&amp;#34;}# jq를 이용하면 JSON 형식의 문자열을 포맷에 맞게 출력 $ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39; | jq &amp;#39;.</description>
     </item>
     
     <item>
@@ -1631,6 +1590,17 @@
     </item>
     
     <item>
+      <title>Linux Mount</title>
+      <link>https://mung0001.github.io/docs/system/linux/mount/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/mount/</guid>
+      <description>Linux HD Mount   디스크의 구조 1. 물리적 구조
+ 스핀들 : 디스크는 하나의 스핀들을 기준으로 여러 개의 플래터로 구성되어 있고 스핀들은 여러 개의 플랫터를 회전시키는 역할을 한다. 플래터 : 플래터는 마그네틱으로 코딩되어져 있고 연속으로 구성되어 있다. 헤더 : 회전중인 플래터에 데이터를 읽거나 쓰기 위해서는 엑세스 암에 부착된 헤더를 이용하여 엑세스 한다.   2. 논리적 구조
+ 섹터 : 플래터의 가장 작은 단위, 일반적으로 1섹터의 크기는 512바이트 트랙 : 섹터가 모여 하나의 원을 구성 실린더 : 트랙의 스택 구조 파티션 : MBR의 파티션 테이블(64바이트)에 정보가 저장, 주 파티션 (16바이트, 4개까지 생성이 가능), 확장 파티션 생성이 가능 논리적 구조 크기 비교 : 섹터 &amp;lt; 트랙 &amp;lt; 실린더 &amp;lt; 실린더 그룹 or 파티션 &amp;lt; 디스크   3.</description>
+    </item>
+    
+    <item>
       <title>CSS 문법</title>
       <link>https://mung0001.github.io/docs/programing/web/css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1649,6 +1619,19 @@
     </item>
     
     <item>
+      <title>Linux master 개요</title>
+      <link>https://mung0001.github.io/docs/system/linux/lm-0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/lm-0/</guid>
+      <description>Linux master 개요   Linux master    Linux master란 KAIT에서 실시하는 국가공인 자격증 시험으로, 정보통신기술자격검정 시험입니다.
+  기본적으로 Linux 전반에 대한 내용들을 시험보며, 1급, 2급으로 시험이 나누어져 있습니다.
+  자격종류
+ 자격구분 : 공인민간자격 등록번호 : 2008-0268 공인번호 : 과학기술정보통신부 제 2018-10호    시험예약 및 기타 자세한 사항은 KAIT Linux master을 확인해주세요.
+     응시료     등급 차수 검정수수료     1급 1차 40.</description>
+    </item>
+    
+    <item>
       <title>AWS OwnCloud</title>
       <link>https://mung0001.github.io/docs/aws/awstraining/owncloud/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1659,12 +1642,49 @@
     </item>
     
     <item>
+      <title>Linux 일반</title>
+      <link>https://mung0001.github.io/docs/system/linux/lm-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/lm-1/</guid>
+      <description>리눅스 일반   리눅스의 특징 및 장단점   특징   오픈 소스 운영체제이다.
+  멀티유저(다중사용자), 멀티테스킹(다중작업) 운영체제이다.
+  다중스레드를 지원하는 네트워크 운영체제이다.
+  여러 종류의 파일시스템을 지원하는 운영체제이다.
+       장단점   리눅스는 유닉스와 완벽하게 호환 가능하다.
+  리눅스는 PC용 운영체제보다 안정적이다.
+  하드웨어 기능을 효과적으로 사용한다.
+  리눅스는 오픈 소스 운영체제이다.
+  공개 운영체제이기 때문에 문제점 발생 시 기술지원을 받기 어렵다.</description>
+    </item>
+    
+    <item>
       <title>Packstack</title>
       <link>https://mung0001.github.io/docs/openstack/openstacktraining/packstack/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/openstack/openstacktraining/packstack/</guid>
       <description>Packstack Stein 설치  Packstack   Redhat 계열 ( ex : CentOS )의 OpenStack 자동화 설치 툴     Packstack stain 설치   기본적으로 PackStack은 올인원 or 다중노드로 구성할 수 있으며, 여기서는 올인원으로 설치를 진행하며, 다중노드에 대한 설정은 추가하도록 하겠습니다.   설치사양     OS CPU RAM DISK     CenOS7 4/ 2 10240 100G      만약 다중 노드에 경우 소스를 분산시키고 각 노드에 설정을 추가합니다.</description>
+    </item>
+    
+    <item>
+      <title>Linux 운영 및 관리</title>
+      <link>https://mung0001.github.io/docs/system/linux/lm-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/lm-2/</guid>
+      <description>리눅스 일반   권한 및 그룹 설정  리눅스 시스템은 모든 파일과 디렉터리에는 접근권한과 소유권이 부여된다. 명령어 ‘ls –l’ 은 파일 속성을 나타낸다. 속성 필드 중 첫 번째 필드는 파일이나 디렉터리의 허가권, 세번째와 네번째 필드는 파일이나 디렉터리의 소유권을 나타낸다. 파일의 허가권이나 소유권을 설정하는 명령어는 chmod, chown, chgrp, umask 등이 있다.    소유권 관련 명령어  소유권은 임의의 파일 또는 디렉터리에 대한 사용자와 그룹들의 소유 권한을 나타낸 것이다. 그룹은 사용자들의 시스템 운영 특성에 따라 묶어 놓은 것으로, 같은 그룹에 속한 사용자들은 파일 또는 디렉터리에 대해 동일한 소유권과 직접 권한을 갖는다.</description>
+    </item>
+    
+    <item>
+      <title>Linux 활용</title>
+      <link>https://mung0001.github.io/docs/system/linux/lm-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/lm-3/</guid>
+      <description>Linux 일반   X-windows 개념 및 사용법   X-window란 우리가 흔히 사용하고 있는 Window와 같이 GUI 환경을 제공하는 서비스를 의미한다. Ubuntu, CentOS 등의 Redhat, Debian 계열의 Linux 운영체제 또한 GUI 환경으로 설치가 가능하다.     X-윈도우의 특징과 구성 요소   개념과 특징   리눅스 환경의 각종 애플리케이션과 유틸리티에 대해 그래픽 사용자 인터페이스를 제공한다.
+  플랫폼과 독립적으로 작동하는 그래픽 시스템이다.
+  X-윈도우는 X11, X, X Windows System이라 한다.</description>
     </item>
     
     <item>
@@ -1791,17 +1811,6 @@
   1234, &amp;ldquo;123&amp;rdquo;, &amp;lsquo;123&#39;은 모두 동일하며, abc, &amp;ldquo;abc&amp;rdquo;, &amp;lsquo;abc&amp;rsquo; 또한 차이가 없고 모두 스트링 문자열입니다.
   Shell 에서 quotes는 다음과 같은 용도로 사용됩니다.
   공백으로 분리되어 여러 개의 스트링을 하나의 인수로 만들 때(sed, awk 스크립트를 quotes을 이용해 작성하는 이유가 하나의 인수로 만들기 위해서입니다.</description>
-    </item>
-    
-    <item>
-      <title>Linux 활용</title>
-      <link>https://mung0001.github.io/docs/system/linux/lm-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/system/linux/lm-3/</guid>
-      <description>Linux 일반   X-windows 개념 및 사용법   X-window란 우리가 흔히 사용하고 있는 Window와 같이 GUI 환경을 제공하는 서비스를 의미한다. Ubuntu, CentOS 등의 Redhat, Debian 계열의 Linux 운영체제 또한 GUI 환경으로 설치가 가능하다.     X-윈도우의 특징과 구성 요소   개념과 특징   리눅스 환경의 각종 애플리케이션과 유틸리티에 대해 그래픽 사용자 인터페이스를 제공한다.
-  플랫폼과 독립적으로 작동하는 그래픽 시스템이다.
-  X-윈도우는 X11, X, X Windows System이라 한다.</description>
     </item>
     
     <item>
@@ -2145,15 +2154,6 @@ This document is a brief primer on using Go templates.</description>
       
       <guid>https://mung0001.github.io/posts/base/</guid>
       <description>****          **** </description>
-    </item>
-    
-    <item>
-      <title>Linux 개요</title>
-      <link>https://mung0001.github.io/docs/system/linux/linux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/system/linux/linux/</guid>
-      <description>Linux   Linux 기초   유닉스 기반의 컴퓨터 운영체제의 한 종류 핀란드 헬싱키 대학의 대학원생 리누스 토발즈가 1991년에 개발 오픈 소스의 운영체제 대표적인 리눅스 기관 GNU 높은 이식성과 확정성 ( C언어 기반 ) 안전성과 신뢰성 ( 국제적이고 개방적으로 개발되었기 때문에 문제점에 대한 대처가 빠름 ) 계층적 파일 시스템 ( 최상위 디렉토리가 존재하고 모든 것들은 해당 디렉토리 하부에 존재 )   유닉스 운영체제 종류  리눅스의 구성요소   명령어 : 사용자가 원하는 프로그램을 콜링</description>
     </item>
     
   </channel>
