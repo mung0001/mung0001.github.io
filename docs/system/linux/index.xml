@@ -109,6 +109,42 @@
     </item>
     
     <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/system/linux/ls03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/ls03/</guid>
+      <description>****   ****           </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/system/linux/ls04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/ls04/</guid>
+      <description>****   ****           </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/system/linux/ls05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/ls05/</guid>
+      <description>****   ****           </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/system/linux/ls06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/ls06/</guid>
+      <description>****   ****           </description>
+    </item>
+    
+    <item>
       <title>Linux master 개요</title>
       <link>https://mung0001.github.io/docs/system/linux/lm-0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -119,6 +155,18 @@
   자격종류
  자격구분 : 공인민간자격 등록번호 : 2008-0268 공인번호 : 과학기술정보통신부 제 2018-10호    시험예약 및 기타 자세한 사항은 KAIT Linux master을 확인해주세요.
      응시료     등급 차수 검정수수료     1급 1차 40.</description>
+    </item>
+    
+    <item>
+      <title>서버환경의 기초</title>
+      <link>https://mung0001.github.io/docs/system/linux/ls00/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/ls00/</guid>
+      <description>Linux Server Management   서버환경의 기초   네트워크의 정의   정보통신 네트어크 : 가장 바깥 쪽의 네트워크로 메일, WWW 등 다양한 애플리케이션의 네트워크가 정보통신 네트워크를 의미
+  전송 네트워크 : 중간 층의 네트워크로 허브, 라우터와 같은 통신기기 네트워크를 의미
+  통신 회선 네트워크 가장 안쪽이 네트워크로 통신 선로 네트워크로 LAN, WAN, 통신 사업자의 네트워크 서비스 등이 포함
+       이론/ 구현/ 운영   이론 : 연구자를 중심으로 연구 개발되는 이론과 각종 표준화 조직, 단체의 기술 사양을 의미</description>
     </item>
     
     <item>
@@ -139,6 +187,17 @@
     </item>
     
     <item>
+      <title>이용 기술</title>
+      <link>https://mung0001.github.io/docs/system/linux/ls01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/ls01/</guid>
+      <description>Linux Server Management*   telnet, vi, ftp 사용연습  ftp 서버    CentOS7 : L1(192.168.10.50)
+  CentOS7 : L2(192.168.10.51)
+  $ L1&amp;gt; vi /etc/hostname......L1$ L1&amp;gt; vi/etc/hosts......192.168.10.50 L1192.168.10.51 L2$ L1&amp;gt; scp /etc/hosts L2:/etc/hosts$ L1&amp;gt; init 6$ L2&amp;gt; vi/etc/hostname......L2$ L2&amp;gt; init 6 # 설정$ L2&amp;gt; touch apple banana peach$ L2&amp;gt; tar -cvf fruit apple banana peach$ L2&amp;gt; ll-rw-r--r--.</description>
+    </item>
+    
+    <item>
       <title>Linux 운영 및 관리</title>
       <link>https://mung0001.github.io/docs/system/linux/lm-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -156,6 +215,24 @@
       <description>Linux 일반   X-windows 개념 및 사용법   X-window란 우리가 흔히 사용하고 있는 Window와 같이 GUI 환경을 제공하는 서비스를 의미한다. Ubuntu, CentOS 등의 Redhat, Debian 계열의 Linux 운영체제 또한 GUI 환경으로 설치가 가능하다.     X-윈도우의 특징과 구성 요소   개념과 특징   리눅스 환경의 각종 애플리케이션과 유틸리티에 대해 그래픽 사용자 인터페이스를 제공한다.
   플랫폼과 독립적으로 작동하는 그래픽 시스템이다.
   X-윈도우는 X11, X, X Windows System이라 한다.</description>
+    </item>
+    
+    <item>
+      <title>서버 도입 기술</title>
+      <link>https://mung0001.github.io/docs/system/linux/ls02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/ls02/</guid>
+      <description>Linux Server Management   서버 도입 기술  ****                                 </description>
+    </item>
+    
+    <item>
+      <title>PXE(KickStart) Server</title>
+      <link>https://mung0001.github.io/docs/system/linux/ls07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/ls07/</guid>
+      <description>PXE Server   PXE Server의 정의   PXE는 (Preboot Execution Enviroment)의 약자로 운영체제가 설치되지 않은 컴퓨터가 네트워크를 통해 PXE 서버에 접속해서 부팅도디도록 해주는 인터페이스를 지칭하는 용어를 의미합니다.     PXE 서버설치   PXE 설치 서버는 별도의 패키지가 존재하는 것이 아닌 각각의 서버들이 특정한 역할을 수행한다.     Server 역할     DHCP Server IP 주소를 자동으로 할당   TFTP Server 설치에 필요한 서버 구성 내용과 PXE boot 이미지는 모두 TFTP로 동작   FTP, HTTP, NFS Server CentOS DVD의 설치파일을 전송      간단한 설치순서   아무것도 설치되지 않은 PC에 전원 넣으면 자동으로 PXE 설치 서버를 찾는다.</description>
     </item>
     
   </channel>
