@@ -227,6 +227,17 @@
     </item>
     
     <item>
+      <title>Cacti</title>
+      <link>https://mung0001.github.io/docs/system/linux/cacti01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/linux/cacti01/</guid>
+      <description>Cacti : 시스템 네트워크 모니터링 솔루션   Cacti    Cacti는 업계 표준 오픈 소스 데이터 로깅 도구인 RRDtool에 대한 프론트 엔드용 프로그램으로 설계된, 오픈 소스 웹 기반 네트워크 모니터링 및 그래프 도구를 의미
+  Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결과 데이터를 그래프로 표시할 수 있으며, 일반적으로 CPU 가부하 및 네트워크 대역폭 같은 수치를 데이터 그래프로 변환가능
+  일반적인 사용은 단순 네트워크 관리 프로토콜 SNMP를 통해 네트워크 스위치 또는 라우터 인터페이스를 폴링하여 네트워크 트래픽을 감시하는 역할을 수행</description>
+    </item>
+    
+    <item>
       <title>PXE(KickStart) Server</title>
       <link>https://mung0001.github.io/docs/system/linux/ls07/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
