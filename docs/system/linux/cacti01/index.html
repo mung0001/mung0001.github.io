@@ -23,7 +23,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.ec97d94931ea597bed35d93eae1abe31966ffaa49dda8958b418708da1191d0d.js" integrity="sha256-7JfZSTHqWXvtNdk&#43;rhq&#43;MZZv&#43;qSd2olYtBhwjaEZHQ0="></script>
+<script defer src="/en.search.min.598395e229f6d88865c3d979e269929d5c6c5dcba7c8dd65fb0c0ac2cbffe95a.js" integrity="sha256-WYOV4in22Ihlw9l54mmSnVxsXcunyN1l&#43;wwKwsv/6Vo="></script>
 <!--
 
 -->
@@ -1547,6 +1547,12 @@ $ Cacti&gt; vi /etc/php.ini
 
 date.timezone <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Asia/Seoul&#34;</span>
 <span style="color:#75715e"># line 878: uncomment and add your timezone</span>
+
+max_execution_time <span style="color:#f92672">=</span> 60
+<span style="color:#75715e"># line 384: uncomment and add your timezone</span>
+
+memory_limit <span style="color:#f92672">=</span> 800M
+<span style="color:#75715e"># line 405: uncomment and add your timezone</span>
 </code></pre></div><h1 id="heading-11"></h1>
 <p> </p>
 <h1 id="heading-12"></h1>
@@ -1584,6 +1590,20 @@ $ Cacti&gt; mysql_upgrade -u root -p
 $ Cacti&gt; vi /etc/my.cnf
 <span style="color:#f92672">[</span>mysqld<span style="color:#f92672">]</span>
 character-set-server<span style="color:#f92672">=</span>utf8
+max_allowed_packet<span style="color:#f92672">=</span>16777216
+innodb_flush_log_at_timeout<span style="color:#f92672">=</span>3
+innodb_read_io_threads<span style="color:#f92672">=</span>32
+innodb_write_io_threads<span style="color:#f92672">=</span>16
+innodb_buffer_pool_instances<span style="color:#f92672">=</span>17
+innodb_io_capacity<span style="color:#f92672">=</span>5000
+innodb_io_capacity_max<span style="color:#f92672">=</span>10000
+innodb_buffer_pool_size <span style="color:#f92672">=</span> 2048MB
+
+max_heap_table_size<span style="color:#f92672">=</span> 128MB
+tmp_table_size<span style="color:#f92672">=</span> 128MB
+join_buffer_size<span style="color:#f92672">=</span> 248MB
+collation_server<span style="color:#f92672">=</span>utf8mb4_unicode_ci
+
 <span style="color:#75715e"># add follows within [mysqld] section</span>
 
 $ Cacti&gt; systemctl enable --now mysqld
@@ -1628,6 +1648,7 @@ $ Cacti&gt; mysql -u root -p
 $ mysql&gt; create database cacti;
 $ mysql&gt; grant all privileges on cacti.* to cacti@<span style="color:#e6db74">&#39;localhost&#39;</span> identified by <span style="color:#e6db74">&#39;qwer1234&#39;</span>;
 $ mysql&gt; grant all privileges on mysql.* to cacti@<span style="color:#e6db74">&#39;localhost&#39;</span> identified by <span style="color:#e6db74">&#39;qwer1234&#39;</span>;
+$ mysql&gt; ALTER DATABASE cacti CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 $ mysql&gt; flush privileges;
 $ mysql&gt; exit
 <span style="color:#75715e"># DB create</span>
@@ -1656,6 +1677,11 @@ Require ip 192.168.10.0/24
 <span style="color:#75715e"># line 17: add access permission if need</span>
 
 $ Cacti&gt; systemctl restart httpd
+$ Cacti&gt; mkdir /usr/local/etc/cacti
+$ Cacti&gt; cd /var/lib/cacti/cli/
+$ Cacti&gt; php -q input_whitelist.php --update
+$ Cacti&gt; php -q input_whitelist.php --audit
+$ Cacti&gt; php -q input_whitelist.php --push
 </code></pre></div><h1 id="heading-15"></h1>
 <p> </p>
 <h1 id="heading-16"></h1>
