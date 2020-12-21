@@ -218,12 +218,14 @@
     </item>
     
     <item>
-      <title>서버 도입 기술</title>
+      <title>서버도입</title>
       <link>https://mung0001.github.io/docs/system/linux/ls02/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/linux/ls02/</guid>
-      <description>Linux Server Management   서버 도입 기술  ****                                 </description>
+      <description>Linux Server Management   DNS 서버    DNS(Domain Name Server)는 TCP/IP 네트워크에서 이름 해석 서비스를 제공하는 서버 애플리케이션으로 이름 해석이란 호스트 이름과 도메인 이름을 IP 주소로 변환하는, 혹은 반대로 IP 주소에서 호스트 이름이나 도메인 이름으로 변환하는 작업이다.
+  DNS 서버는 자신의 도메인 정보를 관리하고 외부 DNS 서버의 문의에 대응하는 기능을 수행하며, DNS 서버가 관리하는 도메인의 범위를 영역(Zoen)이라 한다.
+   Domain 이름의 기술 형식    도메인 이름 : 서브도메인 이름 또는 공백</description>
     </item>
     
     <item>

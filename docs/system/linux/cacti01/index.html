@@ -23,7 +23,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.598395e229f6d88865c3d979e269929d5c6c5dcba7c8dd65fb0c0ac2cbffe95a.js" integrity="sha256-WYOV4in22Ihlw9l54mmSnVxsXcunyN1l&#43;wwKwsv/6Vo="></script>
+<script defer src="/en.search.min.0372ef7fcd8ad3e4f68ed49a92eb75b797a22f387dc967b8c2c10e5bf3a5db2b.js" integrity="sha256-A3Lvf82K0&#43;T2jtSakut1t5eiLzh9yWe4wsEOW/Ol2ys="></script>
 <!--
 
 -->
@@ -1169,7 +1169,7 @@
         <li >
 
   
-  <a href="/docs/system/linux/ls02/" class="">서버 도입 기술</a>
+  <a href="/docs/system/linux/ls02/" class="">서버도입</a>
   
 
 </li>
@@ -1503,6 +1503,8 @@
 $ Cacti&gt; yum -y install epel-release
 $ Cacti&gt; yum -y update
 $ Cacti&gt; setenforce 0
+$ Cacti&gt; mv /etc/localtime /etc/localtime_org
+$ Cacti&gt; ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 </code></pre></div><h1 id="heading-6"></h1>
 <p> </p>
 <h1 id="heading-7"></h1>
@@ -1557,22 +1559,22 @@ memory_limit <span style="color:#f92672">=</span> 800M
 <p> </p>
 <h1 id="heading-12"></h1>
 <h3 id="mysql-57-install"><strong>MySQL 5.7 Install</strong></h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ Cacti&gt; wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ Cacti&gt; yum -y install http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 
-$ Cacti&gt; sudo rpm -ivh mysql57-community-release-el7-11.noarch.rpm
+$ Cacti&gt; yum -y install mysql-community-server
 
-$ Cacti&gt; sudo yum -y install mysql-server
+$ Cacti&gt; systemctl start mysqld
 
-$ Cacti&gt; sudo systemctl start mysqld
+$ Cacti&gt; cat /var/log/mysqld.log | grep gen
 
-$ Cacti&gt; sudo mysql_secure_installation
+$ Cacti&gt; mysql_secure_installation
 <span style="color:#75715e"># 소, 대문자, 특수문자 포함 12자리 이상</span>
 
 $ Cacti&gt; systemctl stop mysqld
 $ Cacti&gt; systemctl set-environment MYSQLD_OPTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--skip-grant-tables&#34;</span>
 $ Cacti&gt; systemctl start mysqld
 $ Cacti&gt; mysql -u root
-$ mysql&gt; UPDATE mysql.user SET authentication_string <span style="color:#f92672">=</span> PASSWORD<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;qwer1234&#39;</span><span style="color:#f92672">)</span> WHERE User <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;root&#39;</span> AND Host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;localhost&#39;</span>
+$ mysql&gt; UPDATE mysql.user SET authentication_string <span style="color:#f92672">=</span> PASSWORD<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Dkagh1234.&#39;</span><span style="color:#f92672">)</span> WHERE User <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;root&#39;</span> AND Host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;localhost&#39;</span>
 $ mysql&gt; FLUSH PRIVILEGES;
 $ mysql&gt; exit
 $ Cacti&gt; systemctl stop mysqld
@@ -1585,11 +1587,9 @@ $ mysql&gt; uninstall plugin validate_password;
 $ mysql&gt; FLUSH PRIVILEGES;
 $ mysql&gt; exit
 
-$ Cacti&gt; mysql_upgrade -u root -p
-
 $ Cacti&gt; vi /etc/my.cnf
 <span style="color:#f92672">[</span>mysqld<span style="color:#f92672">]</span>
-character-set-server<span style="color:#f92672">=</span>utf8
+character-set-server<span style="color:#f92672">=</span>utf8mb4
 max_allowed_packet<span style="color:#f92672">=</span>16777216
 innodb_flush_log_at_timeout<span style="color:#f92672">=</span>3
 innodb_read_io_threads<span style="color:#f92672">=</span>32
@@ -1604,6 +1604,10 @@ tmp_table_size<span style="color:#f92672">=</span> 128MB
 join_buffer_size<span style="color:#f92672">=</span> 248MB
 collation_server<span style="color:#f92672">=</span>utf8mb4_unicode_ci
 
+character-set-client-handshake <span style="color:#f92672">=</span> FALSE
+innodb_doublewrite <span style="color:#f92672">=</span> ON
+innodb_large_prefix <span style="color:#f92672">=</span> 1
+innodb_file_format <span style="color:#f92672">=</span> Barracuda
 <span style="color:#75715e"># add follows within [mysqld] section</span>
 
 $ Cacti&gt; systemctl enable --now mysqld
@@ -1619,17 +1623,18 @@ $ Cacti&gt; firewall-cmd --reload
 
 
 $ Cacti&gt; vi /etc/snmp/snmpd.conf
+<span style="color:#75715e"># 아직 수정 중!</span>
 <span style="color:#75715e"># com2sec notConfigUser   default       public</span>
 <span style="color:#75715e"># line 41: comment out</span>
 
-com2sec local     localhost     Cacti
-com2sec Cacti     192.168.10.0/24     Cacti
+com2sec local     localhost     cacti
+com2sec mycacti     192.168.0.0/24     cacti
 <span style="color:#75715e"># line 74,75: uncomment and change</span>
 <span style="color:#75715e"># change &#34;mynetwork&#34; to your own network</span>
 <span style="color:#75715e"># change comunity name to anyone except public, private (for security reason)</span>
 
 group MyRWGroup     v2c     local
-group MyROGroup     v2c     Cacti
+group MyROGroup     v2c     mycacti
 <span style="color:#75715e"># line 78,79: uncomment and change</span>
 
 view all    included  .1                               80
@@ -1641,21 +1646,21 @@ access MyRWGroup <span style="color:#e6db74">&#34;&#34;</span>     v2c   noauth 
 
 $ Cacti&gt; systemctl enable --now snmpd
 
-$ Cacti&gt; snmpwalk -v2c -c Cacti localhost system
-<span style="color:#75715e"># validation (replace &#34;Serverworld&#34; to the comunity name you set)</span>
+$ Cacti&gt; snmpwalk -v2c -c cacti localhost system
+<span style="color:#75715e"># validation (replace &#34;mycacti&#34; to the comunity name you set)</span>
 
 $ Cacti&gt; mysql -u root -p
 $ mysql&gt; create database cacti;
-$ mysql&gt; grant all privileges on cacti.* to cacti@<span style="color:#e6db74">&#39;localhost&#39;</span> identified by <span style="color:#e6db74">&#39;qwer1234&#39;</span>;
-$ mysql&gt; grant all privileges on mysql.* to cacti@<span style="color:#e6db74">&#39;localhost&#39;</span> identified by <span style="color:#e6db74">&#39;qwer1234&#39;</span>;
-$ mysql&gt; ALTER DATABASE cacti CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+$ mysql&gt; grant all privileges on cacti.* to cacti@<span style="color:#e6db74">&#39;localhost&#39;</span> identified by <span style="color:#e6db74">&#39;Dkagh1234.&#39;</span>;
+$ mysql&gt; grant <span style="color:#66d9ef">select</span> on mysql.* to cacti@<span style="color:#e6db74">&#39;localhost&#39;</span> identified by <span style="color:#e6db74">&#39;Dkagh1234.&#39;</span>;
 $ mysql&gt; flush privileges;
 $ mysql&gt; exit
 <span style="color:#75715e"># DB create</span>
 
+$ Cacti&gt; mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p mysql &gt; /dev/null 2&gt;&amp;1
+
 $ Cacti&gt; mysql -u cacti -p cacti &lt; /usr/share/doc/cacti-*/cacti.sql
 Enter password: DB User pw
-$ Cacti&gt; mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p mysql &gt; /dev/null 2&gt;&amp;1
 
 $ Cacti&gt; vi /etc/cron.d/cacti
 */5 * * * * cacti /usr/bin/php /usr/share/cacti/poller.php &gt; /dev/null 2&gt;&amp;1
@@ -1673,15 +1678,18 @@ $database_ssl <span style="color:#f92672">=</span> false;
 
 $ Cacti&gt; vi /etc/httpd/conf.d/cacti.conf
 Require host localhost
-Require ip 192.168.10.0/24
+Require ip 192.168.0.0/24
 <span style="color:#75715e"># line 17: add access permission if need</span>
 
 $ Cacti&gt; systemctl restart httpd
+
+
 $ Cacti&gt; mkdir /usr/local/etc/cacti
 $ Cacti&gt; cd /var/lib/cacti/cli/
 $ Cacti&gt; php -q input_whitelist.php --update
 $ Cacti&gt; php -q input_whitelist.php --audit
 $ Cacti&gt; php -q input_whitelist.php --push
+<span style="color:#75715e"># Whitelist는 아직 정리 필요</span>
 </code></pre></div><h1 id="heading-15"></h1>
 <p> </p>
 <h1 id="heading-16"></h1>
