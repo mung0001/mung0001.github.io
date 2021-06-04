@@ -5,21 +5,23 @@
   <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="OpenStack Ussuri : Glance  ----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached Keystone | | httpd Glance | -----------------------  OpenStack Ussuri : Glance   Glance는 OpenStack에서 이미지 생성에 필요한 Iamge 관리 서비스를 구성하고 있습니다. Glance에 자세한 설명은 Glance를 참조해주세요.   Glance service 및 User 생성 $ contoller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 glance&#43;---------------------&#43;----------------------------------&#43;| Field | Value |&#43;---------------------&#43;----------------------------------&#43;| default_project_id | 7c10c02365be496fb47f12bfd40fe4a7 || domain_id | default || enabled | True || id | 03f5b16a7be84cb688617d1943c8fe8c || name | glance || options | {} || password_expires_at | None |&#43;---------------------&#43;----------------------------------&#43;$ contoller ~(keystone)&gt; openstack role add --project service --user glance admin$ contoller ~(keystone)&gt; openstack service create --name glance --description &#34;OpenStack Image service&#34; image&#43;-------------&#43;----------------------------------&#43;| Field | Value |&#43;-------------&#43;----------------------------------&#43;| description | OpenStack Image service || enabled | True || id | af365771c17a4a25ae1d0c659e2dc0eb || name | glance || type | image |&#43;-------------&#43;----------------------------------&#43;$ contoller ~(keystone)&gt; openstack endpoint create --region RegionOne image public http://controller:9292&#43;--------------&#43;----------------------------------&#43;| Field | Value |&#43;--------------&#43;----------------------------------&#43;| enabled | True || id | cc65faecd7b042ffafd0f262cd7547df || interface | public || region | RegionOne || region_id | RegionOne || service_id | af365771c17a4a25ae1d0c659e2dc0eb || service_name | glance || service_type | image || url | http://controller:9292 |&#43;--------------&#43;----------------------------------&#43;$ contoller ~(keystone)&gt; openstack endpoint create --region RegionOne image internal http://controller:9292&#43;--------------&#43;----------------------------------&#43;| Field | Value |&#43;--------------&#43;----------------------------------&#43;| enabled | True || id | ea41c7b17c844e658ac83c547eddcf6d || interface | internal || region | RegionOne || region_id | RegionOne || service_id | af365771c17a4a25ae1d0c659e2dc0eb || service_name | glance || service_type | image || url | http://controller:9292 |&#43;--------------&#43;----------------------------------&#43;$ contoller ~(keystone)&gt; openstack endpoint create --region RegionOne image admin http://controller:9292&#43;--------------&#43;----------------------------------&#43;| Field | Value |&#43;--------------&#43;----------------------------------&#43;| enabled | True || id | 1393a64ef0ec428ba437602ac5b390f6 || interface | admin || region | RegionOne || region_id | RegionOne || service_id | af365771c17a4a25ae1d0c659e2dc0eb || service_name | glance || service_type | image || url | http://controller:9292 |&#43;--------------&#43;----------------------------------&#43;   Glance 유저의 DB를 생성합니다.">
+<meta name="description" content="OpenStack Ussuri : Glance  ----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached Keystone | | httpd Glance | -----------------------  OpenStack Ussuri : Glance   Glance는 OpenStack에서 이미지 생성에 필요한 Iamge 관리 서비스를 구성하고 있습니다. Glance에 자세한 설명은 Glance를 참조해주세요.   Glance service 및 User 생성 $ contoller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 glance &#43;---------------------&#43;----------------------------------&#43; | Field | Value | &#43;---------------------&#43;----------------------------------&#43; | default_project_id | 7c10c02365be496fb47f12bfd40fe4a7 | | domain_id | default | | enabled | True | | id | 03f5b16a7be84cb688617d1943c8fe8c | | name | glance | | options | {} | | password_expires_at | None | &#43;---------------------&#43;----------------------------------&#43; $ contoller ~(keystone)&gt; openstack role add --project service --user glance admin $ contoller ~(keystone)&gt; openstack service create --name glance --description &#34;OpenStack Image service&#34; image &#43;-------------&#43;----------------------------------&#43; | Field | Value | &#43;-------------&#43;----------------------------------&#43; | description | OpenStack Image service | | enabled | True | | id | af365771c17a4a25ae1d0c659e2dc0eb | | name | glance | | type | image | &#43;-------------&#43;----------------------------------&#43; $ contoller ~(keystone)&gt; openstack endpoint create --region RegionOne image public http://controller:9292 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | cc65faecd7b042ffafd0f262cd7547df | | interface | public | | region | RegionOne | | region_id | RegionOne | | service_id | af365771c17a4a25ae1d0c659e2dc0eb | | service_name | glance | | service_type | image | | url | http://controller:9292 | &#43;--------------&#43;----------------------------------&#43; $ contoller ~(keystone)&gt; openstack endpoint create --region RegionOne image internal http://controller:9292 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | ea41c7b17c844e658ac83c547eddcf6d | | interface | internal | | region | RegionOne | | region_id | RegionOne | | service_id | af365771c17a4a25ae1d0c659e2dc0eb | | service_name | glance | | service_type | image | | url | http://controller:9292 | &#43;--------------&#43;----------------------------------&#43; $ contoller ~(keystone)&gt; openstack endpoint create --region RegionOne image admin http://controller:9292 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | 1393a64ef0ec428ba437602ac5b390f6 | | interface | admin | | region | RegionOne | | region_id | RegionOne | | service_id | af365771c17a4a25ae1d0c659e2dc0eb | | service_name | glance | | service_type | image | | url | http://controller:9292 | &#43;--------------&#43;----------------------------------&#43;    Glance 유저의 DB를 생성합니다.">
 
 
 
 <meta name="robots" content="index,follow">
 <link rel="canonical" href=/docs/openstack/openstacktraining/openstack-ussuri-04/><meta property="og:title" content="OpenStack Ussuri : Glance" />
-<meta property="og:description" content="OpenStack Ussuri : Glance  ----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached Keystone | | httpd Glance | -----------------------  OpenStack Ussuri : Glance   Glance는 OpenStack에서 이미지 생성에 필요한 Iamge 관리 서비스를 구성하고 있습니다. Glance에 자세한 설명은 Glance를 참조해주세요.   Glance service 및 User 생성 $ contoller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 glance&#43;---------------------&#43;----------------------------------&#43;| Field | Value |&#43;---------------------&#43;----------------------------------&#43;| default_project_id | 7c10c02365be496fb47f12bfd40fe4a7 || domain_id | default || enabled | True || id | 03f5b16a7be84cb688617d1943c8fe8c || name | glance || options | {} || password_expires_at | None |&#43;---------------------&#43;----------------------------------&#43;$ contoller ~(keystone)&gt; openstack role add --project service --user glance admin$ contoller ~(keystone)&gt; openstack service create --name glance --description &#34;OpenStack Image service&#34; image&#43;-------------&#43;----------------------------------&#43;| Field | Value |&#43;-------------&#43;----------------------------------&#43;| description | OpenStack Image service || enabled | True || id | af365771c17a4a25ae1d0c659e2dc0eb || name | glance || type | image |&#43;-------------&#43;----------------------------------&#43;$ contoller ~(keystone)&gt; openstack endpoint create --region RegionOne image public http://controller:9292&#43;--------------&#43;----------------------------------&#43;| Field | Value |&#43;--------------&#43;----------------------------------&#43;| enabled | True || id | cc65faecd7b042ffafd0f262cd7547df || interface | public || region | RegionOne || region_id | RegionOne || service_id | af365771c17a4a25ae1d0c659e2dc0eb || service_name | glance || service_type | image || url | http://controller:9292 |&#43;--------------&#43;----------------------------------&#43;$ contoller ~(keystone)&gt; openstack endpoint create --region RegionOne image internal http://controller:9292&#43;--------------&#43;----------------------------------&#43;| Field | Value |&#43;--------------&#43;----------------------------------&#43;| enabled | True || id | ea41c7b17c844e658ac83c547eddcf6d || interface | internal || region | RegionOne || region_id | RegionOne || service_id | af365771c17a4a25ae1d0c659e2dc0eb || service_name | glance || service_type | image || url | http://controller:9292 |&#43;--------------&#43;----------------------------------&#43;$ contoller ~(keystone)&gt; openstack endpoint create --region RegionOne image admin http://controller:9292&#43;--------------&#43;----------------------------------&#43;| Field | Value |&#43;--------------&#43;----------------------------------&#43;| enabled | True || id | 1393a64ef0ec428ba437602ac5b390f6 || interface | admin || region | RegionOne || region_id | RegionOne || service_id | af365771c17a4a25ae1d0c659e2dc0eb || service_name | glance || service_type | image || url | http://controller:9292 |&#43;--------------&#43;----------------------------------&#43;   Glance 유저의 DB를 생성합니다." />
+<meta property="og:description" content="OpenStack Ussuri : Glance  ----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached Keystone | | httpd Glance | -----------------------  OpenStack Ussuri : Glance   Glance는 OpenStack에서 이미지 생성에 필요한 Iamge 관리 서비스를 구성하고 있습니다. Glance에 자세한 설명은 Glance를 참조해주세요.   Glance service 및 User 생성 $ contoller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 glance &#43;---------------------&#43;----------------------------------&#43; | Field | Value | &#43;---------------------&#43;----------------------------------&#43; | default_project_id | 7c10c02365be496fb47f12bfd40fe4a7 | | domain_id | default | | enabled | True | | id | 03f5b16a7be84cb688617d1943c8fe8c | | name | glance | | options | {} | | password_expires_at | None | &#43;---------------------&#43;----------------------------------&#43; $ contoller ~(keystone)&gt; openstack role add --project service --user glance admin $ contoller ~(keystone)&gt; openstack service create --name glance --description &#34;OpenStack Image service&#34; image &#43;-------------&#43;----------------------------------&#43; | Field | Value | &#43;-------------&#43;----------------------------------&#43; | description | OpenStack Image service | | enabled | True | | id | af365771c17a4a25ae1d0c659e2dc0eb | | name | glance | | type | image | &#43;-------------&#43;----------------------------------&#43; $ contoller ~(keystone)&gt; openstack endpoint create --region RegionOne image public http://controller:9292 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | cc65faecd7b042ffafd0f262cd7547df | | interface | public | | region | RegionOne | | region_id | RegionOne | | service_id | af365771c17a4a25ae1d0c659e2dc0eb | | service_name | glance | | service_type | image | | url | http://controller:9292 | &#43;--------------&#43;----------------------------------&#43; $ contoller ~(keystone)&gt; openstack endpoint create --region RegionOne image internal http://controller:9292 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | ea41c7b17c844e658ac83c547eddcf6d | | interface | internal | | region | RegionOne | | region_id | RegionOne | | service_id | af365771c17a4a25ae1d0c659e2dc0eb | | service_name | glance | | service_type | image | | url | http://controller:9292 | &#43;--------------&#43;----------------------------------&#43; $ contoller ~(keystone)&gt; openstack endpoint create --region RegionOne image admin http://controller:9292 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | 1393a64ef0ec428ba437602ac5b390f6 | | interface | admin | | region | RegionOne | | region_id | RegionOne | | service_id | af365771c17a4a25ae1d0c659e2dc0eb | | service_name | glance | | service_type | image | | url | http://controller:9292 | &#43;--------------&#43;----------------------------------&#43;    Glance 유저의 DB를 생성합니다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-04/" />
+<meta property="og:url" content="https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-04/" /><meta property="article:section" content="docs" />
+
+
 
 
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.b5dbe2236f3bc1b455cee94a3457f099d128df25c8d288bdade996019640c4a2.js" integrity="sha256-tdviI287wbRVzulKNFfwmdEo3yXI0oi9remWAZZAxKI="></script>
+<script defer src="/en.search.min.57d55e398cad59a8d17cbf04c9cf36ad412ab0e9e61906c534179da0b186f74f.js" integrity="sha256-V9VeOYytWajRfL8Eyc82rUEqsOnmGQbFNBedoLGG908="></script>
 <!--
 
 -->
@@ -445,152 +447,6 @@
 
 
 
-  
-  <ul>
-    
-      
-        <li >
-
-  
-  <a href="/docs/openstack/openstack/openstack/" class="">OpenStack 개요</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
-  <a href="/docs/openstack/openstack/keystone/" class="">Keystone</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
-  <a href="/docs/openstack/openstack/glance/" class="">Glance</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
-  <a href="/docs/openstack/openstack/nova/" class="">Nova</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
-  <a href="/docs/openstack/openstack/neutron/" class="">Neutron</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
-  <a href="/docs/openstack/openstack/cinder/" class="">Cinder</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
-  <a href="/docs/openstack/openstack/ceilometer/" class="">Ceilometer</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
-  <a href="/docs/openstack/openstack/horizon/" class="">Horizon</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
-  <a href="/docs/openstack/openstack/swift/" class="">Swift</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
-  <a href="/docs/openstack/openstack/heat/" class="">Heat</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
-  <a href="/docs/openstack/openstack/trove/" class="">Trove</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
-  <a href="/docs/openstack/openstack/sahara/" class="">Sahara</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
-  <a href="/docs/openstack/openstack/ironic/" class="">Ironic</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
-  <a href="/docs/openstack/openstack/service/" class="">Service</a>
-  
-
-</li>
-      
-    
-  </ul>
-  
-
 
 
   </li>
@@ -834,6 +690,25 @@
     
 
   
+  <span>operation</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
   <span>Docker</span>
   
 
@@ -853,7 +728,7 @@
     
 
   
-  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  <a href="/docs/docker/docker/docker/" class="collapsed ">Docker docs</a>
   
 
 
@@ -876,7 +751,7 @@
     
 
   
-  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  <a href="/docs/docker/docker/dockertraining/" class="collapsed ">Docker Training</a>
   
 
 
@@ -884,6 +759,16 @@
 
 
 
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
 
 
 
@@ -984,7 +869,7 @@
     
 
   
-  <span>Programming</span>
+  <span>development</span>
   
 
 
@@ -1003,7 +888,7 @@
     
 
   
-  <a href="/docs/programing/python/" class="collapsed ">Python docs</a>
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
   
 
 
@@ -1026,7 +911,7 @@
     
 
   
-  <a href="/docs/programing/shell/" class="collapsed ">Shell Script</a>
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
   
 
 
@@ -1049,7 +934,7 @@
     
 
   
-  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
   
 
 
@@ -1072,7 +957,7 @@
     
 
   
-  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
   
 
 
@@ -1095,7 +980,7 @@
     
 
   
-  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
   
 
 
@@ -1500,7 +1385,7 @@
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  

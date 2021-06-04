@@ -5,11 +5,7 @@
     <link>https://mung0001.github.io/docs/network/snort/</link>
     <description>Recent content in Snort on 뭉게뭉게</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>kr-ko</language>
-    
-	<atom:link href="https://mung0001.github.io/docs/network/snort/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/docs/network/snort/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Snort란?</title>
       <link>https://mung0001.github.io/docs/network/snort/snort-01/</link>

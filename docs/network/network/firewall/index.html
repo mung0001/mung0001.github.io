@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="방화벽 (CentOS - firewalld)    리눅스의 방화벽
  커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제       방화벽의 종류
- 패킷 필터링 방화벽  - 제 1세대 방화벽 - 레이어 1~4에서 사용 - 단순하기 때문에 빠르고 효과적 - 5~7계층 대응 불가  Stateful 방화벽  - 제 2세대 방화벽 - 패킷의 연결 상태를 관찰 - 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약  **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽 - 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요      방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.">
+ 패킷 필터링 방화벽  - 제 1세대 방화벽- 레이어 1~4에서 사용- 단순하기 때문에 빠르고 효과적- 5~7계층 대응 불가 Stateful 방화벽  - 제 2세대 방화벽- 패킷의 연결 상태를 관찰- 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약 **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽- 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요     방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.">
 
 
 
@@ -15,15 +15,17 @@
 <link rel="canonical" href=/docs/network/network/firewall/><meta property="og:title" content="Firewall" />
 <meta property="og:description" content="방화벽 (CentOS - firewalld)    리눅스의 방화벽
  커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제       방화벽의 종류
- 패킷 필터링 방화벽  - 제 1세대 방화벽 - 레이어 1~4에서 사용 - 단순하기 때문에 빠르고 효과적 - 5~7계층 대응 불가  Stateful 방화벽  - 제 2세대 방화벽 - 패킷의 연결 상태를 관찰 - 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약  **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽 - 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요      방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다." />
+ 패킷 필터링 방화벽  - 제 1세대 방화벽- 레이어 1~4에서 사용- 단순하기 때문에 빠르고 효과적- 5~7계층 대응 불가 Stateful 방화벽  - 제 2세대 방화벽- 패킷의 연결 상태를 관찰- 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약 **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽- 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요     방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mung0001.github.io/docs/network/network/firewall/" />
+<meta property="og:url" content="https://mung0001.github.io/docs/network/network/firewall/" /><meta property="article:section" content="docs" />
+
+
 
 
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.b5dbe2236f3bc1b455cee94a3457f099d128df25c8d288bdade996019640c4a2.js" integrity="sha256-tdviI287wbRVzulKNFfwmdEo3yXI0oi9remWAZZAxKI="></script>
+<script defer src="/en.search.min.57d55e398cad59a8d17cbf04c9cf36ad412ab0e9e61906c534179da0b186f74f.js" integrity="sha256-V9VeOYytWajRfL8Eyc82rUEqsOnmGQbFNBedoLGG908="></script>
 <!--
 
 -->
@@ -496,6 +498,25 @@
     
 
   
+  <span>operation</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
   <span>Docker</span>
   
 
@@ -515,7 +536,7 @@
     
 
   
-  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  <a href="/docs/docker/docker/docker/" class="collapsed ">Docker docs</a>
   
 
 
@@ -538,7 +559,7 @@
     
 
   
-  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  <a href="/docs/docker/docker/dockertraining/" class="collapsed ">Docker Training</a>
   
 
 
@@ -546,6 +567,16 @@
 
 
 
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
 
 
 
@@ -646,7 +677,7 @@
     
 
   
-  <span>Programming</span>
+  <span>development</span>
   
 
 
@@ -665,7 +696,7 @@
     
 
   
-  <a href="/docs/programing/python/" class="collapsed ">Python docs</a>
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
   
 
 
@@ -688,7 +719,7 @@
     
 
   
-  <a href="/docs/programing/shell/" class="collapsed ">Shell Script</a>
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
   
 
 
@@ -711,7 +742,7 @@
     
 
   
-  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
   
 
 
@@ -734,7 +765,7 @@
     
 
   
-  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
   
 
 
@@ -757,7 +788,7 @@
     
 
   
-  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
   
 
 
@@ -1248,7 +1279,7 @@
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1593,21 +1624,21 @@
 <li>
 <p><strong>Block 존</strong></p>
 <ul>
-<li>Drop 존처럼 들어오는 모든 네트워크 연결은 거부되는데, 이에 대해 icmp-host-prohibited와
+<li>Drop 존처럼 들어오는 모든 네트워크 연결은 거부되는데, 이에 대해 icmp-host-prohibited와 
 icmp6-prohibited라는 응답 메시지를 보낸다.</li>
 </ul>
 </li>
 <li>
 <p><strong>Public 존</strong></p>
 <ul>
-<li>서비스를 제공하는 특별한 포트로의 연결만을 허용하고, 그 외 포트로의 연결은 모두 거부되며
+<li>서비스를 제공하는 특별한 포트로의 연결만을 허용하고, 그 외 포트로의 연결은 모두 거부되며 
 기본 Zone으로 사용</li>
 </ul>
 </li>
 <li>
 <p><strong>External 존</strong></p>
 <ul>
-<li>특별히 매스커레이딩 규칙이 적용되는 외부의 라우터를 위해 사용되며, 단지 내부로의 연결 요청
+<li>특별히 매스커레이딩 규칙이 적용되는 외부의 라우터를 위해 사용되며, 단지 내부로의 연결 요청 
 중에서 선택된 연결만을 허용</li>
 </ul>
 </li>
@@ -1620,7 +1651,7 @@ icmp6-prohibited라는 응답 메시지를 보낸다.</li>
 <li>
 <p><strong>Work 존</strong></p>
 <ul>
-<li>같은 회사에 위치한 네트워크를 위해 사용되며, 대부분 같은 네트워크에 위치한 다른 시스템을
+<li>같은 회사에 위치한 네트워크를 위해 사용되며, 대부분 같은 네트워크에 위치한 다른 시스템을 
 신뢰하고 오직 선택된 연결만을 접속 허용</li>
 </ul>
 </li>
@@ -1779,7 +1810,7 @@ firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">firewall<span style="color:#f92672">-</span>cmd
 </code></pre></div><h1 id="heading-41"></h1>
 <p>firewall-cmd &ndash;reload
-firewall-cmd &ndash;permanent &ndash;zone=external
+firewall-cmd &ndash;permanent &ndash;zone=external 
 firewall-cmd &ndash;add-forward-port-port=9090:proto=tcp:toport=9090:toaddr=10.10.10.20
 firewall-cmd &ndash;set-default-zone=external
 firewall-cmd &ndash;zone=internal &ndash;add-masquerade</p>

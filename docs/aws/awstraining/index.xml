@@ -5,11 +5,7 @@
     <link>https://mung0001.github.io/docs/aws/awstraining/</link>
     <description>Recent content in AWS Training on 뭉게뭉게</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>kr-ko</language>
-    
-	<atom:link href="https://mung0001.github.io/docs/aws/awstraining/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/docs/aws/awstraining/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS 시작하기</title>
       <link>https://mung0001.github.io/docs/aws/awstraining/start/</link>
@@ -114,7 +110,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/aws/awstraining/3tier/</guid>
-      <description>****    ****          예제 1. 다음의 인스턴스를 생성해보세요.  예제 1. 답안↕ 사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다. 정책에서 admin의 권한을 선택 후 생성합니다.  </description>
+      <description>****    ****          예제 1. 다음의 인스턴스를 생성해보세요.  예제 1. 답안↕ 사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다. 정책에서 admin의 권한을 선택 후 생성합니다.   </description>
     </item>
     
     <item>
@@ -133,7 +129,7 @@
       
       <guid>https://mung0001.github.io/docs/aws/awstraining/owncloud/</guid>
       <description>Nas-Owncloud 실습    Owncloud를 활용하여 Ec2 Nas 만들기        EC2 생성
-&amp;gt; OS : Ubuntu 18.04&amp;gt; Flavor : t2.micro&amp;gt; Storage : 100G ( 원하는 만큼, 차후에 EFS 등으로도 가능합니다. )&amp;gt; VPC : Custop&amp;gt; 보안그룹 : Custop 인스턴스를 생성합니다.      먼저, Owncloud를 사용하기 위해서는 LAMP를 설치해야합니다.  $ sudo apt install -y tasksel$ sudo tasksel install -y lamp-server# LAMP 간편 설치$ sudo apt install -y apache2# apache2 설치$ sudo apt install -y mysql-server# mysql 설치$ sudo apt install -y php7.</description>
+&amp;gt; OS : Ubuntu 18.04&amp;gt; Flavor : t2.micro&amp;gt; Storage : 100G ( 원하는 만큼, 차후에 EFS 등으로도 가능합니다. )&amp;gt; VPC : Custop&amp;gt; 보안그룹 : Custop 인스턴스를 생성합니다.      먼저, Owncloud를 사용하기 위해서는 LAMP를 설치해야합니다.  $ sudo apt install -y tasksel $ sudo tasksel install -y lamp-server # LAMP 간편 설치 $ sudo apt install -y apache2 # apache2 설치 $ sudo apt install -y mysql-server # mysql 설치 $ sudo apt install -y php7.</description>
     </item>
     
     <item>
@@ -209,7 +205,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/aws/awstraining/aws-lambda-crawling/</guid>
-      <description>AWS Lambda Crawling    AWS Lambda Crawling                     $ pip3 install [ Package ] -t .$ pip3 install bs4 -t .$ &amp;#39;[ 7z 경로, 다른 zip도 가능 ]&amp;#39; a &amp;#39;[ 압축할 패키지 이름 ]&amp;#39; &amp;#39;[ 압축할 패키지 경로 ]&amp;#39; $ &amp;#39;C:\Program Files\7-Zip\7z.exe&amp;#39; a &amp;#39;C:\AWSLambda\bs4.zip&amp;#39; &amp;#39;.&amp;#39;                                                                                     예제 1.</description>
+      <description>AWS Lambda Crawling    AWS Lambda Crawling                     $ pip3 install [ Package ] -t . $ pip3 install bs4 -t . $ &amp;#39;[ 7z 경로, 다른 zip도 가능 ]&amp;#39; a &amp;#39;[ 압축할 패키지 이름 ]&amp;#39; &amp;#39;[ 압축할 패키지 경로 ]&amp;#39; $ &amp;#39;C:\Program Files\7-Zip\7z.exe&amp;#39; a &amp;#39;C:\AWSLambda\bs4.zip&amp;#39; &amp;#39;.&amp;#39;                                                                                      예제 1.</description>
     </item>
     
     <item>
@@ -218,7 +214,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/aws/awstraining/game/</guid>
-      <description>AWS 끄투온라인 서버 구축    AWS 끄투온라인 서버 구축      끄투 온라인은 오픈소스의 끝말잇기 게임입니다.      EC2를 생성합니다. EC2 생성은 EC2 생성을 참조해주세요.     OS 유형 disk security group     Ubuntu18.04 t2.mini 8 all-open      인스턴스를 생성 후, 아래와 같이 진행합니다.  $ sudo apt -y update$ sudo apt -y upgrade$ sudo apt -y install node.</description>
+      <description>AWS 끄투온라인 서버 구축    AWS 끄투온라인 서버 구축      끄투 온라인은 오픈소스의 끝말잇기 게임입니다.      EC2를 생성합니다. EC2 생성은 EC2 생성을 참조해주세요.     OS 유형 disk security group     Ubuntu18.04 t2.mini 8 all-open      인스턴스를 생성 후, 아래와 같이 진행합니다.  $ sudo apt -y update $ sudo apt -y upgrade $ sudo apt -y install node.</description>
     </item>
     
   </channel>

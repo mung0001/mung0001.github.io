@@ -13,13 +13,15 @@
 <link rel="canonical" href=/docs/system/linux/linux06/><meta property="og:title" content="Linux 파일처리" />
 <meta property="og:description" content="Linux   Linux 파일처리   Linux 파일처리는 각 파일들을 읽거나, 데이터를 수정하는 데 주로 사용됩니다.      file   파일의 타입을 확인합니다. 텍스트파일, 실행파일, 아카이브 파일 등의 파일 타입을 확인합니다.   주요 옵션     옵션 내용     -z 파일이 압축되어 있는 경우 압축되기 전의 파일 타입을 확인        head   head는 파일의 앞 부분을 출력하는 명령어입니다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mung0001.github.io/docs/system/linux/linux06/" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/linux/linux06/" /><meta property="article:section" content="docs" />
+
+
 
 
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.b5dbe2236f3bc1b455cee94a3457f099d128df25c8d288bdade996019640c4a2.js" integrity="sha256-tdviI287wbRVzulKNFfwmdEo3yXI0oi9remWAZZAxKI="></script>
+<script defer src="/en.search.min.57d55e398cad59a8d17cbf04c9cf36ad412ab0e9e61906c534179da0b186f74f.js" integrity="sha256-V9VeOYytWajRfL8Eyc82rUEqsOnmGQbFNBedoLGG908="></script>
 <!--
 
 -->
@@ -492,6 +494,25 @@
     
 
   
+  <span>operation</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
   <span>Docker</span>
   
 
@@ -511,7 +532,7 @@
     
 
   
-  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  <a href="/docs/docker/docker/docker/" class="collapsed ">Docker docs</a>
   
 
 
@@ -534,7 +555,7 @@
     
 
   
-  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  <a href="/docs/docker/docker/dockertraining/" class="collapsed ">Docker Training</a>
   
 
 
@@ -542,6 +563,16 @@
 
 
 
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
 
 
 
@@ -642,7 +673,7 @@
     
 
   
-  <span>Programming</span>
+  <span>development</span>
   
 
 
@@ -661,7 +692,7 @@
     
 
   
-  <a href="/docs/programing/python/" class="collapsed ">Python docs</a>
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
   
 
 
@@ -684,7 +715,7 @@
     
 
   
-  <a href="/docs/programing/shell/" class="collapsed ">Shell Script</a>
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
   
 
 
@@ -707,7 +738,7 @@
     
 
   
-  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
   
 
 
@@ -730,7 +761,7 @@
     
 
   
-  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
   
 
 
@@ -753,7 +784,7 @@
     
 
   
-  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
   
 
 
@@ -1088,7 +1119,7 @@
         <li >
 
   
-  <a href="/docs/system/linux/ls03/" class="">L S03</a>
+  <a href="/docs/system/linux/ls03/" class="">Ls03</a>
   
 
 </li>
@@ -1098,7 +1129,7 @@
         <li >
 
   
-  <a href="/docs/system/linux/ls04/" class="">L S04</a>
+  <a href="/docs/system/linux/ls04/" class="">Ls04</a>
   
 
 </li>
@@ -1108,7 +1139,7 @@
         <li >
 
   
-  <a href="/docs/system/linux/ls05/" class="">L S05</a>
+  <a href="/docs/system/linux/ls05/" class="">Ls05</a>
   
 
 </li>
@@ -1118,7 +1149,7 @@
         <li >
 
   
-  <a href="/docs/system/linux/ls06/" class="">L S06</a>
+  <a href="/docs/system/linux/ls06/" class="">Ls06</a>
   
 
 </li>
@@ -1394,7 +1425,7 @@
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1654,19 +1685,19 @@
 xaa
 xab
 xac
-<span style="color:#75715e"># origintxt 파일을 100줄 단위로 분할합니다.</span> 
+<span style="color:#75715e"># origintxt 파일을 100줄 단위로 분할합니다. </span>
 
 $ split -l <span style="color:#ae81ff">100</span> -d origin.txt
 x01
 x02
 x03
-<span style="color:#75715e"># origintxt 파일을 100줄 단위로 나누는데, 파일이름을 숫자형식으로 분할합니다.</span> 
+<span style="color:#75715e"># origintxt 파일을 100줄 단위로 나누는데, 파일이름을 숫자형식으로 분할합니다. </span>
 
 $ split -l <span style="color:#ae81ff">100</span> -d -a <span style="color:#ae81ff">4</span> origin.txt
 x0001
 x0002
 x0003
-<span style="color:#75715e"># origintxt 파일을 100줄 단위로 나누는데, 파일이름을 숫자형식으로 하고, 파일이름의 딜리미터 크기는 4입니다.</span> 
+<span style="color:#75715e"># origintxt 파일을 100줄 단위로 나누는데, 파일이름을 숫자형식으로 하고, 파일이름의 딜리미터 크기는 4입니다. </span>
 </code></pre></div><h1 id="heading-24"></h1>
 <hr>
 <p> </p>

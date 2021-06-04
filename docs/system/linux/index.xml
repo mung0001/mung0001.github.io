@@ -5,11 +5,7 @@
     <link>https://mung0001.github.io/docs/system/linux/</link>
     <description>Recent content in Linux on 뭉게뭉게</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>kr-ko</language>
-    
-	<atom:link href="https://mung0001.github.io/docs/system/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/docs/system/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux 개요</title>
       <link>https://mung0001.github.io/docs/system/linux/linux/</link>
@@ -64,7 +60,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/linux/linux05/</guid>
-      <description>Linux   Linux 날짜   Linux 날짜는 날짜 처리를 위한 명령어 입니다.      date   date는 일자, 시간을 처리하는 명령어입니다.   주요 옵션     옵션 내용     -d 원하는 일자를 지정   + 출력 포맷을 지정     사용예제  $ date +%Y%m%d2020-11-21# 년월일 형태 $ date +\%Y\%m\%d2020-11-21# %를 지원하지 않는 환경(ex: crontab)에서는 특수기호로 입력 $ date +&amp;#34;%Y%m%d %H:%M:%S&amp;#34;2020-11-21 08:46:53# 년월일 시간 출력 $ date +%W06# 주차 계산 $ date +%Y-%m-%d -d &amp;#39;1 days ago&amp;#39;2020-11-20# 1일 전 $ date +%Y-%m-%d -d &amp;#39;+1days&amp;#39;2020-11-22# 1일 후 $ date +%Y-%m-%d -d &amp;#39;20190101 +1days&amp;#39;2020-11-22# 20201121 일자 지정후 1일 추가  </description>
+      <description>Linux   Linux 날짜   Linux 날짜는 날짜 처리를 위한 명령어 입니다.      date   date는 일자, 시간을 처리하는 명령어입니다.   주요 옵션     옵션 내용     -d 원하는 일자를 지정   + 출력 포맷을 지정     사용예제  $ date +%Y%m%d 2020-11-21 # 년월일 형태  $ date +\%Y\%m\%d 2020-11-21 # %를 지원하지 않는 환경(ex: crontab)에서는 특수기호로 입력  $ date +&amp;#34;%Y%m%d %H:%M:%S&amp;#34; 2020-11-21 08:46:53 # 년월일 시간 출력  $ date +%W 06 # 주차 계산  $ date +%Y-%m-%d -d &amp;#39;1 days ago&amp;#39; 2020-11-20 # 1일 전  $ date +%Y-%m-%d -d &amp;#39;+1days&amp;#39; 2020-11-22 # 1일 후  $ date +%Y-%m-%d -d &amp;#39;20190101 +1days&amp;#39; 2020-11-22 # 20201121 일자 지정후 1일 추가   </description>
     </item>
     
     <item>
@@ -94,7 +90,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/linux/linux08/</guid>
-      <description>Linux   Linux 형식파일   Linux 형식파일은 xml, xmllint, json, jq 형식의 파일들을 처리하기 위한 명령어입니다..      jq   jq는 JSON 형식 파일을 포맷과 들여쓰기에 맞게 출력하고, xpath 형식으로 값을 확인할 수 있습니다.   사용예제  $ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}$ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39; | jq{&amp;#34;key1&amp;#34;: &amp;#34;val1&amp;#34;,&amp;#34;key2&amp;#34;: &amp;#34;val2&amp;#34;}# jq를 이용하면 JSON 형식의 문자열을 포맷에 맞게 출력 $ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39; | jq &amp;#39;.</description>
+      <description>Linux   Linux 형식파일   Linux 형식파일은 xml, xmllint, json, jq 형식의 파일들을 처리하기 위한 명령어입니다..      jq   jq는 JSON 형식 파일을 포맷과 들여쓰기에 맞게 출력하고, xpath 형식으로 값을 확인할 수 있습니다.   사용예제  $ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39; {&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;} $ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39; | jq { &amp;#34;key1&amp;#34;: &amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;: &amp;#34;val2&amp;#34; } # jq를 이용하면 JSON 형식의 문자열을 포맷에 맞게 출력  $ echo &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;val1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;val2&amp;#34;}&amp;#39; | jq &amp;#39;.</description>
     </item>
     
     <item>
@@ -194,7 +190,7 @@
       <guid>https://mung0001.github.io/docs/system/linux/ls01/</guid>
       <description>Linux Server Management*   telnet, vi, ftp 사용연습  ftp 서버    CentOS7 : L1(192.168.10.50)
   CentOS7 : L2(192.168.10.51)
-  $ L1&amp;gt; vi /etc/hostname......L1$ L1&amp;gt; vi/etc/hosts......192.168.10.50 L1192.168.10.51 L2$ L1&amp;gt; scp /etc/hosts L2:/etc/hosts$ L1&amp;gt; init 6$ L2&amp;gt; vi/etc/hostname......L2$ L2&amp;gt; init 6 # 설정$ L2&amp;gt; touch apple banana peach$ L2&amp;gt; tar -cvf fruit apple banana peach$ L2&amp;gt; ll-rw-r--r--.</description>
+  $ L1&amp;gt; vi /etc/hostname ... ... L1 $ L1&amp;gt; vi/etc/hosts ... ... 192.168.10.50 L1 192.168.10.51 L2 $ L1&amp;gt; scp /etc/hosts L2:/etc/hosts $ L1&amp;gt; init 6 $ L2&amp;gt; vi/etc/hostname ... ... L2 $ L2&amp;gt; init 6 # 설정 $ L2&amp;gt; touch apple banana peach $ L2&amp;gt; tar -cvf fruit apple banana peach $ L2&amp;gt; ll -rw-r--r--.</description>
     </item>
     
     <item>

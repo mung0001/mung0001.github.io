@@ -5,11 +5,7 @@
     <link>https://mung0001.github.io/docs/system/window/</link>
     <description>Recent content in Windows Servers on 뭉게뭉게</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>kr-ko</language>
-    
-	<atom:link href="https://mung0001.github.io/docs/system/window/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/docs/system/window/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Roadmap</title>
       <link>https://mung0001.github.io/docs/system/window/window01/</link>
@@ -93,7 +89,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window07/</guid>
-      <description>Windows Shell   Windows CLI   Windows Server는 GUI환경이 아닌 도스환경으로도 실행될 수 있으며, GUI 환경이 아닌 만큼 리소스의 낭비가 적은 특징을 가지고 있습니다.       명렁어   사용자 컴퓨터의 이름을 나타내는 명령어  $ hostname$ echo %computername%    입력 문자를 출력하는 명령어  $ echo Hello#     사용자 컴퓨터의 이름을 변경하는 명령어  $ netdom renamecomputer %COMPUTERNAME% /newname:CORE# 컴퓨터의 이름을 CORE로 변경    재부팅  $ shutdown /r /t 0# 0/ 초/ 안에 reboot를 진행# /s stop /r reboot /t time    네트워크 인터페이스 및 네트워크 정보 확인  $ ipconfig    DNS 확인  $ nslookup    화면의 텍스트를 지우는 명령어  $ cls     네트워크 shell 명령어  $ netshnetsh&amp;gt; interface ipv4 show interface# 인터페이스 관련 정보를 출력netsh&amp;gt; interface ipv4 set address name=&amp;#34;3&amp;#34; source=static address=192.</description>
+      <description>Windows Shell   Windows CLI   Windows Server는 GUI환경이 아닌 도스환경으로도 실행될 수 있으며, GUI 환경이 아닌 만큼 리소스의 낭비가 적은 특징을 가지고 있습니다.       명렁어   사용자 컴퓨터의 이름을 나타내는 명령어  $ hostname $ echo %computername%     입력 문자를 출력하는 명령어  $ echo Hello #     사용자 컴퓨터의 이름을 변경하는 명령어  $ netdom renamecomputer %COMPUTERNAME% /newname:CORE # 컴퓨터의 이름을 CORE로 변경     재부팅  $ shutdown /r /t 0 # 0/ 초/ 안에 reboot를 진행 # /s stop /r reboot /t time     네트워크 인터페이스 및 네트워크 정보 확인  $ ipconfig     DNS 확인  $ nslookup     화면의 텍스트를 지우는 명령어  $ cls     네트워크 shell 명령어  $ netsh netsh&amp;gt; interface ipv4 show interface # 인터페이스 관련 정보를 출력 netsh&amp;gt; interface ipv4 set address name=&amp;#34;3&amp;#34; source=static address=192.</description>
     </item>
     
     <item>

@@ -5,10 +5,6 @@
     <link>https://mung0001.github.io/docs/project/</link>
     <description>Recent content in Project on 뭉게뭉게</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>kr-ko</language>
-    
-	<atom:link href="https://mung0001.github.io/docs/project/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/docs/project/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

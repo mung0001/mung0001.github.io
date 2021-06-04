@@ -1,0 +1,2386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shell Programming    Shell 문법  Shell 변수    Shell 에서 변수는 사용할 때 선언
+  변수에 초기 값을 대입할 때 변수를 만들게 된다.
+  모든 변수는 문자열로 간주
+  숫자 값을 가지는 경우에도 문자열로 간주
+  변수는 대소문자가 구별 (Linux 시스템의 특성)
+  변수에 값이 부여될 때를 제외하고, 변수를 사용할 경우 변수 앞에 &lsquo;$&lsquo;의 표시를 붙여야 한다.
+  변수에 부여된 값은 echo 명령을 통해 확인 가능">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/development/shell/shell-3/><meta property="og:title" content="Shell Script 문법" />
+<meta property="og:description" content="Shell Programming    Shell 문법  Shell 변수    Shell 에서 변수는 사용할 때 선언
+  변수에 초기 값을 대입할 때 변수를 만들게 된다.
+  모든 변수는 문자열로 간주
+  숫자 값을 가지는 경우에도 문자열로 간주
+  변수는 대소문자가 구별 (Linux 시스템의 특성)
+  변수에 값이 부여될 때를 제외하고, 변수를 사용할 경우 변수 앞에 &lsquo;$&lsquo;의 표시를 붙여야 한다.
+  변수에 부여된 값은 echo 명령을 통해 확인 가능" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/development/shell/shell-3/" /><meta property="article:section" content="docs" />
+
+
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.57d55e398cad59a8d17cbf04c9cf36ad412ab0e9e61906c534179da0b186f74f.js" integrity="sha256-V9VeOYytWajRfL8Eyc82rUEqsOnmGQbFNBedoLGG908="></script>
+<!--
+
+-->
+
+   
+
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/ncp/ncptraining/" class="collapsed ">NCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>operation</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/tia-942/" class="collapsed ">TIA-942</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell-1/" class="">Shell Script란?</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell-2/" class="">UNIX/ Linux 개념과 명령어</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell-3/" class="active">Shell Script 문법</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell-4/" class="">UNIX/ Linux 시스템 관리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell-5/" class="">Shell Script System Management</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell-6/" class="">Shell Script System Security</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell-7/" class="">Shell Customizing</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell01/" class="">Shell Basics</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell02/" class="">Quotes</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell03/" class="">Variables</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell04/" class="">Fucnctions</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell05/" class="">Exit Status</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell06/" class="">Interactive</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell07/" class="">etc</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell08/" class="">Commands</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell09/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell10/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell11/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell12/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell13/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell16/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell17/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell18/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell19/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell14/" class="">Test 연산자</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell15/" class="">SubShells</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell80/" class="">awk</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell90/" class="">sed</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell100/" class="">연습문제</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/nas/" class="collapsed ">NAS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/project/" class="">Project</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+<br>
+<div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1022327295984162"
+     data-ad-slot="6213387116"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Shell Script 문법</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#shell-문법"><strong>Shell 문법</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-변수"><strong>Shell 변수</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell의-환경-변수"><strong>Shell의 환경 변수</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-파라미터-변수"><strong>Shell 파라미터 변수</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-조건문"><strong>Shell 조건문</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-제어-구조"><strong>Shell 제어 구조</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-list"><strong>Shell List</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-함수"><strong>Shell 함수</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="shell-programming"><strong>Shell Programming</strong></h1>
+<h1 id="heading"></h1>
+<p> </p>
+<h1 id="heading-1"></h1>
+<h2 id="shell-문법"><strong>Shell 문법</strong></h2>
+<h1 id="heading-2"></h1>
+<h3 id="shell-변수"><strong>Shell 변수</strong></h3>
+<h1 id="heading-3"></h1>
+<ul>
+<li>
+<p><strong>Shell 에서 변수는 사용할 때 선언</strong></p>
+</li>
+<li>
+<p><strong>변수에 초기 값을 대입할 때 변수를 만들게 된다.</strong></p>
+</li>
+<li>
+<p><strong>모든 변수는 문자열로 간주</strong></p>
+</li>
+<li>
+<p><strong>숫자 값을 가지는 경우에도 문자열로 간주</strong></p>
+</li>
+<li>
+<p><strong>변수는 대소문자가 구별 (Linux 시스템의 특성)</strong></p>
+</li>
+<li>
+<p><strong>변수에 값이 부여될 때를 제외하고, 변수를 사용할 경우 변수 앞에 &lsquo;$&lsquo;의 표시를 붙여야 한다.</strong></p>
+</li>
+<li>
+<p><strong>변수에 부여된 값은 echo 명령을 통해 확인 가능</strong></p>
+</li>
+<li>
+<p><strong>변수에 저장될 문자열 값 중 빈 칸을 포함하고 있다면 &quot; &ldquo;을 이용하여 값을 부여</strong></p>
+</li>
+</ul>
+<h1 id="heading-4"></h1>
+<ul>
+<li><strong>예시</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ HI=Hello
+$ echo $HI
+Hello
+
+$ HI=&#34;Hello Shell Progamming!&#34;
+$ echo $HI
+Hello Shell Progamming!
+
+$ vi HI.sh
+HI=&#34;ByeBye!&#34;
+
+echo $HI
+echo &#34;$HI&#34;
+echo &#39;$Hi&#39;
+echo \$HI
+
+echo Hello and &#34;$HI&#34;?
+</code></pre></div><h1 id="heading-5"></h1>
+<p> </p>
+<h1 id="heading-6"></h1>
+<h3 id="shell의-환경-변수"><strong>Shell의 환경 변수</strong></h3>
+<h1 id="heading-7"></h1>
+<ul>
+<li>
+<p><strong>Shell Script가 시작 될 때 일부 변수는 환경의 값을 통해 초기화 되는 데, 이를 환겨변수라고 한다.</strong></p>
+</li>
+<li>
+<p><strong>사용자 정의 (쉘) 변수와 구분하기 이해 보통 대문자로 선언하는 것이 보통</strong></p>
+</li>
+<li>
+<p><strong>환경변수는 각 사용자 환경에 따라 값이 다름</strong></p>
+</li>
+</ul>
+<h1 id="heading-8"></h1>
+<ul>
+<li><strong>$HOME</strong>
+<ul>
+<li><strong>현재 사용자의 홈 디렉토리</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-9"></h1>
+<p> </p>
+<ul>
+<li><strong>$PATH</strong>
+<ul>
+<li><strong>명령을 검색하는 디렉토리들의 목록 , &lsquo;:&lsquo;으로 구분</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-10"></h1>
+<p> </p>
+<ul>
+<li><strong>$PS1</strong>
+<ul>
+<li><strong>대개 &lsquo;$&lsquo;인 명령 프로픔트</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-11"></h1>
+<p> </p>
+<ul>
+<li><strong>$PS2</strong>
+<ul>
+<li><strong>추가적인 입력을 요구할 때 사용되는 2차 프롬프트 주로 &lsquo;&gt;&lsquo;를 의미</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-12"></h1>
+<p> </p>
+<ul>
+<li><strong>$IFS</strong>
+<ul>
+<li><strong>입력 필드 구분자 . Shell 이 입력을 받아들일 때 단어를 구분하는 데 사용되는 문자의 목록으로, 대개 빈 칸, 탭, 새 줄 문자를 의미</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-13"></h1>
+<p> </p>
+<ul>
+<li><strong>$0</strong>
+<ul>
+<li><strong>Shell Scripot의 이름</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-14"></h1>
+<p> </p>
+<ul>
+<li><strong>$#</strong>
+<ul>
+<li><strong>전달된 파라미터의 수</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-15"></h1>
+<p> </p>
+<ul>
+<li><strong>$$</strong>
+<ul>
+<li>**/tmp/tmpfile_$$와 같이 종종 독트간 임시 파일 이름을 생성하기 위해 Script에서 사용되는 Shell Script의 프로세스 ID**</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-16"></h1>
+<p> </p>
+<h1 id="heading-17"></h1>
+<h3 id="shell-파라미터-변수"><strong>Shell 파라미터 변수</strong></h3>
+<h1 id="heading-18"></h1>
+<ul>
+<li><strong>Script 가 파라미터를 통해 호출된다면 몇 가지 추가적인 변수가 생성되는 데 이를 파라미터 변수라 칭함</strong></li>
+</ul>
+<h1 id="heading-19"></h1>
+<ul>
+<li><strong>$1, $2, $3 &hellip;</strong>
+<ul>
+<li><strong>Script에 주어진 파라미터</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-20"></h1>
+<p> </p>
+<ul>
+<li><strong>$</strong>
+<ul>
+<li><strong>환경 변수 IFS의 첫 문자로 구분되고, 하나의 변수에 저장되는 모든 파라미터의 목록</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-21"></h1>
+<p> </p>
+<ul>
+<li><strong>$@</strong>
+<ul>
+<li>*<em>IFS 환경 변수를 사용하지 않는 $<em>에 대한 변형</em></em></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-22"></h1>
+<p> </p>
+<ul>
+<li><strong>예시</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ vi Helli.sh
+#!/bin/bash
+IFS=NOT
+# 환경변수 IFS를 NOT으로 초기화
+
+set H e l l o
+# 파라미터 설정
+
+echo $@
+echo &#34;$@&#34;
+echo $*
+echo &#34;$*&#34;
+unset IFS
+echo $@
+echo $*
+echo &#34;$@&#34;
+echo &#34;$*&#34;
+# 출력
+
+$ chmod +x ./Hello.sh
+$ ./Hello.sh
+H e l l o
+H e l l o
+H e l l o
+HNeNlNlNo
+H e l l o
+H e l l o
+H e l l o
+H e l l o
+</code></pre></div><h1 id="heading-23"></h1>
+<p> </p>
+<h1 id="heading-24"></h1>
+<h3 id="shell-조건문"><strong>Shell 조건문</strong></h3>
+<h1 id="heading-25"></h1>
+<ul>
+<li><strong>Shell Bool형 확인 기능 [], test</strong>
+<ul>
+<li>
+<p><strong>test, []는 어떤 표현식이나 파일에 대해 산술비교 스트링 비교, 파일 조건 등을 확인하고 그에 대해 참 또는 거짓의 값을 리턴하는 역할을 수행.</strong></p>
+</li>
+<li>
+<p><strong>예시</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">[ 기본형 ]
+$ if test -f fred.c
+than
+....
+fi
+
+[ 축약형 ]
+$ if [ -f fred.c ]
+then
+...
+fi
+</code></pre></div><h1 id="heading-26"></h1>
+<p> </p>
+<h1 id="heading-27"></h1>
+<h3 id="shell-제어-구조"><strong>Shell 제어 구조</strong></h3>
+<h1 id="heading-28"></h1>
+<ul>
+<li><strong>IF</strong>
+<ul>
+<li><strong>명령의 결과를 테스트하고 조건부로 구문의 그룹을 실행한다.</strong></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">if [condition];then 
+  &lt;statements&gt;
+elif [condition];then 
+  &lt;statements&gt;
+else [condition]
+  &lt;statements&gt;
+fi
+</code></pre></div><h1 id="heading-29"></h1>
+<p> </p>
+<ul>
+<li><strong>예제</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ vi iftime.sh
+
+#!/bin/sh
+
+echo &#34;Is it morning? Please answer yes or no&#34;
+read timeofday
+if [ $timeofday = &#34;yes&#34; ]; then
+    echo &#34;Good moring&#34;
+elif [ $timeofday = &#34;yes&#34; ]; then
+    echo &#34;Good afternoon&#34;
+else
+    echo &#34;Error, $timeofday not recognized. Only yes or no&#34;
+    exit 1
+fi
+
+$ chmod +x iftime.sh
+$ ./iftime.sh
+# timeofday가 yes일 경우 Good moring을 출력, no일 경우 Good afternoon을 출력, yes, no 두 경우 아닐경우 error를 출력
+</code></pre></div><h1 id="heading-30"></h1>
+<p> </p>
+<ul>
+<li><strong>For</strong>
+<ul>
+<li>
+<p><strong>값의 범위에 대한 반복문 수행</strong></p>
+</li>
+<li>
+<p><strong>값의 범위는 문자열의 집합도 가능</strong></p>
+</li>
+<li>
+<p><strong>모든 Shell 변수가 기본적으로 문자열로 인식되기 때문에, for 반복문은 문자열 집합에 대해 반복문을 수행하기에 편리</strong></p>
+</li>
+<li>
+<p><strong>일반적인 반복문과 다르게 정해진 횟수만큼 명령을 실행할 수 없음</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">for &lt;variable&gt; in &lt;values&gt;
+do
+    &lt;statements&gt;
+done
+</code></pre></div><h1 id="heading-31"></h1>
+<p> </p>
+<ul>
+<li><strong>예제</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ vi zoo.sh
+#!/bin/sh
+for zoo in tiger pig cat dog
+do
+    echo $zoo
+done
+exit 0
+
+$ chomd +x zoo.sh
+$ ./zoo.sh
+tiger
+pig
+cat
+dog
+# 변수 zoo를 선언하고 그 안에 tiger, pig, cat, dog를 넣어 출력
+
+
+
+$ ls -l
+drwxr-xr-x 2 root root 4096 Aug 23 08:41 ./
+drwx------ 6 root root 4096 Aug 23 08:41 ../
+-rwx------ 1 root root  193 Aug 23 07:44 Hello.sh*
+-rwx------ 1 root root   78 Aug 23 07:27 HI.sh*
+-rwxr-xr-x 1 root root  264 Aug 23 08:33 iftime.sh*
+-rw-r--r-- 1 root root  150 Aug 23 06:51 lsoutput.txt
+-rw------- 1 root root  101 Aug 23 07:03 Script.sh
+-rwx--x--x 1 root root  329 Aug 23 07:47 vitry.sh*
+-rwxr-xr-x 1 root root   69 Aug 23 08:41 zoo.sh*
+
+$ vi Hfor.sh
+!/bin/sh
+for list in $(ls H*.sh)
+do
+    echo $list
+done
+exit 0
+$ chmod +x ./Hfor.sh
+$ ./Hfor.sh
+Hello.sh
+Hfor.sh
+HI.sh
+# for 반복문 안의 ls H*.sh를 참조하여 출력
+</code></pre></div><ul>
+<li>
+<p><strong><!-- raw HTML omitted --> 값으로 $(command)를 이용할 수 있음</strong></p>
+</li>
+<li>
+<p><strong>파일 일므의 공백이 있는 경우에는 정상적으로 동작하지 않음</strong></p>
+</li>
+</ul>
+<h1 id="heading-32"></h1>
+<p> </p>
+<ul>
+<li><strong>While 구문</strong>
+<ul>
+<li><strong>for문과 동일한 반복문이지만 while은 결과값이 True일 때까지만 구문을 반복</strong></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">while &lt;condition&gt; do
+    &lt;statements&gt;
+    done
+</code></pre></div><ul>
+<li><strong>예시</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ vi password.sh
+#!/bin/bash
+
+echo &#34;Enter password&#34;
+read pass
+
+while [ &#34;$pass&#34; != &#34;ubuntu&#34;]; do
+    echo &#34;Error, try again...&#34;
+    read pass
+done
+exit -0
+$ chmod +x ./password.sh
+$ ./password.sh
+Enter password
+hello
+Error, try again...
+ubuntu
+# 만약 입력한 pass가 틀린 값일 시 Error를 출력하고 다시 입력하게 출력, 참일 경우 while문을 종료시킴
+
+
+
+$ vi count.sh
+#!/bin/sh
+num=1
+
+while [ &#34;$num&#34; -le 5 ]
+do
+    echo &#34;$num&#34;
+    num=$(($num+1))
+done
+exit 0
+1
+2
+3
+4
+5
+$ chmod +x ./count.sh
+$ ./count.sh
+# num을 1로 선언하고 만약 num이 5보다 작을 경우 num을 출력하고 num의 +1의 값을 대입
+</code></pre></div><h1 id="heading-33"></h1>
+<p> </p>
+<ul>
+<li><strong>untill 구문</strong>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">until &lt;condition&gt;
+do
+    &lt;statements&gt;
+done
+</code></pre></div><h1 id="heading-34"></h1>
+<p> </p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ vi until2.sh
+#!/bin/sh
+
+until who | grep &#34;$1&#34; &gt; /dev/null
+do
+  sleep 10
+done
+echo -e \\a
+echo &#34;$1 has just logged in&#34;
+exit 0
+</code></pre></div><h1 id="heading-35"></h1>
+<p> </p>
+<h1 id="heading-36"></h1>
+<ul>
+<li><strong>Case 구문</strong>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">case &lt;variable&gt; in
+  &lt;pattern&gt; | &lt;pattern...&gt; statements;;
+  &lt;pattern&gt; | &lt;pattern...&gt; statements;;
+</code></pre></div><h1 id="heading-37"></h1>
+<p> </p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">#!/bin/sh
+echo “Is it morning? Please answer yes or no”
+read timeofday
+
+case “$timeofday” in
+  yes | y | Yes | YES ) echo “Good Morning”;;
+  [nN]* ) echo “Good Afternoon”;;
+  * ) echo “Sorry”
+  exit 1;;
+esac
+</code></pre></div><h1 id="heading-38"></h1>
+<p> </p>
+<h1 id="heading-39"></h1>
+<h3 id="shell-list"><strong>Shell List</strong></h3>
+<h1 id="heading-40"></h1>
+<ul>
+<li><strong>단순 list</strong>
+<ul>
+<li><strong>구문 1; 구문 2; 구문 3; &hellip;</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-41"></h1>
+<p> </p>
+<ul>
+<li><strong>AND list</strong>
+<ul>
+<li><strong>구문 1 &amp;&amp; 구문 2 &amp;&amp; 구문 3 &amp;&amp; &hellip;</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-42"></h1>
+<p> </p>
+<ul>
+<li><strong>OR list</strong>
+<ul>
+<li><strong>구문 1 || 구문 2 || 구문 3 || &hellip;</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-43"></h1>
+<p> </p>
+<h1 id="heading-44"></h1>
+<h3 id="shell-함수"><strong>Shell 함수</strong></h3>
+<h1 id="heading-45"></h1>
+<ul>
+<li><strong>function</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">fuction_name()<span style="color:#75715e">{</span>
+  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">statements</span><span style="color:#f92672">&gt;</span>
+<span style="color:#75715e">}</span>
+</code></pre></div><h1 id="heading-46"></h1>
+<p> </p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">#!/bin/sh
+yes_or_no()<span style="color:#75715e">{</span>
+  <span style="color:#a6e22e">echo</span> <span style="color:#960050;background-color:#1e0010">“</span><span style="color:#a6e22e">Is</span> <span style="color:#a6e22e">Your</span> <span style="color:#a6e22e">Name</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#ae81ff">1</span><span style="color:#f92672">?</span><span style="color:#960050;background-color:#1e0010">”</span>
+  <span style="color:#a6e22e">while</span> <span style="color:#66d9ef">true</span>
+  <span style="color:#a6e22e">do</span>
+    <span style="color:#a6e22e">echo</span> <span style="color:#960050;background-color:#1e0010">–</span><span style="color:#a6e22e">n</span> <span style="color:#960050;background-color:#1e0010">“</span><span style="color:#a6e22e">Enter</span> <span style="color:#a6e22e">yes</span> <span style="color:#a6e22e">or</span> <span style="color:#a6e22e">no</span><span style="color:#f92672">:</span> <span style="color:#960050;background-color:#1e0010">”</span>
+    <span style="color:#a6e22e">read</span> <span style="color:#a6e22e">X</span>
+    <span style="color:#a6e22e">case</span> <span style="color:#960050;background-color:#1e0010">“</span>$X<span style="color:#960050;background-color:#1e0010">”</span> <span style="color:#a6e22e">in</span>
+    <span style="color:#a6e22e">y</span><span style="color:#f92672">|</span><span style="color:#a6e22e">Y</span><span style="color:#f92672">|</span><span style="color:#a6e22e">yes</span><span style="color:#f92672">|</span><span style="color:#a6e22e">Yes</span><span style="color:#f92672">|</span><span style="color:#a6e22e">YES</span><span style="color:#f92672">)</span> <span style="color:#a6e22e">return</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;;</span>
+    <span style="color:#a6e22e">n</span><span style="color:#f92672">|</span><span style="color:#a6e22e">N</span><span style="color:#f92672">|</span><span style="color:#a6e22e">no</span><span style="color:#f92672">|</span><span style="color:#a6e22e">No</span><span style="color:#f92672">|</span><span style="color:#a6e22e">NO</span><span style="color:#f92672">)</span> <span style="color:#a6e22e">return</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;;</span>
+    <span style="color:#f92672">*)</span> <span style="color:#a6e22e">echo</span> <span style="color:#960050;background-color:#1e0010">“</span><span style="color:#a6e22e">Answer</span> <span style="color:#a6e22e">yes</span> <span style="color:#a6e22e">or</span> <span style="color:#a6e22e">no</span><span style="color:#960050;background-color:#1e0010">”</span>
+    <span style="color:#a6e22e">esac</span>
+  <span style="color:#a6e22e">done</span>
+<span style="color:#75715e">}</span>
+echo “Original parameters are $*”
+if yes_or_no “$1”
+then
+  echo “Hi $1”
+else
+  echo “Oh! Sorry”
+fi
+exit 0
+</code></pre></div><h1 id="heading-47"></h1>
+<p> </p>
+<h1 id="heading-48"></h1>
+<ul>
+<li><strong>Break문</strong>
+<ul>
+<li><strong>반복문에서 빠져나올 수 있는 함수</strong></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">#!/bin/sh
+for var in 1 2 3 4 5 6 7 8 9 10
+do
+  echo “var is $var.”
+  if [ “$var” = “5” ]
+  then
+    break;
+  fi
+done
+echo “Break!”
+exit 0
+~
+</code></pre></div><h1 id="heading-49"></h1>
+<p> </p>
+<h1 id="heading-50"></h1>
+<ul>
+<li><strong>; (콜론명령)</strong>
+<ul>
+<li><strong>널 명령, true에 대한 별칭으로 조건에 대한 논리 지정</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-51"></h1>
+<p> </p>
+<ul>
+<li><strong>continue</strong>
+<ul>
+<li><strong>조건에 맞춘 반복문을 단계를 건너뛴다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-52"></h1>
+<p> </p>
+<ul>
+<li><strong>echo</strong>
+<ul>
+<li><strong>문자열과 줄 바꿈 문자를 출력</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-53"></h1>
+<p> </p>
+<ul>
+<li><strong>eval</strong>
+<ul>
+<li><strong>인자를 실행</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-54"></h1>
+<p> </p>
+<ul>
+<li><strong>Exit n</strong>
+<ul>
+<li><strong>n의 의미</strong>
+<ul>
+<li>
+<p><strong>exit 0 : 성공</strong></p>
+</li>
+<li>
+<p><strong>exit 1 ~ 125: 스크립트에서 사용 가능한 에러 코드</strong></p>
+</li>
+<li>
+<p><strong>exit 126 : 파일이 실행되지 않음</strong></p>
+</li>
+<li>
+<p><strong>exit !27 : 명령이 발견되지 않음</strong></p>
+</li>
+<li>
+<p><strong>exit 128 : Signal 발생</strong></p>
+</li>
+<li>
+<p><strong>exit etc&hellip;: 예약된 코드</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-55"></h1>
+<p> </p>
+<ul>
+<li><strong>printf</strong>
+<ul>
+<li><strong>printf &quot; 형식 문자열 &quot; 매개변수 1 매개변수 2 &hellip;</strong></li>
+<li><strong>모니터에 출력하는 명령어</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-56"></h1>
+<p> </p>
+<ul>
+<li><strong>retrun</strong>
+<ul>
+<li><strong>하나의 숫자 매개변수를 가짐</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-57"></h1>
+<p> </p>
+<ul>
+<li><strong>set</strong>
+<ul>
+<li><strong>쉘을 위한 마라미터 변수를 설정</strong></li>
+</ul>
+</li>
+</ul>
+</article>
+ 
+      
+<div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1022327295984162"
+     data-ad-slot="8742279271"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div>
+</div>
+<div>
+<br>
+<br>
+<br>
+<br>
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":402713,"template":"carousel","trackingCode":"AF0817069","width":"680","height":"140"});
+</script>
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#shell-문법"><strong>Shell 문법</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-변수"><strong>Shell 변수</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell의-환경-변수"><strong>Shell의 환경 변수</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-파라미터-변수"><strong>Shell 파라미터 변수</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-조건문"><strong>Shell 조건문</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-제어-구조"><strong>Shell 제어 구조</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-list"><strong>Shell List</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-함수"><strong>Shell 함수</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

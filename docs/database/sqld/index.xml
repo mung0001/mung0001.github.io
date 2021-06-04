@@ -5,11 +5,7 @@
     <link>https://mung0001.github.io/docs/database/sqld/</link>
     <description>Recent content in SQLP&amp; SQLD on 뭉게뭉게</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>kr-ko</language>
-    
-	<atom:link href="https://mung0001.github.io/docs/database/sqld/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/docs/database/sqld/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SQL 개요</title>
       <link>https://mung0001.github.io/docs/database/sqld/sqld-0/</link>

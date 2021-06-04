@@ -13,13 +13,15 @@
 <link rel="canonical" href=/docs/system/linux/linux01/><meta property="og:title" content="Linux System Management" />
 <meta property="og:description" content="Linux   Linux System Management   Linux 시스템관리는 프로세스, 메모리 관리를 위해 주로 사용됩니다.      crontab   정기적으로 지정한 시간에 실행하고 싶은 명령어를 등록하여 사용되며, 스크립트를 통해 등록도 가능합니다.   주요 옵션     옵션 설명     -l 등록된 명령어 리스트 확인   -e 등록된 명령어 수정     crontab 등록   -e옵션으로 실행하면 크롭탭을 위한 파일이 열리며, vi에디터와 동일한 명령으로 필요한 명령어를 등록할 수 있습니다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mung0001.github.io/docs/system/linux/linux01/" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/linux/linux01/" /><meta property="article:section" content="docs" />
+
+
 
 
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.b5dbe2236f3bc1b455cee94a3457f099d128df25c8d288bdade996019640c4a2.js" integrity="sha256-tdviI287wbRVzulKNFfwmdEo3yXI0oi9remWAZZAxKI="></script>
+<script defer src="/en.search.min.57d55e398cad59a8d17cbf04c9cf36ad412ab0e9e61906c534179da0b186f74f.js" integrity="sha256-V9VeOYytWajRfL8Eyc82rUEqsOnmGQbFNBedoLGG908="></script>
 <!--
 
 -->
@@ -492,6 +494,25 @@
     
 
   
+  <span>operation</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
   <span>Docker</span>
   
 
@@ -511,7 +532,7 @@
     
 
   
-  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  <a href="/docs/docker/docker/docker/" class="collapsed ">Docker docs</a>
   
 
 
@@ -534,7 +555,7 @@
     
 
   
-  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  <a href="/docs/docker/docker/dockertraining/" class="collapsed ">Docker Training</a>
   
 
 
@@ -542,6 +563,16 @@
 
 
 
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
 
 
 
@@ -642,7 +673,7 @@
     
 
   
-  <span>Programming</span>
+  <span>development</span>
   
 
 
@@ -661,7 +692,7 @@
     
 
   
-  <a href="/docs/programing/python/" class="collapsed ">Python docs</a>
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
   
 
 
@@ -684,7 +715,7 @@
     
 
   
-  <a href="/docs/programing/shell/" class="collapsed ">Shell Script</a>
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
   
 
 
@@ -707,7 +738,7 @@
     
 
   
-  <a href="/docs/programing/golang/" class="collapsed ">Golang</a>
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
   
 
 
@@ -730,7 +761,7 @@
     
 
   
-  <a href="/docs/programing/web/" class="collapsed ">Web</a>
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
   
 
 
@@ -753,7 +784,7 @@
     
 
   
-  <a href="/docs/programing/git/" class="collapsed ">Git</a>
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
   
 
 
@@ -1088,7 +1119,7 @@
         <li >
 
   
-  <a href="/docs/system/linux/ls03/" class="">L S03</a>
+  <a href="/docs/system/linux/ls03/" class="">Ls03</a>
   
 
 </li>
@@ -1098,7 +1129,7 @@
         <li >
 
   
-  <a href="/docs/system/linux/ls04/" class="">L S04</a>
+  <a href="/docs/system/linux/ls04/" class="">Ls04</a>
   
 
 </li>
@@ -1108,7 +1139,7 @@
         <li >
 
   
-  <a href="/docs/system/linux/ls05/" class="">L S05</a>
+  <a href="/docs/system/linux/ls05/" class="">Ls05</a>
   
 
 </li>
@@ -1118,7 +1149,7 @@
         <li >
 
   
-  <a href="/docs/system/linux/ls06/" class="">L S06</a>
+  <a href="/docs/system/linux/ls06/" class="">Ls06</a>
   
 
 </li>
@@ -1394,7 +1425,7 @@
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1839,7 +1870,7 @@
 <ul>
 <li><strong>메모리 사용량을 주기적으로 확인하는 방법은 <code>-s</code> 옵션을 이용하는 방법과 <code>watch</code> 명령을 이용하는 방법이 있습니다.</strong></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ free -h -s 1
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ free -h -s <span style="color:#ae81ff">1</span>
 $ watch free -h
 </code></pre></div><h1 id="heading-20"></h1>
 <hr>
@@ -2390,7 +2421,7 @@ wait
 command4
 <span style="color:#75715e"># 백그라운드 작업 종료를 대기</span>
 
-wait 100
+wait <span style="color:#ae81ff">100</span>
 <span style="color:#75715e"># 100 PID를 가진 프로세스가 종료되는 것을 대기</span>
 </code></pre></div><h1 id="heading-83"></h1>
 <hr>

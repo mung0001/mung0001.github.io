@@ -5,11 +5,7 @@
     <link>https://mung0001.github.io/docs/network/network/</link>
     <description>Recent content in Network 기본 on 뭉게뭉게</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>kr-ko</language>
-    
-	<atom:link href="https://mung0001.github.io/docs/network/network/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/docs/network/network/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Network</title>
       <link>https://mung0001.github.io/docs/network/network/natwork-1/</link>
@@ -62,7 +58,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/network/network/3tier/</guid>
-      <description>Local 3Tier 구현    OS, 구현 프로그램  Ubuntu18.04 Apache2 Tomcat8 Mysql5.8 GNS3   IP 대역  10.10.10.0/24 Public 20.20.20.0/24 Private 30.30.30.0/24 Private2  Public 대역 10.10.10.10 Apache1 10.10.10.11 Apache2  Private 대역 20.20.20.20 Tomcat1 20.20.20.21 Tomcat2  Public 대역 30.30.30.30 Mysql1 30.30.30.30 Mysql2     sudo vi /etc/netplan/50-cloud-init.yamlnetwork:version: 2ethernets:ens33:dhcp6: noaddresses:- [ IP addresses ]gateway4: [ gateway ]nameservers:addresses: [ [nameserver] ]$ sudo netplan apply$ hostname -l아키텍처 사진</description>
+      <description>Local 3Tier 구현    OS, 구현 프로그램  Ubuntu18.04 Apache2 Tomcat8 Mysql5.8 GNS3   IP 대역  10.10.10.0/24 Public 20.20.20.0/24 Private 30.30.30.0/24 Private2  Public 대역 10.10.10.10 Apache1 10.10.10.11 Apache2  Private 대역 20.20.20.20 Tomcat1 20.20.20.21 Tomcat2  Public 대역 30.30.30.30 Mysql1 30.30.30.30 Mysql2     sudo vi /etc/netplan/50-cloud-init.yaml network: version: 2 ethernets: ens33: dhcp6: no addresses: - [ IP addresses ] gateway4: [ gateway ] nameservers: addresses: [ [nameserver] ] $ sudo netplan apply $ hostname -l 아키텍처 사진</description>
     </item>
     
     <item>
@@ -94,7 +90,7 @@
       <guid>https://mung0001.github.io/docs/network/network/firewall/</guid>
       <description>방화벽 (CentOS - firewalld)    리눅스의 방화벽
  커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제       방화벽의 종류
- 패킷 필터링 방화벽  - 제 1세대 방화벽 - 레이어 1~4에서 사용 - 단순하기 때문에 빠르고 효과적 - 5~7계층 대응 불가  Stateful 방화벽  - 제 2세대 방화벽 - 패킷의 연결 상태를 관찰 - 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약  **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽 - 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요      방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.</description>
+ 패킷 필터링 방화벽  - 제 1세대 방화벽- 레이어 1~4에서 사용- 단순하기 때문에 빠르고 효과적- 5~7계층 대응 불가 Stateful 방화벽  - 제 2세대 방화벽- 패킷의 연결 상태를 관찰- 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약 **애플리케이션 레이어 방화벽 **  - 제 3세대 방화벽- 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요     방화벽의 구성요소   규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.</description>
     </item>
     
   </channel>
