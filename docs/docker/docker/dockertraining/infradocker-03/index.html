@@ -5,13 +5,17 @@
   <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="****          ****            ">
+<meta name="description" content="Dockerfile     Dokerfile은 Doker에서 작동시킬 컨테이너의 구성 정보를 기술하기 위한 파일
+  Dokerfile은 텍스트 형식의 파일로, 에디터 등을 사용하여 작성, 확장자는 따로 필요 없으며 Dokerfile이라는 이름의 파일에 인프라의 구성 정보를 기술
+    Dokerfile의 기본 구문     명렵 설명     FROM 베이스 이미지 지정   RUN 명령 실행   CMD 컨테이너 실행 명령   LABEL 라벨 설정   EXPOSE Port Expose   ENV 환경변수   ADD 파일/ 디렉터리 추가   COPY 파일복서   ENTRYPOINT 컨테이너 실핼 명령   VOLUME 볼륨 마운트   USER 사용자 지정   WORKDIR 작업 디렉토리   ARG Dockerfile 안의 변수   ONBUILD 빌드 완료 후 실행되는 명령어   STOPSIGNAL 시스템 콜 시그널 설정   HEALTHCHECK 컨테이너 헬스 체크   SHELL 기본 쉘 설정   # 주석설정       Dockerfile 작성  FROM centos:centos7 FROM centos:centos7@sha256:다이제스트 # 상단과 같은 식으로 나열 $ docker build -t sample:1.">
 
 
 
 <meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/docker/docker/dockertraining/infradocker-03/><meta property="og:title" content="" />
-<meta property="og:description" content="****          ****            " />
+<link rel="canonical" href=/docs/docker/docker/dockertraining/infradocker-03/><meta property="og:title" content="Dokerfile" />
+<meta property="og:description" content="Dockerfile     Dokerfile은 Doker에서 작동시킬 컨테이너의 구성 정보를 기술하기 위한 파일
+  Dokerfile은 텍스트 형식의 파일로, 에디터 등을 사용하여 작성, 확장자는 따로 필요 없으며 Dokerfile이라는 이름의 파일에 인프라의 구성 정보를 기술
+    Dokerfile의 기본 구문     명렵 설명     FROM 베이스 이미지 지정   RUN 명령 실행   CMD 컨테이너 실행 명령   LABEL 라벨 설정   EXPOSE Port Expose   ENV 환경변수   ADD 파일/ 디렉터리 추가   COPY 파일복서   ENTRYPOINT 컨테이너 실핼 명령   VOLUME 볼륨 마운트   USER 사용자 지정   WORKDIR 작업 디렉토리   ARG Dockerfile 안의 변수   ONBUILD 빌드 완료 후 실행되는 명령어   STOPSIGNAL 시스템 콜 시그널 설정   HEALTHCHECK 컨테이너 헬스 체크   SHELL 기본 쉘 설정   # 주석설정       Dockerfile 작성  FROM centos:centos7 FROM centos:centos7@sha256:다이제스트 # 상단과 같은 식으로 나열 $ docker build -t sample:1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-03/" /><meta property="article:section" content="docs" />
 
@@ -21,7 +25,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.df0074f5e8f9cae17e18d0afeb22a0241c6e1eebf6c46bd503265083de464c57.js" integrity="sha256-3wB09ej5yuF&#43;GNCv6yKgJBxuHuv2xGvVAyZQg95GTFc="></script>
+<script defer src="/en.search.min.1ef3cf135e07af3094399414c8739ba3c9d426a710ea12cd1c458426addc175c.js" integrity="sha256-HvPPE14HrzCUOZQUyHObo8nUJqcQ6hLNHEWEJq3cF1w="></script>
 <!--
 
 -->
@@ -571,16 +575,6 @@
         <li >
 
   
-  <a href="/docs/docker/docker/dockertraining/infradocker-03/" class="active">Infradocker 03</a>
-  
-
-</li>
-      
-    
-      
-        <li >
-
-  
   <a href="/docs/docker/docker/dockertraining/infradocker-04/" class="">Infradocker 04</a>
   
 
@@ -642,6 +636,16 @@
 
   
   <a href="/docs/docker/docker/dockertraining/infradocker-02/" class="">Docker 설치</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/docker/docker/dockertraining/infradocker-03/" class="active">Dokerfile</a>
   
 
 </li>
@@ -1289,7 +1293,7 @@
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Infradocker 03</strong>
+  <strong>Dokerfile</strong>
 
   <label for="toc-control">
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -1303,13 +1307,21 @@
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">****</a></li>
+    <li><a href="#dockerfile"><strong>Dockerfile</strong></a></li>
   </ul>
 
   <ul>
     <li>
       <ul>
-        <li><a href="#heading-3">****</a></li>
+        <li><a href="#dokerfile의-기본-구문"><strong>Dokerfile의 기본 구문</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dockerfile-작성"><strong>Dockerfile 작성</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -1332,28 +1344,116 @@
 <br>
 <br>
       
-  <article class="markdown"><h2 id="heading">****</h2>
+  <article class="markdown"><h2 id="dockerfile"><strong>Dockerfile</strong></h2>
 <hr>
+<h1 id="heading"></h1>
+<ul>
+<li>
+<p><strong>Dokerfile은 Doker에서 작동시킬 컨테이너의 구성 정보를 기술하기 위한 파일</strong></p>
+</li>
+<li>
+<p><strong>Dokerfile은 텍스트 형식의 파일로, 에디터 등을 사용하여 작성, 확장자는 따로 필요 없으며 Dokerfile이라는 이름의 파일에 인프라의 구성 정보를 기술</strong></p>
+</li>
+</ul>
 <h1 id="heading-1"></h1>
-<ul>
-<li>
-<hr>
-</li>
-</ul>
+<p> </p>
+<h3 id="dokerfile의-기본-구문"><strong>Dokerfile의 기본 구문</strong></h3>
 <h1 id="heading-2"></h1>
+<table>
+<thead>
+<tr>
+<th>명렵</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FROM</td>
+<td>베이스 이미지 지정</td>
+</tr>
+<tr>
+<td>RUN</td>
+<td>명령 실행</td>
+</tr>
+<tr>
+<td>CMD</td>
+<td>컨테이너 실행 명령</td>
+</tr>
+<tr>
+<td>LABEL</td>
+<td>라벨 설정</td>
+</tr>
+<tr>
+<td>EXPOSE</td>
+<td>Port Expose</td>
+</tr>
+<tr>
+<td>ENV</td>
+<td>환경변수</td>
+</tr>
+<tr>
+<td>ADD</td>
+<td>파일/ 디렉터리 추가</td>
+</tr>
+<tr>
+<td>COPY</td>
+<td>파일복서</td>
+</tr>
+<tr>
+<td>ENTRYPOINT</td>
+<td>컨테이너 실핼 명령</td>
+</tr>
+<tr>
+<td>VOLUME</td>
+<td>볼륨 마운트</td>
+</tr>
+<tr>
+<td>USER</td>
+<td>사용자 지정</td>
+</tr>
+<tr>
+<td>WORKDIR</td>
+<td>작업 디렉토리</td>
+</tr>
+<tr>
+<td>ARG</td>
+<td>Dockerfile 안의 변수</td>
+</tr>
+<tr>
+<td>ONBUILD</td>
+<td>빌드 완료 후 실행되는 명령어</td>
+</tr>
+<tr>
+<td>STOPSIGNAL</td>
+<td>시스템 콜 시그널 설정</td>
+</tr>
+<tr>
+<td>HEALTHCHECK</td>
+<td>컨테이너 헬스 체크</td>
+</tr>
+<tr>
+<td>SHELL</td>
+<td>기본 쉘 설정</td>
+</tr>
+<tr>
+<td>#</td>
+<td>주석설정</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-3"></h1>
 <p> </p>
-<h3 id="heading-3">****</h3>
 <h1 id="heading-4"></h1>
-<ul>
-<li>
-<hr>
-</li>
-</ul>
+<h3 id="dockerfile-작성"><strong>Dockerfile 작성</strong></h3>
 <h1 id="heading-5"></h1>
-<p> </p>
-<h1 id="heading-6"></h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">
-</code></pre></div><h1 id="heading-7"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">FROM centos:centos7
+FROM centos:centos7@sha256:다이제스트
+# 상단과 같은 식으로 나열
+
+$ docker build -t sample:1.0 /home/docker/sample
+# 명령 실행시 /home/docker/sample에 저장된 Dokerfile로부터 sample이라는 이름의 Docker 이미지 생성
+
+</code></pre></div><h1 id="heading-6"></h1>
 <p> </p>
 </article>
  
@@ -1413,13 +1513,21 @@
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">****</a></li>
+    <li><a href="#dockerfile"><strong>Dockerfile</strong></a></li>
   </ul>
 
   <ul>
     <li>
       <ul>
-        <li><a href="#heading-3">****</a></li>
+        <li><a href="#dokerfile의-기본-구문"><strong>Dokerfile의 기본 구문</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dockerfile-작성"><strong>Dockerfile 작성</strong></a></li>
       </ul>
     </li>
   </ul>
