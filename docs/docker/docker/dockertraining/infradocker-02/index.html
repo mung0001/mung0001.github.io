@@ -21,7 +21,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.e3e4831a871520ebf67ceae3a4b24e10e36254c56afd0294b6681a51bad4227d.js" integrity="sha256-4&#43;SDGocVIOv2fOrjpLJOEONiVMVq/QKUtmgaUbrUIn0="></script>
+<script defer src="/en.search.min.df0074f5e8f9cae17e18d0afeb22a0241c6e1eebf6c46bd503265083de464c57.js" integrity="sha256-3wB09ej5yuF&#43;GNCv6yKgJBxuHuv2xGvVAyZQg95GTFc="></script>
 <!--
 
 -->
@@ -1329,6 +1329,22 @@
       </ul>
     </li>
   </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#컨테이너-생성-및-시작"><strong>컨테이너 생성 및 시작</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#docker-hub"><strong>Docker Hub</strong></a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
 
@@ -1420,7 +1436,7 @@ $ name Image 다운로드
 $ docker images
 # 이미지 확인
 
-$ docker container run --name &lt;name&gt; -d -p &lt;host port num&gt;:&lt; container port num&gt; nginx
+$ docker container run --name &lt;name&gt; -d -p &lt;host port num&gt;:&lt;container port num&gt; nginx
 # 서버 기동
 
 $ docker stats &lt;name&gt;
@@ -1429,9 +1445,48 @@ $ docker stats &lt;name&gt;
 $ docker stop &lt;name&gt;
 # name의 컨테이너를 정지
 
+$ docker kill &lt;name&gt;
+# name 컨테이너를 강제정지
+
+$ docker unpause &lt;name&gt;
+# 정지된 name 컨테이너를 재개
+
 $ docker start &lt;name&gt;
 # name의 컨테이너를 시작
 
+$ docker container rm &lt;옵션&gt; &lt;컨테이너 식별자&gt;
+# -f : 실행 중인 컨테이너 강제 삭제 / -v : 할당한 볼륨을 삭제
+# 해당 옵션으로 식별자의 컨테이너를 삭제한다 
+
+$ docker image inspect &lt;name&gt;
+# name의 이미지의 상세정보 출력 ( CPU, OS etc...)
+
+$ docker image tag &lt;name&gt; &lt;new name:new version&gt;
+# name의 이미지의 이미지 및 태그로 수정
+
+$ docker image rm &lt;옵션&gt; &lt;이미지명:태그&gt;
+# 이미지명:태그의 이미지 삭제
+# -f : 강제삭제 / --no-prune : 중간이미지를 삭제하지 않음
+
+$ docker image prune &lt;옵션&gt;
+# 사용하지 않는 이미지 삭제
+# -all, -a : 사용하지 않는 이미지를 모두 삭제 / -f : 강제로 삭제
+
+$ docker image push &lt;이미지명:태그명&gt;
+# 이미지 upload
+
+$ docker logs -t &lt;name&gt;
+# name 이름의 컨테이너 로그를 출력
+
+$ docker network ls &lt;옵션&gt;
+# -f : 필터 / --no-trunc : 상세정보 출력 / -q : network ID만 표시
+# network 종류 출력
+
+$ docker network create -d &lt;network type&gt; &lt;name&gt;
+# network type의 name network 생성
+
+$ docker docker container stats &lt;컨테이너 식별자&gt;
+# 해당 컨테이너의 상태를 출력
 </code></pre></div><h1 id="heading-6"></h1>
 <p> </p>
 <h1 id="heading-7"></h1>
@@ -1455,8 +1510,250 @@ $</li>
 # -a 옵션은 모든 태그의 취득이 가능 ( 태그지정은 불가 )
 </code></pre></div><h1 id="heading-10"></h1>
 <p> </p>
+<ul>
+<li><strong>이미지 출력</strong></li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ docker image ls &lt;옵션&gt; &lt;리포지토리명&gt;
-</code></pre></div><h1 id="heading-11"></h1>
+</code></pre></div><ul>
+<li>
+<p><strong>옵션</strong></p>
+<ul>
+<li>
+<p><strong>-all, -a : 모든 이미지 표시</strong></p>
+</li>
+<li>
+<p><strong>&ndash;digests : 다이제스트 표시 유무</strong></p>
+</li>
+<li>
+<p><strong>&ndash;no&ndash;trunc : 결과를 모두 표시</strong></p>
+</li>
+<li>
+<p><strong>&ndash;quiet, -q : Docker 이미지 ID만 표시</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-11"></h1>
+<p> </p>
+<h1 id="heading-12"></h1>
+<ul>
+<li><strong>이미지 검색</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ docker search &lt;옵션&gt; &lt;검색 키워드&gt;
+# 옵션의 값으로 검색 키워드를 서치
+</code></pre></div><ul>
+<li>
+<p><strong>옵션</strong></p>
+<ul>
+<li>
+<p><strong>&ndash;no-trunc : 결과를 모두 표시</strong></p>
+</li>
+<li>
+<p><strong>&ndash;limit : n건의 검색 결과를 표시</strong></p>
+</li>
+<li>
+<p><strong>&ndash;filter=stars=n : 즐겨찾기의 수(n 이상)을 지정</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-13"></h1>
+<p> </p>
+<h1 id="heading-14"></h1>
+<ul>
+<li><strong>이미지 위장, 변조 제거</strong></li>
+</ul>
+<h1 id="heading-15"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ export DOCKER_CONTENT_TRUST=1
+# 상단의 명령어 입력시 이미지 검증작업을 수행 ( 0은 무효화 )
+</code></pre></div><h1 id="heading-16"></h1>
+<p> </p>
+<h1 id="heading-17"></h1>
+<h3 id="컨테이너-생성-및-시작"><strong>컨테이너 생성 및 시작</strong></h3>
+<h1 id="heading-18"></h1>
+<ul>
+<li><strong>Docker Container run</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ docker container run &lt;옵션&gt; &lt;이미지명:태그명&gt; &lt;인수&gt;
+</code></pre></div><ul>
+<li>
+<p><strong>옵션</strong></p>
+<ul>
+<li>
+<p><strong>&ndash;attach, -a : 표준 입력, 출력, 오류 출력을 어태치</strong></p>
+</li>
+<li>
+<p><strong>&ndash;cidfile 컨테이너 ID 파일오 출력</strong></p>
+</li>
+<li>
+<p><strong>&ndash;detach -d : 컨테이너를 생성하고 백그라운드에서 실행</strong></p>
+</li>
+<li>
+<p><strong>&ndash;interctive, -l : 컨테이너의  표준 입력을 연다</strong></p>
+</li>
+<li>
+<p><strong>&ndash;tty, -t : 단말기 디바이스를 사용</strong></p>
+</li>
+<li>
+<p><strong>&ndash;user, -u : 사용자명 지정</strong></p>
+</li>
+<li>
+<p><strong>-restart=num : 명령의 실행 결과에 따라 재시작을 진행</strong></p>
+</li>
+<li>
+<p><strong>&ndash;rm : 명령 실행 완료 후 자동으로 삭제</strong></p>
+</li>
+<li>
+<h1 id="heading-19"></h1>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-20"></h1>
+<p> </p>
+<h1 id="heading-21"></h1>
+<ul>
+<li><strong>자원을 지정하여 컨테이너 생성 및 실행 ( docker container run )</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ docker container run &lt;자원 옵션&gt; &lt;이미지명:태그명&gt; &lt;인수&gt;
+</code></pre></div><ul>
+<li>
+<p><strong>옵션</strong></p>
+<ul>
+<li>
+<p><strong>&ndash;cpu-shares, -c : CPU의 사용비율</strong></p>
+</li>
+<li>
+<p><strong>&ndash;memory, -m : Memory 사용비율 ( 단위 b, k, m, g )</strong></p>
+</li>
+<li>
+<p><strong>&ndash;volume=[호스트의 디렉토리:[컨테이너의 디렉토리]], -v : 호스트와 컨테이너의 디렉토리 공유</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-22"></h1>
+<p> </p>
+<h1 id="heading-23"></h1>
+<ul>
+<li><strong>Docker Container 환경변수</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ docker container run &lt;환경설정 옵션&gt; &lt;이미지명:태그명&gt; &lt;인수&gt;
+</code></pre></div><ul>
+<li>
+<p><strong>옵션</strong></p>
+<ul>
+<li>
+<p><strong>&ndash;env=&lt;환경변수&gt;, -e : 환경변수를 설정</strong></p>
+</li>
+<li>
+<p><strong>&ndash;env-file=&lt;파일명&gt; : 환경변수를 파일로부터 설정</strong></p>
+</li>
+<li>
+<p><strong>&ndash;read-only=&lt;true | false&gt; : 컨테이너의 파일 시스템을 읽기전용으로 설정</strong></p>
+</li>
+<li>
+<p><strong>&ndash;workdir=<!-- raw HTML omitted -->, -w : 컨테이너의 작업 디렉토리를 지정</strong></p>
+</li>
+<li>
+<p><strong>&ndash;user=&lt;사용자명&gt;, -u : 사용자명 또는 UID를 지정</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-24"></h1>
+<p> </p>
+<h1 id="heading-25"></h1>
+<ul>
+<li>
+<p><strong>Docker container network run</strong></p>
+<ul>
+<li>
+<p><strong>&ndash;add-host=<!-- raw HTML omitted --> : 컨테이너의 /etc/hosts에 호스트명과 IP주소를 정의</strong></p>
+</li>
+<li>
+<p><strong>&ndash;dns=<!-- raw HTML omitted --> : 컨테이너용 DNS 서버의 IP 주소 지정</strong></p>
+</li>
+<li>
+<p><strong>&ndash;expose : 지정한 범위의 포트 번호를 할당</strong></p>
+</li>
+<li>
+<p><strong>&ndash;mac-address=<!-- raw HTML omitted --> : 컨테이너의 MAC 주소를 지정</strong></p>
+</li>
+<li>
+<p><strong>&ndash;net=[bridge | none | container:&lt;name | id&gt; | host | NETWORK] : 컨테이너의 네트워크를 지정</strong></p>
+</li>
+<li>
+<p><strong>&ndash;hostname, -h : hostname 지정</strong></p>
+</li>
+<li>
+<p><strong>&ndash;publish, -p <!-- raw HTML omitted --> : 호스트와 컨테이너 포트 매핑</strong></p>
+</li>
+<li>
+<p><strong>&ndash;publish-all, -P : 호스트의 임의의 포트를 컨테이너에 할당</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-26"></h1>
+<p> </p>
+<h1 id="heading-27"></h1>
+<h1 id="heading-28"></h1>
+<p> </p>
+<h1 id="heading-29"></h1>
+<h3 id="docker-hub"><strong>Docker Hub</strong></h3>
+<h1 id="heading-30"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ docker login &lt;옵션&gt; &lt;서버&gt;
+# 해당 서버에 특정 옵션으로 login
+# -p : pw / -u : 사용자명
+</code></pre></div><h1 id="heading-31"></h1>
+<p> </p>
+<h1 id="heading-32"></h1>
+<ul>
+<li><strong>Docker 출력 형식 지정</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ docker container ls -a &#34;<span style="color:#75715e">{{</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Names</span><span style="color:#75715e">}}</span>: <span style="color:#75715e">{{</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Status</span><span style="color:#75715e">}}</span>&#34;...
+</code></pre></div><ul>
+<li>
+<p><strong>옵션</strong></p>
+<ul>
+<li>
+<p><strong>.ID : 컨테이너 ID</strong></p>
+</li>
+<li>
+<p><strong>.Image : 이미지 ID</strong></p>
+</li>
+<li>
+<p><strong>.Command : 실행명령</strong></p>
+</li>
+<li>
+<p><strong>.CreatedAt : 컨테이너가 작성된 시간</strong></p>
+</li>
+<li>
+<p><strong>.RunningFor : 컨테이너 가동시간</strong></p>
+</li>
+<li>
+<p><strong>.Ports : 공개포트</strong></p>
+</li>
+<li>
+<p><strong>.Status : 컨테이너 상태</strong></p>
+</li>
+<li>
+<p><strong>.Size : 컨테이너 디스크 크기</strong></p>
+</li>
+<li>
+<p><strong>.Names : 컨테이너명</strong></p>
+</li>
+<li>
+<p><strong>.Mounts : 불륨 마운트</strong></p>
+</li>
+<li>
+<p><strong>.Networks : 네트워크명</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-33"></h1>
 <p> </p>
 </article>
  
@@ -1539,6 +1836,22 @@ $</li>
     <li>
       <ul>
         <li><a href="#docker-images"><strong>Docker Images</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#컨테이너-생성-및-시작"><strong>컨테이너 생성 및 시작</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#docker-hub"><strong>Docker Hub</strong></a></li>
       </ul>
     </li>
   </ul>
