@@ -9,15 +9,6 @@
     <lastBuildDate>Sat, 12 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://mung0001.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-04/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-04/</guid>
-      <description>****          ****            </description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-05/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -499,7 +490,7 @@
       <guid>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-03/</guid>
       <description>Dockerfile     Dokerfile은 Doker에서 작동시킬 컨테이너의 구성 정보를 기술하기 위한 파일
   Dokerfile은 텍스트 형식의 파일로, 에디터 등을 사용하여 작성, 확장자는 따로 필요 없으며 Dokerfile이라는 이름의 파일에 인프라의 구성 정보를 기술
-    Dokerfile의 기본 구문     명렵 설명     FROM 베이스 이미지 지정   RUN 명령 실행   CMD 컨테이너 실행 명령   LABEL 라벨 설정   EXPOSE Port Expose   ENV 환경변수   ADD 파일/ 디렉터리 추가   COPY 파일복서   ENTRYPOINT 컨테이너 실핼 명령   VOLUME 볼륨 마운트   USER 사용자 지정   WORKDIR 작업 디렉토리   ARG Dockerfile 안의 변수   ONBUILD 빌드 완료 후 실행되는 명령어   STOPSIGNAL 시스템 콜 시그널 설정   HEALTHCHECK 컨테이너 헬스 체크   SHELL 기본 쉘 설정   # 주석설정       Dockerfile 작성  FROM centos:centos7 FROM centos:centos7@sha256:다이제스트 # 상단과 같은 식으로 나열 $ docker build -t sample:1.</description>
+    Dokerfile의 기본 구문     명렵 설명     FROM 베이스 이미지 지정   RUN 명령 실행   CMD 컨테이너 실행 명령   LABEL 라벨 설정   EXPOSE Port Expose   ENV 환경변수   ADD 파일/ 디렉터리 추가   COPY 파일복서   ENTRYPOINT 컨테이너 실핼 명령   VOLUME 볼륨 마운트   USER 사용자 지정   WORKDIR 작업 디렉토리   ARG Dockerfile 안의 변수   ONBUILD 빌드 완료 후 실행되는 명령어   STOPSIGNAL 시스템 콜 시그널 설정   HEALTHCHECK 컨테이너 헬스 체크   SHELL 기본 쉘 설정   # 주석설정       Dockerfile 작성  FROM &amp;lt;IMG:LABEL&amp;gt; FROM centos:centos7 FROM centos:centos7@sha256:다이제스트 # 상단과 같은 식으로 나열 $ docker build -t sample:1.</description>
     </item>
     
     <item>
@@ -592,6 +583,15 @@
       <description>AWS 사용자 정의 VPC 생성    AWS 사용자 정의 VPC 생성    이제 본격적으로 AWS 서비스들에 대해서 다루어 보겠습니다. 그 중, AWS 서비스의 근간이 VPC를 생성해 보도록 하겠습니다. VPC 중요한 개념이므로, VPC에 대한 개념이 부족한 분들은은 AWS VPC를 참고해주세요.     GUI 환경에서의 사용자 정의 VPC 생성   기본적인 VPC 생성의 순서
 1. VPC 네트워크 생성 2. Internet Gateway 설정
 2. Subnet 설정</description>
+    </item>
+    
+    <item>
+      <title>Docker Basic</title>
+      <link>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-04/</guid>
+      <description>Docker Basic          ****            </description>
     </item>
     
     <item>
