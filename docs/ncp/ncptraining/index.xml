@@ -6,5 +6,92 @@
     <description>Recent content in NCP Training on 뭉게뭉게</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language><atom:link href="https://mung0001.github.io/docs/ncp/ncptraining/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Naver Cloud Assoicate</title>
+      <link>https://mung0001.github.io/docs/ncp/ncptraining/nca01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/ncp/ncptraining/nca01/</guid>
+      <description>Naver Cloud Assoicate 교육목적    클라우드 서비스에 대한 기초적인 지식습득
+  Naver Cloud 상품에 대한 이해화 기초 활용법 습득
+  네이버 클라우드 상품 라인업에 대한 이해
+  네이버 클라우드 기초 사용법
+       Cloud    1960년대 부터 가상화라는 용어사용(IBM)
+  VMware
+  Hyper-V
+  KVM
+  Xen
+        공공 클라우드</description>
+    </item>
+    
+    <item>
+      <title>Naver Cloud Assoicate</title>
+      <link>https://mung0001.github.io/docs/ncp/ncptraining/nca02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/ncp/ncptraining/nca02/</guid>
+      <description>****         ****         #
+ </description>
+    </item>
+    
+    <item>
+      <title>Naver Cloud Assoicate</title>
+      <link>https://mung0001.github.io/docs/ncp/ncptraining/nca07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/ncp/ncptraining/nca07/</guid>
+      <description>****         ****         #
+ </description>
+    </item>
+    
+    <item>
+      <title>Naver Cloud Network</title>
+      <link>https://mung0001.github.io/docs/ncp/ncptraining/nca03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/ncp/ncptraining/nca03/</guid>
+      <description>Network   외부와의 통로, 내부와의 통로 뿐만이 아닌, DNS, CDN과 같은 다양한 서비스를 제공    Nework Service의 종류   Load Balancer   부하 분산을 위해 서버 앞단에서 트래픽을 분산
+  HAProxy를 이용하여 로드밸런싱
+ Proxy 방식 : 서버에서는 클라이언트의 IP 확인하고자 하 때 SSL/TCP의 경우 Proxy Protocol을 사용 HTTP/HTTPS의 경우 X-Forwarder를 사용       최대 6만 TPS(Transaction Per Second)까지 보장</description>
+    </item>
+    
+    <item>
+      <title>Naver Cloud Storage</title>
+      <link>https://mung0001.github.io/docs/ncp/ncptraining/nca04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/ncp/ncptraining/nca04/</guid>
+      <description>Storage   클라우드 서비스 중 저장소에 관련된 서비스    Block Storage   일반적으로 서버에 추가하여 사용하는 스토리지     Object Storage    인터넷 상에 원하는 데이터를 저장하고 사용할 수 있또록 구축된 오브젝트 스토리지
+  객체 기반의 무제한 파일 저장 스토리지
+  콘솔, RESTful API, SDK 등의 다양한 방법으로 오브젝트들을 관리하고, 저장된 파일은 각 파일마다 고유한 접근 RUL을 사용
+  사용이 오래된 자료는 비교적 가격이 저렴한 Archive Storage로 이동</description>
+    </item>
+    
+    <item>
+      <title>Naver Cloud Database</title>
+      <link>https://mung0001.github.io/docs/ncp/ncptraining/nca05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/ncp/ncptraining/nca05/</guid>
+      <description>Cloud Database   Naver Cloud 스크립트 파일을 통한 서버 자체에 DB를 설치하는 것외에도 Cloud 상에 MySQL을 사용하는 서비스 또한 지원    Cloud DB for MySQL    자동 Fail-Over 지원 및 사용자 환경에 맞는 구성 기능제공
+  최대 32vCPU에 256GB 메모리 지원, 2TB 자동 디스크 확장 ( Standard, High Memory )
+  자동 Fail-Over를 지원하며 최대 5대까지 복제 Slave (Read Only) 확장가능
+  private Load Balancer를 이용해서 Read 부하 분산 가능</description>
+    </item>
+    
+    <item>
+      <title>Naver Cloud AI</title>
+      <link>https://mung0001.github.io/docs/ncp/ncptraining/nca06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/ncp/ncptraining/nca06/</guid>
+      <description>Naver Cloud AI    AI 플랫폼인 Clova, PaPago
+  딥러닝을 위한 Tensorflow가 탑재된 이미지를 제공
+    Chat bot    CS나 주문 시스템과 같은 고객 대응을 로봇으로 대체하는 상품
+  학습을 통해 적절한 답변을 자동화, CSR, CSS와 연동을 통해 메신저 뿐만 아니라 음성 채팅까지 확장 가능
+  라인, 톡톡, 페이스북 메신저와 연동
+       Clova Speech Recognition ( CSR )    음성을 텍스트로 변환</description>
+    </item>
+    
   </channel>
 </rss>
