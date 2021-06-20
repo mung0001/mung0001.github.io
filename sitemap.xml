@@ -55,8 +55,6 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca07/</loc>
-  </url><url>
     <loc>https://mung0001.github.io/docs/ncp/navercloudplatform/ncp00/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/ncp/navercloudplatform/ncp01/</loc>
@@ -231,6 +229,8 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/infra/infra/infra07/</loc>
   </url><url>
+    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca07/</loc>
+  </url><url>
     <loc>https://mung0001.github.io/docs/development/shell/shell-7/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window07/</loc>
@@ -243,6 +243,8 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/horizon/</loc>
   </url><url>
+    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca08/</loc>
+  </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/swift/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window08/</loc>
@@ -254,6 +256,8 @@
     <loc>https://mung0001.github.io/docs/aws/awstraining/rds/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/heat/</loc>
+  </url><url>
+    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca09/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/</loc>
   </url><url>
@@ -277,6 +281,8 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/network/mail/</loc>
   </url><url>
+    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca10/</loc>
+  </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/</loc>
@@ -292,6 +298,8 @@
     <loc>https://mung0001.github.io/docs/azure/azuretraining/azure01/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure01/</loc>
+  </url><url>
+    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca11/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstacktraining/</loc>
   </url><url>

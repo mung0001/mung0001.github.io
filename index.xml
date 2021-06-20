@@ -198,16 +198,6 @@
     </item>
     
     <item>
-      <title>Naver Cloud Assoicate</title>
-      <link>https://mung0001.github.io/docs/ncp/ncptraining/nca07/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/ncp/ncptraining/nca07/</guid>
-      <description>****         ****         #
- </description>
-    </item>
-    
-    <item>
       <title>NCP</title>
       <link>https://mung0001.github.io/docs/ncp/navercloudplatform/ncp00/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -972,6 +962,21 @@
     </item>
     
     <item>
+      <title>Naver Cloud Application</title>
+      <link>https://mung0001.github.io/docs/ncp/ncptraining/nca07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/ncp/ncptraining/nca07/</guid>
+      <description>Cloud Application    네이버에서 사용하는 기술과 서비스를 APi로 제공
+  Geolocation, Maps, nShortURL, SENS, Search Trend 등 제공
+  네이버 통합검색 서비스를 통해 수집되는 검색어 통계를 다양한 기준으로 조회 활용 가능
+  대량 메일 발송을 위한 Outbound Mailer
+  고객 대응에 활용할 수 있는 챗봇
+    Geo Location    사용자 IP를 통해 위치 정보를 제공하는 국내 유일의 서비스
+  고객서버에서 질의한 IP주소에 따른 지역정보를 DB를 검색해 국가, 시, 군, 구, 동, 인근 지역의 좌표 전달</description>
+    </item>
+    
+    <item>
       <title>Shell Customizing</title>
       <link>https://mung0001.github.io/docs/development/shell/shell-7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1017,6 +1022,19 @@
       
       <guid>https://mung0001.github.io/docs/openstack/openstack/horizon/</guid>
       <description>외부 인터페이스 대시보드 서비스 : Horizon   외부 인터페이스 대시보드 서비스 : Horizon    사용자가 웹 UI로 인스턴스 생성, 삭제, 관리 등을 쉽고 빠르게 처리할 수 있게 지원 Horizon은 아파치 웹 서버를 사용 및 Python, Django 프레임워크로 구현     논리 아키텍처의 Horizon   논리 아키텍처에서 보이는 Horizon은 단순히 Horizon 자체 모듈만 존재 모든 서비스의 API와 연동해서 사용자에게 웹 서비스를 제공  </description>
+    </item>
+    
+    <item>
+      <title>Naver Cloud Management</title>
+      <link>https://mung0001.github.io/docs/ncp/ncptraining/nca08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/ncp/ncptraining/nca08/</guid>
+      <description>Cloud Managent   Cloud 상에 서비스들을 관리할 수 있는 Cloud형 관리도구    Monitoring    클라우드 리소스 상태 모니터링 수행
+  모든 상품에 대해 모니터링 서비스 제공
+  기본 : 상품 별 모니터링 그래프 확인 가능
+  상세 : 메트릭에 대한 임계치 설정과 이벤트 발생 시 Alert 기능 ( SMS / E-mail ) 제공
+  83개 세부 항목에 대한 모니터링 성능 정보를 수집하며, 그 중 약 60여개의 세부 항목에 대한 이벤트 경보 설정 가능</description>
     </item>
     
     <item>
@@ -1074,6 +1092,18 @@
       
       <guid>https://mung0001.github.io/docs/openstack/openstack/heat/</guid>
       <description>오케스트레이션 서비스 : Heat   Heat   Heat는 탬블릿과 Stack을 사용하여 자동으로 인스턴스의 리소스를 추가하거나 줄이는 서비스 오케스트레이션은 자원 관리, 배치, 정렬을 자동화하는 것 오케스트레이션은 인스턴스 생성에 대한 일련의 과정을 자동화해서 인프라를 쉽게 배포할 수 있도록 하는 탬플릿 기반 엔진 오케스트레이션에서 사용되는 템플릿 언어는 인프라, 서비스, 응용프로그램, 프로비저닝, 자동화 컴퓨팅, 스토리지, 네트워킹, 자동 스케일링 등에 사용 가능   Heat의 논리 아키텍처      구성요소 역할     heat-api RPC heat 엔진에 전송해서 요청된 API를 처리한 REST API를 제공   heat-api-cfn AWS CloudFormation과 호환되는 AWS 타입의 Query API를 제공   heat-engine 템플릿을 생성하고, Consumer(API를 사용하려고 접근하는 애플리케이션이나 서비스)를 다시 이벤트로 제공하는 오케스트레이션의 주 작업을 수행   queue 각 서비스들이 통신을 하기 위한 서비스      </description>
+    </item>
+    
+    <item>
+      <title>Naver Cloud Analytics</title>
+      <link>https://mung0001.github.io/docs/ncp/ncptraining/nca09/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/ncp/ncptraining/nca09/</guid>
+      <description>Cloud Analytics    서비스와 관련된 다양한 로그를 수집하고 분석
+ ELSA를 통해 모바일 앱에서 발생하는 크래시를 수집하고 분석    시스템의 다양한 로그를 수집하고 분석
+ CLA를 통해 시스템의 로그를 수집하고 분석    웹 페이지에 대한 통계 분석
+ RUA를 통해 웹 페이지의 방문자 통계를 확인      ELSA ( Effective Log Search &amp;amp; Analytics )    ELSA의 SDK/ API를 이용하여 어플리케이션을 쉽게 저장하고 검색, 분석할 수 있는 로그 분석 툴</description>
     </item>
     
     <item>
@@ -1168,6 +1198,20 @@
     </item>
     
     <item>
+      <title>Naver Cloud Security Services</title>
+      <link>https://mung0001.github.io/docs/ncp/ncptraining/nca10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/ncp/ncptraining/nca10/</guid>
+      <description>Cloud ecurity Services   Site Safer / App Safer   Site Safer   고객의 웹 페이지에 악성 코드가 있는 지 주기적으로 검색
+  NCP 외부 IP대역도 점검 가능
+  행위 기반 탐지
+      App Safer   고객의 APP실행 모바일 환경에 대한 보안 위협 여부를 실시간으로 탐지
+  치팅 프로그램, 핵 등으로 APP 무결성 검사
+       File Safer   업로드 / 다운로드 되는 파일의 악성코드 여부를 탐지   고객의 웹 페이지에 업.</description>
+    </item>
+    
+    <item>
       <title>SQL 개요</title>
       <link>https://mung0001.github.io/docs/database/sqld/sqld-0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1219,6 +1263,20 @@
       <guid>https://mung0001.github.io/docs/azure/microsoftazure/azure01/</guid>
       <description>Azure Networking    Azure Networking은 컴퓨팅 리소스를 연결하고 애플리케이션에 대한 액세스를 제공하는 것으로 Microsoft Azure 데이터 센터의 서비스 및 기능을 외부 환경에 연결하는 다양한 옵션이 포함되어 있습니다.     Azure Virtual Network   수신 VPN(가상 사설망) 연결에 VM을 연결합니다.     Azure Load Balancer     Azure Load Balancer는 사용자를 위한 유지 관리를 Azure에서 담당하는 서비스 입니다.
   인바운 및 아웃바운드의 시나리오에 맟춰 해당 TCP, UDP 포트로 접근하는 각 트래픽을 부하분산합니다.</description>
+    </item>
+    
+    <item>
+      <title>Naver Cloud Media</title>
+      <link>https://mung0001.github.io/docs/ncp/ncptraining/nca11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/ncp/ncptraining/nca11/</guid>
+      <description>Media Service   Live Station   실시간 방송을 위한 플랫폼   트랜스코딩을 통해 여러 화질로 변환 후 송출
+  스트림 상태를 볼 수 있는 모니터링 기능 제공
+  Thumbnail Image 추출
+  타임머신(Time Shift) 기능으로 놓치지 않는 라이브 방송 서비스 구현 가능
+  CDN 연동을 통해 안정적인 송출 가능
+       VOD Transcoder   고품질 저비용의 클라우드 미디어 파일 변환 서비스   VOD Transcoder는 미디어 원본 파일을 모바일, PC 등 다양한 디바이스에서 다양한 화질로 시청할 수 있또록 변환해주는 클라우드 기반의 미디어 서비스</description>
     </item>
     
     <item>
