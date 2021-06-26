@@ -49,6 +49,10 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/infra/infra/infra01/</loc>
   </url><url>
+    <loc>https://mung0001.github.io/docs/system/macos/macos04/</loc>
+  </url><url>
+    <loc>https://mung0001.github.io/docs/system/macos/macos01/</loc>
+  </url><url>
     <loc>https://mung0001.github.io/docs/system/nas/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca01/</loc>
@@ -87,6 +91,16 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/network/sophos/sophos_1/</loc>
   </url><url>
+    <loc>https://mung0001.github.io/docs/development/spingboot/</loc>
+  </url><url>
+    <loc>https://mung0001.github.io/docs/development/spingboot/spingboot01/</loc>
+  </url><url>
+    <loc>https://mung0001.github.io/docs/development/spingboot/spingboot02/</loc>
+  </url><url>
+    <loc>https://mung0001.github.io/docs/development/spingboot/spingboot03/</loc>
+  </url><url>
+    <loc>https://mung0001.github.io/docs/development/spingboot/spingboot04/</loc>
+  </url><url>
     <loc>https://mung0001.github.io/docs/aws/awssaa/saa-2/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/</loc>
@@ -98,6 +112,8 @@
     <loc>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-02/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/docker/docker/docker-2/</loc>
+  </url><url>
+    <loc>https://mung0001.github.io/docs/system/macos/macos02/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/keystone/</loc>
   </url><url>
@@ -149,6 +165,8 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/</loc>
   </url><url>
+    <loc>https://mung0001.github.io/docs/system/macos/macos03/</loc>
+  </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window03/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/aws/awssaa/saa-4/</loc>
@@ -184,6 +202,8 @@
     <loc>https://mung0001.github.io/docs/docker/docker/docker/docker-5/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/gcp/gcptraining/</loc>
+  </url><url>
+    <loc>https://mung0001.github.io/docs/system/macos/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca05/</loc>
   </url><url>
