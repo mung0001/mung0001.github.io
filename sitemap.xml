@@ -57,17 +57,21 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/system/nas/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca01/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca02/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/navercloudplatform/ncp00/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/ncp0/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/navercloudplatform/ncp01/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/ncp01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/navercloudplatform/ncp02/</loc>
+    <loc>https://mung0001.github.io/docs/nc/navercloudplatform/ncp00/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/navercloudplatform/</loc>
+    <loc>https://mung0001.github.io/docs/nc/navercloudplatform/ncp01/</loc>
+  </url><url>
+    <loc>https://mung0001.github.io/docs/nc/navercloudplatform/ncp02/</loc>
+  </url><url>
+    <loc>https://mung0001.github.io/docs/nc/navercloudplatform/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/network/network/natwork-1/</loc>
   </url><url>
@@ -125,7 +129,7 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/azure/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/ncptraining/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/network/nm/nm02/</loc>
   </url><url>
@@ -161,7 +165,7 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/glance/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca03/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca03/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/network/network/packet/</loc>
   </url><url>
@@ -187,7 +191,7 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/gcp/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca04/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca04/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/infra/infra/infra04/</loc>
   </url><url>
@@ -211,9 +215,9 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/system/macos/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca05/</loc>
+    <loc>https://mung0001.github.io/docs/nc/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca05/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/neutron/</loc>
   </url><url>
@@ -237,7 +241,7 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/docker/docker/docker-6/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca06/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca06/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/development/shell/shell-6/</loc>
   </url><url>
@@ -255,7 +259,7 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/infra/infra/infra07/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca07/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca07/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/development/shell/shell-7/</loc>
   </url><url>
@@ -269,7 +273,7 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/horizon/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca08/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca08/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/swift/</loc>
   </url><url>
@@ -283,7 +287,7 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/heat/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca09/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca09/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/</loc>
   </url><url>
@@ -307,7 +311,7 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/network/mail/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca10/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca10/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/</loc>
   </url><url>
@@ -325,7 +329,7 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/ncp/ncptraining/nca11/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca11/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstacktraining/</loc>
   </url><url>
