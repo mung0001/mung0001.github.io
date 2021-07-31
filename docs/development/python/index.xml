@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language><atom:link href="https://mung0001.github.io/docs/development/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Python</title>
+      <link>https://mung0001.github.io/docs/development/python/python01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/development/python/python01/</guid>
+      <description>****         ****  </description>
+    </item>
+    
+    <item>
       <title>Python Code</title>
       <link>https://mung0001.github.io/docs/development/python/code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
