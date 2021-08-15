@@ -5,15 +5,25 @@
   <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Naver Cloud professional 교육목적         클라우드 컴퓨팅    Naver의 경우에도 2000년대 초반부터 Private Cloud를 통해 자체적으로 사용하고 있었음
-        ">
+<meta name="description" content="가상화 기술과 Naver Cloud   전가상화와 반가상화    전가상화
+  하드웨어 전체를 가상화하는 방식
+  하드웨어를 관리하는 하이퍼바이저(DOMO)가 VM들에게 하드웨어 리소스를 할당하는 방식
+  하이퍼바이저가 모든 리소스를 관리하는 만큼 성능적으로 오버헤드가 발생
+  VM은 일반적인 OS를 그대로 사용가능
+        반가상화
+  전 가상화의 성능 저하를 해결하고자 모든 명령에 대해 DOMO를 통해 요청하는 방식이 아닌 하이퍼콜을 통해 직업 요청">
 
 
 
 <meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/nc/ncptraining/ncp01/><meta property="og:title" content="Naver Cloud professional" />
-<meta property="og:description" content="Naver Cloud professional 교육목적         클라우드 컴퓨팅    Naver의 경우에도 2000년대 초반부터 Private Cloud를 통해 자체적으로 사용하고 있었음
-        " />
+<link rel="canonical" href=/docs/nc/ncptraining/ncp01/><meta property="og:title" content="가상화" />
+<meta property="og:description" content="가상화 기술과 Naver Cloud   전가상화와 반가상화    전가상화
+  하드웨어 전체를 가상화하는 방식
+  하드웨어를 관리하는 하이퍼바이저(DOMO)가 VM들에게 하드웨어 리소스를 할당하는 방식
+  하이퍼바이저가 모든 리소스를 관리하는 만큼 성능적으로 오버헤드가 발생
+  VM은 일반적인 OS를 그대로 사용가능
+        반가상화
+  전 가상화의 성능 저하를 해결하고자 모든 명령에 대해 DOMO를 통해 요청하는 방식이 아닌 하이퍼콜을 통해 직업 요청" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/nc/ncptraining/ncp01/" /><meta property="article:section" content="docs" />
 
@@ -23,7 +33,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.b7e7e4629aa834ee1db36772e83601ee6e351f9c42984ea307f20b86cee62dbd.js" integrity="sha256-t&#43;fkYpqoNO4ds2dy6DYB7m41H5xCmE6jB/ILhs7mLb0="></script>
+<script defer src="/en.search.min.a636ae01b3edc2afd68bd8e707e38a16253e8b03285a1e369a1911a849d0a176.js" integrity="sha256-pjauAbPtwq/Wi9jnB&#43;OKFiU&#43;iwMoWh42mhkRqEnQoXY="></script>
 <!--
 
 -->
@@ -434,7 +444,7 @@
         <li >
 
   
-  <a href="/docs/nc/ncptraining/ncp01/" class="active">Naver Cloud professional</a>
+  <a href="/docs/nc/ncptraining/ncp01/" class="active">가상화</a>
   
 
 </li>
@@ -1409,7 +1419,7 @@
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Naver Cloud professional</strong>
+  <strong>가상화</strong>
 
   <label for="toc-control">
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -1423,13 +1433,53 @@
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#naver-cloud-professional-교육목적"><strong>Naver Cloud professional 교육목적</strong></a></li>
+    <li><a href="#가상화-기술과-naver-cloud"><strong>가상화 기술과 Naver Cloud</strong></a></li>
   </ul>
 
   <ul>
     <li>
       <ul>
-        <li><a href="#클라우드-컴퓨팅"><strong>클라우드 컴퓨팅</strong></a></li>
+        <li><a href="#전가상화와-반가상화"><strong>전가상화와 반가상화</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server의-특징"><strong>Server의 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server의-종류"><strong>Server의 종류</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#preinstall-image"><strong>Preinstall Image</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server-operation---서버생성"><strong>Server Operation - 서버생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server-operation---상세변경"><strong>Server Operation - 상세변경</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -1452,28 +1502,593 @@
 <br>
 <br>
       
-  <article class="markdown"><h2 id="naver-cloud-professional-교육목적"><strong>Naver Cloud professional 교육목적</strong></h2>
+  <article class="markdown"><h2 id="가상화-기술과-naver-cloud"><strong>가상화 기술과 Naver Cloud</strong></h2>
 <h1 id="heading"></h1>
+<p> </p>
+<h3 id="전가상화와-반가상화"><strong>전가상화와 반가상화</strong></h3>
+<h1 id="heading-1"></h1>
 <ul>
 <li>
-<hr>
+<p><strong>전가상화</strong></p>
+<ul>
+<li>
+<p><strong>하드웨어 전체를 가상화하는 방식</strong></p>
+</li>
+<li>
+<p><strong>하드웨어를 관리하는 하이퍼바이저(DOMO)가 VM들에게 하드웨어 리소스를 할당하는 방식</strong></p>
+</li>
+<li>
+<p><strong>하이퍼바이저가 모든 리소스를 관리하는 만큼 성능적으로 오버헤드가 발생</strong></p>
+</li>
+<li>
+<p><strong>VM은 일반적인 OS를 그대로 사용가능</strong></p>
 </li>
 </ul>
-<h1 id="heading-1"></h1>
-<p> </p>
-<h3 id="클라우드-컴퓨팅"><strong>클라우드 컴퓨팅</strong></h3>
+</li>
+</ul>
 <h1 id="heading-2"></h1>
+<p> </p>
 <ul>
 <li>
-<p><strong>Naver의 경우에도 2000년대 초반부터 Private Cloud를 통해 자체적으로 사용하고 있었음</strong></p>
+<p><strong>반가상화</strong></p>
+<ul>
+<li>
+<p><strong>전 가상화의 성능 저하를 해결하고자 모든 명령에 대해 DOMO를 통해 요청하는 방식이 아닌 하이퍼콜을 통해 직업 요청</strong></p>
 </li>
 <li>
-<hr>
+<p><strong>하이퍼콜을 사용하기 위해서는 VM의 OS가 이를 지원해야 함</strong></p>
+</li>
+</ul>
 </li>
 </ul>
 <h1 id="heading-3"></h1>
 <p> </p>
+<blockquote>
+<ul>
+<li><strong>Hyper Visor</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>하드웨어와 VM 사이에 VM과 하드웨어를 관리하기 위한 가상화 관리 소프트웨어</strong></li>
+</ul>
+</blockquote>
 <h1 id="heading-4"></h1>
+<p> </p>
+<h1 id="heading-5"></h1>
+<h3 id="server의-특징"><strong>Server의 특징</strong></h3>
+<h1 id="heading-6"></h1>
+<ul>
+<li>
+<p><strong>CPU</strong></p>
+<ul>
+<li>
+<p><strong>vCPU 단위로 할당</strong></p>
+</li>
+<li>
+<p><strong>CPU의 Core가 vCPU에 맵핑되는 구조</strong></p>
+</li>
+<li>
+<p><strong>Over Commit 허용</strong></p>
+</li>
+<li>
+<p><strong>스펙 변경 가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-7"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Memory</strong></p>
+<ul>
+<li>
+<p><strong>GB 단위로 할당</strong></p>
+</li>
+<li>
+<p><strong>Over Commit 허용 안함</strong></p>
+</li>
+<li>
+<p><strong>스펙 변경 가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-8"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>HDD</strong></p>
+<ul>
+<li>
+<p><strong>OS 영역이 기본 할당 (50GB or 100GB)</strong></p>
+</li>
+<li>
+<p><strong>OS 영역은 용량 확장이나 축소 불가</strong></p>
+</li>
+<li>
+<p><strong>SSD 타입과 HDD타입으로 구분</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-9"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>GPU</strong></p>
+<ul>
+<li>
+<p><strong>GPU 단위로 할당 (GPU Core 단위로 할당하지 않음)</strong></p>
+</li>
+<li>
+<p><strong>Pass Through 방식으로 제공</strong></p>
+</li>
+<li>
+<blockquote>
+<p><strong>Passthrough는 NIC, 디스크 컨트롤러, HBA, USB 컨트롤러와 사운드 카드 등의 PCI 장치를 직접적으로 Guest에게 할당하여 바로 제어하고 접근 할 수 있도록 하는 방법</strong></p>
+</blockquote>
+</li>
+<li>
+<p><strong>최대 2장까지 제공</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-10"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Network</strong></p>
+<ul>
+<li>
+<p><strong>Physical 10Gbs</strong></p>
+</li>
+<li>
+<p><strong>Logical 1Gbps</strong></p>
+</li>
+<li>
+<p><strong>실제로 500Mbps~ 1Gbps 제공(Rx+TX)</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-11"></h1>
+<p> </p>
+<h1 id="heading-12"></h1>
+<h3 id="server의-종류"><strong>Server의 종류</strong></h3>
+<h1 id="heading-13"></h1>
+<ul>
+<li>
+<p><strong>Micro Server</strong></p>
+<ul>
+<li>
+<p><strong>회원 가입 후 결제 정보를 등록한 월부터 1년간 무료로 사용할 수 있는 상품 ( 1세데 only )</strong></p>
+</li>
+<li>
+<p><strong>테스으 용도 및 네이버 클라우드 플랫폼 기능 테스트 용도로 적당</strong></p>
+</li>
+<li>
+<p><strong>해외 리전은 제공을 하지 않음</strong></p>
+</li>
+<li>
+<p><strong>추가 디스크 사용 불가</strong></p>
+</li>
+<li>
+<p><strong>서버 사양</strong></p>
+<ul>
+<li><strong>1vCPU, 1G RAM, 50G HDD</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>지원 OS</strong></p>
+<ul>
+<li><strong>CentOS 6.3 6.6 7.2 7.3</strong></li>
+<li><strong>Ubuntu 12.04, 14.04, 16.04</strong></li>
+<li><strong>Windows 지원 X</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-14"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Compact Type</strong></p>
+<ul>
+<li>
+<p><strong>유료 서버중 사양이 낮은 서버로 구성</strong></p>
+</li>
+<li>
+<p><strong>Server 스펙변경이 가능</strong></p>
+</li>
+<li>
+<p><strong>작은 웹서버 용도로 적당</strong></p>
+</li>
+<li>
+<p><strong>서버 사양 및 지원 OS</strong></p>
+<ul>
+<li>부팅 디스크 크기 | CPU | Memory | OS</li>
+<li>&mdash; | &mdash; | &mdash; | &mdash;</li>
+<li>50GB | 1 | 2 | CentOS, Ubuntu</li>
+<li>50GB | 2 | 2 | CentOS, Ubuntu, Windows</li>
+<li>100GB | 2 | 2 | Windows</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-15"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Standard Type</strong></p>
+<ul>
+<li><strong>일반적으로 사용하는 서버 타입</strong></li>
+<li><strong>Sever 스펙변경이 가능</strong></li>
+<li><strong>서버 사양 지원 OS</strong></li>
+<li>CPU | Memory</li>
+<li>&mdash; | &mdash;</li>
+<li>2 | 4</li>
+<li>2 | 8</li>
+<li>2 | 16</li>
+<li>4 | 4</li>
+<li>4 | 8</li>
+<li>4 | 16</li>
+<li>8 | 8</li>
+<li>8 | 16</li>
+<li>8 | 32</li>
+<li>12 | 16</li>
+<li>12 | 32</li>
+<li>16 | 16</li>
+<li>16 | 32
+<ul>
+<li><strong>OS(50GB) : CentOS, Ubuntu, Windows</strong></li>
+<li><strong>OS(100GB) : Windows</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-16"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>High Memory Type</strong></p>
+<ul>
+<li>
+<p><strong>대용량 메모리가 필요한 경우</strong></p>
+</li>
+<li>
+<p><strong>서버 사양 및 지원 OS</strong></p>
+<ul>
+<li>OS | CPU | Memory</li>
+<li>CentOS, Ubuntu | 8 | 64</li>
+<li>CentOS, Ubuntu | 16 | 64</li>
+<li>CentOS, Ubuntu | 16 | 128</li>
+<li>CentOS, Ubuntu | 32 | 256</li>
+<li>CentOS 5.x, 6.x | 8 | 64</li>
+<li>CentOS 5.x, 6.x | 16 | 64</li>
+<li>CentOS 5.x, 6.x | 16 | 128</li>
+<li>CentOS 5.x, 6.x | 32 | 128</li>
+<li>Windows 2012 | 8 | 64</li>
+<li>Windows 2012 | 16 | 64</li>
+<li>Windows 2012 | 16 | 128</li>
+<li>Windows 2016 | 8 | 64</li>
+<li>Windows 2016 | 16 | 64</li>
+<li>Windows 2016 | 16 | 128</li>
+<li>Windows 2016 | 32 | 128</li>
+<li>Windows 2016 | 32 | 256
+<ul>
+<li>부팅 디스크의 크기 : 50GB / Windows : 100GB</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-17"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>VDS Server</strong></p>
+<ul>
+<li>
+<p><strong>Virtual Dedicated Server</strong></p>
+<ul>
+<li><strong>기존 클라우드 일반적인 서버가 물리서버 기반에 하이퍼바이저 위에 다수의 VM이 생성되는 것을 비교하여 VDS는 하나의 VM만을 생성</strong></li>
+<li><strong>Over Commit이 발생하지 않음</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-18"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Bare Metal Server</strong></p>
+<ul>
+<li>
+<p><strong>하이퍼바이저 없이 하드웨어의 자원을 그대로 사용</strong></p>
+<ul>
+<li><strong>기본적인 관리는 IPMI를 통해 관리</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>오라클과 같이 라이센스상 클라우드에 대한 제약이 있는 경우 사용</strong></p>
+</li>
+<li>
+<p><strong>서바 사양 및 지원 OS</strong></p>
+<ul>
+<li><strong>RAID 5, 1+0 지원</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-19"></h1>
+<p> </p>
+<h1 id="heading-20"></h1>
+<h3 id="preinstall-image"><strong>Preinstall Image</strong></h3>
+<h1 id="heading-21"></h1>
+<ul>
+<li>
+<p><strong>DBMS</strong></p>
+<ul>
+<li>
+<p><strong>MySQL 5.7, 5.6</strong></p>
+</li>
+<li>
+<p><strong>Cubrid 9.2</strong></p>
+</li>
+<li>
+<p><strong>Redis 3.2.8</strong></p>
+</li>
+<li>
+<p><strong>MariaDB 10.2</strong></p>
+</li>
+<li>
+<p><strong>PostgreSQl 9.4</strong></p>
+</li>
+<li>
+<p><strong>MS-SQL 2008(std), 2012(std), 2014(std), 2016(exp, std), 2017(exp,std), 2019(std)</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-22"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Application</strong></p>
+<ul>
+<li>
+<p><strong>LAMP</strong></p>
+</li>
+<li>
+<p><strong>WordPress</strong></p>
+</li>
+<li>
+<p><strong>Pinpoint</strong></p>
+</li>
+<li>
+<p><strong>RabbitMQ</strong></p>
+</li>
+<li>
+<p><strong>Tensorflow</strong></p>
+</li>
+<li>
+<p><strong>Jenkins 2.73</strong></p>
+</li>
+<li>
+<p><strong>WebtoB, JEUS</strong></p>
+</li>
+<li>
+<p><strong>Tomcat</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-23"></h1>
+<p> </p>
+<h1 id="heading-24"></h1>
+<h3 id="server-operation---서버생성"><strong>Server Operation - 서버생성</strong></h3>
+<h1 id="heading-25"></h1>
+<ol>
+<li>
+<p><strong>리전 선택</strong></p>
+</li>
+<li>
+<p><strong>부팅 디스크 이미지 선택</strong></p>
+</li>
+<li>
+<p><strong>OS 선택</strong></p>
+</li>
+<li>
+<p><strong>서버 설정</strong></p>
+</li>
+</ol>
+<h1 id="heading-26"></h1>
+<p> </p>
+<h3 id="server-operation---상세변경"><strong>Server Operation - 상세변경</strong></h3>
+<h1 id="heading-27"></h1>
+<ul>
+<li>
+<p><strong>서버 스펙 변경</strong></p>
+<ul>
+<li>
+<p><strong>동일한 서버 타입에 한하여 CPU, Memory 스펙 변경가능</strong></p>
+</li>
+<li>
+<p><strong>반드시 정지된 상태에서 변경</strong></p>
+</li>
+<li>
+<p><strong>다른 서버 타입으로 변경하고자 할 경우에는 내 서버 이미지를 생성하여 해당 이미지로 다른 타입의 서버 생성</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-28"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>내 서버 이미지 생성</strong></p>
+<ul>
+<li>
+<p><strong>서버의 현재 상태를 이미지로 생성</strong></p>
+</li>
+<li>
+<p><strong>이미지 생성시 반드시 정지된 상태에서 변경</strong></p>
+</li>
+<li>
+<p><strong>타 리전에 서버 생성시에는 먼저 대상 리전으로 복제</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-29"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>유사 서버 생성</strong></p>
+<ul>
+<li>
+<p><strong>선택한 서버와 동일한 스펙의 서버 생성시 사용</strong></p>
+</li>
+<li>
+<p><strong>서버 이미지, 스토리지, 서버 타입, 요금제, Zone, 인증키, ACG 정보를 동일하게 적용</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-30"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>스트로지 생성</strong></p>
+<ul>
+<li>
+<p><strong>OS 영역 50GB에 추가적으로 디스크 생성시 사용</strong></p>
+</li>
+<li>
+<p><strong>최소 10GB에서 최대 2TB까지 디스크 생성 가능</strong></p>
+</li>
+<li>
+<p><strong>최대 16개 디스크 추가 가능</strong></p>
+</li>
+<li>
+<p><strong>생성된 스토리지는 용량 증설 가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-31"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>스토리지 용량 변경</strong></p>
+<ul>
+<li>
+<p><strong>스토리지에 대해 용량 증설가능</strong></p>
+</li>
+<li>
+<p><strong>용량 증설은 서버 정지 혹은 연결 해제 후 가능</strong></p>
+</li>
+<li>
+<p><strong>용량 증설후 데이터 삭제 없이 해당 공간을 사용하기 위해서는 볼륨 관리 툴을 이용하여야만 함</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-32"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>서버그룹 생성 및 관리</strong></p>
+<ul>
+<li><strong>서버그룹은 서버 리스트 뷰에서 필터링을 위한 용도</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-33"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>반납 보호 설정</strong></p>
+<ul>
+<li><strong>사용자 부주의로 서버가 반납되지 않도록 설정하는 기능</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-34"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>상세 모니터링</strong></p>
+<ul>
+<li>
+<p><strong>서버들의 모니터링에 대해 보다 상세하게 모니터링하는 기능</strong></p>
+</li>
+<li>
+<p><strong>상세 모니터링 설정시 해당 서버는 모니터링 서비스에서 정보 확인 가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-35"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>네트워크 모니터링 설정</strong></p>
+<ul>
+<li>
+<p><strong>서버에서 발생하는 트래픽에 대한 상세 내용을 확인할 수 있다록 설정하는 기능</strong></p>
+</li>
+<li>
+<p><strong>네트윅 트래픽 모니터링 서비스에서 정보 확인 가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-36"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>서버 이름 변경</strong></p>
+<ul>
+<li>
+<p><strong>MC에서 보여지는 서버 이름 변경</strong></p>
+</li>
+<li>
+<p><strong>실제 서버명이 변경되지는 않음</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-37"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>인증키 변경</strong></p>
+<ul>
+<li>
+<p><strong>서버 생성시 생성한 인증키를 다른 인증키로 변경</strong></p>
+</li>
+<li>
+<p><strong>초기 패스워드를 변경하지 않은 상태에서 인증키 분실시 초기 패스워드를 확인하기 위해 인증키 변경이 필요</strong></p>
+</li>
+<li>
+<p><strong>인증키 변경시에는 ID인 이메일로 인증 정보 전송</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-38"></h1>
+<p> </p>
 </article>
  
       
@@ -1527,13 +2142,53 @@
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#naver-cloud-professional-교육목적"><strong>Naver Cloud professional 교육목적</strong></a></li>
+    <li><a href="#가상화-기술과-naver-cloud"><strong>가상화 기술과 Naver Cloud</strong></a></li>
   </ul>
 
   <ul>
     <li>
       <ul>
-        <li><a href="#클라우드-컴퓨팅"><strong>클라우드 컴퓨팅</strong></a></li>
+        <li><a href="#전가상화와-반가상화"><strong>전가상화와 반가상화</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server의-특징"><strong>Server의 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server의-종류"><strong>Server의 종류</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#preinstall-image"><strong>Preinstall Image</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server-operation---서버생성"><strong>Server Operation - 서버생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server-operation---상세변경"><strong>Server Operation - 상세변경</strong></a></li>
       </ul>
     </li>
   </ul>
