@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="3Tier 구현  사용도구     Vmware WorkStaton 16
+    GNS3
+       CentOS7
+    알테온 L4
+      아키텍처     종류 대수 네트워크     Web (Apache) 1EA 90.90.90.90.10/24, 100.100.100.3/24   App (Tomcat) 2EA 120.120.120.10-20/24, 130.130.130.10-20/24   DB (Mysql) 1EA 140.140.140.10/24, 150.150.150.30/31   DB-Slave 1EA 70.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/project/study/day2/><meta property="og:title" content="2주차 3Tier" />
+<meta property="og:description" content="3Tier 구현  사용도구     Vmware WorkStaton 16
+    GNS3
+       CentOS7
+    알테온 L4
+      아키텍처     종류 대수 네트워크     Web (Apache) 1EA 90.90.90.90.10/24, 100.100.100.3/24   App (Tomcat) 2EA 120.120.120.10-20/24, 130.130.130.10-20/24   DB (Mysql) 1EA 140.140.140.10/24, 150.150.150.30/31   DB-Slave 1EA 70." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/project/study/day2/" /><meta property="article:section" content="docs" />
+
+
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
+<script defer src="/en.search.min.8714095333cd345f75e7c350ff424b095ae440fea679ab8f8160020c31ef2350.js" integrity="sha256-hxQJUzPNNF9158NQ/0JLCVrkQP6meauPgWACDDHvI1A="></script>
+<!--
+
+-->
+
+   
+
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div style="padding-top: 0.2cm; font-size: 0.9em; font-weight: bolder;">
+  <div style ="padding-bottom: 0.3cm;">
+    Name : Jengkeun Lee
+  </div>
+  <div style ="padding-bottom: 0.3cm;">
+    Mail : mung0001@naver.com
+  </div>
+</div>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>operation</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/tia-942/" class="collapsed ">TIA-942</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/mail/" class="collapsed ">Mail</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/nas/" class="collapsed ">NAS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/project/" class="">Project&amp; Study</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <span>Study</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/project/study/day1/" class="">1주차</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/project/study/day2/" class="active">2주차 3Tier</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/project/study/day0/" class="">예제</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+<br>
+<div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1022327295984162"
+     data-ad-slot="6213387116"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>2주차 3Tier</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#3tier-구현"><strong>3Tier 구현</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#사용도구"><strong>사용도구</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#아키텍처"><strong>아키텍처</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#3tier-설정"><strong>3Tier 설정</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#apache"><strong>Apache</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#tomcat"><strong>Tomcat</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#mysql"><strong>MySQL</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h2 id="3tier-구현"><strong>3Tier 구현</strong></h2>
+<h1 id="heading"></h1>
+<h3 id="사용도구"><strong>사용도구</strong></h3>
+<h1 id="heading-1"></h1>
+<ul>
+<li>
+<blockquote>
+<p><strong>Vmware WorkStaton 16</strong></p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p><strong>GNS3</strong></p>
+</blockquote>
+</li>
+</ul>
+<h1 id="heading-2"></h1>
+<ul>
+<li>
+<blockquote>
+<p><strong>CentOS7</strong></p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p><strong>알테온 L4</strong></p>
+</blockquote>
+</li>
+</ul>
+<h1 id="heading-3"></h1>
+<p> </p>
+<h1 id="heading-4"></h1>
+<h3 id="아키텍처"><strong>아키텍처</strong></h3>
+<p><img src="/study/3tier/3tier.png" alt="" /></p>
+<h1 id="heading-5"></h1>
+<table>
+<thead>
+<tr>
+<th>종류</th>
+<th>대수</th>
+<th>네트워크</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web (Apache)</td>
+<td>1EA</td>
+<td>90.90.90.90.10/24, 100.100.100.3/24</td>
+</tr>
+<tr>
+<td>App (Tomcat)</td>
+<td>2EA</td>
+<td>120.120.120.10-20/24, 130.130.130.10-20/24</td>
+</tr>
+<tr>
+<td>DB (Mysql)</td>
+<td>1EA</td>
+<td>140.140.140.10/24, 150.150.150.30/31</td>
+</tr>
+<tr>
+<td>DB-Slave</td>
+<td>1EA</td>
+<td>70.70.70.10/31</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-6"></h1>
+<p> </p>
+<h1 id="heading-7"></h1>
+<h2 id="3tier-설정"><strong>3Tier 설정</strong></h2>
+<h1 id="heading-8"></h1>
+<h3 id="apache"><strong>Apache</strong></h3>
+<pre><code class="language-tql" data-lang="tql">$ yum -y install httpd
+$ systemctl enable --now httpd
+
+$ firewall-cmd --permanent --add-service=http
+$ firewall-cmd --permanent --add-port=80/tc
+$ firewalld-cmd --reload
+
+$ yum install httpd-devel gcc gcc-c++ -y
+$ wget https://downloads.apache.org/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.48-src.tar.gz
+$ tar -xvf tomcat-connectors-1.2.48-src.tar.gz
+$ cd tomcat-connectors-1.2.48-src/native/
+$ ./configure --with-apxs=/bin/apxs
+$ make
+$ make install 
+$ cp -r apache-2.0/mod_jk.so /usr/lib64/httpd/modules/mod_jk.so
+$ chmod 755 /usr/lib64/httpd/modules/mod_jk.so
+
+$ vi /etc/httpd/conf/httpd.conf
+
+DocumentRoot &quot;/usr/local/tomcat8/webapps/ROOT/&quot;
+
+&lt;Directory &quot;/usr/local/tomcat8/webapps/ROOT&quot;&gt;
+AllowOverride none
+Require all granted
+&lt;/Directory&gt;
+
+
+
+# 맨 아래
+
+
+&lt;IfModule jk_module&gt;
+	JkWorkersFile /etc/httpd/conf/workers.properties // worker 지정
+	JkLogFile /var/log/httpd/mod_jk.log // log 저장될 곳
+	JkLogLevel info // info level이상의 log를 저장
+	JkLogStampFormat &quot;[%a %b %d %H:%M:%S %Y]&quot; //log 형식
+	
+	JkMount /*.jsp workerweb
+  	JKMount /*.css workerweb
+  	JKMount /*.svg workerweb
+  	JKMount /*.png workerweb
+  	JKMount /*.gif workerweb
+	JkMount /*.js workerweb
+  	JKMount /*.do workerweb 
+&lt;/IfModule&gt;
+
+vi /etc/httpd/conf/workers.properties
+worker.list=workerweb
+worker.workerweb.type=ajp13
+worker.workerweb.host=[tomcat 서버의 IP]
+worker.workerweb.port=8009
+</code></pre><h1 id="heading-9"></h1>
+<p> </p>
+<h1 id="heading-10"></h1>
+<h3 id="tomcat"><strong>Tomcat</strong></h3>
+<pre><code class="language-tql" data-lang="tql">$ yum install java-1.8.0-openjdk-devel.x86_64 -y
+
+$ vi /etc/profile
+JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.302.b08-0.el7_9.x86_64
+export JAVA_HOME
+
+PATH=$PATH:$JAVA_HOME/bin
+export PATH
+
+$ source /etc/profile
+$ wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.69/bin/apache-tomcat-8.5.69.tar.gz
+$ tar -xvf apache-tomcat-8.5.65.tar.gz
+$ mv apache-tomcat-8.5.65 /usr/local/tomcat8
+
+$ vi /usr/local/tomcat8/conf/server.xml
+// 주석 해제
+&lt;Connector protocol=&quot;AJP/1.3&quot;
+           address=&quot;0.0.0.0&quot; 
+           secretRequired=&quot;false&quot; // SSL OF F
+           port=&quot;8009&quot; // 웹서버 worker에 설정한 포트
+           redirectPort=&quot;8443&quot; /&gt; 
+
+$ /usr/local/tomcat8/bin/shutdown.sh
+$ /usr/local/tomcat8/bin/startup.sh
+
+
+$ yum -y install mysql-connector-java
+$ cp /usr/share/java/mysql-connector-java.jar /usr/local/tomcat8/lib/
+
+
+
+
+$ vi /usr/local/tomcat8/webapps/ROOT/dbtest.jsp
+&lt;%@ page import=&quot;java.sql.*&quot; contentType=&quot;text/html; charset=UTF-8&quot; %&gt;
+&lt;%
+	String DB_URL = &quot;jdbc:mysql://[DB_Server_IP]/mysql&quot;;
+	String DB_USER = &quot;root&quot;;
+	String DB_PASSWORD= &quot;[암호]&quot;;
+
+	Connection conn;
+	Statement stmt;
+
+	try
+	{
+	 Class.forName(&quot;org.gjt.mm.mysql.Driver&quot;);
+	 conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+	 stmt = conn.createStatement();
+	 conn.close();
+
+	 out.println(&quot;MySQL Connection Success!&quot;);
+	}
+	catch(Exception e)
+	{
+		out.println(e.getMessage());
+	}
+%&gt;
+
+
+
+
+$ vi /usr/local/tomcat8/webapps/ROOT/dbdata.jsp
+&lt;%@page import=&quot;java.sql.*&quot;%&gt;
+&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        &lt;%
+                Connection conn = null;
+                ResultSet rs = null;
+
+                String url = &quot;jdbc:mysql://[DB_Server_IP]:3306/tom_db&quot;;
+                String id = &quot;root&quot;;
+                String pwd = &quot;[암호]&quot;;
+
+                try {
+                        Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+                        conn = DriverManager.getConnection(url, id, pwd);
+                        Statement stmt = conn.createStatement();
+
+                        String sql = &quot;SELECT * FROM Users&quot;;
+                        rs = stmt.executeQuery(sql);
+
+                        while(rs.next()) {
+                                out.println(&quot;NAME - &quot; +rs.getString(&quot;name&quot;)+ &quot; |&quot;);
+                                out.println(&quot;EMAIL - &quot; +rs.getString(&quot;email&quot;)+ &quot; |&quot;);
+                                out.println(&quot;COUNTRY - &quot; +rs.getString(&quot;country&quot;)+ &quot; |&quot;);
+                                out.println(&quot;&lt;hr&gt;&quot;);
+                        }
+
+                        conn.close();
+                } catch (Exception e) {
+                        e.printStackTrace();
+                }
+        %&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+
+
+
+
+
+</code></pre><h1 id="heading-11"></h1>
+<p> </p>
+<h1 id="heading-12"></h1>
+<h3 id="mysql"><strong>MySQL</strong></h3>
+<pre><code class="language-tql" data-lang="tql">$ wget http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+$ yum localinstall mysql57-community-release-el7-11.noarch.rpm -y
+
+$ yum install -y mysql-community-server
+
+$ systemctl enable --now mysqld
+
+$ cat /var/log/mysqld.log | grep &quot;A temporary password&quot;
+
+$ vi /etc/my.cnf
+[client] 
+default-character-set = utf8 
+
+[mysql] 
+default-character-set = utf8 
+
+[mysqld] 
+datadir=/var/lib/mysql 
+socket=/var/lib/mysql/mysql.sock
+character-set-server = utf8
+collation-server = utf8_general_ci
+init_connect=SET collation_connection = utf8_general_ci 
+init_connect=SET NAMES utf8 
+character-set-client-handshake = FALSE 
+skip-character-set-client-handshake
+
+mysql&gt; GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '패스워드' WITH GRANT OPTION; 
+mysql&gt; FLUSH PRIVILEGES; 
+
+mysql&gt; create database tom_db;
+mysql&gt; grant all on tom_db.* to root@localhost identified by '[패스워드]';
+
+mysql&gt; use tom_db;
+create table Users (id int(3) primary key, name varchar(20), email varchar(20), country varchar(20), password varchar(20));
+INSERT INTO Users (id, name, email, country, password) VALUES (1, 'Harry', 'potter@apple.com', 'India', 'jinie123'); 
+INSERT INTO Users (id, name, email, country, password) VALUES (4, 'Ronald', 'wisley@gmail.com', 'USA', 'herm23');
+INSERT INTO Users (id, name, email, country, password) VALUES(5, 'Hermione', 'granger@google.com', 'UK', 'ron123'); 
+
+mysql&gt; flush privileges;
+mysql&gt; quit
+
+
+
+
+</code></pre><h1 id="heading-13"></h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1022327295984162"
+     data-ad-slot="8742279271"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div>
+<br>
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":402713,"template":"carousel","trackingCode":"AF0817069","width":"680","height":"140"});
+</script>
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#3tier-구현"><strong>3Tier 구현</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#사용도구"><strong>사용도구</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#아키텍처"><strong>아키텍처</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#3tier-설정"><strong>3Tier 설정</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#apache"><strong>Apache</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#tomcat"><strong>Tomcat</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#mysql"><strong>MySQL</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
