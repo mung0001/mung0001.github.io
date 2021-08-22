@@ -445,7 +445,7 @@
     GNS3
        CentOS7
     알테온 L4
-      아키텍처     종류 대수 네트워크     Web (Apache) 1EA 90.90.90.90.10/24, 100.100.100.3/24   App (Tomcat) 2EA 120.120.120.10-20/24, 130.130.130.10-20/24   DB (Mysql) 1EA 140.140.140.10/24, 150.150.150.30/31   DB-Slave 1EA 70.</description>
+      아키텍처     종류 대수 네트워크     Web (Apache) 2EA    App (Tomcat) 2EA    DB (Mysql) 1EA    DB-Slave 1EA        3Tier 설정  Apache $ yum -y install httpd$ systemctl enable --now httpd$ firewall-cmd --permanent --add-service=http$ firewall-cmd --permanent --add-port=80/tcp$ firewall-cmd --reload$ setenforec 0$ yum install httpd-devel gcc gcc-c++ -y$ wget https://downloads.</description>
     </item>
     
     <item>

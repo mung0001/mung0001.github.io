@@ -9,7 +9,7 @@
     GNS3
        CentOS7
     알테온 L4
-      아키텍처     종류 대수 네트워크     Web (Apache) 1EA 90.90.90.90.10/24, 100.100.100.3/24   App (Tomcat) 2EA 120.120.120.10-20/24, 130.130.130.10-20/24   DB (Mysql) 1EA 140.140.140.10/24, 150.150.150.30/31   DB-Slave 1EA 70.">
+      아키텍처     종류 대수 네트워크     Web (Apache) 2EA    App (Tomcat) 2EA    DB (Mysql) 1EA    DB-Slave 1EA        3Tier 설정  Apache $ yum -y install httpd$ systemctl enable --now httpd$ firewall-cmd --permanent --add-service=http$ firewall-cmd --permanent --add-port=80/tcp$ firewall-cmd --reload$ setenforec 0$ yum install httpd-devel gcc gcc-c&#43;&#43; -y$ wget https://downloads.">
 
 
 
@@ -19,7 +19,7 @@
     GNS3
        CentOS7
     알테온 L4
-      아키텍처     종류 대수 네트워크     Web (Apache) 1EA 90.90.90.90.10/24, 100.100.100.3/24   App (Tomcat) 2EA 120.120.120.10-20/24, 130.130.130.10-20/24   DB (Mysql) 1EA 140.140.140.10/24, 150.150.150.30/31   DB-Slave 1EA 70." />
+      아키텍처     종류 대수 네트워크     Web (Apache) 2EA    App (Tomcat) 2EA    DB (Mysql) 1EA    DB-Slave 1EA        3Tier 설정  Apache $ yum -y install httpd$ systemctl enable --now httpd$ firewall-cmd --permanent --add-service=http$ firewall-cmd --permanent --add-port=80/tcp$ firewall-cmd --reload$ setenforec 0$ yum install httpd-devel gcc gcc-c&#43;&#43; -y$ wget https://downloads." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/project/study/day2/" /><meta property="article:section" content="docs" />
 
@@ -29,7 +29,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.8714095333cd345f75e7c350ff424b095ae440fea679ab8f8160020c31ef2350.js" integrity="sha256-hxQJUzPNNF9158NQ/0JLCVrkQP6meauPgWACDDHvI1A="></script>
+<script defer src="/en.search.min.ce1be52135e51897f17ce5172b5a64bcdb907b3e2c8c114f09eb954e0999d2f9.js" integrity="sha256-zhvlITXlGJfxfOUXK1pkvNuQez4sjBFPCeuVTgmZ0vk="></script>
 <!--
 
 -->
@@ -1184,7 +1184,7 @@
     
 
   
-  <span>Study</span>
+  <a href="/docs/project/study/" class="collapsed ">Study</a>
   
 
 
@@ -1440,23 +1440,23 @@
 <tbody>
 <tr>
 <td>Web (Apache)</td>
-<td>1EA</td>
-<td>90.90.90.90.10/24, 100.100.100.3/24</td>
+<td>2EA</td>
+<td></td>
 </tr>
 <tr>
 <td>App (Tomcat)</td>
 <td>2EA</td>
-<td>120.120.120.10-20/24, 130.130.130.10-20/24</td>
+<td></td>
 </tr>
 <tr>
 <td>DB (Mysql)</td>
 <td>1EA</td>
-<td>140.140.140.10/24, 150.150.150.30/31</td>
+<td></td>
 </tr>
 <tr>
 <td>DB-Slave</td>
 <td>1EA</td>
-<td>70.70.70.10/31</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1470,8 +1470,18 @@
 $ systemctl enable --now httpd
 
 $ firewall-cmd --permanent --add-service=http
-$ firewall-cmd --permanent --add-port=80/tc
-$ firewalld-cmd --reload
+$ firewall-cmd --permanent --add-port=80/tcp
+$ firewall-cmd --reload
+$ setenforec 0
+
+
+
+
+
+
+
+
+
 
 $ yum install httpd-devel gcc gcc-c++ -y
 $ wget https://downloads.apache.org/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.48-src.tar.gz
@@ -1485,75 +1495,90 @@ $ chmod 755 /usr/lib64/httpd/modules/mod_jk.so
 
 $ vi /etc/httpd/conf/httpd.conf
 
-DocumentRoot &quot;/usr/local/tomcat8/webapps/ROOT/&quot;
+# 128 수정
+DocumentRoot &quot;/usr/local/tomcat9/webapps/ROOT/&quot;
 
-&lt;Directory &quot;/usr/local/tomcat8/webapps/ROOT&quot;&gt;
+# 추가
+&lt;Directory &quot;/usr/local/tomcat9/webapps/ROOT&quot;&gt;
 AllowOverride none
 Require all granted
 &lt;/Directory&gt;
 
 
 
-# 맨 아래
+# 57라인에 추가
+LoadModule jk_module /usr/lib64/httpd/modules/mod_jk.so
+		&lt;IfModule jk_module&gt;
+			JkWorkersFile /etc/httpd/conf/workers.properties
+			JkLogFile /var/log/httpd/mod_jk.log
+			JkLogLevel info
+			JkLogStampFormat &quot;[%a %b %d %H:%M:%S %Y]&quot;
+			JkMount /* loadbalance
+		&lt;/IfModule&gt;
 
 
-&lt;IfModule jk_module&gt;
-	JkWorkersFile /etc/httpd/conf/workers.properties // worker 지정
-	JkLogFile /var/log/httpd/mod_jk.log // log 저장될 곳
-	JkLogLevel info // info level이상의 log를 저장
-	JkLogStampFormat &quot;[%a %b %d %H:%M:%S %Y]&quot; //log 형식
-	
-	JkMount /*.jsp workerweb
-  	JKMount /*.css workerweb
-  	JKMount /*.svg workerweb
-  	JKMount /*.png workerweb
-  	JKMount /*.gif workerweb
-	JkMount /*.js workerweb
-  	JKMount /*.do workerweb 
-&lt;/IfModule&gt;
+$ vi /etc/httpd/conf/workers.properties
+worker.list=tomcat1,tomcat2,loadbalance
+worker.tomcat1.type=ajp13
+worker.tomcat1.host=[톰캣1의 IP]
+worker.tomcat1.port=8009
 
-vi /etc/httpd/conf/workers.properties
-worker.list=workerweb
-worker.workerweb.type=ajp13
-worker.workerweb.host=[tomcat 서버의 IP]
-worker.workerweb.port=8009
+worker.tomcat2.type=ajp13
+worker.tomcat2.host=[톰캣2의 IP]
+worker.tomcat2.port=8009
+
+worker.loadbalance.type=lb
+worker.loadbalance.balance_workers=tomcat1,tomcat2
+
 </code></pre><h1 id="heading-9"></h1>
 <p> </p>
 <h1 id="heading-10"></h1>
 <h3 id="tomcat"><strong>Tomcat</strong></h3>
-<pre><code class="language-tql" data-lang="tql">$ yum install java-1.8.0-openjdk-devel.x86_64 -y
+<pre><code class="language-tql" data-lang="tql">$ firewall-cmd --permanent --add-port=8009/tcp
+$ firewall-cmd --reload
+
+$ yum install java-1.8.0-openjdk-devel.x86_64 -y
 
 $ vi /etc/profile
-JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.302.b08-0.el7_9.x86_64
+JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.302.b08-0.el7_9.x86_64/
 export JAVA_HOME
-
 PATH=$PATH:$JAVA_HOME/bin
 export PATH
 
-$ source /etc/profile
-$ wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.69/bin/apache-tomcat-8.5.69.tar.gz
-$ tar -xvf apache-tomcat-8.5.65.tar.gz
-$ mv apache-tomcat-8.5.65 /usr/local/tomcat8
 
-$ vi /usr/local/tomcat8/conf/server.xml
-// 주석 해제
+$ source /etc/profile
+
+$ wget http://mirror.navercorp.com/apache/tomcat/tomcat-9/v9.0.52/bin/apache-tomcat-9.0.52.tar.gz
+$ tar -xvzf tar -zxvf apache-tomcat-9.0.52.tar.gz
+$ mv apache-tomcat-9.0.52 /usr/local/tomcat9
+
+
+$ vi /usr/local/tomcat9/conf/server.xml
+
+# 117 주석 해제 및 추가
 &lt;Connector protocol=&quot;AJP/1.3&quot;
            address=&quot;0.0.0.0&quot; 
            secretRequired=&quot;false&quot; // SSL OF F
            port=&quot;8009&quot; // 웹서버 worker에 설정한 포트
-           redirectPort=&quot;8443&quot; /&gt; 
+           redirectPort=&quot;8443&quot; 
+           SecretRequired=&quot;false&quot; /&gt; 
 
-$ /usr/local/tomcat8/bin/shutdown.sh
-$ /usr/local/tomcat8/bin/startup.sh
+
+
+$ /usr/local/tomcat9/bin/shutdown.sh
+$ /usr/local/tomcat9/bin/startup.sh
+
+$ netstat -anlp | gerp :80
+# 8009, 8080 Port 확인
 
 
 $ yum -y install mysql-connector-java
-$ cp /usr/share/java/mysql-connector-java.jar /usr/local/tomcat8/lib/
+$ cp /usr/share/java/mysql-connector-java.jar /usr/local/tomcat9/lib/
 
 
 
 
-$ vi /usr/local/tomcat8/webapps/ROOT/dbtest.jsp
+$ vi /usr/local/tomcat9/webapps/ROOT/dbtest.jsp
 &lt;%@ page import=&quot;java.sql.*&quot; contentType=&quot;text/html; charset=UTF-8&quot; %&gt;
 &lt;%
 	String DB_URL = &quot;jdbc:mysql://[DB_Server_IP]/mysql&quot;;
@@ -1581,7 +1606,7 @@ $ vi /usr/local/tomcat8/webapps/ROOT/dbtest.jsp
 
 
 
-$ vi /usr/local/tomcat8/webapps/ROOT/dbdata.jsp
+$ vi /usr/local/tomcat9/webapps/ROOT/dbdata.jsp
 &lt;%@page import=&quot;java.sql.*&quot;%&gt;
 &lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
     pageEncoding=&quot;UTF-8&quot;%&gt;
@@ -1633,7 +1658,11 @@ $ vi /usr/local/tomcat8/webapps/ROOT/dbdata.jsp
 <p> </p>
 <h1 id="heading-12"></h1>
 <h3 id="mysql"><strong>MySQL</strong></h3>
-<pre><code class="language-tql" data-lang="tql">$ wget http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+<pre><code class="language-tql" data-lang="tql">$ firewall-cmd --permanent --add-service=mysql
+$ firewall-cmd --permanent --add-port=3306/tcp
+$ firewall-cmd --reload
+
+$ wget http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 $ yum localinstall mysql57-community-release-el7-11.noarch.rpm -y
 
 $ yum install -y mysql-community-server
@@ -1659,11 +1688,11 @@ init_connect=SET NAMES utf8
 character-set-client-handshake = FALSE 
 skip-character-set-client-handshake
 
-mysql&gt; GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '패스워드' WITH GRANT OPTION; 
-mysql&gt; FLUSH PRIVILEGES; 
+$ systemctl restart mysqld
 
+mysql&gt; GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '패스워드' WITH GRANT OPTION; 
 mysql&gt; create database tom_db;
-mysql&gt; grant all on tom_db.* to root@localhost identified by '[패스워드]';
+mysql&gt; grant all on tom_db.* to root@localhost identified by '패스워드';
 
 mysql&gt; use tom_db;
 create table Users (id int(3) primary key, name varchar(20), email varchar(20), country varchar(20), password varchar(20));
@@ -1675,6 +1704,69 @@ mysql&gt; flush privileges;
 mysql&gt; quit
 
 
+
+
+
+vi /etc/my.cnf 
+# 추가
+server-id = 1
+log-bin = mysql-bin
+
+$ systemctl restary mysqld
+
+$ mysql -u root -p
+
+mysql &gt; GRANT REPLICATION SLAVE ON *.*  TO '[이니셜]'@'[MySQL2의 IP주소]' IDENTIFIED BY 'Dkagh1234.';
+	슬레이브의 계정 생성
+select * from mysql.user where user='[이니셜]'\G
+# 슬레이브의 계정 생성 확인
+# Repl_slave_priv 속성이 Y 확인
+$ mysql &gt; FLUSH TABLES WITH READ LOCK
+$ mysql &gt; exit
+
+$ mysqldump -u root -p --all-databases &gt; dump.db
+$ scp ./dump.db root@Slave
+</code></pre><ul>
+<li><strong>MYSLQ-Slave 설정</strong></li>
+</ul>
+<pre><code class="language-tql" data-lang="tql">Mysql 동일하게 설치
+$ vi /etc/my.cnf
+[client] 
+default-character-set = utf8 
+
+[mysql] 
+default-character-set = utf8 
+
+[mysqld] 
+datadir=/var/lib/mysql 
+socket=/var/lib/mysql/mysql.sock
+character-set-server = utf8
+collation-server = utf8_general_ci
+init_connect=SET collation_connection = utf8_general_ci 
+init_connect=SET NAMES utf8 
+character-set-client-handshake = FALSE 
+skip-character-set-client-handshake
+server-id=2
+
+mysql -u root -p &lt; dump.db	
+
+mysql &gt; change master to
+master_host='[마스터 IP]',		60.60.60.10
+master_user='[이니셜]',		jjs
+master_password='Dkagh1.',
+master_log_file='mysql-bin.[마스터의 로그 번호]',	mysql-bin.000001
+master_log_pos=[마스터의 포지션 번호];		해당번호
+
+mysql &gt; start slave
+
+
+
+mysql(master) &gt; unlock tables;
+create database test;
+
+
+
+mysql(slave) &gt; show database;
 
 
 </code></pre><h1 id="heading-13"></h1>
