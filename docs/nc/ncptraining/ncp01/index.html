@@ -33,7 +33,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.c175dacb8f2753319dd7e50876f4a78f47ed7656b144f8d40374a6f3e0fd5939.js" integrity="sha256-wXXay48nUzGd1&#43;UIdvSnj0ftdlaxRPjUA3Sm8&#43;D9WTk="></script>
+<script defer src="/en.search.min.a60b199339dbd02fe1c8052fff7c6bdfd77363ed4e3ee42461ea10702cf24947.js" integrity="sha256-pgsZkznb0C/hyAUv/3xr39dzY&#43;1OPuQkYeoQcCzySUc="></script>
 <!--
 
 -->
@@ -1491,6 +1491,14 @@
       </ul>
     </li>
   </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#storage"><strong>Storage</strong></a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
 
@@ -2307,6 +2315,266 @@
 </ul>
 <h1 id="heading-48"></h1>
 <p> </p>
+<h1 id="heading-49"></h1>
+<hr>
+<h1 id="heading-50"></h1>
+<p> </p>
+<h1 id="heading-51"></h1>
+<h3 id="storage"><strong>Storage</strong></h3>
+<h1 id="heading-52"></h1>
+<ul>
+<li>
+<p><strong>Block Storage</strong></p>
+<ul>
+<li>
+<p><strong>볼륨 타입은 HDD/ SDD 제공</strong></p>
+<ul>
+<li><strong>SDD는 10G 당 40IOPS를 가지며 최대 20000을 넘지않음</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>기본 스토리지 Linux(50G), Windows(100G) 고정</strong></p>
+</li>
+<li>
+<p><strong>볼륨 용량은 최소 10G ~ 2,000G로 선택가능</strong></p>
+</li>
+<li>
+<p><strong>VM당 최대 16개의 볼륨 attach기능</strong></p>
+</li>
+<li>
+<p><strong>볼륨 detach 기능제공</strong></p>
+</li>
+<li>
+<p><strong>볼륨 upsizing 기능제공</strong></p>
+</li>
+<li>
+<p><strong>볼륨 live snapshot 가능</strong></p>
+</li>
+<li>
+<p><strong>AZ 간 스토리지 팜이 분리되어 존 간 공유 불가능</strong></p>
+</li>
+<li>
+<p><strong>볼륨 Detach 기능</strong></p>
+<ul>
+<li><strong>VM에 이미 할당 된 볼륨에 대해서 detach 기능 제공</strong></li>
+<li><strong>동일 볼륨을 필요에 따라 detatch하여 동일 계정의 다른 VM에 할당하여 사용가능</strong></li>
+<li><strong>Detach 할 수 있는 VM의 상태</strong>
+<ul>
+<li><strong>VM shutdown 상태</strong></li>
+<li><strong>VM running &gt; VM 내부에서 물륨 umount 상태</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-53"></h1>
+<ul>
+<li>
+<p><strong>볼륨 Upsizing 기능</strong></p>
+<ul>
+<li><strong>볼륨 생성 시 할당 된 용량 증설이 필요할 경우에 대비 용량 증설 기능을 제공</strong></li>
+<li><strong>upsizing만 기능</strong></li>
+<li><strong>기본 스토리지(=root 볼륨)에 대한 resizing은 불가능</strong></li>
+<li><strong>upsizing이 가능한 볼륨 상태</strong>
+<ul>
+<li><strong>볼륨 available 상태 (= VM에 할당되지 않은 상태)</strong></li>
+<li><strong>볼륨이 할당된 VM의 상태가 Shutdown 일때</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-54"></h1>
+</li>
+<li>
+<p><strong>Shapshot</strong></p>
+<ul>
+<li>
+<p><strong>현 시점 볼륨 데이터를 이미지화 하는 기능</strong></p>
+</li>
+<li>
+<p><strong>Naver cloud는 VM 대상의 내서버이미지와 볼륨 대상의 스냅샷 구분 제공</strong></p>
+</li>
+<li>
+<p><strong>스냅샷 이미지를 이용해서 신규 볼륨 생성 가능</strong></p>
+</li>
+</ul>
+<h1 id="heading-55"></h1>
+<ul>
+<li>
+<p><strong>Shapshot 이미지 이용</strong></p>
+<ul>
+<li>
+<p><strong>리전 간 동일 데이터의 볼륨 생성이 필요할 때 &ldquo;리전 간 복제&rdquo; 기능을 이용해서 이전 가능</strong></p>
+</li>
+<li>
+<p><strong>존 간 동일 데이터 볼륨 생성 가능</strong></p>
+</li>
+<li>
+<p><strong>볼륨 타입(HDD/SSD)변경 가능</strong></p>
+</li>
+<li>
+<p><strong>볼륨 사이즈 변경 불가능(Detach 후 upsizing가능)</strong></p>
+</li>
+<li>
+<p><strong>root 볼륨 이슈 발생 시 (커널 패닉 등의 OS로 인해 VM 정상 사용이 불가능한 경우) 해당 스냅샷 이미지를 이용해 root 볼륨 데이터 복원시 사용가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-56"></h1>
+<p>nbsp;</p>
+<h1 id="heading-57"></h1>
+<ul>
+<li>
+<p><strong>Object Storage</strong></p>
+<ul>
+<li>
+<p><strong>AWS S3와 같은 오브젝트 단위의 무제한 파일 저장 스토리지</strong></p>
+</li>
+<li>
+<p><strong>비정형 데이터를 안전하게 저장하고 관리하기 위한 스토리지</strong></p>
+</li>
+<li>
+<p><strong>AWS S3 Compatibility API를 통해서 3rd Party Solution 사용가능</strong></p>
+</li>
+<li>
+<p><strong>콘솔, RESTful API, SDK, CLI를 통해서 파일을 관리하고, 저장된 파일은 각 파일마다 고유한 접근 URL이 부여되어 인터넷 상에서 쉽게 접근이 가능</strong></p>
+</li>
+<li>
+<p><strong>버킷 단위, 오브젝트 단위의 접근 궎나 설정 기능 제공</strong></p>
+</li>
+<li>
+<p><strong>CDN+/GCDN의 Origin, CLA의 Logging, VOD Transcoder 등 Naver Cloud 내 상품과 연동하여 사용가능</strong></p>
+</li>
+<li>
+<p><strong>Sub Account 연동을 통한 권한 기능제공</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-58"></h1>
+<p> </p>
+<h1 id="heading-59"></h1>
+<ul>
+<li>
+<p><strong>NAS</strong></p>
+<ul>
+<li>
+<p><strong>다수의 VM의 공유 가능한 네트워크 볼륨 디바이스</strong></p>
+</li>
+<li>
+<p><strong>용량은 500G ~ 10,000G으로 생성가능, 100G 단위로 용량 증설이 가능</strong></p>
+</li>
+<li>
+<p><strong>NFS/ CIFS 프로토콜 제공, 이기종 OS간 공유 사용을 위해 Samba 등의 추가 지원 필요</strong></p>
+</li>
+<li>
+<p><strong>Live resizing 가능</strong></p>
+</li>
+<li>
+<p><strong>스냅샷 기능 제공: 즉시 / 스케쥴 -&gt; 시점 복원 기능 제공</strong></p>
+</li>
+<li>
+<p><strong>모니터링 기능 제공(볼륨 사용량(%))</strong></p>
+</li>
+<li>
+<p><strong>Custom IP에 Naver Cloud Platform 내 VM 사설IP 등록을 통해 타 계정 VM간 공유 사용가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-60"></h1>
+<p> </p>
+<h1 id="heading-61"></h1>
+<ul>
+<li>
+<p><strong>Archive Storage</strong></p>
+<ul>
+<li>
+<p><strong>AWS glacier에 대응되는 제품</strong></p>
+</li>
+<li>
+<p><strong>cold 데이터 보관 및 백업 아카이빙 데이터 저장을 주 목적으로 하는 스토리지</strong></p>
+</li>
+<li>
+<p><strong>콘솔, API(swift, s3), CLI,SDK를 이용해 데이터 관리 가능</strong></p>
+</li>
+<li>
+<p><strong>데이터 최소 보관 기간없이 사용이 가능</strong></p>
+</li>
+<li>
+<p><strong>Sub Account 연동을 통한 권환 관리 기능 제공</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-62"></h1>
+<p> </p>
+<h1 id="heading-63"></h1>
+<ul>
+<li>
+<p><strong>Backup</strong></p>
+<ul>
+<li>
+<p><strong>파일 DBMS(이미지 빌트인 DB)에 대한 백업 서비스</strong></p>
+</li>
+<li>
+<p><strong>백업 요청서를 작성하여 신청하고 서버에 Agent 설치 필요</strong></p>
+</li>
+<li>
+<p><strong>백업 수행 주기로 8가지 옵션을 제공</strong></p>
+<ul>
+<li><strong>1회성, 1일 1회 전체백업, 1주 1회 전체백업, 1주 1회 전체백업 &amp; 매일 증분 백업 등</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>최대 24주까지 백업 파일 보관가능</strong></p>
+</li>
+<li>
+<p><strong>백업 결과를 일 단위 결과 리포트로 전달</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-64"></h1>
+<p> </p>
+<h1 id="heading-65"></h1>
+<ul>
+<li>
+<p><strong>Data Teleporter</strong></p>
+<ul>
+<li>
+<p><strong>AWS snowball과 대응되는 상품</strong></p>
+</li>
+<li>
+<p><strong>대용량 데이터 이전을 위한 전용 어플라이언스 장비 대여 서비스</strong></p>
+</li>
+<li>
+<p><strong>대용량 데이터 / 보안적으로 안전한 데이ㅓ를 시간과 비용을 효과적으로 줄일 수 있는 서비스</strong></p>
+</li>
+<li>
+<p><strong>어플라이언스를 통한 대용량 데이터의 신속한 이전 (1GB, 10GB, 40GB)</strong></p>
+</li>
+<li>
+<p><strong>1대(DT) 55TB 데이터 저장 공간 차후 100TB 지원예정</strong></p>
+</li>
+<li>
+<p><strong>다양한 네트워크 인터페이스를 지원 (NFS, FTP, SMB)</strong></p>
+</li>
+<li>
+<p><strong>이전에 소요되는 트래픽 비용 절약(데이터 공중망 보안이슈, 대용량 데이터 빠르게 전송)</strong></p>
+</li>
+<li>
+<p><strong>스토리지 암호화, Data Erasing과 같은 기술 적용으로 안전한 데이터 이전이 가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-66"></h1>
+<p> </p>
 </article>
  
       
@@ -2415,6 +2683,14 @@
     <li>
       <ul>
         <li><a href="#server-operation"><strong>Server Operation</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#storage"><strong>Storage</strong></a></li>
       </ul>
     </li>
   </ul>
