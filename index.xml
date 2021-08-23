@@ -295,21 +295,6 @@
     </item>
     
     <item>
-      <title>Professional 가상화</title>
-      <link>https://mung0001.github.io/docs/nc/ncptraining/ncp01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/nc/ncptraining/ncp01/</guid>
-      <description>가상화 기술과 Naver Cloud   전가상화와 반가상화    전가상화
-  하드웨어 전체를 가상화하는 방식
-  하드웨어를 관리하는 하이퍼바이저(DOMO)가 VM들에게 하드웨어 리소스를 할당하는 방식
-  하이퍼바이저가 모든 리소스를 관리하는 만큼 성능적으로 오버헤드가 발생
-  기본적으로 Cloud 업체들이 제공하는 방식은 전가상화 방식을 사용
-        반가상화
-  전 가상화의 성능 저하를 해결하고자 모든 명령에 대해 DOMO를 통해 요청하는 방식이 아닌 하이퍼콜을 통해 직업 요청</description>
-    </item>
-    
-    <item>
       <title>Python</title>
       <link>https://mung0001.github.io/docs/development/python/python01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2263,6 +2248,21 @@
       
       <guid>https://mung0001.github.io/docs/aws/awstraining/game/</guid>
       <description>AWS 끄투온라인 서버 구축    AWS 끄투온라인 서버 구축      끄투 온라인은 오픈소스의 끝말잇기 게임입니다.      EC2를 생성합니다. EC2 생성은 EC2 생성을 참조해주세요.     OS 유형 disk security group     Ubuntu18.04 t2.mini 8 all-open      인스턴스를 생성 후, 아래와 같이 진행합니다.  $ sudo apt -y update $ sudo apt -y upgrade $ sudo apt -y install node.</description>
+    </item>
+    
+    <item>
+      <title>Professional 가상화</title>
+      <link>https://mung0001.github.io/docs/nc/ncptraining/ncp01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/nc/ncptraining/ncp01/</guid>
+      <description>가상화 기술과 Naver Cloud   전가상화와 반가상화    전가상화
+  하드웨어 전체를 가상화하는 방식
+  하드웨어를 관리하는 하이퍼바이저(DOMO)가 VM들에게 하드웨어 리소스를 할당하는 방식
+  하이퍼바이저가 모든 리소스를 관리하는 만큼 성능적으로 오버헤드가 발생
+  기본적으로 Cloud 업체들이 제공하는 방식은 전가상화 방식을 사용
+        반가상화
+  전 가상화의 성능 저하를 해결하고자 모든 명령에 대해 DOMO를 통해 요청하는 방식이 아닌 하이퍼콜을 통해 직업 요청</description>
     </item>
     
     <item>
