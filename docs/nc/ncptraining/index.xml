@@ -45,16 +45,6 @@
     </item>
     
     <item>
-      <title>Naver Cloud professional</title>
-      <link>https://mung0001.github.io/docs/nc/ncptraining/ncp02/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/nc/ncptraining/ncp02/</guid>
-      <description>****         ****         #
- </description>
-    </item>
-    
-    <item>
       <title>Naver Cloud Network</title>
       <link>https://mung0001.github.io/docs/nc/ncptraining/nca03/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -184,6 +174,17 @@
   기본적으로 Cloud 업체들이 제공하는 방식은 전가상화 방식을 사용
         반가상화
   전 가상화의 성능 저하를 해결하고자 모든 명령에 대해 DOMO를 통해 요청하는 방식이 아닌 하이퍼콜을 통해 직업 요청</description>
+    </item>
+    
+    <item>
+      <title>Naver Cloud professional Network, Database</title>
+      <link>https://mung0001.github.io/docs/nc/ncptraining/ncp02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/nc/ncptraining/ncp02/</guid>
+      <description>Network  Network - Well known port    1024번 이하의 포트는 이미 알고 있는 포트 (ex:http/80, ssh/22)
+  해당 포트를 통해 방화벽 컨트롤
+ 해당 포트가 열려있는 지 확인하는 방법 : 포트 스캐닝       Load Balancer   NAT DR Proxy ( Naver Cloud가 사용하는 방식 )  NAT, DR은 ROOPBACK 주소가 필요한데, 이 경우 LB의 IP를 가지고 가기 때문에 방화벽 등에서 문제가 발생할 수 있음      Naver CLoud의 LB는 6초마다 헬스 체크  3회 연속으로 OK, Error가 뜨면 바인딩 혹은 언바인딩      접속 정보로 도메인 정보를 제공  IP가 아닌 도메인인 이유는 IP의 경우 문제가 발생할 확률이 있음 즉, DNS에는 CNAME을 등록진행 필요 Zone apex에 대해서는 RFC1033과 같이 등록불가능      기본적으로 로드밸런서 하나를 생성하면 HAProxy 2개가 생성되어짐, HAProxy 1개의 동적 성능은 약 3000, 만약 이 이상의 성능이 필요한 경우에는 HAProxy를 여러 개 생성해야 됨    한 서버가 여러 개의 LB에 바인딩 될 수 있지만 포트별 멀티 바인딩은 지원하지 않음 18080- 18095, 65130, 65131, 64000, 3389,22 포트는 관리용 포트로 사용이 불가능 최대 50대의 서버의 바인딩이 가능     DNS   도메인에 대해 IP로 변환하는 서비스  트리구조로 구성      네이버 클라우드 플랫폼 DNS  A, NS, PTR, AAAA, MX, CNAME, SPF 등 다양한 레코드의 지원 외부 도메인 등록 기관에 네임서버를 네이버 클라우드 플랫폼의 네임서버로 지정한 경우에 사용가능 도메인 등록시 네이버 클라우드 플랫폼 DNS에 등록하는 데 최대 15분 소요      입력 가능 항목  레코드명 레코드 타입 TTL 레코드 값       NAT gateway    외부로 나가는 통신의 공인 IP를 지정하는 서비스</description>
     </item>
     
   </channel>
