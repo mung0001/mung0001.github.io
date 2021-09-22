@@ -811,15 +811,6 @@
     </item>
     
     <item>
-      <title>UNIX/ Linux 시스템 관리</title>
-      <link>https://mung0001.github.io/docs/development/shell/shell-4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/development/shell/shell-4/</guid>
-      <description>Shell Programming    UNIX/ Linux 시스템 관리         #</description>
-    </item>
-    
-    <item>
       <title>사용자 계정</title>
       <link>https://mung0001.github.io/docs/system/window/window04/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -829,6 +820,15 @@
   컴퓨터의 자원들에 대한 사용권한을 각 사용자마다 제한할 수 있습니다.
   독립 실행형 서버에서 생성한 사용자 계정을 로컬 사용자 계정이라 부르며, 이 계정으로는 AD(Active Directory) 도메인에 로그온할 수 없으며 현재 컴퓨터의 자원에만 접근할 수 있습니다.
   독립 실행형 서버의 경우 기본적으로 Administrato와 Guest 사용자가 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>예약변수와 환경변수</title>
+      <link>https://mung0001.github.io/docs/development/shell/shell-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/development/shell/shell-4/</guid>
+      <description>Shell Programming    예약변수 및 환경변수     변수명 설명     HOME 사용자의 홈 디렉터리   PATH 실행 파일을 찾을 디렉터리 경로   FUNCNAME 현재 함수 이름   LANG 프로그램 사용 시 기본으로 지원되는 언어   PWD 사용자의 현재 작업 중인 디렉터리   TERM 로그인 터미널 타입   SHELL 로그인해서 사용하는 쉙   USER 사용자이름   USERNAME 사용자이름   GROUP 사용자 그룹(/etc/password 값을 출력)   DISPLAY X 디스플레이 이름   COLUMNS 현재 터미널이나 윈도우 터미널 컬럼 수   LINES 터미널 라인의 수   PS1 기본 프롬프트 변수   PS2 보조 프롬프트 변수(기본값:&amp;gt;), 명령을 &amp;ldquo;/&amp;ldquo;를 사용하여 명령 행 연장시 사용됨   PS3 쉘 스크립트에서 select 사용 시 프롬프트 변수   PS4 쉘 스크립트에서 디버깅 모드의 프롬프트 변수(기본값:+)   BASH BASH 실행 파일 경로   BASH_VERSION 설치된 BASH의 버전   BASH_ENV 스크립트 실행 시 BASH 시작 파일을 읽을 위치 변수   HISTFILE history 파일 경로   HISTFILESIE history 파일 크기   HISTSIZE history 파일 저장 수   HOSTNAME 호스트 이름   HOSTTYPE 시스템 하드웨어 종류   MACHTYPE 기기의 종류   MAIL mail 보관경로   LOGNAME 로그인 이름   TMOUT 0이면 제한, 없으면 time 시간 지정 시 그 시간 이후 로그아웃   SECONDS 스크립트가 실행된 초 단위 시간   UID 사용자 UID   OSTYPE OS의 종류           매개변수     매개변수 설명     $$ 현재 스클비트 또는 명령어의 PID   $?</description>
     </item>
     
     <item>
@@ -1854,7 +1854,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-08/</guid>
-      <description>OpenStack : Horizon  OpenStack : Horizon   Horizon은 openstack에서 GUI 환경을 제공해주는 서비스입니다. Horizon에 대한 자세한 설명은 Horizon을 참조해주세요.   $ controller&amp;gt; dnf --enablerepo=centos-openstack-ussuri,PowerTools,epel -y install openstack-dashboard $ controller&amp;gt; vi /etc/openstack-dashboard/local_settings ALLOWED_HOSTS = [&amp;#39;*&amp;#39;,&amp;#39;&amp;#39;] # 모든 host의 접속이 가능하게 설정합니다. CACHES = { &amp;#39;default&amp;#39;: { &amp;#39;BACKEND&amp;#39;: &amp;#39;django.core.cache.backends.memcached.MemcachedCache&amp;#39;, &amp;#39;LOCATION&amp;#39;: &amp;#39;controller:11211&amp;#39;, }, } SESSION_ENGINE = &amp;#34;django.contrib.sessions.backends.cache&amp;#34; OPENSTACK_HOST = &amp;#34;controller&amp;#34; OPENSTACK_KEYSTONE_URL = &amp;#34;http://controller:5000/v3&amp;#34; # openstack host와 SESSION 서버의 host를 지정합니다. TIME_ZONE = &amp;#34;Asia/Seoul&amp;#34; # 시간을 지정합니다.</description>
+      <description>OpenStack : Horizon  OpenStack : Horizon   Horizon은 openstack에서 GUI 환경을 제공해주는 서비스입니다. Horizon에 대한 자세한 설명은 Horizon을 참조해주세요.   $ controller&amp;gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-dashboard $ controller&amp;gt; vi /etc/openstack-dashboard/local_settings ALLOWED_HOSTS = [&amp;#39;*&amp;#39;,&amp;#39;&amp;#39;] # 모든 host의 접속이 가능하게 설정합니다. CACHES = { &amp;#39;default&amp;#39;: { &amp;#39;BACKEND&amp;#39;: &amp;#39;django.core.cache.backends.memcached.MemcachedCache&amp;#39;, &amp;#39;LOCATION&amp;#39;: &amp;#39;controller:11211&amp;#39;, }, } SESSION_ENGINE = &amp;#34;django.contrib.sessions.backends.cache&amp;#34; OPENSTACK_HOST = &amp;#34;controller&amp;#34; OPENSTACK_KEYSTONE_URL = &amp;#34;http://controller:5000/v3&amp;#34; # openstack host와 SESSION 서버의 host를 지정합니다. TIME_ZONE = &amp;#34;Asia/Seoul&amp;#34; # 시간을 지정합니다.</description>
     </item>
     
     <item>

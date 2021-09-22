@@ -21,7 +21,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.a37c5896b2a4ebcc85f54b771844db18d1b02fe000a41d72b4b444051769d289.js" integrity="sha256-o3xYlrKk68yF9Ut3GETbGNGwL&#43;AApB1ytLREBRdp0ok="></script>
+<script defer src="/en.search.min.4f8894bca04587addadc1a2aafdf30e0038a1cb5b9d6a76e297968112e8fa057.js" integrity="sha256-T4iUvKBFh63a3Boqr98w4AOKHLW51qduKXloES6PoFc="></script>
 <!--
 
 -->
@@ -1636,7 +1636,7 @@ $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne object
 <h3 id="network-node-swift-proxy-설치"><strong>Network Node Swift-Proxy 설치</strong></h3>
 <p> </p>
 <h1 id="heading-8"></h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ network&gt; dnf --enablerepo=centos-openstack-ussuri,PowerTools,epel -y install openstack-swift-proxy python3-memcached openssh-clients
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ network&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-swift-proxy python3-memcached openssh-clients
 # swift-proxy 및 관련 모듈을 설치합니다.
 
 $ network&gt; vi /etc/swift/proxy-server.conf
@@ -1702,7 +1702,7 @@ $ network&gt; firewall-cmd --reload
 <h1 id="heading-10"></h1>
 <h2 id="swift-stoage-node-설치"><strong>Swift Stoage Node 설치</strong></h2>
 <h1 id="heading-11"></h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ storage all&gt; dnf --enablerepo=centos-openstack-ussuri,PowerTools,epel -y install openstack-swift-account openstack-swift-container openstack-swift-object openstack-selinux xfsprogs rsync rsync-daemon openssh-clients
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ storage all&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-swift-account openstack-swift-container openstack-swift-object openstack-selinux xfsprogs rsync rsync-daemon openssh-clients
 # swift 밒 관련 모듈을 설치합니다.
 
 $ storage all&gt; mkfs.xfs -i size=1024 -s size=4096 /dev/sdb1
@@ -1814,7 +1814,7 @@ openstack-swift-object
 <h1 id="heading-13"></h1>
 <h2 id="확인"><strong>확인</strong></h2>
 <h1 id="heading-14"></h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ controller ~(keystone)&gt; dnf --enablerepo=centos-openstack-ussuri,PowerTools,epel -y install python3-openstackclient python3-keystoneclient python3-swiftclient
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">$ controller ~(keystone)&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install python3-openstackclient python3-keystoneclient python3-swiftclient
 # swift 사용을 위해 관련 모듈을 설치합니다.
 
 $ controller ~(keystone)&gt; openstack project create --domain default --description &#34;Swift Service Project&#34; swiftservice

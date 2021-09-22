@@ -43,12 +43,12 @@
     </item>
     
     <item>
-      <title>UNIX/ Linux 시스템 관리</title>
+      <title>예약변수와 환경변수</title>
       <link>https://mung0001.github.io/docs/development/shell/shell-4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell-4/</guid>
-      <description>Shell Programming    UNIX/ Linux 시스템 관리         #</description>
+      <description>Shell Programming    예약변수 및 환경변수     변수명 설명     HOME 사용자의 홈 디렉터리   PATH 실행 파일을 찾을 디렉터리 경로   FUNCNAME 현재 함수 이름   LANG 프로그램 사용 시 기본으로 지원되는 언어   PWD 사용자의 현재 작업 중인 디렉터리   TERM 로그인 터미널 타입   SHELL 로그인해서 사용하는 쉙   USER 사용자이름   USERNAME 사용자이름   GROUP 사용자 그룹(/etc/password 값을 출력)   DISPLAY X 디스플레이 이름   COLUMNS 현재 터미널이나 윈도우 터미널 컬럼 수   LINES 터미널 라인의 수   PS1 기본 프롬프트 변수   PS2 보조 프롬프트 변수(기본값:&amp;gt;), 명령을 &amp;ldquo;/&amp;ldquo;를 사용하여 명령 행 연장시 사용됨   PS3 쉘 스크립트에서 select 사용 시 프롬프트 변수   PS4 쉘 스크립트에서 디버깅 모드의 프롬프트 변수(기본값:+)   BASH BASH 실행 파일 경로   BASH_VERSION 설치된 BASH의 버전   BASH_ENV 스크립트 실행 시 BASH 시작 파일을 읽을 위치 변수   HISTFILE history 파일 경로   HISTFILESIE history 파일 크기   HISTSIZE history 파일 저장 수   HOSTNAME 호스트 이름   HOSTTYPE 시스템 하드웨어 종류   MACHTYPE 기기의 종류   MAIL mail 보관경로   LOGNAME 로그인 이름   TMOUT 0이면 제한, 없으면 time 시간 지정 시 그 시간 이후 로그아웃   SECONDS 스크립트가 실행된 초 단위 시간   UID 사용자 UID   OSTYPE OS의 종류           매개변수     매개변수 설명     $$ 현재 스클비트 또는 명령어의 PID   $?</description>
     </item>
     
     <item>
