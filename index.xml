@@ -295,12 +295,18 @@
     </item>
     
     <item>
-      <title>PC정비사 필기</title>
+      <title>PC 정비사 필기</title>
       <link>https://mung0001.github.io/docs/infra/pc/pc01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/infra/pc/pc01/</guid>
-      <description>PC정비사 필기    **** #</description>
+      <description>PC 정비사 필기정리    PC 운영체제  Operationg System    운영체제의 정의
+ 시스템의 각종 하드웨어 자원과 소프트웨어의 자원을 효과적으로 관리 운영하고, 사용자가 시스템을 편리하게 이용할 수 있도록 하는 시스템 소프트웨어를 의미        운영체제의 목적
+  1. 처리능력향상
+  2. 응답시간 단축
+  3. 사용 기능도 증대
+  4. 신뢰도 향상
+        운영체제의 종류</description>
     </item>
     
     <item>
