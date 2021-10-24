@@ -8,42 +8,6 @@
     <language>kr-ko</language>
     <lastBuildDate>Sat, 12 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://mung0001.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-05/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-05/</guid>
-      <description>****          ****            </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-06/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-06/</guid>
-      <description>****          ****            </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-07/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-07/</guid>
-      <description>****          ****            </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-08/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-08/</guid>
-      <description>****          ****            </description>
-    </item>
-    
-    <item>
       <title>1장 AWS의 핵심 서비스</title>
       <link>https://mung0001.github.io/docs/aws/awssaa/saa-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -532,15 +496,6 @@
   NOS(Network Opration System)
   네트워크 운용장비
         점수표    항목 문제 * 점수     다이렉트 케이블 제작 1 * 6.</description>
-    </item>
-    
-    <item>
-      <title>PC정비사 실기</title>
-      <link>https://mung0001.github.io/docs/infra/pc/pc02/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/infra/pc/pc02/</guid>
-      <description>PC정비사 실기    **** #</description>
     </item>
     
     <item>
