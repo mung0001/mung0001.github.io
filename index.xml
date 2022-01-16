@@ -5,8 +5,7 @@
     <link>https://mung0001.github.io/</link>
     <description>Recent content on 뭉게뭉게</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>kr-ko</language>
-    <lastBuildDate>Sat, 12 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://mung0001.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://mung0001.github.io/docs/infra/idc/idc01/</link>
@@ -23,19 +22,6 @@
       
       <guid>https://mung0001.github.io/docs/aws/awssaa/saa-1/</guid>
       <description>SAA 요약정리  정리를 들어가기 전 핵심요소  자격 시험의 합격과 실패는 현장에서의 실무 경험과 실습 중심의 학습, 시험에 필요한 세부적인 정보와 숫자를 얼마나 잘 기억하는지에 달려 있다. AWS SAA는 핵심 AWS 서비스 구성 요소와 운영은 물론 서비스 간의 상호작용 방식도 이해가 필요 기본적인 공부는 Amazon의 공식문서 및 여러 실습 경험을 필요로 한다.    AWS SAA 참고자료      시험영역 출제 비율     1.</description>
-    </item>
-    
-    <item>
-      <title>1주차</title>
-      <link>https://mung0001.github.io/docs/project/study/day1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/project/study/day1/</guid>
-      <description>Network    Network의 이해     Network ( 정보통신 )
-  Net(그물) + work(일하다)로 그물의 형태로 얽혀 임의의 일을 하는 행위를 의미
-  다수의 통신수단을 활용하여 정보의 송신자와 수신자가 통신 기술을 이용하여 서로 소통하는 그물망처럼 연결된 통신망으로, 근거리 혹은 원거리 통신을 제공하여 수신자와 송신자 사이에 데이터를 전송
-  네트워크과 인터넷의 차이는 인터넷은 네트워크의 망과 망 사이의 통신을 의미
-       정보통신의 주요 요소      주요요소 특징     송신자 ( Sender ) 정보를 생산하여 보내는 사람이나 장치, 컴퓨터, 노드   수신나 ( Receiver ) 정보를 받아서 처리하는 사람이나 장치, 컴퓨터, 노드   전송매체( Medium ) 송신자가 수신자에게 정보를 보낼 떄 사용하는 물리적 경로 및 수단   프로토콜( Protocol ) 다수의 송신자와 수신자 사이에서 정보통신을 원할하게 하기 위한 상호간의 규칙 혹은 약속       Network topology   네트워크는 그 목적과 형태에 따라 여러 가지 모양으로 설계 및 구축되는 데, 형태에 따른 다양한 설계 발법을 토폴로지 ( topology ) 라 칭함       분류 설명     Star 중앙에 있는 네트워크 장비를 통해 모두 연결된 형태, 중앙의 장비가 고장나면 모든 시스템들이 통신 불가 2계층, 스위치 장비를 통해 LAN 대역을 구성   Mash 모든 시스템들이 각각 개별적으로 연결됨, 비용이 많이 든다.</description>
     </item>
     
     <item>
@@ -268,21 +254,6 @@
     </item>
     
     <item>
-      <title>PC 정비사 필기</title>
-      <link>https://mung0001.github.io/docs/infra/pc/pc01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/infra/pc/pc01/</guid>
-      <description>PC 정비사 필기정리    PC 운영체제  Operationg System    운영체제의 정의
- 시스템의 각종 하드웨어 자원과 소프트웨어의 자원을 효과적으로 관리 운영하고, 사용자가 시스템을 편리하게 이용할 수 있도록 하는 시스템 소프트웨어를 의미        운영체제의 목적
-  1. 처리능력향상
-  2. 응답시간 단축
-  3. 사용 기능도 증대
-  4. 신뢰도 향상
-        운영체제의 종류</description>
-    </item>
-    
-    <item>
       <title>Prometheus</title>
       <link>https://mung0001.github.io/docs/monitoring/pc/m01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -379,19 +350,6 @@
       
       <guid>https://mung0001.github.io/docs/aws/awssaa/saa-2/</guid>
       <description>2장 Amazon Elastic Compute Cloud와 Amazon Elastic Block Store  2장의 목표  복원력은 갖춘 아키텍처 설계  안정적이고, 복원력을 갖춘 스토리지를 선택 어떻게 고가용성 및/ 또는 내결함성을 갖춘 아키텍처를 설계할지를 결정      성능이 뛰어난 아키텍처 정의  성능이 뛰어난 스토리지 및 데이터베이스를 선택 탄력성과 확장성을 갖춘 솔루션을 설계      안전한 애플리케이션 및 아키텍처 설명  어떻게 애플리케이션 티어를 보호할지를 결정 어떻게 데이터를 보호할지 결정   비용에 최적화된 아키텍처 설계  어떻게 비용에 최적화된 스토리지를 설계할지를 결정 어떻게 비용에 최적화된 컴퓨팅을 설계할지 결정       EC2 인스턴스    EC2는 물리 서버의 기능을 함축적으로 가상화한 실제 서버와 유사하게 작동</description>
-    </item>
-    
-    <item>
-      <title>2주차 3Tier</title>
-      <link>https://mung0001.github.io/docs/project/study/day2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/project/study/day2/</guid>
-      <description>3Tier 구현  사용도구     Vmware WorkStaton 16
-    GNS3
-       CentOS7
-    알테온 L4
-      아키텍처     종류 대수 네트워크     Web (Apache) 2EA    App (Tomcat) 2EA    DB (Mysql) 1EA    DB-Slave 1EA        3Tier 설정  Apache $ yum -y install httpd$ systemctl enable --now httpd$ firewall-cmd --permanent --add-service=http$ firewall-cmd --permanent --add-port=80/tcp$ firewall-cmd --reload$ setenforec 0$ yum install httpd-devel gcc gcc-c++ -y$ wget https://downloads.</description>
     </item>
     
     <item>
@@ -1210,16 +1168,6 @@
   기본적으로서버에 접속하기 이해서는 꼭 클라이언트 프로그램이 필요합니다.
   서버 OS Windows라고 클라이언트 OS도 반드시 Windows일 필요는 없으며, 즉 서버의 OS와 클라이어트의 OS가 같을 할 필요는 없습니다.
   Windows Server 2016부터는 내장된 TELNET 서버가 제거되어 직접 설치가 필요합니다.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/docs/network/mail/mail-server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/network/mail/mail-server/</guid>
-      <description>Mail 서버 생성   단계  SSL 보안 인증서 발급받기  도메인 주소   메일서버 설치   Ubuntu 18.04
-   SSL 보안 인증서 발급받기  1. 도메인 주소 설정  SSL 보안 인증서를 사용하기 위해서는 http://도메인으로 해당 사이트에 접근이 가능해아합니다. 이미 도메인 주소가 있으신 분은 그것을 사용하고, 없으신 분은 Link에서 무료 도메인을 사용하시면 됩니다.   2. SSL  무료 SSL을 생성합니다.  $ sudo apt-get install -y postfix # postfix 설치    VMware에 NAS 설치   Vmware에서 Custom으로 Virtual Machine을 설치합니다.</description>
     </item>
     
     <item>
@@ -2222,15 +2170,6 @@
     </item>
     
     <item>
-      <title>예제</title>
-      <link>https://mung0001.github.io/docs/project/study/day0/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/project/study/day0/</guid>
-      <description>****  </description>
-    </item>
-    
-    <item>
       <title>Naver Cloud professional Network, Database</title>
       <link>https://mung0001.github.io/docs/nc/ncptraining/ncp02/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2337,106 +2276,6 @@
     </item>
     
     <item>
-      <title>Linux Version 별 차이점</title>
-      <link>https://mung0001.github.io/posts/linuxvesion/</link>
-      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/posts/linuxvesion/</guid>
-      <description>Linux Version 별 차이점     보통 우리가 흔히 사용하는 CentOS, Ubuntu는 꾸준히 버전이 릴리즈되어 지고 있습니다.
-  그렇다면 릴리즈 별 바뀌는 요소가 무엇인지를 알아보도록 하겠습니다.
-     Ubuntu*      CentOS </description>
-    </item>
-    
-    <item>
-      <title>정보처리기사 합격후기</title>
-      <link>https://mung0001.github.io/posts/%EC%A0%95%EC%B2%98%EA%B8%B0/</link>
-      <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/posts/%EC%A0%95%EC%B2%98%EA%B8%B0/</guid>
-      <description>정보치리기사 시험합격 후기    정보처리기사 1, 2화 통합 필기   공부기간   약 3개월, 기존 1개월로 잡았으나 코로나로 시험이 반복적으로 미루어져서 공부를 하다말다 하다말다 했습니다.
-  전공자라면 1주일도 충분히 가능하고, 비전공자여도 한 달이면 충분히 가능하다 생각됩니다.
-       시험내용   기본적으로 시험범위가 상당히 넓어 초독에는 많은 시간이 필요하다 생각됩니다. 그렇기에 핵심키워드 위주로 공부하시고, 다독하시는 걸 추천드립니다.
-  개정 후의 시험은 개정전과 많이 다르다고 공시되어 있지만, 또 그렇게 다르지도 않다고 많이들 말씀하셨습니다.</description>
-    </item>
-    
-    <item>
-      <title>Lambda</title>
-      <link>https://mung0001.github.io/posts/lambda/</link>
-      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/posts/lambda/</guid>
-      <description>Lambda   Lambda는 기본적으로 AWS의 서비스 중 하나인 Lambda를 의미하며 일반적으로 서버리스 아키텍처로 사용됩니다.
-  여기서 서버리스 아키텍처란 실행을 위해 서버에 직접 접근하지 않는 새로운 종류의 소프트웨어 아키텍처를 의미합니다.
-  Lambda는 AWS 기반에서 자바스크립트, 파이썬, C#, 자바로 작성한 코드를 실행하는 컴퓨팅 서비스입로, 소스 코드는 압축되어 메모리, 디스크 공간과 CPU가 할당된 격리된 컨테이너에 배포됩니다.
-  그럼 본격적으로 Lambda에 대해 알아보도록 하겠습니다.
-     Server or Serverless   Server  상단의 그림은 기본적인 3 tier 애플리케이션의 구조입니다.</description>
-    </item>
-    
-    <item>
-      <title>Window 10 무설치 정품인증</title>
-      <link>https://mung0001.github.io/posts/window10/</link>
-      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/posts/window10/</guid>
-      <description>Window 10 무설치 정품인증    단순히 Window 10의 명령프롬프트를 사용하여 간단하게 윈도우 인증을 완료하는 방법을 알려드리겠습니다.    명령프롬프트를 사용한 정품인증   먼저 검색 or 실행 ( Window 키 + R )에서 dxdiag 또는 winver를 검색 후, 운영체제의 버전을 확인해주세요. 위의 그림은 winver를 통해 확인한 모습입니다.      다음으로는 인증 키의 설정을 위해 위의 그림과 같이 명령 프롬프트를 관리자 권한으로 실행합니다.      아래의 명령어를 입력해주세요.</description>
-    </item>
-    
-    <item>
-      <title>클라우드란? (CloudComputing)</title>
-      <link>https://mung0001.github.io/posts/cloud/</link>
-      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/posts/cloud/</guid>
-      <description>클라우드란?   클라우드 (Cloud)    클라우드의 영어 ‘Cloud’는 우리가 흔히 알고 있는 &amp;lsquo;구름’을 뜻합니다. 컴퓨터 파일을 저장할 때 작업한 컴퓨터 내부에 있는 공간이 아니라 인터넷을 통하여 중앙 컴퓨터에 저장할 수 있는 데 이 공간을 클라우드라 합나다.
-  즉, 클라우드를 정의하기는 모호한 면이 있지만, 기본적으로 각각 고유한 기능을 가진 서버의 글로벌 네트워크를 설명하는 데 사용되는 용어입니다.
-  클라우드는 실제 엔터티가 아니지만 함께 연결되어 하나의 에코시스템으로 작동하게 되어 있는 ​전 세계에 분산된 원격 서버의 광대한 네트워크로, 이러한 서버는 데이터의 저장 및 관리, 애플리케이션 실행 또는 스트리밍 비디오, 웹 메일, 오피스 생산성 소프트웨어 또는 소셜 미디어와 같은 미디어와 같은 콘텐츠 또는 서비스를 제공하도록 설계되어 있습니다.</description>
-    </item>
-    
-    <item>
-      <title>퍼블릭 클라우드 ( Public Cloud )</title>
-      <link>https://mung0001.github.io/posts/publiccloud/</link>
-      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/posts/publiccloud/</guid>
-      <description>퍼블릭 클라우드 ( Public Cloud )     클라우드는 그 서비스 형태에 따라 퍼블릭( Public Cloud ), 하이브리드 클라우드 (Hybrid Cloud ), 프라이빗 클라우드 ( Pivate Cloud ), 커뮤니티( Community Cloud )로 나뉘어저 있습니다.
-  이번에는 그 중 퍼블릭 클라우드 ( Public Cloud )에 대해 알아보겠습니다.
-  퍼블릭 클라우드( Publci Cloud )란 외부 클라우드 사업자가 제공하는 서비스를 통해 클라우드를 이용하는 것으로, 우리가 가장 흔히 접할 수 있는 서비스 형태입니다.</description>
-    </item>
-    
-    <item>
-      <title>프라이빗 클라우드 (Private Cloud)</title>
-      <link>https://mung0001.github.io/posts/privatecloud/</link>
-      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/posts/privatecloud/</guid>
-      <description>프라이빗 클라우드 (Private Cloud)     클라우드는 그 서비스 형태에 따라 퍼블릭( Public Cloud ), 하이브리드 클라우드 (Hybrid Cloud ), 프라이빗 클라우드 ( Pivate Cloud ), 커뮤니티( Community Cloud )로 나뉘어저 있습니다.
-  이번에는 그 중 프라이빗 클라우드 ( Private Cloud )에 대해 알아보겠습니다.
-  프라이빗 클라우드란 기업이 직접 클라우드 환경을 구축하고 이를 기업 내부에서 활용하거나 또는 계열사에 공개하는 것을 뜻합니다.
-     프라이빗 클라우드의 개념   프라이빗 클라우드의 개념     외부 클라우드 사업자의서비스를 이용하지 않고 서비스를 위한 인프라를 직접 구축한다는 점에서 프라이빗 클라우드는 자체 인프라 구축과 동일하다고 할 수 있습니다.</description>
-    </item>
-    
-    <item>
-      <title>하이브리드 클라우드 ( Hybrid Cloud )</title>
-      <link>https://mung0001.github.io/posts/hybridcloud/</link>
-      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/posts/hybridcloud/</guid>
-      <description>하이브리드 클라우드 ( Hybrid Cloud )     클라우드는 그 서비스 형태에 따라 퍼블릭( Public Cloud ), 하이브리드 클라우드 (Hybrid Cloud ), 프라이빗 클라우드 ( Pivate Cloud ), 커뮤니티( Community Cloud )로 나뉘어저 있습니다.
-  이번에는 그 중 하이브리드 클라우드 ( Hybrid Cloud )에 대해 알아보겠습니다.
-  하이브리드 클라우드는 퍼블릭 클라우드( Public Cloud )와 프라이빗 클라우드 ( Pivate Cloud )를 결합하여 데이터와 애플리케이션을 공유할 수 있는 컴퓨팅 환경으로, 하이브리드 컴퓨팅은 컴퓨팅 및 처리 요구가 변동될 때 타사 데이터 센터에서 데이터 전체에 엑세스하지 않고도 온-프레미스 공용 클라우드로 원할하게 확장하여 오버플로를 처리할 수 있는 기능을 기업에게 제공하는 것을 뜻합니다.</description>
-    </item>
-    
-    <item>
-      <title>테스트</title>
-      <link>https://mung0001.github.io/posts/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/posts/goisforlovers/</guid>
-      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.</description>
-    </item>
-    
-    <item>
       <title></title>
       <link>https://mung0001.github.io/docs/development/git/hugo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2470,15 +2309,6 @@ This document is a brief primer on using Go templates.</description>
       <guid>https://mung0001.github.io/hidden/</guid>
       <description>This page is hidden in menu Quondam non pater est dignior ille Eurotas Latent te facies Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
  Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor  Cum honorum Latona O fallor in sustinui iussorum equidem.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mung0001.github.io/posts/base/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/posts/base/</guid>
-      <description>****          **** </description>
     </item>
     
   </channel>
