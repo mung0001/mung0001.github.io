@@ -26,11 +26,9 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/docker/docker/</loc>
+    <loc>https://mung0001.github.io/docs/docker/docker/docker-1/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/docker/docker/docker/docker-1/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-01/</loc>
+    <loc>https://mung0001.github.io/docs/docker/dockertraining/infradocker-01/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/gcp/googlecloudplatform/</loc>
   </url><url>
@@ -102,9 +100,9 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/aws/awstraining/iam/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-02/</loc>
+    <loc>https://mung0001.github.io/docs/docker/dockertraining/infradocker-02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/docker/docker/docker/docker-2/</loc>
+    <loc>https://mung0001.github.io/docs/docker/docker/docker-2/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/macos/macos02/</loc>
   </url><url>
@@ -140,9 +138,9 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/development/web/django/test/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/docker/docker/docker/docker-3/</loc>
+    <loc>https://mung0001.github.io/docs/docker/docker/docker-3/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-03/</loc>
+    <loc>https://mung0001.github.io/docs/docker/dockertraining/infradocker-03/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/glance/</loc>
   </url><url>
@@ -166,9 +164,9 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/aws/awstraining/vpc/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/docker/docker/dockertraining/infradocker-04/</loc>
+    <loc>https://mung0001.github.io/docs/docker/dockertraining/infradocker-04/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/docker/docker/docker/docker-4/</loc>
+    <loc>https://mung0001.github.io/docs/docker/docker/docker-4/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/gcp/</loc>
   </url><url>
@@ -190,7 +188,7 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/aws/amazonwebservice/aws_migrate/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/docker/docker/docker/docker-5/</loc>
+    <loc>https://mung0001.github.io/docs/docker/docker/docker-5/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/gcp/gcptraining/</loc>
   </url><url>
@@ -220,7 +218,7 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/cinder/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/docker/docker/docker/docker-6/</loc>
+    <loc>https://mung0001.github.io/docs/docker/docker/docker-6/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/nc/ncptraining/nca06/</loc>
   </url><url>
@@ -236,7 +234,7 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/ceilometer/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/docker/docker/docker/docker-7/</loc>
+    <loc>https://mung0001.github.io/docs/docker/docker/docker-7/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/infra/infra/infra07/</loc>
   </url><url>
@@ -282,6 +280,8 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure00/</loc>
   </url><url>
+    <loc>https://mung0001.github.io/docs/docker/</loc>
+  </url><url>
     <loc>https://mung0001.github.io/docs/network/network/gns3/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/development/web/html/</loc>
@@ -291,8 +291,6 @@
     <loc>https://mung0001.github.io/docs/nc/ncptraining/nca10/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/openstack/openstack/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/docker/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/database/sqld/sqld-0/</loc>
   </url><url>
@@ -336,7 +334,7 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window14/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/docker/docker/docker/</loc>
+    <loc>https://mung0001.github.io/docs/docker/docker/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/aws/awssaa/saa-15/</loc>
   </url><url>
@@ -346,7 +344,7 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window15/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/docker/docker/dockertraining/</loc>
+    <loc>https://mung0001.github.io/docs/docker/dockertraining/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/infra/</loc>
   </url><url>
