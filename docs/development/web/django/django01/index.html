@@ -21,7 +21,7 @@
 <title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.63eb88daa545365405ecdbb21033286a325c60a36cfa6d22d21e7c3bc9286941.css" integrity="sha256-Y&#43;uI2qVFNlQF7NuyEDMoajJcYKNs&#43;m0i0h58O8koaUE=">
-<script defer src="/en.search.min.5accbf1501456809bad5e2743ce5b9b53984186c7499c0e4a139e8758f283372.js" integrity="sha256-Wsy/FQFFaAm61eJ0POW5tTmEGGx0mcDkoTnodY8oM3I="></script>
+<script defer src="/en.search.min.d939a4c880988f61d0a261a6524d59d5c06316775af1debd2a2c34842bebb290.js" integrity="sha256-2TmkyICYj2HQomGmUk1Z1cBjFnda8d69Kiw0hCvrspA="></script>
 <!--
 
 -->
@@ -1455,6 +1455,100 @@ INSTALLED_APPS <span style="color:#f92672">=</span> [
 <span style="color:#960050;background-color:#1e0010">$</span> python manage<span style="color:#f92672">.</span>py migrate polls
 <span style="color:#75715e"># 생선한 DB에 테이블을 생성하고 초기화</span>
 </code></pre></div><h1 id="heading-7"></h1>
+<p> </p>
+<h1 id="heading-8"></h1>
+<ul>
+<li><strong>Model에 함수 추가하기</strong></li>
+</ul>
+<h1 id="heading-9"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> vi polls<span style="color:#f92672">/</span>models<span style="color:#f92672">.</span>py
+<span style="color:#f92672">from</span> django.db <span style="color:#f92672">import</span> models
+<span style="color:#f92672">from</span> django.utils <span style="color:#f92672">import</span> timezone
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question</span>(models<span style="color:#f92672">.</span>Model) :
+    question_text <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+    pub_date <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>DateTimeField(<span style="color:#e6db74">&#39;date published&#39;</span>)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">was_published_recently</span>(self) :
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>pub_date <span style="color:#f92672">&gt;=</span> timezone<span style="color:#f92672">.</span>now() <span style="color:#f92672">-</span> datetime<span style="color:#f92672">.</span>timedelta(days<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Choice</span>(models<span style="color:#f92672">.</span>Model) :
+    question <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(Question, on_delete<span style="color:#f92672">=</span>models<span style="color:#f92672">.</span>CASCADE)
+    choice_text <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+    votes <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField(default<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+    <span style="color:#66d9ef">def</span> __str__(self) :
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>choice_text
+
+
+<span style="color:#960050;background-color:#1e0010">$</span> vi polls<span style="color:#f92672">/</span>admin<span style="color:#f92672">.</span>py
+<span style="color:#f92672">from</span> django.contrib <span style="color:#f92672">import</span> admin
+<span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Question
+
+admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span>register(Question)
+<span style="color:#75715e"># 관리자 페이지에서 확인을 위해 해당 파일을 수정</span>
+<span style="color:#75715e"># 생성된 Questions에서 데이터를 생성</span>
+</code></pre></div><h1 id="heading-10"></h1>
+<p> </p>
+<h1 id="heading-11"></h1>
+<ul>
+<li><strong>여러 View 생성</strong></li>
+</ul>
+<h1 id="heading-12"></h1>
+<ul>
+<li><strong>생성할 View 목록</strong>
+<ul>
+<li><strong>투표 목록 : 등록된 투표의 목록을 표시하고 상세 페이지로 이동하는 링크제공</strong></li>
+<li><strong>투표 상세 : 투표의 상세 항목을 보여줌</strong></li>
+<li><strong>투표 기능 : 선택한 답변을 반영</strong></li>
+<li><strong>투표 결과 : 선택한 답변을 반영 한 후 결과를 출력</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-13"></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> vi polls<span style="color:#f92672">/</span>views<span style="color:#f92672">.</span>py
+<span style="color:#f92672">from</span> django.http <span style="color:#f92672">import</span> HttpResponse 
+<span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Question
+<span style="color:#f92672">from</span> django.template <span style="color:#f92672">import</span> loader
+<span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> render
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>(request) :
+    latest_question_list <span style="color:#f92672">=</span> Question<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>order_by(<span style="color:#e6db74">&#39;-pub_date&#39;</span>)[:<span style="color:#ae81ff">5</span>]
+    context <span style="color:#f92672">=</span> { <span style="color:#e6db74">&#39;latest_question_list&#39;</span> : latest_question_list }
+    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;polls/index.html&#39;</span>, context)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">detail</span>(request, question_id) :
+    <span style="color:#66d9ef">return</span> HttpResponse(<span style="color:#e6db74">&#34;You`re looking at question $s.&#34;</span> <span style="color:#f92672">%</span> question_id)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">results</span>(request, question_id) :
+    response <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;You`re looking at the results of question $s.&#34;</span>
+    <span style="color:#66d9ef">return</span> HttpResponse(response <span style="color:#f92672">%</span> question_id)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">vote</span>(request, question_id) :
+    <span style="color:#66d9ef">return</span> HttpResponse(<span style="color:#e6db74">&#34;You`re voting on question </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> question_id)
+
+<span style="color:#960050;background-color:#1e0010">$</span> vi polls<span style="color:#f92672">/</span>urls<span style="color:#f92672">.</span>py
+<span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> path
+<span style="color:#f92672">from</span> . <span style="color:#f92672">import</span> views
+
+urlpatterns <span style="color:#f92672">=</span> [
+    <span style="color:#75715e"># ex : /polls/</span>
+    path(<span style="color:#e6db74">&#39;&#39;</span>, views<span style="color:#f92672">.</span>index, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;index&#39;</span>),   
+
+    <span style="color:#75715e"># ex : /polls/5/</span>
+    path(<span style="color:#e6db74">&#39;&lt;int:question_id&gt;/&#39;</span>, views<span style="color:#f92672">.</span>detail, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;detail&#39;</span>),
+
+    <span style="color:#75715e"># ex : /polls/5/results/</span>
+    path(<span style="color:#e6db74">&#39;&lt;int:question_id&gt;/results/&#39;</span>, views<span style="color:#f92672">.</span>results, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;results&#39;</span>),
+
+    <span style="color:#75715e"># ex : /polls/5/vote/</span>
+    path(<span style="color:#e6db74">&#39;&lt;int:question_id&gt;/vote/&#39;</span>, views<span style="color:#f92672">.</span>vote, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;vote&#39;</span>),
+]
+<span style="color:#75715e"># &lt;&gt; 괄호는 변수를 의미 해당 부분에 해당하는 값을 인자로 전달</span>
+
+<span style="color:#960050;background-color:#1e0010">$</span> mkdir polls<span style="color:#f92672">/</span>templates
+<span style="color:#960050;background-color:#1e0010">$</span> vi polls<span style="color:#f92672">/</span>templates<span style="color:#f92672">/</span>index<span style="color:#f92672">.</span>html
+
+</code></pre></div><h1 id="heading-14"></h1>
 <p> </p>
 </article>
  
