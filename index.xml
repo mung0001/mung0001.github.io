@@ -16,6 +16,15 @@
     </item>
     
     <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/system/system/system00/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/system/system00/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>1장 AWS의 핵심 서비스</title>
       <link>https://mung0001.github.io/docs/aws/awssaa/saa-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -251,6 +260,20 @@
   IaaS(Infrastrcture as a Service): 서버, 스토리지, 네트워크를 가상화 환경으로 만 들어 필요에 따라 인프라 자원을 제공하는 서비스
   PaaS(Platform as a Service): 웹에서 개발 플랫폼을 제공하는 서비스
   SaaS(Software as a Service): 온디맨드 소프트웨어(On-demand Software)라고도 하며, 중앙에서 호스팅 되는 소프트웨어를 웹 브라우저 등 클라우이언트로 이용하는 서비스</description>
+    </item>
+    
+    <item>
+      <title>OS Structures</title>
+      <link>https://mung0001.github.io/docs/system/system/system01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/system/system01/</guid>
+      <description>Operation System Structures   컴퓨터의 정보 처리방식    정보의 최소 단위 &amp;quot; bit(binary digit)
+  정보의 처리 : 정보의 상태 변환 ( 0 -&amp;gt; 1, 1 -&amp;gt; 0 )
+  부울 대수 (Boolean Algebra) : NOT, AND, OR
+  논리 게이트 : NOT, AND, OR, XOR, NAND, NOR
+  논리회로 : IC, LSL, VLSI, ULSI, SoC&amp;hellip;
+  정보의 저랑 플립-플롭, 데이터 버스, RF 등</description>
     </item>
     
     <item>
@@ -1591,6 +1614,15 @@
   설치의 단순화
   회사 전체에 통일되고 일관적인 작업 환경을 제공
        WDS의 장점</description>
+    </item>
+    
+    <item>
+      <title>aws SAA 총정리</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa_all/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa_all/</guid>
+      <description>aws 총정리   Global service = can`t choose a region  IAN   IAM (Identity and Access Management, Global service)  root account create by default, shouldn`t be used or shared Users are people within your organization, and can be grouped Group only contain users, not other groups -&amp;gt; Group can`t contain other group Users don`t have to belong to a group, and usre can belong to multiple groups User or Groups can be assigned JSON documents called polcies  These polices define the permissions of the users In AWS you apply the least privilege principle: don`t give more permissions than a user needs         IAM Policies inheritance   consists of</description>
     </item>
     
     <item>

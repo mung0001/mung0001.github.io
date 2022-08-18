@@ -89,5 +89,14 @@
       <description>15장 기출문제   답들은 정확하지 않습니다. 공부하시면서 찾아보셔야 합니다.  질문 1-100  질문 question 회사에 산발적인 사용 패턴이 있는 웹 응용 프로그램이 있습니다. 매월 초에는 사용량이 많고 매주 초에는 사용량이 보통이며 주중에는 사용량이 예측할 수 없습니다. 애플리케이션은 웹 서버와 내부에서 실행되는 MySQL 데이터베이스 서버로 구성됩니다. 데이터 센터. 이 회사는 애플리케이션을 AWS 클라우드로 옮기고자 하며 데이터베이스 수정이 필요하지 않은 비용 효율적인 데이터베이스 플랫폼을 선택해야 합니다. 어떤 솔루션이 이러한 요구 사항을 충족합니까?</description>
     </item>
     
+    <item>
+      <title>aws SAA 총정리</title>
+      <link>https://mung0001.github.io/docs/aws/awssaa/saa_all/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/aws/awssaa/saa_all/</guid>
+      <description>aws 총정리   Global service = can`t choose a region  IAN   IAM (Identity and Access Management, Global service)  root account create by default, shouldn`t be used or shared Users are people within your organization, and can be grouped Group only contain users, not other groups -&amp;gt; Group can`t contain other group Users don`t have to belong to a group, and usre can belong to multiple groups User or Groups can be assigned JSON documents called polcies  These polices define the permissions of the users In AWS you apply the least privilege principle: don`t give more permissions than a user needs         IAM Policies inheritance   consists of</description>
+    </item>
+    
   </channel>
 </rss>

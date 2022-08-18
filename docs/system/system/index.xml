@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OS on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/docs/system/system/</link>
+    <description>Recent content in OS on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/docs/system/system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://mung0001.github.io/docs/system/system/system00/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/system/system00/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OS Structures</title>
+      <link>https://mung0001.github.io/docs/system/system/system01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/system/system01/</guid>
+      <description>Operation System Structures   컴퓨터의 정보 처리방식    정보의 최소 단위 &amp;quot; bit(binary digit)
+  정보의 처리 : 정보의 상태 변환 ( 0 -&amp;gt; 1, 1 -&amp;gt; 0 )
+  부울 대수 (Boolean Algebra) : NOT, AND, OR
+  논리 게이트 : NOT, AND, OR, XOR, NAND, NOR
+  논리회로 : IC, LSL, VLSI, ULSI, SoC&amp;hellip;
+  정보의 저랑 플립-플롭, 데이터 버스, RF 등</description>
+    </item>
+    
+  </channel>
+</rss>
