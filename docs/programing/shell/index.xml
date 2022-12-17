@@ -1,309 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Shell Script on 뭉게뭉게</title>
-    <link>https://mung0001.github.io/docs/programing/shell/</link>
-    <description>Recent content in Shell Script on 뭉게뭉게</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>kr-ko</language>
-    
-	<atom:link href="https://mung0001.github.io/docs/programing/shell/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Shell Script란?</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell-1/</guid>
-      <description>Shell Programming    Shell Script의 개요   UNIX/ Linux 소개 및 특징   UNIX   1969년 AT&amp;amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다
-  벨연구소는 대학과 연구기관에 UNIX를 활용할 수 있도록 라이선스를 제공하였으며, 버클리 대학교에서는 UNIX에 네트워크 프로토콜인 TCP/IP 등 다양한 기능을 보강하여 BSD 배포본을 제작하고 이후 파생되는 많은 UNIX에 영향을 끼쳤다.</description>
-    </item>
-    
-    <item>
-      <title>UNIX/ Linux 개념과 명령어</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell-2/</guid>
-      <description>Shell Programming  UNIX/ Linux 기본 명령어와 개념  Redirection &amp;amp; Pipes  $ &amp;lt;File Descriptor&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;Redirection&amp;gt;$ &amp;lt;File Descriptor&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;Redirection&amp;gt; &amp;lt;Pipe&amp;gt; &amp;lt;File Descriptor&amp;gt; ...ex) $ cat /log/var/message | grep ERR# cat = &amp;lt;File Descripotr&amp;gt;# /log/var/message = &amp;lt;PATH&amp;gt;# | = &amp;lt;Redirection&amp;gt;  File Descriptor   Process가 File이나 Device를 access 하기 위해 사용
-  Standard File Descriptor
-  stdin(standard input) : 표준 입력 (예시 : 키보드)</description>
-    </item>
-    
-    <item>
-      <title>Shell Script 문법</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell-3/</guid>
-      <description>Shell Programming    Shell 문법  Shell 변수    Shell 에서 변수는 사용할 때 선언
-  변수에 초기 값을 대입할 때 변수를 만들게 된다.
-  모든 변수는 문자열로 간주
-  숫자 값을 가지는 경우에도 문자열로 간주
-  변수는 대소문자가 구별 (Linux 시스템의 특성)
-  변수에 값이 부여될 때를 제외하고, 변수를 사용할 경우 변수 앞에 &amp;lsquo;$&#39;의 표시를 붙여야 한다.
-  변수에 부여된 값은 echo 명령을 통해 확인 가능</description>
-    </item>
-    
-    <item>
-      <title>UNIX/ Linux 시스템 관리</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell-4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell-4/</guid>
-      <description>Shell Programming    UNIX/ Linux 시스템 관리         #</description>
-    </item>
-    
-    <item>
-      <title>Shell Script System Management</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell-5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell-5/</guid>
-      <description>Shell Programming    Shell System Management         #</description>
-    </item>
-    
-    <item>
-      <title>Shell Script System Security</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell-6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell-6/</guid>
-      <description>Shell Programming    Shell Script System Security         #</description>
-    </item>
-    
-    <item>
-      <title>Shell Customizing</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell-7/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell-7/</guid>
-      <description>Shell Programming    Customizing         #</description>
-    </item>
-    
-    <item>
-      <title>Shell Basics</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell01/</guid>
-      <description>Shell Programming    Shell Basics    Shell의 기본적인 역할은 사용자에게 명령을 입력받아 시행하는 것입니다.
-  Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제공하므로 실제 명령이 실행되기 전에 Shell에 의해 해석 단계를 거치게 됩니다.
-     파일명    Shell에서 제일 처음이자 중요한 개념 중 하나가 파일명입니다.
-  파일명은 곧 명령을 실행할 때 사용되는 이름과 같으며, 리눅스에서 사용하고 있는 파일시스템에서는 파일 이름을 NUL, / 두 문자를 제외하고 전부 허용한다고 합니다.</description>
-    </item>
-    
-    <item>
-      <title>Quotes</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell02/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell02/</guid>
-      <description>Shell Programming    Quotes    Shell 중요한 핵심 개념 중 하나는 quotes라 할 수 있습니다.
-  shell에서 quotes는 숫자나 스트링 값을 구분하기 위한 용도로는 사용하지 않습니다.
-  1234, &amp;ldquo;123&amp;rdquo;, &amp;lsquo;123&#39;은 모두 동일하며, abc, &amp;ldquo;abc&amp;rdquo;, &amp;lsquo;abc&amp;rsquo; 또한 차이가 없고 모두 스트링 문자열입니다.
-  Shell 에서 quotes는 다음과 같은 용도로 사용됩니다.
-  공백으로 분리되어 여러 개의 스트링을 하나의 인수로 만들 때(sed, awk 스크립트를 quotes을 이용해 작성하는 이유가 하나의 인수로 만들기 위해서입니다.</description>
-    </item>
-    
-    <item>
-      <title>Variables</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell03/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell03/</guid>
-      <description>Shell Programming    Variables    변수 이름은 알파벳 (대, 소문자, 숫자, _)로 만들 수 있으며 이름의 첫 문자로 숫자가 올 수는 없다.
-  변수이름을 대문자로 사용할 때는 Shell 환경변수와 증복되지 않도록 주의해야 하며, 생성한 변수는 subshell이나 source한 스크립트 내에서 별다른 설정 없이 사용할 수 있으나 child process에서도 사용하려면 export를 수행해야 한다.
-  Myfile=MyfileFIRE_PREFIX=$Myfile.splitFIRE_PREFIX=$Myfile_._split# &amp;#39;.&amp;#39; or &amp;#39;_&amp;#39;은 변수 이름을 구성하는 데 사용되지 않으므로 위와 같이 사용이 가능# 결과적으로 FILE_PREFIX 변수 값은 &amp;#39;myfile.</description>
-    </item>
-    
-    <item>
-      <title>Fucnctions</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell04/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell04/</guid>
-      <description>Shell Programming    Functions    {;}, ()를 이용해 명령 그룹을 만들게 되면 같은 context에서 실행이 된다. 이것은 명령 그룹전체가 하나의 명령처럼 실행되는 것과 같은 효과가 있다.
-  앞에 함수명을 붙여서 함수정의를 하게 되면 일반 명령과 동일하게 사용될 수 있다.
-  {;}은 현재 shell에서 ()는 subshell에서 실행되므로 보통 함수를 정의할 때 {;}을 사용하지만 필요하다면 ()을 사용할 수도 있다.
-  $ echo hello world | read var; echo &amp;#34;$var&amp;#34;# 파이프로 인해 subshell에서 실행되어 &amp;#34;$var&amp;#34;는 값이 표시되지 않는다.</description>
-    </item>
-    
-    <item>
-      <title>Exit Status</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell05/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell05/</guid>
-      <description>Shell Programming    Exit Status    터미널에서 명령을 단계적으로 실행해서 작업을 완성할 때는 여태까지 실행한 명령들이 모두 정상적으로 완료되었기 때문이다.
-  만약 특정 과정에서 오류가 발생했는지, 정상적으로 완료되었는 지를 확인해야하는 데, 이를 판단할 수 있는 방법이 종료 상태 값을 확인하는 방법으로, 실제 shell에서의 핵심 개념중 하나가 종료 상태 값(Exit status)이다.
-  Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반환하며, if while until &amp;amp;&amp;amp; || 모두 종료 상태 값을 사용해서 참, 거짓을 판단한다.</description>
-    </item>
-    
-    <item>
-      <title>Interactive</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell06/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell06/</guid>
-      <description>Shell Programming    Interactive    Shell이 실행되는 환경은 두가지로 사용자로부터 프로프트를 통해 직접 명령을 입력받아 실행시키는 interactive shell과 script 파일을 실행하는 것과 같은 non-interacgtive shell이 있다.
-  alais, job control과 같은 기능은 기본적으로 interactive shell에서 사용하기 위한 것으로 script를 실행할 때는 disable 된다.
-  case $- in*i*) echo interactive shell ;;*) echo non-interactive shell ;;esac# $- 변수는 set 명령에 의해 설정되어 있는 option flage를 담고 있다.</description>
-    </item>
-    
-    <item>
-      <title>etc</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell07/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell07/</guid>
-      <description>Shell Programming    etc  /proc    proc 디렉토리는 현재 시스템에서 실행되는 프로세스들에 대한 정보를 제공하기 위해 OS에서 제공하는 가상의 파일 시스템으로, 실제 파일 시스템이 존재하는 것이 아니다.
-  커널이 가지고 있는 정보는 사용자 프로그램에서 직접 접근할 수가 없으므로 system call을 통해 제공하는 방법도 생각해 볼 수 있겠으나 프로스세그 가지는 자료구조를 생각할 때 사용자가 쉽게 사용할 수 있도록 메모리상에 가상의 파일 시스템을 만들어 구조적으로 제공하는 역할을 수행한다.</description>
-    </item>
-    
-    <item>
-      <title>Commands</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell08/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell08/</guid>
-      <description>Shell Programming    Commands  외부명령   /usr/bin/find 명령과 같이 시스템 디렉토리에 위치한 명령드롤, 여기에는 ELF 바이너리 실행파일뿐만 아닌, shell 스크립트, perl 스크립트, python 스크립트와 같은 텍스트 실행파일도 다수 포함되어 있으며 GNU coreutils 패키지에는 textutils, shelutils, fileutils 명령들이 포함되어 있다.  $ file /bin/* /usr/bin/* | grep -ic &amp;#34;text executable&amp;#34;643$ file /bin/* /usr/bin/* | grep -ic &amp;#34;shell script&amp;#34;129$ file /bin/* /usr/bin/* | grep -ic &amp;#34;python[0-9.</description>
-    </item>
-    
-    <item>
-      <title>Bourne Shell Builtins</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell09/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell09/</guid>
-      <description>Shell Programming    Functions  </description>
-    </item>
-    
-    <item>
-      <title>Bourne Shell Builtins</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell10/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell10/</guid>
-      <description>Shell Programming    Functions  </description>
-    </item>
-    
-    <item>
-      <title>Bourne Shell Builtins</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell11/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell11/</guid>
-      <description>Shell Programming    Functions  </description>
-    </item>
-    
-    <item>
-      <title>Bourne Shell Builtins</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell12/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell12/</guid>
-      <description>Shell Programming    Bourne Shell Builtins   Shell은 내부에 bultin 되어 제공되는 명령들로 외부에 파일로 존재하지 않으므로 sudo, env, find의 -exec 등으로 실행할 수 없고 shell 환경에서만 사용할 수 있다.     . (dot)    .은 as 어셈블러나 ld 링커에서 현재 위치를 나타내는 데 사용되며, shell 에서는 현재 위치에 filename, include 하는데 사용된다.
-  bash 에서는 동일한 기능의 source 명령을 추가로 제공하며, 가령 AA.</description>
-    </item>
-    
-    <item>
-      <title>Bourne Shell Builtins</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell13/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell13/</guid>
-      <description>Shell Programming    Functions  </description>
-    </item>
-    
-    <item>
-      <title>Bourne Shell Builtins</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell16/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell16/</guid>
-      <description>Shell Programming    Functions  </description>
-    </item>
-    
-    <item>
-      <title>Bourne Shell Builtins</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell17/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell17/</guid>
-      <description>Shell Programming    Functions  </description>
-    </item>
-    
-    <item>
-      <title>Bourne Shell Builtins</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell18/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell18/</guid>
-      <description>Shell Programming    Functions  </description>
-    </item>
-    
-    <item>
-      <title>Bourne Shell Builtins</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell19/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell19/</guid>
-      <description>Shell Programming    Bourne Shell Builtins  </description>
-    </item>
-    
-    <item>
-      <title>Test 연산자</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell14/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell14/</guid>
-      <description>Shell Programming    Test  Test    Shell에는 기본적으로 숫자와 스트링을 구분하는 데이터 타입이 존재하지 않으며, 사칙연산을 위한 연산자도 없다.
-  즉, 이를 위해 명령문 상의 모든 문자는 스트링이며 산술연산은 별도의 확장이나 명령을 통해서 제공되고, 기본적으로 명령문에 사용되는 문자는 모두 스트링이다.
-  int main(int argc, char **argv)# 명령행의 인수를 스트링으로 받는 C 프로그램의 main 함수public statis void main(String[] args)# 명령행의 인수를 스트링으로 받는 java 프로그램의 main 함수  즉 Shell에서의 32의 값은 다른 언어와 다르게 &amp;ldquo;32&amp;quot;와 32 간의 차이가 존재하지 않으며 둘다 같은 값을 의미한다.</description>
-    </item>
-    
-    <item>
-      <title>SubShells</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell15/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell15/</guid>
-      <description>Shell Programming    SubShells    Shell에서 명령을 실행하면 새로운 프로세스가 생성되어 실행되며, 이 때 명령을 호출한 process가 parent가 되고 새로 실행되는 명령이 child process가 된다.
-  다음은 프롬프트 상에서 /bin/sleep외부 명령을 실행한 예이며 현재 bash shell process 아래서 sleep 명령의 child process가 시행되는 것이 확인 가능하다.
-  프롬프트에서는 bash child process가 하나 더 생성된 후에 다른 명령이 실행 되는 것을 확인 할 수 있으며 ( ) $( ) \` | &amp;amp;`을 이용하여 명령을 실행시킬 때 생성되는 shell을 subshell이라고 한다.</description>
-    </item>
-    
-    <item>
-      <title>awk</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell80/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell80/</guid>
-      <description>Shell Programming    awk    AWK명령어는 Aho + Weinberger + Kernighan이 조합된 이름으로, awk는 파일로부터 레코드(record)를 선택하고, 선택된 레코드에 포함된 값을 조작하거나 데이터화하는 것을 목적으로 하는 프로그램을 의미한다.
-  awk 명령의 입력으로 지정된 파일로부터 데이터를 분류한 다음, 분류된 텍스트 데이터를 바탕으로 패턴 매칭 여부를 검사하거나 데이터 조작 및연산 등의 액션을 수행하고, 그 결과를 출력하는 기능을 수행한다.
-  awk는 awk programming language라는 프로그래밍 언어로 작성된 프로그램을 실행하며, 리눅스에서 쉘 스크립트로 작성된 파일이 리눅스 쉘에 실행되는 것을 떠올리면 awk가 awk programming language 문법으로 작성된 코드를 실행한다는 이 동일한 맥락이라 볼 수 있다.</description>
-    </item>
-    
-    <item>
-      <title>sed</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell90/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell90/</guid>
-      <description>Shell Programming    SED   SED는 Stremlined editor를 의미하며, 해석하면 능률적인 편집기라는 의미     패턴 스페이스(Pattern space)와 홀드스페이스(Hold space)   sed 명령어는 동작시 내부적으로 두개 의 워크스페이스를 사용하는 데, 이 두 버퍼를 패턴 스페이스와 홀드 스페이스라고 한다.     패턴 버퍼
- 패턴 버퍼는 sed가 파일으 ㄹ라인단위로 읽을 때 그 읽힌 라인이 저장되는 임시 공간이며, 우리가 sed 명령어로 출력하라 하면 여기있는 버퍼 내용을 출력하는 것이고, 조작을 하면 저장되어 있는 내용을 조작하는 것으로, 원본을 건드는 설저잉 아닌, 현재 내가 담고 있는 정보를 가지고 오겠다는 의미로 해석된다.</description>
-    </item>
-    
-    <item>
-      <title>연습문제</title>
-      <link>https://mung0001.github.io/docs/programing/shell/shell100/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mung0001.github.io/docs/programing/shell/shell100/</guid>
-      <description>Shell Programming    연습문제 정리  구구단 # gugu.sh#!/bin/bashfor i in {1..9};dofor j in {1..9};doecho $i &amp;#34;X&amp;#34; $j &amp;#34;=&amp;#34; `expr $i \* $j`donedone   야구게임 #!/bin/bashSolution(){Solution=()i=0while [ $i -le 3 ];doSolution[$i]=$((RANDOM% 9+1))if [ $i -eq 3 ]; thenif [ ${Solution[3]} -eq ${Solution[0]} -o ${Solution[3]} -eq ${Solution[1]} -o ${Solution[3]} -eq ${Solution[2]} ]; thenSolution[$i]=$((RANDOM% 9+1))else((i++))fifiif [ $i -eq 2 ]; thenif [ ${Solution[2]} -eq ${Solution[0]} -o ${Solution[2]} -eq ${Solution[1]} ]; thenSolution[$i]=$((RANDOM% 9+1))else((i++))fifiif [ $i -eq 1 ]; thenif [ ${Solution[0]} -eq ${Solution[1]} ]; thenSolution[$i]=$((RANDOM% 9+1))else((i++))fifiif [ $i -eq 0 ]; then((i++))fidoneecho ${Solution[@]}}Count=0Score(){Out=0Ball=0Strike=0if [ $num1 -eq ${Solution[0]} ]; then((Strike++))elif [ $num1 -eq ${Solution[1]} -o $num1 -eq ${Solution[2]} -o $num1 -eq ${Solution[3]} ]; then((Ball++))else((Out++))fiif [ $num2 -eq ${Solution[1]} ]; then((Strike++))elif [ $num2 -eq ${Solution[0]} -o $num2 -eq ${Solution[2]} -o $num2 -eq ${Solution[3]} ]; then((Ball++))else((Out++))fiif [ $num3 -eq ${Solution[2]} ]; then((Strike++))elif [ $num3 -eq ${Solution[1]} -o $num3 -eq ${Solution[0]} -o $num3 -eq ${Solution[3]} ]; then((Ball++))else((Out++))fiif [ $num4 -eq ${Solution[3]} ]; then((Strike++))elif [ $num4 -eq ${Solution[1]} -o $num4 -eq ${Solution[2]} -o $num4 -eq ${Solution[0]} ]; then((Ball++))else((Out++))fiecho &amp;#34; Strike : $Strike&amp;#34;echo &amp;#34; Ball : $Ball&amp;#34;echo &amp;#34; Out : $Out&amp;#34;((Count++))if [ $Strike -eq 4 ]; thenecho &amp;#34;수고하셨습니다.</description>
-    </item>
-    
-  </channel>
-</rss>
