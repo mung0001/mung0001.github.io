@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MacOS 패키지 관리 애플리케이션 - Homebrew Homebrew는 맥스 호웰이 만든 macOS용 패키지 관리 애플리케이션
+Homebrew는 Ruby기반으로 개발되고 있으며, MacOS용 패키지 관리에 사실상 표준으로 사용되어 지고 있음
+주로 커맨드라인 도구나 시스템 패키지를 설치하는데 사용하지만, Cask 확장을 통해 GUI 애플리케이션 설치에도 사용이 가능
+기본적으로 MacOS용 패키지 관리자이지만 리눅스나 윈도우용 WSL도 지원
+단, 편리하게 사용할 수 있는 장점이 있지만, 커뮤니티 기반으로 운영되기에 패키지의 안정성이 보장되지 않는 다는 단점이 존재
+Homebrew docs
+Bhomebrew Install** Homebrew을 설치하기 위해서는 xCode 커맨드라인 툴, 사전 설치가 필요 $ sudo $ /usr/bin/ruby -e &#34;$(curl -fsSL https://raw.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/system/macos/macos02/><meta property="og:title" content="Homebrew" />
+<meta property="og:description" content="MacOS 패키지 관리 애플리케이션 - Homebrew Homebrew는 맥스 호웰이 만든 macOS용 패키지 관리 애플리케이션
+Homebrew는 Ruby기반으로 개발되고 있으며, MacOS용 패키지 관리에 사실상 표준으로 사용되어 지고 있음
+주로 커맨드라인 도구나 시스템 패키지를 설치하는데 사용하지만, Cask 확장을 통해 GUI 애플리케이션 설치에도 사용이 가능
+기본적으로 MacOS용 패키지 관리자이지만 리눅스나 윈도우용 WSL도 지원
+단, 편리하게 사용할 수 있는 장점이 있지만, 커뮤니티 기반으로 운영되기에 패키지의 안정성이 보장되지 않는 다는 단점이 존재
+Homebrew docs
+Bhomebrew Install** Homebrew을 설치하기 위해서는 xCode 커맨드라인 툴, 사전 설치가 필요 $ sudo $ /usr/bin/ruby -e &#34;$(curl -fsSL https://raw." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/macos/macos02/" /><meta property="article:section" content="docs" />
+
+
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e2bd7d5b85b8364f83ad5a78c7bee3da407d197c72a6a9f01b68855e04db9985.css" integrity="sha256-4r19W4W4Nk&#43;DrVp4x77j2kB9GXxypqnwG2iFXgTbmYU=">
+<script defer src="/en.search.min.21661551a6db5c857106f06ffb5acb09a7ce2e4ba573c2f7d7bb316512531add.js" integrity="sha256-IWYVUabbXIVxBvBv&#43;1rLCafOLkulc8L317sxZRJTGt0="></script>
+<!--
+
+-->
+
+  
+
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/monitoring/pc/" class="collapsed ">Monitoring</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/macos/macos04/" class="">Mac OS</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/macos/macos01/" class="">MacOS</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/macos/macos02/" class="active">Homebrew</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/macos/macos03/" class="">Zsh</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Homebrew</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#macos-패키지-관리-애플리케이션---homebrew"><strong>MacOS 패키지 관리 애플리케이션 - Homebrew</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#bhomebrew-install"><em>Bhomebrew Install</em>**</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#gui-애플리케이션을-설치-cask"><strong>GUI 애플리케이션을 설치 cask</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cask-install"><strong>cask Install</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#homebrew-fomulae"><strong>Homebrew Fomulae</strong></a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h2 id="macos-패키지-관리-애플리케이션---homebrew"><strong>MacOS 패키지 관리 애플리케이션 - Homebrew</strong></h2>
+<h1 id="heading"></h1>
+<ul>
+<li>
+<p><strong>Homebrew는 맥스 호웰이 만든 macOS용 패키지 관리 애플리케이션</strong></p>
+</li>
+<li>
+<p><strong>Homebrew는 Ruby기반으로 개발되고 있으며, MacOS용 패키지 관리에 사실상 표준으로 사용되어 지고 있음</strong></p>
+</li>
+<li>
+<p><strong>주로 커맨드라인 도구나 시스템 패키지를 설치하는데 사용하지만, Cask 확장을 통해 GUI 애플리케이션 설치에도 사용이 가능</strong></p>
+</li>
+<li>
+<p><strong>기본적으로 MacOS용 패키지 관리자이지만 리눅스나 윈도우용 WSL도 지원</strong></p>
+</li>
+<li>
+<p><strong>단, 편리하게 사용할 수 있는 장점이 있지만, 커뮤니티 기반으로 운영되기에 패키지의 안정성이 보장되지 않는 다는 단점이 존재</strong></p>
+</li>
+<li>
+<p><strong><a href="https://docs.brew.sh/">Homebrew docs</a></strong></p>
+</li>
+</ul>
+<h1 id="heading-1"></h1>
+<p> </p>
+<h1 id="heading-2"></h1>
+<h3 id="bhomebrew-install"><em>Bhomebrew Install</em>**</h3>
+<h1 id="heading-3"></h1>
+<ul>
+<li><strong>Homebrew을 설치하기 위해서는 xCode 커맨드라인 툴, 사전 설치가 필요</strong></li>
+</ul>
+<h1 id="heading-4"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo $ /usr/bin/ruby -e &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34;
+</span></span><span style="display:flex;"><span># 해당 홈페이지에서 최신 스크립트를 다운받아 설치
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ brew --version
+</span></span><span style="display:flex;"><span># 설치가 완료되면 버전이 출력
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ brew help
+</span></span><span style="display:flex;"><span># 관련 명령어를 출력
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ sudo /usr/bin/ruby -e &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34;
+</span></span><span style="display:flex;"><span># Homebrew uninstall
+</span></span></code></pre></div><h1 id="heading-5"></h1>
+<p> </p>
+<h1 id="heading-6"></h1>
+<hr>
+<h2 id="gui-애플리케이션을-설치-cask"><strong>GUI 애플리케이션을 설치 cask</strong></h2>
+<h1 id="heading-7"></h1>
+<ul>
+<li><strong>Homebrew에는 GUI 애플리케이션을 설치할 수 있는 캐스크 확장이 존재, 캐스크 패키지는 별도로 관리되며, 이 패키지를 설치하려면 brew 뒤에 cask를 붙임</strong>
+<ul>
+<li><strong>ex)brew cask install vlc</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-8"></h1>
+<p> </p>
+<h1 id="heading-9"></h1>
+<h3 id="cask-install"><strong>cask Install</strong></h3>
+<h1 id="heading-10"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ brew install cask
+</span></span><span style="display:flex;"><span># cask 패키지 설치
+</span></span></code></pre></div><h1 id="heading-11"></h1>
+<p> </p>
+<h1 id="heading-12"></h1>
+<h2 id="homebrew-fomulae"><strong>Homebrew Fomulae</strong></h2>
+<h1 id="heading-13"></h1>
+<ul>
+<li><strong>Homebrew 패키지 명세를 의미하는 포뮬라는 루비 코드로 작성</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Wget</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">Formula</span>                                                        <span style="color:#75715e"># wget 패키지 포뮬라를 정의</span>
+</span></span><span style="display:flex;"><span>  homepage <span style="color:#e6db74">&#34;https://www.gnu.org/software/wget/&#34;</span>                             <span style="color:#75715e"># 패키지 홈페이지 지정</span>
+</span></span><span style="display:flex;"><span>  url <span style="color:#e6db74">&#34;https://ftp.gnu.org/gnu/wget/wget-1.15.tar.gz&#34;</span>                       <span style="color:#75715e"># 패키지 다운로드 경로 지정</span>
+</span></span><span style="display:flex;"><span>  sha256 <span style="color:#e6db74">&#34;52126be8cf1bddd7536886e74c053ad7d0ed2aa89b4b630f76785bac21695fcd&#34;</span> <span style="color:#75715e"># 다운로드 받을 파일의 sha256 해시 값을 지정</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">install</span>                                                               <span style="color:#75715e"># Install 메서드</span>
+</span></span><span style="display:flex;"><span>    system <span style="color:#e6db74">&#34;./configure&#34;</span>, <span style="color:#e6db74">&#34;--prefix=</span><span style="color:#e6db74">#{</span>prefix<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>                              
+</span></span><span style="display:flex;"><span>    system <span style="color:#e6db74">&#34;make&#34;</span>, <span style="color:#e6db74">&#34;install&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">$</span> brew update<span style="color:#f92672">-</span>reset
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 패키지 포뮬라 복구</span>
+</span></span></code></pre></div><h1 id="heading-14"></h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+
+</div>
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#macos-패키지-관리-애플리케이션---homebrew"><strong>MacOS 패키지 관리 애플리케이션 - Homebrew</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#bhomebrew-install"><em>Bhomebrew Install</em>**</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#gui-애플리케이션을-설치-cask"><strong>GUI 애플리케이션을 설치 cask</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cask-install"><strong>cask Install</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#homebrew-fomulae"><strong>Homebrew Fomulae</strong></a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

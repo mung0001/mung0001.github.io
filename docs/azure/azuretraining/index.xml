@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Azure Training on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/docs/azure/azuretraining/</link>
+    <description>Recent content in Azure Training on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/docs/azure/azuretraining/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure </title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/base/</guid>
+      <description>**** **** **** </description>
+    </item>
+    
+    <item>
+      <title>Az-900 : CloudComputing</title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/azure00/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure00/</guid>
+      <description>Az-900 : CloudComputing 클라우드 컴퓨팅 클라우드 컴퓨팅은 스토리지 공간이나 CPU 주기와 같은 리소스를 다른 회사의 컴퓨터에 대여하는 서비스이며 사용한 만큼의 요금만을 지불합니다.
+클라우드 공급 기업은 작업을 싱행하는 데 필요한 실제 하드웨어와 이 하드웨어를 최신 상태로 유지할 책임이 존재하며, 제공되는 컴퓨팅 서비스는 클라우드 공급자에 따라 달라지며, 일반적으로는 하단의 항목이 기본적으로 포함됩니다.
+Compute power : 리눅스 서버나 웹 프로그램
+Storage : 저장 및 데이터베이스 역할
+Networking : 클라우드 제공사와 우리 회사의 사이의 안전한 연결</description>
+    </item>
+    
+    <item>
+      <title>Az-900 : Region</title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/azure01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure01/</guid>
+      <description>Azure 글로벌 인프라 아키텍처 Microsoft Geography Azure는 전 세계를 지정학적 경계 또는 국가 경계로 정의되는 지리적 위치로 분할합니다.
+Azure Geography란 일반적으로 데이터 상주성 및 규정 준수 경계를 유지하는 두 개 이상의 Azure 지역을 포함하고 있는 별도의 시장을 의미합니다.
+Azure Geography을 사용하면 아래와 같은 이점을 가질 수 있습니다.
+지리적 위치를 통해 특정 데이터 상주성 및 규정 준수 요구 사항이 있는 고객은 데이터와 애플리케이션을 가깝게 유지할 수 있습니다.
+지리적 위치는 지리적 경계 내에서 데이터 상주성, 주권, 규정 준수 및 복원력 요구 사항이 지켜지도록 보장합니다.</description>
+    </item>
+    
+    <item>
+      <title>Az-900 : 관리옵션</title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/azure02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure02/</guid>
+      <description>Azure 관리옵션 Azure 관리옵션의 다양한 종류 Azure의 관리는 다양한 도구 및 플랫폼을 사용하여 Azure을 구성하고 관리할 수 있습니다.
+명령줄, 언어별 SDK, 개발자 도구, 마이그레이션 도구 등에 제공되는 여러 도구가 있습니다.
+하단은 가장 일상적으로 사용되는 관리 및 조작에 주로 사용되는 도구들입니다.
+Azure Portal : GUI를 통해 Azure 조작
+Azure PowerShell 및 Azure CLI : 명령줄 및 자동화 기반으로 Azure 조작
+Azure Cloud Shell : 웹 기반 명령줄 인터페이스
+모바일 디바이스에서 리소스를 모니터링하고 관리하기 위한 Azure 모바일 앱</description>
+    </item>
+    
+    <item>
+      <title>Az-900 : 서비스</title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/azure12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/azure12/</guid>
+      <description>Az-900 : 서비스 서비스는 Link를 참조하세요. IOT 솔루션 (Internet of Things) Azure IoT Central 보다 손 쉬운 IOT 서비스 구축을 위한 SaaS 형태의 관리형 서비스, (디바이스 연결, 모니터 그리고 관리 및 확장 지원) Azure IoT Hub 클라우드 기반의 IOT 관리 플랫폼 서비스 (중앙 메시지 허브, 양방향 통신 및 관리) 빅 데이터 분석 솔루션 (Big data and analytics) Azure Sysnapse Analytics 클라우드 기반의 수십 페타의 데이터를 MPP기반으로 빠르게 처리할 수 있는 온 디맨드 분석을 지원하여 인사이트를 찾아낼 수 있는 솔루션 Azure HDInsight 오픈소스 기반의 Hadoop을 관리되는 형태의 서비스를 제공, 쉽고 빠르고 비용 효율적으로 데이터 처리가 가능 인공지능 (Artificial Intelligence Azure Machin Learning service SDK 기반으로 손쉽게 code를 작성하고 train, test, deploy, manage 및 track 할 수 있는 플랫폼을 제공 Azure Machine Learning Studio GUI 기반으로 코드 없이도 손쉽게 ML model을 만들고 테스트를 배퐇라 수 있는 플랫폼을 제공 서버리스 (Serveless computing) Azure Functions 서비스를 위한 코드에 집중 (인프라 및 플랫폼으로 부터의 자유도 확보) Azure Logic Apps 작업 및 비즈니스 프로세스를 자동화하고 오케스트레이션 할 수 있도록 서비스 제공 엔터프라이즈 환경에서 앱, 데이터 긜고 시스템의 통합을 지원 Azure Event Grid 배포와 구독형태의 이벤트 소비를 위한 관리형 엔진 기반의 이벤트 라우팅 서비스 DevOps Azure DevOps services 클라우드 기반의 통합 개발 협업 서비스 (CI/CD) 제공 파이프라인, Git 저장소, 오픈 소스 연계 등 Azure DevTest Labs 쉽고 빠르게 재사용 가능한 템플릿을 통해 배포하여 최신 개발 코드를 배포 및 테스트 가능 Azure 관리 도구 Azure Advisor 배포된 Azure 리소스를 분석하고 가용성, 보안, 성능, 비용측면을 개선하는 방법을 제공 Azure quick start templates 사전에 code로 설정이 되어 있는 탬플릿을 토대로 리소스를 배포할 수 있게 도와주는 도구 JSON 형태를 가지고 있다.</description>
+    </item>
+    
+    <item>
+      <title>Az-900 : 문제풀이</title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/az-900/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/az-900/</guid>
+      <description>Az-900 시험대비 문제풀이 다음 각 명령문에 대해 해당 명령문이 참이면 Yes 거짓이면 No를 선택하십시오. 문제 Yes No PaaS는 Azure 서비스에서 모든 시스템의 제공하고 호스트는 웹, 애플리케이션을 모두 컨트롤 한다. PaaS의 웹, 애플리케이션에서 자동으로 Scale ability를 수행한다. PaaS는 솔루션은 사용자 지정 응용 프로그램에 기능을 지속적으로 추가하는 전문 개발 서비스를 제공한다. 문제 풀이...문제 Yes No PaaS는 Azure 서비스에서 모든 시스템의 제공하고 호스트는 웹, 애플리케이션을 모두 컨트롤 한다. ㅇ PaaS의 웹, 애플리케이션에서 자동으로 Scale ability를 수행한다.</description>
+    </item>
+    
+    <item>
+      <title>Azure 학생 계정생성</title>
+      <link>https://mung0001.github.io/docs/azure/azuretraining/base-copy-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/azure/azuretraining/base-copy-3/</guid>
+      <description>Azure 학생 계정생성 Azure 학생 계정생성 이번 장에서는 Azure 서비스의 사용을 위한 계정생성에 대해 알아보도록 하겠습니다.
+기본적으로 Azure의 서비스를 사용할 때에는 계정이 필요하며, 여기서 학생의 신분으로 가입을 진행할 경우 여러 혜택을 받을 수 있습니다.
+윈도우 10 edu
+윈도우 Server 2019
+Visual Studio 2017 Enterprise
+SQL Server 2017 Enterprise
+Azure 100$ 크레딧
+이와 같은 혜택을 받기 위해서는 학교 메일 (ac.kr or .edu)의 메일이 필요합니다.
+그럼 학생계정으로 Azure 계정을 생성해보도록 하겠습니다.
+Azure for Students Azure for Students에 접속합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

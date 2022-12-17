@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Linux Server Management 서버환경의 기초 네트워크의 정의 정보통신 네트어크 : 가장 바깥 쪽의 네트워크로 메일, WWW 등 다양한 애플리케이션의 네트워크가 정보통신 네트워크를 의미
+전송 네트워크 : 중간 층의 네트워크로 허브, 라우터와 같은 통신기기 네트워크를 의미
+통신 회선 네트워크 가장 안쪽이 네트워크로 통신 선로 네트워크로 LAN, WAN, 통신 사업자의 네트워크 서비스 등이 포함
+이론/ 구현/ 운영 이론 : 연구자를 중심으로 연구 개발되는 이론과 각종 표준화 조직, 단체의 기술 사양을 의미
+구현 : 이론 기술을 기반으로 제품을 개발하기 위한 기술로, 운영체제와 언어 내장 방법, 각종 개발 기법, 프로그래밍 기법을 의미">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/system/linux/ls00/><meta property="og:title" content="서버환경의 기초" />
+<meta property="og:description" content="Linux Server Management 서버환경의 기초 네트워크의 정의 정보통신 네트어크 : 가장 바깥 쪽의 네트워크로 메일, WWW 등 다양한 애플리케이션의 네트워크가 정보통신 네트워크를 의미
+전송 네트워크 : 중간 층의 네트워크로 허브, 라우터와 같은 통신기기 네트워크를 의미
+통신 회선 네트워크 가장 안쪽이 네트워크로 통신 선로 네트워크로 LAN, WAN, 통신 사업자의 네트워크 서비스 등이 포함
+이론/ 구현/ 운영 이론 : 연구자를 중심으로 연구 개발되는 이론과 각종 표준화 조직, 단체의 기술 사양을 의미
+구현 : 이론 기술을 기반으로 제품을 개발하기 위한 기술로, 운영체제와 언어 내장 방법, 각종 개발 기법, 프로그래밍 기법을 의미" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/linux/ls00/" /><meta property="article:section" content="docs" />
+
+
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e2bd7d5b85b8364f83ad5a78c7bee3da407d197c72a6a9f01b68855e04db9985.css" integrity="sha256-4r19W4W4Nk&#43;DrVp4x77j2kB9GXxypqnwG2iFXgTbmYU=">
+<script defer src="/en.search.min.21661551a6db5c857106f06ffb5acb09a7ce2e4ba573c2f7d7bb316512531add.js" integrity="sha256-IWYVUabbXIVxBvBv&#43;1rLCafOLkulc8L317sxZRJTGt0="></script>
+<!--
+
+-->
+
+  
+
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/monitoring/pc/" class="collapsed ">Monitoring</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux/" class="">Linux 개요</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux01/" class="">Linux System Management</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux02/" class="">Linux Filesystem</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux03/" class="">Linux 압축</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux04/" class="">Linux 문자열 처리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux05/" class="">Linux 날짜</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux06/" class="">Linux 파일처리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux07/" class="">Linux Network</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux08/" class="">Linux 형식파일</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/mount/" class="">Linux Mount</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-0/" class="">Linux master 개요</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/ls00/" class="active">서버환경의 기초</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-1/" class="">Linux 일반</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/ls01/" class="">이용 기술</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-2/" class="">Linux 운영 및 관리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-3/" class="">Linux 활용</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/ls02/" class="">서버도입</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/cacti01/" class="">Cacti</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/ls07/" class="">PXE(KickStart) Server</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>서버환경의 기초</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#서버환경의-기초"><strong>서버환경의 기초</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#인터넷의-구성"><strong>인터넷의 구성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#실습을-위한-기본설정"><strong>실습을 위한 기본설정</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#centos-부트-처리"><strong>CentOS 부트 처리</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#시스템-초기화의-처리-순서"><strong>시스템 초기화의 처리 순서</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#커맨드-실습"><strong>커맨드 실습</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#ftp-server-접속"><strong>ftp server 접속</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#vi-편집기-기본-조작"><strong>vi 편집기 기본 조작</strong></a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="linux-server-management"><strong>Linux Server Management</strong></h1>
+<hr>
+<h1 id="heading"></h1>
+<h2 id="서버환경의-기초"><strong>서버환경의 기초</strong></h2>
+<h1 id="heading-1"></h1>
+<ul>
+<li><strong>네트워크의 정의</strong>
+<ul>
+<li>
+<p><strong>정보통신 네트어크 : 가장 바깥 쪽의 네트워크로 메일, WWW 등 다양한 애플리케이션의 네트워크가 정보통신 네트워크를 의미</strong></p>
+</li>
+<li>
+<p><strong>전송 네트워크 : 중간 층의 네트워크로 허브, 라우터와 같은 통신기기 네트워크를 의미</strong></p>
+</li>
+<li>
+<p><strong>통신 회선 네트워크 가장 안쪽이 네트워크로 통신 선로 네트워크로 LAN, WAN, 통신 사업자의 네트워크 서비스 등이 포함</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-2"></h1>
+<p> </p>
+<ul>
+<li><strong>이론/ 구현/ 운영</strong>
+<ul>
+<li>
+<p><strong>이론 : 연구자를 중심으로 연구 개발되는 이론과 각종 표준화 조직, 단체의 기술 사양을 의미</strong></p>
+</li>
+<li>
+<p><strong>구현 : 이론 기술을 기반으로 제품을 개발하기 위한 기술로, 운영체제와 언어 내장 방법, 각종 개발 기법, 프로그래밍 기법을 의미</strong></p>
+</li>
+<li>
+<p><strong>운영 : 네트워크나 서버의 설계부터 도입, 구축, 운영과 관리, 보수에 걸친 이용자의 측면을 의미</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-3"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-4"></h1>
+<h3 id="인터넷의-구성"><strong>인터넷의 구성</strong></h3>
+<h1 id="heading-5"></h1>
+<ul>
+<li>
+<p><strong>인터넷과 기업 네트워크는 특정한 통신 기기, 시스템을 사용해 접속한다. 이는 규모와 상관없이 구성이 동일하다.</strong></p>
+</li>
+<li>
+<p><strong>일반적인 인터넷 연결의 구성</strong></p>
+<ul>
+<li><strong>인터넷 &ndash;&gt; ISP &ndash;&gt; 라우터 &ndash;&gt; 도메인 영역 (허브 -&gt; 서버시스템, 클라이언트)</strong></li>
+<li><strong>인터넷과 도메인 영역은 서로 케이블로 연결되어 있음</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>ISP(Internet Service Provider) : 인터넷 서비스 프로바이더로 인터넷의 상용 서비스를 제공하는 사업자, 일반적으로 프로바이더라고 칭함(LG U+, SKT, KT 등)</strong></p>
+</li>
+</ul>
+<h1 id="heading-6"></h1>
+<p> </p>
+<ul>
+<li><strong>OSI 참조 모델로 보는 각 계층의 역할</strong></li>
+</ul>
+<h1 id="heading-7"></h1>
+<table>
+<thead>
+<tr>
+<th>계층</th>
+<th>시스템 A</th>
+<th>역할</th>
+<th>시스템 B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7층</td>
+<td>애플리케이션 계층</td>
+<td>&lt;&mdash;&ndash; 애플리케이션 &mdash;&ndash;&gt;</td>
+<td>애플리케이션 계층</td>
+</tr>
+<tr>
+<td>6층</td>
+<td>프레젠테이션 계층</td>
+<td>&lt;&mdash;&ndash; 포맷, 부호 &mdash;&ndash;&gt;</td>
+<td>프레젠테이션 계층</td>
+</tr>
+<tr>
+<td>5층</td>
+<td>세션 계층</td>
+<td>&lt;&mdash;&ndash; 동기, 송신 방법 &mdash;&ndash;&gt;</td>
+<td>세션 계층</td>
+</tr>
+<tr>
+<td>4층</td>
+<td>트랜스포트 계층</td>
+<td>&lt;&mdash;&ndash; 논리자 간 데이터 전송 &mdash;&ndash;&gt;</td>
+<td>트랜스포트 계층</td>
+</tr>
+<tr>
+<td>3층</td>
+<td>네트워크 계층</td>
+<td>&lt;&mdash;&ndash; 라우팅 &mdash;&ndash;&gt; (게이트웨이 - 중계) &lt;&mdash;&ndash; 라우팅 &mdash;&ndash;&gt;</td>
+<td>네트워크 계층</td>
+</tr>
+<tr>
+<td>2층</td>
+<td>데이터링크 계층</td>
+<td>&lt;&mdash;&ndash; 논리 신호 &mdash;&ndash;&gt; (게이트웨이 - 중계) &lt;&mdash;&ndash; 논리 신호 &mdash;&ndash;&gt;</td>
+<td>데이터링크 계층</td>
+</tr>
+<tr>
+<td>1층</td>
+<td>물리계층</td>
+<td>&lt;&mdash;&ndash;전기 신호&mdash;&ndash;&gt; (게이트웨이 - 중계) &lt;&mdash;&ndash;전기 신호&mdash;&ndash;&gt;</td>
+<td>물리계층</td>
+</tr>
+<tr>
+<td> </td>
+<td>오픈 시스템(개방형)</td>
+<td> </td>
+<td>오픈 시스템(개방형)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>애플리케이션 계층은 WWW와 같은 네트워크 애플리케이션의 기능을 담당</strong></p>
+</li>
+<li>
+<p><strong>프레젠테이션 계층은 <code>데이터 상태의부호화 및 포맷, 구조</code>를 담당</strong></p>
+</li>
+<li>
+<p><strong>세션 게층은 <code>데이터 송수신 타이밍과 방법을 규정</code>하여 담당</strong></p>
+</li>
+<li>
+<p><strong>트랜스포트 계층은 <code>송수신 시스템의 프로세스 간 송수신 제어 및 통신</code>을 수행</strong></p>
+</li>
+<li>
+<p><strong>네트워크 계층은 <code>네트워크 상에서 데이터를 라우팅</code> 수행</strong></p>
+</li>
+<li>
+<p><strong>데이터 링크 계층은 <code>디지털 신호의 순서나 포맷의 기능을 규정</code>을 수행</strong></p>
+</li>
+<li>
+<p><strong>물리 계층은 <code>전기신호나 물리 형태 등의 기능을 규정</code>하여 수행</strong></p>
+</li>
+<li>
+<p><strong><code>네트워크 계층 이하만 포함하는 것이 중계 시스템(게이트 웨이)</code>이고 <code>데이터 링크 계층과 물리 계층에서 규정된 대표적인 것이 이더넷</code>이다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-8"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-9"></h1>
+<h2 id="실습을-위한-기본설정"><strong>실습을 위한 기본설정</strong></h2>
+<h1 id="heading-10"></h1>
+<ul>
+<li><strong>CenOS7</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ yum -y dovecot xinetd sendmail vsftpd httpd ftp
+</span></span><span style="display:flex;"><span>$ yum -y update 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># install</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ vi /etc/dovecot/dovecot.conf
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#protocols = imap pop3 imtp --&gt; protocols = imap pop3 imtp</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 주석 제거</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ <span style="color:#66d9ef">for</span> i in ftp dovecot xinetd sendmail vsftpd httpd; <span style="color:#66d9ef">do</span> systemctl restart $i; <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>$ <span style="color:#66d9ef">for</span> i in ftp dovecot xinetd sendmail vsftpd httpd; <span style="color:#66d9ef">do</span> systemctl enable $i; <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ cd /etc/mail
+</span></span><span style="display:flex;"><span>$ cp -p -p sendmail.cf sendmail.cf.original
+</span></span><span style="display:flex;"><span>$ vi sendmail.cf
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">139</span> C<span style="color:#f92672">{</span>w<span style="color:#f92672">}</span>localhost.localdomain --&gt; C<span style="color:#f92672">{</span>w<span style="color:#f92672">}</span>example.com
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">264</span> O DaemonPortOptions<span style="color:#f92672">=</span>Port<span style="color:#f92672">=</span>smtp,Addr<span style="color:#f92672">=</span>127.0.0.1, Name<span style="color:#f92672">=</span>MTA --&gt; <span style="color:#75715e"># O DaemonPortOptions=Port=smtp,Addr=127.0.0.1, Name=MTA</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 설정변경</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ diff sendmail.cf sendmail.cf.original
+</span></span><span style="display:flex;"><span>&lt; C<span style="color:#f92672">{</span>w<span style="color:#f92672">}</span>example.com
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>&gt; C<span style="color:#f92672">{</span>w<span style="color:#f92672">}</span>localhost.localdomain
+</span></span><span style="display:flex;"><span>264c264
+</span></span><span style="display:flex;"><span>&lt; <span style="color:#75715e">#O DaemonPortOptions=Port=smtp,Addr=127.0.0.1, Name=MTA</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>&gt; O DaemonPortOptions<span style="color:#f92672">=</span>Port<span style="color:#f92672">=</span>smtp,Addr<span style="color:#f92672">=</span>127.0.0.1, Name<span style="color:#f92672">=</span>MTA
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 확인</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ systemctl restart sendmail
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 재시작</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ vi /etc/hosts
+</span></span><span style="display:flex;"><span>127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4 --&gt; 127.0.0.1 h2g.example.com h2g localhost.localdomain localhost example.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ cd /etc/vsftpd
+</span></span><span style="display:flex;"><span>$ cp -p vsftpd.conf vsftpd.conf.original
+</span></span><span style="display:flex;"><span>$ vi cp -p vsftpd.conf
+</span></span><span style="display:flex;"><span>anonymous_enable<span style="color:#f92672">=</span>YES--&gt; anonymous_enable<span style="color:#f92672">=</span>NO
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ftp server 설정</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 기본 설정완료</span>
+</span></span></code></pre></div><h1 id="heading-11"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-12"></h1>
+<h2 id="centos-부트-처리"><strong>CentOS 부트 처리</strong></h2>
+<h1 id="heading-13"></h1>
+<ul>
+<li>
+<p><strong>CentOS 부트 처리는 일반적인 유닉스처럼 커널 프로그램(vmlinux)이 마지막에 init 프로세스를 실행해서 프로세스를 제어한다.</strong></p>
+</li>
+<li>
+<p><strong>init 프로세스는 rc.sysinit라는 초기화 처리를 실행한 후, 초기화 테이블(inittab)에서 실행할 스크립트를 식별하는 런레벨을 읽어온다.</strong></p>
+</li>
+<li>
+<p><strong>runlevel은 다음과 같은 시스템 소프트웨어 설정(실행할 프로세스 그룹 분류, 처리)이다.</strong></p>
+</li>
+<li>
+<p><strong>Runlevel</strong></p>
+<ul>
+<li>
+<p><strong>halt</strong></p>
+</li>
+<li>
+<p><strong>Single user mode</strong></p>
+</li>
+<li>
+<p><strong>NFS를 사용하지 않는 멀티 유저 모드</strong></p>
+</li>
+<li>
+<p><strong>완전한 멀티 우저 모드</strong></p>
+</li>
+<li>
+<p><strong>사용하지 않음</strong></p>
+</li>
+<li>
+<p><strong>윈도우 시스템(X11)</strong></p>
+</li>
+<li>
+<p><strong>reboot</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>부트할 때 런 레벨에 대응하는 모든 스크립트가 실행되며, 런 레벨 3의 경우 <code>/etc/rc.d/rc3.d</code> 디렉터리 ㅇ나의 모든 스크립트가 실행된다.</strong></p>
+</li>
+<li>
+<p><strong>runlevel 처리는 rc 스크립트로 실행되며 스크립트 내용에 따라서 상주 데몬(서버) 프로세스가 시작된다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-14"></h1>
+<p> </p>
+<h3 id="시스템-초기화의-처리-순서"><strong>시스템 초기화의 처리 순서</strong></h3>
+<h1 id="heading-15"></h1>
+<ol>
+<li><strong>로그시작</strong></li>
+<li><strong>기본 경로 설정</strong></li>
+<li><strong>네트워크 구성 데이터 불러오기</strong></li>
+<li><strong>키맵 로드</strong></li>
+<li><strong>시스템폰트 로드</strong></li>
+<li><strong>메모리 스와핑 설정</strong></li>
+<li><strong>호스트 일므 설정</strong></li>
+<li><strong>NIS 도메인 이름 설정</strong></li>
+<li><strong>루트 파일 시스템 검사</strong></li>
+<li><strong>ISA-PNP 설정</strong></li>
+<li><strong>루트 파일 시스템 마운트</strong></li>
+<li><strong>루트 파일 시스템 사용 상황</strong></li>
+<li><strong>사운드 모듈 로드</strong></li>
+<li><strong>RAID 시작</strong></li>
+<li><strong>파일 시스템 검사</strong></li>
+<li><strong>파일 시스템 마운트</strong></li>
+<li><strong>사용이 끝난 임시 파일 삭제</strong></li>
+<li><strong>시스템 시간 설정</strong></li>
+<li><strong>스와핑 시작</strong></li>
+<li><strong>시리얼 포트 초기화</strong></li>
+<li><strong>SCSI 모듈 로드</strong></li>
+<li><strong>X 윈도우 매니저 설정</strong></li>
+<li><strong>커널 메시지 로그</strong></li>
+</ol>
+<h1 id="heading-16"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-17"></h1>
+<h3 id="커맨드-실습"><strong>커맨드 실습</strong></h3>
+<h1 id="heading-18"></h1>
+<ul>
+<li><strong>문자코드 커맨드</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ local
+</span></span><span style="display:flex;"><span>LANG<span style="color:#f92672">=</span>en_US.UTF-8
+</span></span><span style="display:flex;"><span>LC_CTYPE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en_US.UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>LC_NUMERIC<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en_US.UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>LC_TIME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en_US.UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>LC_COLLATE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en_US.UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>LC_MONETARY<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en_US.UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>LC_MESSAGES<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en_US.UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>LC_PAPER<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en_US.UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>LC_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en_US.UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>LC_ADDRESS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en_US.UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>LC_TELEPHONE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en_US.UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>LC_MEASUREMENT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en_US.UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>LC_IDENTIFICATION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en_US.UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>LC_ALL<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 문자 코드확인</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ export LANG<span style="color:#f92672">=</span>ko_KR.eucKR
+</span></span><span style="display:flex;"><span>$ local
+</span></span><span style="display:flex;"><span>LANG<span style="color:#f92672">=</span>ko_KR.eucKR
+</span></span><span style="display:flex;"><span>LC_CTYPE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ko_KR.eucKR&#34;</span>
+</span></span><span style="display:flex;"><span>LC_NUMERIC<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ko_KR.eucKR&#34;</span>
+</span></span><span style="display:flex;"><span>LC_TIME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ko_KR.eucKR&#34;</span>
+</span></span><span style="display:flex;"><span>LC_COLLATE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ko_KR.eucKR&#34;</span>
+</span></span><span style="display:flex;"><span>LC_MONETARY<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ko_KR.eucKR&#34;</span>
+</span></span><span style="display:flex;"><span>LC_MESSAGES<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ko_KR.eucKR&#34;</span>
+</span></span><span style="display:flex;"><span>LC_PAPER<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ko_KR.eucKR&#34;</span>
+</span></span><span style="display:flex;"><span>LC_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ko_KR.eucKR&#34;</span>
+</span></span><span style="display:flex;"><span>LC_ADDRESS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ko_KR.eucKR&#34;</span>
+</span></span><span style="display:flex;"><span>LC_TELEPHONE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ko_KR.eucKR&#34;</span>
+</span></span><span style="display:flex;"><span>LC_MEASUREMENT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ko_KR.eucKR&#34;</span>
+</span></span><span style="display:flex;"><span>LC_IDENTIFICATION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ko_KR.eucKR&#34;</span>
+</span></span><span style="display:flex;"><span>LC_ALL<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 문자코드 변경</span>
+</span></span></code></pre></div><h1 id="heading-19"></h1>
+<p> </p>
+<ul>
+<li><strong>기본적인 커맨드</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>커맨드</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pwd</td>
+<td>현재 디렉터리 이름을 표시</td>
+</tr>
+<tr>
+<td>ls -al</td>
+<td>현재 디렉터리 안의 파일 /디렉터리 목록을 표시</td>
+</tr>
+<tr>
+<td>mkdir 이름</td>
+<td>이름의 폴더를 생성</td>
+</tr>
+<tr>
+<td>cd 디렉터리명</td>
+<td>디렉터리명의 폴더로 진입</td>
+</tr>
+<tr>
+<td>cd ../</td>
+<td>한 단계 상위 디렉터리로 이동</td>
+</tr>
+<tr>
+<td>cd ~</td>
+<td>홈 디렉터리로 이동</td>
+</tr>
+<tr>
+<td>cat</td>
+<td>지정한 이름으로 파일을 생성</td>
+</tr>
+<tr>
+<td>more 파일명</td>
+<td>파일 내용을 more(한 단계)에 걸쳐서 생성</td>
+</tr>
+<tr>
+<td>mv 파일명1 파일명2</td>
+<td>이름을 파일명1에서 파일명2로 변경</td>
+</tr>
+<tr>
+<td>cp - p 파일명1 파일명2</td>
+<td>파일명1을 파일명2로 복사</td>
+</tr>
+<tr>
+<td>rm 파일명</td>
+<td>지정한 피일을 삭제</td>
+</tr>
+<tr>
+<td>rm -r 디렉터리명</td>
+<td>디렉터리명의 디렉터리를 삭제</td>
+</tr>
+<tr>
+<td>rm -fr 디렉터리명</td>
+<td>디렉터리명을 강제로 삭제(파일포함)</td>
+</tr>
+<tr>
+<td>logout</td>
+<td>작업종료</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-20"></h1>
+<p> </p>
+<ul>
+<li><strong>권한 커맨드</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ touch Hi
+</span></span><span style="display:flex;"><span>$ ls -l Hi
+</span></span><span style="display:flex;"><span>-rw-r--r--. <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">0</span> 12▒▒ <span style="color:#ae81ff">13</span> 02:06 Hi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ chmod <span style="color:#ae81ff">531</span> Hi
+</span></span><span style="display:flex;"><span>$ ls -l Hi
+</span></span><span style="display:flex;"><span>-r-x-wx--x. <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">0</span> 12▒▒ <span style="color:#ae81ff">13</span> 02:06 Hi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ useradd bye
+</span></span><span style="display:flex;"><span>$ chown Bye Hi
+</span></span><span style="display:flex;"><span>$ ls -l Hi
+</span></span><span style="display:flex;"><span>r-x-wx--x. <span style="color:#ae81ff">1</span> Bye  root    <span style="color:#ae81ff">0</span> 12▒▒ <span style="color:#ae81ff">13</span> 02:06 Hi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ groupadd Hi
+</span></span><span style="display:flex;"><span>$ chgrp Hi Hi
+</span></span><span style="display:flex;"><span>$ ls -l Hi
+</span></span><span style="display:flex;"><span>-r-x-wx--x. <span style="color:#ae81ff">1</span> Bye  Hi      <span style="color:#ae81ff">0</span> 12▒▒ <span style="color:#ae81ff">13</span> 02:06 Hi
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 권한변경을 확인</span>
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th>속성</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-(d)</td>
+<td>d는 디렉터리 -는 일반파일을 나타냄</td>
+</tr>
+<tr>
+<td>r-x</td>
+<td>Owner권한으로 r-x(4+1)로 읽기 및 실행권한을 의미</td>
+</tr>
+<tr>
+<td>-wx</td>
+<td>Group권한으로 -wx(2+1)로 쓰기 및 실행권한을 의미</td>
+</tr>
+<tr>
+<td>&ndash;x</td>
+<td>Other권한으로 &ndash;x(1)로 실행권한을 의미</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-21"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-22"></h1>
+<h2 id="ftp-server-접속"><strong>ftp server 접속</strong></h2>
+<h1 id="heading-23"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ useradd test1
+</span></span><span style="display:flex;"><span>$ passwd test1
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ ftp localhost
+</span></span><span style="display:flex;"><span>Trying ::1...
+</span></span><span style="display:flex;"><span>Connected to localhost <span style="color:#f92672">(</span>::1<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">220</span> <span style="color:#f92672">(</span>vsFTPd 3.0.2<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Name <span style="color:#f92672">(</span>localhost:root<span style="color:#f92672">)</span>: test1
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">331</span> Please specify the password.
+</span></span><span style="display:flex;"><span>Password:
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">230</span> Login successful.
+</span></span><span style="display:flex;"><span>Remote system type is UNIX.
+</span></span><span style="display:flex;"><span>Using binary mode to transfer files.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ftp&gt; mkdir Hello
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">257</span> <span style="color:#e6db74">&#34;/home/test1/Hello&#34;</span> created
+</span></span><span style="display:flex;"><span>ftp&gt; exit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ ls /home/test1
+</span></span><span style="display:flex;"><span>drwxr-xr-x. <span style="color:#ae81ff">2</span> test1 test1 <span style="color:#ae81ff">6</span> Dec <span style="color:#ae81ff">13</span> 02:38 Hello
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 확인</span>
+</span></span></code></pre></div><h1 id="heading-24"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-25"></h1>
+<h2 id="vi-편집기-기본-조작"><strong>vi 편집기 기본 조작</strong></h2>
+<h1 id="heading-26"></h1>
+<table>
+<thead>
+<tr>
+<th>커맨드</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>i</td>
+<td>현재 커서 위치에 무나 입력</td>
+</tr>
+<tr>
+<td>a</td>
+<td>현재 커서가 위치한 문자 뒤에 무자입력</td>
+</tr>
+<tr>
+<td>o</td>
+<td>현재 커서가 위치한 행 뒤에 행을 삽입하고 문자 입력</td>
+</tr>
+<tr>
+<td>O</td>
+<td>현재 ㅌ커서가 위치한 행 앞에 행을 삽입하고 문자 입력</td>
+</tr>
+<tr>
+<td>h/왼쪽커서</td>
+<td>왼쪽으로 한 문자 이동</td>
+</tr>
+<tr>
+<td>l/오른족커서</td>
+<td>오른쪽으로 한 문자 이동</td>
+</tr>
+<tr>
+<td>i/아래커서</td>
+<td>아래로 한 문자 이동</td>
+</tr>
+<tr>
+<td>k/위쪽커서</td>
+<td>위로 한 문자 이동</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>혀내 커서가 위치한 행을 삭제</td>
+</tr>
+<tr>
+<td>x</td>
+<td>현재 커서가 위치한 문자를 삭제</td>
+</tr>
+<tr>
+<td>:wq!</td>
+<td>저장하고 종료</td>
+</tr>
+<tr>
+<td>:q!</td>
+<td>저장하지 않고 종료</td>
+</tr>
+<tr>
+<td>:set number</td>
+<td>행 번호 표시</td>
+</tr>
+<tr>
+<td>:set nonumber</td>
+<td>행 번호 표시 취소</td>
+</tr>
+<tr>
+<td>:10,20t31</td>
+<td>10행부터 20행까지를 31행째 다음에 복사</td>
+</tr>
+<tr>
+<td>:network</td>
+<td>network를 검색</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-27"></h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+
+</div>
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#서버환경의-기초"><strong>서버환경의 기초</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#인터넷의-구성"><strong>인터넷의 구성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#실습을-위한-기본설정"><strong>실습을 위한 기본설정</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#centos-부트-처리"><strong>CentOS 부트 처리</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#시스템-초기화의-처리-순서"><strong>시스템 초기화의 처리 순서</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#커맨드-실습"><strong>커맨드 실습</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#ftp-server-접속"><strong>ftp server 접속</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#vi-편집기-기본-조작"><strong>vi 편집기 기본 조작</strong></a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

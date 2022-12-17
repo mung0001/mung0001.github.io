@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Doker 기본 명령어 docker 명령어의 기본 형식 $ docker &#43; &lt; 명령어 &gt; $ sudo usermod -aG docker ${USER} $ sudo service docker restart # user을 docker 그룹에 넣음 항상 root 권한으로 실행 Docker search 명령으로 이미지 검색 $ sudo docker search &lt; 이미지 이름 &gt; 보통 ubuntu, centos, redis 등 os나 프로그램 이름을 가진 이미지가 공식 이미지
+나머지는 사용자들이 만들어서 공개한 이미지
+Pull 명령으로 이미지 받기 $ sudo docker pull &lt; 이미지:버전 &gt; $ sudo docker pull ubuntu:latest 이미지 이름 뒤에 latest를 설정하면 최신 버전을 받음">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/docker/docker/docker-4/><meta property="og:title" content="Docker 기본 명령어" />
+<meta property="og:description" content="Doker 기본 명령어 docker 명령어의 기본 형식 $ docker &#43; &lt; 명령어 &gt; $ sudo usermod -aG docker ${USER} $ sudo service docker restart # user을 docker 그룹에 넣음 항상 root 권한으로 실행 Docker search 명령으로 이미지 검색 $ sudo docker search &lt; 이미지 이름 &gt; 보통 ubuntu, centos, redis 등 os나 프로그램 이름을 가진 이미지가 공식 이미지
+나머지는 사용자들이 만들어서 공개한 이미지
+Pull 명령으로 이미지 받기 $ sudo docker pull &lt; 이미지:버전 &gt; $ sudo docker pull ubuntu:latest 이미지 이름 뒤에 latest를 설정하면 최신 버전을 받음" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/docker/docker/docker-4/" /><meta property="article:section" content="docs" />
+
+
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e2bd7d5b85b8364f83ad5a78c7bee3da407d197c72a6a9f01b68855e04db9985.css" integrity="sha256-4r19W4W4Nk&#43;DrVp4x77j2kB9GXxypqnwG2iFXgTbmYU=">
+<script defer src="/en.search.min.21661551a6db5c857106f06ffb5acb09a7ce2e4ba573c2f7d7bb316512531add.js" integrity="sha256-IWYVUabbXIVxBvBv&#43;1rLCafOLkulc8L317sxZRJTGt0="></script>
+<!--
+
+-->
+
+  
+
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/docker/docker/docker-1/" class="">Docker란?</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/docker/docker/docker-2/" class="">Docker 환경구축</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/docker/docker/docker-3/" class="">Docker 이미지와 컨테이너</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/docker/docker/docker-4/" class="active">Docker 기본 명령어</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/docker/docker/docker-5/" class="">Dockerfile</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/docker/docker/docker-6/" class="">Docker Compose</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/docker/docker/docker-7/" class="">Docker Swarm</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/monitoring/pc/" class="collapsed ">Monitoring</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Docker 기본 명령어</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#doker-기본-명령어"><strong>Doker 기본 명령어</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#docker-명령어의-기본-형식"><strong>docker 명령어의 기본 형식</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#docker-search-명령으로-이미지-검색"><strong>Docker search 명령으로 이미지 검색</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pull-명령으로-이미지-받기"><strong>Pull 명령으로 이미지 받기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#images-명령으로-이미지-목록-출력하기"><strong>Images 명령으로 이미지 목록 출력하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#run-명령으로-컨테이너-생성하기"><strong>Run 명령으로 컨테이너 생성하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#docker-컨테이너-목록-확인하기"><strong>Docker 컨테이너 목록 확인하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#컨테이너-실행하기"><strong>컨테이너 실행하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#컨테이너-재시작하기"><strong>컨테이너 재시작하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#컨테이너에-접속하기"><strong>컨테이너에 접속하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#외부에서-컨터이너-안의-명령-실행시키기"><strong>외부에서 컨터이너 안의 명령 실행시키기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#컨테이너-정지하기"><strong>컨테이너 정지하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#컨테이너-삭제하기"><strong>컨테이너 삭제하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#이미지-삭제하기"><strong>이미지 삭제하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h2 id="doker-기본-명령어"><strong>Doker 기본 명령어</strong></h2>
+<hr>
+<h1 id="heading"></h1>
+<h3 id="docker-명령어의-기본-형식"><strong>docker 명령어의 기본 형식</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ docker + &lt; 명령어 &gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ sudo usermod -aG docker $<span style="color:#75715e">{</span><span style="color:#a6e22e">USER</span><span style="color:#75715e">}</span>
+</span></span><span style="display:flex;"><span>$ sudo service docker restart
+</span></span><span style="display:flex;"><span># user을 docker 그룹에 넣음
+</span></span></code></pre></div><ul>
+<li><strong>항상 root 권한으로 실행</strong></li>
+</ul>
+<h1 id="heading-1"></h1>
+<p> </p>
+<h1 id="heading-2"></h1>
+<h3 id="docker-search-명령으로-이미지-검색"><strong>Docker search 명령으로 이미지 검색</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker search &lt; 이미지 이름 &gt;
+</span></span></code></pre></div><ul>
+<li>
+<p><strong>보통 ubuntu, centos, redis 등 os나 프로그램 이름을 가진 이미지가 공식 이미지</strong></p>
+</li>
+<li>
+<p><strong>나머지는 사용자들이 만들어서 공개한 이미지</strong></p>
+</li>
+</ul>
+<h1 id="heading-3"></h1>
+<p> </p>
+<h1 id="heading-4"></h1>
+<h3 id="pull-명령으로-이미지-받기"><strong>Pull 명령으로 이미지 받기</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker pull &lt; 이미지:버전 &gt;
+</span></span><span style="display:flex;"><span>$ sudo docker pull ubuntu:latest
+</span></span></code></pre></div><ul>
+<li>
+<p><strong>이미지 이름 뒤에 latest를 설정하면 최신 버전을 받음</strong></p>
+</li>
+<li>
+<p><strong>이미지 이름에서 mung0001/ubuntu와 같이 /앞에 사용자명을 지정하면 해당 사용자가 올린 이미지를 받음</strong></p>
+</li>
+<li>
+<p><strong>호스트에 설치된 리눅스 배포판과 도커 이미지의 배포판 종류는 달라도 상관은 없음</strong></p>
+</li>
+</ul>
+<h1 id="heading-5"></h1>
+<p> </p>
+<h1 id="heading-6"></h1>
+<h3 id="images-명령으로-이미지-목록-출력하기"><strong>Images 명령으로 이미지 목록 출력하기</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker images
+</span></span><span style="display:flex;"><span>$ sudo docker images &lt; image name &gt;
+</span></span></code></pre></div><ul>
+<li><strong>docker iamges 뒤에 이미지 이름을 설정하면 특정 이미지를 검색할 수 있음</strong></li>
+</ul>
+<h1 id="heading-7"></h1>
+<p> </p>
+<h1 id="heading-8"></h1>
+<h3 id="run-명령으로-컨테이너-생성하기"><strong>Run 명령으로 컨테이너 생성하기</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker run &lt; 옵션 &gt; &lt; 이미지 이름 &gt; &lt; 실행할 파일 &gt;
+</span></span><span style="display:flex;"><span>$ sudo docker run -i -t --name hello ubuntu /bin/bash
+</span></span></code></pre></div><ul>
+<li>
+<p><strong>ubuntu 이미지를 컨테이너로 생성한 뒤 ubuntu 이미지 안의 /bin/bash를 실행</strong></p>
+</li>
+<li>
+<p><strong>-i(interactive), -t(pseudo-tty) 옵션을 사용하면 실행된 Bash 셸에 입력 및 출력 가능</strong></p>
+</li>
+<li>
+<p><strong>&ndash;name 옵션으로 컨테이너에 이름을 지정할 수 있음. 이름을 지정하지 않으면 도커가 자동으로 이름을 생성하여 지정</strong></p>
+</li>
+<li>
+<p><strong>cd, ls 명령으로 컨테이너 내부를 둘러본 뒤 exit 입력하여 Bash 셸에서 빠져 나오면 이미지에서 /bin/bash 실행 파일을 실행했기 때문에 컨테이너가 정지 (stop) 됨</strong></p>
+</li>
+</ul>
+<h1 id="heading-9"></h1>
+<p> </p>
+<h1 id="heading-10"></h1>
+<h3 id="docker-컨테이너-목록-확인하기"><strong>Docker 컨테이너 목록 확인하기</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker ps
+</span></span><span style="display:flex;"><span>$ sudo docker ps -a
+</span></span></code></pre></div><ul>
+<li>
+<p><strong>docker ps를 입력시 실행되고 있는 컨테이너만 실행 됨</strong></p>
+</li>
+<li>
+<p><strong>-a를 입력시 정지된 상태의 모든 컨테이너를 출력</strong></p>
+</li>
+</ul>
+<h1 id="heading-11"></h1>
+<p> </p>
+<h1 id="heading-12"></h1>
+<h3 id="컨테이너-실행하기"><strong>컨테이너 실행하기</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker start &lt; 컨테이너 이름 &gt;
+</span></span><span style="display:flex;"><span>$ sudo docker start HI
+</span></span></code></pre></div><ul>
+<li>
+<p><strong>정지된 컨테이너를 시작하는 명령어</strong></p>
+</li>
+<li>
+<p><strong>컨테이너 이름 대신 컨테이너 ID를 사용해도 됨</strong></p>
+</li>
+</ul>
+<h1 id="heading-13"></h1>
+<p> </p>
+<h1 id="heading-14"></h1>
+<h3 id="컨테이너-재시작하기"><strong>컨테이너 재시작하기</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker restart &lt; 컨테이너 이름 &gt;
+</span></span><span style="display:flex;"><span>$ sudo docker restart HI
+</span></span></code></pre></div><ul>
+<li>
+<p><strong>OS를 재부팅하는 것처럼 컨테이너를 재시작</strong></p>
+</li>
+<li>
+<p><strong>컨테이너 이름 대신 컨테이너 ID를 사용해도 됨</strong></p>
+</li>
+</ul>
+<h1 id="heading-15"></h1>
+<p> </p>
+<h1 id="heading-16"></h1>
+<h3 id="컨테이너에-접속하기"><strong>컨테이너에 접속하기</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker attach &lt; 컨테이너 이름 &gt;
+</span></span><span style="display:flex;"><span>$ sudo docker attach HI
+</span></span></code></pre></div><ul>
+<li>
+<p><strong>명령을 실행하면 Bash 셸이 표시 됨</strong></p>
+</li>
+<li>
+<p><strong>컨테이너 이름 대신 컨테이너 ID를 사용해도 됨</strong></p>
+</li>
+<li>
+<p><strong>Bash 셸에서 exit 또는 ctrl + D를 입력하면 컨테이너가 정지됨</strong></p>
+</li>
+<li>
+<p><strong>정지를 언하지 않을 시 ctrl + P or ctrl + Q를 차례대로 입력하여 컨테이너를 빠져나오면 됨</strong></p>
+</li>
+</ul>
+<h1 id="heading-17"></h1>
+<p> </p>
+<h1 id="heading-18"></h1>
+<h3 id="외부에서-컨터이너-안의-명령-실행시키기"><strong>외부에서 컨터이너 안의 명령 실행시키기</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker exec &lt; 컨테이너 이름 &gt; &lt; 명령 &gt; &lt; 매개 변수 &gt;
+</span></span><span style="display:flex;"><span>$ sudo docker exec HI echo &#34;HIYO&#34;
+</span></span></code></pre></div><ul>
+<li>
+<p><strong>컨테이너 이름 대신 컨테이너 ID를 사용해도 됨</strong></p>
+</li>
+<li>
+<p><strong>컨테이너가 정지 된 상태에서는 사용할 수가 없음</strong></p>
+</li>
+<li>
+<p><strong>docker exec 명령은 이미 실행된 컨테이너에서 apt-get, yum 명령으로 패키지를 설치하거나 각종 데몬을 실행할 때 활용</strong></p>
+</li>
+</ul>
+<h1 id="heading-19"></h1>
+<p> </p>
+<h1 id="heading-20"></h1>
+<h3 id="컨테이너-정지하기"><strong>컨테이너 정지하기</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker stop &lt; 컨테이너 이름 &gt;
+</span></span><span style="display:flex;"><span>$ sudo docker stop HI
+</span></span></code></pre></div><ul>
+<li><strong>실행되고 있는 컨테이너를 정지</strong></li>
+</ul>
+<h1 id="heading-21"></h1>
+<p> </p>
+<h1 id="heading-22"></h1>
+<h3 id="컨테이너-삭제하기"><strong>컨테이너 삭제하기</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker rm &lt; 컨테이너 이름 &gt;
+</span></span><span style="display:flex;"><span>$ sudo docker rm -f &lt; 컨테이너 이름 &gt;
+</span></span><span style="display:flex;"><span>$ sudo docker rm HI
+</span></span></code></pre></div><ul>
+<li>
+<p><strong>정지된 상태의 컨테이러 삭제</strong></p>
+</li>
+<li>
+<p><strong>-f를 함께 사용시 실행되고 있는 컨테이너도 삭제</strong></p>
+</li>
+</ul>
+<h1 id="heading-23"></h1>
+<p> </p>
+<h1 id="heading-24"></h1>
+<h3 id="이미지-삭제하기"><strong>이미지 삭제하기</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ docker rmi &lt; 이미지 이름 &gt; : &lt; 태그 &gt;
+</span></span><span style="display:flex;"><span>$ docker rmi ubuntu:16.04
+</span></span></code></pre></div><ul>
+<li><strong>이름만을 지정하고 태그를 지정하지 않으면 ubuntu의 이름을 가진 모든 ubuntu 삭제</strong></li>
+</ul>
+<h1 id="heading-25"></h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+
+</div>
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#doker-기본-명령어"><strong>Doker 기본 명령어</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#docker-명령어의-기본-형식"><strong>docker 명령어의 기본 형식</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#docker-search-명령으로-이미지-검색"><strong>Docker search 명령으로 이미지 검색</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pull-명령으로-이미지-받기"><strong>Pull 명령으로 이미지 받기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#images-명령으로-이미지-목록-출력하기"><strong>Images 명령으로 이미지 목록 출력하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#run-명령으로-컨테이너-생성하기"><strong>Run 명령으로 컨테이너 생성하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#docker-컨테이너-목록-확인하기"><strong>Docker 컨테이너 목록 확인하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#컨테이너-실행하기"><strong>컨테이너 실행하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#컨테이너-재시작하기"><strong>컨테이너 재시작하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#컨테이너에-접속하기"><strong>컨테이너에 접속하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#외부에서-컨터이너-안의-명령-실행시키기"><strong>외부에서 컨터이너 안의 명령 실행시키기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#컨테이너-정지하기"><strong>컨테이너 정지하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#컨테이너-삭제하기"><strong>컨테이너 삭제하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#이미지-삭제하기"><strong>이미지 삭제하기</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

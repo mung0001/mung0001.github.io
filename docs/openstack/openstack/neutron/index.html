@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="네트워크를 관리하는 서비스: Neutron 네트워크를 관리하는 서비스: Neutron Neutron은 네트워크 서비스로 여러 노드에 여러 프로세스를 배치하는 독립형 서비스 프로세스는 서로 및 다른 OpenStack의 서비스와 상화 작용 Neutron의 논리 아키텍처 구성요소 기능 neutron-server network api의 기능 및 네트워크 확장 기능을 서비스하며, 각 포트의 대한 모델 및 Pfmf 지정, AMQP를 사용하여 데이터베이스와 통신하는 플러그인을 통해 수행 neutron-L2-agent OVS 가상 Bridge 사이에서데이터 패킷을 전달하기 위한 중계장치 neutron-l3-agent 태넌트 네트워크에서 VM의 외부 네트워크 엑세서를 위한 L3/ NAT 전달을 제공 neutron-dhcp-agent 테넌트 네트워크에 DHCP 서비스를 제공, DHCP agent는 메시지 큐에 엑세스할 수 있는 권한이 필요 Queue 다른 서비스 간의 통신의 역할을 수행 Neutron Database Neutron 서비스를 수행하기 위한 일련의 정보들은 보관, 관리하는 DB Neutron 3rd Party Plugin Neutron 서비스의 안정적인 통신 역할을 수행 plugin agent 각 compute node에서 실행되며 로컬 vswitch을 구성 및 관리 network provider services 테넌트 네트워크에 추가 네트워킹 서비스를 제공 Neutron은 다양한 네트워크 플러그인이나 네트워크 모델을 지원 사용자는 Neutron API를 이용해 neutron-server로 IP 할당을 요청 neutron-server 들어온 요청을 Queue로 다시 요청 Queue는 neutron-dhcp-agent와 Neutron 3rd Party plugin으로 IP 할당 지시를 내림 neutron-dhcp-agent와 Neutron 3rd Party Plugin은 지시 받은 작업 수행을 시작 neutron-server는 수시로 작업 상태를 Neutron database에 저장 할당된 IP를 인스턴스에서 사용 가능 Neutron의 네트워킹 프로세스 neutron-server에 의해 명령을 요청을 받음 plugin을 토대로 Messae queue를 통해 각 agent의 기능을 수행 이와 함께 SDN 서비스를 수행 Neutron network의 종류 네트워크의 종류 기능 Management network OpenStack 구성 요소 간의 내부 통신에 사용, 기본적으로 IP 주소는 데이터 센터 내에서만 사용이 가능 Guest network 클라우드 배포 내에서 인스턴스 데이터 통신에 사용되며, 네트워킹 플러그인 및 테넌트가 만든 가상 네트워크의 구성 선택에 따라 변동 External network 외부에서 인스턴스에 대한 엑세스를 위해 제공되는 네트워크 API network OpneStack API를 외부에 노출시키는 네트워크 Neutron과 VRRP, DVR VRRP(Virtual Router Redundancy Protocl)로 랜에서 정적으로 설정된 기본 라우터를 사용할 때, 하나 이상의 백업 라우터를 사용하는 방법을 제공하는 인터넷 프로토콜">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/openstack/openstack/neutron/><meta property="og:title" content="Neutron" />
+<meta property="og:description" content="네트워크를 관리하는 서비스: Neutron 네트워크를 관리하는 서비스: Neutron Neutron은 네트워크 서비스로 여러 노드에 여러 프로세스를 배치하는 독립형 서비스 프로세스는 서로 및 다른 OpenStack의 서비스와 상화 작용 Neutron의 논리 아키텍처 구성요소 기능 neutron-server network api의 기능 및 네트워크 확장 기능을 서비스하며, 각 포트의 대한 모델 및 Pfmf 지정, AMQP를 사용하여 데이터베이스와 통신하는 플러그인을 통해 수행 neutron-L2-agent OVS 가상 Bridge 사이에서데이터 패킷을 전달하기 위한 중계장치 neutron-l3-agent 태넌트 네트워크에서 VM의 외부 네트워크 엑세서를 위한 L3/ NAT 전달을 제공 neutron-dhcp-agent 테넌트 네트워크에 DHCP 서비스를 제공, DHCP agent는 메시지 큐에 엑세스할 수 있는 권한이 필요 Queue 다른 서비스 간의 통신의 역할을 수행 Neutron Database Neutron 서비스를 수행하기 위한 일련의 정보들은 보관, 관리하는 DB Neutron 3rd Party Plugin Neutron 서비스의 안정적인 통신 역할을 수행 plugin agent 각 compute node에서 실행되며 로컬 vswitch을 구성 및 관리 network provider services 테넌트 네트워크에 추가 네트워킹 서비스를 제공 Neutron은 다양한 네트워크 플러그인이나 네트워크 모델을 지원 사용자는 Neutron API를 이용해 neutron-server로 IP 할당을 요청 neutron-server 들어온 요청을 Queue로 다시 요청 Queue는 neutron-dhcp-agent와 Neutron 3rd Party plugin으로 IP 할당 지시를 내림 neutron-dhcp-agent와 Neutron 3rd Party Plugin은 지시 받은 작업 수행을 시작 neutron-server는 수시로 작업 상태를 Neutron database에 저장 할당된 IP를 인스턴스에서 사용 가능 Neutron의 네트워킹 프로세스 neutron-server에 의해 명령을 요청을 받음 plugin을 토대로 Messae queue를 통해 각 agent의 기능을 수행 이와 함께 SDN 서비스를 수행 Neutron network의 종류 네트워크의 종류 기능 Management network OpenStack 구성 요소 간의 내부 통신에 사용, 기본적으로 IP 주소는 데이터 센터 내에서만 사용이 가능 Guest network 클라우드 배포 내에서 인스턴스 데이터 통신에 사용되며, 네트워킹 플러그인 및 테넌트가 만든 가상 네트워크의 구성 선택에 따라 변동 External network 외부에서 인스턴스에 대한 엑세스를 위해 제공되는 네트워크 API network OpneStack API를 외부에 노출시키는 네트워크 Neutron과 VRRP, DVR VRRP(Virtual Router Redundancy Protocl)로 랜에서 정적으로 설정된 기본 라우터를 사용할 때, 하나 이상의 백업 라우터를 사용하는 방법을 제공하는 인터넷 프로토콜" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/openstack/openstack/neutron/" /><meta property="article:section" content="docs" />
+
+
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e2bd7d5b85b8364f83ad5a78c7bee3da407d197c72a6a9f01b68855e04db9985.css" integrity="sha256-4r19W4W4Nk&#43;DrVp4x77j2kB9GXxypqnwG2iFXgTbmYU=">
+<script defer src="/en.search.min.21661551a6db5c857106f06ffb5acb09a7ce2e4ba573c2f7d7bb316512531add.js" integrity="sha256-IWYVUabbXIVxBvBv&#43;1rLCafOLkulc8L317sxZRJTGt0="></script>
+<!--
+
+-->
+
+  
+
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/openstack/" class="">OpenStack 개요</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/keystone/" class="">Keystone</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/glance/" class="">Glance</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/nova/" class="">Nova</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/neutron/" class="active">Neutron</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/cinder/" class="">Cinder</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/ceilometer/" class="">Ceilometer</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/horizon/" class="">Horizon</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/swift/" class="">Swift</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/heat/" class="">Heat</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/trove/" class="">Trove</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/sahara/" class="">Sahara</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/ironic/" class="">Ironic</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/service/" class="">Service</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/monitoring/pc/" class="collapsed ">Monitoring</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Neutron</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#네트워크를-관리하는-서비스-neutron-1"><strong>네트워크를 관리하는 서비스: Neutron</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#neutron의-논리-아키텍처"><strong>Neutron의 논리 아키텍처</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#neutron의-네트워킹-프로세스"><strong>Neutron의 네트워킹 프로세스</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#neutron-network의-종류"><strong>Neutron network의 종류</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#neutron과-vrrp-dvr"><strong>Neutron과 VRRP, DVR</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#네트워크-관련-명령어"><strong>네트워크 관련 명령어</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#fixed-ip-floating-ip"><strong>fixed-ip, floating-ip</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#security-group"><strong>Security Group</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="네트워크를-관리하는-서비스-neutron"><strong>네트워크를 관리하는 서비스: Neutron</strong></h1>
+<hr>
+<h1 id="heading"></h1>
+<h2 id="네트워크를-관리하는-서비스-neutron-1"><strong>네트워크를 관리하는 서비스: Neutron</strong></h2>
+<ul>
+<li><strong>Neutron은 네트워크 서비스로 여러 노드에 여러 프로세스를 배치하는 독립형 서비스</strong></li>
+<li><strong>프로세스는 서로 및 다른 OpenStack의 서비스와 상화 작용</strong></li>
+</ul>
+<h1 id="heading-1"></h1>
+<p> </p>
+<h1 id="heading-2"></h1>
+<h3 id="neutron의-논리-아키텍처"><strong>Neutron의 논리 아키텍처</strong></h3>
+<h1 id="heading-3"></h1>
+<p><img src="/Openstack/Neutron/Neutron01.png" alt="" /></p>
+<h1 id="heading-4"></h1>
+<table>
+<thead>
+<tr>
+<th>구성요소</th>
+<th>기능</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>neutron-server</td>
+<td>network api의 기능 및 네트워크 확장 기능을 서비스하며, 각 포트의 대한 모델 및 Pfmf 지정, AMQP를 사용하여 데이터베이스와 통신하는 플러그인을 통해 수행</td>
+</tr>
+<tr>
+<td>neutron-L2-agent</td>
+<td>OVS 가상 Bridge 사이에서데이터 패킷을 전달하기 위한 중계장치</td>
+</tr>
+<tr>
+<td>neutron-l3-agent</td>
+<td>태넌트 네트워크에서 VM의 외부 네트워크 엑세서를 위한 L3/ NAT 전달을 제공</td>
+</tr>
+<tr>
+<td>neutron-dhcp-agent</td>
+<td>테넌트 네트워크에 DHCP 서비스를 제공, DHCP agent는 메시지 큐에 엑세스할 수 있는 권한이 필요</td>
+</tr>
+<tr>
+<td>Queue</td>
+<td>다른 서비스 간의 통신의 역할을 수행</td>
+</tr>
+<tr>
+<td>Neutron Database</td>
+<td>Neutron 서비스를 수행하기 위한 일련의 정보들은 보관, 관리하는 DB</td>
+</tr>
+<tr>
+<td>Neutron 3rd Party Plugin</td>
+<td>Neutron 서비스의 안정적인 통신 역할을 수행</td>
+</tr>
+<tr>
+<td>plugin agent</td>
+<td>각 compute node에서 실행되며 로컬 vswitch을 구성 및 관리</td>
+</tr>
+<tr>
+<td>network provider services</td>
+<td>테넌트 네트워크에 추가 네트워킹 서비스를 제공</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-5"></h1>
+<ul>
+<li><strong>Neutron은 다양한 네트워크 플러그인이나 네트워크 모델을 지원</strong></li>
+<li><strong>사용자는 Neutron API를 이용해 neutron-server로 IP 할당을 요청</strong></li>
+<li><strong>neutron-server 들어온 요청을 Queue로 다시 요청</strong></li>
+<li><strong>Queue는 neutron-dhcp-agent와 Neutron 3rd Party plugin으로 IP 할당 지시를 내림</strong></li>
+<li><strong>neutron-dhcp-agent와 Neutron 3rd Party Plugin은 지시 받은 작업 수행을 시작</strong></li>
+<li><strong>neutron-server는 수시로 작업 상태를 Neutron database에 저장</strong></li>
+<li><strong>할당된 IP를 인스턴스에서 사용 가능</strong></li>
+</ul>
+<h1 id="heading-6"></h1>
+<p> </p>
+<h1 id="heading-7"></h1>
+<h3 id="neutron의-네트워킹-프로세스"><strong>Neutron의 네트워킹 프로세스</strong></h3>
+<h1 id="heading-8"></h1>
+<p><img src="/Openstack/Neutron/Neutron02.png" alt="" /></p>
+<ul>
+<li><strong>neutron-server에 의해 명령을 요청을 받음</strong></li>
+<li><strong>plugin을 토대로 Messae queue를 통해 각 agent의 기능을 수행</strong></li>
+<li><strong>이와 함께 SDN 서비스를 수행</strong></li>
+</ul>
+<h1 id="heading-9"></h1>
+<p> </p>
+<h1 id="heading-10"></h1>
+<h3 id="neutron-network의-종류"><strong>Neutron network의 종류</strong></h3>
+<h1 id="heading-11"></h1>
+<p><img src="/Openstack/Neutron/Neutron03.png" alt="" /></p>
+<h1 id="heading-12"></h1>
+<table>
+<thead>
+<tr>
+<th>네트워크의 종류</th>
+<th>기능</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Management network</td>
+<td>OpenStack 구성 요소 간의 내부 통신에 사용, 기본적으로 IP 주소는 데이터 센터 내에서만 사용이 가능</td>
+</tr>
+<tr>
+<td>Guest network</td>
+<td>클라우드 배포 내에서 인스턴스 데이터 통신에 사용되며, 네트워킹 플러그인 및 테넌트가 만든 가상 네트워크의 구성 선택에 따라 변동</td>
+</tr>
+<tr>
+<td>External network</td>
+<td>외부에서 인스턴스에 대한 엑세스를 위해 제공되는 네트워크</td>
+</tr>
+<tr>
+<td>API network</td>
+<td>OpneStack API를 외부에 노출시키는 네트워크</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-13"></h1>
+<p> </p>
+<h1 id="heading-14"></h1>
+<h3 id="neutron과-vrrp-dvr"><strong>Neutron과 VRRP, DVR</strong></h3>
+<h1 id="heading-15"></h1>
+<ul>
+<li>
+<p><strong>VRRP(Virtual Router Redundancy Protocl)로 랜에서 정적으로 설정된 기본 라우터를 사용할 때, 하나 이상의 백업 라우터를 사용하는 방법을 제공하는 인터넷 프로토콜</strong></p>
+</li>
+<li>
+<p><strong>DVR(Distributed Virtual Router)이란 VRRP 기능을 향상시키고, 분산 라우팅 기능과 HA(High Availability), 로드밸런싱 기능을 사용할 수 있음</strong></p>
+</li>
+<li>
+<p><strong>기존 레거시 HA 라우터와 마찬가지로 DVR/ SNAT(Static NAT), HA 라우터는 다른 노드에서 실행되는 L3 Agent의 백업 DVR/ SNAT 라우터에서 SNAT 서비스 장애를 빠르게 해결 가능</strong></p>
+</li>
+</ul>
+<h1 id="heading-16"></h1>
+<p> </p>
+<h1 id="heading-17"></h1>
+<p><img src="/Line/Open.png" alt="Line" /></p>
+<h2 id="네트워크-관련-명령어"><strong>네트워크 관련 명령어</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ openstack network list
+</span></span><span style="display:flex;"><span># 네트워크 확인
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ openstack network show [네트워크 이름]
+</span></span><span style="display:flex;"><span># 네트워크 정보 조회
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ ip netns
+</span></span><span style="display:flex;"><span># 라우터 정보 조회
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ ip netns exec [라우터이름] [리눅스 명령어]
+</span></span><span style="display:flex;"><span>      netstat -r
+</span></span><span style="display:flex;"><span>      arp -an
+</span></span><span style="display:flex;"><span>      ifconfig
+</span></span><span style="display:flex;"><span>      ping 
+</span></span><span style="display:flex;"><span># 라우터의 자세한 정보 조회
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ openstack network create --provider-network-type [타입] [네트워크 이름] 
+</span></span><span style="display:flex;"><span># 네트워크 생성
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># openstack subnet create --network [네트워크 이름] --gateway [GW주소] --subnet-range [서브넷 범위] [서브넷 이름
+</span></span><span style="display:flex;"><span># 서브넷 생성
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ openstack router list
+</span></span><span style="display:flex;"><span># 라우터 목록 확인
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ openstack router show [라우터 이름]
+</span></span><span style="display:flex;"><span># 라우터 정보 조회
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ openstack router add subnet [라우터 이름] [서브넷 이름]
+</span></span><span style="display:flex;"><span># 라우터에 서브넷 추가
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ openstack port create --network [네트워크 이름] --fixed-ip subnet=[서브넷 이름] [포트 이름]
+</span></span><span style="display:flex;"><span># 포트 생성
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ openstack router add port [라우터 이름] [포트 이름]
+</span></span><span style="display:flex;"><span># 라우터에 포트 추가
+</span></span></code></pre></div><h1 id="heading-18"></h1>
+<h3 id="fixed-ip-floating-ip"><strong>fixed-ip, floating-ip</strong></h3>
+<h1 id="heading-19"></h1>
+<table>
+<thead>
+<tr>
+<th>IP</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fixed IP</td>
+<td>가상머신에 할당되는 내부 IP를 의미</td>
+</tr>
+<tr>
+<td>Floating IP</td>
+<td>클라우드 내의 가상머신이 인터넷 외부망과 연결되기 위해 배정 받는 IP를 의미</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-20"></h1>
+<h3 id="security-group"><strong>Security Group</strong></h3>
+<h1 id="heading-21"></h1>
+<ul>
+<li><strong>인스턴스에 대한 인바운드 및 아웃바운드 트래픽을 제어하는 가상의 네트워크 방화벽</strong></li>
+<li><strong>하나의 인스턴스에 여러 개의 보안 그룹 적용도 가능</strong></li>
+</ul>
+<h1 id="heading-22"></h1>
+<p> </p>
+<h1 id="heading-23"></h1>
+<p><img src="/Line/Open2.png" alt="Line" /></p>
+<h1 id="heading-24"></h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+
+</div>
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#네트워크를-관리하는-서비스-neutron-1"><strong>네트워크를 관리하는 서비스: Neutron</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#neutron의-논리-아키텍처"><strong>Neutron의 논리 아키텍처</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#neutron의-네트워킹-프로세스"><strong>Neutron의 네트워킹 프로세스</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#neutron-network의-종류"><strong>Neutron network의 종류</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#neutron과-vrrp-dvr"><strong>Neutron과 VRRP, DVR</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#네트워크-관련-명령어"><strong>네트워크 관련 명령어</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#fixed-ip-floating-ip"><strong>fixed-ip, floating-ip</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#security-group"><strong>Security Group</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

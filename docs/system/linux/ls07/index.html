@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PXE Server PXE Server의 정의 PXE는 (Preboot Execution Enviroment)의 약자로 운영체제가 설치되지 않은 컴퓨터가 네트워크를 통해 PXE 서버에 접속해서 부팅도디도록 해주는 인터페이스를 지칭하는 용어를 의미합니다. PXE 서버설치 PXE 설치 서버는 별도의 패키지가 존재하는 것이 아닌 각각의 서버들이 특정한 역할을 수행한다. Server 역할 DHCP Server IP 주소를 자동으로 할당 TFTP Server 설치에 필요한 서버 구성 내용과 PXE boot 이미지는 모두 TFTP로 동작 FTP, HTTP, NFS Server CentOS DVD의 설치파일을 전송 간단한 설치순서 아무것도 설치되지 않은 PC에 전원 넣으면 자동으로 PXE 설치 서버를 찾는다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/system/linux/ls07/><meta property="og:title" content="PXE(KickStart) Server" />
+<meta property="og:description" content="PXE Server PXE Server의 정의 PXE는 (Preboot Execution Enviroment)의 약자로 운영체제가 설치되지 않은 컴퓨터가 네트워크를 통해 PXE 서버에 접속해서 부팅도디도록 해주는 인터페이스를 지칭하는 용어를 의미합니다. PXE 서버설치 PXE 설치 서버는 별도의 패키지가 존재하는 것이 아닌 각각의 서버들이 특정한 역할을 수행한다. Server 역할 DHCP Server IP 주소를 자동으로 할당 TFTP Server 설치에 필요한 서버 구성 내용과 PXE boot 이미지는 모두 TFTP로 동작 FTP, HTTP, NFS Server CentOS DVD의 설치파일을 전송 간단한 설치순서 아무것도 설치되지 않은 PC에 전원 넣으면 자동으로 PXE 설치 서버를 찾는다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/linux/ls07/" /><meta property="article:section" content="docs" />
+
+
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e2bd7d5b85b8364f83ad5a78c7bee3da407d197c72a6a9f01b68855e04db9985.css" integrity="sha256-4r19W4W4Nk&#43;DrVp4x77j2kB9GXxypqnwG2iFXgTbmYU=">
+<script defer src="/en.search.min.21661551a6db5c857106f06ffb5acb09a7ce2e4ba573c2f7d7bb316512531add.js" integrity="sha256-IWYVUabbXIVxBvBv&#43;1rLCafOLkulc8L317sxZRJTGt0="></script>
+<!--
+
+-->
+
+  
+
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/monitoring/pc/" class="collapsed ">Monitoring</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux/" class="">Linux 개요</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux01/" class="">Linux System Management</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux02/" class="">Linux Filesystem</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux03/" class="">Linux 압축</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux04/" class="">Linux 문자열 처리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux05/" class="">Linux 날짜</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux06/" class="">Linux 파일처리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux07/" class="">Linux Network</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux08/" class="">Linux 형식파일</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/mount/" class="">Linux Mount</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-0/" class="">Linux master 개요</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/ls00/" class="">서버환경의 기초</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-1/" class="">Linux 일반</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/ls01/" class="">이용 기술</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-2/" class="">Linux 운영 및 관리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-3/" class="">Linux 활용</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/ls02/" class="">서버도입</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/cacti01/" class="">Cacti</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/ls07/" class="active">PXE(KickStart) Server</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>PXE(KickStart) Server</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pxe-server의-정의"><strong>PXE Server의 정의</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pxe-서버설치"><strong>PXE 서버설치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pxe-구성을-위한-패키지-설치"><strong>PXE 구성을 위한 패키지 설치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dhcp-설정"><strong>DHCP 설정</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ftp"><strong>ftp</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#tftp"><strong>tftp</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#syslinux"><strong>Syslinux</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pxe-menufile"><strong>PXE Menufile</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#tftpftp-pxe-kernel-이미지-및-리눅스-이미지-로딩"><strong>TFTP/FTP PXE Kernel, 이미지 및 리눅스 이미지 로딩</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#kcikstart-구성"><strong>KcikStart 구성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="pxe-server"><strong>PXE Server</strong></h1>
+<hr>
+<h1 id="heading"></h1>
+<h2 id="pxe-server의-정의"><strong>PXE Server의 정의</strong></h2>
+<h1 id="heading-1"></h1>
+<ul>
+<li><strong>PXE는 (Preboot Execution Enviroment)의 약자로 운영체제가 설치되지 않은 컴퓨터가 네트워크를 통해 PXE 서버에 접속해서 부팅도디도록 해주는 인터페이스를 지칭하는 용어를 의미합니다.</strong></li>
+</ul>
+<h1 id="heading-2"></h1>
+<p> </p>
+<h1 id="heading-3"></h1>
+<h3 id="pxe-서버설치"><strong>PXE 서버설치</strong></h3>
+<h1 id="heading-4"></h1>
+<ul>
+<li><strong>PXE 설치 서버는 별도의 패키지가 존재하는 것이 아닌 각각의 서버들이 특정한 역할을 수행한다.</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Server</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DHCP Server</td>
+<td>IP 주소를 자동으로 할당</td>
+</tr>
+<tr>
+<td>TFTP Server</td>
+<td>설치에 필요한 서버 구성 내용과 PXE boot 이미지는 모두 TFTP로 동작</td>
+</tr>
+<tr>
+<td>FTP, HTTP, NFS Server</td>
+<td>CentOS DVD의 설치파일을 전송</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-5"></h1>
+<ul>
+<li><strong>간단한 설치순서</strong>
+<ul>
+<li>
+<p><strong>아무것도 설치되지 않은 PC에 전원 넣으면 자동으로 PXE 설치 서버를 찾는다.</strong></p>
+</li>
+<li>
+<p><strong>나머지는 PXE 설치 서버에 설정한대로 설치가 자동으로 진행된다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-6"></h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>PXE 동작 프로세스</strong>
+<img src="/Linux/LS01.png" alt="" /></p>
+<ol>
+<li>
+<p><strong>먼저 클라이언트가 부팅하면서 DHCP Discover 패킷을 브로드캐스트에 전송한다. 이 역할은 NIC이 수행하고 이 때 DHCP payload에 PXE Client Flag를 넣어서 보낸다.</strong></p>
+</li>
+<li>
+<p><strong>수신한 서버는 DHCP offer로 응답하며, 클라이언트가 가져갈 IP 정보들에 대해 제공해준다. 이 때 일반 DHCP에 추가되어 DHCP에 사전에 설정된 Next-Server IP(TFTP서버) 정보도 함께 제공된다. TFTP 서버는 DHCP가 함께 수행해도 되고 그렇지 않을 경우 Proxy 형태로도 제공할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>클라이언트는 서버로부터 받은 정보를 가지고 다시 DHCP Request를 수행한다.</strong></p>
+</li>
+<li>
+<p><strong>DHCP 서버는 DHCP ACK를 통해서 최종적으로 IP정보와 TFTP 정보를 함꼐 전송한다.</strong></p>
+</li>
+</ol>
+<h1 id="heading-7"></h1>
+<p> 
+<img src="/Linux/LS02.png" alt="" /></p>
+<ol start="5">
+<li>
+<p><strong>클라이언트는 DHCP 수신 정보 가운데, TFTP 서버 정보를 보고 NBP(Network Boot Program)으로 PXE 요청을 TFTP 서버에게 보낸다.</strong></p>
+</li>
+<li>
+<p><strong>서버는 요청을 받고 &ldquo;Pxelinux.0&quot;을 클라이언트에 응답하고 클라이언트는 해당 정보를 수신하면서 랜카드에서 메모리로 로딩을 시작한다.</strong></p>
+</li>
+<li>
+<p><strong>클라이언트는 이제 실제 구성정보를 서버에게 요청한다.</strong></p>
+</li>
+<li>
+<p><strong>서버는 PXE boot 이미지와 기타 구성정보가 포함된 &ldquo;pxelinux.cfg&quot;내용을 클라이언트에게 전송하고 클라이언트는 해당 내용을 수신한다.</strong></p>
+</li>
+<li>
+<p><strong>클라이언트는 &ldquo;pxelinux.cfg&quot;에 구성에 포함되어 있는 커널과 PXE 이미지 파일을 요청한다.</strong></p>
+</li>
+<li>
+<p><strong>서버는 클라이언트의 요청내용을 받고, 서버 내부에 TFTP 지정 디렉토리에서 PXE 커널, 부트 이미지를 클라이언트에게 로딩한다.</strong></p>
+</li>
+<li>
+<p><strong>클라이언트는 PXE 커널 및 부트 이미지를 로딩하고, 추가적으로 장치에 포함된 리눅스 파일을 로딩하여 부팅을 시작한다. 이 때 kickstart 정보를 통해서 설치시 필요한 정보 (언어, 시간, 패키지, 선택, 패스워드 등)에 대해 이 파일을 참조하고 설치를 완료한다.</strong></p>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="heading-8"></h1>
+<ul>
+<li><strong>설치환경</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Hostname</th>
+<th>OS</th>
+<th>Network</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L1</td>
+<td>CentOS7</td>
+<td>192.168.10.50</td>
+</tr>
+<tr>
+<td>null</td>
+<td>null</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-9"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-10"></h1>
+<h3 id="pxe-구성을-위한-패키지-설치"><strong>PXE 구성을 위한 패키지 설치</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ L1&gt; yum -y install tftp tftp-server xinetd vsftpd dhcp syslinux
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># PXE 구성 패키지 설치</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ L1&gt; <span style="color:#66d9ef">for</span> i in ftp tftp dhcp proxy-dhcp; <span style="color:#66d9ef">do</span> firewall-cmd --permanent --add-service<span style="color:#f92672">=</span>$i; <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>$ L1&gt; <span style="color:#66d9ef">for</span> i in 69/tcp 69/udp 4011/udp; <span style="color:#66d9ef">do</span> firewall-cmd --permanent --add-port<span style="color:#f92672">=</span>$i; <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>$ L1&gt; firewall-cmd --reload
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 방화벽 설정</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ L1&gt; <span style="color:#66d9ef">for</span> i in dhcpd tftp xinetd vsftpd; <span style="color:#66d9ef">do</span> systemctl enable --now $i; <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 서비스 등록</span>
+</span></span></code></pre></div><h1 id="heading-11"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-12"></h1>
+<h3 id="dhcp-설정"><strong>DHCP 설정</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ L1&gt; vi /etc/dhcp/dhcpd.conf
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># config for the PXE service</span>
+</span></span><span style="display:flex;"><span>ddns-update-style interim;
+</span></span><span style="display:flex;"><span>ignore client-updates;
+</span></span><span style="display:flex;"><span>allow booting;
+</span></span><span style="display:flex;"><span>allow bootp;
+</span></span><span style="display:flex;"><span>allow unknown-clients;
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Top file for the Cisco DC LAB</span>
+</span></span><span style="display:flex;"><span>option domain-name <span style="color:#e6db74">&#34;cisko-dc.com&#34;</span>;
+</span></span><span style="display:flex;"><span>option domain-name-servers ns1.cisko-dc.com, ns2.cisko-dc.com;
+</span></span><span style="display:flex;"><span>default-lease-time 360;
+</span></span><span style="display:flex;"><span>max-lease-time 720;
+</span></span><span style="display:flex;"><span>authoritative;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>subnet 192.168.10.0 netmask 255.255.255.0 <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        option routers                  192.168.10.2;
+</span></span><span style="display:flex;"><span>        option subnet-mask              255.255.255.0;
+</span></span><span style="display:flex;"><span>        option domain-search            <span style="color:#e6db74">&#34;cisko-dc.com&#34;</span>;
+</span></span><span style="display:flex;"><span>        option domain-name-servers      8.8.8.8;
+</span></span><span style="display:flex;"><span>        range   192.168.10.150   192.168.10.199;
+</span></span><span style="display:flex;"><span>        next-server 192.168.10.100;
+</span></span><span style="display:flex;"><span>        filename <span style="color:#e6db74">&#34;pxelinux.0&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># PXE service를 위해서 DHCP 서비스에 추가할 항목들이 있다. 해당 부분을 기입한다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 또한 next-server(TFTP server)와 파일 이미지를 작성한다.</span>
+</span></span></code></pre></div><h1 id="heading-13"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-14"></h1>
+<h3 id="ftp"><strong>ftp</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ L1&gt; setsebool -P allow_ftpd_full_access <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><h1 id="heading-15"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-16"></h1>
+<h3 id="tftp"><strong>tftp</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ L1&gt; vi /etc/xinetd.d/tftp
+</span></span><span style="display:flex;"><span>service tftp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        socket_type             <span style="color:#f92672">=</span> dgram
+</span></span><span style="display:flex;"><span>        protocol                <span style="color:#f92672">=</span> udp
+</span></span><span style="display:flex;"><span>        wait                    <span style="color:#f92672">=</span> yes
+</span></span><span style="display:flex;"><span>        user                    <span style="color:#f92672">=</span> root
+</span></span><span style="display:flex;"><span>        server                  <span style="color:#f92672">=</span> /usr/sbin/in.tftpd
+</span></span><span style="display:flex;"><span>        server_args             <span style="color:#f92672">=</span> -s /var/lib/tftpboot
+</span></span><span style="display:flex;"><span>        disable                 <span style="color:#f92672">=</span> no
+</span></span><span style="display:flex;"><span>        per_source              <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>
+</span></span><span style="display:flex;"><span>        cps                     <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        flags                   <span style="color:#f92672">=</span> IPv4
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># tftp 서비스 환경설정이 기본 disable=yes 로 되어 있다. 해당 정보를 disable = no로 바꾸어 서비스를 활성화한다.</span>
+</span></span></code></pre></div><h1 id="heading-17"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-18"></h1>
+<h3 id="syslinux"><strong>Syslinux</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ L1&gt; cp -v /usr/share/syslinux/pxelinux.0 /var/lib/tftpboot
+</span></span><span style="display:flex;"><span>$ L1&gt; cp -v /usr/share/syslinux/menu.c32 /var/lib/tftpboot
+</span></span><span style="display:flex;"><span>$ L1&gt; cp -v /usr/share/syslinux/memdisk /var/lib/tftpboot
+</span></span><span style="display:flex;"><span>$ L1&gt; cp -v /usr/share/syslinux/mboot.c32 /var/lib/tftpboot
+</span></span><span style="display:flex;"><span>$ L1&gt; cp -v /usr/share/syslinux/chain.c32 /var/lib/tftpboot
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># syslinux 설치 디렉토리에서 부트로드에 관련된 파일들을 tftpboot 디렉토리로 복제한다.</span>
+</span></span></code></pre></div><h1 id="heading-19"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-20"></h1>
+<h3 id="pxe-menufile"><strong>PXE Menufile</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ L1&gt; mkdir /var/lib/tftpboot/pxelinux.cfg
+</span></span><span style="display:flex;"><span>$ L1&gt; vi /var/lib/tftpboot/pxelinux.cfg/default
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 생성된 메뉴파일 구성에 하위에 default라는 파일이 생성되며, 여기에 구성파일을 넣어 준다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pxelinux.cfg에 직접 넣어도 관계 없다.</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>default menu.c32
+</span></span><span style="display:flex;"><span>prompt <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>timeout <span style="color:#ae81ff">30</span>
+</span></span><span style="display:flex;"><span>MENU TITLE cisko-dc.com PXE Menu
+</span></span><span style="display:flex;"><span>LABEL centos7_x64
+</span></span><span style="display:flex;"><span>MENU LABEL CentOS 7_X64
+</span></span><span style="display:flex;"><span>KERNEL /networkboot/centos/vmlinuz
+</span></span><span style="display:flex;"><span>APPEND initrd<span style="color:#f92672">=</span>/networkboot/centos/initrd.img inst.repo<span style="color:#f92672">=</span>ftp://192.168.10.100/pub/centos ks<span style="color:#f92672">=</span>ftp://192.168.10.100/pub/centos/centos7.cfg
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># KERNEL은 PXE Kernal이 위치하는 디렉토리이다. 별도로 패스를 지정하지 않으면, /etc/xinetd.d/tftp 의 환경설정에 표기된 Path를 가져가고, 예제에서 처럼 추가로 넣어주면 환경설정에 표기된 Path 뒤에 추가 생성하면 된다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># APPEND는 kernel 로딩 이후 실제 PXE boot 이미지로 path 설정은 동일하다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># inst.repo는 PXE boot이후 클라이언트가 실제로 사용할 리눅스 이미지 장소를 선언해준다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ks는 kickstart가 위치한 장소를 선언해준다.</span>
+</span></span></code></pre></div><h1 id="heading-21"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-22"></h1>
+<h3 id="tftpftp-pxe-kernel-이미지-및-리눅스-이미지-로딩"><strong>TFTP/FTP PXE Kernel, 이미지 및 리눅스 이미지 로딩</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ L1&gt; mkdir /media/iso
+</span></span><span style="display:flex;"><span>$ L1&gt; mount CentOS-7-x86_64-Minimal-1810.iso /media/iso
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 클라이언트에 설치할 리눅스 ISO를 마운트 시킨다.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ L1&gt; mkdir /var/ftp/pub/centos
+</span></span><span style="display:flex;"><span>$ L1&gt; cp -r /media/iso/* /var/ftp/pub/centos/
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 설치 이미지를 ftp public 디렉토리에 전체복사를 한다.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ L1&gt; ls -al /var/ftp/pub/centos/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ L1&gt; mkdir -R /var/lib/tftpboot/networkboot/centos/
+</span></span><span style="display:flex;"><span>$ L1&gt; cp /var/ftp/pub/centos/images/pxeboot/<span style="color:#f92672">{</span>initrd.img,vmlinuz<span style="color:#f92672">}</span> /var/lib/tftpboot/networkboot/centos/
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 해당 설치 이미지 파일들 중에 pxeboot에 필요한 pxe 이미지와 커널을 tftpboot 디렉토리로 복제해 준다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 앞서 /var/lib/tftpboot/pxelinux.cfg/default 에서 설정한 경로와 동일하면 된다.</span>
+</span></span></code></pre></div><h1 id="heading-23"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-24"></h1>
+<h3 id="kcikstart-구성"><strong>KcikStart 구성</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ L1&gt; touch /var/ftp/pub/centos/centos7.cfg
+</span></span><span style="display:flex;"><span>$ L1&gt; cp /anaconda-ks.cfg /var/ftp/pub/centos/centos7.cfg
+</span></span><span style="display:flex;"><span>$ L1&gt; chmod <span style="color:#ae81ff">755</span> /var/ftp/pub/centos/centos7.cfg
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 현재 시스템에 사용 중인 kickstart 파일을 그대로 활용하고, 일부 수정한다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 설치시 클라이언트가 사용하기 때문에 권한 설정을 변경해 준다.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ L1&gt; openssl passwd -1 qwer1234
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># kickstart 구성 이전에 해야 할 일이 있다. 이것은 kickstart 파일에 포함될 패스워드이다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 암호화로 변경해서 복사해 둔 후 kickstart 설정시 입력한다.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ L1&gt; 
+</span></span><span style="display:flex;"><span>$ L1&gt; 
+</span></span><span style="display:flex;"><span>$ L1&gt; 
+</span></span><span style="display:flex;"><span>$ L1&gt; 
+</span></span><span style="display:flex;"><span>$ L1&gt; 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#version=DEVEL</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># System authorization information</span>
+</span></span><span style="display:flex;"><span>auth --enableshadow --passalgo<span style="color:#f92672">=</span>sha512
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Use network installation</span>
+</span></span><span style="display:flex;"><span>url --url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ftp://192.168.10.100/pub/centos/“
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">### network 기반 설치로, centos가 이미지가 위치한 경로를 지정해 준다. FTP 디렉토리이다.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"># Use graphical install
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">graphical
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"># Run the Setup Agent on first boot
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">firstboot --enable
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">ignoredisk --only-use=sda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"># Keyboard layouts
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">keyboard --vckeymap=us --xlayouts=&#39;us&#39;,&#39;kr&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"># System language
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">lang en_US.UTF-8 --addsupport=ko_KR.UTF-8
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">## 기존에 사용중인 PXE의 환경을 그대로 수용한다.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"># Network information
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">network  --bootproto=dhcp --device=ens33 --activate
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">network  --hostname=localhost.localdomain
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">## 네트워크 환경설정 부분이다. 가상화 VM으로 ens192를 사용중이다.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"># Root password
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">rootpw --iscrypted </span>$1$JwI35htJ$4<span style="color:#e6db74">oqF0Ae5j2Esovxr7HRz5.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"># System services
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">services --enabled=&#34;</span>chronyd<span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"># System timezone
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">timezone Asia/Seoul --isUtc --nontp
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">user --groups=wheel --name=whchoi --password=</span>$1$JwI35htJ$4<span style="color:#e6db74">oqF0Ae5j2Esovxr7HRz5./ --iscrypted --gecos=“whchoi&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#앞서 선언한 패스워드를 root와 Admin user에게 동일하게 넣어 준다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 시간대 설정과 시스템 서비스등을 선언한다.</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># System bootloader configuration</span>
+</span></span><span style="display:flex;"><span>bootloader --append<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; crashkernel=auto&#34;</span> --location<span style="color:#f92672">=</span>mbr --boot-drive<span style="color:#f92672">=</span>sda
+</span></span><span style="display:flex;"><span>autopart --type<span style="color:#f92672">=</span>lvm
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Partition clearing information</span>
+</span></span><span style="display:flex;"><span>clearpart --none --initlabel
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 파티션에 대한 정보도 넣어 준다. LVM으로 자동 파티션을 사용한다.</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>%packages
+</span></span><span style="display:flex;"><span>@^minimal
+</span></span><span style="display:flex;"><span>@core
+</span></span><span style="display:flex;"><span>kexec-tools
+</span></span><span style="display:flex;"><span>net-tools
+</span></span><span style="display:flex;"><span>chrony
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 추가로 필요한 패키지를 사전에 설치할 수 있다. ISO 파일에 있는 기본 패키지를 필요한 것을 선언한다.</span>
+</span></span><span style="display:flex;"><span>%end
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>%addon com_redhat_kdump --enable --reserve-mb<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;auto&#39;</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>%end
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>%anaconda
+</span></span><span style="display:flex;"><span>pwpolicy root --minlen<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span> --minquality<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> --notstrict --nochanges --notempty
+</span></span><span style="display:flex;"><span>pwpolicy user --minlen<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span> --minquality<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> --notstrict --nochanges --emptyok
+</span></span><span style="display:flex;"><span>pwpolicy luks --minlen<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span> --minquality<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> --notstrict --nochanges --notempty
+</span></span><span style="display:flex;"><span>%end
+</span></span></code></pre></div><h1 id="heading-25"></h1>
+<p> </p>
+<p><a href="https://itguava.tistory.com/103">레포지터리</a></p>
+</article>
+ 
+      
+<div>
+
+
+</div>
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pxe-server의-정의"><strong>PXE Server의 정의</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pxe-서버설치"><strong>PXE 서버설치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pxe-구성을-위한-패키지-설치"><strong>PXE 구성을 위한 패키지 설치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dhcp-설정"><strong>DHCP 설정</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ftp"><strong>ftp</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#tftp"><strong>tftp</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#syslinux"><strong>Syslinux</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pxe-menufile"><strong>PXE Menufile</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#tftpftp-pxe-kernel-이미지-및-리눅스-이미지-로딩"><strong>TFTP/FTP PXE Kernel, 이미지 및 리눅스 이미지 로딩</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#kcikstart-구성"><strong>KcikStart 구성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

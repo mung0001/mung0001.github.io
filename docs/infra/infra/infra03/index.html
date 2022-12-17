@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="운영체제의 종류 Linux Server 오픈소스의 대표적인 운영체제로는 리눅스를 제일 먼저 꼽을 수 있으며, 리눅스에는 여러 배포판이 존재합니다.
+배포판에 따라 애프리케이션 및 패키지 관리방법에 차이가 있으며, 각 설치 방법에도 차이가 존재합니다.
+유상지원에는 대부분 Red hat 계열을 선택하며, 유상지원이 필요없을 시에는 다른 계열을 주로 사용합니다.
+레드햇 계열 Red hat Enterprise Linux
+CentOS
+Fedora
+Vine Linux
+Scientific Linux
+Oracle Linux
+데비안 계열 Debian
+KNOPPIX
+Ubuntu
+Linux Mint
+Linux Sever의 장점 이식성과 확장성이 용이합니다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/infra/infra/infra03/><meta property="og:title" content="Operating System" />
+<meta property="og:description" content="운영체제의 종류 Linux Server 오픈소스의 대표적인 운영체제로는 리눅스를 제일 먼저 꼽을 수 있으며, 리눅스에는 여러 배포판이 존재합니다.
+배포판에 따라 애프리케이션 및 패키지 관리방법에 차이가 있으며, 각 설치 방법에도 차이가 존재합니다.
+유상지원에는 대부분 Red hat 계열을 선택하며, 유상지원이 필요없을 시에는 다른 계열을 주로 사용합니다.
+레드햇 계열 Red hat Enterprise Linux
+CentOS
+Fedora
+Vine Linux
+Scientific Linux
+Oracle Linux
+데비안 계열 Debian
+KNOPPIX
+Ubuntu
+Linux Mint
+Linux Sever의 장점 이식성과 확장성이 용이합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/infra/infra/infra03/" /><meta property="article:section" content="docs" />
+
+
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e2bd7d5b85b8364f83ad5a78c7bee3da407d197c72a6a9f01b68855e04db9985.css" integrity="sha256-4r19W4W4Nk&#43;DrVp4x77j2kB9GXxypqnwG2iFXgTbmYU=">
+<script defer src="/en.search.min.21661551a6db5c857106f06ffb5acb09a7ce2e4ba573c2f7d7bb316512531add.js" integrity="sha256-IWYVUabbXIVxBvBv&#43;1rLCafOLkulc8L317sxZRJTGt0="></script>
+<!--
+
+-->
+
+  
+
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/infra/infra01/" class="">Infra engineer란?</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/infra/infra02/" class="">Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/infra/infra03/" class="active">Operating System</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/infra/infra04/" class="">Network</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/infra/infra05/" class="">Storage</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/infra/infra06/" class="">Solution</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/infra/infra07/" class="">Infra operation</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/monitoring/pc/" class="collapsed ">Monitoring</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Operating System</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux-server"><strong>Linux Server</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#linux-sever의-장점"><strong>Linux Sever의 장점</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#window-server"><strong>Window Server</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#window-server의-장점"><strong>Window Server의 장점</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#윈도우-서버-라이선스-체계"><strong>윈도우 서버 라이선스 체계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#linux-sever와-window-server의-차이점"><strong>Linux Sever와 Window Server의 차이점</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#unix-sever"><strong>UNIX Sever</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#대표적인-운영체제"><strong>대표적인 운영체제</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="운영체제의-종류"><strong>운영체제의 종류</strong></h1>
+<h1 id="heading"></h1>
+<p> </p>
+<h1 id="heading-1"></h1>
+<h2 id="linux-server"><strong>Linux Server</strong></h2>
+<h1 id="heading-2"></h1>
+<ul>
+<li>
+<p><strong>오픈소스의 대표적인 운영체제로는 리눅스를 제일 먼저 꼽을 수 있으며, 리눅스에는 여러 배포판이 존재합니다.</strong></p>
+</li>
+<li>
+<p><strong>배포판에 따라 애프리케이션 및 패키지 관리방법에 차이가 있으며, 각 설치 방법에도 차이가 존재합니다.</strong></p>
+</li>
+<li>
+<p><strong>유상지원에는 대부분 Red hat 계열을 선택하며, 유상지원이 필요없을 시에는 다른 계열을 주로 사용합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-3"></h1>
+<ul>
+<li><strong>레드햇 계열</strong>
+<ul>
+<li>
+<p><strong>Red hat Enterprise Linux</strong></p>
+</li>
+<li>
+<p><strong>CentOS</strong></p>
+</li>
+<li>
+<p><strong>Fedora</strong></p>
+</li>
+<li>
+<p><strong>Vine Linux</strong></p>
+</li>
+<li>
+<p><strong>Scientific Linux</strong></p>
+</li>
+<li>
+<p><strong>Oracle Linux</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-4"></h1>
+<ul>
+<li><strong>데비안 계열</strong>
+<ul>
+<li>
+<p><strong>Debian</strong></p>
+</li>
+<li>
+<p><strong>KNOPPIX</strong></p>
+</li>
+<li>
+<p><strong>Ubuntu</strong></p>
+</li>
+<li>
+<p><strong>Linux Mint</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-5"></h1>
+<p> </p>
+<h1 id="heading-6"></h1>
+<h3 id="linux-sever의-장점"><strong>Linux Sever의 장점</strong></h3>
+<h1 id="heading-7"></h1>
+<ul>
+<li>
+<p><strong>이식성과 확장성이 용이합니다.</strong></p>
+<ul>
+<li><strong>리눅스는 대부분 C언어와 어셈블리 언어로 되어 있어 특정 기계에 비의존적인 특징을 가지고 있어 이식 미치 확장에 용이합니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-8"></h1>
+<ul>
+<li>
+<p><strong>텍스트 모드 중심의 관리와 다양한 관리 환경의 제공</strong></p>
+<ul>
+<li><strong>GUI 기반이 아닌 DOS창에 주로 특화되어 있으며, 직접 설정 파일을 설정하거나 단순 명령어를 통해 작업을 수행하여 능숙한 사람들에게는 빠른 작업을 도와주지만, 서툰사람들에게는 접근이 어려운 장, 단점이 있습니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-9"></h1>
+<ul>
+<li>
+<p><strong>풍부한 소프트웨어 개발 환경 제공</strong></p>
+<ul>
+<li><strong>유닉스 시스템과 리눅스 시스템은 거의 모든 프로그래밍 언어를 제공하며, 대부분이 오픈소스로 제공되기 때문에 풍부한 개발 환경을 제공받습니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-10"></h1>
+<ul>
+<li>
+<p><strong>다양한 네트워크 서비스 및 작업환경 지원</strong></p>
+<ul>
+<li><strong>오픈소스 소프트웨어 형태로 제공된느 많은 프로그램을 사용하여 다양한 웹서비스를 구축 및 서비스 할 수 있습니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-11"></h1>
+<ul>
+<li>
+<p><strong>뛰어난 안정성</strong></p>
+<ul>
+<li><strong>리눅스는 C언어 기반이기며, 국제적이고 개방적인 개발 환경을 가지고 있어 커널 및 응용 프로그램에 중대한 버그가 있을 경우 빠른 패치가 공개되며, 커널, 파일 시스템, 쉘, 웹서비스 프로그램 등 리눅스 시스템의 기반이 되는 모든 프로그램이 소스코드가 공개되어 있어 최적화 및 안정성이 뛰어나다 할 수 있습니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-12"></h1>
+<ul>
+<li>
+<p><strong>시스템 보안성</strong></p>
+<ul>
+<li><strong>리눅스의 공개 코드 상에서 보안상 문제로 지적되는 경우가 있지만, 리눅스 커널은 상단한 기간 동안의 연구, 전세계의 개발자들로부터의 협업을 통해 만들어졌기 때문에, 관리자가 보안을 기울인다면 보안성이 뛰어나다고 할 수 있습니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-13"></h1>
+<ul>
+<li>
+<p><strong>폭 넓은 하드웨어 장치 지원</strong></p>
+<ul>
+<li><strong>리눅스 개발에는 많은 하드웨어 관련 기업이 참여하여, 리눅스는 대부분의 하드웨어 장치를 지원하는 드라이버를 포함하고 있습니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-14"></h1>
+<ul>
+<li>
+<p><strong>저수준 하드웨어로 구성된 시스템의 사용 가능</strong></p>
+<ul>
+<li><strong>리눅스 서버 시스템으로 사용하기 위한 최소한의 설치를 하면 하드 디스크를 차지하는 전체 운영체제의 용량이 적고 요구하는 하드디스크의 성능도 높지 않습니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-15"></h1>
+<ul>
+<li>
+<p><strong>저 수준 하드웨어로 구성된 시스템의 사용 가능</strong></p>
+<ul>
+<li><strong>리눅스는 서버 시스템으로 사용하기 위한 최소한의 설치를 하면 하드 디스크를 차지하는 전체 운영체제의 용량이 적고 요구하는 하드디스크의 성능 또한 높지 않습니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-16"></h1>
+<ul>
+<li>
+<p><strong>시스템의 높은 신뢰성</strong></p>
+<ul>
+<li><strong>리눅스는 RAID 기능을 지원하고 로컬 또는 인터넷을 통한 다양한 백업 방식을 지원하며, 확장자들을 지원합니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-17"></h1>
+<ul>
+<li>
+<p><strong>가성비</strong></p>
+<ul>
+<li>
+<p><strong>리눅스는 비용을 들이지 않아도 CentOS, Debian 등 다양한 종류의 리눅스를 다운로드하여 설치 및 사용이 가능합니다.</strong></p>
+</li>
+<li>
+<p><strong>리눅스는 고가의 서버 운영체제아 비교하여 손색이 없으며 서버 관리자의 역량에 따라 유료 서비스를 받지 않더라도 서버 시스템의 운영이 가능하다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-18"></h1>
+<p> </p>
+<h1 id="heading-19"></h1>
+<h2 id="window-server"><strong>Window Server</strong></h2>
+<h1 id="heading-20"></h1>
+<ul>
+<li>
+<p><strong>Window Server는 마이크로소프트가 제공하는 서버용 운영체제로, 리눅스&amp;유닉스와 윈도우의 가장 큰 차이가 GUI 조작이라고 하던 시절도 있었지만, 현재에는 유닉스&amp;리눅스 또한 GUI조작을 할 수 있는 환경을 갖추고 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>하지만 이미 Window의 UI에 익숙한 사람들이 다수 존재하여 서버에 대한 문턱이 낮아 서버가 익숙하지 않은 사용자에게 장점을 가지고 있습니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-21"></h1>
+<p> </p>
+<h1 id="heading-22"></h1>
+<h3 id="window-server의-장점"><strong>Window Server의 장점</strong></h3>
+<h1 id="heading-23"></h1>
+<ul>
+<li>
+<p><strong>윈도우 서버에서 실행되는 소프트웨어를 사용해야 할 때</strong></p>
+<ul>
+<li><strong>Exchange Server, Sharepoint, SQL Server와 같은 마이크로소프트의 제품을 사용하고 싶거나, 오라클 데이터베이스나 각사의 소프트웨어처럼 윈도우나 리눅스 등 여러 운영체제에서 가동하는 제품을 윈도 서버에서 사용하고 싶을 때 윈도우 서버를 선택합니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-24"></h1>
+<ul>
+<li>
+<p><strong>닷넷(.NET) 프레임워크를 사용하고 싶을 때</strong></p>
+<ul>
+<li><strong>마이크로소프트는 닷넷 프레임워크(Net Framework)라는 애플리케이션 개발 및 실행 환경을 제공하며, 닷넷은 업무 애플리케이션을 개발할 때 자주 사용되는 기능을 패키지로 묶은 프로그램입니다. 이를 활용하여 애플리케이션을 단기간에 쉽게 개발할 수 있는 특징이 있어 SI 계통에서 많이 채용됩니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-25"></h1>
+<ul>
+<li>
+<p><strong>액티브 디렉터리 환경을 사용하고 싶을 때</strong></p>
+<ul>
+<li><strong>액티브 디렉터리(Active Directory)란 마이크로소프트가 개발한 디렉터리 서비스 시스템으로, 오피스 환경에서 윈도우 PC나 프린터, 서버 같은 하드웨어 자원과 사용자의 각종 권한을 관리하고 싶을 때 사용됩니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-26"></h1>
+<p> </p>
+<h1 id="heading-27"></h1>
+<h3 id="윈도우-서버-라이선스-체계"><strong>윈도우 서버 라이선스 체계</strong></h3>
+<h1 id="heading-28"></h1>
+<ul>
+<li><strong>윈도우 서버의 라이선스 체계는 CPU 두 개당 라이선스 하나를 추가로 구매해야 윈도 서버를 이용할 수 있다.</strong></li>
+</ul>
+<h1 id="heading-29"></h1>
+<h3 id="linux-sever와-window-server의-차이점"><strong>Linux Sever와 Window Server의 차이점</strong></h3>
+<h1 id="heading-30"></h1>
+<ul>
+<li>
+<p><strong>다중 사용자</strong></p>
+<ul>
+<li><strong>리눅스는 서버 다른 사용자가 동시에 시스템을 사용할 수 있는 운영체제이지만 윈도우의 경우 하나의 시스템에 한 명의 사용자가 로그인하여 사용기 가능합니다.(소프트웨어를 통해 다중 사용자 시스템 설치 가능)</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-31"></h1>
+<ul>
+<li>
+<p><strong>소스코드 공개</strong></p>
+<ul>
+<li><strong>Window는 소스코드가 공개되지 않는 반면 Linux는 소스코드가 공개되어있습니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-32"></h1>
+<ul>
+<li>
+<p><strong>X Window 시스템</strong></p>
+<ul>
+<li><strong>윈도우는 OS 자체가 GUI를 제공하는 단일 인터페이스 체제이지만, 리눅스는 X Window라는 환경에 따라 매니저가 개발되어 제공됩니다. 자체적인 커스터마이징이 가능</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-33"></h1>
+<ul>
+<li>
+<p><strong>텍스트 모드</strong></p>
+<ul>
+<li><strong>윈도우에서는 명령 프롬프트를 사용하지만, 리눅스는 텍스트 모드가 있는 데 이는 쉘 혹은 콘솔 환경을 사용합니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-34"></h1>
+<ul>
+<li>
+<p><strong>파일, 패스, 드라이브</strong></p>
+<ul>
+<li><strong>윈도우와 달리 리눅스에서는 확장자가 없는 파일이 존재 할 수 있으며, 드라이브의 개념이 없고 하나의 루트(/) 안에 모든 하드디스크와 파티션, 디바이스들이 연결되어 있으며, 윈도우에서는 , 리눅스에서는 /로 패스를 분리합니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-35"></h1>
+<p> </p>
+<h1 id="heading-36"></h1>
+<h3 id="unix-sever"><strong>UNIX Sever</strong></h3>
+<h1 id="heading-37"></h1>
+<ul>
+<li><strong>이전에는 웹 서버나 메일 서버 등 다양한 서버 용도로 유닉스를 이용했지만, 현재는 무료로 사용할 수 있는 리눅스 등의 오픈 소스 계열 운영체제가 많이 보급되어 대부분의 서버는 오픈 소스 게열 운영체제로 구축되며, 유닉스는 주로 엔터프라이즈 서버 운영체제로 이용되는 일이 많아져 엔터프라이즈 서버업체 제품과 밀접하게 관련되어 있다 할 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-38"></h1>
+<p> </p>
+<h1 id="heading-39"></h1>
+<h3 id="대표적인-운영체제"><strong>대표적인 운영체제</strong></h3>
+<h1 id="heading-40"></h1>
+<ul>
+<li>
+<p><strong>AIX</strong></p>
+</li>
+<li>
+<p><strong>Solaris</strong></p>
+</li>
+<li>
+<p><strong>HP-UX</strong></p>
+</li>
+</ul>
+<h1 id="heading-41"></h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+
+</div>
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux-server"><strong>Linux Server</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#linux-sever의-장점"><strong>Linux Sever의 장점</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#window-server"><strong>Window Server</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#window-server의-장점"><strong>Window Server의 장점</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#윈도우-서버-라이선스-체계"><strong>윈도우 서버 라이선스 체계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#linux-sever와-window-server의-차이점"><strong>Linux Sever와 Window Server의 차이점</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#unix-sever"><strong>UNIX Sever</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#대표적인-운영체제"><strong>대표적인 운영체제</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

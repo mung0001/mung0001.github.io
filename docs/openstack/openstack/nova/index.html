@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="가상의 서버를 생성하는 서비스 : Nova 가상의 서버를 생성하는 서비스 : Nova Nova는 compute 서비스의 핵심 compute 서비스란, 가상머신이 필요한 자원을 할당하고, 관리하는 서비스로 하이퍼바이저, 메시지 Queue, 인스턴스 접속을 하는 콘솔 등의 다양한 기능이 유기적으로 연결되어 가상 서버를 생성할 수 있는 시스템을 구성하는 시스템 Nova 서비스의 고려사항 고려사항 설명 CPU compute 서비스가 동작할 호스트 시스템의 cpu가 기본적으로 자체 하드웨어 가상화를 지원이 필수 Hypervisor 서비스에 사용할 하이퍼바이저를 맞게 설정해야 하며, 기본적으로 사용하는 Hypervisor은 KVM/QEMU Storage compute 서비스를 통해 인스턴스가 생성되면서 시스템의 디스크 용량의 제한을 가할 수 있음, 이를 위해 넉넉한 공간이 필요 Overcommit 기본적으로 자원을 할당하는 경우 1:1이 아닌 CPU는 16:1, Memory는 1.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/openstack/openstack/nova/><meta property="og:title" content="Nova" />
+<meta property="og:description" content="가상의 서버를 생성하는 서비스 : Nova 가상의 서버를 생성하는 서비스 : Nova Nova는 compute 서비스의 핵심 compute 서비스란, 가상머신이 필요한 자원을 할당하고, 관리하는 서비스로 하이퍼바이저, 메시지 Queue, 인스턴스 접속을 하는 콘솔 등의 다양한 기능이 유기적으로 연결되어 가상 서버를 생성할 수 있는 시스템을 구성하는 시스템 Nova 서비스의 고려사항 고려사항 설명 CPU compute 서비스가 동작할 호스트 시스템의 cpu가 기본적으로 자체 하드웨어 가상화를 지원이 필수 Hypervisor 서비스에 사용할 하이퍼바이저를 맞게 설정해야 하며, 기본적으로 사용하는 Hypervisor은 KVM/QEMU Storage compute 서비스를 통해 인스턴스가 생성되면서 시스템의 디스크 용량의 제한을 가할 수 있음, 이를 위해 넉넉한 공간이 필요 Overcommit 기본적으로 자원을 할당하는 경우 1:1이 아닌 CPU는 16:1, Memory는 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/openstack/openstack/nova/" /><meta property="article:section" content="docs" />
+
+
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e2bd7d5b85b8364f83ad5a78c7bee3da407d197c72a6a9f01b68855e04db9985.css" integrity="sha256-4r19W4W4Nk&#43;DrVp4x77j2kB9GXxypqnwG2iFXgTbmYU=">
+<script defer src="/en.search.min.21661551a6db5c857106f06ffb5acb09a7ce2e4ba573c2f7d7bb316512531add.js" integrity="sha256-IWYVUabbXIVxBvBv&#43;1rLCafOLkulc8L317sxZRJTGt0="></script>
+<!--
+
+-->
+
+  
+
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/openstack/" class="">OpenStack 개요</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/keystone/" class="">Keystone</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/glance/" class="">Glance</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/nova/" class="active">Nova</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/neutron/" class="">Neutron</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/cinder/" class="">Cinder</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/ceilometer/" class="">Ceilometer</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/horizon/" class="">Horizon</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/swift/" class="">Swift</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/heat/" class="">Heat</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/trove/" class="">Trove</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/sahara/" class="">Sahara</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/ironic/" class="">Ironic</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstack/service/" class="">Service</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/monitoring/pc/" class="collapsed ">Monitoring</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Nova</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#가상의-서버를-생성하는-서비스--nova-1"><strong>가상의 서버를 생성하는 서비스 : Nova</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova-서비스의-고려사항"><strong>Nova 서비스의 고려사항</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova의-논리-아키텍처"><strong>Nova의 논리 아키텍처</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova가-지원하는-하이퍼바이저의-종류"><strong>Nova가 지원하는 하이퍼바이저의 종류</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="가상의-서버를-생성하는-서비스--nova"><strong>가상의 서버를 생성하는 서비스 : Nova</strong></h1>
+<hr>
+<h1 id="heading"></h1>
+<h2 id="가상의-서버를-생성하는-서비스--nova-1"><strong>가상의 서버를 생성하는 서비스 : Nova</strong></h2>
+<h1 id="heading-1"></h1>
+<ul>
+<li><strong>Nova는 compute 서비스의 핵심</strong></li>
+<li><strong>compute 서비스란, 가상머신이 필요한 자원을 할당하고, 관리하는 서비스로 하이퍼바이저, 메시지 Queue, 인스턴스 접속을 하는 콘솔 등의 다양한 기능이 유기적으로 연결되어 가상 서버를 생성할 수 있는 시스템을 구성하는 시스템</strong></li>
+</ul>
+<h1 id="heading-2"></h1>
+<p> </p>
+<h1 id="heading-3"></h1>
+<h3 id="nova-서비스의-고려사항"><strong>Nova 서비스의 고려사항</strong></h3>
+<h1 id="heading-4"></h1>
+<table>
+<thead>
+<tr>
+<th>고려사항</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>compute 서비스가 동작할 호스트 시스템의 cpu가 기본적으로 자체 하드웨어 가상화를 지원이 필수</td>
+</tr>
+<tr>
+<td>Hypervisor</td>
+<td>서비스에 사용할 하이퍼바이저를 맞게 설정해야 하며, 기본적으로 사용하는 Hypervisor은 KVM/QEMU</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>compute 서비스를 통해 인스턴스가 생성되면서 시스템의 디스크 용량의 제한을 가할 수 있음, 이를 위해 넉넉한 공간이 필요</td>
+</tr>
+<tr>
+<td>Overcommit</td>
+<td>기본적으로 자원을 할당하는 경우 1:1이 아닌 CPU는 16:1, Memory는 1.5:1로 할당 되어짐</td>
+</tr>
+<tr>
+<td>네트워킹</td>
+<td>생성된 인스턴스의 경우 nova가 독자적으로 구현하는 것이 아닌 다른 network 서비스를 연게해서 사용해야하며, 주로 Neutron 네트워크 서비스와 함께 사용</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-5"></h1>
+<p> </p>
+<h1 id="heading-6"></h1>
+<h3 id="nova의-논리-아키텍처"><strong>Nova의 논리 아키텍처</strong></h3>
+<h1 id="heading-7"></h1>
+<p><img src="/Openstack/Nova/Nova01.png" alt="Nova" /></p>
+<h1 id="heading-8"></h1>
+<table>
+<thead>
+<tr>
+<th>서비스</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nova-api</td>
+<td>최종 사용자즈이 API콜을 통해 서비스 간 질의 응답을 담당</td>
+</tr>
+<tr>
+<td>nova-compute</td>
+<td>가상화 API를 이용하여 가상 머신 인스턴스를 생성하고 종료하는 역할을 수행</td>
+</tr>
+<tr>
+<td>nova-scheduler</td>
+<td>compute host가 다수인 경우 큐를 통해 받은 메시지를 누구에게 명령할 것인지를 결정</td>
+</tr>
+<tr>
+<td>nova-conductor</td>
+<td>코디네이션과 데이터베이스 쿼리를 지원하는 서버 데몬</td>
+</tr>
+<tr>
+<td>nova-cert</td>
+<td>X509 인증서에 대한 Nova Cert서비스를 제공하는 서버 데몬</td>
+</tr>
+<tr>
+<td>nova-consoleauth</td>
+<td>데몬, 콘솔 프록시를 제공하는 사용자에 대한 인증 토큰 제공</td>
+</tr>
+<tr>
+<td>Guest Agent</td>
+<td>실제 compute 시스템 상에 구축된 인스턴스로 Nova-compute 서비스에 의해 제어되어짐</td>
+</tr>
+<tr>
+<td>nova-api-metadata</td>
+<td>인스턴스의 메타데이터의 요청을 처리</td>
+</tr>
+<tr>
+<td>nova-novncproxy</td>
+<td>VNC 콘솔화면을 제공</td>
+</tr>
+<tr>
+<td>nova-novaclient: nova REST API를 사용하는 클라이언트 프로그램</td>
+<td></td>
+</tr>
+<tr>
+<td>nova-network</td>
+<td>인스턴스의 네트워크 기능을 수행</td>
+</tr>
+<tr>
+<td>nova-compute-kvm</td>
+<td>인스턴스(가상 머신)와 관련된 모든 프로세스를 처리</td>
+</tr>
+<tr>
+<td>python-guestfs</td>
+<td>파일 생성 기능을 지원하는 Python 라이브러리</td>
+</tr>
+<tr>
+<td>qemu-kvm</td>
+<td>KVM 하이퍼바이저</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-9"></h1>
+<ul>
+<li><strong>위와 같이 많은 서비스들이 존재</strong></li>
+</ul>
+<h1 id="heading-10"></h1>
+<ul>
+<li><strong>Nova는 대시보드나 콘솔에서 호출하는 nova-api에서 시작</strong></li>
+<li><strong>Queue를 이용해 nova-compute에 인스턴스를 생성하라는 명령을 전달</strong></li>
+<li><strong>nova-compute는 하이퍼바이저 라이브러리를 이용해 하이퍼바이저에 인스턴스를 생성하려는 명령어를 전달</strong></li>
+<li><strong>Hypervisor을 통해 인스턴스를 생성</strong></li>
+<li><strong>생성된 인스턴스는 nova-api로 접근할 수 있으며 Nova의 모든 기능은 메시지 Queue로 처리할 수 있음</strong></li>
+</ul>
+<h1 id="heading-11"></h1>
+<p> </p>
+<h1 id="heading-12"></h1>
+<h3 id="nova가-지원하는-하이퍼바이저의-종류"><strong>Nova가 지원하는 하이퍼바이저의 종류</strong></h3>
+<ul>
+<li><strong>기본 하이퍼바이저는 KVM과 QEMU</strong></li>
+<li><strong>프로바이더가 테스트하는 Hyper-V, VMware, XenServer, Sen via libvirt</strong></li>
+<li><strong>몇 번의 테스트만 하는 하이퍼바이저 드라이버인 베어메탈, Docker, LXC via libvirt</strong></li>
+</ul>
+<h1 id="heading-13"></h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+
+</div>
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#가상의-서버를-생성하는-서비스--nova-1"><strong>가상의 서버를 생성하는 서비스 : Nova</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova-서비스의-고려사항"><strong>Nova 서비스의 고려사항</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova의-논리-아키텍처"><strong>Nova의 논리 아키텍처</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova가-지원하는-하이퍼바이저의-종류"><strong>Nova가 지원하는 하이퍼바이저의 종류</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

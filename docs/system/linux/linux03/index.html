@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="**Linux ** Linux 압축 Linux는 여러 압축포맷을 지원하며, 이를 통해 범용성있는 활용범위를 가지고 있습니다.
+대표적인 사용예시로는 Linux는 압축을 통해 전체적인 백업 및 복구를 진행할 수 있습니다.
+gzip, gunzip, zcat gzip은 파일을 압축할 때 gunzip은 파일의 압축을 해제할 때 사용됩니다.
+압축한 파일은 .gz의 확장자를 가지며, 파일, 디렉터리 단위로 압축되므로 여러 개의 파일을 압축하기 위해서는 tar 명령어를 사용합니다.
+주요 옵션 옵션 내용 -r 디렉터리 압축 -d 압축을 해제, gunzip과 동일한 동작 -l 압축 정보를 표시 -c gzip 파일을 읽어 표준 출력으로 출력, zcat과 동일하게 동작 tar tar은 여러 개의 파일을 모아 하나의 파일로 압축합니다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/system/linux/linux03/><meta property="og:title" content="Linux 압축" />
+<meta property="og:description" content="**Linux ** Linux 압축 Linux는 여러 압축포맷을 지원하며, 이를 통해 범용성있는 활용범위를 가지고 있습니다.
+대표적인 사용예시로는 Linux는 압축을 통해 전체적인 백업 및 복구를 진행할 수 있습니다.
+gzip, gunzip, zcat gzip은 파일을 압축할 때 gunzip은 파일의 압축을 해제할 때 사용됩니다.
+압축한 파일은 .gz의 확장자를 가지며, 파일, 디렉터리 단위로 압축되므로 여러 개의 파일을 압축하기 위해서는 tar 명령어를 사용합니다.
+주요 옵션 옵션 내용 -r 디렉터리 압축 -d 압축을 해제, gunzip과 동일한 동작 -l 압축 정보를 표시 -c gzip 파일을 읽어 표준 출력으로 출력, zcat과 동일하게 동작 tar tar은 여러 개의 파일을 모아 하나의 파일로 압축합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/linux/linux03/" /><meta property="article:section" content="docs" />
+
+
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e2bd7d5b85b8364f83ad5a78c7bee3da407d197c72a6a9f01b68855e04db9985.css" integrity="sha256-4r19W4W4Nk&#43;DrVp4x77j2kB9GXxypqnwG2iFXgTbmYU=">
+<script defer src="/en.search.min.21661551a6db5c857106f06ffb5acb09a7ce2e4ba573c2f7d7bb316512531add.js" integrity="sha256-IWYVUabbXIVxBvBv&#43;1rLCafOLkulc8L317sxZRJTGt0="></script>
+<!--
+
+-->
+
+  
+
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/monitoring/pc/" class="collapsed ">Monitoring</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux/" class="">Linux 개요</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux01/" class="">Linux System Management</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux02/" class="">Linux Filesystem</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux03/" class="active">Linux 압축</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux04/" class="">Linux 문자열 처리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux05/" class="">Linux 날짜</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux06/" class="">Linux 파일처리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux07/" class="">Linux Network</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/linux08/" class="">Linux 형식파일</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/mount/" class="">Linux Mount</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-0/" class="">Linux master 개요</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/ls00/" class="">서버환경의 기초</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-1/" class="">Linux 일반</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/ls01/" class="">이용 기술</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-2/" class="">Linux 운영 및 관리</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/lm-3/" class="">Linux 활용</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/ls02/" class="">서버도입</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/cacti01/" class="">Cacti</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/linux/ls07/" class="">PXE(KickStart) Server</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Linux 압축</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux-압축"><strong>Linux 압축</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#gzip-gunzip-zcat"><strong>gzip, gunzip, zcat</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#tar"><strong>tar</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-1"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#사용예제"><strong>사용예제</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="linux-">**Linux **</h1>
+<hr>
+<h1 id="heading"></h1>
+<h2 id="linux-압축"><strong>Linux 압축</strong></h2>
+<h1 id="heading-1"></h1>
+<ul>
+<li>
+<p><strong>Linux는 여러 압축포맷을 지원하며, 이를 통해 범용성있는 활용범위를 가지고 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>대표적인 사용예시로는 Linux는 압축을 통해 전체적인 백업 및 복구를 진행할 수 있습니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-2"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-3"></h1>
+<h2 id="gzip-gunzip-zcat"><strong>gzip, gunzip, zcat</strong></h2>
+<h1 id="heading-4"></h1>
+<ul>
+<li>
+<p><strong>gzip은 파일을 압축할 때 gunzip은 파일의 압축을 해제할 때 사용됩니다.</strong></p>
+</li>
+<li>
+<p><strong>압축한 파일은 .gz의 확장자를 가지며, 파일, 디렉터리 단위로 압축되므로 여러 개의 파일을 압축하기 위해서는 tar 명령어를 사용합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-5"></h1>
+<h3 id="주요-옵션"><strong>주요 옵션</strong></h3>
+<h1 id="heading-6"></h1>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-r</td>
+<td>디렉터리 압축</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>압축을 해제, gunzip과 동일한 동작</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>압축 정보를 표시</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>gzip 파일을 읽어 표준 출력으로 출력, <code>zcat</code>과 동일하게 동작</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-7"></h1>
+<hr>
+<p> </p>
+<h1 id="heading-8"></h1>
+<h2 id="tar"><strong>tar</strong></h2>
+<h1 id="heading-9"></h1>
+<ul>
+<li><strong>tar은 여러 개의 파일을 모아 하나의 파일로 압축합니다.</strong></li>
+</ul>
+<h1 id="heading-10"></h1>
+<h3 id="주요-옵션-1"><strong>주요 옵션</strong></h3>
+<h1 id="heading-11"></h1>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-c</td>
+<td>파일 묶음을 생성</td>
+</tr>
+<tr>
+<td>-x</td>
+<td>파일 묶음을 해제</td>
+</tr>
+<tr>
+<td>-z</td>
+<td>파일을 gzip 압축하면서 묶음을 생성</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>처리 상황을 출력</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>파일 묶음에 들어있는 파일 목록을 출력</td>
+</tr>
+<tr>
+<td>&ndash;exclude</td>
+<td>파일 제외</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-12"></h1>
+<h1 id="heading-13"></h1>
+<h3 id="사용예제"><strong>사용예제</strong></h3>
+<h1 id="heading-14"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar -cf archive.tar foo bar
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># foo, bar를 archive.tar로 만듬 </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ tar -tf archive.tar
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># archive.tar 파일 안에 묶여 있는 내용을 확인</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ tar -zcvf archive.tar.gz foo bar
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># foo, bar를 gzip 압축하여 archive.tar.gz 으로 만듬 </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ tar -zcvf file.tar.gz source_dir --exclude<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*.log&#34;</span> --exclude<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*.attach*&#34;</span> --exclude<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./folder_name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># source_dir의 .log, .attatch 로 끝나는 파일, folder_name 디렉토리 제외하고 file.tar.gz 으로 압축 </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ tar -xf archive.tar
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># archive.tar 파일 묶음 해제 </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ tar -zxvf archive.tar.gz
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># archive.tar.gz 압축 파일의 묶을 해제 </span>
+</span></span></code></pre></div><h1 id="heading-15"></h1>
+</article>
+ 
+      
+<div>
+
+
+</div>
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux-압축"><strong>Linux 압축</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#gzip-gunzip-zcat"><strong>gzip, gunzip, zcat</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#tar"><strong>tar</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주요-옵션-1"><strong>주요 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#사용예제"><strong>사용예제</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

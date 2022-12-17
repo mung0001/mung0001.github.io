@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Infra operation Infra operation 장애 대응 하드에어는 언젠가 반드시 고장이 난다는 생각 때문에 서비스를 멈추지 않도록 하는 방향으로 진화했습니다.
+엔지니어에게 감시 솔루션은 장애 감지를 위해 특히 중요한 도구로, 장애를 빠르고 확실하게 감지하기 위해서는 감시 솔루션 없이는 불가능합니다.
+감시 솔루션을 신중하게 선택하고 모든 보유 기기에서 일어날 수 있는 온갖 장애 패턴을 모두 확실히 감지할 수 있도록 엄격하게 설정해야 합니다.
+병목현상 해결 일반적으로 IT 시스템에서는 병목이 한 군데만 있어돋 시스템 전체의 응답에 악영향을 끼칩니다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/infra/infra/infra07/><meta property="og:title" content="Infra operation" />
+<meta property="og:description" content="Infra operation Infra operation 장애 대응 하드에어는 언젠가 반드시 고장이 난다는 생각 때문에 서비스를 멈추지 않도록 하는 방향으로 진화했습니다.
+엔지니어에게 감시 솔루션은 장애 감지를 위해 특히 중요한 도구로, 장애를 빠르고 확실하게 감지하기 위해서는 감시 솔루션 없이는 불가능합니다.
+감시 솔루션을 신중하게 선택하고 모든 보유 기기에서 일어날 수 있는 온갖 장애 패턴을 모두 확실히 감지할 수 있도록 엄격하게 설정해야 합니다.
+병목현상 해결 일반적으로 IT 시스템에서는 병목이 한 군데만 있어돋 시스템 전체의 응답에 악영향을 끼칩니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/infra/infra/infra07/" /><meta property="article:section" content="docs" />
+
+
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e2bd7d5b85b8364f83ad5a78c7bee3da407d197c72a6a9f01b68855e04db9985.css" integrity="sha256-4r19W4W4Nk&#43;DrVp4x77j2kB9GXxypqnwG2iFXgTbmYU=">
+<script defer src="/en.search.min.21661551a6db5c857106f06ffb5acb09a7ce2e4ba573c2f7d7bb316512531add.js" integrity="sha256-IWYVUabbXIVxBvBv&#43;1rLCafOLkulc8L317sxZRJTGt0="></script>
+<!--
+
+-->
+
+  
+
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/infra/infra01/" class="">Infra engineer란?</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/infra/infra02/" class="">Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/infra/infra03/" class="">Operating System</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/infra/infra04/" class="">Network</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/infra/infra05/" class="">Storage</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/infra/infra06/" class="">Solution</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/infra/infra07/" class="active">Infra operation</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/monitoring/pc/" class="collapsed ">Monitoring</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Infra operation</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#infra-operation-1"><strong>Infra operation</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#장애-대응"><strong>장애 대응</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#병목현상-해결"><strong>병목현상 해결</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="infra-operation"><strong>Infra operation</strong></h1>
+<h1 id="heading"></h1>
+<p> </p>
+<h1 id="heading-1"></h1>
+<h2 id="infra-operation-1"><strong>Infra operation</strong></h2>
+<h1 id="heading-2"></h1>
+<h3 id="장애-대응"><strong>장애 대응</strong></h3>
+<h1 id="heading-3"></h1>
+<ul>
+<li>
+<p><strong>하드에어는 언젠가 반드시 고장이 난다는 생각 때문에 서비스를 멈추지 않도록 하는 방향으로 진화했습니다.</strong></p>
+</li>
+<li>
+<p><strong>엔지니어에게 감시 솔루션은 장애 감지를 위해 특히 중요한 도구로, 장애를 빠르고 확실하게 감지하기 위해서는 감시 솔루션 없이는 불가능합니다.</strong></p>
+</li>
+<li>
+<p><strong>감시 솔루션을 신중하게 선택하고 모든 보유 기기에서 일어날 수 있는 온갖 장애 패턴을 모두 확실히 감지할 수 있도록 엄격하게 설정해야 합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-4"></h1>
+<p> </p>
+<h1 id="heading-5"></h1>
+<h3 id="병목현상-해결"><strong>병목현상 해결</strong></h3>
+<h1 id="heading-6"></h1>
+<ul>
+<li>
+<p><strong>일반적으로 IT 시스템에서는 병목이 한 군데만 있어돋 시스템 전체의 응답에 악영향을 끼칩니다.</strong></p>
+</li>
+<li>
+<p><strong>그렇기에 상시 병목현상에 유의해야하며 하단에는 주로 병목현상이 발생하는 부분들입니다.</strong></p>
+<ul>
+<li>
+<p><strong>코어 스위치의 수용량</strong></p>
+</li>
+<li>
+<p><strong>L2 스위치의 수용량</strong></p>
+</li>
+<li>
+<p><strong>웹 서버의 메모리 부족</strong></p>
+</li>
+<li>
+<p><strong>데이터베이스 서버의 CPU와 메모리 부족</strong></p>
+</li>
+<li>
+<p><strong>데이터베이스 서버의 디스크 I/O</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-7"></h1>
+<p> </p>
+<ul>
+<li><strong>네트워크 장비의 병목 현상</strong></li>
+</ul>
+<h1 id="heading-8"></h1>
+<ul>
+<li>
+<p><strong>각 포트의 물리 인터페이스의 속도가 트래픽을 감당할 수 없을 때</strong></p>
+<ul>
+<li>
+<p><strong>조사 방법 : 1 Gbps 인터페이스라면 실제 IN/ OUT 트래픽이 각각 1Gbps 미만인가?</strong></p>
+</li>
+<li>
+<p><strong>대책 : 서버를 분산해서 트래픽을 분산하거나 인터페이스를 보다 빠른 것으로 설정합니다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-9"></h1>
+<ul>
+<li>
+<p><strong>네트워크 장비의 전송 능력에 한계는 없는가?</strong></p>
+<ul>
+<li>
+<p><strong>조사 방법 : 패킷 드롭이 발생하지 않는가? 전송 능력 부족을 보이는 로그가 남아 있는가?</strong></p>
+</li>
+<li>
+<p><strong>대책 : 가능하면 네트워크 장비를 상위 기종으로 교체하거나 캐시 메모리 추가 등을 시행해야 합니다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-10"></h1>
+<p> </p>
+<ul>
+<li><strong>서버 장비의 병목 현상</strong></li>
+</ul>
+<h1 id="heading-11"></h1>
+<ul>
+<li>
+<p><strong>프론트 엔드 서버의 응답이 저하되었는가?</strong></p>
+<ul>
+<li>
+<p><strong>조사 방법 : 각 서버의 응답 시간을 정기적으로 가져와 극단적인 저하가 일어났는 지 살펴보며, 혹은 사용자로붙너 응답 속도에 관한 질문이 들어왔는지를 살펴보아야 합니다.</strong></p>
+</li>
+<li>
+<p><strong>대책 : 먼저 프론트 엔드의 문제인지 백엔드의 문제인지를 파악 후, 그에 맞춰, 소프트웨어의 문제인지 컴퓨터 리소스의 문제인지를 세부적으로 파악 후, 문제에 맞게 소프트웨어의 수정 및 컴퓨터 리소스를 추가하여 문제를 해결합니다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-12"></h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+
+</div>
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#infra-operation-1"><strong>Infra operation</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#장애-대응"><strong>장애 대응</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#병목현상-해결"><strong>병목현상 해결</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

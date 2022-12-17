@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="방화벽 (CentOS - firewalld) 리눅스의 방화벽
+커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제 방화벽의 종류
+패킷 필터링 방화벽 - 제 1세대 방화벽- 레이어 1~4에서 사용- 단순하기 때문에 빠르고 효과적- 5~7계층 대응 불가Stateful 방화벽 - 제 2세대 방화벽- 패킷의 연결 상태를 관찰- 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약**애플리케이션 레이어 방화벽 ** - 제 3세대 방화벽- 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요방화벽의 구성요소 규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/network/network/firewall/><meta property="og:title" content="Firewall" />
+<meta property="og:description" content="방화벽 (CentOS - firewalld) 리눅스의 방화벽
+커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제 방화벽의 종류
+패킷 필터링 방화벽 - 제 1세대 방화벽- 레이어 1~4에서 사용- 단순하기 때문에 빠르고 효과적- 5~7계층 대응 불가Stateful 방화벽 - 제 2세대 방화벽- 패킷의 연결 상태를 관찰- 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약**애플리케이션 레이어 방화벽 ** - 제 3세대 방화벽- 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요방화벽의 구성요소 규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/network/network/firewall/" /><meta property="article:section" content="docs" />
+
+
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e2bd7d5b85b8364f83ad5a78c7bee3da407d197c72a6a9f01b68855e04db9985.css" integrity="sha256-4r19W4W4Nk&#43;DrVp4x77j2kB9GXxypqnwG2iFXgTbmYU=">
+<script defer src="/en.search.min.21661551a6db5c857106f06ffb5acb09a7ce2e4ba573c2f7d7bb316512531add.js" integrity="sha256-IWYVUabbXIVxBvBv&#43;1rLCafOLkulc8L317sxZRJTGt0="></script>
+<!--
+
+-->
+
+  
+
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/monitoring/pc/" class="collapsed ">Monitoring</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/network/network/natwork-1/" class="">Network</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/network/network/packet/" class="">Network Packet</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/network/network/portnumber/" class="">Network PortNumber</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/network/network/sdn/" class="">SDN</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/network/network/3tier/" class="">3Tier</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/network/network/gns3/" class="">GNS3</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/network/network/security/" class="">Network Security</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/network/network/firewall/" class="active">Firewall</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Firewall</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#명령어"><strong>명령어</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#버전확인"><strong>버전확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#방화벽-실행여부-확인"><strong>방화벽 실행여부 확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#방화벽-리로드"><strong>방화벽 리로드</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#zone-목록을-출력"><strong>Zone 목록을 출력</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#zone-기본-존을-출력"><strong>Zone 기본 존을 출력</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-활성화된-zone을-출력">** 활성화된 Zone을 출력**</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#사용-가능한-서비스-포트-목록을-출력"><strong>사용 가능한 서비스/ 포트 목록을 출력</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#public-존에-속한-사용-가능한-모든-서비스-포트-목록을-출력"><strong>public 존에 속한 사용 가능한 모든 서비스/ 포트 목록을 출력</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ftp-서비스-추가"><strong>ftp 서비스 추가</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ftp-서비스를-제거"><strong>ftp 서비스를 제거</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#21-tcp-포트를-추가"><strong>21 tcp 포트를 추가</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#21-tcp-포트를-제거"><strong>21 tcp 포트를 제거</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#trusted-존에-ftp-서비스를-추가"><strong>trusted 존에 ftp 서비스를 추가</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#시스템-재부팅-또는-방화벽-재시작-후에도-적용되도록-하려면---permanent-옵션"><strong>시스템 재부팅 또는 방화벽 재시작 후에도 적용되도록 하려면 &ndash;permanent 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#포트포워딩-설정"><strong>포트포워딩 설정</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#커맨드-확인"><strong>커맨드 확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#방화벽-사용-중-확인"><strong>방화벽 사용 중 확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#zone-영역확인"><strong>Zone 영역확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#방화벽-재시작"><strong>방화벽 재시작</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#포트추가"><strong>포트추가</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#룰-확인"><strong>룰 확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#룰-추가"><strong>룰 추가</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-30">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-32">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-34">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-36">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-38">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-40">****</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="방화벽-centos---firewalld">방화벽 (CentOS - firewalld)</h1>
+<h1 id="heading"></h1>
+<ul>
+<li>
+<p><strong>리눅스의 방화벽</strong></p>
+<ul>
+<li>커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램</li>
+<li>방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치</li>
+<li>기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용</li>
+<li>허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-1"></h1>
+<ul>
+<li>
+<p><strong>방화벽의 종류</strong></p>
+<ol>
+<li><strong>패킷 필터링 방화벽</strong></li>
+</ol>
+<pre><code>- 제 1세대 방화벽
+
+- 레이어 1~4에서 사용
+- 단순하기 때문에 빠르고 효과적
+- 5~7계층 대응 불가
+</code></pre>
+<ol start="2">
+<li><strong>Stateful 방화벽</strong></li>
+</ol>
+<pre><code>- 제 2세대 방화벽
+
+- 패킷의 연결 상태를 관찰
+- 메모리에서 상태 테이블 사용 
+- DoS 공격과 같은 메모리 잠식 공격에 취약
+</code></pre>
+<ol start="3">
+<li>**애플리케이션 레이어 방화벽 **</li>
+</ol>
+<pre><code>- 제 3세대 방화벽
+
+- 레이어7까지 패킷 검사와 필터링 
+- 고사양의 장비가 필요
+</code></pre>
+</li>
+</ul>
+<h1 id="heading-2"></h1>
+<ul>
+<li><strong>방화벽의 구성요소</strong>
+<ol>
+<li>
+<p><strong>규칙(Rule) :</strong> Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다. 들어오는 패킷이 설정된 여러 규칙 중 한가지와 일치할 경우 더 이상의 규칙 검사는 진행되지 않으며 이 규칙에 정의된 target, 즉 구체적인 행동이 적용되면서 이 패킷에 대한 동작을 종료하게 된다.</p>
+</li>
+<li>
+<p><strong>타겟(Target) :</strong> 정해진 규칙에 일치된 패킷은 해당 규칙에 지정된 타켓으로 보내진다. 이 타겟은 이렇게 일치된 패킷에 대해 구체적인 행동을 정의한 것인데, 각각 내장 타겟과 확장 타겟을 통해 다양한 종류의 타겟을 사용할 수 있다. 대표적으로 사용되는 내장 타겟으로 패킷을 받아들이는 Accept, 패킷을 거부하는 Drop과 Reject, 패킷에 대한 자세한 정보를 기록하는 Log, 마지막으로 주소 변환에 사용되는 SNAT와 DNAT 등이 있다.</p>
+</li>
+<li>
+<p><strong>체인 (Chain) :</strong> Netfilter 구조에서 체인은 정책이 결합된 하나의 그룹이다. 일반적으로 한 개의 체인은 여러 개의 규칙과 한 개의 정책으로 구성된다. 체인으로 들어온 패킷은 각각의 규칙을 순서대로 거치게 되며, 이 중 한 규칙과 일치되면 이 패킷은 그 규칙에 정의된 타겟으로 보내진다. 이로써 그패킷에 대한 체인에서의 모든 과정은 종료된다. 최종적으로 일치되는 규칙이 없는 경우 이 체인에 설정된 정책이 적용된다. 체인과 체인 간에 복잡한 설정이 필요한 경우 Netfilter가 지원하는 매우 뛰어난 기능이며, 가장 대표적인 체인으로 PREROUTING, INPUT, OUTPUT, FORWARD, POSTROUTING이 사용된다.</p>
+</li>
+<li>
+<p><strong>정책(Policy) :</strong> Netfilter가 제공하는 모든 체인을 갖고 있는데, 이 정책은 체인에서 각 규칙을 모두 통과한 패킷에 적용된다. 이 정책은 수행하는 마지막 행위로서 최종 타겟이라고도 하는데, 정책의 종류로 DROP, ACCEPT 등이 사용된다.</p>
+</li>
+<li>
+<p><strong>테이블(Table) :</strong> 체인은 여러 개의 규칙과 한 개의 정책이 결합된 그룹이라고 설명했는데, 테이블은 여러 체인이 결합된 그룹이다.</p>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="heading-3"></h1>
+<ul>
+<li>
+<p><strong>Firewalld Zone</strong></p>
+<ul>
+<li>
+<p><strong>Drop 존</strong></p>
+<ul>
+<li>들어오는 모든 패킷은 버려지고 이에 대한 응답 메시지도 보내지 않으며 단지 외부로로 나가는 연결만 허용</li>
+</ul>
+</li>
+<li>
+<p><strong>Block 존</strong></p>
+<ul>
+<li>Drop 존처럼 들어오는 모든 네트워크 연결은 거부되는데, 이에 대해 icmp-host-prohibited와 
+icmp6-prohibited라는 응답 메시지를 보낸다.</li>
+</ul>
+</li>
+<li>
+<p><strong>Public 존</strong></p>
+<ul>
+<li>서비스를 제공하는 특별한 포트로의 연결만을 허용하고, 그 외 포트로의 연결은 모두 거부되며 
+기본 Zone으로 사용</li>
+</ul>
+</li>
+<li>
+<p><strong>External 존</strong></p>
+<ul>
+<li>특별히 매스커레이딩 규칙이 적용되는 외부의 라우터를 위해 사용되며, 단지 내부로의 연결 요청 
+중에서 선택된 연결만을 허용</li>
+</ul>
+</li>
+<li>
+<p><strong>DMZ 존</strong></p>
+<ul>
+<li>내부 네트워크로의 접근은 제한적으로 허용되지만, 공개된 네트워크에 대한 접근을 허용하는 경우에 사용되며 이 경우도 선택된 연결만이 허용</li>
+</ul>
+</li>
+<li>
+<p><strong>Work 존</strong></p>
+<ul>
+<li>같은 회사에 위치한 네트워크를 위해 사용되며, 대부분 같은 네트워크에 위치한 다른 시스템을 
+신뢰하고 오직 선택된 연결만을 접속 허용</li>
+</ul>
+</li>
+<li>
+<p><strong>Home 존</strong></p>
+<ul>
+<li>홈 영역을 위해 사용되며, 네트워크에 존재하는 다른 시스템을 신뢰하고 오직 선택된 연결만을 접속 허용</li>
+</ul>
+</li>
+<li>
+<p><strong>Internal 존</strong></p>
+<ul>
+<li>내부 네트워크를 위해 사용되고, 선택된 연결만을 접속 허용</li>
+</ul>
+</li>
+<li>
+<p><strong>Trusted 존</strong></p>
+<ul>
+<li>모든 네트워크 접속 연결을 허용하는 경우 사용</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-4"></h1>
+<ul>
+<li>
+<p><strong>NAT ( Natwork Address Translation )</strong></p>
+<ul>
+<li>
+<p>Network Address Translation, IP 패킷 헤더의 IP주소를 변경하는 기능 혹은 그러한 절차.</p>
+</li>
+<li>
+<p>PREROUTING : DNAT를 이용하여 패킷이 생길 때 사용</p>
+</li>
+<li>
+<p>POSTROUTING : SNAT를 이용하여 패킷이 생길 때 사용</p>
+</li>
+<li>
+<p>iptables -L</p>
+</li>
+</ul>
+<ol>
+<li><strong>SNAT</strong>
+<ul>
+<li>Source의 IP주소를 변경하는 것, 내부 -&gt; 외부</li>
+</ul>
+</li>
+<li><strong>DNAT</strong>
+<ul>
+<li>Destination의 IP주소를 변경하는 것, 외부 -&gt; 내부</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<hr>
+<h1 id="heading-5"></h1>
+<h2 id="명령어"><strong>명령어</strong></h2>
+<h1 id="heading-6"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--[</span>옵션<span style="color:#f92672">]=[</span>Firewalld Zone<span style="color:#f92672">]</span> <span style="color:#f92672">--[</span>add<span style="color:#f92672">,</span> remove 등의 명령어<span style="color:#f92672">]-[</span>interface<span style="color:#f92672">]=[</span>ens33<span style="color:#f92672">]</span> <span style="color:#f92672">[</span> <span style="color:#f92672">--</span>permanent 영구히 사용<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h1 id="heading-7"></h1>
+<h3 id="버전확인"><strong>버전확인</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>version
+</span></span></code></pre></div><h1 id="heading-8"></h1>
+<h3 id="방화벽-실행여부-확인"><strong>방화벽 실행여부 확인</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>state
+</span></span></code></pre></div><h1 id="heading-9"></h1>
+<h3 id="방화벽-리로드"><strong>방화벽 리로드</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd 
+</span></span></code></pre></div><h1 id="heading-10"></h1>
+<h3 id="zone-목록을-출력"><strong>Zone 목록을 출력</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>zones
+</span></span></code></pre></div><h1 id="heading-11"></h1>
+<h3 id="zone-기본-존을-출력"><strong>Zone 기본 존을 출력</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span><span style="color:#66d9ef">default</span><span style="color:#f92672">-</span>zone
+</span></span></code></pre></div><h1 id="heading-12"></h1>
+<h3 id="-활성화된-zone을-출력">** 활성화된 Zone을 출력**</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>active<span style="color:#f92672">-</span>zones
+</span></span></code></pre></div><h1 id="heading-13"></h1>
+<h3 id="사용-가능한-서비스-포트-목록을-출력"><strong>사용 가능한 서비스/ 포트 목록을 출력</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>lost<span style="color:#f92672">-</span>all
+</span></span></code></pre></div><h1 id="heading-14"></h1>
+<h3 id="public-존에-속한-사용-가능한-모든-서비스-포트-목록을-출력"><strong>public 존에 속한 사용 가능한 모든 서비스/ 포트 목록을 출력</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>zone<span style="color:#f92672">=</span><span style="color:#66d9ef">public</span> <span style="color:#f92672">--</span>list<span style="color:#f92672">-</span>all
+</span></span></code></pre></div><h1 id="heading-15"></h1>
+<h3 id="ftp-서비스-추가"><strong>ftp 서비스 추가</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>service<span style="color:#f92672">=</span>ftp
+</span></span></code></pre></div><h1 id="heading-16"></h1>
+<h3 id="ftp-서비스를-제거"><strong>ftp 서비스를 제거</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>remove<span style="color:#f92672">-</span>service<span style="color:#f92672">=</span>ftp
+</span></span></code></pre></div><h1 id="heading-17"></h1>
+<h3 id="21-tcp-포트를-추가"><strong>21 tcp 포트를 추가</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span>21<span style="color:#f92672">/</span>tcp
+</span></span></code></pre></div><h1 id="heading-18"></h1>
+<h3 id="21-tcp-포트를-제거"><strong>21 tcp 포트를 제거</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>remove<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span>21<span style="color:#f92672">/</span>tcp
+</span></span></code></pre></div><h1 id="heading-19"></h1>
+<h3 id="trusted-존에-ftp-서비스를-추가"><strong>trusted 존에 ftp 서비스를 추가</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>zone<span style="color:#f92672">=</span>trusted <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>service<span style="color:#f92672">=</span>ftp
+</span></span></code></pre></div><h1 id="heading-20"></h1>
+<h3 id="시스템-재부팅-또는-방화벽-재시작-후에도-적용되도록-하려면---permanent-옵션"><strong>시스템 재부팅 또는 방화벽 재시작 후에도 적용되도록 하려면 &ndash;permanent 옵션</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>permanent <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>service<span style="color:#f92672">=</span>ftp
+</span></span></code></pre></div><h1 id="heading-21"></h1>
+<h3 id="포트포워딩-설정"><strong>포트포워딩 설정</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>forward<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span>port<span style="color:#f92672">=</span>1000<span style="color:#f92672">:</span>proto<span style="color:#f92672">=</span>tcp<span style="color:#f92672">:</span>toport<span style="color:#f92672">=</span>80<span style="color:#f92672">:</span>toaddr<span style="color:#f92672">=</span>10<span style="color:#f92672">.</span><span style="color:#a6e22e">10</span><span style="color:#f92672">.</span><span style="color:#a6e22e">10</span><span style="color:#f92672">.</span><span style="color:#a6e22e">10</span>
+</span></span></code></pre></div><h1 id="heading-22"></h1>
+<h3 id="커맨드-확인"><strong>커맨드 확인</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewalld<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>service
+</span></span></code></pre></div><h1 id="heading-23"></h1>
+<h3 id="방화벽-사용-중-확인"><strong>방화벽 사용 중 확인</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>list<span style="color:#f92672">-</span>service
+</span></span><span style="display:flex;"><span>cat <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>firewalld<span style="color:#f92672">/</span>zones<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">.</span><span style="color:#a6e22e">xml</span>
+</span></span></code></pre></div><h1 id="heading-24"></h1>
+<h3 id="zone-영역확인"><strong>Zone 영역확인</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>zones
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span> 존 영역 확인
+</span></span><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>active<span style="color:#f92672">-</span>zones
+</span></span><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>active<span style="color:#f92672">-</span>zones
+</span></span><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>active<span style="color:#f92672">-</span>zones
+</span></span><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>list<span style="color:#f92672">-</span>all<span style="color:#f92672">-</span>zones
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span> 모든 존 영역 확인
+</span></span></code></pre></div><h1 id="heading-25"></h1>
+<h3 id="방화벽-재시작"><strong>방화벽 재시작</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>reload
+</span></span></code></pre></div><h1 id="heading-26"></h1>
+<h3 id="포트추가"><strong>포트추가</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>zone<span style="color:#f92672">=</span><span style="color:#66d9ef">public</span> <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span>9090<span style="color:#f92672">/</span>tcp
+</span></span></code></pre></div><h1 id="heading-27"></h1>
+<p>firewall-cmd &ndash;zone=public &ndash;add-icmp-block=redirect</p>
+<hr>
+<hr>
+<h3 id="룰-확인"><strong>룰 확인</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>direct <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>all<span style="color:#f92672">-</span>rules
+</span></span></code></pre></div><h1 id="heading-28"></h1>
+<h3 id="룰-추가"><strong>룰 추가</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>direct <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>rule ipv4 filter INPUT 0 <span style="color:#f92672">-</span>p tcp <span style="color:#f92672">--</span>dport 9090 <span style="color:#f92672">-</span>j ACCEPT
+</span></span></code></pre></div><h1 id="heading-29"></h1>
+<h3 id="heading-30">****</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd
+</span></span></code></pre></div><h1 id="heading-31"></h1>
+<h3 id="heading-32">****</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd
+</span></span></code></pre></div><h1 id="heading-33"></h1>
+<h3 id="heading-34">****</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd
+</span></span></code></pre></div><h1 id="heading-35"></h1>
+<h3 id="heading-36">****</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd
+</span></span></code></pre></div><h1 id="heading-37"></h1>
+<h3 id="heading-38">****</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd
+</span></span></code></pre></div><h1 id="heading-39"></h1>
+<h3 id="heading-40">****</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd
+</span></span></code></pre></div><h1 id="heading-41"></h1>
+<p>firewall-cmd &ndash;reload
+firewall-cmd &ndash;permanent &ndash;zone=external 
+firewall-cmd &ndash;add-forward-port-port=9090:proto=tcp:toport=9090:toaddr=10.10.10.20
+firewall-cmd &ndash;set-default-zone=external
+firewall-cmd &ndash;zone=internal &ndash;add-masquerade</p>
+<h1 id="heading-42"></h1>
+<p>firewall-cmd &ndash;r</p>
+<p>START</p>
+<p>OK</p>
+<p>ENG</p>
+<p>ASIA</p>
+<p>SEOUL</p>
+<p>DEFALUT</p>
+<p>INTERFACE ( 순서 )</p>
+<p>iP설정</p>
+<p>START</p>
+<p>YES</p>
+<p>YES</p>
+<p>윈도우가서 로그인</p>
+<p>초기설정</p>
+<p>웹방화벽기능
+이메이방어기능</p>
+<p>네트워크 설정</p>
+<p>인터페이스 앤 라우팅 -&gt;  설정</p>
+<p>기본이 거부
+출발지</p>
+<p>목적지</p>
+<p>기타 등등</p>
+<p>드러그앤 드랍</p>
+<p>네트워크 인터페이스</p>
+<p>뉴 인터페이스</p>
+<p>new DNG 서버에 맞게 아이피 설정
+규칙에 맞게 설정</p>
+</article>
+ 
+      
+<div>
+
+
+</div>
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#명령어"><strong>명령어</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#버전확인"><strong>버전확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#방화벽-실행여부-확인"><strong>방화벽 실행여부 확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#방화벽-리로드"><strong>방화벽 리로드</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#zone-목록을-출력"><strong>Zone 목록을 출력</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#zone-기본-존을-출력"><strong>Zone 기본 존을 출력</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-활성화된-zone을-출력">** 활성화된 Zone을 출력**</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#사용-가능한-서비스-포트-목록을-출력"><strong>사용 가능한 서비스/ 포트 목록을 출력</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#public-존에-속한-사용-가능한-모든-서비스-포트-목록을-출력"><strong>public 존에 속한 사용 가능한 모든 서비스/ 포트 목록을 출력</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ftp-서비스-추가"><strong>ftp 서비스 추가</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ftp-서비스를-제거"><strong>ftp 서비스를 제거</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#21-tcp-포트를-추가"><strong>21 tcp 포트를 추가</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#21-tcp-포트를-제거"><strong>21 tcp 포트를 제거</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#trusted-존에-ftp-서비스를-추가"><strong>trusted 존에 ftp 서비스를 추가</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#시스템-재부팅-또는-방화벽-재시작-후에도-적용되도록-하려면---permanent-옵션"><strong>시스템 재부팅 또는 방화벽 재시작 후에도 적용되도록 하려면 &ndash;permanent 옵션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#포트포워딩-설정"><strong>포트포워딩 설정</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#커맨드-확인"><strong>커맨드 확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#방화벽-사용-중-확인"><strong>방화벽 사용 중 확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#zone-영역확인"><strong>Zone 영역확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#방화벽-재시작"><strong>방화벽 재시작</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#포트추가"><strong>포트추가</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#룰-확인"><strong>룰 확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#룰-추가"><strong>룰 추가</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-30">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-32">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-34">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-36">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-38">****</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading-40">****</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

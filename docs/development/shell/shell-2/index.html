@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shell Programming UNIX/ Linux 기본 명령어와 개념 Redirection &amp; Pipes $ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt; $ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt; &lt;Pipe&gt; &lt;File Descriptor&gt; ... ex) $ cat /log/var/message | grep ERR # cat = &lt;File Descripotr&gt; # /log/var/message = &lt;PATH&gt; # | = &lt;Redirection&gt; File Descriptor Process가 File이나 Device를 access 하기 위해 사용
+Standard File Descriptor
+stdin(standard input) : 표준 입력 (예시 : 키보드)
+stdout(standard output) : 표준 출력 (예시 : 모니터)">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/development/shell/shell-2/><meta property="og:title" content="UNIX/ Linux 개념과 명령어" />
+<meta property="og:description" content="Shell Programming UNIX/ Linux 기본 명령어와 개념 Redirection &amp; Pipes $ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt; $ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt; &lt;Pipe&gt; &lt;File Descriptor&gt; ... ex) $ cat /log/var/message | grep ERR # cat = &lt;File Descripotr&gt; # /log/var/message = &lt;PATH&gt; # | = &lt;Redirection&gt; File Descriptor Process가 File이나 Device를 access 하기 위해 사용
+Standard File Descriptor
+stdin(standard input) : 표준 입력 (예시 : 키보드)
+stdout(standard output) : 표준 출력 (예시 : 모니터)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/development/shell/shell-2/" /><meta property="article:section" content="docs" />
+
+
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e2bd7d5b85b8364f83ad5a78c7bee3da407d197c72a6a9f01b68855e04db9985.css" integrity="sha256-4r19W4W4Nk&#43;DrVp4x77j2kB9GXxypqnwG2iFXgTbmYU=">
+<script defer src="/en.search.min.21661551a6db5c857106f06ffb5acb09a7ce2e4ba573c2f7d7bb316512531add.js" integrity="sha256-IWYVUabbXIVxBvBv&#43;1rLCafOLkulc8L317sxZRJTGt0="></script>
+<!--
+
+-->
+
+  
+
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/monitoring/pc/" class="collapsed ">Monitoring</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell-1/" class="">Shell Script란?</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell-2/" class="active">UNIX/ Linux 개념과 명령어</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell-3/" class="">Shell Script 문법</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell-4/" class="">예약변수와 환경변수</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell-5/" class="">Shell Script System Management</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell-6/" class="">Shell Script System Security</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell-7/" class="">Shell Customizing</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell01/" class="">Shell Basics</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell02/" class="">Quotes</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell03/" class="">Variables</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell04/" class="">Fucnctions</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell05/" class="">Exit Status</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell06/" class="">Interactive</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell07/" class="">etc</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell08/" class="">Commands</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell09/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/development/shell/shell100/" class="">연습문제</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>UNIX/ Linux 개념과 명령어</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#unix-linux-기본-명령어와-개념"><strong>UNIX/ Linux 기본 명령어와 개념</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#redirection--pipes"><strong>Redirection &amp; Pipes</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-programming의-방법"><strong>Shell Programming의 방법</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#line-command"><strong>Line command</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#script"><strong>Script</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="shell-programming"><strong>Shell Programming</strong></h1>
+<h1 id="heading"></h1>
+<h2 id="unix-linux-기본-명령어와-개념"><strong>UNIX/ Linux 기본 명령어와 개념</strong></h2>
+<h1 id="heading-1"></h1>
+<h3 id="redirection--pipes"><strong>Redirection &amp; Pipes</strong></h3>
+<h1 id="heading-2"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt;
+</span></span><span style="display:flex;"><span>$ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt; &lt;Pipe&gt; &lt;File Descriptor&gt; ...
+</span></span><span style="display:flex;"><span>ex) $ cat /log/var/message | grep ERR
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># cat = &lt;File Descripotr&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># /log/var/message = &lt;PATH&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># | = &lt;Redirection&gt;
+</span></span></code></pre></div><h1 id="heading-3"></h1>
+<ul>
+<li><strong>File Descriptor</strong>
+<ul>
+<li>
+<p><strong>Process가 File이나 Device를 access 하기 위해 사용</strong></p>
+</li>
+<li>
+<p><strong>Standard File Descriptor</strong></p>
+</li>
+<li>
+<p><strong>stdin(standard input) : 표준 입력 (예시 : 키보드)</strong></p>
+</li>
+<li>
+<p><strong>stdout(standard output) : 표준 출력 (예시 : 모니터)</strong></p>
+</li>
+<li>
+<p><strong>stderr(standard error) : 표준 에러 출력 (예시 : 에러 메시지)</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-4"></h1>
+<p> </p>
+<ul>
+<li><strong>PATH</strong>
+<ul>
+<li>
+<p><strong>파일의 경로</strong></p>
+</li>
+<li>
+<p><strong>절대경로 및 상대경로로 구분</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-5"></h1>
+<p> </p>
+<ul>
+<li><strong>Redirction</strong>
+<ul>
+<li>
+<p><strong>출력 재지정</strong></p>
+</li>
+<li>
+<p><strong>입력 재지정</strong></p>
+</li>
+<li>
+<p><strong>&gt;, &raquo; (stdout을 파일로 저장 또는 추가)</strong></p>
+</li>
+<li>
+<p><strong>&lt; (파일을 stdin으로 전달)</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-6"></h1>
+<p> </p>
+<ul>
+<li><strong>Pipe (|)</strong>
+<ul>
+<li>
+<p><strong>앞의 명령어의 샐행 결과가 뒤의 명령어에 입력되도록 입출력을 연결하는 역할을 수행</strong></p>
+</li>
+<li>
+<p><strong>Process 연결 (stdout을 stdin으로 전달)</strong></p>
+</li>
+<li>
+<p><strong>Process 간의 데이터 흐름은 자동으로 조절되어짐</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-7"></h1>
+<p> </p>
+<ul>
+<li><strong>예시</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ ls -al &gt; lsoutput.txt
+</span></span><span style="display:flex;"><span># ls -al의 출력을 lsoutput.txt에 입력
+</span></span><span style="display:flex;"><span># ls -al = stdout
+</span></span><span style="display:flex;"><span># &gt; = Redirction
+</span></span><span style="display:flex;"><span># lsoutput.txt = PATH &amp; stdin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ cat lsoutput.txt
+</span></span><span style="display:flex;"><span>drwxr-xr-x 2 root root 4096 Aug 23 06:49 .
+</span></span><span style="display:flex;"><span>drwx------ 6 root root 4096 Aug 23 06:49 ..
+</span></span><span style="display:flex;"><span>-rw-r--r-- 1 root root    0 Aug 23 06:49 lsoutput.txt
+</span></span><span style="display:flex;"><span># lsoutput.txt의 내용을 출력
+</span></span><span style="display:flex;"><span># cat = stdout
+</span></span><span style="display:flex;"><span># lsoutput.txt = PATH
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ more &lt; lsoutput.txt
+</span></span><span style="display:flex;"><span>drwxr-xr-x 2 root root 4096 Aug 23 06:49 .
+</span></span><span style="display:flex;"><span>drwx------ 6 root root 4096 Aug 23 06:49 ..
+</span></span><span style="display:flex;"><span>-rw-r--r-- 1 root root    0 Aug 23 06:49 lsoutput.txt
+</span></span><span style="display:flex;"><span># lsoutput.txt의 내용을 more의 출력
+</span></span><span style="display:flex;"><span># more = stdout
+</span></span><span style="display:flex;"><span># &lt; = Redirction
+</span></span><span style="display:flex;"><span># lsoutput.txt = PATH
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ ps &gt;&gt; lsoutput.txt
+</span></span><span style="display:flex;"><span>$ cat lsoutput.txt
+</span></span><span style="display:flex;"><span>drwxr-xr-x 2 root root 4096 Aug 23 06:49 .
+</span></span><span style="display:flex;"><span>drwx------ 6 root root 4096 Aug 23 06:49 ..
+</span></span><span style="display:flex;"><span>-rw-r--r-- 1 root root    0 Aug 23 06:49 lsoutput.txt
+</span></span><span style="display:flex;"><span>    PID TTY          TIME CMD
+</span></span><span style="display:flex;"><span>   1531 pts/0    00:00:00 sudo
+</span></span><span style="display:flex;"><span>   1538 pts/0    00:00:00 su
+</span></span><span style="display:flex;"><span>   1539 pts/0    00:00:00 bash
+</span></span><span style="display:flex;"><span>   2195 pts/0    00:00:00 ps
+</span></span><span style="display:flex;"><span># ps의 출력 내용을 lsoutput.txt의 이어 쓰기
+</span></span><span style="display:flex;"><span># ps = stdout
+</span></span><span style="display:flex;"><span># &gt;&gt; = Redirction
+</span></span><span style="display:flex;"><span># lsoutput.txt = PATH &amp; stdin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ ps &gt; lsoutput.txt
+</span></span><span style="display:flex;"><span>$ cat &gt; lsoutput.txt
+</span></span><span style="display:flex;"><span>    PID TTY          TIME CMD
+</span></span><span style="display:flex;"><span>   1531 pts/0    00:00:00 sudo
+</span></span><span style="display:flex;"><span>   1538 pts/0    00:00:00 su
+</span></span><span style="display:flex;"><span>   1539 pts/0    00:00:00 bash
+</span></span><span style="display:flex;"><span>   2195 pts/0    00:00:00 ps
+</span></span><span style="display:flex;"><span># 여기서 &gt; 는 덮어쓰기 &gt;&gt; 는 이어쓰기를 의미
+</span></span><span style="display:flex;"><span># ps = stdout
+</span></span><span style="display:flex;"><span># &gt; = Redirction
+</span></span><span style="display:flex;"><span># lsoutput.txt = PATH &amp; stdin
+</span></span></code></pre></div><h1 id="heading-8"></h1>
+<p> </p>
+<h1 id="heading-9"></h1>
+<h3 id="shell-programming의-방법"><strong>Shell Programming의 방법</strong></h3>
+<h1 id="heading-10"></h1>
+<ul>
+<li><strong>Shell Programming을 사용하기 위해서는 두 가지 방법이 존재</strong></li>
+</ul>
+<h1 id="heading-11"></h1>
+<h3 id="line-command"><strong>Line command</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ for file in *
+</span></span><span style="display:flex;"><span>&gt; do
+</span></span><span style="display:flex;"><span>&gt; if grep -l ps $file
+</span></span><span style="display:flex;"><span>&gt; then
+</span></span><span style="display:flex;"><span>&gt; more $file
+</span></span><span style="display:flex;"><span>&gt; fi
+</span></span><span style="display:flex;"><span>&gt; done
+</span></span><span style="display:flex;"><span>lsoutput.txt
+</span></span><span style="display:flex;"><span>    PID TTY          TIME CMD
+</span></span><span style="display:flex;"><span>   1531 pts/0    00:00:00 sudo
+</span></span><span style="display:flex;"><span>   1538 pts/0    00:00:00 su
+</span></span><span style="display:flex;"><span>   1539 pts/0    00:00:00 bash
+</span></span><span style="display:flex;"><span>   2335 pts/0    00:00:00 ps
+</span></span></code></pre></div><ul>
+<li><strong>Line command는 CLI환경에서 특정 파일을 통해서가 아닌 직접 함수와 변수를 코딩함으로서 Programming을 수행하는 방법</strong></li>
+</ul>
+<h1 id="heading-12"></h1>
+<p> </p>
+<h3 id="script"><strong>Script</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ vi Script.sh
+</span></span><span style="display:flex;"><span># !/bin/bash
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>for file in *
+</span></span><span style="display:flex;"><span>do
+</span></span><span style="display:flex;"><span>    if grep -l ps $file
+</span></span><span style="display:flex;"><span>    then
+</span></span><span style="display:flex;"><span>        echo $file
+</span></span><span style="display:flex;"><span>    fi
+</span></span><span style="display:flex;"><span>done
+</span></span><span style="display:flex;"><span>exit 0
+</span></span><span style="display:flex;"><span>$ chmod 700 ./Script.sh
+</span></span><span style="display:flex;"><span>$ ./Script.sh
+</span></span><span style="display:flex;"><span>lsoutput.txt
+</span></span><span style="display:flex;"><span>    PID TTY          TIME CMD
+</span></span><span style="display:flex;"><span>   1531 pts/0    00:00:00 sudo
+</span></span><span style="display:flex;"><span>   1538 pts/0    00:00:00 su
+</span></span><span style="display:flex;"><span>   1539 pts/0    00:00:00 bash
+</span></span><span style="display:flex;"><span>   2335 pts/0    00:00:00 ps
+</span></span></code></pre></div><ul>
+<li><strong>Script는 특정 파일 내부에 함수와 변수의 코드함으로서 이를 실행시켜 Programing을 수행하는 방법</strong></li>
+</ul>
+<h1 id="heading-13"></h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+
+</div>
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#unix-linux-기본-명령어와-개념"><strong>UNIX/ Linux 기본 명령어와 개념</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#redirection--pipes"><strong>Redirection &amp; Pipes</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-programming의-방법"><strong>Shell Programming의 방법</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#line-command"><strong>Line command</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#script"><strong>Script</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

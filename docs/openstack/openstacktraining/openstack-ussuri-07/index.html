@@ -1,0 +1,1942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="OpenStack Ussuri : Cinder ----------------------- ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch | | MariaDB RabbitMQ | | Nova compute | | L2 Agent | | Memcached Keystone | | Open vSwitch | | L3 Agent | | httpd Cinder API | | L2 Agent | | metadata agent | | Nova-API Compute | | Cinder-LVM | ----------------------- | L2 agent L3 agent | | NFS | | metadata agent | ----------------------- | Neutron Server | ----------------------- OpenStack Ussuri : Cinder Cinder는 OpenStack에서 전체적인 볼륨, 디스크를 관리하는 서비스입니다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/openstack/openstacktraining/openstack-ussuri-07/><meta property="og:title" content="OpenStack Ussuri : Cinder" />
+<meta property="og:description" content="OpenStack Ussuri : Cinder ----------------------- ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch | | MariaDB RabbitMQ | | Nova compute | | L2 Agent | | Memcached Keystone | | Open vSwitch | | L3 Agent | | httpd Cinder API | | L2 Agent | | metadata agent | | Nova-API Compute | | Cinder-LVM | ----------------------- | L2 agent L3 agent | | NFS | | metadata agent | ----------------------- | Neutron Server | ----------------------- OpenStack Ussuri : Cinder Cinder는 OpenStack에서 전체적인 볼륨, 디스크를 관리하는 서비스입니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-07/" /><meta property="article:section" content="docs" />
+
+
+
+
+<title>뭉게뭉게</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e2bd7d5b85b8364f83ad5a78c7bee3da407d197c72a6a9f01b68855e04db9985.css" integrity="sha256-4r19W4W4Nk&#43;DrVp4x77j2kB9GXxypqnwG2iFXgTbmYU=">
+<script defer src="/en.search.min.21661551a6db5c857106f06ffb5acb09a7ce2e4ba573c2f7d7bb316512531add.js" integrity="sha256-IWYVUabbXIVxBvBv&#43;1rLCafOLkulc8L317sxZRJTGt0="></script>
+<!--
+
+-->
+
+  
+
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+
+<body>
+  <div class="background">
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex" style="max-width:100%;" >
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Microsoft Azure</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-01/" class="">OpenStack Ussuri : Overview</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-02/" class="">OpenStack Ussuri : 환경설정</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-03/" class="">OpenStack Ussuri : Keystone</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-04/" class="">OpenStack Ussuri : Glance</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-05/" class="">OpenStack Ussuri : Nova</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-06/" class="">OpenStack Ussuri : Neutron</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-07/" class="active">OpenStack Ussuri : Cinder</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-08/" class="">OpenStack Ussuri : Horizon</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-09/" class="">OpenStack Ussuri : Swift</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-10/" class="">OpenStack Ussuri : Heat</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-stein/" class="">Openstack Stain Manual 설치</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-11/" class="">OpenStack Ussuri : Gnocch</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-12/" class="">OpenStack Ussuri : Trove</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-13/" class="">OpenStack Ussuri : Designate</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-14/" class="">OpenStack Ussuri : Barbican</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-15/" class="">OpenStack Ussuri : Rally</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/openstack-ussuri-16/" class="">OpenStack Ussuri : Manila</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/devstack/" class="">DevStack</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/openstack/openstacktraining/packstack/" class="">Packstack</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/monitoring/pc/" class="collapsed ">Monitoring</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div style="padding-left: 2.5%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>OpenStack Ussuri : Cinder</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#openstack-ussuri--cinder-1"><strong>OpenStack Ussuri : Cinder</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cinder-service-및-user-생성"><strong>Cinder service 및 User 생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cinder-유저의-db를-생성합니다"><strong>Cinder 유저의 DB를 생성합니다.</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cinder-설치"><strong>Cinder 설치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#cinder-compute-node-설치"><strong>Cinder compute node 설치</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#확인"><strong>확인</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#cinder-백업-서비스-구성"><strong>Cinder 백업 서비스 구성</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cinder-백업-서비스-구성-1"><strong>Cinder 백업 서비스 구성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#확인-1"><strong>확인</strong></a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="openstack-ussuri--cinder"><strong>OpenStack Ussuri : Cinder</strong></h1>
+<h1 id="heading"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span> -----------------------         -----------------------        -----------------------
+</span></span><span style="display:flex;"><span>|  [ Controller Node ]  |       |    [ Compute Node ]   |      |   [ Network Node ]    | 
+</span></span><span style="display:flex;"><span>|                       |       |        Libvirt        |      |     Open vSwitch      |
+</span></span><span style="display:flex;"><span>| MariaDB    RabbitMQ   |       |      Nova compute     |      |       L2 Agent        |
+</span></span><span style="display:flex;"><span>| Memcached  Keystone   |       |      Open vSwitch     |      |       L3 Agent        |
+</span></span><span style="display:flex;"><span>| httpd      Cinder API |       |       L2 Agent        |      |     metadata agent    |
+</span></span><span style="display:flex;"><span>| Nova-API   Compute    |       |      Cinder-LVM       |        -----------------------
+</span></span><span style="display:flex;"><span>| L2 agent   L3 agent   |       |          NFS          |      
+</span></span><span style="display:flex;"><span>| metadata agent        |        ----------------------- 
+</span></span><span style="display:flex;"><span>| Neutron Server        |        
+</span></span><span style="display:flex;"><span> -----------------------   
+</span></span></code></pre></div><h1 id="heading-1"></h1>
+<h2 id="openstack-ussuri--cinder-1"><strong>OpenStack Ussuri : Cinder</strong></h2>
+<h1 id="heading-2"></h1>
+<ul>
+<li><strong>Cinder는 OpenStack에서 전체적인 볼륨, 디스크를 관리하는 서비스입니다.</strong></li>
+<li><strong>Cinder 서비스는 다른 Storage Node들과 함께 사용하도록 NFS 서버 또한 구축하여 백업 서비스를 활성하할 수 있게 구성핟록 하겠습니다.</strong></li>
+<li><strong>Cinder에 대한 자세한 설명은 <a href="">Cinder</a>를 참조해주세요.</strong></li>
+</ul>
+<h1 id="heading-3"></h1>
+<p> </p>
+<h1 id="heading-4"></h1>
+<h3 id="cinder-service-및-user-생성"><strong>Cinder service 및 User 생성</strong></h3>
+<h1 id="heading-5"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 cinder
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field               | Value                            |
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| default_project_id  | 7c10c02365be496fb47f12bfd40fe4a7 |
+</span></span><span style="display:flex;"><span>| domain_id           | default                          |
+</span></span><span style="display:flex;"><span>| enabled             | True                             |
+</span></span><span style="display:flex;"><span>| id                  | 1f9dbcbb529a45c28b5bb8b035ea277a |
+</span></span><span style="display:flex;"><span>| name                | cinder                           |
+</span></span><span style="display:flex;"><span>| options             | <span style="color:#75715e">{}</span>                               |
+</span></span><span style="display:flex;"><span>| password_expires_at | None                             |
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack role add --project service --user cinder admin
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack service create --name cinderv3 --description &#34;OpenStack Block Storage&#34; volumev3
+</span></span><span style="display:flex;"><span>+-------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field       | Value                            |
+</span></span><span style="display:flex;"><span>+-------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| description | OpenStack Block Storage          |
+</span></span><span style="display:flex;"><span>| enabled     | True                             |
+</span></span><span style="display:flex;"><span>| id          | 225ceadb699d4e79adf30769cd872fef |
+</span></span><span style="display:flex;"><span>| name        | cinderv3                         |
+</span></span><span style="display:flex;"><span>| type        | volumev3                         |
+</span></span><span style="display:flex;"><span>+-------------+----------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne volumev3 public http://controller:8776/v3/%\(tenant_id\)s
+</span></span><span style="display:flex;"><span>+--------------+-----------------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                                   |
+</span></span><span style="display:flex;"><span>+--------------+-----------------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                                    |
+</span></span><span style="display:flex;"><span>| id           | 6bf917232caa43eab3b83959fb19cb45        |
+</span></span><span style="display:flex;"><span>| interface    | public                                  |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                               |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                               |
+</span></span><span style="display:flex;"><span>| service_id   | 225ceadb699d4e79adf30769cd872fef        |
+</span></span><span style="display:flex;"><span>| service_name | cinderv3                                |
+</span></span><span style="display:flex;"><span>| service_type | volumev3                                |
+</span></span><span style="display:flex;"><span>| url          | http://controller:8776/v3/%(tenant_id)s |
+</span></span><span style="display:flex;"><span>+--------------+-----------------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne volumev3 internal http://controller:8776/v3/%\(tenant_id\)s
+</span></span><span style="display:flex;"><span>+--------------+-----------------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                                   |
+</span></span><span style="display:flex;"><span>+--------------+-----------------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                                    |
+</span></span><span style="display:flex;"><span>| id           | c5987fc3d9eb4fb79a2e8cf73a274936        |
+</span></span><span style="display:flex;"><span>| interface    | internal                                |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                               |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                               |
+</span></span><span style="display:flex;"><span>| service_id   | 225ceadb699d4e79adf30769cd872fef        |
+</span></span><span style="display:flex;"><span>| service_name | cinderv3                                |
+</span></span><span style="display:flex;"><span>| service_type | volumev3                                |
+</span></span><span style="display:flex;"><span>| url          | http://controller:8776/v3/%(tenant_id)s |
+</span></span><span style="display:flex;"><span>+--------------+-----------------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne volumev3 admin http://controller:8776/v3/%\(tenant_id\)s
+</span></span><span style="display:flex;"><span>+--------------+-----------------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                                   |
+</span></span><span style="display:flex;"><span>+--------------+-----------------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                                    |
+</span></span><span style="display:flex;"><span>| id           | eff2398584944c0fa7575d1991d725fe        |
+</span></span><span style="display:flex;"><span>| interface    | admin                                   |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                               |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                               |
+</span></span><span style="display:flex;"><span>| service_id   | 225ceadb699d4e79adf30769cd872fef        |
+</span></span><span style="display:flex;"><span>| service_name | cinderv3                                |
+</span></span><span style="display:flex;"><span>| service_type | volumev3                                |
+</span></span><span style="display:flex;"><span>| url          | http://controller:8776/v3/%(tenant_id)s |
+</span></span><span style="display:flex;"><span>+--------------+-----------------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Cinder의 Endpoint를 생성합니다.
+</span></span></code></pre></div><h1 id="heading-6"></h1>
+<p> </p>
+<h1 id="heading-7"></h1>
+<h3 id="cinder-유저의-db를-생성합니다"><strong>Cinder 유저의 DB를 생성합니다.</strong></h3>
+<h1 id="heading-8"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller&gt; mysql -u root -p
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; create database cinder;  
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on cinder.* to cinder@&#39;localhost&#39; identified by &#39;qwer1234&#39;; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on cinder.* to cinder@&#39;%&#39; identified by &#39;qwer1234&#39;; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; flush privileges; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; exit;
+</span></span></code></pre></div><h1 id="heading-9"></h1>
+<p> </p>
+<h1 id="heading-10"></h1>
+<h3 id="cinder-설치"><strong>Cinder 설치</strong></h3>
+<h1 id="heading-11"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-cinder
+</span></span><span style="display:flex;"><span># cinder 및 관련 모듈을 설치합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; vi /etc/cinder/cinder.conf
+</span></span><span style="display:flex;"><span>[DEFAULT]
+</span></span><span style="display:flex;"><span>my_ip = controller
+</span></span><span style="display:flex;"><span>log_dir = /var/log/cinder
+</span></span><span style="display:flex;"><span>state_path = /var/lib/cinder
+</span></span><span style="display:flex;"><span>auth_strategy = keystone
+</span></span><span style="display:flex;"><span>transport_url = rabbit://openstack:qwer1234@controller
+</span></span><span style="display:flex;"><span>enable_v3_api = True
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[database]
+</span></span><span style="display:flex;"><span>connection = mysql+pymysql://cinder:qwer1234@controller/cinder
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[keystone_authtoken]
+</span></span><span style="display:flex;"><span>www_authenticate_uri = http://controller:5000
+</span></span><span style="display:flex;"><span>auth_url = http://controller:5000
+</span></span><span style="display:flex;"><span>memcached_servers = controller:11211
+</span></span><span style="display:flex;"><span>auth_type = password
+</span></span><span style="display:flex;"><span>project_domain_name = default
+</span></span><span style="display:flex;"><span>user_domain_name = default
+</span></span><span style="display:flex;"><span>project_name = service
+</span></span><span style="display:flex;"><span>username = cinder
+</span></span><span style="display:flex;"><span>password = qwer1234
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[oslo_concurrency]
+</span></span><span style="display:flex;"><span>lock_path = $state_path/tmp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; su -s /bin/bash cinder -c &#34;cinder-manage db sync&#34;
+</span></span><span style="display:flex;"><span>$ controller&gt; systemctl enable --now openstack-cinder-api openstack-cinder-scheduler
+</span></span><span style="display:flex;"><span># cinder DB를 임포트 시키고, 서비스를 등록합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; echo &#34;export OS_VOLUME_API_VERSION=3&#34; &gt;&gt; ~/admin_key
+</span></span><span style="display:flex;"><span>$ controller&gt; source ~/admin_key
+</span></span><span style="display:flex;"><span># key파일을 수정합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; firewall-cmd --add-port=8776/tcp --permanent 
+</span></span><span style="display:flex;"><span>$ controller&gt; firewall-cmd --reload
+</span></span><span style="display:flex;"><span># 방화벽을 설정합니다.
+</span></span></code></pre></div><h1 id="heading-12"></h1>
+<p> </p>
+<h1 id="heading-13"></h1>
+<h2 id="cinder-compute-node-설치"><strong>Cinder compute node 설치</strong></h2>
+<h1 id="heading-14"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ compute&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-cinder targetcli
+</span></span><span style="display:flex;"><span># cinder 및 관련 모듈을 설치합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; fdisk ...
+</span></span><span style="display:flex;"><span># LVM의 타입으로 파티션을 추가합니다.
+</span></span><span style="display:flex;"><span># cinder 이름으로 vg를 생성합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; scp /etc/cinder/cinder.conf compute:/etc/cinder/cinder.conf 
+</span></span><span style="display:flex;"><span>$ compute&gt; vi /etc/cinder/cinder.conf
+</span></span><span style="display:flex;"><span>[default]
+</span></span><span style="display:flex;"><span>my_ip = compute
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>glance_api_servers = http://controller:9292
+</span></span><span style="display:flex;"><span>enabled_backends = lvm
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[lvm]
+</span></span><span style="display:flex;"><span>target_helper = lioadm
+</span></span><span style="display:flex;"><span>target_protocol = iscsi
+</span></span><span style="display:flex;"><span>target_ip_address = compute
+</span></span><span style="display:flex;"><span>volume_group = cinder
+</span></span><span style="display:flex;"><span>volume_driver = cinder.volume.drivers.lvm.LVMVolumeDriver
+</span></span><span style="display:flex;"><span>volumes_dir = $state_path/volumes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; vi /etc/nova/nova.conf
+</span></span><span style="display:flex;"><span>[cinder]
+</span></span><span style="display:flex;"><span>os_region_name = RegionOne
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; systemctl restart openstack-nova-compute
+</span></span><span style="display:flex;"><span>$ compute&gt; systemctl enable --now openstack-cinder-volume
+</span></span><span style="display:flex;"><span>$ compute&gt; vi iscsiadm.te
+</span></span><span style="display:flex;"><span>module iscsiadm 1.0;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>require <span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">type</span> <span style="color:#a6e22e">iscsid_t</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">capability</span> <span style="color:#a6e22e">dac_override</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#============= iscsid_t ==============
+</span></span><span style="display:flex;"><span>allow iscsid_t self:capability dac_override;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; checkmodule -m -M -o iscsiadm.mod iscsiadm.te
+</span></span><span style="display:flex;"><span>$ compute&gt; semodule_package --outfile iscsiadm.pp --module iscsiadm.mod
+</span></span><span style="display:flex;"><span>$ compute&gt; semodule -i iscsiadm.pp
+</span></span><span style="display:flex;"><span>$ compute&gt; firewall-cmd --add-service=iscsi-target --permanent
+</span></span><span style="display:flex;"><span>$ compute&gt; firewall-cmd --reload
+</span></span><span style="display:flex;"><span># SELinux 및 방화벽을 설정합니다.
+</span></span></code></pre></div><h1 id="heading-15"></h1>
+<p> </p>
+<h1 id="heading-16"></h1>
+<h2 id="확인"><strong>확인</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller ~/(keystone)&gt; openstack volume service list
+</span></span><span style="display:flex;"><span>+------------------+-------------+------+---------+-------+----------------------------+
+</span></span><span style="display:flex;"><span>| Binary           | Host        | Zone | Status  | State | Updated At                 |
+</span></span><span style="display:flex;"><span>+------------------+-------------+------+---------+-------+----------------------------+
+</span></span><span style="display:flex;"><span>| cinder-scheduler | controller  | nova | enabled | up    | 2020-08-07T01:29:22.000000 |
+</span></span><span style="display:flex;"><span>| cinder-volume    | compute@lvm | nova | enabled | up    | 2020-08-07T01:29:22.000000 |
+</span></span><span style="display:flex;"><span>+------------------+-------------+------+---------+-------+----------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~/(keystone)&gt; openstack volume create --size 1 test
+</span></span><span style="display:flex;"><span>+---------------------+--------------------------------------+
+</span></span><span style="display:flex;"><span>| Field               | Value                                |
+</span></span><span style="display:flex;"><span>+---------------------+--------------------------------------+
+</span></span><span style="display:flex;"><span>| attachments         | []                                   |
+</span></span><span style="display:flex;"><span>| availability_zone   | nova                                 |
+</span></span><span style="display:flex;"><span>| bootable            | false                                |
+</span></span><span style="display:flex;"><span>| consistencygroup_id | None                                 |
+</span></span><span style="display:flex;"><span>| created_at          | 2020-08-07T01:46:06.000000           |
+</span></span><span style="display:flex;"><span>| description         | None                                 |
+</span></span><span style="display:flex;"><span>| encrypted           | False                                |
+</span></span><span style="display:flex;"><span>| id                  | aa07bf85-424d-478c-ae52-648ddc588465 |
+</span></span><span style="display:flex;"><span>| migration_status    | None                                 |
+</span></span><span style="display:flex;"><span>| multiattach         | False                                |
+</span></span><span style="display:flex;"><span>| name                | test                                 |
+</span></span><span style="display:flex;"><span>| properties          |                                      |
+</span></span><span style="display:flex;"><span>| replication_status  | None                                 |
+</span></span><span style="display:flex;"><span>| size                | 1                                    |
+</span></span><span style="display:flex;"><span>| snapshot_id         | None                                 |
+</span></span><span style="display:flex;"><span>| source_volid        | None                                 |
+</span></span><span style="display:flex;"><span>| status              | creating                             |
+</span></span><span style="display:flex;"><span>| type                | __DEFAULT__                          |
+</span></span><span style="display:flex;"><span>| updated_at          | None                                 |
+</span></span><span style="display:flex;"><span>| user_id             | 57ce8f772e374a7c9282f2674fda1ba7     |
+</span></span><span style="display:flex;"><span>+---------------------+--------------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~/(keystone)&gt; openstack volume list
+</span></span><span style="display:flex;"><span>+--------------------------------------+------+-----------+------+-------------+
+</span></span><span style="display:flex;"><span>| ID                                   | Name | Status    | Size | Attached to |
+</span></span><span style="display:flex;"><span>+--------------------------------------+------+-----------+------+-------------+
+</span></span><span style="display:flex;"><span>| aa07bf85-424d-478c-ae52-648ddc588465 | test | available |    1 |             |
+</span></span><span style="display:flex;"><span>+--------------------------------------+------+-----------+------+-------------+
+</span></span></code></pre></div><h1 id="heading-17"></h1>
+<p> </p>
+<h1 id="heading-18"></h1>
+<h1 id="오류가-있어-수정-중입니다-"><strong>오류가 있어 수정 중입니다 !</strong></h1>
+<h1 id="heading-19"></h1>
+<h2 id="cinder-백업-서비스-구성"><strong>Cinder 백업 서비스 구성</strong></h2>
+<ul>
+<li><strong><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/deployment_guide/s1-nfs-server-config-exports">NFS 구성참조</a></strong></li>
+</ul>
+<h1 id="heading-20"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ compute&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install nfs-utils
+</span></span><span style="display:flex;"><span># nfs-utils을 설치합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; vi /etc/exports
+</span></span><span style="display:flex;"><span>/nfs 10.10.10.0/24(rw,no_root_squash)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># ro: 마운트 된 볼륨의 데이터를 읽기만 가능
+</span></span><span style="display:flex;"><span># rw: 마운트 된 볼륨에 쓰기 또한 가능
+</span></span><span style="display:flex;"><span># no_root_squash: 루트 자격을 가진 사용자만 쓰기 가능
+</span></span><span style="display:flex;"><span># noaccess: 디렉터리 접근 불가
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; systemctl enable --now rpcbind nfs-server
+</span></span><span style="display:flex;"><span># NFC-server 서비스를 등록 및 시작합니다. 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ vi /etc/cinder/cinder.conf
+</span></span><span style="display:flex;"><span>[default]
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>enabled_backends = lvm,nfs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[nfs]
+</span></span><span style="display:flex;"><span>volume_driver = cinder.volume.drivers.nfs.NfsDriver
+</span></span><span style="display:flex;"><span>volume_backend_name = NFS
+</span></span><span style="display:flex;"><span>nfs_shares_config = /etc/cinder/nfs_shares
+</span></span><span style="display:flex;"><span>nfs_mount_point_base = $state_path/mnt_nfs
+</span></span><span style="display:flex;"><span># cinder.conf 파일의 nfs를 추가합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; vi /etc/cinder/nfs_shares
+</span></span><span style="display:flex;"><span>compute:/nfs
+</span></span><span style="display:flex;"><span># 공유될 디렉토리를 지정합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; chmod 640 /etc/cinder/nfs_shares
+</span></span><span style="display:flex;"><span>$ compute&gt; chgrp cinder /etc/cinder/nfs_shares
+</span></span><span style="display:flex;"><span>$ compute&gt; systemctl restart openstack-cinder-volume
+</span></span><span style="display:flex;"><span>$ compute&gt; chown -R cinder. /var/lib/cinder/mnt_nfs
+</span></span><span style="display:flex;"><span># cinder nfs 파일의 권한을 변경하고 cinder 서비스를 재시작합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; firewall-cmd --add-service=nfs --permanent
+</span></span><span style="display:flex;"><span>$ compute&gt; firewall-cmd --reload
+</span></span><span style="display:flex;"><span># 방화벽을 설정합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; vi iscsiadm.te
+</span></span><span style="display:flex;"><span>module iscsiadm 1.0;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>require <span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">type</span> <span style="color:#a6e22e">iscsid_t</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">capability</span> <span style="color:#a6e22e">dac_override</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#============= iscsid_t ==============
+</span></span><span style="display:flex;"><span>allow iscsid_t self:capability dac_override;
+</span></span><span style="display:flex;"><span>$ compute&gt; checkmodule -m -M -o iscsiadm.mod iscsiadm.te
+</span></span><span style="display:flex;"><span>$ compute&gt; semodule_package --outfile iscsiadm.pp --module iscsiadm.mod
+</span></span><span style="display:flex;"><span>$ compute&gt; semodule -i iscsiadm.pp
+</span></span><span style="display:flex;"><span>$ compute&gt; systemctl restart openstack-nova-compute
+</span></span><span style="display:flex;"><span># SELinux를 설정하고 compute 서비스를 재시작합니다.
+</span></span></code></pre></div><h1 id="heading-21"></h1>
+<p> </p>
+<h1 id="heading-22"></h1>
+<h3 id="cinder-백업-서비스-구성-1"><strong>Cinder 백업 서비스 구성</strong></h3>
+<h1 id="heading-23"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ compute&gt; vi /etc/cinder/cinder.conf
+</span></span><span style="display:flex;"><span>[default]
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>backup_driver = cinder.backup.drivers.nfs.NFSBackupDriver
+</span></span><span style="display:flex;"><span>backup_mount_point_base = $state_path/backup_nfs
+</span></span><span style="display:flex;"><span>backup_share = compute:/var/lib/cinder-backup
+</span></span><span style="display:flex;"><span># ciner 백업 서비스를 활성화하기 이해 cinder.conf 파일의 설정을 추가합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; systemctl enable --now openstack-cinder-backup
+</span></span><span style="display:flex;"><span>$ compute&gt; chown -R cinder. /var/lib/cinder/backup_nfs
+</span></span><span style="display:flex;"><span>$ cinder backup 서비스를 활성화합니다.
+</span></span></code></pre></div><h1 id="heading-24"></h1>
+<p> </p>
+<h1 id="heading-25"></h1>
+<h2 id="확인-1"><strong>확인</strong></h2>
+<h1 id="heading-26"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack volume service list
+</span></span><span style="display:flex;"><span>+------------------+-------------+------+---------+-------+----------------------------+
+</span></span><span style="display:flex;"><span>| Binary           | Host        | Zone | Status  | State | Updated At                 |
+</span></span><span style="display:flex;"><span>+------------------+-------------+------+---------+-------+----------------------------+
+</span></span><span style="display:flex;"><span>| cinder-scheduler | controller  | nova | enabled | up    | 2020-08-12T04:31:53.000000 |
+</span></span><span style="display:flex;"><span>| cinder-volume    | compute@lvm | nova | enabled | up    | 2020-08-12T04:31:46.000000 |
+</span></span><span style="display:flex;"><span>| cinder-volume    | compute@nfs | nova | enabled | up    | 2020-08-12T04:31:46.000000 |
+</span></span><span style="display:flex;"><span>+------------------+-------------+------+---------+-------+----------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; 
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; 
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; 
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; 
+</span></span></code></pre></div></article>
+ 
+      
+<div>
+
+
+</div>
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#openstack-ussuri--cinder-1"><strong>OpenStack Ussuri : Cinder</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cinder-service-및-user-생성"><strong>Cinder service 및 User 생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cinder-유저의-db를-생성합니다"><strong>Cinder 유저의 DB를 생성합니다.</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cinder-설치"><strong>Cinder 설치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#cinder-compute-node-설치"><strong>Cinder compute node 설치</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#확인"><strong>확인</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#cinder-백업-서비스-구성"><strong>Cinder 백업 서비스 구성</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cinder-백업-서비스-구성-1"><strong>Cinder 백업 서비스 구성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#확인-1"><strong>확인</strong></a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
