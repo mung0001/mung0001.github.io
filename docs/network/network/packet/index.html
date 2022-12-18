@@ -2,19 +2,15 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="네트워크 패킷 ( Network Packet ) 패킷이란 데이터의 묶음 단위로 한번에 전송할 데이터의 크기
+<meta name="description" content="네트워크 패킷 ( Network Packet )##패킷이란 데이터의 묶음 단위로 한번에 전송할 데이터의 크기
 제 3계층 이상 ( Network 계층 ) 에서는 이 데이터의 묶음을 패킷이라고 부르며, 제 2계층에서는 프레임( Frame )
 패킷의 크기는 네트워크의 종류에 따라 크기가 다름
 패킷을 이렇게 나눠 보내는 이유는 컴퓨터는 동시다발적으로 데이터를 전송하는 데, 한 데이터에게만 데이터를 줄 경우, 한 컴퓨터와의 통신밖에 하지 못하기에, 데이터를 나눠 모두에게 통신할 수 있게 하며, 중간에 에러가 날 경우를 대비">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/network/network/packet/><meta property="og:title" content="Network Packet" />
-<meta property="og:description" content="네트워크 패킷 ( Network Packet ) 패킷이란 데이터의 묶음 단위로 한번에 전송할 데이터의 크기
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Network Packet" />
+<meta property="og:description" content="네트워크 패킷 ( Network Packet )##패킷이란 데이터의 묶음 단위로 한번에 전송할 데이터의 크기
 제 3계층 이상 ( Network 계층 ) 에서는 이 데이터의 묶음을 패킷이라고 부르며, 제 2계층에서는 프레임( Frame )
 패킷의 크기는 네트워크의 종류에 따라 크기가 다름
 패킷을 이렇게 나눠 보내는 이유는 컴퓨터는 동시다발적으로 데이터를 전송하는 데, 한 데이터에게만 데이터를 줄 경우, 한 컴퓨터와의 통신밖에 하지 못하기에, 데이터를 나눠 모두에게 통신할 수 있게 하며, 중간에 에러가 날 경우를 대비" />
@@ -23,25 +19,28 @@
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Network Packet | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -54,7 +53,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1271,6 +1270,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1282,14 +1284,15 @@
   <strong>Network Packet</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1434,8 +1437,14 @@
 <br>
 <br>
       
-  <article class="markdown"><h2 id="네트워크-패킷--network-packet-"><strong>네트워크 패킷 ( Network Packet )</strong></h2>
-<h1 id="heading"></h1>
+  <article class="markdown"><h2 id="네트워크-패킷--network-packet-">
+  <strong>네트워크 패킷 ( Network Packet )</strong>
+  <a class="anchor" href="#%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ed%8c%a8%ed%82%b7--network-packet-">#</a>
+</h2>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <ul>
 <li>
 <p>패킷이란 데이터의 <strong>묶음 단위</strong>로 한번에 전송할 데이터의 크기</p>
@@ -1450,11 +1459,20 @@
 <p>패킷을 이렇게 나눠 보내는 이유는 컴퓨터는 <strong>동시다발적으로 데이터를 전송</strong>하는 데, 한 데이터에게만 데이터를 줄 경우, <strong>한 컴퓨터와의 통신밖에 하지 못하기에, 데이터를 나눠 모두에게 통신</strong>할 수 있게 하며, <strong>중간에 에러가 날 경우를 대비</strong></p>
 </li>
 </ul>
-<h1 id="heading-1"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <hr>
 <hr>
-<h2 id="패킷의-기본-구조"><strong>패킷의 기본 구조</strong></h2>
-<h1 id="heading-2"></h1>
+<h2 id="패킷의-기본-구조">
+  <strong>패킷의 기본 구조</strong>
+  <a class="anchor" href="#%ed%8c%a8%ed%82%b7%ec%9d%98-%ea%b8%b0%eb%b3%b8-%ea%b5%ac%ec%a1%b0">#</a>
+</h2>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <p><img src="/Network/Payload.png" alt="Playload" /></p>
 <hr>
 <hr>
@@ -1470,7 +1488,10 @@
 <p>즉 위의 그림과 같이 데이터는 계층의 헤더 ( Hader ) + 페이로드 ( Payload )로 이루어져 있으며, <strong>헤더가 붙은 계층에 따라 비트, 프레임, 패킷, 세그먼트, 데이터</strong> 라 한다.</p>
 </li>
 </ul>
-<h1 id="heading-3"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>각 네트워크 계층의 단위</strong>
@@ -1510,9 +1531,18 @@
 <p>데이터는 데이터 상태로 상대방에게 바로 전달해주지 못한다. 그렇기에 상대방이 데이터를 볼 수 있게 송신과정을 거쳐야 하는 데 이를 <strong>인 캡슐레이션</strong> 이라 하며, 수신자는 반대로 수신과정을 거치는 데 이를 <strong>디 캡슐레이션</strong> 이라 한다.</p>
 </li>
 </ul>
-<h1 id="heading-4"></h1>
-<h3 id="네트워크-인-캡슐레이션--network-encapsulation-"><strong>네트워크 인 캡슐레이션 ( Network Encapsulation )</strong></h3>
-<h1 id="heading-5"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="네트워크-인-캡슐레이션--network-encapsulation-">
+  <strong>네트워크 인 캡슐레이션 ( Network Encapsulation )</strong>
+  <a class="anchor" href="#%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%9d%b8-%ec%ba%a1%ec%8a%90%eb%a0%88%ec%9d%b4%ec%85%98--network-encapsulation-">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -1522,7 +1552,10 @@
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
       <p><img src="https://t1.daumcdn.net/cfile/tistory/997A14455E1B437113" alt="인캡슐레이션" /></p>
-<h1 id="heading"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <ul>
 <li>
 <p>위에 언급한 듯이 송신자가 수신자에게 데이터를 볼 수 있도록 포장하는 것을 인캡슐레이션이라 하며 이는 <strong>OSI L7에서 L1 방향</strong>으로 진행 된다.</p>
@@ -1536,9 +1569,18 @@
   </label>
 </div>
 
-<h1 id="heading-6"></h1>
-<h3 id="네트워크-디-캡슐레이션--network-depsulation-"><strong>네트워크 디 캡슐레이션 ( Network Depsulation )</strong></h3>
-<h1 id="heading-7"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<h3 id="네트워크-디-캡슐레이션--network-depsulation-">
+  <strong>네트워크 디 캡슐레이션 ( Network Depsulation )</strong>
+  <a class="anchor" href="#%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%eb%94%94-%ec%ba%a1%ec%8a%90%eb%a0%88%ec%9d%b4%ec%85%98--network-depsulation-">#</a>
+</h3>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -1563,9 +1605,18 @@
 
 <hr>
 <hr>
-<h1 id="heading-8"></h1>
-<h2 id="각-계층의-protocol"><strong>각 계층의 Protocol</strong></h2>
-<h1 id="heading-9"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<h2 id="각-계층의-protocol">
+  <strong>각 계층의 Protocol</strong>
+  <a class="anchor" href="#%ea%b0%81-%ea%b3%84%ec%b8%b5%ec%9d%98-protocol">#</a>
+</h2>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <ul>
 <li>각 프로토콜은</li>
 <li>2진수 1개 = 1bit</li>
@@ -1574,9 +1625,18 @@
 <li>16진수 2개 = 2진수 8개</li>
 <li>16진수 2개 8bit = 1byte를 뜻함</li>
 </ul>
-<h1 id="heading-10"></h1>
-<h2 id="2계층--data-link-"><strong>2계층 ( Data-Link )</strong></h2>
-<h1 id="heading-11"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h2 id="2계층--data-link-">
+  <strong>2계층 ( Data-Link )</strong>
+  <a class="anchor" href="#2%ea%b3%84%ec%b8%b5--data-link-">#</a>
+</h2>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <ul>
 <li>
 <p>2계층은 하나의 네트워크 대역 즉, 네트워크 상에 존재하는 여러 장비들 중에서 어떤 장비에게 보내는 <strong>데이터를 전달하는 역할</strong> 을 수행.</p>
@@ -1588,7 +1648,10 @@
 <p>하나의 네트워크 대역 LAN에서만 통신할 때 사용하며,<strong>다른 네트워크와 통신 할 때에는 3계층이 도와주어야만 통</strong> 신이 가능</p>
 </li>
 </ul>
-<h1 id="heading-12"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/996700395E199B6B0E" alt="D_P" /></p>
 <ul>
 <li>Ethernet 14byte</li>
@@ -1596,13 +1659,28 @@
 <li>Source Address: 데이터를 전달하는 시스템의 MAV 주소 6byte
 상위 프로토콜 타입: 2byte, IPv4 ( 0x0800 ), ARD ( 0x0806 )</li>
 </ul>
-<h1 id="heading-13"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
 <hr>
 <hr>
-<h2 id="3계층--network-"><strong>3계층 ( Network )</strong></h2>
-<h1 id="heading-14"></h1>
-<h3 id="arp-protocol"><strong>ARP Protocol</strong></h3>
-<h1 id="heading-15"></h1>
+<h2 id="3계층--network-">
+  <strong>3계층 ( Network )</strong>
+  <a class="anchor" href="#3%ea%b3%84%ec%b8%b5--network-">#</a>
+</h2>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<h3 id="arp-protocol">
+  <strong>ARP Protocol</strong>
+  <a class="anchor" href="#arp-protocol">#</a>
+</h3>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <ul>
 <li>
 <p>ARP 프로토콜은 같은 네트워크 대역에서 통신을 하기 위해 필요한 <strong>MAC주소를 IP주소를 이용해서 알아오는 프로토콜</strong></p>
@@ -1614,7 +1692,10 @@
 <p>ARP는 같은 대역에서만 사용가능</p>
 </li>
 </ul>
-<h1 id="heading-16"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/99A5593E5E19A5C317" alt="N_A" /></p>
 <ul>
 <li>
@@ -1627,7 +1708,10 @@
 <p>최소는 60byte, 최대는 1514byte</p>
 </li>
 </ul>
-<h1 id="heading-17"></h1>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -1645,10 +1729,16 @@
 <p>인캡슐레이션 후, 주소를 알지 못해 브로드캐스트 방식으로 모두에게 요청을 보낸 후, 아이피가 맞지 않으면 버리고, 맞는 아이피를 가지고 있는 PC는 자기의 주소를 다시 송신하고, 그러면 초기 송신자는 목적지 주소( MAC )를 알 수 있게 되어지는 원리</p>
 </li>
 </ul>
-<h1 id="heading"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/99C2154A5E1B43F536" alt="N_A" /><br>
 <strong>발신자</strong></p>
-<h1 id="heading-1"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/9996C14A5E1B43F537" alt="N_A" /><br>
 <strong>수신자</strong></p>
 
@@ -1656,11 +1746,20 @@
   </label>
 </div>
 
-<h1 id="heading-18"></h1>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
 <hr>
 <hr>
-<h3 id="ipv4-protocol"><strong>IPv4 Protocol</strong></h3>
-<h1 id="heading-19"></h1>
+<h3 id="ipv4-protocol">
+  <strong>IPv4 Protocol</strong>
+  <a class="anchor" href="#ipv4-protocol">#</a>
+</h3>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 <ul>
 <li>
 <p>IPv4는 네트워크 상에서 데이터를 교환하기 위한 프로토콜이지만, <strong>데이터가 정확하게 전달될 것을 보장하지는 않음</strong></p>
@@ -1672,7 +1771,10 @@
 <p>데이터의 정확하고 순차적인 전달은 그보다 상위 프로토콜인 TCP에서 보장</p>
 </li>
 </ul>
-<h1 id="heading-20"></h1>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/992CC3435E1B443431" alt="N_I" /></p>
 <ul>
 <li><strong>구조 설명</strong>
@@ -1707,11 +1809,20 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-21"></h1>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <hr>
 <hr>
-<h3 id="icmp-protocol"><strong>ICMP Protocol</strong></h3>
-<h1 id="heading-22"></h1>
+<h3 id="icmp-protocol">
+  <strong>ICMP Protocol</strong>
+  <a class="anchor" href="#icmp-protocol">#</a>
+</h3>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/99B7AC3D5E19AA312F" alt="N_I" /></p>
 <ul>
 <li>8 ( 요청 )/ 0 ( 정상적인 응답 )</li>
@@ -1720,8 +1831,14 @@
 </ul>
 <hr>
 <hr>
-<h2 id="4계층--transport-"><strong>4계층 ( Transport )</strong></h2>
-<h1 id="heading-23"></h1>
+<h2 id="4계층--transport-">
+  <strong>4계층 ( Transport )</strong>
+  <a class="anchor" href="#4%ea%b3%84%ec%b8%b5--transport-">#</a>
+</h2>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <ul>
 <li>
 <p>4계층 전송 계층 ( Transprot layer )은 <strong>송신자의 프로세스와 수신자의 프로세스를 연결하는 서비스</strong> 를 제공하는 계층이다.</p>
@@ -1733,9 +1850,18 @@
 <p>전송 프로토콜 중 가장 장 알려진 것은 연결 지향전송박시으로 사용하는 <strong>전송제어 프로토콜( TCP )</strong> 단순한 전송에 사용되는 사용자 <strong>데이터 프로토콜 ( UDP )</strong> 가 있다</p>
 </li>
 </ul>
-<h1 id="heading-24"></h1>
-<h3 id="udp-protocol"><strong>UDP Protocol</strong></h3>
-<h1 id="heading-25"></h1>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<h3 id="udp-protocol">
+  <strong>UDP Protocol</strong>
+  <a class="anchor" href="#udp-protocol">#</a>
+</h3>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
 <ul>
 <li>
 <p>UDP 프로토콜 ( User Datagram Protocol )은 데이터 그램 프로토콜 ( Universal Datagram Protocol )이라고 일컫기도 한다.</p>
@@ -1747,13 +1873,25 @@
 <p>UDP는 일반적으로 오류의 검사와 수정이 필요 없는 프로그램에서 수행할 것으로 가정해야 한다.</p>
 </li>
 </ul>
-<h1 id="heading-26"></h1>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/99F246485E1B452132" alt="T_U" /></p>
-<h1 id="heading-27"></h1>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
 <hr>
 <hr>
-<h3 id="tcp-protocol"><strong>TCP Protocol</strong></h3>
-<h1 id="heading-28"></h1>
+<h3 id="tcp-protocol">
+  <strong>TCP Protocol</strong>
+  <a class="anchor" href="#tcp-protocol">#</a>
+</h3>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
 <ul>
 <li>
 <p>전송 제어 프로토콜 (Transmission Control Protocol ) 은 인터넷에 연결된 컴퓨터에서 실행되는 프로그램 간에 통신을  <strong>안정적으로, 순서대로 에러없이 교환</strong> 할 수 있다</p>
@@ -1762,7 +1900,10 @@
 <p>TCP의 안정성을 필요로 하지 않은 애플리케이션의 경우 일반적으로 TCP 대신 비접속형 사용자 데이터그램 프로토콜 ( User Datagream Protocol )을 사용하여, <strong>TCP는 UDP보다 안전하지만 느리다</strong></p>
 </li>
 </ul>
-<h1 id="heading-29"></h1>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/99D791365E1A618116" alt="T_T" /></p>
 <ul>
 <li><strong>TCP Fags</strong>
@@ -1779,8 +1920,14 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-30"></h1>
-<h3 id="3way-handshake"><strong>3Way Handshake</strong></h3>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
+<h3 id="3way-handshake">
+  <strong>3Way Handshake</strong>
+  <a class="anchor" href="#3way-handshake">#</a>
+</h3>
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -1805,7 +1952,10 @@
 </ol>
 </li>
 </ul>
-<h1 id="heading"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/995995435E1B459B30" alt="T_T" />
 <img src="https://t1.daumcdn.net/cfile/tistory/991393435E1B459B01" alt="T_T" /></p>
 <ul>
@@ -1828,18 +1978,39 @@
   </label>
 </div>
 
-<h1 id="heading-31"></h1>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
 <hr>
 <hr>
-<h2 id="7계층--application-"><strong>7계층 ( Application )</strong></h2>
-<h1 id="heading-32"></h1>
-<h3 id="http-protocol"><strong>HTTP Protocol</strong></h3>
-<h1 id="heading-33"></h1>
+<h2 id="7계층--application-">
+  <strong>7계층 ( Application )</strong>
+  <a class="anchor" href="#7%ea%b3%84%ec%b8%b5--application-">#</a>
+</h2>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
+<h3 id="http-protocol">
+  <strong>HTTP Protocol</strong>
+  <a class="anchor" href="#http-protocol">#</a>
+</h3>
+<h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
 <hr>
 <hr>
-<h2 id="dns-protocol"><strong>DNS Protocol</strong></h2>
+<h2 id="dns-protocol">
+  <strong>DNS Protocol</strong>
+  <a class="anchor" href="#dns-protocol">#</a>
+</h2>
 <p><img src="/study/DNS_2.gif" alt="DNS" /></p>
-<h1 id="heading-34"></h1>
+<h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
 <ul>
 <li>
 <p>기존의 192.168&hellip;.. 등의 호스트 도메인의 이름을 네트워크 주소로 바꾸거나 그 반대의 변환을 수행을 위해 개발되어짐</p>
@@ -1879,11 +2050,20 @@
 }</p>
 </li>
 </ul>
-<h1 id="heading-35"></h1>
+<h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
 <hr>
 <hr>
-<h3 id="domain-address"><strong>Domain address</strong></h3>
-<h1 id="heading-36"></h1>
+<h3 id="domain-address">
+  <strong>Domain address</strong>
+  <a class="anchor" href="#domain-address">#</a>
+</h3>
+<h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
 <ul>
 <li>
 <p>인터넷 상에서의 주소인 URL의 일부</p>
@@ -1895,50 +2075,92 @@
 <p>보통 루트 네임 서버( 최상위 DNS서버로 JAVA에서 관리 )에 등록된 최상위 호스트 네임을 관리하는 도메인 레지스트리에서 관리하는 하위 호스트 네임을 이르는 말</p>
 </li>
 </ul>
-<h1 id="heading-37"></h1>
+<h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
 <hr>
 <hr>
-<h3 id="쿼리-query-"><strong>쿼리( Query )</strong></h3>
-<h1 id="heading-38"></h1>
+<h3 id="쿼리-query-">
+  <strong>쿼리( Query )</strong>
+  <a class="anchor" href="#%ec%bf%bc%eb%a6%ac-query-">#</a>
+</h3>
+<h1 id="heading-38">
+  
+  <a class="anchor" href="#heading-38">#</a>
+</h1>
 <p><strong>재귀 쿼리</strong></p>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/990420385E30D8E128" alt="DNS" /></p>
 <ul>
 <li><strong>로컬 DNS서버와 주고받는 질의와 응답</strong></li>
 </ul>
-<h1 id="heading-39"></h1>
-<h1 id="heading-40"></h1>
+<h1 id="heading-39">
+  
+  <a class="anchor" href="#heading-39">#</a>
+</h1>
+<h1 id="heading-40">
+  
+  <a class="anchor" href="#heading-40">#</a>
+</h1>
 <hr>
 <p><strong>반복 쿼리</strong></p>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/99FFB9385E30D8E228" alt="DNS" /></p>
 <ul>
 <li><strong>로컬 DNS 서버가 다른 DNS 서버와 주고 받는 응답</strong></li>
 </ul>
-<h1 id="heading-41"></h1>
-<h1 id="heading-42"></h1>
+<h1 id="heading-41">
+  
+  <a class="anchor" href="#heading-41">#</a>
+</h1>
+<h1 id="heading-42">
+  
+  <a class="anchor" href="#heading-42">#</a>
+</h1>
 <hr>
 <p><strong>권한이 없는 응답</strong></p>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/99041C385E30D8E228" alt="DNS" /></p>
 <ul>
 <li><strong>반복 쿼리를 통해 알아온 주소</strong></li>
 </ul>
-<h1 id="heading-43"></h1>
-<h1 id="heading-44"></h1>
+<h1 id="heading-43">
+  
+  <a class="anchor" href="#heading-43">#</a>
+</h1>
+<h1 id="heading-44">
+  
+  <a class="anchor" href="#heading-44">#</a>
+</h1>
 <hr>
 <p><strong>권한이 있는 응답</strong></p>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/9902E0385E30D8E228" alt="DNS" /></p>
 <ul>
 <li><strong>로컬 DNS가 알고 있는 주소</strong></li>
 </ul>
-<h1 id="heading-45"></h1>
+<h1 id="heading-45">
+  
+  <a class="anchor" href="#heading-45">#</a>
+</h1>
 <hr>
 <hr>
-<h2 id="zone-영역파일"><strong>ZONE 영역파일</strong></h2>
-<h1 id="heading-46"></h1>
+<h2 id="zone-영역파일">
+  <strong>ZONE 영역파일</strong>
+  <a class="anchor" href="#zone-%ec%98%81%ec%97%ad%ed%8c%8c%ec%9d%bc">#</a>
+</h2>
+<h1 id="heading-46">
+  
+  <a class="anchor" href="#heading-46">#</a>
+</h1>
 <ul>
 <li>호스트 IP를 저장하고 있는 파일</li>
 </ul>
-<h1 id="heading-47"></h1>
-<h1 id="heading-48"></h1>
+<h1 id="heading-47">
+  
+  <a class="anchor" href="#heading-47">#</a>
+</h1>
+<h1 id="heading-48">
+  
+  <a class="anchor" href="#heading-48">#</a>
+</h1>
 <ul>
 <li>
 <p>IP( Internet Protocol )은 네트워크 계층에서 사용하는 주소로, 컴퓨터는 MAC주소를 사용하지만, <strong>사람이 읽기 힘들어 읽기 편한 IP주소를 사용</strong> 한다.</p>
@@ -1947,7 +2169,10 @@
 <p>3계층은 다른 네트워크 대역 즉, <strong>멀리 떨어진 곳에 존재하는 네트워크까지 어떻게 데이터를 전달할지 제어하는 일을 담당, 발신에서 착신까지의 패킷의 경로를 제어하는 역할을 수행</strong> 하며 거리가 먼 다른 기기와 통신을 위해서는 3계층이 필요하다</p>
 </li>
 </ul>
-<h1 id="heading-49"></h1>
+<h1 id="heading-49">
+  
+  <a class="anchor" href="#heading-49">#</a>
+</h1>
 </article>
  
       
@@ -2122,7 +2347,6 @@
 </body>
 </div>
 </html>
-
 
 
 

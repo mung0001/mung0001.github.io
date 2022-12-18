@@ -12,9 +12,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/network/sophos/sophos_0/</guid>
-      <description>Sophos Sophos UTM ( United Threat Management ) Sophos UTM이란 Sophos사에서 리눅스 커널을 이용해 만든 UTM장비
+      <description>Sophos##Sophos UTM ( United Threat Management )##Sophos UTM이란 Sophos사에서 리눅스 커널을 이용해 만든 UTM장비
 UTM : Anti Virus, Firewall, IPS ( 침입방지시스템 ) , VPN , IDS ( 침입탐지시스템 )등의 보안기능 중 적어도 2개, 많게는 7~8가지 기능을 하나의 장비에 포함하여 사용하는 통합보안장비
-통합위협관리시스템( UTM )의 주요 기능 기능 설명 Firewall Stateful Packet Inspection( SPI ) Firewalld, SMTP, HTTP, POP3, DNS, Proxy 기능이 결합된 견고한 network보안 구축 VPN IPsec VPN(DES/3DES) 및 L2TP VPN 지원 IDS/ IPS 다양한 network 기반 공격 탐지 및 차단, 다양한 Application 기반 공격 탐지 및 차단, Anomaly Detection, Dos/DDos, Anti-Scan Attack Scan Attack 기반 공격 탐지 및 차단 Anti Virus 이메일 기반 내/외부 유입 바이러스 탐지 및 차단, Web 기반 내/외부 유입 바이러스 탐지 및 차단 Anti-Spam 베이시안(Baysian) 알고리즘 기반 스팸메일 탐지 및 차단, 점수(Score) 데이터 기반 스팸 메일 탐지 및 차단 Content Filtering 유해사이트 및 정책 위배 웹사이트 접근 탐지 및 차단 ext Transparent/Router/NAT 모드 지원, 피싱 차단 및 SIP Proxy 기능 제공 Sophos UTM 메뉴의 역할 메뉴 역할 Webserver Protection WAF ( Web Application Firewall ) Web Hacking 방어 Support Tools ping test, traceroute Network Protection NAT Masquerding PAT Network Protection Firewall Country Blocking 특정 국가에서 들어오는 트래픽을 차단 Network Protection Firewall ICMP Ping 허용/차단 설정용도 ( ping settings에 &amp;lsquo;Gateway forward pings를 허용해줘야 내부에서 외부로 ping이 전송 ) Network Protection Firewall Advanced Connection tracking helpers FTP Stateful기능 사용여부 Web Protection Client를 외부로부터 보호하는 역할 ( 사용자 보호하는 것으로 웹서버 보호 X ) Web Protection - Web Filtering Standard Mode Client측 장비한테 UTM장비에게 가라고 지정을 해줘야지만 UTM장비에서 검사 ( default : 외부로 전송 ) Transparent Mode 별도로 UTM장비에게 가라고 지정하지 않아도 UTM장비가 검사 </description>
+#통합위협관리시스템( UTM )의 주요 기능##기능 설명 Firewall Stateful Packet Inspection( SPI ) Firewalld, SMTP, HTTP, POP3, DNS, Proxy 기능이 결합된 견고한 network보안 구축 VPN IPsec VPN(DES/3DES) 및 L2TP VPN 지원 IDS/ IPS 다양한 network 기반 공격 탐지 및 차단, 다양한 Application 기반 공격 탐지 및 차단, Anomaly Detection, Dos/DDos, Anti-Scan Attack Scan Attack 기반 공격 탐지 및 차단 Anti Virus 이메일 기반 내/외부 유입 바이러스 탐지 및 차단, Web 기반 내/외부 유입 바이러스 탐지 및 차단 Anti-Spam 베이시안(Baysian) 알고리즘 기반 스팸메일 탐지 및 차단, 점수(Score) 데이터 기반 스팸 메일 탐지 및 차단 Content Filtering 유해사이트 및 정책 위배 웹사이트 접근 탐지 및 차단 ext Transparent/Router/NAT 모드 지원, 피싱 차단 및 SIP Proxy 기능 제공 #Sophos UTM 메뉴의 역할##메뉴 역할 Webserver Protection WAF ( Web Application Firewall ) Web Hacking 방어 Support Tools ping test, traceroute Network Protection NAT Masquerding PAT Network Protection Firewall Country Blocking 특정 국가에서 들어오는 트래픽을 차단 Network Protection Firewall ICMP Ping 허용/차단 설정용도 ( ping settings에 &amp;lsquo;Gateway forward pings를 허용해줘야 내부에서 외부로 ping이 전송 ) Network Protection Firewall Advanced Connection tracking helpers FTP Stateful기능 사용여부 Web Protection Client를 외부로부터 보호하는 역할 ( 사용자 보호하는 것으로 웹서버 보호 X ) Web Protection - Web Filtering Standard Mode Client측 장비한테 UTM장비에게 가라고 지정을 해줘야지만 UTM장비에서 검사 ( default : 외부로 전송 ) Transparent Mode 별도로 UTM장비에게 가라고 지정하지 않아도 UTM장비가 검사 #</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@ UTM : Anti Virus, Firewall, IPS ( 침입방지시스템 ) , VPN , IDS ( 침입�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/network/sophos/sophos_1/</guid>
-      <description>Sophos 설치 구성환경 Sophos는 nat을 외부대역으로 Host 2 ( 20.20.20.0/24 )를 내부대역으로 갖습니다. Sophos의 설치를 위해 내부 대역 ( Host 2 )의 Win 7을 통해 설치를 진행합니다. Sophos 설치를 위한 Vm을 설정합니다. 운영체제 버전에서 Other Linux 2.6x kernel을 선택합니다. 그 후 RAM 1G 디스크 20G 외에는 기본 값으로 진행합니다. 위 그림과 같이 설정이 생성이 완료되면 설정을 위해 Edit virtual machine settings를 클릭합니다. 위 그림과 같이 세팅을 마무리 합니다. CD/DVD에 sophos 이미지 파일의 경로를 지정합니다.</description>
+      <description>Sophos 설치##구성환경 #Sophos는 nat을 외부대역으로 Host 2 ( 20.20.20.0/24 )를 내부대역으로 갖습니다. Sophos의 설치를 위해 내부 대역 ( Host 2 )의 Win 7을 통해 설치를 진행합니다. ##Sophos 설치를 위한 Vm을 설정합니다. ###운영체제 버전에서 Other Linux 2.6x kernel을 선택합니다. 그 후 RAM 1G 디스크 20G 외에는 기본 값으로 진행합니다. ##위 그림과 같이 설정이 생성이 완료되면 설정을 위해 Edit virtual machine settings를 클릭합니다.</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@ UTM : Anti Virus, Firewall, IPS ( 침입방지시스템 ) , VPN , IDS ( 침입�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/network/sophos/sophos_2/</guid>
-      <description>Sophos 방화벽 구축 구성환경 저번 장에 이어 이번에는 10.10.10.0/24 서버를 한 개 추가하여 방화벽을 구축해보도록 하겠습니다. 먼저, 위의 그림과 같이 환경을 세팅합니다. ( Sophos에 대역 추가 ) Network Interfaces 추가 방화벽을 구성하기 전에 먼저, Network Interfaces를 설정하겠습니다. Sophos에 로그인을 완료하면, 대역이 추가됬음을 확인할 수 있습니다. 하지만 아직 인식만 될 뿐, 되지 않아 추가 설정이 필요합니다. 먼저 좌측 메뉴에서 Interfaces &amp;amp; Routing &amp;gt; Interfaces 를 클릭합니다. 그 후, 인터페이스들이 나열되면 New Interface를 클릭하여 Interface를 추가 및 설성즐 완료합니다.</description>
+      <description>Sophos 방화벽 구축##구성환경 #저번 장에 이어 이번에는 10.10.10.0/24 서버를 한 개 추가하여 방화벽을 구축해보도록 하겠습니다. 먼저, 위의 그림과 같이 환경을 세팅합니다. ( Sophos에 대역 추가 ) ##Network Interfaces 추가##방화벽을 구성하기 전에 먼저, Network Interfaces를 설정하겠습니다. #Sophos에 로그인을 완료하면, 대역이 추가됬음을 확인할 수 있습니다. 하지만 아직 인식만 될 뿐, 되지 않아 추가 설정이 필요합니다. ##먼저 좌측 메뉴에서 Interfaces &amp;amp; Routing &amp;gt; Interfaces 를 클릭합니다.</description>
     </item>
     
   </channel>

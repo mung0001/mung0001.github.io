@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="오브젝트 스토리지 관리 서비스 : Swift 다른 서비스와는 다르게 단독으로 구성되며, 클라우드 스토리지 서비스 ( ex : 네이버 클라우드 ) Swift 서비스는 Object Storage 서비스 중 하나 분산 구조의 Object 데이터의 저장 스토리지 체계로 구성 빠른 성능 및 대용량 저장공간이 필요 할 때 사용 동영상, 이미지, 디스크 이미지 등의 대용량, 비정형 데이터를 파일과 메타데이터로 저장하여 분산 관리 오브젝트 스토리지 관리 서비스 : Swift Swift의 논리 아키텍처 구성요소 역할 swift-proxy-server 사용자가 서비스를 다루기 위한 REST API 서비스 swift-account-server 계정 정보 및 사용자 정보를 관리하고 각 컨테이너 별 정보를 관리하기 위한 데몬 프로세스 swift-container-server 사용자 게정의 컨테이너를 간리하는 서비스 swift-object-server 실제 데이터를 저장하고 관리하는 서비스 어카운트, 컨테이너는 별도의 메타데이터가 데이터베이스로 관리 오브젝트는 저장 공간에 직접 저장되는 방식으로 구성 swift-proxy-server는 오픈스택의 Object API를 제공 사용자는 API를 사용해 데이터를 사용 Swift의 논리적 구성 요소 Swift서비스는은 스토리지 공간 여러 개를 합쳐 하나의 커다란 공간으로 가상화하고, 그 안에서 사용자만의 별도 스토리지 공간이 있는 것처럼 다시 가상화">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/openstack/openstack/swift/><meta property="og:title" content="Swift" />
-<meta property="og:description" content="오브젝트 스토리지 관리 서비스 : Swift 다른 서비스와는 다르게 단독으로 구성되며, 클라우드 스토리지 서비스 ( ex : 네이버 클라우드 ) Swift 서비스는 Object Storage 서비스 중 하나 분산 구조의 Object 데이터의 저장 스토리지 체계로 구성 빠른 성능 및 대용량 저장공간이 필요 할 때 사용 동영상, 이미지, 디스크 이미지 등의 대용량, 비정형 데이터를 파일과 메타데이터로 저장하여 분산 관리 오브젝트 스토리지 관리 서비스 : Swift Swift의 논리 아키텍처 구성요소 역할 swift-proxy-server 사용자가 서비스를 다루기 위한 REST API 서비스 swift-account-server 계정 정보 및 사용자 정보를 관리하고 각 컨테이너 별 정보를 관리하기 위한 데몬 프로세스 swift-container-server 사용자 게정의 컨테이너를 간리하는 서비스 swift-object-server 실제 데이터를 저장하고 관리하는 서비스 어카운트, 컨테이너는 별도의 메타데이터가 데이터베이스로 관리 오브젝트는 저장 공간에 직접 저장되는 방식으로 구성 swift-proxy-server는 오픈스택의 Object API를 제공 사용자는 API를 사용해 데이터를 사용 Swift의 논리적 구성 요소 Swift서비스는은 스토리지 공간 여러 개를 합쳐 하나의 커다란 공간으로 가상화하고, 그 안에서 사용자만의 별도 스토리지 공간이 있는 것처럼 다시 가상화" />
+<meta name="description" content="오브젝트 스토리지 관리 서비스 : Swift##다른 서비스와는 다르게 단독으로 구성되며, 클라우드 스토리지 서비스 ( ex : 네이버 클라우드 ) Swift 서비스는 Object Storage 서비스 중 하나 분산 구조의 Object 데이터의 저장 스토리지 체계로 구성 빠른 성능 및 대용량 저장공간이 필요 할 때 사용 동영상, 이미지, 디스크 이미지 등의 대용량, 비정형 데이터를 파일과 메타데이터로 저장하여 분산 관리 ##오브젝트 스토리지 관리 서비스 : Swift###Swift의 논리 아키텍처##구성요소 역할 swift-proxy-server 사용자가 서비스를 다루기 위한 REST API 서비스 swift-account-server 계정 정보 및 사용자 정보를 관리하고 각 컨테이너 별 정보를 관리하기 위한 데몬 프로세스 swift-container-server 사용자 게정의 컨테이너를 간리하는 서비스 swift-object-server 실제 데이터를 저장하고 관리하는 서비스 어카운트, 컨테이너는 별도의 메타데이터가 데이터베이스로 관리 오브젝트는 저장 공간에 직접 저장되는 방식으로 구성 swift-proxy-server는 오픈스택의 Object API를 제공 사용자는 API를 사용해 데이터를 사용 ##Swift의 논리적 구성 요소##Swift서비스는은 스토리지 공간 여러 개를 합쳐 하나의 커다란 공간으로 가상화하고, 그 안에서 사용자만의 별도 스토리지 공간이 있는 것처럼 다시 가상화">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Swift" />
+<meta property="og:description" content="오브젝트 스토리지 관리 서비스 : Swift##다른 서비스와는 다르게 단독으로 구성되며, 클라우드 스토리지 서비스 ( ex : 네이버 클라우드 ) Swift 서비스는 Object Storage 서비스 중 하나 분산 구조의 Object 데이터의 저장 스토리지 체계로 구성 빠른 성능 및 대용량 저장공간이 필요 할 때 사용 동영상, 이미지, 디스크 이미지 등의 대용량, 비정형 데이터를 파일과 메타데이터로 저장하여 분산 관리 ##오브젝트 스토리지 관리 서비스 : Swift###Swift의 논리 아키텍처##구성요소 역할 swift-proxy-server 사용자가 서비스를 다루기 위한 REST API 서비스 swift-account-server 계정 정보 및 사용자 정보를 관리하고 각 컨테이너 별 정보를 관리하기 위한 데몬 프로세스 swift-container-server 사용자 게정의 컨테이너를 간리하는 서비스 swift-object-server 실제 데이터를 저장하고 관리하는 서비스 어카운트, 컨테이너는 별도의 메타데이터가 데이터베이스로 관리 오브젝트는 저장 공간에 직접 저장되는 방식으로 구성 swift-proxy-server는 오픈스택의 Object API를 제공 사용자는 API를 사용해 데이터를 사용 ##Swift의 논리적 구성 요소##Swift서비스는은 스토리지 공간 여러 개를 합쳐 하나의 커다란 공간으로 가상화하고, 그 안에서 사용자만의 별도 스토리지 공간이 있는 것처럼 다시 가상화" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/openstack/openstack/swift/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Swift | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -48,7 +47,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1325,6 +1324,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1336,14 +1338,15 @@
   <strong>Swift</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1416,9 +1419,15 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="오브젝트-스토리지-관리-서비스--swift"><strong>오브젝트 스토리지 관리 서비스 : Swift</strong></h1>
+  <article class="markdown"><h1 id="오브젝트-스토리지-관리-서비스--swift">
+  <strong>오브젝트 스토리지 관리 서비스 : Swift</strong>
+  <a class="anchor" href="#%ec%98%a4%eb%b8%8c%ec%a0%9d%ed%8a%b8-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%ea%b4%80%eb%a6%ac-%ec%84%9c%eb%b9%84%ec%8a%a4--swift">#</a>
+</h1>
 <hr>
-<h1 id="heading"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <ul>
 <li><strong>다른 서비스와는 다르게 단독으로 구성되며, 클라우드 스토리지 서비스 ( ex : 네이버 클라우드 )</strong></li>
 <li><strong>Swift 서비스는 Object Storage 서비스 중 하나</strong></li>
@@ -1426,15 +1435,36 @@
 <li><strong>빠른 성능 및 대용량 저장공간이 필요 할 때 사용</strong></li>
 <li><strong>동영상, 이미지, 디스크 이미지 등의 대용량, 비정형 데이터를 파일과 메타데이터로 저장하여 분산 관리</strong></li>
 </ul>
-<h1 id="heading-1"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-2"></h1>
-<h2 id="오브젝트-스토리지-관리-서비스--swift-1"><strong>오브젝트 스토리지 관리 서비스 : Swift</strong></h2>
-<h1 id="heading-3"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<h2 id="오브젝트-스토리지-관리-서비스--swift-1">
+  <strong>오브젝트 스토리지 관리 서비스 : Swift</strong>
+  <a class="anchor" href="#%ec%98%a4%eb%b8%8c%ec%a0%9d%ed%8a%b8-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%ea%b4%80%eb%a6%ac-%ec%84%9c%eb%b9%84%ec%8a%a4--swift-1">#</a>
+</h2>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <p><img src="/Openstack/Swift/Swift01.png" alt="Swift" /></p>
-<h1 id="heading-4"></h1>
-<h3 id="swift의-논리-아키텍처"><strong>Swift의 논리 아키텍처</strong></h3>
-<h1 id="heading-5"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="swift의-논리-아키텍처">
+  <strong>Swift의 논리 아키텍처</strong>
+  <a class="anchor" href="#swift%ec%9d%98-%eb%85%bc%eb%a6%ac-%ec%95%84%ed%82%a4%ed%85%8d%ec%b2%98">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1467,11 +1497,23 @@
 <li><strong>swift-proxy-server는 오픈스택의 Object API를 제공</strong></li>
 <li><strong>사용자는 API를 사용해 데이터를 사용</strong></li>
 </ul>
-<h1 id="heading-6"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-7"></h1>
-<h3 id="swift의-논리적-구성-요소"><strong>Swift의 논리적 구성 요소</strong></h3>
-<h1 id="heading-8"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<h3 id="swift의-논리적-구성-요소">
+  <strong>Swift의 논리적 구성 요소</strong>
+  <a class="anchor" href="#swift%ec%9d%98-%eb%85%bc%eb%a6%ac%ec%a0%81-%ea%b5%ac%ec%84%b1-%ec%9a%94%ec%86%8c">#</a>
+</h3>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Swift서비스는은 스토리지 공간 여러 개를 합쳐 하나의 커다란 공간으로 가상화하고, 그 안에서 사용자만의 별도 스토리지 공간이 있는 것처럼 다시 가상화</strong></p>
@@ -1495,11 +1537,23 @@
 <p><strong>스토리지 노드 중 하나라도 손상이 되면 데이터를 잃지 않도록 데이터 복제(Replica)프로세스가 함께 실행</strong></p>
 </li>
 </ul>
-<h1 id="heading-9"></h1>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-10"></h1>
-<h3 id="swift-ring"><strong>Swift Ring</strong></h3>
-<h1 id="heading-11"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="swift-ring">
+  <strong>Swift Ring</strong>
+  <a class="anchor" href="#swift-ring">#</a>
+</h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <ul>
 <li><strong>스토리지 파일은 자신이 관리하는 데이터를 서로 공유하려고 Ring인 파일이 어느 노드에, 어떤 데이터가 들어 있는 지를 인지</strong></li>
 <li><strong>이를 확인하기 위해 사용도는 것이 Ring 파일</strong></li>
@@ -1516,11 +1570,23 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-12"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-13"></h1>
-<h3 id="swift의-데이터-관리-방법"><strong>Swift의 데이터 관리 방법</strong></h3>
-<h1 id="heading-14"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h3 id="swift의-데이터-관리-방법">
+  <strong>Swift의 데이터 관리 방법</strong>
+  <a class="anchor" href="#swift%ec%9d%98-%eb%8d%b0%ec%9d%b4%ed%84%b0-%ea%b4%80%eb%a6%ac-%eb%b0%a9%eb%b2%95">#</a>
+</h3>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Swift는 사용자 게정을 관리하는 어카운트, 디렉터리 개념의 컨테이너, 실제 파일을 표현하는 오브젝트로 구성</strong></p>
@@ -1538,11 +1604,23 @@
 <p><strong>파일을 올릴 때는 설정된 리플리카로 여러 스토리지 노드로 분산해서 저장, 다운로드 시 그 중 한 곳을 사용</strong></p>
 </li>
 </ul>
-<h1 id="heading-15"></h1>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-16"></h1>
-<h3 id="swift와-keystone"><strong>Swift와 Keystone</strong></h3>
-<h1 id="heading-17"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h3 id="swift와-keystone">
+  <strong>Swift와 Keystone</strong>
+  <a class="anchor" href="#swift%ec%99%80-keystone">#</a>
+</h3>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Swift에는 SwAuth를 이용하는 인증 방법과 Keystone을 이용</strong></p>
@@ -1575,11 +1653,23 @@
 <p><strong>해당 사용자는 관리자가 할 수 있는 기능을 모두 사용할 수 있음</strong></p>
 </li>
 </ul>
-<h1 id="heading-18"></h1>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-19"></h1>
-<h3 id="swift의-이레이저-코딩eraure-coding-기능과-스토리지-정책"><strong>Swift의 이레이저 코딩(Eraure Coding) 기능과 스토리지 정책</strong></h3>
-<h1 id="heading-20"></h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<h3 id="swift의-이레이저-코딩eraure-coding-기능과-스토리지-정책">
+  <strong>Swift의 이레이저 코딩(Eraure Coding) 기능과 스토리지 정책</strong>
+  <a class="anchor" href="#swift%ec%9d%98-%ec%9d%b4%eb%a0%88%ec%9d%b4%ec%a0%80-%ec%bd%94%eb%94%a9eraure-coding-%ea%b8%b0%eb%8a%a5%ea%b3%bc-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%ec%a0%95%ec%b1%85">#</a>
+</h3>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>스토리지 저장 공간을 효율적으로 관리하는 것이 이레이져 코딩</strong></p>
@@ -1606,7 +1696,10 @@
 <p><strong>이레이저 코드를 사용해 콜드 스토리지(Cold Storage: 저전력 스토리지)도 정의 할 수 있음</strong></p>
 </li>
 </ul>
-<h1 id="heading-21"></h1>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <p> </p>
 </article>
  
@@ -1710,7 +1803,6 @@
 </body>
 </div>
 </html>
-
 
 
 

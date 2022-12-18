@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/macos/macos04/</guid>
-      <description>**** **** </description>
+      <description>****###****####</description>
     </item>
     
     <item>
@@ -21,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/macos/macos01/</guid>
-      <description>MacOS MacOS는 Apple에서 만든 운영체제로 초기에는 Maclntosh System이라 칭함
+      <description>MacOS##MacOS는 Apple에서 만든 운영체제로 초기에는 Maclntosh System이라 칭함
 오직 Mac을 위한 운영체제로 응용 프로그램의 설치가 간단하며, Windows용 프로그램들을 대부분 설치 프로그램을 통해 설치해야하는 반면 MacOS는 실행 파일과 그 부속파일을 설치한 폴더를 아무 곳이나 복사하면 그것으로 설치
 즉, MacOS는 Windows에 비해 가벼운 OS라고 할 수 있으며, 드라이버, 운영체제 가 간단하며, 확장자가 없고 확장자 대신 HFS, HFS+의 파일 메타 정보에 들어있는 생성자와 타입 속성에 네 글자의 알파뱃 또는 숫자로 정보를 구성해 저장</description>
     </item>
@@ -32,13 +32,12 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/macos/macos02/</guid>
-      <description>MacOS 패키지 관리 애플리케이션 - Homebrew Homebrew는 맥스 호웰이 만든 macOS용 패키지 관리 애플리케이션
+      <description>MacOS 패키지 관리 애플리케이션 - Homebrew##Homebrew는 맥스 호웰이 만든 macOS용 패키지 관리 애플리케이션
 Homebrew는 Ruby기반으로 개발되고 있으며, MacOS용 패키지 관리에 사실상 표준으로 사용되어 지고 있음
 주로 커맨드라인 도구나 시스템 패키지를 설치하는데 사용하지만, Cask 확장을 통해 GUI 애플리케이션 설치에도 사용이 가능
 기본적으로 MacOS용 패키지 관리자이지만 리눅스나 윈도우용 WSL도 지원
 단, 편리하게 사용할 수 있는 장점이 있지만, 커뮤니티 기반으로 운영되기에 패키지의 안정성이 보장되지 않는 다는 단점이 존재
-Homebrew docs
-Bhomebrew Install** Homebrew을 설치하기 위해서는 xCode 커맨드라인 툴, 사전 설치가 필요 $ sudo $ /usr/bin/ruby -e &amp;#34;$(curl -fsSL https://raw.</description>
+Homebrew docs</description>
     </item>
     
     <item>
@@ -47,7 +46,7 @@ Bhomebrew Install** Homebrew을 설치하기 위해서는 xCode 커맨드라인 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/macos/macos03/</guid>
-      <description>Zsh Zsg **** </description>
+      <description>Zsh##Zsg #****####</description>
     </item>
     
   </channel>

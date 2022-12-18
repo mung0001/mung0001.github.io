@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Django Django - 기본 용어정리 CGI (Common Gateway Interface) 정해진 양식을 사용해서 요청하고 결과를 받아오는 방식 (ex : Apache-fast_cgi 등) WSGI (WEB Server Gateway Interface) CGI의 일종으로, 기존 python app에서는 CGI, mod_python, Fast CGI 등등 만을 사용했으나, wsgi는 프레임워크의 웹서버로, route web에서는 표준 인터페이스로 개발되었다. Web Server 실제적으로 요청을 처리하는 컴퓨터 (ex : Apache, Nginx 등) Cache Server 들어온 요청에 대한 응답을 미리 파일이나 메모리 캐시로 저장해두는 컴퓨터 (ex : Redis, Memcached 등) DB Server 기존 DATABASE를 보다 빠르고, 편리하게 관리하기 위한 데이터 관리 전용 서비스 (ex : MySQL, MS-SQL, Oracle DB 등) File Server 사용자가 업로드한 파일을 여러 사용자가 볼 수 있게 하는 서버 (ex : 인스타그램, faecbook 등) 제네릭 뷰 (Generic View) 기본적으로 Django에서 제공하는 뷰어로 뷰 클래스를 의미 Model : Model(Django) DB의 구조를 결정, 대부분의 경우 테이블을 작성할 때 사용하는 데, 테이블의 이름, 각 열의 이름과 타입 등을 설계할 때 사용 View : Template(Django) 사용자에게 보여지는 UI 부분으로, HTML 코드 등 실질적으로 클라이언트에게 보여질 부분 Controller : View(Django) 기능, 로직 부분으로, 넘겨받은 데이터를 어떻게 해석하고 가공할지 그리고 처리된 결과를 어떻게 클라이언트에게 돌려줄지 결정하는 부분 Django - 프로젝트 구조 살펴보기 config 프로젝트 설정 파일과 웹 서비스 실행으르 위한 파일들이 들어있음 config - init.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/development/web/django/django00/><meta property="og:title" content="Django - Starter" />
-<meta property="og:description" content="Django Django - 기본 용어정리 CGI (Common Gateway Interface) 정해진 양식을 사용해서 요청하고 결과를 받아오는 방식 (ex : Apache-fast_cgi 등) WSGI (WEB Server Gateway Interface) CGI의 일종으로, 기존 python app에서는 CGI, mod_python, Fast CGI 등등 만을 사용했으나, wsgi는 프레임워크의 웹서버로, route web에서는 표준 인터페이스로 개발되었다. Web Server 실제적으로 요청을 처리하는 컴퓨터 (ex : Apache, Nginx 등) Cache Server 들어온 요청에 대한 응답을 미리 파일이나 메모리 캐시로 저장해두는 컴퓨터 (ex : Redis, Memcached 등) DB Server 기존 DATABASE를 보다 빠르고, 편리하게 관리하기 위한 데이터 관리 전용 서비스 (ex : MySQL, MS-SQL, Oracle DB 등) File Server 사용자가 업로드한 파일을 여러 사용자가 볼 수 있게 하는 서버 (ex : 인스타그램, faecbook 등) 제네릭 뷰 (Generic View) 기본적으로 Django에서 제공하는 뷰어로 뷰 클래스를 의미 Model : Model(Django) DB의 구조를 결정, 대부분의 경우 테이블을 작성할 때 사용하는 데, 테이블의 이름, 각 열의 이름과 타입 등을 설계할 때 사용 View : Template(Django) 사용자에게 보여지는 UI 부분으로, HTML 코드 등 실질적으로 클라이언트에게 보여질 부분 Controller : View(Django) 기능, 로직 부분으로, 넘겨받은 데이터를 어떻게 해석하고 가공할지 그리고 처리된 결과를 어떻게 클라이언트에게 돌려줄지 결정하는 부분 Django - 프로젝트 구조 살펴보기 config 프로젝트 설정 파일과 웹 서비스 실행으르 위한 파일들이 들어있음 config - init." />
+<meta name="description" content="Django##Django - 기본 용어정리##CGI (Common Gateway Interface) 정해진 양식을 사용해서 요청하고 결과를 받아오는 방식 (ex : Apache-fast_cgi 등) ##WSGI (WEB Server Gateway Interface) CGI의 일종으로, 기존 python app에서는 CGI, mod_python, Fast CGI 등등 만을 사용했으나, wsgi는 프레임워크의 웹서버로, route web에서는 표준 인터페이스로 개발되었다. #Web Server 실제적으로 요청을 처리하는 컴퓨터 (ex : Apache, Nginx 등) #Cache Server 들어온 요청에 대한 응답을 미리 파일이나 메모리 캐시로 저장해두는 컴퓨터 (ex : Redis, Memcached 등) #DB Server 기존 DATABASE를 보다 빠르고, 편리하게 관리하기 위한 데이터 관리 전용 서비스 (ex : MySQL, MS-SQL, Oracle DB 등) #File Server 사용자가 업로드한 파일을 여러 사용자가 볼 수 있게 하는 서버 (ex : 인스타그램, faecbook 등) #제네릭 뷰 (Generic View) 기본적으로 Django에서 제공하는 뷰어로 뷰 클래스를 의미 #Model : Model(Django) DB의 구조를 결정, 대부분의 경우 테이블을 작성할 때 사용하는 데, 테이블의 이름, 각 열의 이름과 타입 등을 설계할 때 사용 #View : Template(Django) 사용자에게 보여지는 UI 부분으로, HTML 코드 등 실질적으로 클라이언트에게 보여질 부분 #Controller : View(Django) 기능, 로직 부분으로, 넘겨받은 데이터를 어떻게 해석하고 가공할지 그리고 처리된 결과를 어떻게 클라이언트에게 돌려줄지 결정하는 부분 ####Django - 프로젝트 구조 살펴보기##config 프로젝트 설정 파일과 웹 서비스 실행으르 위한 파일들이 들어있음 #config - init.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Django - Starter" />
+<meta property="og:description" content="Django##Django - 기본 용어정리##CGI (Common Gateway Interface) 정해진 양식을 사용해서 요청하고 결과를 받아오는 방식 (ex : Apache-fast_cgi 등) ##WSGI (WEB Server Gateway Interface) CGI의 일종으로, 기존 python app에서는 CGI, mod_python, Fast CGI 등등 만을 사용했으나, wsgi는 프레임워크의 웹서버로, route web에서는 표준 인터페이스로 개발되었다. #Web Server 실제적으로 요청을 처리하는 컴퓨터 (ex : Apache, Nginx 등) #Cache Server 들어온 요청에 대한 응답을 미리 파일이나 메모리 캐시로 저장해두는 컴퓨터 (ex : Redis, Memcached 등) #DB Server 기존 DATABASE를 보다 빠르고, 편리하게 관리하기 위한 데이터 관리 전용 서비스 (ex : MySQL, MS-SQL, Oracle DB 등) #File Server 사용자가 업로드한 파일을 여러 사용자가 볼 수 있게 하는 서버 (ex : 인스타그램, faecbook 등) #제네릭 뷰 (Generic View) 기본적으로 Django에서 제공하는 뷰어로 뷰 클래스를 의미 #Model : Model(Django) DB의 구조를 결정, 대부분의 경우 테이블을 작성할 때 사용하는 데, 테이블의 이름, 각 열의 이름과 타입 등을 설계할 때 사용 #View : Template(Django) 사용자에게 보여지는 UI 부분으로, HTML 코드 등 실질적으로 클라이언트에게 보여질 부분 #Controller : View(Django) 기능, 로직 부분으로, 넘겨받은 데이터를 어떻게 해석하고 가공할지 그리고 처리된 결과를 어떻게 클라이언트에게 돌려줄지 결정하는 부분 ####Django - 프로젝트 구조 살펴보기##config 프로젝트 설정 파일과 웹 서비스 실행으르 위한 파일들이 들어있음 #config - init." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/development/web/django/django00/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Django - Starter | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -48,7 +47,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1324,6 +1323,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1335,14 +1337,15 @@
   <strong>Django - Starter</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1383,12 +1386,24 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="django"><strong>Django</strong></h1>
+  <article class="markdown"><h1 id="django">
+  <strong>Django</strong>
+  <a class="anchor" href="#django">#</a>
+</h1>
 <hr>
-<h1 id="heading"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <p> </p>
-<h2 id="django---기본-용어정리"><strong>Django - 기본 용어정리</strong></h2>
-<h1 id="heading-1"></h1>
+<h2 id="django---기본-용어정리">
+  <strong>Django - 기본 용어정리</strong>
+  <a class="anchor" href="#django---%ea%b8%b0%eb%b3%b8-%ec%9a%a9%ec%96%b4%ec%a0%95%eb%a6%ac">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <ul>
 <li><strong>CGI (Common Gateway Interface)</strong>
 <ul>
@@ -1396,9 +1411,15 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-3"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <ul>
 <li><strong>WSGI (WEB Server Gateway Interface)</strong>
 <ul>
@@ -1406,7 +1427,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-4"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Web Server</strong>
@@ -1415,7 +1439,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-5"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Cache Server</strong>
@@ -1424,7 +1451,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-6"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>DB Server</strong>
@@ -1433,7 +1463,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-7"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>File Server</strong>
@@ -1442,7 +1475,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-8"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>제네릭 뷰 (Generic View)</strong>
@@ -1451,7 +1487,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-9"></h1>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Model : Model(Django)</strong>
@@ -1460,7 +1499,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-10"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>View : Template(Django)</strong>
@@ -1469,7 +1511,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-11"></h1>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Controller : View(Django)</strong>
@@ -1478,15 +1523,33 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-12"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-13"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
 <hr>
-<h1 id="heading-14"></h1>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-15"></h1>
-<h2 id="django---프로젝트-구조-살펴보기"><strong>Django - 프로젝트 구조 살펴보기</strong></h2>
-<h1 id="heading-16"></h1>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<h2 id="django---프로젝트-구조-살펴보기">
+  <strong>Django - 프로젝트 구조 살펴보기</strong>
+  <a class="anchor" href="#django---%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ec%a1%b0-%ec%82%b4%ed%8e%b4%eb%b3%b4%ea%b8%b0">#</a>
+</h2>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
 <ul>
 <li><strong>config</strong>
 <ul>
@@ -1494,7 +1557,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-17"></h1>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>config - <strong>init</strong>.py</strong>
@@ -1503,7 +1569,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-18"></h1>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>config - setting.py</strong>
@@ -1524,7 +1593,10 @@ WSGI_APPLICATION : 실행을 위한 WSGI 어플리케이션을 설정
 DATABASES : DB관련 설정
 AUTH_PASSWORD_VALIDATORS : 비밀번호 검증을 위한 설정
 LANGUAGE_CODE : 다국어에 관한 설정
-</code></pre><h1 id="heading-19"></h1>
+</code></pre><h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>config - urls.py</strong>
@@ -1534,7 +1606,10 @@ LANGUAGE_CODE : 다국어에 관한 설정
 </ul>
 </li>
 </ul>
-<h1 id="heading-20"></h1>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>wsgi.py</strong>
@@ -1543,11 +1618,20 @@ LANGUAGE_CODE : 다국어에 관한 설정
 </ul>
 </li>
 </ul>
-<h1 id="heading-21"></h1>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-22"></h1>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-23"></h1>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <ul>
 <li><strong>venv</strong>
 <ul>
@@ -1555,7 +1639,10 @@ LANGUAGE_CODE : 다국어에 관한 설정
 </ul>
 </li>
 </ul>
-<h1 id="heading-24"></h1>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>db.sqlite3</strong>
@@ -1564,7 +1651,10 @@ LANGUAGE_CODE : 다국어에 관한 설정
 </ul>
 </li>
 </ul>
-<h1 id="heading-25"></h1>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>manage.py</strong>
@@ -1573,14 +1663,29 @@ LANGUAGE_CODE : 다국어에 관한 설정
 </ul>
 </li>
 </ul>
-<h1 id="heading-26"></h1>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-27"></h1>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-28"></h1>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
 <hr>
-<h2 id="django---app-구조-살펴보기"><strong>Django - app 구조 살펴보기</strong></h2>
-<h1 id="heading-29"></h1>
+<h2 id="django---app-구조-살펴보기">
+  <strong>Django - app 구조 살펴보기</strong>
+  <a class="anchor" href="#django---app-%ea%b5%ac%ec%a1%b0-%ec%82%b4%ed%8e%b4%eb%b3%b4%ea%b8%b0">#</a>
+</h2>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
 <ul>
 <li><strong>models.py</strong>
 <ul>
@@ -1588,7 +1693,10 @@ LANGUAGE_CODE : 다국어에 관한 설정
 </ul>
 </li>
 </ul>
-<h1 id="heading-30"></h1>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>admin.py</strong>
@@ -1597,7 +1705,10 @@ LANGUAGE_CODE : 다국어에 관한 설정
 </ul>
 </li>
 </ul>
-<h1 id="heading-31"></h1>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>views.py</strong>
@@ -1606,7 +1717,10 @@ LANGUAGE_CODE : 다국어에 관한 설정
 </ul>
 </li>
 </ul>
-<h1 id="heading-32"></h1>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>urls.py</strong>
@@ -1615,7 +1729,10 @@ LANGUAGE_CODE : 다국어에 관한 설정
 </ul>
 </li>
 </ul>
-<h1 id="heading-33"></h1>
+<h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>templates</strong>
@@ -1624,14 +1741,29 @@ LANGUAGE_CODE : 다국어에 관한 설정
 </ul>
 </li>
 </ul>
-<h1 id="heading-34"></h1>
+<h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-35"></h1>
+<h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-36"></h1>
+<h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
 <hr>
-<h3 id="django---명령어"><strong>Django - 명령어</strong></h3>
-<h1 id="heading-37"></h1>
+<h3 id="django---명령어">
+  <strong>Django - 명령어</strong>
+  <a class="anchor" href="#django---%eb%aa%85%eb%a0%b9%ec%96%b4">#</a>
+</h3>
+<h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">$</span> <span style="color:#f92672">./</span>manage<span style="color:#f92672">.</span>py <span style="color:#f92672">...</span>
 </span></span><span style="display:flex;"><span>django<span style="color:#f92672">-</span>admin [project name] : 장고 프로젝트를 생성
 </span></span><span style="display:flex;"><span>startapp [app name] : 프로젝트에 기능 단위의 앱를 생성
@@ -1647,7 +1779,10 @@ LANGUAGE_CODE : 다국어에 관한 설정
 </span></span><span style="display:flex;"><span>dbshell : 장고 db에 직저 접근할 수 있는 쉘을 실행
 </span></span><span style="display:flex;"><span>createsuperuser : 관리자 계정을 생성
 </span></span><span style="display:flex;"><span>changepassword : 계정의 비밀번호 변경
-</span></span></code></pre></div><h1 id="heading-38"></h1>
+</span></span></code></pre></div><h1 id="heading-38">
+  
+  <a class="anchor" href="#heading-38">#</a>
+</h1>
 <p> </p>
 </article>
  
@@ -1719,7 +1854,6 @@ LANGUAGE_CODE : 다국어에 관한 설정
 </body>
 </div>
 </html>
-
 
 
 

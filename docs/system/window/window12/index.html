@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Windows Web Server IIS, FTP Server IIS(Internet Information Services) WIndows Server 2016에 내장되어 있는 웹 서버 및 FTP 서버는 IIS라는 이름으로제공됩니다. IIS 실습 IIS 설치를 위해 FIRST Server에서 서버매니저 &gt; 관리 &gt; 역할 및 기능 추가를 선택합니다. 서버역할에서 Web Server IIS를 선택 후 킷을 포함하여 설치를 진행합니다. 역할 서비스 에서 Application Development &gt; CGI 및 FTP Server를 설치하기 위해 체크 후, 설치합니다. 설치가 완료되면 방화벽에 허용되었는 지와 서비스가 실행중인지를 확인합니다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/system/window/window12/><meta property="og:title" content="IIS" />
-<meta property="og:description" content="Windows Web Server IIS, FTP Server IIS(Internet Information Services) WIndows Server 2016에 내장되어 있는 웹 서버 및 FTP 서버는 IIS라는 이름으로제공됩니다. IIS 실습 IIS 설치를 위해 FIRST Server에서 서버매니저 &gt; 관리 &gt; 역할 및 기능 추가를 선택합니다. 서버역할에서 Web Server IIS를 선택 후 킷을 포함하여 설치를 진행합니다. 역할 서비스 에서 Application Development &gt; CGI 및 FTP Server를 설치하기 위해 체크 후, 설치합니다. 설치가 완료되면 방화벽에 허용되었는 지와 서비스가 실행중인지를 확인합니다." />
+<meta name="description" content="Windows Web Server IIS, FTP Server##IIS(Internet Information Services)##WIndows Server 2016에 내장되어 있는 웹 서버 및 FTP 서버는 IIS라는 이름으로제공됩니다. ##IIS 실습##IIS 설치를 위해 FIRST Server에서 서버매니저 &gt; 관리 &gt; 역할 및 기능 추가를 선택합니다. ###서버역할에서 Web Server IIS를 선택 후 킷을 포함하여 설치를 진행합니다. ####역할 서비스 에서 Application Development &gt; CGI 및 FTP Server를 설치하기 위해 체크 후, 설치합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="IIS" />
+<meta property="og:description" content="Windows Web Server IIS, FTP Server##IIS(Internet Information Services)##WIndows Server 2016에 내장되어 있는 웹 서버 및 FTP 서버는 IIS라는 이름으로제공됩니다. ##IIS 실습##IIS 설치를 위해 FIRST Server에서 서버매니저 &gt; 관리 &gt; 역할 및 기능 추가를 선택합니다. ###서버역할에서 Web Server IIS를 선택 후 킷을 포함하여 설치를 진행합니다. ####역할 서비스 에서 Application Development &gt; CGI 및 FTP Server를 설치하기 위해 체크 후, 설치합니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/system/window/window12/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>IIS | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -48,7 +47,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1365,6 +1364,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1376,14 +1378,15 @@
   <strong>IIS</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1456,45 +1459,99 @@
 <br>
 <br>
       
-  <article class="markdown"><h2 id="windows-web-server-iis-ftp-server"><strong>Windows Web Server IIS, FTP Server</strong></h2>
+  <article class="markdown"><h2 id="windows-web-server-iis-ftp-server">
+  <strong>Windows Web Server IIS, FTP Server</strong>
+  <a class="anchor" href="#windows-web-server-iis-ftp-server">#</a>
+</h2>
 <hr>
-<h1 id="heading"></h1>
-<h3 id="iisinternet-information-services"><strong>IIS(Internet Information Services)</strong></h3>
-<h1 id="heading-1"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h3 id="iisinternet-information-services">
+  <strong>IIS(Internet Information Services)</strong>
+  <a class="anchor" href="#iisinternet-information-services">#</a>
+</h3>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <ul>
 <li><strong>WIndows Server 2016에 내장되어 있는 웹 서버 및 FTP 서버는 IIS라는 이름으로제공됩니다.</strong></li>
 </ul>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-3"></h1>
-<h3 id="iis-실습"><strong>IIS 실습</strong></h3>
-<h1 id="heading-4"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h3 id="iis-실습">
+  <strong>IIS 실습</strong>
+  <a class="anchor" href="#iis-%ec%8b%a4%ec%8a%b5">#</a>
+</h3>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <ul>
 <li><strong>IIS 설치를 위해 FIRST Server에서 <code>서버매니저 &gt; 관리 &gt; 역할 및 기능 추가</code>를 선택합니다.</strong></li>
 </ul>
-<h1 id="heading-5"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <p><img src="/System/Window/IIS01.png" alt="" /></p>
-<h1 id="heading-6"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-7"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <ul>
 <li><strong>서버역할에서 <code>Web Server IIS</code>를 선택 후 킷을 포함하여 설치를 진행합니다.</strong></li>
 </ul>
-<h1 id="heading-8"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <p><img src="/System/Window/IIS02.png" alt="" /></p>
-<h1 id="heading-9"></h1>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <p><img src="/System/Window/IIS03.png" alt="" /></p>
-<h1 id="heading-10"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-11"></h1>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <ul>
 <li><strong>역할 서비스 에서 <code>Application Development &gt; CGI</code> 및 <code>FTP Server</code>를 설치하기 위해 체크 후, 설치합니다.</strong></li>
 </ul>
-<h1 id="heading-12"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p><img src="/System/Window/IIS04.png" alt="" /></p>
-<h1 id="heading-13"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-14"></h1>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>설치가 완료되면 방화벽에 허용되었는 지와 서비스가 실행중인지를 확인합니다.</strong></p>
@@ -1503,67 +1560,142 @@
 <p><strong>IIS는 World Wide Web, FTP는 Microsoft FTP Service입니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-15"></h1>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <p><img src="/System/Window/IIS05.png" alt="" /></p>
-<h1 id="heading-16"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
 <p><img src="/System/Window/IIS06.png" alt="" /></p>
-<h1 id="heading-17"></h1>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <p><img src="/System/Window/IIS07.png" alt="" /></p>
-<h1 id="heading-18"></h1>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
 <p><img src="/System/Window/IIS08.png" alt="" /></p>
-<h1 id="heading-19"></h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 <p><img src="/System/Window/IIS09.png" alt="" /></p>
-<h1 id="heading-20"></h1>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-21"></h1>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <ul>
 <li><strong>설치가 완료되면 IIS를 설정을 위해 <code>서버 매니저 &gt; 도구 &gt; IIS 관리자</code>를 선택합니다.</strong></li>
 </ul>
-<h1 id="heading-22"></h1>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
 <p><img src="/System/Window/IIS10.png" alt="" /></p>
-<h1 id="heading-23"></h1>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-24"></h1>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 <ul>
 <li><strong>현재 FTP 서버가 등록되어 있지 않으므로 <code>사이트 &gt; FTP 사이트 추가</code>를 선택합니다.</strong></li>
 </ul>
-<h1 id="heading-25"></h1>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
 <p><img src="/System/Window/IIS11.png" alt="" /></p>
-<h1 id="heading-26"></h1>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-27"></h1>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
 <ul>
 <li><strong>경로를 지정한 후 저장합니다.</strong></li>
 </ul>
-<h1 id="heading-28"></h1>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
 <p><img src="/System/Window/IIS12.png" alt="" /></p>
-<h1 id="heading-29"></h1>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-30"></h1>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
 <ul>
 <li><strong>SSL은 사용하지 않을 것이므로 설정하지 않습니다.</strong></li>
 </ul>
-<h1 id="heading-31"></h1>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
 <p><img src="/System/Window/IIS13.png" alt="" /></p>
-<h1 id="heading-32"></h1>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-33"></h1>
+<h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
 <ul>
 <li><strong>모두가 접속할 수 있도록 <code>익명, 모든 사용자, 읽기</code>를 설정합니다.</strong></li>
 </ul>
-<h1 id="heading-34"></h1>
+<h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
 <p><img src="/System/Window/IIS14.png" alt="" /></p>
-<h1 id="heading-35"></h1>
+<h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-36"></h1>
+<h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
 <ul>
 <li><strong>WINCLIENT에서 <code>192.168.10.11</code>로 접속하면 IIS를 확인하실 수 있습니다.</strong></li>
 </ul>
-<h1 id="heading-37"></h1>
+<h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
 <p><img src="/System/Window/IIS15.png" alt="" /></p>
-<h1 id="heading-38"></h1>
+<h1 id="heading-38">
+  
+  <a class="anchor" href="#heading-38">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-39"></h1>
+<h1 id="heading-39">
+  
+  <a class="anchor" href="#heading-39">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>위와 동일하게 FTP 서버 접속을 위해 WINCLIENT에서 <code>ftp 192.168.10.11</code>로 접속합니다.</strong></p>
@@ -1575,13 +1707,25 @@
 <p><strong>접속이 확인할 수 있습니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-40"></h1>
+<h1 id="heading-40">
+  
+  <a class="anchor" href="#heading-40">#</a>
+</h1>
 <p><img src="/System/Window/IIS16.png" alt="" /></p>
-<h1 id="heading-41"></h1>
+<h1 id="heading-41">
+  
+  <a class="anchor" href="#heading-41">#</a>
+</h1>
 <p><img src="/System/Window/IIS17.png" alt="" /></p>
-<h1 id="heading-42"></h1>
+<h1 id="heading-42">
+  
+  <a class="anchor" href="#heading-42">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-43"></h1>
+<h1 id="heading-43">
+  
+  <a class="anchor" href="#heading-43">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>기본적으로 웹 사이트는 <code>IIS 괸라자 &gt; 사이트 Default Web Site &gt; 기본 문</code>에서 확인 및 설정이 가능합니다.</strong></p>
@@ -1590,13 +1734,28 @@
 <p><strong>이제 본격적인 IIS 활용을 진행해보도록 하겠습니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-44"></h1>
+<h1 id="heading-44">
+  
+  <a class="anchor" href="#heading-44">#</a>
+</h1>
 <p><img src="/System/Window/IIS18.png" alt="" /></p>
-<h1 id="heading-45"></h1>
+<h1 id="heading-45">
+  
+  <a class="anchor" href="#heading-45">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-46"></h1>
-<h3 id="iis를-활용한-웹-사이트-구축"><strong>IIS를 활용한 웹 사이트 구축</strong></h3>
-<h1 id="heading-47"></h1>
+<h1 id="heading-46">
+  
+  <a class="anchor" href="#heading-46">#</a>
+</h1>
+<h3 id="iis를-활용한-웹-사이트-구축">
+  <strong>IIS를 활용한 웹 사이트 구축</strong>
+  <a class="anchor" href="#iis%eb%a5%bc-%ed%99%9c%ec%9a%a9%ed%95%9c-%ec%9b%b9-%ec%82%ac%ec%9d%b4%ed%8a%b8-%ea%b5%ac%ec%b6%95">#</a>
+</h3>
+<h1 id="heading-47">
+  
+  <a class="anchor" href="#heading-47">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>IIS를 활용하면 웹 사이트를 구축할 수 있습니다.</strong></p>
@@ -1616,7 +1775,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-48"></h1>
+<h1 id="heading-48">
+  
+  <a class="anchor" href="#heading-48">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>WPI(Web Platform Installer) : Microsoft에서 제공하는 웹 플랫폼</strong></p>
@@ -1625,11 +1787,23 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-49"></h1>
+<h1 id="heading-49">
+  
+  <a class="anchor" href="#heading-49">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-50"></h1>
-<h3 id="xpressengine를-통한-웹-페이지-실습"><strong>XpressEngine를 통한 웹 페이지 실습</strong></h3>
-<h1 id="heading-51"></h1>
+<h1 id="heading-50">
+  
+  <a class="anchor" href="#heading-50">#</a>
+</h1>
+<h3 id="xpressengine를-통한-웹-페이지-실습">
+  <strong>XpressEngine를 통한 웹 페이지 실습</strong>
+  <a class="anchor" href="#xpressengine%eb%a5%bc-%ed%86%b5%ed%95%9c-%ec%9b%b9-%ed%8e%98%ec%9d%b4%ec%a7%80-%ec%8b%a4%ec%8a%b5">#</a>
+</h3>
+<h1 id="heading-51">
+  
+  <a class="anchor" href="#heading-51">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>먼저 FIRST Server에서 <a href="http://download.hanbit.co.kr/WIN2016/wpilauncher.exe">XpressEngine</a>를 설치합니다.</strong></p>
@@ -1638,11 +1812,20 @@
 <p><strong>설치 후, 창을 종류 후, <code>IIS 관리자 &gt; 사이트 &gt; Default Web Site &gt; 웹 플랫폼 관리자</code>를 선택합니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-52"></h1>
+<h1 id="heading-52">
+  
+  <a class="anchor" href="#heading-52">#</a>
+</h1>
 <p><img src="/System/Window/IIS20.png" alt="" /></p>
-<h1 id="heading-53"></h1>
+<h1 id="heading-53">
+  
+  <a class="anchor" href="#heading-53">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-54"></h1>
+<h1 id="heading-54">
+  
+  <a class="anchor" href="#heading-54">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>웹 서버를 실행하면 PHP를 검색하여 PHP 5.4.9를 설치합니다.</strong></p>
@@ -1651,37 +1834,76 @@
 <p><strong>PHP를 선택 후, 설치할 항목에서 IIS용 PHP 관리자를 제거합니다. (호환성 문제)</strong></p>
 </li>
 </ul>
-<h1 id="heading-55"></h1>
+<h1 id="heading-55">
+  
+  <a class="anchor" href="#heading-55">#</a>
+</h1>
 <p><img src="/System/Window/IIS21.png" alt="" /></p>
-<h1 id="heading-56"></h1>
+<h1 id="heading-56">
+  
+  <a class="anchor" href="#heading-56">#</a>
+</h1>
 <p><img src="/System/Window/IIS22.png" alt="" /></p>
-<h1 id="heading-57"></h1>
+<h1 id="heading-57">
+  
+  <a class="anchor" href="#heading-57">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-58"></h1>
+<h1 id="heading-58">
+  
+  <a class="anchor" href="#heading-58">#</a>
+</h1>
 <ul>
 <li><strong>설정이 왼료되면 MySQl를 검색 후, MySQl 5.5버전을 추가 후 설치합니다.</strong></li>
 </ul>
-<h1 id="heading-59"></h1>
+<h1 id="heading-59">
+  
+  <a class="anchor" href="#heading-59">#</a>
+</h1>
 <p><img src="/System/Window/IIS23.png" alt="" /></p>
-<h1 id="heading-60"></h1>
+<h1 id="heading-60">
+  
+  <a class="anchor" href="#heading-60">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-61"></h1>
+<h1 id="heading-61">
+  
+  <a class="anchor" href="#heading-61">#</a>
+</h1>
 <ul>
 <li><strong>암호를 입력하고 설치를 진행합니다.</strong></li>
 </ul>
-<h1 id="heading-62"></h1>
+<h1 id="heading-62">
+  
+  <a class="anchor" href="#heading-62">#</a>
+</h1>
 <p><img src="/System/Window/IIS24.png" alt="" /></p>
-<h1 id="heading-63"></h1>
+<h1 id="heading-63">
+  
+  <a class="anchor" href="#heading-63">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-64"></h1>
+<h1 id="heading-64">
+  
+  <a class="anchor" href="#heading-64">#</a>
+</h1>
 <ul>
 <li><strong>설치가 완료되었습니다.</strong></li>
 </ul>
-<h1 id="heading-65"></h1>
+<h1 id="heading-65">
+  
+  <a class="anchor" href="#heading-65">#</a>
+</h1>
 <p><img src="/System/Window/IIS25.png" alt="" /></p>
-<h1 id="heading-66"></h1>
+<h1 id="heading-66">
+  
+  <a class="anchor" href="#heading-66">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-67"></h1>
+<h1 id="heading-67">
+  
+  <a class="anchor" href="#heading-67">#</a>
+</h1>
 <ul>
 <li><strong>설치가 완료되면 cmd를 시행하여 <code>mysql -u root -p</code> 실행하여 암호를 입력합니다.</strong></li>
 </ul>
@@ -1693,11 +1915,20 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
 </span></span><span style="display:flex;"><span>mysql<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">exit</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># MySQL 쿼리를 종료합니다.
-</span></span></span></code></pre></div><h1 id="heading-68"></h1>
+</span></span></span></code></pre></div><h1 id="heading-68">
+  
+  <a class="anchor" href="#heading-68">#</a>
+</h1>
 <p><img src="/System/Window/IIS26.png" alt="" /></p>
-<h1 id="heading-69"></h1>
+<h1 id="heading-69">
+  
+  <a class="anchor" href="#heading-69">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-70"></h1>
+<h1 id="heading-70">
+  
+  <a class="anchor" href="#heading-70">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>DB 설정이 완료되면 <a href="http://download.hanbit.co.kr/WIN2016/xe.zip">Xe</a>를 다운받습니다.</strong></p>
@@ -1706,11 +1937,20 @@
 <p><strong>IIS의 기본 폴더인 <code>C:\inetpub\wwwroot\</code>에 붙여넣습니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-71"></h1>
+<h1 id="heading-71">
+  
+  <a class="anchor" href="#heading-71">#</a>
+</h1>
 <p><img src="/System/Window/IIS27.png" alt="" /></p>
-<h1 id="heading-72"></h1>
+<h1 id="heading-72">
+  
+  <a class="anchor" href="#heading-72">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-73"></h1>
+<h1 id="heading-73">
+  
+  <a class="anchor" href="#heading-73">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>이어서 게시판은 모든 사용자가 사용해야 하기 때문에 권한에 대한 설정을 진행합니다.</strong></p>
@@ -1719,89 +1959,194 @@
 <p><strong>IUSR을 생성 후, 모든 권한을 부여합니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-74"></h1>
+<h1 id="heading-74">
+  
+  <a class="anchor" href="#heading-74">#</a>
+</h1>
 <p><img src="/System/Window/IIS28.png" alt="" /></p>
-<h1 id="heading-75"></h1>
+<h1 id="heading-75">
+  
+  <a class="anchor" href="#heading-75">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-76"></h1>
+<h1 id="heading-76">
+  
+  <a class="anchor" href="#heading-76">#</a>
+</h1>
 <ul>
 <li><strong>WINCLIENT에서 <code>192.168.10.11/xe</code>로 접속하여 설정을 진행합니다.</strong></li>
 </ul>
-<h1 id="heading-77"></h1>
+<h1 id="heading-77">
+  
+  <a class="anchor" href="#heading-77">#</a>
+</h1>
 <p><img src="/System/Window/IIS29.png" alt="" /></p>
-<h1 id="heading-78"></h1>
+<h1 id="heading-78">
+  
+  <a class="anchor" href="#heading-78">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-79"></h1>
+<h1 id="heading-79">
+  
+  <a class="anchor" href="#heading-79">#</a>
+</h1>
 <ul>
 <li><strong>MySQL을 지정합니다.</strong></li>
 </ul>
-<h1 id="heading-80"></h1>
+<h1 id="heading-80">
+  
+  <a class="anchor" href="#heading-80">#</a>
+</h1>
 <p><img src="/System/Window/IIS30.png" alt="" /></p>
-<h1 id="heading-81"></h1>
+<h1 id="heading-81">
+  
+  <a class="anchor" href="#heading-81">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-82"></h1>
+<h1 id="heading-82">
+  
+  <a class="anchor" href="#heading-82">#</a>
+</h1>
 <ul>
 <li><strong>서버에서 설정했던 값들을 기입합니다.</strong></li>
 </ul>
-<h1 id="heading-83"></h1>
+<h1 id="heading-83">
+  
+  <a class="anchor" href="#heading-83">#</a>
+</h1>
 <p><img src="/System/Window/IIS32.png" alt="" /></p>
-<h1 id="heading-84"></h1>
+<h1 id="heading-84">
+  
+  <a class="anchor" href="#heading-84">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-85"></h1>
+<h1 id="heading-85">
+  
+  <a class="anchor" href="#heading-85">#</a>
+</h1>
 <ul>
 <li><strong>어드민 계정을 생성합니다.</strong></li>
 </ul>
-<h1 id="heading-86"></h1>
+<h1 id="heading-86">
+  
+  <a class="anchor" href="#heading-86">#</a>
+</h1>
 <p><img src="/System/Window/IIS33.png" alt="" /></p>
-<h1 id="heading-87"></h1>
+<h1 id="heading-87">
+  
+  <a class="anchor" href="#heading-87">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-88"></h1>
+<h1 id="heading-88">
+  
+  <a class="anchor" href="#heading-88">#</a>
+</h1>
 <ul>
 <li><strong>이제 다시 <code>192.168.10.11/xe</code>로 접속하면 다음과 같은 페이지를 확인하실 수 있습니다.</strong></li>
 </ul>
-<h1 id="heading-89"></h1>
+<h1 id="heading-89">
+  
+  <a class="anchor" href="#heading-89">#</a>
+</h1>
 <p><img src="/System/Window/IIS34.png" alt="" /></p>
-<h1 id="heading-90"></h1>
+<h1 id="heading-90">
+  
+  <a class="anchor" href="#heading-90">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-91"></h1>
+<h1 id="heading-91">
+  
+  <a class="anchor" href="#heading-91">#</a>
+</h1>
 <ul>
 <li><strong>게시판 생성을 위해 하단의 그림과 같이해 <code>사이트 메뉴 편집 &gt; 메뉴 추가 &gt; 게시판</code>을 추가합니다.</strong></li>
 </ul>
-<h1 id="heading-92"></h1>
+<h1 id="heading-92">
+  
+  <a class="anchor" href="#heading-92">#</a>
+</h1>
 <p><img src="/System/Window/IIS35.png" alt="" /></p>
-<h1 id="heading-93"></h1>
+<h1 id="heading-93">
+  
+  <a class="anchor" href="#heading-93">#</a>
+</h1>
 <p><img src="/System/Window/IIS36.png" alt="" /></p>
-<h1 id="heading-94"></h1>
+<h1 id="heading-94">
+  
+  <a class="anchor" href="#heading-94">#</a>
+</h1>
 <p><img src="/System/Window/IIS37.png" alt="" /></p>
-<h1 id="heading-95"></h1>
+<h1 id="heading-95">
+  
+  <a class="anchor" href="#heading-95">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-96"></h1>
+<h1 id="heading-96">
+  
+  <a class="anchor" href="#heading-96">#</a>
+</h1>
 <ul>
 <li><strong>로그아웃 후, 게스트의 궈한으로 Board에 접속하여 글을 작성합니다.</strong></li>
 </ul>
-<h1 id="heading-97"></h1>
+<h1 id="heading-97">
+  
+  <a class="anchor" href="#heading-97">#</a>
+</h1>
 <p><img src="/System/Window/IIS38.png" alt="" /></p>
-<h1 id="heading-98"></h1>
+<h1 id="heading-98">
+  
+  <a class="anchor" href="#heading-98">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-99"></h1>
+<h1 id="heading-99">
+  
+  <a class="anchor" href="#heading-99">#</a>
+</h1>
 <ul>
 <li><strong>게시판을 확인하실 수 있습니다.</strong></li>
 </ul>
-<h1 id="heading-100"></h1>
+<h1 id="heading-100">
+  
+  <a class="anchor" href="#heading-100">#</a>
+</h1>
 <p><img src="/System/Window/IIS39.png" alt="" /></p>
-<h1 id="heading-101"></h1>
+<h1 id="heading-101">
+  
+  <a class="anchor" href="#heading-101">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-102"></h1>
-<h3 id="웹-하드-구축"><strong>웹 하드 구축</strong></h3>
-<h1 id="heading-103"></h1>
+<h1 id="heading-102">
+  
+  <a class="anchor" href="#heading-102">#</a>
+</h1>
+<h3 id="웹-하드-구축">
+  <strong>웹 하드 구축</strong>
+  <a class="anchor" href="#%ec%9b%b9-%ed%95%98%eb%93%9c-%ea%b5%ac%ec%b6%95">#</a>
+</h3>
+<h1 id="heading-103">
+  
+  <a class="anchor" href="#heading-103">#</a>
+</h1>
 <ul>
 <li><strong>웹 하드는 인터넷 상에서 디스크 공간을 사용하는 기능을 제공하는 사이트를 의미합니다.</strong></li>
 </ul>
-<h1 id="heading-104"></h1>
+<h1 id="heading-104">
+  
+  <a class="anchor" href="#heading-104">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-105"></h1>
-<h3 id="웹-사이트를-통한-웹-하드-구축"><strong>웹 사이트를 통한 웹 하드 구축</strong></h3>
-<h1 id="heading-106"></h1>
+<h1 id="heading-105">
+  
+  <a class="anchor" href="#heading-105">#</a>
+</h1>
+<h3 id="웹-사이트를-통한-웹-하드-구축">
+  <strong>웹 사이트를 통한 웹 하드 구축</strong>
+  <a class="anchor" href="#%ec%9b%b9-%ec%82%ac%ec%9d%b4%ed%8a%b8%eb%a5%bc-%ed%86%b5%ed%95%9c-%ec%9b%b9-%ed%95%98%eb%93%9c-%ea%b5%ac%ec%b6%95">#</a>
+</h3>
+<h1 id="heading-106">
+  
+  <a class="anchor" href="#heading-106">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>FIRST 서버에 <a href="http://download.hanbit.co.kr/WIN2016/pydio-core-6.4.2.zip">Pydio</a>를 설치합니다.</strong></p>
@@ -1810,19 +2155,37 @@
 <p><strong>Xe와 동일하게 사용권한을 수정 후, 폴더명을 접근을 쉽게 WebHard로 바꾸어줍니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-107"></h1>
+<h1 id="heading-107">
+  
+  <a class="anchor" href="#heading-107">#</a>
+</h1>
 <p><img src="/System/Window/IIS40.png" alt="" /></p>
-<h1 id="heading-108"></h1>
+<h1 id="heading-108">
+  
+  <a class="anchor" href="#heading-108">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-109"></h1>
+<h1 id="heading-109">
+  
+  <a class="anchor" href="#heading-109">#</a>
+</h1>
 <ul>
 <li><strong><code>C:\Window\Temp</code>폴더 또한 권한을 설정해줍니다.</strong></li>
 </ul>
-<h1 id="heading-110"></h1>
+<h1 id="heading-110">
+  
+  <a class="anchor" href="#heading-110">#</a>
+</h1>
 <p><img src="/System/Window/IIS41.png" alt="" /></p>
-<h1 id="heading-111"></h1>
+<h1 id="heading-111">
+  
+  <a class="anchor" href="#heading-111">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-112"></h1>
+<h1 id="heading-112">
+  
+  <a class="anchor" href="#heading-112">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>설정이 완료되면 WINCLINT에서 <code>192.168.10.11/WebHard</code>에 접속합니다.</strong></p>
@@ -1831,47 +2194,98 @@
 <p><strong>접속이 완료되면 에러와 오류를 무시하고 설치를 진행합니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-113"></h1>
+<h1 id="heading-113">
+  
+  <a class="anchor" href="#heading-113">#</a>
+</h1>
 <p><img src="/System/Window/IIS43.png" alt="" /></p>
-<h1 id="heading-114"></h1>
+<h1 id="heading-114">
+  
+  <a class="anchor" href="#heading-114">#</a>
+</h1>
 <p><img src="/System/Window/IIS44.png" alt="" /></p>
-<h1 id="heading-115"></h1>
+<h1 id="heading-115">
+  
+  <a class="anchor" href="#heading-115">#</a>
+</h1>
 <p><img src="/System/Window/IIS45.png" alt="" /></p>
-<h1 id="heading-116"></h1>
+<h1 id="heading-116">
+  
+  <a class="anchor" href="#heading-116">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-117"></h1>
+<h1 id="heading-117">
+  
+  <a class="anchor" href="#heading-117">#</a>
+</h1>
 <ul>
 <li><strong>데이터베이스는 새로 생성해도 되지만 기존의 XeDB와 유저르 사용해보겠습니다.</strong></li>
 </ul>
-<h1 id="heading-118"></h1>
+<h1 id="heading-118">
+  
+  <a class="anchor" href="#heading-118">#</a>
+</h1>
 <p><img src="/System/Window/IIS46.png" alt="" /></p>
-<h1 id="heading-119"></h1>
+<h1 id="heading-119">
+  
+  <a class="anchor" href="#heading-119">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-120"></h1>
+<h1 id="heading-120">
+  
+  <a class="anchor" href="#heading-120">#</a>
+</h1>
 <ul>
 <li><strong>설정이 완료되면 설치를 진행합니다.</strong></li>
 </ul>
-<h1 id="heading-121"></h1>
+<h1 id="heading-121">
+  
+  <a class="anchor" href="#heading-121">#</a>
+</h1>
 <p><img src="/System/Window/IIS47.png" alt="" /></p>
-<h1 id="heading-122"></h1>
+<h1 id="heading-122">
+  
+  <a class="anchor" href="#heading-122">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-123"></h1>
+<h1 id="heading-123">
+  
+  <a class="anchor" href="#heading-123">#</a>
+</h1>
 <ul>
 <li><strong>설치가 완료되면 `192.168.10.11/WebHard로 접소하면 접속이 완료됩니다.</strong></li>
 </ul>
-<h1 id="heading-124"></h1>
+<h1 id="heading-124">
+  
+  <a class="anchor" href="#heading-124">#</a>
+</h1>
 <p><img src="/System/Window/IIS48.png" alt="" /></p>
-<h1 id="heading-125"></h1>
+<h1 id="heading-125">
+  
+  <a class="anchor" href="#heading-125">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-126"></h1>
+<h1 id="heading-126">
+  
+  <a class="anchor" href="#heading-126">#</a>
+</h1>
 <ul>
 <li><strong>새로운 계정생성을 위해 우측의 메뉴에서 설정을 선택합니다.</strong></li>
 </ul>
-<h1 id="heading-127"></h1>
+<h1 id="heading-127">
+  
+  <a class="anchor" href="#heading-127">#</a>
+</h1>
 <p><img src="/System/Window/IIS49.png" alt="" /></p>
-<h1 id="heading-128"></h1>
+<h1 id="heading-128">
+  
+  <a class="anchor" href="#heading-128">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-129"></h1>
+<h1 id="heading-129">
+  
+  <a class="anchor" href="#heading-129">#</a>
+</h1>
 <ul>
 <li>
 <p><strong><code>People &gt; 새 사용자</code>를 선택하여 사용자를 생성합니다.</strong></p>
@@ -1880,13 +2294,25 @@
 <p><strong>생성된 사용자를 선택하면 사용자를 설정할 수 있습니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-130"></h1>
+<h1 id="heading-130">
+  
+  <a class="anchor" href="#heading-130">#</a>
+</h1>
 <p><img src="/System/Window/IIS50.png" alt="" /></p>
-<h1 id="heading-131"></h1>
+<h1 id="heading-131">
+  
+  <a class="anchor" href="#heading-131">#</a>
+</h1>
 <p><img src="/System/Window/IIS51.png" alt="" /></p>
-<h1 id="heading-132"></h1>
+<h1 id="heading-132">
+  
+  <a class="anchor" href="#heading-132">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-133"></h1>
+<h1 id="heading-133">
+  
+  <a class="anchor" href="#heading-133">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>재접속 후, 새로 생성된 유저로 접속하여 업로드 및 생성을 할 수 있습니다.</strong></p>
@@ -1895,11 +2321,20 @@
 <p><strong>이와 같이 개인적으로 혹은 공유하는 폴더를 웹을 통해 관리할 수도 있습니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-134"></h1>
+<h1 id="heading-134">
+  
+  <a class="anchor" href="#heading-134">#</a>
+</h1>
 <p><img src="/System/Window/IIS52.png" alt="" /></p>
-<h1 id="heading-135"></h1>
+<h1 id="heading-135">
+  
+  <a class="anchor" href="#heading-135">#</a>
+</h1>
 <p><img src="/System/Window/IIS53.png" alt="" /></p>
-<h1 id="heading-136"></h1>
+<h1 id="heading-136">
+  
+  <a class="anchor" href="#heading-136">#</a>
+</h1>
 <p> </p>
 </article>
  
@@ -2003,7 +2438,6 @@
 </body>
 </div>
 </html>
-
 
 
 

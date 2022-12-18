@@ -2,18 +2,14 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shell Programming Exit Status 터미널에서 명령을 단계적으로 실행해서 작업을 완성할 때는 여태까지 실행한 명령들이 모두 정상적으로 완료되었기 때문이다.
+<meta name="description" content="Shell Programming###Exit Status##터미널에서 명령을 단계적으로 실행해서 작업을 완성할 때는 여태까지 실행한 명령들이 모두 정상적으로 완료되었기 때문이다.
 만약 특정 과정에서 오류가 발생했는지, 정상적으로 완료되었는 지를 확인해야하는 데, 이를 판단할 수 있는 방법이 종료 상태 값을 확인하는 방법으로, 실제 shell에서의 핵심 개념중 하나가 종료 상태 값(Exit status)이다.
 Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반환하며, if while until &amp;&amp; || 모두 종료 상태 값을 사용해서 참, 거짓을 판단한다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/development/shell/shell05/><meta property="og:title" content="Exit Status" />
-<meta property="og:description" content="Shell Programming Exit Status 터미널에서 명령을 단계적으로 실행해서 작업을 완성할 때는 여태까지 실행한 명령들이 모두 정상적으로 완료되었기 때문이다.
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Exit Status" />
+<meta property="og:description" content="Shell Programming###Exit Status##터미널에서 명령을 단계적으로 실행해서 작업을 완성할 때는 여태까지 실행한 명령들이 모두 정상적으로 완료되었기 때문이다.
 만약 특정 과정에서 오류가 발생했는지, 정상적으로 완료되었는 지를 확인해야하는 데, 이를 판단할 수 있는 방법이 종료 상태 값을 확인하는 방법으로, 실제 shell에서의 핵심 개념중 하나가 종료 상태 값(Exit status)이다.
 Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반환하며, if while until &amp;&amp; || 모두 종료 상태 값을 사용해서 참, 거짓을 판단한다." />
 <meta property="og:type" content="article" />
@@ -21,25 +17,28 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Exit Status | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -52,7 +51,7 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1359,6 +1358,9 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1370,14 +1372,15 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
   <strong>Exit Status</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1458,12 +1461,27 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
 <br>
 <br>
       
-  <article class="markdown"><h1 id="shell-programming"><strong>Shell Programming</strong></h1>
-<h1 id="heading"></h1>
+  <article class="markdown"><h1 id="shell-programming">
+  <strong>Shell Programming</strong>
+  <a class="anchor" href="#shell-programming">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-1"></h1>
-<h2 id="exit-status"><strong>Exit Status</strong></h2>
-<h1 id="heading-2"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h2 id="exit-status">
+  <strong>Exit Status</strong>
+  <a class="anchor" href="#exit-status">#</a>
+</h2>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>터미널에서 명령을 단계적으로 실행해서 작업을 완성할 때는 여태까지 실행한 명령들이 모두 정상적으로 완료되었기 때문이다.</strong></p>
@@ -1506,11 +1524,23 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>
 </span></span><span style="display:flex;"><span>        echo <span style="color:#e6db74">&#34;failed&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
-</span></span></code></pre></div><h1 id="heading-3"></h1>
+</span></span></code></pre></div><h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-4"></h1>
-<h3 id="앞선-명령이-정상-종료되어야-할-경우"><strong>앞선 명령이 정상 종료되어야 할 경우</strong></h3>
-<h1 id="heading-5"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="앞선-명령이-정상-종료되어야-할-경우">
+  <strong>앞선 명령이 정상 종료되어야 할 경우</strong>
+  <a class="anchor" href="#%ec%95%9e%ec%84%a0-%eb%aa%85%eb%a0%b9%ec%9d%b4-%ec%a0%95%ec%83%81-%ec%a2%85%eb%a3%8c%eb%90%98%ec%96%b4%ec%95%bc-%ed%95%a0-%ea%b2%bd%ec%9a%b0">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>앞서 실행된 명령이 오류로 종료하였을 경우 뒤에 이어지는 명령이 시행되면 안될 경우가 존재한다.</strong></p>
@@ -1528,11 +1558,23 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
 </span></span><span style="display:flex;"><span>    echo command failed
 </span></span><span style="display:flex;"><span>    exit <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
-</span></span></code></pre></div><h1 id="heading-6"></h1>
+</span></span></code></pre></div><h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-7"></h1>
-<h3 id="종료-상태-값-지정"><strong>종료 상태 값 지정</strong></h3>
-<h1 id="heading-8"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<h3 id="종료-상태-값-지정">
+  <strong>종료 상태 값 지정</strong>
+  <a class="anchor" href="#%ec%a2%85%eb%a3%8c-%ec%83%81%ed%83%9c-%ea%b0%92-%ec%a7%80%ec%a0%95">#</a>
+</h3>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>스크립트 파일이나 subshell은 프로세스가 새로 생성되는 것이므로 종료 상태 값을 지정할 때 <code>exit</code> 명령으로 설정한다.</strong></p>
@@ -1551,11 +1593,23 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
 </span></span><span style="display:flex;"><span>    builtin cd <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><h1 id="heading-9"></h1>
+</span></span></code></pre></div><h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-10"></h1>
-<h3 id="종료코드"><strong>종료코드</strong></h3>
-<h1 id="heading-11"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="종료코드">
+  <strong>종료코드</strong>
+  <a class="anchor" href="#%ec%a2%85%eb%a3%8c%ec%bd%94%eb%93%9c">#</a>
+</h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>종료코드에는 1byte가 사용되므로 0 ~ 255번을 사용할 수 있으며 그 중 <code>0</code>만 정상 종료를 나타내고 나머지는 오류를 분류해 나타내는 데 사용된다.</strong></p>
@@ -1584,11 +1638,23 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
 </ul>
 </li>
 </ul>
-<h1 id="heading-12"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-13"></h1>
-<h3 id="참-거짓-판단에-복수개의-명령이-사용될-경우"><strong>참, 거짓 판단에 복수개의 명령이 사용될 경우</strong></h3>
-<h1 id="heading-14"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h3 id="참-거짓-판단에-복수개의-명령이-사용될-경우">
+  <strong>참, 거짓 판단에 복수개의 명령이 사용될 경우</strong>
+  <a class="anchor" href="#%ec%b0%b8-%ea%b1%b0%ec%a7%93-%ed%8c%90%eb%8b%a8%ec%97%90-%eb%b3%b5%ec%88%98%ea%b0%9c%ec%9d%98-%eb%aa%85%eb%a0%b9%ec%9d%b4-%ec%82%ac%ec%9a%a9%eb%90%a0-%ea%b2%bd%ec%9a%b0">#</a>
+</h3>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>참, 거짓 판단을 위해 사용되는 명령이 위치하는 자리에는 꼭 하나의 명령만 올 수 있는 것이 아니며, <code>&amp;&amp; ||</code> 또는 <code>{ ;} ( )</code>를 이용한 명령 그룹이 올 수도 있고, <code>;</code>를 이용해서 여러 개의 명령을 사용할 수도 있다.</strong></p>
@@ -1603,11 +1669,23 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
 </span></span><span style="display:flex;"><span>    ...
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
-</span></span></code></pre></div><h1 id="heading-15"></h1>
+</span></span></code></pre></div><h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-16"></h1>
-<h3 id="pipe로-연결된-명령의-종료-상태-값"><strong>pipe로 연결된 명령의 종료 상태 값</strong></h3>
-<h1 id="heading-17"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h3 id="pipe로-연결된-명령의-종료-상태-값">
+  <strong>pipe로 연결된 명령의 종료 상태 값</strong>
+  <a class="anchor" href="#pipe%eb%a1%9c-%ec%97%b0%ea%b2%b0%eb%90%9c-%eb%aa%85%eb%a0%b9%ec%9d%98-%ec%a2%85%eb%a3%8c-%ec%83%81%ed%83%9c-%ea%b0%92">#</a>
+</h3>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>pipe로 여러 명령이 연결되어 실행될 때는 마지막 명령의 종료 상태 값이 사용된다.</strong></p>
@@ -1632,11 +1710,23 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
 </span></span><span style="display:flex;"><span>$ sed -n <span style="color:#e6db74">&#39;/&lt;main&gt;:/,/^$/p&#39;</span> tmpfile
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ echo $status
-</span></span></code></pre></div><h1 id="heading-18"></h1>
+</span></span></code></pre></div><h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-19"></h1>
-<h3 id="null-값"><strong>null 값</strong></h3>
-<h1 id="heading-20"></h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<h3 id="null-값">
+  <strong>null 값</strong>
+  <a class="anchor" href="#null-%ea%b0%92">#</a>
+</h3>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <ul>
 <li><strong>존재하지 않는 변수나 null 값인 변수는 quote 하지 않을 경우 참이 되므로 주의해야 한다.</strong></li>
 </ul>
@@ -1647,11 +1737,23 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
 </span></span><span style="display:flex;"><span>$ unset asdfgh
 </span></span><span style="display:flex;"><span>$ $asdfg <span style="color:#f92672">&amp;&amp;</span> echo true
 </span></span><span style="display:flex;"><span>true
-</span></span></code></pre></div><h1 id="heading-21"></h1>
+</span></span></code></pre></div><h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-22"></h1>
-<h3 id="대입-연산의-종료-상태-값"><strong>대입 연산의 종료 상태 값</strong></h3>
-<h1 id="heading-23"></h1>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<h3 id="대입-연산의-종료-상태-값">
+  <strong>대입 연산의 종료 상태 값</strong>
+  <a class="anchor" href="#%eb%8c%80%ec%9e%85-%ec%97%b0%ec%82%b0%ec%9d%98-%ec%a2%85%eb%a3%8c-%ec%83%81%ed%83%9c-%ea%b0%92">#</a>
+</h3>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <ul>
 <li><strong><code>=</code>, <code>+=</code> 메타문자를 이용한 식은 명령문이 아니며, <code>;</code>로 구분없이 한줄에 여러 개를 쓸 수도 있다. 종료 상태 값은 기본적으로 항상 <code>0</code> 이지만 명령치환과 함께 사용되면 명령치환 종료 상태 값이 적용된다.</strong></li>
 </ul>
@@ -1669,7 +1771,10 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
 </span></span><span style="display:flex;"><span>$ echo $?
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 대입연산의 종료 상태 값은 기본적으로 0을 출력</span>
-</span></span></code></pre></div><h1 id="heading-24"></h1>
+</span></span></code></pre></div><h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 <p> </p>
 </article>
  
@@ -1781,7 +1886,6 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
 </body>
 </div>
 </html>
-
 
 
 

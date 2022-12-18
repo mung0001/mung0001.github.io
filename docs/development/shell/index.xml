@@ -12,9 +12,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell-1/</guid>
-      <description>Shell Programming Shell Script의 개요 UNIX/ Linux 소개 및 특징 UNIX 1969년 AT&amp;amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다
+      <description>Shell Programming###Shell Script의 개요##UNIX/ Linux 소개 및 특징##UNIX 1969년 AT&amp;amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다
 벨연구소는 대학과 연구기관에 UNIX를 활용할 수 있도록 라이선스를 제공하였으며, 버클리 대학교에서는 UNIX에 네트워크 프로토콜인 TCP/IP 등 다양한 기능을 보강하여 BSD 배포본을 제작하고 이후 파생되는 많은 UNIX에 영향을 끼쳤다.
-Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원생에 의해 커널이 개발된 이래, 1984년부터 리처드 스토람에 의해 추진된 GNU 프로젝트의 다양한 소프트웨어들이 합쳐진 운영체제가 Linux이다.</description>
+#Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원생에 의해 커널이 개발된 이래, 1984년부터 리처드 스토람에 의해 추진된 GNU 프로젝트의 다양한 소프트웨어들이 합쳐진 운영체제가 Linux이다.</description>
     </item>
     
     <item>
@@ -23,10 +23,9 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell-2/</guid>
-      <description>Shell Programming UNIX/ Linux 기본 명령어와 개념 Redirection &amp;amp; Pipes $ &amp;lt;File Descriptor&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;Redirection&amp;gt; $ &amp;lt;File Descriptor&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;Redirection&amp;gt; &amp;lt;Pipe&amp;gt; &amp;lt;File Descriptor&amp;gt; ... ex) $ cat /log/var/message | grep ERR # cat = &amp;lt;File Descripotr&amp;gt; # /log/var/message = &amp;lt;PATH&amp;gt; # | = &amp;lt;Redirection&amp;gt; File Descriptor Process가 File이나 Device를 access 하기 위해 사용
+      <description>Shell Programming##UNIX/ Linux 기본 명령어와 개념##Redirection &amp;amp; Pipes##$ &amp;lt;File Descriptor&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;Redirection&amp;gt; $ &amp;lt;File Descriptor&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;Redirection&amp;gt; &amp;lt;Pipe&amp;gt; &amp;lt;File Descriptor&amp;gt; ... ex) $ cat /log/var/message | grep ERR # cat = &amp;lt;File Descripotr&amp;gt; # /log/var/message = &amp;lt;PATH&amp;gt; # | = &amp;lt;Redirection&amp;gt; #File Descriptor Process가 File이나 Device를 access 하기 위해 사용
 Standard File Descriptor
-stdin(standard input) : 표준 입력 (예시 : 키보드)
-stdout(standard output) : 표준 출력 (예시 : 모니터)</description>
+stdin(standard input) : 표준 입력 (예시 : 키보드)</description>
     </item>
     
     <item>
@@ -35,7 +34,7 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell-3/</guid>
-      <description>Shell Programming Shell 문법 Shell 변수 Shell 에서 변수는 사용할 때 선언
+      <description>Shell Programming###Shell 문법##Shell 변수##Shell 에서 변수는 사용할 때 선언
 변수에 초기 값을 대입할 때 변수를 만들게 된다.
 모든 변수는 문자열로 간주
 숫자 값을 가지는 경우에도 문자열로 간주
@@ -51,7 +50,7 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell-4/</guid>
-      <description>Shell Programming 예약변수 및 환경변수 변수명 설명 HOME 사용자의 홈 디렉터리 PATH 실행 파일을 찾을 디렉터리 경로 FUNCNAME 현재 함수 이름 LANG 프로그램 사용 시 기본으로 지원되는 언어 PWD 사용자의 현재 작업 중인 디렉터리 TERM 로그인 터미널 타입 SHELL 로그인해서 사용하는 쉙 USER 사용자이름 USERNAME 사용자이름 GROUP 사용자 그룹(/etc/password 값을 출력) DISPLAY X 디스플레이 이름 COLUMNS 현재 터미널이나 윈도우 터미널 컬럼 수 LINES 터미널 라인의 수 PS1 기본 프롬프트 변수 PS2 보조 프롬프트 변수(기본값:&amp;gt;), 명령을 &amp;ldquo;/&amp;ldquo;를 사용하여 명령 행 연장시 사용됨 PS3 쉘 스크립트에서 select 사용 시 프롬프트 변수 PS4 쉘 스크립트에서 디버깅 모드의 프롬프트 변수(기본값:+) BASH BASH 실행 파일 경로 BASH_VERSION 설치된 BASH의 버전 BASH_ENV 스크립트 실행 시 BASH 시작 파일을 읽을 위치 변수 HISTFILE history 파일 경로 HISTFILESIE history 파일 크기 HISTSIZE history 파일 저장 수 HOSTNAME 호스트 이름 HOSTTYPE 시스템 하드웨어 종류 MACHTYPE 기기의 종류 MAIL mail 보관경로 LOGNAME 로그인 이름 TMOUT 0이면 제한, 없으면 time 시간 지정 시 그 시간 이후 로그아웃 SECONDS 스크립트가 실행된 초 단위 시간 UID 사용자 UID OSTYPE OS의 종류 매개변수 매개변수 설명 $$ 현재 스클비트 또는 명령어의 PID $?</description>
+      <description>Shell Programming###예약변수 및 환경변수##변수명 설명 HOME 사용자의 홈 디렉터리 PATH 실행 파일을 찾을 디렉터리 경로 FUNCNAME 현재 함수 이름 LANG 프로그램 사용 시 기본으로 지원되는 언어 PWD 사용자의 현재 작업 중인 디렉터리 TERM 로그인 터미널 타입 SHELL 로그인해서 사용하는 쉙 USER 사용자이름 USERNAME 사용자이름 GROUP 사용자 그룹(/etc/password 값을 출력) DISPLAY X 디스플레이 이름 COLUMNS 현재 터미널이나 윈도우 터미널 컬럼 수 LINES 터미널 라인의 수 PS1 기본 프롬프트 변수 PS2 보조 프롬프트 변수(기본값:&amp;gt;), 명령을 &amp;ldquo;/&amp;ldquo;를 사용하여 명령 행 연장시 사용됨 PS3 쉘 스크립트에서 select 사용 시 프롬프트 변수 PS4 쉘 스크립트에서 디버깅 모드의 프롬프트 변수(기본값:+) BASH BASH 실행 파일 경로 BASH_VERSION 설치된 BASH의 버전 BASH_ENV 스크립트 실행 시 BASH 시작 파일을 읽을 위치 변수 HISTFILE history 파일 경로 HISTFILESIE history 파일 크기 HISTSIZE history 파일 저장 수 HOSTNAME 호스트 이름 HOSTTYPE 시스템 하드웨어 종류 MACHTYPE 기기의 종류 MAIL mail 보관경로 LOGNAME 로그인 이름 TMOUT 0이면 제한, 없으면 time 시간 지정 시 그 시간 이후 로그아웃 SECONDS 스크립트가 실행된 초 단위 시간 UID 사용자 UID OSTYPE OS의 종류 ####매개변수##매개변수 설명 $$ 현재 스클비트 또는 명령어의 PID $?</description>
     </item>
     
     <item>
@@ -60,7 +59,7 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell-5/</guid>
-      <description>Shell Programming Shell System Management </description>
+      <description>Shell Programming###Shell System Management####</description>
     </item>
     
     <item>
@@ -69,7 +68,7 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell-6/</guid>
-      <description>Shell Programming Shell Script System Security </description>
+      <description>Shell Programming###Shell Script System Security####</description>
     </item>
     
     <item>
@@ -78,7 +77,7 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell-7/</guid>
-      <description>Shell Programming Customizing </description>
+      <description>Shell Programming###Customizing####</description>
     </item>
     
     <item>
@@ -87,11 +86,10 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell01/</guid>
-      <description>Shell Programming Shell Basics Shell의 기본적인 역할은 사용자에게 명령을 입력받아 시행하는 것입니다.
+      <description>Shell Programming###Shell Basics##Shell의 기본적인 역할은 사용자에게 명령을 입력받아 시행하는 것입니다.
 Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제공하므로 실제 명령이 실행되기 전에 Shell에 의해 해석 단계를 거치게 됩니다.
-파일명 Shell에서 제일 처음이자 중요한 개념 중 하나가 파일명입니다.
-파일명은 곧 명령을 실행할 때 사용되는 이름과 같으며, 리눅스에서 사용하고 있는 파일시스템에서는 파일 이름을 NUL, / 두 문자를 제외하고 전부 허용한다고 합니다.
-[ { [10 {echo if{ {AA=10} . : # 상단처럼 복잡미묘한 파일이름도 가능합니다.</description>
+##파일명##Shell에서 제일 처음이자 중요한 개념 중 하나가 파일명입니다.
+파일명은 곧 명령을 실행할 때 사용되는 이름과 같으며, 리눅스에서 사용하고 있는 파일시스템에서는 파일 이름을 NUL, / 두 문자를 제외하고 전부 허용한다고 합니다.</description>
     </item>
     
     <item>
@@ -100,7 +98,7 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell02/</guid>
-      <description>Shell Programming Quotes Shell 중요한 핵심 개념 중 하나는 quotes라 할 수 있습니다.
+      <description>Shell Programming###Quotes##Shell 중요한 핵심 개념 중 하나는 quotes라 할 수 있습니다.
 shell에서 quotes는 숫자나 스트링 값을 구분하기 위한 용도로는 사용하지 않습니다.
 1234, &amp;ldquo;123&amp;rdquo;, &amp;lsquo;123&amp;rsquo;은 모두 동일하며, abc, &amp;ldquo;abc&amp;rdquo;, &amp;lsquo;abc&amp;rsquo; 또한 차이가 없고 모두 스트링 문자열입니다.
 Shell 에서 quotes는 다음과 같은 용도로 사용됩니다.
@@ -114,7 +112,7 @@ Shell 에서 quotes는 다음과 같은 용도로 사용됩니다.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell03/</guid>
-      <description>Shell Programming Variables 변수 이름은 알파벳 (대, 소문자, 숫자, _)로 만들 수 있으며 이름의 첫 문자로 숫자가 올 수는 없다.
+      <description>Shell Programming###Variables##변수 이름은 알파벳 (대, 소문자, 숫자, _)로 만들 수 있으며 이름의 첫 문자로 숫자가 올 수는 없다.
 변수이름을 대문자로 사용할 때는 Shell 환경변수와 증복되지 않도록 주의해야 하며, 생성한 변수는 subshell이나 source한 스크립트 내에서 별다른 설정 없이 사용할 수 있으나 child process에서도 사용하려면 export를 수행해야 한다.
 Myfile=Myfile FIRE_PREFIX=$Myfile.split FIRE_PREFIX=$Myfile_._split # &amp;#39;.&amp;#39; or &amp;#39;_&amp;#39;은 변수 이름을 구성하는 데 사용되지 않으므로 위와 같이 사용이 가능 # 결과적으로 FILE_PREFIX 변수 값은 &amp;#39;myfile.</description>
     </item>
@@ -125,7 +123,7 @@ Myfile=Myfile FIRE_PREFIX=$Myfile.split FIRE_PREFIX=$Myfile_._split # &amp;#39;.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell04/</guid>
-      <description>Shell Programming Functions {;}, ()를 이용해 명령 그룹을 만들게 되면 같은 context에서 실행이 된다. 이것은 명령 그룹전체가 하나의 명령처럼 실행되는 것과 같은 효과가 있다.
+      <description>Shell Programming###Functions##{;}, ()를 이용해 명령 그룹을 만들게 되면 같은 context에서 실행이 된다. 이것은 명령 그룹전체가 하나의 명령처럼 실행되는 것과 같은 효과가 있다.
 앞에 함수명을 붙여서 함수정의를 하게 되면 일반 명령과 동일하게 사용될 수 있다.
 {;}은 현재 shell에서 ()는 subshell에서 실행되므로 보통 함수를 정의할 때 {;}을 사용하지만 필요하다면 ()을 사용할 수도 있다.
 $ echo hello world | read var; echo &amp;#34;$var&amp;#34; # 파이프로 인해 subshell에서 실행되어 &amp;#34;$var&amp;#34;는 값이 표시되지 않는다.</description>
@@ -137,7 +135,7 @@ $ echo hello world | read var; echo &amp;#34;$var&amp;#34; # 파이프로 인해
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell05/</guid>
-      <description>Shell Programming Exit Status 터미널에서 명령을 단계적으로 실행해서 작업을 완성할 때는 여태까지 실행한 명령들이 모두 정상적으로 완료되었기 때문이다.
+      <description>Shell Programming###Exit Status##터미널에서 명령을 단계적으로 실행해서 작업을 완성할 때는 여태까지 실행한 명령들이 모두 정상적으로 완료되었기 때문이다.
 만약 특정 과정에서 오류가 발생했는지, 정상적으로 완료되었는 지를 확인해야하는 데, 이를 판단할 수 있는 방법이 종료 상태 값을 확인하는 방법으로, 실제 shell에서의 핵심 개념중 하나가 종료 상태 값(Exit status)이다.
 Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반환하며, if while until &amp;amp;&amp;amp; || 모두 종료 상태 값을 사용해서 참, 거짓을 판단한다.</description>
     </item>
@@ -148,9 +146,9 @@ Shell 에서 실행되는 모든 명령은 빠짐없이 종료 상태 값을 반
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell06/</guid>
-      <description>Shell Programming Interactive Shell이 실행되는 환경은 두가지로 사용자로부터 프로프트를 통해 직접 명령을 입력받아 실행시키는 interactive shell과 script 파일을 실행하는 것과 같은 non-interacgtive shell이 있다.
+      <description>Shell Programming###Interactive##Shell이 실행되는 환경은 두가지로 사용자로부터 프로프트를 통해 직접 명령을 입력받아 실행시키는 interactive shell과 script 파일을 실행하는 것과 같은 non-interacgtive shell이 있다.
 alais, job control과 같은 기능은 기본적으로 interactive shell에서 사용하기 위한 것으로 script를 실행할 때는 disable 된다.
-case $- in *i*) echo interactive shell ;; *) echo non-interactive shell ;; esac # $- 변수는 set 명령에 의해 설정되어 있는 option flage를 담고 있다. # i는 interactive를 의미 interactive 특징 Script 실행시에는 alias 기능이 disable 된다.</description>
+case $- in *i*) echo interactive shell ;; *) echo non-interactive shell ;; esac # $- 변수는 set 명령에 의해 설정되어 있는 option flage를 담고 있다.</description>
     </item>
     
     <item>
@@ -159,9 +157,8 @@ case $- in *i*) echo interactive shell ;; *) echo non-interactive shell ;; esac 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell07/</guid>
-      <description>Shell Programming etc /proc proc 디렉토리는 현재 시스템에서 실행되는 프로세스들에 대한 정보를 제공하기 위해 OS에서 제공하는 가상의 파일 시스템으로, 실제 파일 시스템이 존재하는 것이 아니다.
-커널이 가지고 있는 정보는 사용자 프로그램에서 직접 접근할 수가 없으므로 system call을 통해 제공하는 방법도 생각해 볼 수 있겠으나 프로스세그 가지는 자료구조를 생각할 때 사용자가 쉽게 사용할 수 있도록 메모리상에 가상의 파일 시스템을 만들어 구조적으로 제공하는 역할을 수행한다.
-각각의 파일은 커널 내부의 특정 함수와 연결되어 있어서 read 하면 실시간으로 해당 정보가 표시된다.</description>
+      <description>Shell Programming###etc##/proc##proc 디렉토리는 현재 시스템에서 실행되는 프로세스들에 대한 정보를 제공하기 위해 OS에서 제공하는 가상의 파일 시스템으로, 실제 파일 시스템이 존재하는 것이 아니다.
+커널이 가지고 있는 정보는 사용자 프로그램에서 직접 접근할 수가 없으므로 system call을 통해 제공하는 방법도 생각해 볼 수 있겠으나 프로스세그 가지는 자료구조를 생각할 때 사용자가 쉽게 사용할 수 있도록 메모리상에 가상의 파일 시스템을 만들어 구조적으로 제공하는 역할을 수행한다.</description>
     </item>
     
     <item>
@@ -170,7 +167,7 @@ case $- in *i*) echo interactive shell ;; *) echo non-interactive shell ;; esac 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell08/</guid>
-      <description>Shell Programming Commands 외부명령 /usr/bin/find 명령과 같이 시스템 디렉토리에 위치한 명령드롤, 여기에는 ELF 바이너리 실행파일뿐만 아닌, shell 스크립트, perl 스크립트, python 스크립트와 같은 텍스트 실행파일도 다수 포함되어 있으며 GNU coreutils 패키지에는 textutils, shelutils, fileutils 명령들이 포함되어 있다. $ file /bin/* /usr/bin/* | grep -ic &amp;#34;text executable&amp;#34; 643 $ file /bin/* /usr/bin/* | grep -ic &amp;#34;shell script&amp;#34; 129 $ file /bin/* /usr/bin/* | grep -ic &amp;#34;python[0-9.]* script&amp;#34; 20 $ file /bin/* /usr/bin/* | grep -ic &amp;#34;perl script&amp;#34; 34 $ file /bin/* /usr/bin/* | grep -i &amp;#34;shell script&amp;#34; .</description>
+      <description>Shell Programming###Commands##외부명령##/usr/bin/find 명령과 같이 시스템 디렉토리에 위치한 명령드롤, 여기에는 ELF 바이너리 실행파일뿐만 아닌, shell 스크립트, perl 스크립트, python 스크립트와 같은 텍스트 실행파일도 다수 포함되어 있으며 GNU coreutils 패키지에는 textutils, shelutils, fileutils 명령들이 포함되어 있다. $ file /bin/* /usr/bin/* | grep -ic &amp;#34;text executable&amp;#34; 643 $ file /bin/* /usr/bin/* | grep -ic &amp;#34;shell script&amp;#34; 129 $ file /bin/* /usr/bin/* | grep -ic &amp;#34;python[0-9.</description>
     </item>
     
     <item>
@@ -179,7 +176,7 @@ case $- in *i*) echo interactive shell ;; *) echo non-interactive shell ;; esac 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell09/</guid>
-      <description>Shell Programming Functions </description>
+      <description>Shell Programming###Functions##</description>
     </item>
     
     <item>
@@ -188,7 +185,7 @@ case $- in *i*) echo interactive shell ;; *) echo non-interactive shell ;; esac 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/shell/shell100/</guid>
-      <description>Shell Programming 연습문제 정리 구구단 # gugu.sh #!/bin/bash for i in {1..9}; do for j in {1..9}; do echo $i &amp;#34;X&amp;#34; $j &amp;#34;=&amp;#34; `expr $i \* $j` done done 야구게임 #!/bin/bash Solution(){ Solution=() i=0 while [ $i -le 3 ]; do Solution[$i]=$((RANDOM% 9+1)) if [ $i -eq 3 ]; then if [ ${Solution[3]} -eq ${Solution[0]} -o ${Solution[3]} -eq ${Solution[1]} -o ${Solution[3]} -eq ${Solution[2]} ]; then Solution[$i]=$((RANDOM% 9+1)) else ((i++)) fi fi if [ $i -eq 2 ]; then if [ ${Solution[2]} -eq ${Solution[0]} -o ${Solution[2]} -eq ${Solution[1]} ]; then Solution[$i]=$((RANDOM% 9+1)) else ((i++)) fi fi if [ $i -eq 1 ]; then if [ ${Solution[0]} -eq ${Solution[1]} ]; then Solution[$i]=$((RANDOM% 9+1)) else ((i++)) fi fi if [ $i -eq 0 ]; then ((i++)) fi done echo ${Solution[@]} } Count=0 Score(){ Out=0 Ball=0 Strike=0 if [ $num1 -eq ${Solution[0]} ]; then ((Strike++)) elif [ $num1 -eq ${Solution[1]} -o $num1 -eq ${Solution[2]} -o $num1 -eq ${Solution[3]} ]; then ((Ball++)) else ((Out++)) fi if [ $num2 -eq ${Solution[1]} ]; then ((Strike++)) elif [ $num2 -eq ${Solution[0]} -o $num2 -eq ${Solution[2]} -o $num2 -eq ${Solution[3]} ]; then ((Ball++)) else ((Out++)) fi if [ $num3 -eq ${Solution[2]} ]; then ((Strike++)) elif [ $num3 -eq ${Solution[1]} -o $num3 -eq ${Solution[0]} -o $num3 -eq ${Solution[3]} ]; then ((Ball++)) else ((Out++)) fi if [ $num4 -eq ${Solution[3]} ]; then ((Strike++)) elif [ $num4 -eq ${Solution[1]} -o $num4 -eq ${Solution[2]} -o $num4 -eq ${Solution[0]} ]; then ((Ball++)) else ((Out++)) fi echo &amp;#34; Strike : $Strike&amp;#34; echo &amp;#34; Ball : $Ball&amp;#34; echo &amp;#34; Out : $Out&amp;#34; ((Count++)) if [ $Strike -eq 4 ]; then echo &amp;#34;수고하셨습니다.</description>
+      <description>Shell Programming###연습문제 정리##구구단## gugu.sh #!/bin/bash for i in {1..9}; do for j in {1..9}; do echo $i &amp;#34;X&amp;#34; $j &amp;#34;=&amp;#34; `expr $i \* $j` done done ##야구게임##!/bin/bash Solution(){ Solution=() i=0 while [ $i -le 3 ]; do Solution[$i]=$((RANDOM% 9+1)) if [ $i -eq 3 ]; then if [ ${Solution[3]} -eq ${Solution[0]} -o ${Solution[3]} -eq ${Solution[1]} -o ${Solution[3]} -eq ${Solution[2]} ]; then Solution[$i]=$((RANDOM% 9+1)) else ((i++)) fi fi if [ $i -eq 2 ]; then if [ ${Solution[2]} -eq ${Solution[0]} -o ${Solution[2]} -eq ${Solution[1]} ]; then Solution[$i]=$((RANDOM% 9+1)) else ((i++)) fi fi if [ $i -eq 1 ]; then if [ ${Solution[0]} -eq ${Solution[1]} ]; then Solution[$i]=$((RANDOM% 9+1)) else ((i++)) fi fi if [ $i -eq 0 ]; then ((i++)) fi done echo ${Solution[@]} } Count=0 Score(){ Out=0 Ball=0 Strike=0 if [ $num1 -eq ${Solution[0]} ]; then ((Strike++)) elif [ $num1 -eq ${Solution[1]} -o $num1 -eq ${Solution[2]} -o $num1 -eq ${Solution[3]} ]; then ((Ball++)) else ((Out++)) fi if [ $num2 -eq ${Solution[1]} ]; then ((Strike++)) elif [ $num2 -eq ${Solution[0]} -o $num2 -eq ${Solution[2]} -o $num2 -eq ${Solution[3]} ]; then ((Ball++)) else ((Out++)) fi if [ $num3 -eq ${Solution[2]} ]; then ((Strike++)) elif [ $num3 -eq ${Solution[1]} -o $num3 -eq ${Solution[0]} -o $num3 -eq ${Solution[3]} ]; then ((Ball++)) else ((Out++)) fi if [ $num4 -eq ${Solution[3]} ]; then ((Strike++)) elif [ $num4 -eq ${Solution[1]} -o $num4 -eq ${Solution[2]} -o $num4 -eq ${Solution[0]} ]; then ((Ball++)) else ((Out++)) fi echo &amp;#34; Strike : $Strike&amp;#34; echo &amp;#34; Ball : $Ball&amp;#34; echo &amp;#34; Out : $Out&amp;#34; ((Count++)) if [ $Strike -eq 4 ]; then echo &amp;#34;수고하셨습니다.</description>
     </item>
     
   </channel>

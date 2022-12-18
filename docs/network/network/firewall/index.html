@@ -2,44 +2,43 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="방화벽 (CentOS - firewalld) 리눅스의 방화벽
-커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제 방화벽의 종류
-패킷 필터링 방화벽 - 제 1세대 방화벽- 레이어 1~4에서 사용- 단순하기 때문에 빠르고 효과적- 5~7계층 대응 불가Stateful 방화벽 - 제 2세대 방화벽- 패킷의 연결 상태를 관찰- 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약**애플리케이션 레이어 방화벽 ** - 제 3세대 방화벽- 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요방화벽의 구성요소 규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/network/network/firewall/><meta property="og:title" content="Firewall" />
-<meta property="og:description" content="방화벽 (CentOS - firewalld) 리눅스의 방화벽
-커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제 방화벽의 종류
-패킷 필터링 방화벽 - 제 1세대 방화벽- 레이어 1~4에서 사용- 단순하기 때문에 빠르고 효과적- 5~7계층 대응 불가Stateful 방화벽 - 제 2세대 방화벽- 패킷의 연결 상태를 관찰- 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약**애플리케이션 레이어 방화벽 ** - 제 3세대 방화벽- 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요방화벽의 구성요소 규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다." />
+<meta name="description" content="방화벽 (CentOS - firewalld)##리눅스의 방화벽
+커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제 #방화벽의 종류
+패킷 필터링 방화벽 - 제 1세대 방화벽- 레이어 1~4에서 사용- 단순하기 때문에 빠르고 효과적- 5~7계층 대응 불가Stateful 방화벽 - 제 2세대 방화벽- 패킷의 연결 상태를 관찰- 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약**애플리케이션 레이어 방화벽 ** - 제 3세대 방화벽- 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요#방화벽의 구성요소 규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Firewall" />
+<meta property="og:description" content="방화벽 (CentOS - firewalld)##리눅스의 방화벽
+커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제 #방화벽의 종류
+패킷 필터링 방화벽 - 제 1세대 방화벽- 레이어 1~4에서 사용- 단순하기 때문에 빠르고 효과적- 5~7계층 대응 불가Stateful 방화벽 - 제 2세대 방화벽- 패킷의 연결 상태를 관찰- 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약**애플리케이션 레이어 방화벽 ** - 제 3세대 방화벽- 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요#방화벽의 구성요소 규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/network/network/firewall/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Firewall | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -52,7 +51,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1269,6 +1268,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1280,14 +1282,15 @@
   <strong>Firewall</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1536,8 +1539,14 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="방화벽-centos---firewalld">방화벽 (CentOS - firewalld)</h1>
-<h1 id="heading"></h1>
+  <article class="markdown"><h1 id="방화벽-centos---firewalld">
+  방화벽 (CentOS - firewalld)
+  <a class="anchor" href="#%eb%b0%a9%ed%99%94%eb%b2%bd-centos---firewalld">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>리눅스의 방화벽</strong></p>
@@ -1549,7 +1558,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-1"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>방화벽의 종류</strong></p>
@@ -1581,7 +1593,10 @@
 </code></pre>
 </li>
 </ul>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <ul>
 <li><strong>방화벽의 구성요소</strong>
 <ol>
@@ -1603,7 +1618,10 @@
 </ol>
 </li>
 </ul>
-<h1 id="heading-3"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Firewalld Zone</strong></p>
@@ -1669,7 +1687,10 @@ icmp6-prohibited라는 응답 메시지를 보낸다.</li>
 </ul>
 </li>
 </ul>
-<h1 id="heading-4"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>NAT ( Natwork Address Translation )</strong></p>
@@ -1703,64 +1724,181 @@ icmp6-prohibited라는 응답 메시지를 보낸다.</li>
 </ul>
 <hr>
 <hr>
-<h1 id="heading-5"></h1>
-<h2 id="명령어"><strong>명령어</strong></h2>
-<h1 id="heading-6"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<h2 id="명령어">
+  <strong>명령어</strong>
+  <a class="anchor" href="#%eb%aa%85%eb%a0%b9%ec%96%b4">#</a>
+</h2>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--[</span>옵션<span style="color:#f92672">]=[</span>Firewalld Zone<span style="color:#f92672">]</span> <span style="color:#f92672">--[</span>add<span style="color:#f92672">,</span> remove 등의 명령어<span style="color:#f92672">]-[</span>interface<span style="color:#f92672">]=[</span>ens33<span style="color:#f92672">]</span> <span style="color:#f92672">[</span> <span style="color:#f92672">--</span>permanent 영구히 사용<span style="color:#f92672">]</span>
-</span></span></code></pre></div><h1 id="heading-7"></h1>
-<h3 id="버전확인"><strong>버전확인</strong></h3>
+</span></span></code></pre></div><h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<h3 id="버전확인">
+  <strong>버전확인</strong>
+  <a class="anchor" href="#%eb%b2%84%ec%a0%84%ed%99%95%ec%9d%b8">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>version
-</span></span></code></pre></div><h1 id="heading-8"></h1>
-<h3 id="방화벽-실행여부-확인"><strong>방화벽 실행여부 확인</strong></h3>
+</span></span></code></pre></div><h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<h3 id="방화벽-실행여부-확인">
+  <strong>방화벽 실행여부 확인</strong>
+  <a class="anchor" href="#%eb%b0%a9%ed%99%94%eb%b2%bd-%ec%8b%a4%ed%96%89%ec%97%ac%eb%b6%80-%ed%99%95%ec%9d%b8">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>state
-</span></span></code></pre></div><h1 id="heading-9"></h1>
-<h3 id="방화벽-리로드"><strong>방화벽 리로드</strong></h3>
+</span></span></code></pre></div><h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<h3 id="방화벽-리로드">
+  <strong>방화벽 리로드</strong>
+  <a class="anchor" href="#%eb%b0%a9%ed%99%94%eb%b2%bd-%eb%a6%ac%eb%a1%9c%eb%93%9c">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd 
-</span></span></code></pre></div><h1 id="heading-10"></h1>
-<h3 id="zone-목록을-출력"><strong>Zone 목록을 출력</strong></h3>
+</span></span></code></pre></div><h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="zone-목록을-출력">
+  <strong>Zone 목록을 출력</strong>
+  <a class="anchor" href="#zone-%eb%aa%a9%eb%a1%9d%ec%9d%84-%ec%b6%9c%eb%a0%a5">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>zones
-</span></span></code></pre></div><h1 id="heading-11"></h1>
-<h3 id="zone-기본-존을-출력"><strong>Zone 기본 존을 출력</strong></h3>
+</span></span></code></pre></div><h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<h3 id="zone-기본-존을-출력">
+  <strong>Zone 기본 존을 출력</strong>
+  <a class="anchor" href="#zone-%ea%b8%b0%eb%b3%b8-%ec%a1%b4%ec%9d%84-%ec%b6%9c%eb%a0%a5">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span><span style="color:#66d9ef">default</span><span style="color:#f92672">-</span>zone
-</span></span></code></pre></div><h1 id="heading-12"></h1>
-<h3 id="-활성화된-zone을-출력">** 활성화된 Zone을 출력**</h3>
+</span></span></code></pre></div><h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<h3 id="-활성화된-zone을-출력">
+  ** 활성화된 Zone을 출력**
+  <a class="anchor" href="#-%ed%99%9c%ec%84%b1%ed%99%94%eb%90%9c-zone%ec%9d%84-%ec%b6%9c%eb%a0%a5">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>active<span style="color:#f92672">-</span>zones
-</span></span></code></pre></div><h1 id="heading-13"></h1>
-<h3 id="사용-가능한-서비스-포트-목록을-출력"><strong>사용 가능한 서비스/ 포트 목록을 출력</strong></h3>
+</span></span></code></pre></div><h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h3 id="사용-가능한-서비스-포트-목록을-출력">
+  <strong>사용 가능한 서비스/ 포트 목록을 출력</strong>
+  <a class="anchor" href="#%ec%82%ac%ec%9a%a9-%ea%b0%80%eb%8a%a5%ed%95%9c-%ec%84%9c%eb%b9%84%ec%8a%a4-%ed%8f%ac%ed%8a%b8-%eb%aa%a9%eb%a1%9d%ec%9d%84-%ec%b6%9c%eb%a0%a5">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>lost<span style="color:#f92672">-</span>all
-</span></span></code></pre></div><h1 id="heading-14"></h1>
-<h3 id="public-존에-속한-사용-가능한-모든-서비스-포트-목록을-출력"><strong>public 존에 속한 사용 가능한 모든 서비스/ 포트 목록을 출력</strong></h3>
+</span></span></code></pre></div><h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<h3 id="public-존에-속한-사용-가능한-모든-서비스-포트-목록을-출력">
+  <strong>public 존에 속한 사용 가능한 모든 서비스/ 포트 목록을 출력</strong>
+  <a class="anchor" href="#public-%ec%a1%b4%ec%97%90-%ec%86%8d%ed%95%9c-%ec%82%ac%ec%9a%a9-%ea%b0%80%eb%8a%a5%ed%95%9c-%eb%aa%a8%eb%93%a0-%ec%84%9c%eb%b9%84%ec%8a%a4-%ed%8f%ac%ed%8a%b8-%eb%aa%a9%eb%a1%9d%ec%9d%84-%ec%b6%9c%eb%a0%a5">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>zone<span style="color:#f92672">=</span><span style="color:#66d9ef">public</span> <span style="color:#f92672">--</span>list<span style="color:#f92672">-</span>all
-</span></span></code></pre></div><h1 id="heading-15"></h1>
-<h3 id="ftp-서비스-추가"><strong>ftp 서비스 추가</strong></h3>
+</span></span></code></pre></div><h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<h3 id="ftp-서비스-추가">
+  <strong>ftp 서비스 추가</strong>
+  <a class="anchor" href="#ftp-%ec%84%9c%eb%b9%84%ec%8a%a4-%ec%b6%94%ea%b0%80">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>service<span style="color:#f92672">=</span>ftp
-</span></span></code></pre></div><h1 id="heading-16"></h1>
-<h3 id="ftp-서비스를-제거"><strong>ftp 서비스를 제거</strong></h3>
+</span></span></code></pre></div><h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h3 id="ftp-서비스를-제거">
+  <strong>ftp 서비스를 제거</strong>
+  <a class="anchor" href="#ftp-%ec%84%9c%eb%b9%84%ec%8a%a4%eb%a5%bc-%ec%a0%9c%ea%b1%b0">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>remove<span style="color:#f92672">-</span>service<span style="color:#f92672">=</span>ftp
-</span></span></code></pre></div><h1 id="heading-17"></h1>
-<h3 id="21-tcp-포트를-추가"><strong>21 tcp 포트를 추가</strong></h3>
+</span></span></code></pre></div><h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<h3 id="21-tcp-포트를-추가">
+  <strong>21 tcp 포트를 추가</strong>
+  <a class="anchor" href="#21-tcp-%ed%8f%ac%ed%8a%b8%eb%a5%bc-%ec%b6%94%ea%b0%80">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span>21<span style="color:#f92672">/</span>tcp
-</span></span></code></pre></div><h1 id="heading-18"></h1>
-<h3 id="21-tcp-포트를-제거"><strong>21 tcp 포트를 제거</strong></h3>
+</span></span></code></pre></div><h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<h3 id="21-tcp-포트를-제거">
+  <strong>21 tcp 포트를 제거</strong>
+  <a class="anchor" href="#21-tcp-%ed%8f%ac%ed%8a%b8%eb%a5%bc-%ec%a0%9c%ea%b1%b0">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>remove<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span>21<span style="color:#f92672">/</span>tcp
-</span></span></code></pre></div><h1 id="heading-19"></h1>
-<h3 id="trusted-존에-ftp-서비스를-추가"><strong>trusted 존에 ftp 서비스를 추가</strong></h3>
+</span></span></code></pre></div><h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<h3 id="trusted-존에-ftp-서비스를-추가">
+  <strong>trusted 존에 ftp 서비스를 추가</strong>
+  <a class="anchor" href="#trusted-%ec%a1%b4%ec%97%90-ftp-%ec%84%9c%eb%b9%84%ec%8a%a4%eb%a5%bc-%ec%b6%94%ea%b0%80">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>zone<span style="color:#f92672">=</span>trusted <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>service<span style="color:#f92672">=</span>ftp
-</span></span></code></pre></div><h1 id="heading-20"></h1>
-<h3 id="시스템-재부팅-또는-방화벽-재시작-후에도-적용되도록-하려면---permanent-옵션"><strong>시스템 재부팅 또는 방화벽 재시작 후에도 적용되도록 하려면 &ndash;permanent 옵션</strong></h3>
+</span></span></code></pre></div><h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<h3 id="시스템-재부팅-또는-방화벽-재시작-후에도-적용되도록-하려면---permanent-옵션">
+  <strong>시스템 재부팅 또는 방화벽 재시작 후에도 적용되도록 하려면 &ndash;permanent 옵션</strong>
+  <a class="anchor" href="#%ec%8b%9c%ec%8a%a4%ed%85%9c-%ec%9e%ac%eb%b6%80%ed%8c%85-%eb%98%90%eb%8a%94-%eb%b0%a9%ed%99%94%eb%b2%bd-%ec%9e%ac%ec%8b%9c%ec%9e%91-%ed%9b%84%ec%97%90%eb%8f%84-%ec%a0%81%ec%9a%a9%eb%90%98%eb%8f%84%eb%a1%9d-%ed%95%98%eb%a0%a4%eb%a9%b4---permanent-%ec%98%b5%ec%85%98">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>permanent <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>service<span style="color:#f92672">=</span>ftp
-</span></span></code></pre></div><h1 id="heading-21"></h1>
-<h3 id="포트포워딩-설정"><strong>포트포워딩 설정</strong></h3>
+</span></span></code></pre></div><h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<h3 id="포트포워딩-설정">
+  <strong>포트포워딩 설정</strong>
+  <a class="anchor" href="#%ed%8f%ac%ed%8a%b8%ed%8f%ac%ec%9b%8c%eb%94%a9-%ec%84%a4%ec%a0%95">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>forward<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span>port<span style="color:#f92672">=</span>1000<span style="color:#f92672">:</span>proto<span style="color:#f92672">=</span>tcp<span style="color:#f92672">:</span>toport<span style="color:#f92672">=</span>80<span style="color:#f92672">:</span>toaddr<span style="color:#f92672">=</span>10<span style="color:#f92672">.</span><span style="color:#a6e22e">10</span><span style="color:#f92672">.</span><span style="color:#a6e22e">10</span><span style="color:#f92672">.</span><span style="color:#a6e22e">10</span>
-</span></span></code></pre></div><h1 id="heading-22"></h1>
-<h3 id="커맨드-확인"><strong>커맨드 확인</strong></h3>
+</span></span></code></pre></div><h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<h3 id="커맨드-확인">
+  <strong>커맨드 확인</strong>
+  <a class="anchor" href="#%ec%bb%a4%eb%a7%a8%eb%93%9c-%ed%99%95%ec%9d%b8">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewalld<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>service
-</span></span></code></pre></div><h1 id="heading-23"></h1>
-<h3 id="방화벽-사용-중-확인"><strong>방화벽 사용 중 확인</strong></h3>
+</span></span></code></pre></div><h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<h3 id="방화벽-사용-중-확인">
+  <strong>방화벽 사용 중 확인</strong>
+  <a class="anchor" href="#%eb%b0%a9%ed%99%94%eb%b2%bd-%ec%82%ac%ec%9a%a9-%ec%a4%91-%ed%99%95%ec%9d%b8">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>list<span style="color:#f92672">-</span>service
 </span></span><span style="display:flex;"><span>cat <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>firewalld<span style="color:#f92672">/</span>zones<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">.</span><span style="color:#a6e22e">xml</span>
-</span></span></code></pre></div><h1 id="heading-24"></h1>
-<h3 id="zone-영역확인"><strong>Zone 영역확인</strong></h3>
+</span></span></code></pre></div><h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<h3 id="zone-영역확인">
+  <strong>Zone 영역확인</strong>
+  <a class="anchor" href="#zone-%ec%98%81%ec%97%ad%ed%99%95%ec%9d%b8">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>zones
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span> 존 영역 확인
 </span></span><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>active<span style="color:#f92672">-</span>zones
@@ -1768,46 +1906,112 @@ icmp6-prohibited라는 응답 메시지를 보낸다.</li>
 </span></span><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>active<span style="color:#f92672">-</span>zones
 </span></span><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>list<span style="color:#f92672">-</span>all<span style="color:#f92672">-</span>zones
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span> 모든 존 영역 확인
-</span></span></code></pre></div><h1 id="heading-25"></h1>
-<h3 id="방화벽-재시작"><strong>방화벽 재시작</strong></h3>
+</span></span></code></pre></div><h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<h3 id="방화벽-재시작">
+  <strong>방화벽 재시작</strong>
+  <a class="anchor" href="#%eb%b0%a9%ed%99%94%eb%b2%bd-%ec%9e%ac%ec%8b%9c%ec%9e%91">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>reload
-</span></span></code></pre></div><h1 id="heading-26"></h1>
-<h3 id="포트추가"><strong>포트추가</strong></h3>
+</span></span></code></pre></div><h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
+<h3 id="포트추가">
+  <strong>포트추가</strong>
+  <a class="anchor" href="#%ed%8f%ac%ed%8a%b8%ec%b6%94%ea%b0%80">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>zone<span style="color:#f92672">=</span><span style="color:#66d9ef">public</span> <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span>9090<span style="color:#f92672">/</span>tcp
-</span></span></code></pre></div><h1 id="heading-27"></h1>
+</span></span></code></pre></div><h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
 <p>firewall-cmd &ndash;zone=public &ndash;add-icmp-block=redirect</p>
 <hr>
 <hr>
-<h3 id="룰-확인"><strong>룰 확인</strong></h3>
+<h3 id="룰-확인">
+  <strong>룰 확인</strong>
+  <a class="anchor" href="#%eb%a3%b0-%ed%99%95%ec%9d%b8">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>direct <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>all<span style="color:#f92672">-</span>rules
-</span></span></code></pre></div><h1 id="heading-28"></h1>
-<h3 id="룰-추가"><strong>룰 추가</strong></h3>
+</span></span></code></pre></div><h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
+<h3 id="룰-추가">
+  <strong>룰 추가</strong>
+  <a class="anchor" href="#%eb%a3%b0-%ec%b6%94%ea%b0%80">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>direct <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>rule ipv4 filter INPUT 0 <span style="color:#f92672">-</span>p tcp <span style="color:#f92672">--</span>dport 9090 <span style="color:#f92672">-</span>j ACCEPT
-</span></span></code></pre></div><h1 id="heading-29"></h1>
-<h3 id="heading-30">****</h3>
+</span></span></code></pre></div><h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
+<h3 id="heading-30">
+  ****
+  <a class="anchor" href="#heading-30">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd
-</span></span></code></pre></div><h1 id="heading-31"></h1>
-<h3 id="heading-32">****</h3>
+</span></span></code></pre></div><h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
+<h3 id="heading-32">
+  ****
+  <a class="anchor" href="#heading-32">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd
-</span></span></code></pre></div><h1 id="heading-33"></h1>
-<h3 id="heading-34">****</h3>
+</span></span></code></pre></div><h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
+<h3 id="heading-34">
+  ****
+  <a class="anchor" href="#heading-34">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd
-</span></span></code></pre></div><h1 id="heading-35"></h1>
-<h3 id="heading-36">****</h3>
+</span></span></code></pre></div><h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
+<h3 id="heading-36">
+  ****
+  <a class="anchor" href="#heading-36">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd
-</span></span></code></pre></div><h1 id="heading-37"></h1>
-<h3 id="heading-38">****</h3>
+</span></span></code></pre></div><h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
+<h3 id="heading-38">
+  ****
+  <a class="anchor" href="#heading-38">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd
-</span></span></code></pre></div><h1 id="heading-39"></h1>
-<h3 id="heading-40">****</h3>
+</span></span></code></pre></div><h1 id="heading-39">
+  
+  <a class="anchor" href="#heading-39">#</a>
+</h1>
+<h3 id="heading-40">
+  ****
+  <a class="anchor" href="#heading-40">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd
-</span></span></code></pre></div><h1 id="heading-41"></h1>
+</span></span></code></pre></div><h1 id="heading-41">
+  
+  <a class="anchor" href="#heading-41">#</a>
+</h1>
 <p>firewall-cmd &ndash;reload
 firewall-cmd &ndash;permanent &ndash;zone=external 
 firewall-cmd &ndash;add-forward-port-port=9090:proto=tcp:toport=9090:toaddr=10.10.10.20
 firewall-cmd &ndash;set-default-zone=external
 firewall-cmd &ndash;zone=internal &ndash;add-masquerade</p>
-<h1 id="heading-42"></h1>
+<h1 id="heading-42">
+  
+  <a class="anchor" href="#heading-42">#</a>
+</h1>
 <p>firewall-cmd &ndash;r</p>
 <p>START</p>
 <p>OK</p>
@@ -2113,7 +2317,6 @@ firewall-cmd &ndash;zone=internal &ndash;add-masquerade</p>
 </body>
 </div>
 </html>
-
 
 
 

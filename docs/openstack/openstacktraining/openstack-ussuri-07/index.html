@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="OpenStack Ussuri : Cinder ----------------------- ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch | | MariaDB RabbitMQ | | Nova compute | | L2 Agent | | Memcached Keystone | | Open vSwitch | | L3 Agent | | httpd Cinder API | | L2 Agent | | metadata agent | | Nova-API Compute | | Cinder-LVM | ----------------------- | L2 agent L3 agent | | NFS | | metadata agent | ----------------------- | Neutron Server | ----------------------- OpenStack Ussuri : Cinder Cinder는 OpenStack에서 전체적인 볼륨, 디스크를 관리하는 서비스입니다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/openstack/openstacktraining/openstack-ussuri-07/><meta property="og:title" content="OpenStack Ussuri : Cinder" />
-<meta property="og:description" content="OpenStack Ussuri : Cinder ----------------------- ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch | | MariaDB RabbitMQ | | Nova compute | | L2 Agent | | Memcached Keystone | | Open vSwitch | | L3 Agent | | httpd Cinder API | | L2 Agent | | metadata agent | | Nova-API Compute | | Cinder-LVM | ----------------------- | L2 agent L3 agent | | NFS | | metadata agent | ----------------------- | Neutron Server | ----------------------- OpenStack Ussuri : Cinder Cinder는 OpenStack에서 전체적인 볼륨, 디스크를 관리하는 서비스입니다." />
+<meta name="description" content="OpenStack Ussuri : Cinder##----------------------- ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch | | MariaDB RabbitMQ | | Nova compute | | L2 Agent | | Memcached Keystone | | Open vSwitch | | L3 Agent | | httpd Cinder API | | L2 Agent | | metadata agent | | Nova-API Compute | | Cinder-LVM | ----------------------- | L2 agent L3 agent | | NFS | | metadata agent | ----------------------- | Neutron Server | ----------------------- #OpenStack Ussuri : Cinder##Cinder는 OpenStack에서 전체적인 볼륨, 디스크를 관리하는 서비스입니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="OpenStack Ussuri : Cinder" />
+<meta property="og:description" content="OpenStack Ussuri : Cinder##----------------------- ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch | | MariaDB RabbitMQ | | Nova compute | | L2 Agent | | Memcached Keystone | | Open vSwitch | | L3 Agent | | httpd Cinder API | | L2 Agent | | metadata agent | | Nova-API Compute | | Cinder-LVM | ----------------------- | L2 agent L3 agent | | NFS | | metadata agent | ----------------------- | Neutron Server | ----------------------- #OpenStack Ussuri : Cinder##Cinder는 OpenStack에서 전체적인 볼륨, 디스크를 관리하는 서비스입니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-07/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>OpenStack Ussuri : Cinder | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -48,7 +47,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1375,6 +1374,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1386,14 +1388,15 @@
   <strong>OpenStack Ussuri : Cinder</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1466,8 +1469,14 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="openstack-ussuri--cinder"><strong>OpenStack Ussuri : Cinder</strong></h1>
-<h1 id="heading"></h1>
+  <article class="markdown"><h1 id="openstack-ussuri--cinder">
+  <strong>OpenStack Ussuri : Cinder</strong>
+  <a class="anchor" href="#openstack-ussuri--cinder">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span> -----------------------         -----------------------        -----------------------
 </span></span><span style="display:flex;"><span>|  [ Controller Node ]  |       |    [ Compute Node ]   |      |   [ Network Node ]    | 
 </span></span><span style="display:flex;"><span>|                       |       |        Libvirt        |      |     Open vSwitch      |
@@ -1479,19 +1488,40 @@
 </span></span><span style="display:flex;"><span>| metadata agent        |        ----------------------- 
 </span></span><span style="display:flex;"><span>| Neutron Server        |        
 </span></span><span style="display:flex;"><span> -----------------------   
-</span></span></code></pre></div><h1 id="heading-1"></h1>
-<h2 id="openstack-ussuri--cinder-1"><strong>OpenStack Ussuri : Cinder</strong></h2>
-<h1 id="heading-2"></h1>
+</span></span></code></pre></div><h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h2 id="openstack-ussuri--cinder-1">
+  <strong>OpenStack Ussuri : Cinder</strong>
+  <a class="anchor" href="#openstack-ussuri--cinder-1">#</a>
+</h2>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <ul>
 <li><strong>Cinder는 OpenStack에서 전체적인 볼륨, 디스크를 관리하는 서비스입니다.</strong></li>
 <li><strong>Cinder 서비스는 다른 Storage Node들과 함께 사용하도록 NFS 서버 또한 구축하여 백업 서비스를 활성하할 수 있게 구성핟록 하겠습니다.</strong></li>
 <li><strong>Cinder에 대한 자세한 설명은 <a href="">Cinder</a>를 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-3"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-4"></h1>
-<h3 id="cinder-service-및-user-생성"><strong>Cinder service 및 User 생성</strong></h3>
-<h1 id="heading-5"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="cinder-service-및-user-생성">
+  <strong>Cinder service 및 User 생성</strong>
+  <a class="anchor" href="#cinder-service-%eb%b0%8f-user-%ec%83%9d%ec%84%b1">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 cinder
 </span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
 </span></span><span style="display:flex;"><span>| Field               | Value                            |
@@ -1563,22 +1593,46 @@
 </span></span><span style="display:flex;"><span>+--------------+-----------------------------------------+
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span># Cinder의 Endpoint를 생성합니다.
-</span></span></code></pre></div><h1 id="heading-6"></h1>
+</span></span></code></pre></div><h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-7"></h1>
-<h3 id="cinder-유저의-db를-생성합니다"><strong>Cinder 유저의 DB를 생성합니다.</strong></h3>
-<h1 id="heading-8"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<h3 id="cinder-유저의-db를-생성합니다">
+  <strong>Cinder 유저의 DB를 생성합니다.</strong>
+  <a class="anchor" href="#cinder-%ec%9c%a0%ec%a0%80%ec%9d%98-db%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
+</h3>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller&gt; mysql -u root -p
 </span></span><span style="display:flex;"><span>$ MariaDB&gt; create database cinder;  
 </span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on cinder.* to cinder@&#39;localhost&#39; identified by &#39;qwer1234&#39;; 
 </span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on cinder.* to cinder@&#39;%&#39; identified by &#39;qwer1234&#39;; 
 </span></span><span style="display:flex;"><span>$ MariaDB&gt; flush privileges; 
 </span></span><span style="display:flex;"><span>$ MariaDB&gt; exit;
-</span></span></code></pre></div><h1 id="heading-9"></h1>
+</span></span></code></pre></div><h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-10"></h1>
-<h3 id="cinder-설치"><strong>Cinder 설치</strong></h3>
-<h1 id="heading-11"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="cinder-설치">
+  <strong>Cinder 설치</strong>
+  <a class="anchor" href="#cinder-%ec%84%a4%ec%b9%98">#</a>
+</h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-cinder
 </span></span><span style="display:flex;"><span># cinder 및 관련 모듈을 설치합니다.
 </span></span><span style="display:flex;"><span>
@@ -1619,11 +1673,23 @@
 </span></span><span style="display:flex;"><span>$ controller&gt; firewall-cmd --add-port=8776/tcp --permanent 
 </span></span><span style="display:flex;"><span>$ controller&gt; firewall-cmd --reload
 </span></span><span style="display:flex;"><span># 방화벽을 설정합니다.
-</span></span></code></pre></div><h1 id="heading-12"></h1>
+</span></span></code></pre></div><h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-13"></h1>
-<h2 id="cinder-compute-node-설치"><strong>Cinder compute node 설치</strong></h2>
-<h1 id="heading-14"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h2 id="cinder-compute-node-설치">
+  <strong>Cinder compute node 설치</strong>
+  <a class="anchor" href="#cinder-compute-node-%ec%84%a4%ec%b9%98">#</a>
+</h2>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ compute&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-cinder targetcli
 </span></span><span style="display:flex;"><span># cinder 및 관련 모듈을 설치합니다.
 </span></span><span style="display:flex;"><span>
@@ -1671,10 +1737,19 @@
 </span></span><span style="display:flex;"><span>$ compute&gt; firewall-cmd --add-service=iscsi-target --permanent
 </span></span><span style="display:flex;"><span>$ compute&gt; firewall-cmd --reload
 </span></span><span style="display:flex;"><span># SELinux 및 방화벽을 설정합니다.
-</span></span></code></pre></div><h1 id="heading-15"></h1>
+</span></span></code></pre></div><h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-16"></h1>
-<h2 id="확인"><strong>확인</strong></h2>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h2 id="확인">
+  <strong>확인</strong>
+  <a class="anchor" href="#%ed%99%95%ec%9d%b8">#</a>
+</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller ~/(keystone)&gt; openstack volume service list
 </span></span><span style="display:flex;"><span>+------------------+-------------+------+---------+-------+----------------------------+
 </span></span><span style="display:flex;"><span>| Binary           | Host        | Zone | Status  | State | Updated At                 |
@@ -1715,16 +1790,34 @@
 </span></span><span style="display:flex;"><span>+--------------------------------------+------+-----------+------+-------------+
 </span></span><span style="display:flex;"><span>| aa07bf85-424d-478c-ae52-648ddc588465 | test | available |    1 |             |
 </span></span><span style="display:flex;"><span>+--------------------------------------+------+-----------+------+-------------+
-</span></span></code></pre></div><h1 id="heading-17"></h1>
+</span></span></code></pre></div><h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-18"></h1>
-<h1 id="오류가-있어-수정-중입니다-"><strong>오류가 있어 수정 중입니다 !</strong></h1>
-<h1 id="heading-19"></h1>
-<h2 id="cinder-백업-서비스-구성"><strong>Cinder 백업 서비스 구성</strong></h2>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<h1 id="오류가-있어-수정-중입니다-">
+  <strong>오류가 있어 수정 중입니다 !</strong>
+  <a class="anchor" href="#%ec%98%a4%eb%a5%98%ea%b0%80-%ec%9e%88%ec%96%b4-%ec%88%98%ec%a0%95-%ec%a4%91%ec%9e%85%eb%8b%88%eb%8b%a4-">#</a>
+</h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<h2 id="cinder-백업-서비스-구성">
+  <strong>Cinder 백업 서비스 구성</strong>
+  <a class="anchor" href="#cinder-%eb%b0%b1%ec%97%85-%ec%84%9c%eb%b9%84%ec%8a%a4-%ea%b5%ac%ec%84%b1">#</a>
+</h2>
 <ul>
 <li><strong><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/deployment_guide/s1-nfs-server-config-exports">NFS 구성참조</a></strong></li>
 </ul>
-<h1 id="heading-20"></h1>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ compute&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install nfs-utils
 </span></span><span style="display:flex;"><span># nfs-utils을 설치합니다.
 </span></span><span style="display:flex;"><span>
@@ -1782,11 +1875,23 @@
 </span></span><span style="display:flex;"><span>$ compute&gt; semodule -i iscsiadm.pp
 </span></span><span style="display:flex;"><span>$ compute&gt; systemctl restart openstack-nova-compute
 </span></span><span style="display:flex;"><span># SELinux를 설정하고 compute 서비스를 재시작합니다.
-</span></span></code></pre></div><h1 id="heading-21"></h1>
+</span></span></code></pre></div><h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-22"></h1>
-<h3 id="cinder-백업-서비스-구성-1"><strong>Cinder 백업 서비스 구성</strong></h3>
-<h1 id="heading-23"></h1>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<h3 id="cinder-백업-서비스-구성-1">
+  <strong>Cinder 백업 서비스 구성</strong>
+  <a class="anchor" href="#cinder-%eb%b0%b1%ec%97%85-%ec%84%9c%eb%b9%84%ec%8a%a4-%ea%b5%ac%ec%84%b1-1">#</a>
+</h3>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ compute&gt; vi /etc/cinder/cinder.conf
 </span></span><span style="display:flex;"><span>[default]
 </span></span><span style="display:flex;"><span>...
@@ -1799,11 +1904,23 @@
 </span></span><span style="display:flex;"><span>$ compute&gt; systemctl enable --now openstack-cinder-backup
 </span></span><span style="display:flex;"><span>$ compute&gt; chown -R cinder. /var/lib/cinder/backup_nfs
 </span></span><span style="display:flex;"><span>$ cinder backup 서비스를 활성화합니다.
-</span></span></code></pre></div><h1 id="heading-24"></h1>
+</span></span></code></pre></div><h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-25"></h1>
-<h2 id="확인-1"><strong>확인</strong></h2>
-<h1 id="heading-26"></h1>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<h2 id="확인-1">
+  <strong>확인</strong>
+  <a class="anchor" href="#%ed%99%95%ec%9d%b8-1">#</a>
+</h2>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack volume service list
 </span></span><span style="display:flex;"><span>+------------------+-------------+------+---------+-------+----------------------------+
 </span></span><span style="display:flex;"><span>| Binary           | Host        | Zone | Status  | State | Updated At                 |
@@ -1920,7 +2037,6 @@
 </body>
 </div>
 </html>
-
 
 
 

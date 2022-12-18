@@ -12,21 +12,20 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/nc/ncptraining/nca01/</guid>
-      <description>Naver Cloud Assoicate 교육목적 클라우드 서비스에 대한 기초적인 지식습득
+      <description>Naver Cloud Assoicate 교육목적##클라우드 서비스에 대한 기초적인 지식습득
 Naver Cloud 상품에 대한 이해화 기초 활용법 습득
 네이버 클라우드 상품 라인업에 대한 이해
 네이버 클라우드 기초 사용법
-Cloud 1960년대 부터 가상화라는 용어사용(IBM)
+##Cloud##1960년대 부터 가상화라는 용어사용(IBM)
 VMware
 Hyper-V
 KVM
 Xen
-공공 클라우드
+#공공 클라우드
 공공 클라우드 인증을 받은 클라우드
 여러 공공적으로 사용에 적합한 클라우드로 KT 클라우드 다음으로 NC가 가장 많은 비율을 차지
 별도의 커버먼트 도메인을 존재하여 사용
-금융 클라우드
-금융 및 핀테크 기업들이 법적인 규제에 대해 안심하고 사용할 수 있는 국내 최초의 전문 금융 클라우드 클라우드를 사용하는 이유</description>
+#금융 클라우드</description>
     </item>
     
     <item>
@@ -35,7 +34,8 @@ Xen
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/nc/ncptraining/nca02/</guid>
-      <description>**** **** #</description>
+      <description>****###****####
+#</description>
     </item>
     
     <item>
@@ -44,7 +44,8 @@ Xen
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/nc/ncptraining/ncp0/</guid>
-      <description>**** **** #</description>
+      <description>****###****####
+#</description>
     </item>
     
     <item>
@@ -53,12 +54,11 @@ Xen
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/nc/ncptraining/nca03/</guid>
-      <description>Network 외부와의 통로, 내부와의 통로 뿐만이 아닌, DNS, CDN과 같은 다양한 서비스를 제공 Nework Service의 종류 Load Balancer 부하 분산을 위해 서버 앞단에서 트래픽을 분산
+      <description>Network##외부와의 통로, 내부와의 통로 뿐만이 아닌, DNS, CDN과 같은 다양한 서비스를 제공 #Nework Service의 종류##Load Balancer 부하 분산을 위해 서버 앞단에서 트래픽을 분산
 HAProxy를 이용하여 로드밸런싱
-Proxy 방식 : 서버에서는 클라이언트의 IP 확인하고자 하 때 SSL/TCP의 경우 Proxy Protocol을 사용 HTTP/HTTPS의 경우 X-Forwarder를 사용 최대 6만 TPS(Transaction Per Second)까지 보장
+Proxy 방식 : 서버에서는 클라이언트의 IP 확인하고자 하 때 SSL/TCP의 경우 Proxy Protocol을 사용 HTTP/HTTPS의 경우 X-Forwarder를 사용 #최대 6만 TPS(Transaction Per Second)까지 보장
 로드밸런싱 알고리즘
-Round Robin : 클라이언트에서 요청이 오면 서버에 1개씩 분배하는 방식
-Least Connection : 클라이언트 연결이 제일 적은 서버에게 새로운 커넥션을 분배하는 방식</description>
+Round Robin : 클라이언트에서 요청이 오면 서버에 1개씩 분배하는 방식</description>
     </item>
     
     <item>
@@ -67,13 +67,11 @@ Least Connection : 클라이언트 연결이 제일 적은 서버에게 새로�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/nc/ncptraining/nca04/</guid>
-      <description>Storage 클라우드 서비스 중 저장소에 관련된 서비스 Block Storage 일반적으로 서버에 추가하여 사용하는 스토리지 Object Storage 인터넷 상에 원하는 데이터를 저장하고 사용할 수 있또록 구축된 오브젝트 스토리지
+      <description>Storage##클라우드 서비스 중 저장소에 관련된 서비스 #Block Storage##일반적으로 서버에 추가하여 사용하는 스토리지 ##Object Storage##인터넷 상에 원하는 데이터를 저장하고 사용할 수 있또록 구축된 오브젝트 스토리지
 객체 기반의 무제한 파일 저장 스토리지
 콘솔, RESTful API, SDK 등의 다양한 방법으로 오브젝트들을 관리하고, 저장된 파일은 각 파일마다 고유한 접근 RUL을 사용
 사용이 오래된 자료는 비교적 가격이 저렴한 Archive Storage로 이동
-정적 웹 사이트 호스팅 가능
-S3 Compatibility API 지원
-Data Lifecycle 지원</description>
+정적 웹 사이트 호스팅 가능</description>
     </item>
     
     <item>
@@ -82,11 +80,10 @@ Data Lifecycle 지원</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/nc/ncptraining/nca05/</guid>
-      <description>Cloud Database Naver Cloud 스크립트 파일을 통한 서버 자체에 DB를 설치하는 것외에도 Cloud 상에 MySQL을 사용하는 서비스 또한 지원 Cloud DB for MySQL 자동 Fail-Over 지원 및 사용자 환경에 맞는 구성 기능제공
+      <description>Cloud Database##Naver Cloud 스크립트 파일을 통한 서버 자체에 DB를 설치하는 것외에도 Cloud 상에 MySQL을 사용하는 서비스 또한 지원 #Cloud DB for MySQL##자동 Fail-Over 지원 및 사용자 환경에 맞는 구성 기능제공
 최대 32vCPU에 256GB 메모리 지원, 2TB 자동 디스크 확장 ( Standard, High Memory )
 자동 Fail-Over를 지원하며 최대 5대까지 복제 Slave (Read Only) 확장가능
-private Load Balancer를 이용해서 Read 부하 분산 가능
-자동 백업 주기를 설정할 수 있으며, 최대 30일 백업 파일 보관</description>
+private Load Balancer를 이용해서 Read 부하 분산 가능</description>
     </item>
     
     <item>
@@ -95,16 +92,14 @@ private Load Balancer를 이용해서 Read 부하 분산 가능
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/nc/ncptraining/nca06/</guid>
-      <description>Naver Cloud AI AI 플랫폼인 Clova, PaPago
+      <description>Naver Cloud AI##AI 플랫폼인 Clova, PaPago
 딥러닝을 위한 Tensorflow가 탑재된 이미지를 제공
-Chat bot CS나 주문 시스템과 같은 고객 대응을 로봇으로 대체하는 상품
+#Chat bot##CS나 주문 시스템과 같은 고객 대응을 로봇으로 대체하는 상품
 학습을 통해 적절한 답변을 자동화, CSR, CSS와 연동을 통해 메신저 뿐만 아니라 음성 채팅까지 확장 가능
 라인, 톡톡, 페이스북 메신저와 연동
-Clova Speech Recognition ( CSR ) 음성을 텍스트로 변환
+##Clova Speech Recognition ( CSR )##음성을 텍스트로 변환
 국내에서 가장 높은 한국어 인식률
-Android 및 IOS SDK 제공
-Rest API 제공
-한국어, 영어, 일어, 중국어(간체) 제공</description>
+Android 및 IOS SDK 제공</description>
     </item>
     
     <item>
@@ -113,14 +108,13 @@ Rest API 제공
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/nc/ncptraining/nca07/</guid>
-      <description>Cloud Application 네이버에서 사용하는 기술과 서비스를 APi로 제공
+      <description>Cloud Application##네이버에서 사용하는 기술과 서비스를 APi로 제공
 Geolocation, Maps, nShortURL, SENS, Search Trend 등 제공
 네이버 통합검색 서비스를 통해 수집되는 검색어 통계를 다양한 기준으로 조회 활용 가능
 대량 메일 발송을 위한 Outbound Mailer
 고객 대응에 활용할 수 있는 챗봇
-Geo Location 사용자 IP를 통해 위치 정보를 제공하는 국내 유일의 서비스
-고객서버에서 질의한 IP주소에 따른 지역정보를 DB를 검색해 국가, 시, 군, 구, 동, 인근 지역의 좌표 전달
-접속 IP를 기반으로 동까지 확인이 가능 (국내), 해외의경우 주까지 확인가능</description>
+#Geo Location##사용자 IP를 통해 위치 정보를 제공하는 국내 유일의 서비스
+고객서버에서 질의한 IP주소에 따른 지역정보를 DB를 검색해 국가, 시, 군, 구, 동, 인근 지역의 좌표 전달</description>
     </item>
     
     <item>
@@ -129,13 +123,11 @@ Geo Location 사용자 IP를 통해 위치 정보를 제공하는 국내 유일�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/nc/ncptraining/nca08/</guid>
-      <description>Cloud Managent Cloud 상에 서비스들을 관리할 수 있는 Cloud형 관리도구 Monitoring 클라우드 리소스 상태 모니터링 수행
+      <description>Cloud Managent##Cloud 상에 서비스들을 관리할 수 있는 Cloud형 관리도구 #Monitoring##클라우드 리소스 상태 모니터링 수행
 모든 상품에 대해 모니터링 서비스 제공
 기본 : 상품 별 모니터링 그래프 확인 가능
 상세 : 메트릭에 대한 임계치 설정과 이벤트 발생 시 Alert 기능 ( SMS / E-mail ) 제공
-83개 세부 항목에 대한 모니터링 성능 정보를 수집하며, 그 중 약 60여개의 세부 항목에 대한 이벤트 경보 설정 가능
-Monitoring API 제공
-Sub Account 서브 계정 별 역할 부여를 통한 리소스 관리</description>
+83개 세부 항목에 대한 모니터링 성능 정보를 수집하며, 그 중 약 60여개의 세부 항목에 대한 이벤트 경보 설정 가능</description>
     </item>
     
     <item>
@@ -144,10 +136,10 @@ Sub Account 서브 계정 별 역할 부여를 통한 리소스 관리</descript
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/nc/ncptraining/nca09/</guid>
-      <description>Cloud Analytics 서비스와 관련된 다양한 로그를 수집하고 분석
+      <description>Cloud Analytics##서비스와 관련된 다양한 로그를 수집하고 분석
 ELSA를 통해 모바일 앱에서 발생하는 크래시를 수집하고 분석 시스템의 다양한 로그를 수집하고 분석
 CLA를 통해 시스템의 로그를 수집하고 분석 웹 페이지에 대한 통계 분석
-RUA를 통해 웹 페이지의 방문자 통계를 확인 ELSA ( Effective Log Search &amp;amp; Analytics ) ELSA의 SDK/ API를 이용하여 어플리케이션을 쉽게 저장하고 검색, 분석할 수 있는 로그 분석 툴
+RUA를 통해 웹 페이지의 방문자 통계를 확인 #ELSA ( Effective Log Search &amp;amp; Analytics )##ELSA의 SDK/ API를 이용하여 어플리케이션을 쉽게 저장하고 검색, 분석할 수 있는 로그 분석 툴
 특정 로그 발생시 알람을 보내는 이벤트 기능과 App Crash Report도 제공예정</description>
     </item>
     
@@ -157,13 +149,12 @@ RUA를 통해 웹 페이지의 방문자 통계를 확인 ELSA ( Effective Log S
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/nc/ncptraining/nca10/</guid>
-      <description>Cloud ecurity Services Site Safer / App Safer Site Safer 고객의 웹 페이지에 악성 코드가 있는 지 주기적으로 검색
+      <description>Cloud ecurity Services##Site Safer / App Safer##Site Safer 고객의 웹 페이지에 악성 코드가 있는 지 주기적으로 검색
 NCP 외부 IP대역도 점검 가능
 행위 기반 탐지
-App Safer 고객의 APP실행 모바일 환경에 대한 보안 위협 여부를 실시간으로 탐지
+#App Safer 고객의 APP실행 모바일 환경에 대한 보안 위협 여부를 실시간으로 탐지
 치팅 프로그램, 핵 등으로 APP 무결성 검사
-File Safer 업로드 / 다운로드 되는 파일의 악성코드 여부를 탐지 고객의 웹 페이지에 업. 다운로드 되느 파일에 대한 체크
-악성코드 여부를 신속하고 정확하게 탐지</description>
+##File Safer##업로드 / 다운로드 되는 파일의 악성코드 여부를 탐지 고객의 웹 페이지에 업. 다운로드 되느 파일에 대한 체크</description>
     </item>
     
     <item>
@@ -172,12 +163,12 @@ File Safer 업로드 / 다운로드 되는 파일의 악성코드 여부를 탐�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/nc/ncptraining/nca11/</guid>
-      <description>Media Service Live Station 실시간 방송을 위한 플랫폼 트랜스코딩을 통해 여러 화질로 변환 후 송출
+      <description>Media Service##Live Station##실시간 방송을 위한 플랫폼 트랜스코딩을 통해 여러 화질로 변환 후 송출
 스트림 상태를 볼 수 있는 모니터링 기능 제공
 Thumbnail Image 추출
 타임머신(Time Shift) 기능으로 놓치지 않는 라이브 방송 서비스 구현 가능
 CDN 연동을 통해 안정적인 송출 가능
-VOD Transcoder 고품질 저비용의 클라우드 미디어 파일 변환 서비스 VOD Transcoder는 미디어 원본 파일을 모바일, PC 등 다양한 디바이스에서 다양한 화질로 시청할 수 있또록 변환해주는 클라우드 기반의 미디어 서비스</description>
+##VOD Transcoder##고품질 저비용의 클라우드 미디어 파일 변환 서비스 VOD Transcoder는 미디어 원본 파일을 모바일, PC 등 다양한 디바이스에서 다양한 화질로 시청할 수 있또록 변환해주는 클라우드 기반의 미디어 서비스</description>
     </item>
     
     <item>
@@ -186,15 +177,15 @@ VOD Transcoder 고품질 저비용의 클라우드 미디어 파일 변환 서�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/nc/ncptraining/ncp01/</guid>
-      <description>가상화 기술과 Naver Cloud 전가상화와 반가상화 전가상화
+      <description>가상화 기술과 Naver Cloud##전가상화와 반가상화##전가상화
 하드웨어 전체를 가상화하는 방식
 하드웨어를 관리하는 하이퍼바이저(DOMO)가 VM들에게 하드웨어 리소스를 할당하는 방식
 하이퍼바이저가 모든 리소스를 관리하는 만큼 성능적으로 오버헤드가 발생
 기본적으로 Cloud 업체들이 제공하는 방식은 전가상화 방식을 사용
-반가상화
+#반가상화
 전 가상화의 성능 저하를 해결하고자 모든 명령에 대해 DOMO를 통해 요청하는 방식이 아닌 하이퍼콜을 통해 직업 요청
 하이퍼콜을 사용하기 위해서는 VM의 OS가 이를 지원해야 함
-Hyper Visor 하드웨어와 VM 사이에 VM과 하드웨어를 관리하기 위한 가상화 관리 소프트웨어 Server의 특징 CPU</description>
+#Hyper Visor 하드웨어와 VM 사이에 VM과 하드웨어를 관리하기 위한 가상화 관리 소프트웨어 ##Server의 특징##CPU</description>
     </item>
     
     <item>
@@ -203,9 +194,9 @@ Hyper Visor 하드웨어와 VM 사이에 VM과 하드웨어를 관리하기 위�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/nc/ncptraining/ncp02/</guid>
-      <description>Network Network - Well known port 1024번 이하의 포트는 이미 알고 있는 포트 (ex:http/80, ssh/22)
+      <description>Network##Network - Well known port##1024번 이하의 포트는 이미 알고 있는 포트 (ex:http/80, ssh/22)
 해당 포트를 통해 방화벽 컨트롤
-해당 포트가 열려있는 지 확인하는 방법 : 포트 스캐닝 Load Balancer NAT DR Proxy ( Naver Cloud가 사용하는 방식 ) NAT, DR은 ROOPBACK 주소가 필요한데, 이 경우 LB의 IP를 가지고 가기 때문에 방화벽 등에서 문제가 발생할 수 있음 Naver CLoud의 LB는 6초마다 헬스 체크 3회 연속으로 OK, Error가 뜨면 바인딩 혹은 언바인딩 접속 정보로 도메인 정보를 제공 IP가 아닌 도메인인 이유는 IP의 경우 문제가 발생할 확률이 있음 즉, DNS에는 CNAME을 등록진행 필요 Zone apex에 대해서는 RFC1033과 같이 등록불가능 기본적으로 로드밸런서 하나를 생성하면 HAProxy 2개가 생성되어짐, HAProxy 1개의 동적 성능은 약 3000, 만약 이 이상의 성능이 필요한 경우에는 HAProxy를 여러 개 생성해야 됨 한 서버가 여러 개의 LB에 바인딩 될 수 있지만 포트별 멀티 바인딩은 지원하지 않음 18080- 18095, 65130, 65131, 64000, 3389,22 포트는 관리용 포트로 사용이 불가능 최대 50대의 서버의 바인딩이 가능 DNS 도메인에 대해 IP로 변환하는 서비스 트리구조로 구성 네이버 클라우드 플랫폼 DNS A, NS, PTR, AAAA, MX, CNAME, SPF 등 다양한 레코드의 지원 외부 도메인 등록 기관에 네임서버를 네이버 클라우드 플랫폼의 네임서버로 지정한 경우에 사용가능 도메인 등록시 네이버 클라우드 플랫폼 DNS에 등록하는 데 최대 15분 소요 입력 가능 항목 레코드명 레코드 타입 TTL 레코드 값 NAT gateway 외부로 나가는 통신의 공인 IP를 지정하는 서비스</description>
+해당 포트가 열려있는 지 확인하는 방법 : 포트 스캐닝 ##Load Balancer##NAT DR Proxy ( Naver Cloud가 사용하는 방식 ) NAT, DR은 ROOPBACK 주소가 필요한데, 이 경우 LB의 IP를 가지고 가기 때문에 방화벽 등에서 문제가 발생할 수 있음 #Naver CLoud의 LB는 6초마다 헬스 체크 3회 연속으로 OK, Error가 뜨면 바인딩 혹은 언바인딩 #접속 정보로 도메인 정보를 제공 IP가 아닌 도메인인 이유는 IP의 경우 문제가 발생할 확률이 있음 즉, DNS에는 CNAME을 등록진행 필요 Zone apex에 대해서는 RFC1033과 같이 등록불가능 #기본적으로 로드밸런서 하나를 생성하면 HAProxy 2개가 생성되어짐, HAProxy 1개의 동적 성능은 약 3000, 만약 이 이상의 성능이 필요한 경우에는 HAProxy를 여러 개 생성해야 됨 #한 서버가 여러 개의 LB에 바인딩 될 수 있지만 포트별 멀티 바인딩은 지원하지 않음 18080- 18095, 65130, 65131, 64000, 3389,22 포트는 관리용 포트로 사용이 불가능 최대 50대의 서버의 바인딩이 가능 ##DNS##도메인에 대해 IP로 변환하는 서비스 트리구조로 구성 #네이버 클라우드 플랫폼 DNS A, NS, PTR, AAAA, MX, CNAME, SPF 등 다양한 레코드의 지원 외부 도메인 등록 기관에 네임서버를 네이버 클라우드 플랫폼의 네임서버로 지정한 경우에 사용가능 도메인 등록시 네이버 클라우드 플랫폼 DNS에 등록하는 데 최대 15분 소요 #입력 가능 항목 레코드명 레코드 타입 TTL 레코드 값 ##NAT gateway##외부로 나가는 통신의 공인 IP를 지정하는 서비스</description>
     </item>
     
   </channel>

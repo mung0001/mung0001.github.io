@@ -2,48 +2,45 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shell Programming Shell Basics Shell의 기본적인 역할은 사용자에게 명령을 입력받아 시행하는 것입니다.
+<meta name="description" content="Shell Programming###Shell Basics##Shell의 기본적인 역할은 사용자에게 명령을 입력받아 시행하는 것입니다.
 Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제공하므로 실제 명령이 실행되기 전에 Shell에 의해 해석 단계를 거치게 됩니다.
-파일명 Shell에서 제일 처음이자 중요한 개념 중 하나가 파일명입니다.
-파일명은 곧 명령을 실행할 때 사용되는 이름과 같으며, 리눅스에서 사용하고 있는 파일시스템에서는 파일 이름을 NUL, / 두 문자를 제외하고 전부 허용한다고 합니다.
-[ { [10 {echo if{ {AA=10} . : # 상단처럼 복잡미묘한 파일이름도 가능합니다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/development/shell/shell01/><meta property="og:title" content="Shell Basics" />
-<meta property="og:description" content="Shell Programming Shell Basics Shell의 기본적인 역할은 사용자에게 명령을 입력받아 시행하는 것입니다.
+##파일명##Shell에서 제일 처음이자 중요한 개념 중 하나가 파일명입니다.
+파일명은 곧 명령을 실행할 때 사용되는 이름과 같으며, 리눅스에서 사용하고 있는 파일시스템에서는 파일 이름을 NUL, / 두 문자를 제외하고 전부 허용한다고 합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Shell Basics" />
+<meta property="og:description" content="Shell Programming###Shell Basics##Shell의 기본적인 역할은 사용자에게 명령을 입력받아 시행하는 것입니다.
 Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제공하므로 실제 명령이 실행되기 전에 Shell에 의해 해석 단계를 거치게 됩니다.
-파일명 Shell에서 제일 처음이자 중요한 개념 중 하나가 파일명입니다.
-파일명은 곧 명령을 실행할 때 사용되는 이름과 같으며, 리눅스에서 사용하고 있는 파일시스템에서는 파일 이름을 NUL, / 두 문자를 제외하고 전부 허용한다고 합니다.
-[ { [10 {echo if{ {AA=10} . : # 상단처럼 복잡미묘한 파일이름도 가능합니다." />
+##파일명##Shell에서 제일 처음이자 중요한 개념 중 하나가 파일명입니다.
+파일명은 곧 명령을 실행할 때 사용되는 이름과 같으며, 리눅스에서 사용하고 있는 파일시스템에서는 파일 이름을 NUL, / 두 문자를 제외하고 전부 허용한다고 합니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/development/shell/shell01/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Shell Basics | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -56,7 +53,7 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1363,6 +1360,9 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1374,14 +1374,15 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
   <strong>Shell Basics</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1518,12 +1519,27 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 <br>
 <br>
       
-  <article class="markdown"><h1 id="shell-programming"><strong>Shell Programming</strong></h1>
-<h1 id="heading"></h1>
+  <article class="markdown"><h1 id="shell-programming">
+  <strong>Shell Programming</strong>
+  <a class="anchor" href="#shell-programming">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-1"></h1>
-<h2 id="shell-basics"><strong>Shell Basics</strong></h2>
-<h1 id="heading-2"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h2 id="shell-basics">
+  <strong>Shell Basics</strong>
+  <a class="anchor" href="#shell-basics">#</a>
+</h2>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Shell의 기본적인 역할은 사용자에게 명령을 입력받아 시행하는 것입니다.</strong></p>
@@ -1532,11 +1548,23 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 <p><strong>Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제공하므로 실제 명령이 실행되기 전에 Shell에 의해 해석 단계를 거치게 됩니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-3"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-4"></h1>
-<h3 id="파일명"><strong>파일명</strong></h3>
-<h1 id="heading-5"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="파일명">
+  <strong>파일명</strong>
+  <a class="anchor" href="#%ed%8c%8c%ec%9d%bc%eb%aa%85">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Shell에서 제일 처음이자 중요한 개념 중 하나가 파일명입니다.</strong></p>
@@ -1547,11 +1575,23 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Shell" data-lang="Shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>   <span style="color:#f92672">{</span>   <span style="color:#f92672">[</span><span style="color:#ae81ff">10</span> <span style="color:#f92672">{</span>echo   <span style="color:#66d9ef">if</span><span style="color:#f92672">{</span> <span style="color:#f92672">{</span>AA<span style="color:#f92672">=</span>10<span style="color:#f92672">}</span> .   :
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 상단처럼 복잡미묘한 파일이름도 가능합니다.</span>
-</span></span></code></pre></div><h1 id="heading-6"></h1>
+</span></span></code></pre></div><h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-7"></h1>
-<h3 id="공백"><strong>공백</strong></h3>
-<h1 id="heading-8"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<h3 id="공백">
+  <strong>공백</strong>
+  <a class="anchor" href="#%ea%b3%b5%eb%b0%b1">#</a>
+</h3>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <ul>
 <li><strong>명령의 기본적인 구조를 살펴보면 다음과 같습니다.</strong></li>
 </ul>
@@ -1579,11 +1619,23 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 </span></span><span style="display:flex;"><span>$ <span style="color:#f92672">[</span> a<span style="color:#f92672">=</span>b <span style="color:#f92672">]</span>; echo $?
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 위의 경우는 인수들 사이에 공백을 두지 않아 a=b가 하나의 인수로 인식됩니다.</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 옳은 설정 : [ a = b ]; echo $?</span>
-</span></span></code></pre></div><h1 id="heading-9"></h1>
+</span></span></code></pre></div><h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-10"></h1>
-<h3 id="대입연산"><strong>대입연산</strong></h3>
-<h1 id="heading-11"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="대입연산">
+  <strong>대입연산</strong>
+  <a class="anchor" href="#%eb%8c%80%ec%9e%85%ec%97%b0%ec%82%b0">#</a>
+</h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Shell 에서는 위에서 살펴본 기본 명령 구조를 갖지 않는 문장이 존재합니다.</strong></p>
@@ -1598,11 +1650,23 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 </span></span></code></pre></div><ul>
 <li><strong>Shell Script를 작성할 때는 대입연산을 제외하고 모두 공백을 두어 작성하는 것도 오류를 줄일 수 있는 방법이 될 수 있습니다.</strong></li>
 </ul>
-<h1 id="heading-12"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-13"></h1>
-<h3 id="참과-거짓"><strong>참과 거짓</strong></h3>
-<h1 id="heading-14"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h3 id="참과-거짓">
+  <strong>참과 거짓</strong>
+  <a class="anchor" href="#%ec%b0%b8%ea%b3%bc-%ea%b1%b0%ec%a7%93">#</a>
+</h3>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>if 문에서 참, 거짓을 판단할 때 프로그래밍 언어에서는 <code>0=거짓</code>이고 <code>그 외의 값은 참</code>이지만 Shell 에서는 반대입니다. <code>0=정상종료(참)</code>를 나타내고, <code>그 외 숫자는 오류를 분류하여 나타내는데 사용되므로 거짓</code>이 됩니다.</strong></p>
@@ -1630,11 +1694,23 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 </span></span><span style="display:flex;"><span>$ <span style="color:#66d9ef">if</span> func 1; <span style="color:#66d9ef">then</span> echo true; <span style="color:#66d9ef">else</span> echo false; <span style="color:#66d9ef">fi</span>
 </span></span><span style="display:flex;"><span>false
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 0은 종료 상태 값으로 0을 리턴하므로 참이며, 1은 종료 상태 값으로 1을 리턴하므로 거짓</span>
-</span></span></code></pre></div><h1 id="heading-15"></h1>
+</span></span></code></pre></div><h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-16"></h1>
-<h3 id="return"><strong>return</strong></h3>
-<h1 id="heading-17"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h3 id="return">
+  <strong>return</strong>
+  <a class="anchor" href="#return">#</a>
+</h3>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Shell 함수에서 사용되는 return 명령은 프로그래밍 언어와 달리 연산 결과를 반환하는 데 사용되지 않습니다.</strong></p>
@@ -1655,11 +1731,23 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ echo $AA
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># func 함수의 stdout 출력 값이 연산 결과 값이 된다.</span>
-</span></span></code></pre></div><h1 id="heading-18"></h1>
+</span></span></code></pre></div><h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-19"></h1>
-<h3 id="명령-종료-문자"><strong>명령 종료 문자</strong></h3>
-<h1 id="heading-20"></h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<h3 id="명령-종료-문자">
+  <strong>명령 종료 문자</strong>
+  <a class="anchor" href="#%eb%aa%85%eb%a0%b9-%ec%a2%85%eb%a3%8c-%eb%ac%b8%ec%9e%90">#</a>
+</h3>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>C/ C++ 언어에서는 문장의 종료를 나타내기 위해 마지막에 항상 <code>;</code>를 붙여야 하지만 Shell Script 에서는 반드시 문장 끝에 붙일 필요는 없습니다.</strong></p>
@@ -1696,11 +1784,23 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ <span style="color:#f92672">{</span> echo 1; echo <span style="color:#ae81ff">2</span> ;<span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>
-</span></span></code></pre></div><h1 id="heading-21"></h1>
+</span></span></code></pre></div><h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-22"></h1>
-<h3 id="shell-메타문자"><strong>Shell 메타문자</strong></h3>
-<h1 id="heading-23"></h1>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<h3 id="shell-메타문자">
+  <strong>Shell 메타문자</strong>
+  <a class="anchor" href="#shell-%eb%a9%94%ed%83%80%eb%ac%b8%ec%9e%90">#</a>
+</h3>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Shell 메타문자는 Shell에서 특별히 취급되는 문자입니다.</strong></p>
@@ -1715,11 +1815,23 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ <span style="color:#f92672">(</span>echo hello; echo world<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>hello
 </span></span><span style="display:flex;"><span>world
-</span></span></code></pre></div><h1 id="heading-24"></h1>
+</span></span></code></pre></div><h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-25"></h1>
-<h3 id="escape"><strong>Escape</strong></h3>
-<h1 id="heading-26"></h1>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<h3 id="escape">
+  <strong>Escape</strong>
+  <a class="anchor" href="#escape">#</a>
+</h3>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Shell에서 사용되는 명령문에는 단지 명령문을 위한 스트링만 존재하지 않습니다.</strong></p>
@@ -1743,11 +1855,23 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ find * <span style="color:#ae81ff">\(</span> -name <span style="color:#e6db74">&#34;*.log&#34;</span> -or -name <span style="color:#e6db74">&#34;*.bak&#34;</span> <span style="color:#ae81ff">\)</span> -exec rm -f <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;( )&#39; &#39;;&#39; 문자도 shell 에서 사용하는 메타문자이다.</span>
-</span></span></code></pre></div><h1 id="heading-27"></h1>
+</span></span></code></pre></div><h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-28"></h1>
-<h3 id="단어분리"><strong>단어분리</strong></h3>
-<h1 id="heading-29"></h1>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
+<h3 id="단어분리">
+  <strong>단어분리</strong>
+  <a class="anchor" href="#%eb%8b%a8%ec%96%b4%eb%b6%84%eb%a6%ac">#</a>
+</h3>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>단어분리는 Shell이 가지고 있는 고유의 기능 중 하나로, 변수나 명령치환을 quote 하지 않으면 값이 출력될 때 IFS ( Internal Field Separator )에 의 단어가 분리됩니다.</strong></p>
@@ -1780,11 +1904,23 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 </span></span><span style="display:flex;"><span>arg1 : Hello
 </span></span><span style="display:flex;"><span>arg2 : World
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># $AA 변수가 quote 되지 않아 Hello, World가 따로 함수로 전달됩니다.</span>
-</span></span></code></pre></div><h1 id="heading-30"></h1>
+</span></span></code></pre></div><h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-31"></h1>
-<h3 id="filename-expansion-globbing"><strong>Filename Expansion (Globbing)</strong></h3>
-<h1 id="heading-32"></h1>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
+<h3 id="filename-expansion-globbing">
+  <strong>Filename Expansion (Globbing)</strong>
+  <a class="anchor" href="#filename-expansion-globbing">#</a>
+</h3>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Shell 에서는 파일을 Select 할 때 <code>glob 문자( *, ?, [ ])</code>를 사용합니다.</strong></p>
@@ -1799,11 +1935,23 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 </span></span><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;</span>$AA<span style="color:#e6db74">&#34;</span>
 </span></span><span style="display:flex;"><span>User-Agent: *
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># quote을 사용하면 globbing이 발생하지 않음</span>
-</span></span></code></pre></div><h1 id="heading-33"></h1>
+</span></span></code></pre></div><h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-34"></h1>
-<h3 id="명령옵션"><strong>명령옵션</strong></h3>
-<h1 id="heading-35"></h1>
+<h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
+<h3 id="명령옵션">
+  <strong>명령옵션</strong>
+  <a class="anchor" href="#%eb%aa%85%eb%a0%b9%ec%98%b5%ec%85%98">#</a>
+</h3>
+<h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
 <ul>
 <li><strong>명령옵션은 보통 <code>- 문자</code>로 시작하며 <code>-</code>로 시작하고 하나의 문자를 사용하는 short form과 <code>--</code>로 시작하고 여러 개의 문자를 사용해는 long form 두 종류가 사용됩니다.</strong></li>
 </ul>
@@ -1849,11 +1997,23 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>command -o val -- <span style="color:#e6db74">&#34;</span>$arg1<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span>$arg2<span style="color:#e6db74">&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 즉 Script를 작성시에는 상단과 같이 `--`를 통해 분리해야 오류를 줄일 수 있음</span>
-</span></span></code></pre></div><h1 id="heading-36"></h1>
+</span></span></code></pre></div><h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-37"></h1>
-<h3 id="stdio"><strong>STDIO</strong></h3>
-<h1 id="heading-38"></h1>
+<h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
+<h3 id="stdio">
+  <strong>STDIO</strong>
+  <a class="anchor" href="#stdio">#</a>
+</h3>
+<h1 id="heading-38">
+  
+  <a class="anchor" href="#heading-38">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>명령들을 사용하다 보면 종종 <code>-</code>문자가 input, output에 사용되는 경우가 있습니다.</strong></p>
@@ -1886,11 +2046,23 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">222</span>
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">333</span>
 </span></span><span style="display:flex;"><span>hello world
-</span></span></code></pre></div><h1 id="heading-39"></h1>
+</span></span></code></pre></div><h1 id="heading-39">
+  
+  <a class="anchor" href="#heading-39">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-40"></h1>
-<h3 id="shell에서-문자를-이용하는-확장방법"><strong>Shell에서 <code>$</code>문자를 이용하는 확장방법</strong></h3>
-<h1 id="heading-41"></h1>
+<h1 id="heading-40">
+  
+  <a class="anchor" href="#heading-40">#</a>
+</h1>
+<h3 id="shell에서-문자를-이용하는-확장방법">
+  <strong>Shell에서 <code>$</code>문자를 이용하는 확장방법</strong>
+  <a class="anchor" href="#shell%ec%97%90%ec%84%9c-%eb%ac%b8%ec%9e%90%eb%a5%bc-%ec%9d%b4%ec%9a%a9%ed%95%98%eb%8a%94-%ed%99%95%ec%9e%a5%eb%b0%a9%eb%b2%95">#</a>
+</h3>
+<h1 id="heading-41">
+  
+  <a class="anchor" href="#heading-41">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Shell에서는 <code>$</code> 문자를 이용하는 3 가지 종류가 있습니다.</strong></p>
@@ -1907,11 +2079,23 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 </ul>
 </li>
 </ul>
-<h1 id="heading-42"></h1>
+<h1 id="heading-42">
+  
+  <a class="anchor" href="#heading-42">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-43"></h1>
-<h3 id="주석"><strong>주석</strong></h3>
-<h1 id="heading-44"></h1>
+<h1 id="heading-43">
+  
+  <a class="anchor" href="#heading-43">#</a>
+</h1>
+<h3 id="주석">
+  <strong>주석</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%84%9d">#</a>
+</h3>
+<h1 id="heading-44">
+  
+  <a class="anchor" href="#heading-44">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Shell에서 주석은 <code>#</code> 문자를 사용합니다. 하지만 명령문에서도 # 문자가 사용될 수 있으므로 무조건 # 이후로 처리되는 것은 아니고 <code>#</code> 문자 앞에 공백이 있어야 주석으로 처리됩니다.</strong></p>
@@ -2091,7 +2275,6 @@ Sgell은 명령문을 작성할 때 사용할 수 있도록 많은 기능을 제
 </body>
 </div>
 </html>
-
 
 
 

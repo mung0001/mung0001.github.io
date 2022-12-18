@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/network/network/natwork-1/</guid>
-      <description>Network Network란 무엇인가? 네트워크란 물리적으로 떨어져 있는 여러 시스템을 연결하여 데이터를 주고 받을 수 있게 연결되어 있는 시스템
+      <description>Network##Network란 무엇인가?###네트워크란 물리적으로 떨어져 있는 여러 시스템을 연결하여 데이터를 주고 받을 수 있게 연결되어 있는 시스템
 노드들이 데이터를 공휴할 수 있게 하는 디지털 전기 통신망의 한 종류로, 분산되어 있는 컴퓨터를 통신망을 통해 연결한 것을 말한다.
 흔히 사람들은 네트워크와 인터넷을 함께 혼용하지만 인터넷은 문서, 그림, 영상과 같은 여러가지 데이터를 공유하도록 구성된 거대한 네트워크를 의미로, 인터넷이 네트워크에 포함되어 있다고 할 수 있다.
 또한 www를 인터넷으로 착각하는 경우가 있는 데, www는 인터넷을 통해 웹과 관련된 데이터를 공유하는 기술이다.</description>
@@ -24,7 +24,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/network/network/packet/</guid>
-      <description>네트워크 패킷 ( Network Packet ) 패킷이란 데이터의 묶음 단위로 한번에 전송할 데이터의 크기
+      <description>네트워크 패킷 ( Network Packet )##패킷이란 데이터의 묶음 단위로 한번에 전송할 데이터의 크기
 제 3계층 이상 ( Network 계층 ) 에서는 이 데이터의 묶음을 패킷이라고 부르며, 제 2계층에서는 프레임( Frame )
 패킷의 크기는 네트워크의 종류에 따라 크기가 다름
 패킷을 이렇게 나눠 보내는 이유는 컴퓨터는 동시다발적으로 데이터를 전송하는 데, 한 데이터에게만 데이터를 줄 경우, 한 컴퓨터와의 통신밖에 하지 못하기에, 데이터를 나눠 모두에게 통신할 수 있게 하며, 중간에 에러가 날 경우를 대비</description>
@@ -36,10 +36,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/network/network/portnumber/</guid>
-      <description>TCP/ UDP 포트 번호 정리 기본적인 포트번호 Well-known port : 0 ~ 1023
+      <description>TCP/ UDP 포트 번호 정리##기본적인 포트번호 #Well-known port : 0 ~ 1023
 Registered port : 1024 ~ 49151
 Dynamic port : 49152 ~ 65535
-Port Tables...Register Port </description>
+Port Tables...Register Port##</description>
     </item>
     
     <item>
@@ -48,7 +48,7 @@ Port Tables...Register Port </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/network/network/sdn/</guid>
-      <description>SDN SDN ( Software Defined Networking : 소프트웨어 정의 네트워킹 ) 기존의 네트워크 인프라가 가지고 있던 문제를 해결하기 위해서 나온 개념
+      <description>SDN##SDN ( Software Defined Networking : 소프트웨어 정의 네트워킹 )##기존의 네트워크 인프라가 가지고 있던 문제를 해결하기 위해서 나온 개념
 기존의 네트워크 인프라를 구성하는 네트워크 장비들은 하나의 장비에 HW OS APP이 모두 들어가 있었기 때문에 장비 하나하나가 복잡한 기능을 모두 가지고 있었고 장비 자체의 사양도 높아야 했다. 그러다보니 장비마다 비용도 비싸지고 장비를 하나하나 설정해야하는 문제점들이 있었다.
 SDN은 기존의 장비의 HW와 OS APP 부분을 분리하여 장비 하나하나는 HW부분만을 담당하고 SW적인 부분은 중앙의 컨트롤러에서 제어한다.</description>
     </item>
@@ -59,7 +59,7 @@ SDN은 기존의 장비의 HW와 OS APP 부분을 분리하여 장비 하나하�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/network/network/3tier/</guid>
-      <description>Local 3Tier 구현 OS, 구현 프로그램 Ubuntu18.04 Apache2 Tomcat8 Mysql5.8 GNS3 IP 대역 10.10.10.0/24 Public 20.20.20.0/24 Private 30.30.30.0/24 Private2 Public 대역 10.10.10.10 Apache1 10.10.10.11 Apache2 Private 대역 20.20.20.20 Tomcat1 20.20.20.21 Tomcat2 Public 대역 30.30.30.30 Mysql1 30.30.30.30 Mysql2 sudo vi /etc/netplan/50-cloud-init.yaml network: version: 2 ethernets: ens33: dhcp6: no addresses: - [ IP addresses ] gateway4: [ gateway ] nameservers: addresses: [ [nameserver] ] $ sudo netplan apply $ hostname -l 아키텍처 사진</description>
+      <description>Local 3Tier 구현##OS, 구현 프로그램#Ubuntu18.04#Apache2#Tomcat8#Mysql5.8#GNS3##IP 대역#10.10.10.0/24 Public#20.20.20.0/24 Private#30.30.30.0/24 Private2##Public 대역#10.10.10.10 Apache1#10.10.10.11 Apache2##Private 대역#20.20.20.20 Tomcat1#20.20.20.21 Tomcat2##Public 대역#30.30.30.30 Mysql1#30.30.30.30 Mysql2###sudo vi /etc/netplan/50-cloud-init.yaml network: version: 2 ethernets: ens33: dhcp6: no addresses: - [ IP addresses ] gateway4: [ gateway ] nameservers: addresses: [ [nameserver] ] $ sudo netplan apply $ hostname -l 아키텍처 사진</description>
     </item>
     
     <item>
@@ -68,7 +68,7 @@ SDN은 기존의 장비의 HW와 OS APP 부분을 분리하여 장비 하나하�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/network/network/gns3/</guid>
-      <description>네트워크 실습을 위한 GNS3 설치 GNS3 Download Link 상단의 GNS3 다운로드 링크를 클릭하여 GNS3에 접속 후, 로그인 혹은 회원가입을 진행합니다. 로그인 후, Download를 클릭하여 운영체제에 맞는 GNS3 설치파일을 다운로드 합니다. 기본 값으로 설치를 진행합니다. 단 솔라윈드 톨킷은 설치하지 않습니다. GNS3의 설치가 완료되었습니다. GNS3가 설치되면 GNS3를 실행시킵니다. 설정에 맞는 사항을 체크합니다. 여기서는 첫 번째 항목을 체크하겠습니다. 1. Run appliances in a virtual machine 가상 머신을 통하여 최신 IOS를 포함한 IOSv, IOU, ASA와 다른 Vendor의 Appliance들을 작동시킨다.</description>
+      <description>네트워크 실습을 위한 GNS3 설치##GNS3 Download Link###상단의 GNS3 다운로드 링크를 클릭하여 GNS3에 접속 후, 로그인 혹은 회원가입을 진행합니다. ##로그인 후, Download를 클릭하여 운영체제에 맞는 GNS3 설치파일을 다운로드 합니다. ##기본 값으로 설치를 진행합니다. 단 솔라윈드 톨킷은 설치하지 않습니다. ##GNS3의 설치가 완료되었습니다. ##GNS3가 설치되면 GNS3를 실행시킵니다. 설정에 맞는 사항을 체크합니다. 여기서는 첫 번째 항목을 체크하겠습니다. 1. Run appliances in a virtual machine#가상 머신을 통하여 최신 IOS를 포함한 IOSv, IOU, ASA와 다른 Vendor의 Appliance들을 작동시킨다.</description>
     </item>
     
     <item>
@@ -77,13 +77,12 @@ SDN은 기존의 장비의 HW와 OS APP 부분을 분리하여 장비 하나하�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/network/network/security/</guid>
-      <description>Network Security Hacking Process 확인 정보 ( OS 버전, 응용 프로그램, IP주소, 도메인 ) 정보수집 정보 수집...구글 검색 intitle : [검색어] - 탭 제목에 포함된 내용으로 검색
+      <description>Network Security##Hacking Process##확인 정보 ( OS 버전, 응용 프로그램, IP주소, 도메인 )##정보수집#정보 수집...#구글 검색 intitle : [검색어] - 탭 제목에 포함된 내용으로 검색
 filetype : [검색어] - 특정 파일 확장자로 검색
 site : [검색어] - 특정 도메인 주소 검색
 inurl : [검색어] - URL에 포함된 문자 검색
 홈페이지 이용
-www.news.netcraft.com &amp;ndash;&amp;gt; Internet Data Mining &amp;ndash;&amp;gt; Hosting Provider Analysis
-오른쪽에 정보를 수집하고 싶은 도메인 입력</description>
+www.news.netcraft.com &amp;ndash;&amp;gt; Internet Data Mining &amp;ndash;&amp;gt; Hosting Provider Analysis</description>
     </item>
     
     <item>
@@ -92,9 +91,9 @@ www.news.netcraft.com &amp;ndash;&amp;gt; Internet Data Mining &amp;ndash;&amp;g
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/network/network/firewall/</guid>
-      <description>방화벽 (CentOS - firewalld) 리눅스의 방화벽
-커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제 방화벽의 종류
-패킷 필터링 방화벽 - 제 1세대 방화벽- 레이어 1~4에서 사용- 단순하기 때문에 빠르고 효과적- 5~7계층 대응 불가Stateful 방화벽 - 제 2세대 방화벽- 패킷의 연결 상태를 관찰- 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약**애플리케이션 레이어 방화벽 ** - 제 3세대 방화벽- 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요방화벽의 구성요소 규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.</description>
+      <description>방화벽 (CentOS - firewalld)##리눅스의 방화벽
+커널의 Netfilter 모듈에 기초를 두고 있는 하나의 프로그램 방화벽은 일반적으로 내부와 외부 네트워크의 경계 지점에 위치 기본적으로 들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용 허용(Accept)과 거절(Reject)이라는 행동을 통해 모든 패킷을 통제 #방화벽의 종류
+패킷 필터링 방화벽 - 제 1세대 방화벽- 레이어 1~4에서 사용- 단순하기 때문에 빠르고 효과적- 5~7계층 대응 불가Stateful 방화벽 - 제 2세대 방화벽- 패킷의 연결 상태를 관찰- 메모리에서 상태 테이블 사용 - DoS 공격과 같은 메모리 잠식 공격에 취약**애플리케이션 레이어 방화벽 ** - 제 3세대 방화벽- 레이어7까지 패킷 검사와 필터링 - 고사양의 장비가 필요#방화벽의 구성요소 규칙(Rule) : Netfilter에서 가장 핵심적인 구성 요소로서 하나 또는 그 이상 일치돼야 할 항목들로 구성되며, 패킷이 이러한 규칙이 일치(match)할 경우 타겟을 이용해 구체적인 행동 사항을 지정한다.</description>
     </item>
     
   </channel>

@@ -2,44 +2,43 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shell Programming Shell Script의 개요 UNIX/ Linux 소개 및 특징 UNIX 1969년 AT&amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다
+<meta name="description" content="Shell Programming###Shell Script의 개요##UNIX/ Linux 소개 및 특징##UNIX 1969년 AT&amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다
 벨연구소는 대학과 연구기관에 UNIX를 활용할 수 있도록 라이선스를 제공하였으며, 버클리 대학교에서는 UNIX에 네트워크 프로토콜인 TCP/IP 등 다양한 기능을 보강하여 BSD 배포본을 제작하고 이후 파생되는 많은 UNIX에 영향을 끼쳤다.
-Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원생에 의해 커널이 개발된 이래, 1984년부터 리처드 스토람에 의해 추진된 GNU 프로젝트의 다양한 소프트웨어들이 합쳐진 운영체제가 Linux이다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/development/shell/shell-1/><meta property="og:title" content="Shell Script란?" />
-<meta property="og:description" content="Shell Programming Shell Script의 개요 UNIX/ Linux 소개 및 특징 UNIX 1969년 AT&amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다
+#Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원생에 의해 커널이 개발된 이래, 1984년부터 리처드 스토람에 의해 추진된 GNU 프로젝트의 다양한 소프트웨어들이 합쳐진 운영체제가 Linux이다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Shell Script란?" />
+<meta property="og:description" content="Shell Programming###Shell Script의 개요##UNIX/ Linux 소개 및 특징##UNIX 1969년 AT&amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다
 벨연구소는 대학과 연구기관에 UNIX를 활용할 수 있도록 라이선스를 제공하였으며, 버클리 대학교에서는 UNIX에 네트워크 프로토콜인 TCP/IP 등 다양한 기능을 보강하여 BSD 배포본을 제작하고 이후 파생되는 많은 UNIX에 영향을 끼쳤다.
-Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원생에 의해 커널이 개발된 이래, 1984년부터 리처드 스토람에 의해 추진된 GNU 프로젝트의 다양한 소프트웨어들이 합쳐진 운영체제가 Linux이다." />
+#Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원생에 의해 커널이 개발된 이래, 1984년부터 리처드 스토람에 의해 추진된 GNU 프로젝트의 다양한 소프트웨어들이 합쳐진 운영체제가 Linux이다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/development/shell/shell-1/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Shell Script란? | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -52,7 +51,7 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1359,6 +1358,9 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1370,14 +1372,15 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
   <strong>Shell Script란?</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1458,15 +1461,36 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
 <br>
 <br>
       
-  <article class="markdown"><h1 id="shell-programming"><strong>Shell Programming</strong></h1>
-<h1 id="heading"></h1>
+  <article class="markdown"><h1 id="shell-programming">
+  <strong>Shell Programming</strong>
+  <a class="anchor" href="#shell-programming">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-1"></h1>
-<h2 id="shell-script의-개요"><strong>Shell Script의 개요</strong></h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h2 id="shell-script의-개요">
+  <strong>Shell Script의 개요</strong>
+  <a class="anchor" href="#shell-script%ec%9d%98-%ea%b0%9c%ec%9a%94">#</a>
+</h2>
 <hr>
-<h1 id="heading-2"></h1>
-<h3 id="unix-linux-소개-및-특징"><strong>UNIX/ Linux 소개 및 특징</strong></h3>
-<h1 id="heading-3"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<h3 id="unix-linux-소개-및-특징">
+  <strong>UNIX/ Linux 소개 및 특징</strong>
+  <a class="anchor" href="#unix-linux-%ec%86%8c%ea%b0%9c-%eb%b0%8f-%ed%8a%b9%ec%a7%95">#</a>
+</h3>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <ul>
 <li><strong>UNIX</strong>
 <ul>
@@ -1479,7 +1503,10 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
 </ul>
 </li>
 </ul>
-<h1 id="heading-4"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <ul>
 <li><strong>Linux</strong>
 <ul>
@@ -1495,11 +1522,23 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
 </ul>
 </li>
 </ul>
-<h1 id="heading-5"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-6"></h1>
-<h3 id="쉘의-역할-및-특징"><strong>쉘의 역할 및 특징</strong></h3>
-<h1 id="heading-7"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<h3 id="쉘의-역할-및-특징">
+  <strong>쉘의 역할 및 특징</strong>
+  <a class="anchor" href="#%ec%89%98%ec%9d%98-%ec%97%ad%ed%95%a0-%eb%b0%8f-%ed%8a%b9%ec%a7%95">#</a>
+</h3>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>쉘은 운영체제에서 커널(Kernel)과 사용자 사이의 인터페이스, 즉 가교 역할을 하는 프로그램으로, 운영체제의 내부 명령어나 응용프로그램을 실행하는 것을 지원</strong></p>
@@ -1521,11 +1560,23 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
 </ul>
 </li>
 </ul>
-<h1 id="heading-8"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-9"></h1>
-<h2 id="shell의-종류"><strong>Shell의 종류</strong></h2>
-<h1 id="heading-10"></h1>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<h2 id="shell의-종류">
+  <strong>Shell의 종류</strong>
+  <a class="anchor" href="#shell%ec%9d%98-%ec%a2%85%eb%a5%98">#</a>
+</h2>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1568,7 +1619,10 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
 </tr>
 </tbody>
 </table>
-<h1 id="heading-11"></h1>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <ul>
 <li><strong>Shell 종류 확인 명령어</strong></li>
 </ul>
@@ -1585,11 +1639,23 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>This is free software; you are free to change and redistribute it.
 </span></span><span style="display:flex;"><span>There is NO WARRANTY, to the extent permitted by law.
-</span></span></code></pre></div><h1 id="heading-12"></h1>
+</span></span></code></pre></div><h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-13"></h1>
-<h3 id="shell-script"><strong>Shell Script</strong></h3>
-<h1 id="heading-14"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h3 id="shell-script">
+  <strong>Shell Script</strong>
+  <a class="anchor" href="#shell-script">#</a>
+</h3>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>컴퓨터 사용의 편의성을 확보한 GUI 기반의 실행 환경인 Windows 초기 버전이 있었지만 DOS를 통해 구동되는 DOS의 확장 프로그램 수준이었기 때문에 일반 사용자가 쉽게 사용하기에는 어려움이 있었다.</strong></p>
@@ -1607,11 +1673,23 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
 <p><strong>쉘 : 사용자가 내린 명령어를 해석하고 그 결과를 커널에게 전달하는 프로그램</strong></p>
 </li>
 </ul>
-<h1 id="heading-15"></h1>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-16"></h1>
-<h3 id="쉘-스크립트-활용-시-이점"><strong>쉘 스크립트 활용 시 이점</strong></h3>
-<h1 id="heading-17"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h3 id="쉘-스크립트-활용-시-이점">
+  <strong>쉘 스크립트 활용 시 이점</strong>
+  <a class="anchor" href="#%ec%89%98-%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8-%ed%99%9c%ec%9a%a9-%ec%8b%9c-%ec%9d%b4%ec%a0%90">#</a>
+</h3>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <ul>
 <li><strong>반복 작업에 대한 자동화 기능</strong>
 <ul>
@@ -1624,7 +1702,10 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
 </ul>
 </li>
 </ul>
-<h1 id="heading-18"></h1>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>기존의 명령어를 사용자만의 명령어로 보완</strong>
@@ -1652,7 +1733,10 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
 </ul>
 </li>
 </ul>
-<h1 id="heading-19"></h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>손쉽고 빠른 개발 및 보완이 가능</strong>
@@ -1672,11 +1756,23 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
 </ul>
 </li>
 </ul>
-<h1 id="heading-20"></h1>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-21"></h1>
-<h3 id="posixportable-operating-system-interface"><strong>POSIX(Portable Operating System Interface)</strong></h3>
-<h1 id="heading-22"></h1>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<h3 id="posixportable-operating-system-interface">
+  <strong>POSIX(Portable Operating System Interface)</strong>
+  <a class="anchor" href="#posixportable-operating-system-interface">#</a>
+</h3>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>서로 다른 UNIX OS의 공통 API를 정리하여 이식성이 높은 유닉스 응용 프로그램을 개발하기 위한 목적으로 IEEE가 책정한 어플리케이션 인터페이스 규격</strong></p>
@@ -1688,11 +1784,23 @@ Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원�
 <p><strong>POSIX는 운영체제별 의존성 문제를 해결하기 위해 서로 다른 UNIX 운영체제에서 공통 API를 정리하여 운영체제간 이식성이 높은 UNIX 응용 프로그램을 개발하기 위한 목적으로 제정된 API 규격</strong></p>
 </li>
 </ul>
-<h1 id="heading-23"></h1>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-24"></h1>
-<h2 id="shell-script-학습-환경-구축"><strong>Shell Script 학습 환경 구축</strong></h2>
-<h1 id="heading-25"></h1>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<h2 id="shell-script-학습-환경-구축">
+  <strong>Shell Script 학습 환경 구축</strong>
+  <a class="anchor" href="#shell-script-%ed%95%99%ec%8a%b5-%ed%99%98%ea%b2%bd-%ea%b5%ac%ec%b6%95">#</a>
+</h2>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
 <ul>
 <li><strong>기본적인 준비 프로그램</strong></li>
 </ul>
@@ -1703,9 +1811,18 @@ VMware 또는 VirtualBox 설치<br>
 PuTTY를 통해 ssh 접속<br>
 PuTTY의 문자를 UTF-8로 변경</p>
 </blockquote>
-<h1 id="heading-26"></h1>
-<h3 id="운영체제-이미지-파일-다운로드"><strong>운영체제 이미지 파일 다운로드</strong></h3>
-<h1 id="heading-27"></h1>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
+<h3 id="운영체제-이미지-파일-다운로드">
+  <strong>운영체제 이미지 파일 다운로드</strong>
+  <a class="anchor" href="#%ec%9a%b4%ec%98%81%ec%b2%b4%ec%a0%9c-%ec%9d%b4%eb%af%b8%ec%a7%80-%ed%8c%8c%ec%9d%bc-%eb%8b%a4%ec%9a%b4%eb%a1%9c%eb%93%9c">#</a>
+</h3>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1762,7 +1879,10 @@ PuTTY의 문자를 UTF-8로 변경</p>
 </tr>
 </tbody>
 </table>
-<h1 id="heading-28"></h1>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
 <p> </p>
 </article>
  
@@ -1874,7 +1994,6 @@ PuTTY의 문자를 UTF-8로 변경</p>
 </body>
 </div>
 </html>
-
 
 
 

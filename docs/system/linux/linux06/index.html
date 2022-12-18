@@ -2,42 +2,39 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Linux Linux 파일처리 Linux 파일처리는 각 파일들을 읽거나, 데이터를 수정하는 데 주로 사용됩니다. file 파일의 타입을 확인합니다. 텍스트파일, 실행파일, 아카이브 파일 등의 파일 타입을 확인합니다. 주요 옵션 옵션 내용 -z 파일이 압축되어 있는 경우 압축되기 전의 파일 타입을 확인 head head는 파일의 앞 부분을 출력하는 명령어입니다. 주요 옵션 옵션 내용 -n [라인번호] 지정한 라인번호까지 출력 less, more** 텍스트 파일을 열람하는 명령어입니다.
-화면을 이동하는 명령어는 vi 편집기와 동일하며, less가 more보다 화면을 자유롭게 이동할 수 있는 기능을 가지고 있습니다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/system/linux/linux06/><meta property="og:title" content="Linux 파일처리" />
-<meta property="og:description" content="Linux Linux 파일처리 Linux 파일처리는 각 파일들을 읽거나, 데이터를 수정하는 데 주로 사용됩니다. file 파일의 타입을 확인합니다. 텍스트파일, 실행파일, 아카이브 파일 등의 파일 타입을 확인합니다. 주요 옵션 옵션 내용 -z 파일이 압축되어 있는 경우 압축되기 전의 파일 타입을 확인 head head는 파일의 앞 부분을 출력하는 명령어입니다. 주요 옵션 옵션 내용 -n [라인번호] 지정한 라인번호까지 출력 less, more** 텍스트 파일을 열람하는 명령어입니다.
-화면을 이동하는 명령어는 vi 편집기와 동일하며, less가 more보다 화면을 자유롭게 이동할 수 있는 기능을 가지고 있습니다." />
+<meta name="description" content="Linux##Linux 파일처리##Linux 파일처리는 각 파일들을 읽거나, 데이터를 수정하는 데 주로 사용됩니다. ##file##파일의 타입을 확인합니다. 텍스트파일, 실행파일, 아카이브 파일 등의 파일 타입을 확인합니다. #주요 옵션##옵션 내용 -z 파일이 압축되어 있는 경우 압축되기 전의 파일 타입을 확인 ##head##head는 파일의 앞 부분을 출력하는 명령어입니다. #주요 옵션##옵션 내용 -n [라인번호] 지정한 라인번호까지 출력 ##less, more**##텍스트 파일을 열람하는 명령어입니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Linux 파일처리" />
+<meta property="og:description" content="Linux##Linux 파일처리##Linux 파일처리는 각 파일들을 읽거나, 데이터를 수정하는 데 주로 사용됩니다. ##file##파일의 타입을 확인합니다. 텍스트파일, 실행파일, 아카이브 파일 등의 파일 타입을 확인합니다. #주요 옵션##옵션 내용 -z 파일이 압축되어 있는 경우 압축되기 전의 파일 타입을 확인 ##head##head는 파일의 앞 부분을 출력하는 명령어입니다. #주요 옵션##옵션 내용 -n [라인번호] 지정한 라인번호까지 출력 ##less, more**##텍스트 파일을 열람하는 명령어입니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/system/linux/linux06/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Linux 파일처리 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -50,7 +47,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1377,6 +1374,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1388,14 +1388,15 @@
   <strong>Linux 파일처리</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1508,26 +1509,59 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="linux"><strong>Linux</strong></h1>
+  <article class="markdown"><h1 id="linux">
+  <strong>Linux</strong>
+  <a class="anchor" href="#linux">#</a>
+</h1>
 <hr>
-<h1 id="heading"></h1>
-<h2 id="linux-파일처리"><strong>Linux 파일처리</strong></h2>
-<h1 id="heading-1"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="linux-파일처리">
+  <strong>Linux 파일처리</strong>
+  <a class="anchor" href="#linux-%ed%8c%8c%ec%9d%bc%ec%b2%98%eb%a6%ac">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <ul>
 <li><strong>Linux 파일처리는 각 파일들을 읽거나, 데이터를 수정하는 데 주로 사용됩니다.</strong></li>
 </ul>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-3"></h1>
-<h2 id="file"><strong>file</strong></h2>
-<h1 id="heading-4"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h2 id="file">
+  <strong>file</strong>
+  <a class="anchor" href="#file">#</a>
+</h2>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <ul>
 <li><strong>파일의 타입을 확인합니다. 텍스트파일, 실행파일, 아카이브 파일 등의 파일 타입을 확인합니다.</strong></li>
 </ul>
-<h1 id="heading-5"></h1>
-<h3 id="주요-옵션"><strong>주요 옵션</strong></h3>
-<h1 id="heading-6"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<h3 id="주요-옵션">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98">#</a>
+</h3>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1542,18 +1576,39 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-7"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-8"></h1>
-<h2 id="head"><strong>head</strong></h2>
-<h1 id="heading-9"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<h2 id="head">
+  <strong>head</strong>
+  <a class="anchor" href="#head">#</a>
+</h2>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <ul>
 <li><strong>head는 파일의 앞 부분을 출력하는 명령어입니다.</strong></li>
 </ul>
-<h1 id="heading-10"></h1>
-<h3 id="주요-옵션-1"><strong>주요 옵션</strong></h3>
-<h1 id="heading-11"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="주요-옵션-1">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-1">#</a>
+</h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1568,12 +1623,24 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-12"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-13"></h1>
-<h2 id="less-more"><em>less, more</em>**</h2>
-<h1 id="heading-14"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h2 id="less-more">
+  <em>less, more</em>**
+  <a class="anchor" href="#less-more">#</a>
+</h2>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>텍스트 파일을 열람하는 명령어입니다.</strong></p>
@@ -1582,9 +1649,18 @@
 <p><strong>화면을 이동하는 명령어는 vi 편집기와 동일하며, less가 more보다 화면을 자유롭게 이동할 수 있는 기능을 가지고 있습니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-15"></h1>
-<h3 id="주요-옵션-2"><strong>주요 옵션</strong></h3>
-<h1 id="heading-16"></h1>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<h3 id="주요-옵션-2">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-2">#</a>
+</h3>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1599,18 +1675,39 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-17"></h1>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-18"></h1>
-<h2 id="split"><strong>split</strong></h2>
-<h1 id="heading-19"></h1>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<h2 id="split">
+  <strong>split</strong>
+  <a class="anchor" href="#split">#</a>
+</h2>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 <ul>
 <li><strong>split는 파일을 분할하는 명령어로, 파일을 지정한행의 길이나 사이즈로 분할시키는 명령어입니다.</strong></li>
 </ul>
-<h1 id="heading-20"></h1>
-<h3 id="주요-옵션-3"><strong>주요 옵션</strong></h3>
-<h1 id="heading-21"></h1>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<h3 id="주요-옵션-3">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-3">#</a>
+</h3>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1633,9 +1730,18 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-22"></h1>
-<h3 id="사용예제"><strong>사용예제</strong></h3>
-<h1 id="heading-23"></h1>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<h3 id="사용예제">
+  <strong>사용예제</strong>
+  <a class="anchor" href="#%ec%82%ac%ec%9a%a9%ec%98%88%ec%a0%9c">#</a>
+</h3>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ split -l <span style="color:#ae81ff">100</span> origin.txt
 </span></span><span style="display:flex;"><span>xaa
 </span></span><span style="display:flex;"><span>xab
@@ -1653,18 +1759,39 @@
 </span></span><span style="display:flex;"><span>x0002
 </span></span><span style="display:flex;"><span>x0003
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># origintxt 파일을 100줄 단위로 나누는데, 파일이름을 숫자형식으로 하고, 파일이름의 딜리미터 크기는 4입니다. </span>
-</span></span></code></pre></div><h1 id="heading-24"></h1>
+</span></span></code></pre></div><h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-25"></h1>
-<h2 id="tail"><strong>tail</strong></h2>
-<h1 id="heading-26"></h1>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<h2 id="tail">
+  <strong>tail</strong>
+  <a class="anchor" href="#tail">#</a>
+</h2>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
 <ul>
 <li><strong>tail은 <code>head 반대</code>로 파일의 뒷부분을 출력하는 명령어입니다.</strong></li>
 </ul>
-<h1 id="heading-27"></h1>
-<h3 id="주요-옵션-4"><strong>주요 옵션</strong></h3>
-<h1 id="heading-28"></h1>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
+<h3 id="주요-옵션-4">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-4">#</a>
+</h3>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1683,8 +1810,14 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-29"></h1>
-<h3 id="사용예제-1"><strong>사용예제</strong></h3>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
+<h3 id="사용예제-1">
+  <strong>사용예제</strong>
+  <a class="anchor" href="#%ec%82%ac%ec%9a%a9%ec%98%88%ec%a0%9c-1">#</a>
+</h3>
 <table>
 <thead>
 <tr>
@@ -1699,12 +1832,24 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-30"></h1>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-31"></h1>
-<h2 id="xxd"><strong>xxd</strong></h2>
-<h1 id="heading-32"></h1>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
+<h2 id="xxd">
+  <strong>xxd</strong>
+  <a class="anchor" href="#xxd">#</a>
+</h2>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>xxd는 파일의 헥사 덤프를 확인하느 명령어입니다.</strong></p>
@@ -1713,9 +1858,18 @@
 <p><strong>파일을 16진수 또는 2진수 형태로 확인할 수 있습니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-33"></h1>
-<h3 id="주요-옵션-5"><strong>주요 옵션</strong></h3>
-<h1 id="heading-34"></h1>
+<h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
+<h3 id="주요-옵션-5">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-5">#</a>
+</h3>
+<h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1730,7 +1884,10 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-35"></h1>
+<h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
 </article>
  
       
@@ -1873,7 +2030,6 @@
 </body>
 </div>
 </html>
-
 
 
 

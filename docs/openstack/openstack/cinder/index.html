@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="블록 스토리지 서비스 : Cinder 블록 스토리지 서비스 : Cinder Cinder은 bloack storage 서비스로 storage를 가상화 시켜 여러 스토리지로 사용하거나, 공유할 수 있는 서비스 Cinder은 하나 이상의 노드에서 실행되도록 설계되었으며, SQL 기반 중앙 데이터베이스를 사용 Cinder은 집계 시스템을 사용하여 여러 데이터 저장소로 이동이 가능 Cinder 구성요소 구성요소 역할 DB 데이터저장을 위한 SQL 데이터베이스로, 모든 구성요소에서 사용 Web Dashboard API와 통신할 수 있는 외부 인터페이스 api http 요청을 받고 명령을 변환하여 대기열 또는 http를 통해 다른 구성요소와 통신 Auth Manager 사용자/ 프로젝트/ 역할에 따라, 리소스의 대한 허용을 결정 Scheduler 볼륨을 가져올 호스트를 결정 volume 동적으로 부착 가능한 블록 장치를 관리 backup 블록 저장 장치의 백업을 관리 외부 인터페이스인 dash-board에서 요청을 보내면, Cinder-api가 keyston에게 인증을 확인하기 위해 요청을 보낸다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/openstack/openstack/cinder/><meta property="og:title" content="Cinder" />
-<meta property="og:description" content="블록 스토리지 서비스 : Cinder 블록 스토리지 서비스 : Cinder Cinder은 bloack storage 서비스로 storage를 가상화 시켜 여러 스토리지로 사용하거나, 공유할 수 있는 서비스 Cinder은 하나 이상의 노드에서 실행되도록 설계되었으며, SQL 기반 중앙 데이터베이스를 사용 Cinder은 집계 시스템을 사용하여 여러 데이터 저장소로 이동이 가능 Cinder 구성요소 구성요소 역할 DB 데이터저장을 위한 SQL 데이터베이스로, 모든 구성요소에서 사용 Web Dashboard API와 통신할 수 있는 외부 인터페이스 api http 요청을 받고 명령을 변환하여 대기열 또는 http를 통해 다른 구성요소와 통신 Auth Manager 사용자/ 프로젝트/ 역할에 따라, 리소스의 대한 허용을 결정 Scheduler 볼륨을 가져올 호스트를 결정 volume 동적으로 부착 가능한 블록 장치를 관리 backup 블록 저장 장치의 백업을 관리 외부 인터페이스인 dash-board에서 요청을 보내면, Cinder-api가 keyston에게 인증을 확인하기 위해 요청을 보낸다." />
+<meta name="description" content="블록 스토리지 서비스 : Cinder##블록 스토리지 서비스 : Cinder##Cinder은 bloack storage 서비스로 storage를 가상화 시켜 여러 스토리지로 사용하거나, 공유할 수 있는 서비스 Cinder은 하나 이상의 노드에서 실행되도록 설계되었으며, SQL 기반 중앙 데이터베이스를 사용 Cinder은 집계 시스템을 사용하여 여러 데이터 저장소로 이동이 가능 ##Cinder 구성요소###구성요소 역할 DB 데이터저장을 위한 SQL 데이터베이스로, 모든 구성요소에서 사용 Web Dashboard API와 통신할 수 있는 외부 인터페이스 api http 요청을 받고 명령을 변환하여 대기열 또는 http를 통해 다른 구성요소와 통신 Auth Manager 사용자/ 프로젝트/ 역할에 따라, 리소스의 대한 허용을 결정 Scheduler 볼륨을 가져올 호스트를 결정 volume 동적으로 부착 가능한 블록 장치를 관리 backup 블록 저장 장치의 백업을 관리 #외부 인터페이스인 dash-board에서 요청을 보내면, Cinder-api가 keyston에게 인증을 확인하기 위해 요청을 보낸다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Cinder" />
+<meta property="og:description" content="블록 스토리지 서비스 : Cinder##블록 스토리지 서비스 : Cinder##Cinder은 bloack storage 서비스로 storage를 가상화 시켜 여러 스토리지로 사용하거나, 공유할 수 있는 서비스 Cinder은 하나 이상의 노드에서 실행되도록 설계되었으며, SQL 기반 중앙 데이터베이스를 사용 Cinder은 집계 시스템을 사용하여 여러 데이터 저장소로 이동이 가능 ##Cinder 구성요소###구성요소 역할 DB 데이터저장을 위한 SQL 데이터베이스로, 모든 구성요소에서 사용 Web Dashboard API와 통신할 수 있는 외부 인터페이스 api http 요청을 받고 명령을 변환하여 대기열 또는 http를 통해 다른 구성요소와 통신 Auth Manager 사용자/ 프로젝트/ 역할에 따라, 리소스의 대한 허용을 결정 Scheduler 볼륨을 가져올 호스트를 결정 volume 동적으로 부착 가능한 블록 장치를 관리 backup 블록 저장 장치의 백업을 관리 #외부 인터페이스인 dash-board에서 요청을 보내면, Cinder-api가 keyston에게 인증을 확인하기 위해 요청을 보낸다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/openstack/openstack/cinder/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Cinder | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -48,7 +47,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1325,6 +1324,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1336,14 +1338,15 @@
   <strong>Cinder</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1392,23 +1395,50 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="블록-스토리지-서비스--cinder"><strong>블록 스토리지 서비스 : Cinder</strong></h1>
+  <article class="markdown"><h1 id="블록-스토리지-서비스--cinder">
+  <strong>블록 스토리지 서비스 : Cinder</strong>
+  <a class="anchor" href="#%eb%b8%94%eb%a1%9d-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%ec%84%9c%eb%b9%84%ec%8a%a4--cinder">#</a>
+</h1>
 <hr>
-<h1 id="heading"></h1>
-<h2 id="블록-스토리지-서비스--cinder-1"><strong>블록 스토리지 서비스 : Cinder</strong></h2>
-<h1 id="heading-1"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="블록-스토리지-서비스--cinder-1">
+  <strong>블록 스토리지 서비스 : Cinder</strong>
+  <a class="anchor" href="#%eb%b8%94%eb%a1%9d-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%ec%84%9c%eb%b9%84%ec%8a%a4--cinder-1">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <ul>
 <li><strong>Cinder은 bloack storage 서비스로 storage를 가상화 시켜 여러 스토리지로 사용하거나, 공유할 수 있는 서비스</strong></li>
 <li><strong>Cinder은 하나 이상의 노드에서 실행되도록 설계되었으며, SQL 기반 중앙 데이터베이스를 사용</strong></li>
 <li><strong>Cinder은 집계 시스템을 사용하여 여러 데이터 저장소로 이동이 가능</strong></li>
 </ul>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-3"></h1>
-<h3 id="cinder-구성요소"><strong>Cinder 구성요소</strong></h3>
-<h1 id="heading-4"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h3 id="cinder-구성요소">
+  <strong>Cinder 구성요소</strong>
+  <a class="anchor" href="#cinder-%ea%b5%ac%ec%84%b1%ec%9a%94%ec%86%8c">#</a>
+</h3>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <p><img src="/Openstack/Cinder/Cinder02.png" alt="Cinder" /></p>
-<h1 id="heading-5"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1447,18 +1477,36 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-6"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <ul>
 <li><strong>외부 인터페이스인 dash-board에서 요청을 보내면, Cinder-api가 keyston에게 인증을 확인하기 위해 요청을 보낸다.</strong></li>
 <li><strong>인증이 완료되면 DB를 읽어 알맞은 리소스를 생성, 혹은 할당하는 프로세스를 가진다.</strong></li>
 </ul>
-<h1 id="heading-7"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-8"></h1>
-<h3 id="cinder의-논리-아키텍처"><strong>Cinder의 논리 아키텍처</strong></h3>
-<h1 id="heading-9"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<h3 id="cinder의-논리-아키텍처">
+  <strong>Cinder의 논리 아키텍처</strong>
+  <a class="anchor" href="#cinder%ec%9d%98-%eb%85%bc%eb%a6%ac-%ec%95%84%ed%82%a4%ed%85%8d%ec%b2%98">#</a>
+</h3>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <p><img src="/Openstack/Cinder/Cinder01.png" alt="Cinder" /></p>
-<h1 id="heading-10"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1493,18 +1541,33 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-11"></h1>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <ul>
 <li><strong>Nova에서 생성된 인스턴스에서 확장해서 사용할 수 있는 저장 공간을 생성, 삭제하고 인스턴스에 연결 할 수 있는 기능을 제공</strong></li>
 <li><strong>Cinder는 물리 하드 디스크를 LVM(Logical Volume Manager)으로 설정</strong></li>
 <li><strong>설정된 LVM은 cinder-conf와 nova.conf의 환경을 설정해서 cinder-volume을 할당</strong></li>
 <li><strong>cinder-api로 생성된 볼륨은 단일 인스턴스 또는 여러 인스턴스에 할당 할 수 있음</strong></li>
 </ul>
-<h1 id="heading-12"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-13"></h1>
-<h3 id="cinder-driver-type"><strong>Cinder driver type</strong></h3>
-<h1 id="heading-14"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h3 id="cinder-driver-type">
+  <strong>Cinder driver type</strong>
+  <a class="anchor" href="#cinder-driver-type">#</a>
+</h3>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <ul>
 <li><strong>Cinder 기본 블록 스토리지 드라이버는 iSCSI 기반의 LVM</strong>
 <ul>
@@ -1512,11 +1575,17 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-15"></h1>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <ul>
 <li><strong>블록 장치는 물리 볼륨으로 초기화해야 하며, 논리 볼륨으로 생성하려면 물리 볼륨을 볼륨 그룹으로 통합해야 함</strong></li>
 </ul>
-<h1 id="heading-16"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
 <p> </p>
 </article>
  
@@ -1596,7 +1665,6 @@
 </body>
 </div>
 </html>
-
 
 
 

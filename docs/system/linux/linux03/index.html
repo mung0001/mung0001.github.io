@@ -2,48 +2,47 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="**Linux ** Linux 압축 Linux는 여러 압축포맷을 지원하며, 이를 통해 범용성있는 활용범위를 가지고 있습니다.
+<meta name="description" content="**Linux **##Linux 압축##Linux는 여러 압축포맷을 지원하며, 이를 통해 범용성있는 활용범위를 가지고 있습니다.
 대표적인 사용예시로는 Linux는 압축을 통해 전체적인 백업 및 복구를 진행할 수 있습니다.
-gzip, gunzip, zcat gzip은 파일을 압축할 때 gunzip은 파일의 압축을 해제할 때 사용됩니다.
+##gzip, gunzip, zcat##gzip은 파일을 압축할 때 gunzip은 파일의 압축을 해제할 때 사용됩니다.
 압축한 파일은 .gz의 확장자를 가지며, 파일, 디렉터리 단위로 압축되므로 여러 개의 파일을 압축하기 위해서는 tar 명령어를 사용합니다.
-주요 옵션 옵션 내용 -r 디렉터리 압축 -d 압축을 해제, gunzip과 동일한 동작 -l 압축 정보를 표시 -c gzip 파일을 읽어 표준 출력으로 출력, zcat과 동일하게 동작 tar tar은 여러 개의 파일을 모아 하나의 파일로 압축합니다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/system/linux/linux03/><meta property="og:title" content="Linux 압축" />
-<meta property="og:description" content="**Linux ** Linux 압축 Linux는 여러 압축포맷을 지원하며, 이를 통해 범용성있는 활용범위를 가지고 있습니다.
+#주요 옵션##옵션 내용 -r 디렉터리 압축 -d 압축을 해제, gunzip과 동일한 동작 -l 압축 정보를 표시 -c gzip 파일을 읽어 표준 출력으로 출력, zcat과 동일하게 동작 ##tar##tar은 여러 개의 파일을 모아 하나의 파일로 압축합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Linux 압축" />
+<meta property="og:description" content="**Linux **##Linux 압축##Linux는 여러 압축포맷을 지원하며, 이를 통해 범용성있는 활용범위를 가지고 있습니다.
 대표적인 사용예시로는 Linux는 압축을 통해 전체적인 백업 및 복구를 진행할 수 있습니다.
-gzip, gunzip, zcat gzip은 파일을 압축할 때 gunzip은 파일의 압축을 해제할 때 사용됩니다.
+##gzip, gunzip, zcat##gzip은 파일을 압축할 때 gunzip은 파일의 압축을 해제할 때 사용됩니다.
 압축한 파일은 .gz의 확장자를 가지며, 파일, 디렉터리 단위로 압축되므로 여러 개의 파일을 압축하기 위해서는 tar 명령어를 사용합니다.
-주요 옵션 옵션 내용 -r 디렉터리 압축 -d 압축을 해제, gunzip과 동일한 동작 -l 압축 정보를 표시 -c gzip 파일을 읽어 표준 출력으로 출력, zcat과 동일하게 동작 tar tar은 여러 개의 파일을 모아 하나의 파일로 압축합니다." />
+#주요 옵션##옵션 내용 -r 디렉터리 압축 -d 압축을 해제, gunzip과 동일한 동작 -l 압축 정보를 표시 -c gzip 파일을 읽어 표준 출력으로 출력, zcat과 동일하게 동작 ##tar##tar은 여러 개의 파일을 모아 하나의 파일로 압축합니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/system/linux/linux03/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Linux 압축 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -56,7 +55,7 @@ gzip, gunzip, zcat gzip은 파일을 압축할 때 gunzip은 파일의 압축을
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1383,6 +1382,9 @@ gzip, gunzip, zcat gzip은 파일을 압축할 때 gunzip은 파일의 압축을
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1394,14 +1396,15 @@ gzip, gunzip, zcat gzip은 파일을 압축할 때 gunzip은 파일의 압축을
   <strong>Linux 압축</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1458,11 +1461,23 @@ gzip, gunzip, zcat gzip은 파일을 압축할 때 gunzip은 파일의 압축을
 <br>
 <br>
       
-  <article class="markdown"><h1 id="linux-">**Linux **</h1>
+  <article class="markdown"><h1 id="linux-">
+  **Linux **
+  <a class="anchor" href="#linux-">#</a>
+</h1>
 <hr>
-<h1 id="heading"></h1>
-<h2 id="linux-압축"><strong>Linux 압축</strong></h2>
-<h1 id="heading-1"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="linux-압축">
+  <strong>Linux 압축</strong>
+  <a class="anchor" href="#linux-%ec%95%95%ec%b6%95">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Linux는 여러 압축포맷을 지원하며, 이를 통해 범용성있는 활용범위를 가지고 있습니다.</strong></p>
@@ -1471,12 +1486,24 @@ gzip, gunzip, zcat gzip은 파일을 압축할 때 gunzip은 파일의 압축을
 <p><strong>대표적인 사용예시로는 Linux는 압축을 통해 전체적인 백업 및 복구를 진행할 수 있습니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-3"></h1>
-<h2 id="gzip-gunzip-zcat"><strong>gzip, gunzip, zcat</strong></h2>
-<h1 id="heading-4"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h2 id="gzip-gunzip-zcat">
+  <strong>gzip, gunzip, zcat</strong>
+  <a class="anchor" href="#gzip-gunzip-zcat">#</a>
+</h2>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>gzip은 파일을 압축할 때 gunzip은 파일의 압축을 해제할 때 사용됩니다.</strong></p>
@@ -1485,9 +1512,18 @@ gzip, gunzip, zcat gzip은 파일을 압축할 때 gunzip은 파일의 압축을
 <p><strong>압축한 파일은 .gz의 확장자를 가지며, 파일, 디렉터리 단위로 압축되므로 여러 개의 파일을 압축하기 위해서는 tar 명령어를 사용합니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-5"></h1>
-<h3 id="주요-옵션"><strong>주요 옵션</strong></h3>
-<h1 id="heading-6"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<h3 id="주요-옵션">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98">#</a>
+</h3>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1514,18 +1550,39 @@ gzip, gunzip, zcat gzip은 파일을 압축할 때 gunzip은 파일의 압축을
 </tr>
 </tbody>
 </table>
-<h1 id="heading-7"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-8"></h1>
-<h2 id="tar"><strong>tar</strong></h2>
-<h1 id="heading-9"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<h2 id="tar">
+  <strong>tar</strong>
+  <a class="anchor" href="#tar">#</a>
+</h2>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <ul>
 <li><strong>tar은 여러 개의 파일을 모아 하나의 파일로 압축합니다.</strong></li>
 </ul>
-<h1 id="heading-10"></h1>
-<h3 id="주요-옵션-1"><strong>주요 옵션</strong></h3>
-<h1 id="heading-11"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="주요-옵션-1">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-1">#</a>
+</h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1560,10 +1617,22 @@ gzip, gunzip, zcat gzip은 파일을 압축할 때 gunzip은 파일의 압축을
 </tr>
 </tbody>
 </table>
-<h1 id="heading-12"></h1>
-<h1 id="heading-13"></h1>
-<h3 id="사용예제"><strong>사용예제</strong></h3>
-<h1 id="heading-14"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h3 id="사용예제">
+  <strong>사용예제</strong>
+  <a class="anchor" href="#%ec%82%ac%ec%9a%a9%ec%98%88%ec%a0%9c">#</a>
+</h3>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar -cf archive.tar foo bar
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># foo, bar를 archive.tar로 만듬 </span>
 </span></span><span style="display:flex;"><span>
@@ -1581,7 +1650,10 @@ gzip, gunzip, zcat gzip은 파일을 압축할 때 gunzip은 파일의 압축을
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ tar -zxvf archive.tar.gz
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># archive.tar.gz 압축 파일의 묶을 해제 </span>
-</span></span></code></pre></div><h1 id="heading-15"></h1>
+</span></span></code></pre></div><h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 </article>
  
       
@@ -1668,7 +1740,6 @@ gzip, gunzip, zcat gzip은 파일을 압축할 때 gunzip은 파일의 압축을
 </body>
 </div>
 </html>
-
 
 
 

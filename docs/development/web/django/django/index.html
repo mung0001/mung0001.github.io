@@ -2,15 +2,14 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Djnago Djnago 설치 설치환경 Ubuntu 18.04
+<meta name="description" content="Djnago#Djnago 설치##설치환경#Ubuntu 18.04
 mysql 5.7
 python 3.6.8
 pip3 9.0.3
 django 2.1
-Ubuntu 설정 apt update -y
+#Ubuntu 설정#apt update -y
 apt upgrade -y
 apt install python3 -y
 apt install python3-pip -y
@@ -18,22 +17,19 @@ apt install gcc -y
 apt install python-dev -y
 apt install libmysqlclient-dev -y
 apt install rpm -y
-mysql 설치 wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+#mysql 설치#wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 rpm -ivh mysql57-community-release-el7-11.noarch.rpm
 apt -y install mysql-server
 systemctl start mysql
-mysql 임시 비밀번호와 비밀번호 변경 임시 비밀번호 입력 후 변경할 비밀번호를 입력">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/development/web/django/django/><meta property="og:title" content="Django Install" />
-<meta property="og:description" content="Djnago Djnago 설치 설치환경 Ubuntu 18.04
+#mysql 임시 비밀번호와 비밀번호 변경#임시 비밀번호 입력 후 변경할 비밀번호를 입력">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Django Install" />
+<meta property="og:description" content="Djnago#Djnago 설치##설치환경#Ubuntu 18.04
 mysql 5.7
 python 3.6.8
 pip3 9.0.3
 django 2.1
-Ubuntu 설정 apt update -y
+#Ubuntu 설정#apt update -y
 apt upgrade -y
 apt install python3 -y
 apt install python3-pip -y
@@ -41,35 +37,38 @@ apt install gcc -y
 apt install python-dev -y
 apt install libmysqlclient-dev -y
 apt install rpm -y
-mysql 설치 wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+#mysql 설치#wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 rpm -ivh mysql57-community-release-el7-11.noarch.rpm
 apt -y install mysql-server
 systemctl start mysql
-mysql 임시 비밀번호와 비밀번호 변경 임시 비밀번호 입력 후 변경할 비밀번호를 입력" />
+#mysql 임시 비밀번호와 비밀번호 변경#임시 비밀번호 입력 후 변경할 비밀번호를 입력" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/development/web/django/django/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Django Install | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -82,7 +81,7 @@ mysql 임시 비밀번호와 비밀번호 변경 임시 비밀번호 입력 후 
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1358,6 +1357,9 @@ mysql 임시 비밀번호와 비밀번호 변경 임시 비밀번호 입력 후 
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1369,14 +1371,15 @@ mysql 임시 비밀번호와 비밀번호 변경 임시 비밀번호 입력 후 
   <strong>Django Install</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1466,11 +1469,23 @@ mysql 임시 비밀번호와 비밀번호 변경 임시 비밀번호 입력 후 
 <br>
 <br>
       
-  <article class="markdown"><h1 id="djnago"><strong>Djnago</strong></h1>
+  <article class="markdown"><h1 id="djnago">
+  <strong>Djnago</strong>
+  <a class="anchor" href="#djnago">#</a>
+</h1>
 <hr>
-<h2 id="djnago-설치"><strong>Djnago 설치</strong></h2>
-<h1 id="heading"></h1>
-<h3 id="설치환경"><strong>설치환경</strong></h3>
+<h2 id="djnago-설치">
+  <strong>Djnago 설치</strong>
+  <a class="anchor" href="#djnago-%ec%84%a4%ec%b9%98">#</a>
+</h2>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h3 id="설치환경">
+  <strong>설치환경</strong>
+  <a class="anchor" href="#%ec%84%a4%ec%b9%98%ed%99%98%ea%b2%bd">#</a>
+</h3>
 <ul>
 <li>
 <p><strong>Ubuntu 18.04</strong></p>
@@ -1488,8 +1503,14 @@ mysql 임시 비밀번호와 비밀번호 변경 임시 비밀번호 입력 후 
 <p><strong>django 2.1</strong></p>
 </li>
 </ul>
-<h1 id="heading-1"></h1>
-<h3 id="ubuntu-설정"><strong>Ubuntu 설정</strong></h3>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h3 id="ubuntu-설정">
+  <strong>Ubuntu 설정</strong>
+  <a class="anchor" href="#ubuntu-%ec%84%a4%ec%a0%95">#</a>
+</h3>
 <ul>
 <li>
 <p>apt update -y</p>
@@ -1516,9 +1537,15 @@ mysql 임시 비밀번호와 비밀번호 변경 임시 비밀번호 입력 후 
 <p>apt install rpm -y</p>
 </li>
 </ul>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <hr>
-<h3 id="mysql-설치"><strong>mysql 설치</strong></h3>
+<h3 id="mysql-설치">
+  <strong>mysql 설치</strong>
+  <a class="anchor" href="#mysql-%ec%84%a4%ec%b9%98">#</a>
+</h3>
 <ul>
 <li>
 <p>wget <a href="https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm">https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</a></p>
@@ -1533,8 +1560,14 @@ mysql 임시 비밀번호와 비밀번호 변경 임시 비밀번호 입력 후 
 <p>systemctl start mysql</p>
 </li>
 </ul>
-<h1 id="heading-3"></h1>
-<h3 id="mysql-임시-비밀번호와-비밀번호-변경"><strong>mysql 임시 비밀번호와 비밀번호 변경</strong></h3>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h3 id="mysql-임시-비밀번호와-비밀번호-변경">
+  <strong>mysql 임시 비밀번호와 비밀번호 변경</strong>
+  <a class="anchor" href="#mysql-%ec%9e%84%ec%8b%9c-%eb%b9%84%eb%b0%80%eb%b2%88%ed%98%b8%ec%99%80-%eb%b9%84%eb%b0%80%eb%b2%88%ed%98%b8-%eb%b3%80%ea%b2%bd">#</a>
+</h3>
 <ul>
 <li>
 <p>임시 비밀번호 입력 후 변경할 비밀번호를 입력</p>
@@ -1549,11 +1582,20 @@ mysql 임시 비밀번호와 비밀번호 변경 임시 비밀번호 입력 후 
 <p>mysql -u root -p 비밀번호 입력</p>
 </li>
 </ul>
-<h1 id="heading-4"></h1>
-<h3 id="db-사용을-위한-사용자-추가"><strong>DB 사용을 위한 사용자 추가</strong></h3>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="db-사용을-위한-사용자-추가">
+  <strong>DB 사용을 위한 사용자 추가</strong>
+  <a class="anchor" href="#db-%ec%82%ac%ec%9a%a9%ec%9d%84-%ec%9c%84%ed%95%9c-%ec%82%ac%ec%9a%a9%ec%9e%90-%ec%b6%94%ea%b0%80">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span>mysql<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">create</span> <span style="color:#66d9ef">user</span> <span style="color:#e6db74">&#39;Django&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;localhost&#39;</span> <span style="color:#66d9ef">identified</span> <span style="color:#66d9ef">by</span> <span style="color:#e6db74">&#39;qwer1234&#39;</span>;
 </span></span><span style="display:flex;"><span>mysql<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">grant</span> <span style="color:#66d9ef">all</span> <span style="color:#66d9ef">privileges</span> <span style="color:#66d9ef">on</span> <span style="color:#f92672">*</span>.<span style="color:#f92672">*</span> <span style="color:#66d9ef">to</span> <span style="color:#e6db74">&#39;Django&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;localhost&#39;</span>;
-</span></span></code></pre></div><h3 id="한글-입력-출력-설정"><strong>한글 입력 출력 설정</strong></h3>
+</span></span></code></pre></div><h3 id="한글-입력-출력-설정">
+  <strong>한글 입력 출력 설정</strong>
+  <a class="anchor" href="#%ed%95%9c%ea%b8%80-%ec%9e%85%eb%a0%a5-%ec%b6%9c%eb%a0%a5-%ec%84%a4%ec%a0%95">#</a>
+</h3>
 <ol>
 <li><strong>mysql을 실행하여 아래와 같이 입력</strong></li>
 </ol>
@@ -1569,7 +1611,10 @@ mysql 임시 비밀번호와 비밀번호 변경 임시 비밀번호 입력 후 
 <p>영구적으로 적용하기 위해 config파일을 수정할 필요가 있다.</p>
 </li>
 </ul>
-<h1 id="heading-5"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <ol start="2">
 <li><strong>/etc/mysql/mysql.conf.d/ 에 다음과 같은 파일들을 추가한다.</strong></li>
 </ol>
@@ -1588,7 +1633,10 @@ mysql 임시 비밀번호와 비밀번호 변경 임시 비밀번호 입력 후 
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e"># mysql.cnf
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[mysql]
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">default</span><span style="color:#f92672">-</span>character<span style="color:#f92672">-</span>set<span style="color:#f92672">=</span>utf8
-</span></span></code></pre></div><h1 id="heading-6"></h1>
+</span></span></code></pre></div><h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <ol start="3">
 <li><strong>mysql 재시작 및 확인</strong></li>
 </ol>
@@ -1596,34 +1644,58 @@ mysql 임시 비밀번호와 비밀번호 변경 임시 비밀번호 입력 후 
 </span></span><span style="display:flex;"><span>mysql <span style="color:#f92672">-</span>u root <span style="color:#f92672">-</span>p
 </span></span><span style="display:flex;"><span>mysql<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">show</span> variables <span style="color:#66d9ef">like</span> <span style="color:#e6db74">&#39;c%&#39;</span>;
 </span></span><span style="display:flex;"><span>mysql<span style="color:#f92672">&gt;</span> status;
-</span></span></code></pre></div><h1 id="heading-7"></h1>
+</span></span></code></pre></div><h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <hr>
-<h2 id="개발환경-설정"><strong>개발환경 설정</strong></h2>
+<h2 id="개발환경-설정">
+  <strong>개발환경 설정</strong>
+  <a class="anchor" href="#%ea%b0%9c%eb%b0%9c%ed%99%98%ea%b2%bd-%ec%84%a4%ec%a0%95">#</a>
+</h2>
 <hr>
-<h1 id="heading-8"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <p><strong>virtualenv 환경</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>pip3 install <span style="color:#f92672">--</span>user virtualenv
 </span></span><span style="display:flex;"><span>source .profile
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># root 사용자면 안됨 X 일반유저 프로파일
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>virtualenv ve
-</span></span></code></pre></div><h1 id="heading-9"></h1>
+</span></span></code></pre></div><h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <p><strong>virtualenv 활성화 비활성화</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>source ve<span style="color:#f92672">/</span>bin<span style="color:#f92672">/</span>activate
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 활성화
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>(ve) deactivate
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 비활성화
-</span></span></span></code></pre></div><h1 id="heading-10"></h1>
+</span></span></span></code></pre></div><h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <p><strong>django 2.1 설치</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>(ve) pip3 install django<span style="color:#f92672">==</span><span style="color:#ae81ff">2.1</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># ve가상환경에서 pip3 ( python3 )로 장고 설치
-</span></span></span></code></pre></div><h1 id="heading-11"></h1>
+</span></span></span></code></pre></div><h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <p><strong>virtualenv 환경에 설치된 목록 확인</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>(ve) pip3 freeze 
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># virtualenv  목록확인
-</span></span></span></code></pre></div><h1 id="heading-12"></h1>
+</span></span></span></code></pre></div><h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p><strong>django에서 mysql을 사용하기위한 모듈 설치</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>(ve) pip3 install mysqlclient
-</span></span></code></pre></div><h1 id="heading-13"></h1>
+</span></span></code></pre></div><h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
 <blockquote class="book-hint danger">
   <strong>오류가 난다면 아래를 설치한 뒤 다시 시도한다.</strong><br>
 apt install -y gcc<br>
@@ -1631,26 +1703,53 @@ apt install -y python-devel mysql-devel<br>
 apt install -y python3-devel
 </blockquote>
 
-<h1 id="heading-14"></h1>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-15"></h1>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-16"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
 <p> </p>
-<h1 id="django-project"><strong>Django Project</strong></h1>
+<h1 id="django-project">
+  <strong>Django Project</strong>
+  <a class="anchor" href="#django-project">#</a>
+</h1>
 <hr>
-<h2 id="django-project-start"><strong>Django Project start</strong></h2>
-<h1 id="heading-17"></h1>
-<h3 id="startproject"><strong>startproject</strong></h3>
+<h2 id="django-project-start">
+  <strong>Django Project start</strong>
+  <a class="anchor" href="#django-project-start">#</a>
+</h2>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<h3 id="startproject">
+  <strong>startproject</strong>
+  <a class="anchor" href="#startproject">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>(ve) django<span style="color:#f92672">-</span>admin startproject Django
 </span></span><span style="display:flex;"><span>(ve) cd Django
-</span></span></code></pre></div><h1 id="heading-18"></h1>
+</span></span></code></pre></div><h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
 <ul>
 <li>테스트 서버 실행</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>.<span style="color:#f92672">/</span>manage.py runserver <span style="color:#ae81ff">0.0.0.0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">8000</span>
 </span></span></code></pre></div><p><img src="/Django/Django.png" alt="Django" /></p>
-<h1 id="heading-19"></h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 <ul>
 <li>내부가 아닌 다른 곳에서 접속을 원하는 경우
 <ul>
@@ -1660,9 +1759,18 @@ apt install -y python3-devel
 </li>
 </ul>
 <hr>
-<h1 id="heading-20"></h1>
-<h3 id="설정파일-settingspy"><strong>설정파일 settings.py</strong></h3>
-<h1 id="heading-21"></h1>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<h3 id="설정파일-settingspy">
+  <strong>설정파일 settings.py</strong>
+  <a class="anchor" href="#%ec%84%a4%ec%a0%95%ed%8c%8c%ec%9d%bc-settingspy">#</a>
+</h3>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <ul>
 <li>settings.py는 파일 장고의 전반적인 설정을 다룬다.</li>
 <li>시간과 언어를 바꿔준다.</li>
@@ -1678,7 +1786,10 @@ apt install -y python3-devel
 </span></span><span style="display:flex;"><span>USE_TZ <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>STATIC_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/static/&#39;</span>
-</span></span></code></pre></div><h1 id="heading-22"></h1>
+</span></span></code></pre></div><h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
 <p><strong>DB 연동을 위해 설정 값을 입력한다.</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>DATABASES <span style="color:#f92672">=</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;default&#39;</span>: {
@@ -1694,13 +1805,19 @@ apt install -y python3-devel
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p><strong>DB 연동을 위해 DB를 생선한다.</strong></p>
-<h1 id="heading-23"></h1>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <p>슈퍼 계정 생성</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>mysql<span style="color:#f92672">&gt;</span>
 </span></span></code></pre></div><p>확인</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>.<span style="color:#f92672">/</span>manage.py runserver <span style="color:#ae81ff">0.0.0.0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">8000</span>
 </span></span></code></pre></div><p><img src="/Django/Django2.png" alt="Django" /></p>
-<h1 id="mysql-연동-확인">mysql 연동 확인</h1>
+<h1 id="mysql-연동-확인">
+  mysql 연동 확인
+  <a class="anchor" href="#mysql-%ec%97%b0%eb%8f%99-%ed%99%95%ec%9d%b8">#</a>
+</h1>
 <p>mysql -u Django -p</p>
 </article>
  
@@ -1821,7 +1938,6 @@ apt install -y python3-devel
 </body>
 </div>
 </html>
-
 
 
 

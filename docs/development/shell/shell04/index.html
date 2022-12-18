@@ -2,19 +2,15 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shell Programming Functions {;}, ()를 이용해 명령 그룹을 만들게 되면 같은 context에서 실행이 된다. 이것은 명령 그룹전체가 하나의 명령처럼 실행되는 것과 같은 효과가 있다.
+<meta name="description" content="Shell Programming###Functions##{;}, ()를 이용해 명령 그룹을 만들게 되면 같은 context에서 실행이 된다. 이것은 명령 그룹전체가 하나의 명령처럼 실행되는 것과 같은 효과가 있다.
 앞에 함수명을 붙여서 함수정의를 하게 되면 일반 명령과 동일하게 사용될 수 있다.
 {;}은 현재 shell에서 ()는 subshell에서 실행되므로 보통 함수를 정의할 때 {;}을 사용하지만 필요하다면 ()을 사용할 수도 있다.
 $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshell에서 실행되어 &#34;$var&#34;는 값이 표시되지 않는다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/development/shell/shell04/><meta property="og:title" content="Fucnctions" />
-<meta property="og:description" content="Shell Programming Functions {;}, ()를 이용해 명령 그룹을 만들게 되면 같은 context에서 실행이 된다. 이것은 명령 그룹전체가 하나의 명령처럼 실행되는 것과 같은 효과가 있다.
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Fucnctions" />
+<meta property="og:description" content="Shell Programming###Functions##{;}, ()를 이용해 명령 그룹을 만들게 되면 같은 context에서 실행이 된다. 이것은 명령 그룹전체가 하나의 명령처럼 실행되는 것과 같은 효과가 있다.
 앞에 함수명을 붙여서 함수정의를 하게 되면 일반 명령과 동일하게 사용될 수 있다.
 {;}은 현재 shell에서 ()는 subshell에서 실행되므로 보통 함수를 정의할 때 {;}을 사용하지만 필요하다면 ()을 사용할 수도 있다.
 $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshell에서 실행되어 &#34;$var&#34;는 값이 표시되지 않는다." />
@@ -23,25 +19,28 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Fucnctions | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -54,7 +53,7 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1361,6 +1360,9 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1372,14 +1374,15 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
   <strong>Fucnctions</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1476,12 +1479,27 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 <br>
 <br>
       
-  <article class="markdown"><h1 id="shell-programming"><strong>Shell Programming</strong></h1>
-<h1 id="heading"></h1>
+  <article class="markdown"><h1 id="shell-programming">
+  <strong>Shell Programming</strong>
+  <a class="anchor" href="#shell-programming">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-1"></h1>
-<h2 id="functions"><strong>Functions</strong></h2>
-<h1 id="heading-2"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h2 id="functions">
+  <strong>Functions</strong>
+  <a class="anchor" href="#functions">#</a>
+</h2>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <ul>
 <li>
 <p><strong><code>{;}, ()</code>를 이용해 명령 그룹을 만들게 되면 같은 context에서 실행이 된다. 이것은 명령 그룹전체가 하나의 명령처럼 실행되는 것과 같은 효과가 있다.</strong></p>
@@ -1510,11 +1528,23 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ time <span style="color:#f92672">{</span> sleep <span style="color:#ae81ff">2</span> <span style="color:#f92672">&amp;&amp;</span> sleep 3; <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># {}안에 있는 명령이 모두 측정된다.</span>
-</span></span></code></pre></div><h1 id="heading-3"></h1>
+</span></span></code></pre></div><h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-4"></h1>
-<h3 id="함수를-정의하는-방법"><strong>함수를 정의하는 방법</strong></h3>
-<h1 id="heading-5"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="함수를-정의하는-방법">
+  <strong>함수를 정의하는 방법</strong>
+  <a class="anchor" href="#%ed%95%a8%ec%88%98%eb%a5%bc-%ec%a0%95%ec%9d%98%ed%95%98%eb%8a%94-%eb%b0%a9%eb%b2%95">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Shell은 함수를 정의할 때 프로그래밍 언어에서처럼 매개변수를 작성하지 않으며, 전달된 인수 값은 함수 내에서 <code>$1 $2 $3...</code> 특수 변수에 자동으로 할당된다.</strong></p>
@@ -1560,11 +1590,23 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ unset -f 함수명
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 정의되어져 있는 함수를 삭제</span>
-</span></span></code></pre></div><h1 id="heading-6"></h1>
+</span></span></code></pre></div><h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-7"></h1>
-<h3 id="함수-실행시-필수적인-사전정의"><strong>함수 실행시 필수적인 사전정의</strong></h3>
-<h1 id="heading-8"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<h3 id="함수-실행시-필수적인-사전정의">
+  <strong>함수 실행시 필수적인 사전정의</strong>
+  <a class="anchor" href="#%ed%95%a8%ec%88%98-%ec%8b%a4%ed%96%89%ec%8b%9c-%ed%95%84%ec%88%98%ec%a0%81%ec%9d%b8-%ec%82%ac%ec%a0%84%ec%a0%95%ec%9d%98">#</a>
+</h3>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <ul>
 <li><strong>함수를 실행시에는 반드시 사전정의가 되어있어야 하며, 그렇지 않을 경우 에러가 발생된다.</strong></li>
 </ul>
@@ -1584,11 +1626,23 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 </span></span><span style="display:flex;"><span>foo1
 </span></span><span style="display:flex;"><span>foo2
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 함수를 정의하면 실행이 가능하다.</span>
-</span></span></code></pre></div><h1 id="heading-9"></h1>
+</span></span></code></pre></div><h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-10"></h1>
-<h3 id="조건에-따라-다른-함수를-정의할-수-있다"><strong>조건에 따라 다른 함수를 정의할 수 있다.</strong></h3>
-<h1 id="heading-11"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="조건에-따라-다른-함수를-정의할-수-있다">
+  <strong>조건에 따라 다른 함수를 정의할 수 있다.</strong>
+  <a class="anchor" href="#%ec%a1%b0%ea%b1%b4%ec%97%90-%eb%94%b0%eb%9d%bc-%eb%8b%a4%eb%a5%b8-%ed%95%a8%ec%88%98%eb%a5%bc-%ec%a0%95%ec%9d%98%ed%95%a0-%ec%88%98-%ec%9e%88%eb%8b%a4">#</a>
+</h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <ul>
 <li>
 <hr>
@@ -1597,11 +1651,23 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 <hr>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div><h1 id="heading-12"></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div><h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-13"></h1>
-<h3 id="변수의-기본값--global-scope"><strong>변수의 기본값 : global scope</strong></h3>
-<h1 id="heading-14"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h3 id="변수의-기본값--global-scope">
+  <strong>변수의 기본값 : global scope</strong>
+  <a class="anchor" href="#%eb%b3%80%ec%88%98%ec%9d%98-%ea%b8%b0%eb%b3%b8%ea%b0%92--global-scope">#</a>
+</h3>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <ul>
 <li><strong>global scope 라는 것은 현재 스크립트 파일을 의미</strong></li>
 </ul>
@@ -1623,11 +1689,23 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 </span></span><span style="display:flex;"><span>$ Global.sh
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">100</span>
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">200</span>
-</span></span></code></pre></div><h1 id="heading-15"></h1>
+</span></span></code></pre></div><h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-16"></h1>
-<h3 id="지역변수-설정-local"><strong>지역변수 설정 :local</strong></h3>
-<h1 id="heading-17"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h3 id="지역변수-설정-local">
+  <strong>지역변수 설정 :local</strong>
+  <a class="anchor" href="#%ec%a7%80%ec%97%ad%eb%b3%80%ec%88%98-%ec%84%a4%ec%a0%95-local">#</a>
+</h3>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <ul>
 <li>
 <p><strong><code>local과 declare</code>은 동일한 기능을 하지만 local은 global scope에서 사용할 수는 없다.</strong></p>
@@ -1669,11 +1747,23 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">done</span>
 </span></span><span style="display:flex;"><span>    echo $children
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><h1 id="heading-18"></h1>
+</span></span></code></pre></div><h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-19"></h1>
-<h3 id="dynamic-scoping"><strong>dynamic scoping</strong></h3>
-<h1 id="heading-20"></h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<h3 id="dynamic-scoping">
+  <strong>dynamic scoping</strong>
+  <a class="anchor" href="#dynamic-scoping">#</a>
+</h3>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <ul>
 <li><strong>Shell 함수에서는 local로 설정한 변수를 child 함수에서 읽고 쓸 수 있으며, 변경한 값도 parent 함수에 적용이 가능하다.</strong></li>
 </ul>
@@ -1736,11 +1826,23 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 </span></span><span style="display:flex;"><span>f2 AA : <span style="color:#ae81ff">300</span>
 </span></span><span style="display:flex;"><span>main AA : <span style="color:#ae81ff">300</span>
 </span></span><span style="display:flex;"><span>global AA : <span style="color:#ae81ff">100</span>
-</span></span></code></pre></div><h1 id="heading-21"></h1>
+</span></span></code></pre></div><h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-22"></h1>
-<h3 id="함수의-연산결과-return"><strong>함수의 연산결과 return</strong></h3>
-<h1 id="heading-23"></h1>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<h3 id="함수의-연산결과-return">
+  <strong>함수의 연산결과 return</strong>
+  <a class="anchor" href="#%ed%95%a8%ec%88%98%ec%9d%98-%ec%97%b0%ec%82%b0%ea%b2%b0%ea%b3%bc-return">#</a>
+</h3>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <ul>
 <li><strong>Shell Script가 프로그래밍 언어와 다른 점 중 하나가 return 명령의 역할이며, <code>shell에서는 return 명령이 함수에서 연션한 결과를 반환하는 데 사용되는 것이 아니고, exit 명령과 같이 함수가 정상적으로 종료되었는지 아니면 오류가 발생했는지를 나타내는 종료 상태 값을 지정하는 용도로 사용</code>된다.</strong></li>
 </ul>
@@ -1768,11 +1870,17 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 </span></span><span style="display:flex;"><span>world
 </span></span><span style="display:flex;"><span>$ echo $?
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>
-</span></span></code></pre></div><h1 id="heading-24"></h1>
+</span></span></code></pre></div><h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 <ul>
 <li><strong>위와 같이 연산 결과를 반환하는 데 return 명령을 사용하면 문제가 발생할 수 있으며, 이에 대해 다른 방법으로 접근해야한다.</strong></li>
 </ul>
-<h1 id="heading-25"></h1>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ AA<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>expr <span style="color:#ae81ff">1</span> + 2<span style="color:#66d9ef">)</span>
 </span></span><span style="display:flex;"><span>$ echo $AA
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span>
@@ -1798,11 +1906,23 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 </span></span><span style="display:flex;"><span>$ echo $AA
 </span></span><span style="display:flex;"><span>hello world
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 명령 치환을 사용하여 결과값을 받는 방법</span>
-</span></span></code></pre></div><h1 id="heading-26"></h1>
+</span></span></code></pre></div><h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-27"></h1>
-<h3 id="함수에-인수를-전달"><strong>함수에 인수를 전달</strong></h3>
-<h1 id="heading-28"></h1>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
+<h3 id="함수에-인수를-전달">
+  <strong>함수에 인수를 전달</strong>
+  <a class="anchor" href="#%ed%95%a8%ec%88%98%ec%97%90-%ec%9d%b8%ec%88%98%eb%a5%bc-%ec%a0%84%eb%8b%ac">#</a>
+</h3>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>외부 명령을 실행할 때 인수를 전달하기 위해 <code>( )</code>를 사용하지 않듯이 함수에서도 <code>( )</code>를 사용하지 않는다.</strong></p>
@@ -1833,7 +1953,10 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 <p><strong>변수를 quote 하게 되면 <code>$@</code>의 의미는 <code>$1 $2 $3 ...</code>(복수의 인수)가 되며 <code>&quot;$*&quot;의 의미는 </code>&quot;$1c$2c$3c &hellip;&quot;(하나의 인수)가 된다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-29"></h1>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># foo.sh</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash</span>
@@ -1863,11 +1986,23 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 </span></span><span style="display:flex;"><span><span style="color:#f92672">========</span> <span style="color:#e6db74">&#34;</span>$*<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=======</span>
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">11</span> <span style="color:#ae81ff">22</span>      <span style="color:#ae81ff">33</span> <span style="color:#ae81ff">44</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># $@는 복수개의 인수가 되는 반면 $*는 함수에 전달한 인수전체가 하나의 인수로 작용</span>
-</span></span></code></pre></div><h1 id="heading-30"></h1>
+</span></span></code></pre></div><h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-31"></h1>
-<h3 id="funcname"><strong>$FUNCNAME</strong></h3>
-<h1 id="heading-32"></h1>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
+<h3 id="funcname">
+  <strong>$FUNCNAME</strong>
+  <a class="anchor" href="#funcname">#</a>
+</h3>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
 <ul>
 <li><strong>함수 내에서 자신의 이름은 $FUNCNAME을 통해 확인이 가능하다.</strong></li>
 </ul>
@@ -1875,7 +2010,10 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ foobar
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> name is : foobar
-</span></span></code></pre></div><h1 id="heading-33"></h1>
+</span></span></code></pre></div><h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
 <p> </p>
 </article>
  
@@ -2003,7 +2141,6 @@ $ echo hello world | read var; echo &#34;$var&#34; # 파이프로 인해 subshel
 </body>
 </div>
 </html>
-
 
 
 

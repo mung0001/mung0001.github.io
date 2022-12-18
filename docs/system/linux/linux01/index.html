@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Linux Linux System Management Linux 시스템관리는 프로세스, 메모리 관리를 위해 주로 사용됩니다. crontab 정기적으로 지정한 시간에 실행하고 싶은 명령어를 등록하여 사용되며, 스크립트를 통해 등록도 가능합니다. 주요 옵션 옵션 설명 -l 등록된 명령어 리스트 확인 -e 등록된 명령어 수정 crontab 등록 -e옵션으로 실행하면 크롭탭을 위한 파일이 열리며, vi에디터와 동일한 명령으로 필요한 명령어를 등록할 수 있습니다. crontab 주기 crontab을 등록할 때는 실행하고자 하는 주기와 명령어를 입력하고, 주기는 분, 시, 일, 월, 요일의 형태로 입력합니다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/system/linux/linux01/><meta property="og:title" content="Linux System Management" />
-<meta property="og:description" content="Linux Linux System Management Linux 시스템관리는 프로세스, 메모리 관리를 위해 주로 사용됩니다. crontab 정기적으로 지정한 시간에 실행하고 싶은 명령어를 등록하여 사용되며, 스크립트를 통해 등록도 가능합니다. 주요 옵션 옵션 설명 -l 등록된 명령어 리스트 확인 -e 등록된 명령어 수정 crontab 등록 -e옵션으로 실행하면 크롭탭을 위한 파일이 열리며, vi에디터와 동일한 명령으로 필요한 명령어를 등록할 수 있습니다. crontab 주기 crontab을 등록할 때는 실행하고자 하는 주기와 명령어를 입력하고, 주기는 분, 시, 일, 월, 요일의 형태로 입력합니다." />
+<meta name="description" content="Linux##Linux System Management##Linux 시스템관리는 프로세스, 메모리 관리를 위해 주로 사용됩니다. ##crontab##정기적으로 지정한 시간에 실행하고 싶은 명령어를 등록하여 사용되며, 스크립트를 통해 등록도 가능합니다. #주요 옵션##옵션 설명 -l 등록된 명령어 리스트 확인 -e 등록된 명령어 수정 #crontab 등록##-e옵션으로 실행하면 크롭탭을 위한 파일이 열리며, vi에디터와 동일한 명령으로 필요한 명령어를 등록할 수 있습니다. #crontab 주기##crontab을 등록할 때는 실행하고자 하는 주기와 명령어를 입력하고, 주기는 분, 시, 일, 월, 요일의 형태로 입력합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Linux System Management" />
+<meta property="og:description" content="Linux##Linux System Management##Linux 시스템관리는 프로세스, 메모리 관리를 위해 주로 사용됩니다. ##crontab##정기적으로 지정한 시간에 실행하고 싶은 명령어를 등록하여 사용되며, 스크립트를 통해 등록도 가능합니다. #주요 옵션##옵션 설명 -l 등록된 명령어 리스트 확인 -e 등록된 명령어 수정 #crontab 등록##-e옵션으로 실행하면 크롭탭을 위한 파일이 열리며, vi에디터와 동일한 명령으로 필요한 명령어를 등록할 수 있습니다. #crontab 주기##crontab을 등록할 때는 실행하고자 하는 주기와 명령어를 입력하고, 주기는 분, 시, 일, 월, 요일의 형태로 입력합니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/system/linux/linux01/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Linux System Management | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -48,7 +47,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1375,6 +1374,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1386,14 +1388,15 @@
   <strong>Linux System Management</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1662,26 +1665,59 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="linux"><strong>Linux</strong></h1>
+  <article class="markdown"><h1 id="linux">
+  <strong>Linux</strong>
+  <a class="anchor" href="#linux">#</a>
+</h1>
 <hr>
-<h1 id="heading"></h1>
-<h2 id="linux-system-management"><strong>Linux System Management</strong></h2>
-<h1 id="heading-1"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="linux-system-management">
+  <strong>Linux System Management</strong>
+  <a class="anchor" href="#linux-system-management">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <ul>
 <li><strong>Linux 시스템관리는 프로세스, 메모리 관리를 위해 주로 사용됩니다.</strong></li>
 </ul>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-3"></h1>
-<h2 id="crontab"><strong>crontab</strong></h2>
-<h1 id="heading-4"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h2 id="crontab">
+  <strong>crontab</strong>
+  <a class="anchor" href="#crontab">#</a>
+</h2>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <ul>
 <li><strong>정기적으로 지정한 시간에 실행하고 싶은 명령어를 등록하여 사용되며, 스크립트를 통해 등록도 가능합니다.</strong></li>
 </ul>
-<h1 id="heading-5"></h1>
-<h3 id="주요-옵션"><strong>주요 옵션</strong></h3>
-<h1 id="heading-6"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<h3 id="주요-옵션">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98">#</a>
+</h3>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1700,15 +1736,33 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-7"></h1>
-<h3 id="crontab-등록"><strong>crontab 등록</strong></h3>
-<h1 id="heading-8"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<h3 id="crontab-등록">
+  <strong>crontab 등록</strong>
+  <a class="anchor" href="#crontab-%eb%93%b1%eb%a1%9d">#</a>
+</h3>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <ul>
 <li><strong><code>-e</code>옵션으로 실행하면 크롭탭을 위한 파일이 열리며, <code>vi</code>에디터와 동일한 명령으로 필요한 명령어를 등록할 수 있습니다.</strong></li>
 </ul>
-<h1 id="heading-9"></h1>
-<h3 id="crontab-주기"><strong>crontab 주기</strong></h3>
-<h1 id="heading-10"></h1>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<h3 id="crontab-주기">
+  <strong>crontab 주기</strong>
+  <a class="anchor" href="#crontab-%ec%a3%bc%ea%b8%b0">#</a>
+</h3>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>crontab을 등록할 때는 실행하고자 하는 주기와 명령어를 입력하고, 주기는 분, 시, 일, 월, 요일의 형태로 입력합니다.</strong></p>
@@ -1747,18 +1801,39 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-11"></h1>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-12"></h1>
-<h2 id="free"><strong>free</strong></h2>
-<h1 id="heading-13"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<h2 id="free">
+  <strong>free</strong>
+  <a class="anchor" href="#free">#</a>
+</h2>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
 <ul>
 <li><strong>free는 메모리 사용량을 확인하는 명령어입니다.</strong></li>
 </ul>
-<h1 id="heading-14"></h1>
-<h3 id="주요-옵션-1"><strong>주요 옵션</strong></h3>
-<h1 id="heading-15"></h1>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<h3 id="주요-옵션-1">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-1">#</a>
+</h3>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1777,9 +1852,18 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-16"></h1>
-<h3 id="사용예제"><strong>사용예제</strong></h3>
-<h1 id="heading-17"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h3 id="사용예제">
+  <strong>사용예제</strong>
+  <a class="anchor" href="#%ec%82%ac%ec%9a%a9%ec%98%88%ec%a0%9c">#</a>
+</h3>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <ul>
 <li><strong>메모리 사용량 확인</strong></li>
 </ul>
@@ -1817,26 +1901,56 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-18"></h1>
-<h3 id="주기적인-메모리-사용량-확인"><strong>주기적인 메모리 사용량 확인</strong></h3>
-<h1 id="heading-19"></h1>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<h3 id="주기적인-메모리-사용량-확인">
+  <strong>주기적인 메모리 사용량 확인</strong>
+  <a class="anchor" href="#%ec%a3%bc%ea%b8%b0%ec%a0%81%ec%9d%b8-%eb%a9%94%eb%aa%a8%eb%a6%ac-%ec%82%ac%ec%9a%a9%eb%9f%89-%ed%99%95%ec%9d%b8">#</a>
+</h3>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 <ul>
 <li><strong>메모리 사용량을 주기적으로 확인하는 방법은 <code>-s</code> 옵션을 이용하는 방법과 <code>watch</code> 명령을 이용하는 방법이 있습니다.</strong></li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ free -h -s <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>$ watch free -h
-</span></span></code></pre></div><h1 id="heading-20"></h1>
+</span></span></code></pre></div><h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-21"></h1>
-<h2 id="jobs"><strong>jobs</strong></h2>
-<h1 id="heading-22"></h1>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<h2 id="jobs">
+  <strong>jobs</strong>
+  <a class="anchor" href="#jobs">#</a>
+</h2>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
 <ul>
 <li><strong>현재 계정에서 실행중인 작업을 표시합니다.</strong></li>
 </ul>
-<h1 id="heading-23"></h1>
-<h3 id="주요-옵션-2"><strong>주요 옵션</strong></h3>
-<h1 id="heading-24"></h1>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<h3 id="주요-옵션-2">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-2">#</a>
+</h3>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1851,26 +1965,56 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-25"></h1>
-<h3 id="사용예제-1"><strong>사용예제</strong></h3>
-<h1 id="heading-26"></h1>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<h3 id="사용예제-1">
+  <strong>사용예제</strong>
+  <a class="anchor" href="#%ec%82%ac%ec%9a%a9%ec%98%88%ec%a0%9c-1">#</a>
+</h3>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
 <p>상태 | 내용
 Running | 실행 중
 Stoppend | 일시 중잔(Ctrl + Z)
 Terminated | 강제 종료(Kill 명령)
 Done | 정상종료</p>
-<h1 id="heading-27"></h1>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-28"></h1>
-<h2 id="kill"><strong>kill</strong></h2>
-<h1 id="heading-29"></h1>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
+<h2 id="kill">
+  <strong>kill</strong>
+  <a class="anchor" href="#kill">#</a>
+</h2>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
 <ul>
 <li><strong>kill은 프로세스를 종료하는 명령어로, 딘. 후속 처리 등의 작업이 존재하면 일반적인 kill로 종료가 불가능한데, 이 경우에도 -9옵션을 이용하면 프로세스를 강제 종료할 수 있습니다.</strong></li>
 </ul>
-<h1 id="heading-30"></h1>
-<h3 id="주요-옵션-3"><strong>주요 옵션</strong></h3>
-<h1 id="heading-31"></h1>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
+<h3 id="주요-옵션-3">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-3">#</a>
+</h3>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1917,19 +2061,43 @@ Done | 정상종료</p>
 </tr>
 </tbody>
 </table>
-<h1 id="heading-32"></h1>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-33"></h1>
-<h2 id="man"><strong>man</strong></h2>
-<h1 id="heading-34"></h1>
+<h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
+<h2 id="man">
+  <strong>man</strong>
+  <a class="anchor" href="#man">#</a>
+</h2>
+<h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
 <ul>
 <li><strong>man은 명령어의 메뉴얼을 출력한느 명령어 입니다.</strong></li>
 </ul>
-<h1 id="heading-35"></h1>
-<h1 id="heading-36"></h1>
-<h2 id="nohup"><strong>nohup</strong></h2>
-<h1 id="heading-37"></h1>
+<h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
+<h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
+<h2 id="nohup">
+  <strong>nohup</strong>
+  <a class="anchor" href="#nohup">#</a>
+</h2>
+<h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>리눅스에서 프로그램을 실행할 때 사용자의 세션이 끊어지면(hangup) 프로그램도 함께 종료되는데, 처리에 오랜 시간이 걸릴경우에는 문제가 발생할 수 있습니다.</strong></p>
@@ -1938,22 +2106,52 @@ Done | 정상종료</p>
 <p><strong>이를 대처하기 위해 <code>nohup</code> 명령어를 이용하면 사용자의 세션이 끊어져도 프로그램은 계속 실행되도록 할 수 있습니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-38"></h1>
-<h3 id="사용예제-2"><strong>사용예제</strong></h3>
-<h1 id="heading-39"></h1>
+<h1 id="heading-38">
+  
+  <a class="anchor" href="#heading-38">#</a>
+</h1>
+<h3 id="사용예제-2">
+  <strong>사용예제</strong>
+  <a class="anchor" href="#%ec%82%ac%ec%9a%a9%ec%98%88%ec%a0%9c-2">#</a>
+</h3>
+<h1 id="heading-39">
+  
+  <a class="anchor" href="#heading-39">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ nohup test.sh $
-</span></span></code></pre></div><h1 id="heading-40"></h1>
+</span></span></code></pre></div><h1 id="heading-40">
+  
+  <a class="anchor" href="#heading-40">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-41"></h1>
-<h2 id="pgrep"><strong>pgrep</strong></h2>
-<h1 id="heading-42"></h1>
+<h1 id="heading-41">
+  
+  <a class="anchor" href="#heading-41">#</a>
+</h1>
+<h2 id="pgrep">
+  <strong>pgrep</strong>
+  <a class="anchor" href="#pgrep">#</a>
+</h2>
+<h1 id="heading-42">
+  
+  <a class="anchor" href="#heading-42">#</a>
+</h1>
 <ul>
 <li><strong><code>ps</code>명령과 <code>grep</code> 명령을 동시에 실행하는 명령어로, 지정한 형식에 맞는 프로세스 번호를 반환하는 명령어입니다.</strong></li>
 </ul>
-<h1 id="heading-43"></h1>
-<h3 id="주요-옵션-4"><strong>주요 옵션</strong></h3>
-<h1 id="heading-44"></h1>
+<h1 id="heading-43">
+  
+  <a class="anchor" href="#heading-43">#</a>
+</h1>
+<h3 id="주요-옵션-4">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-4">#</a>
+</h3>
+<h1 id="heading-44">
+  
+  <a class="anchor" href="#heading-44">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -1968,18 +2166,39 @@ Done | 정상종료</p>
 </tr>
 </tbody>
 </table>
-<h1 id="heading-45"></h1>
+<h1 id="heading-45">
+  
+  <a class="anchor" href="#heading-45">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-46"></h1>
-<h2 id="ps"><strong>ps</strong></h2>
-<h1 id="heading-47"></h1>
+<h1 id="heading-46">
+  
+  <a class="anchor" href="#heading-46">#</a>
+</h1>
+<h2 id="ps">
+  <strong>ps</strong>
+  <a class="anchor" href="#ps">#</a>
+</h2>
+<h1 id="heading-47">
+  
+  <a class="anchor" href="#heading-47">#</a>
+</h1>
 <ul>
 <li><strong>ps는 프로세스의 정보를 표시하는 명령어입니다.</strong></li>
 </ul>
-<h1 id="heading-48"></h1>
-<h3 id="주요-옵션-5"><strong>주요 옵션</strong></h3>
-<h1 id="heading-49"></h1>
+<h1 id="heading-48">
+  
+  <a class="anchor" href="#heading-48">#</a>
+</h1>
+<h3 id="주요-옵션-5">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-5">#</a>
+</h3>
+<h1 id="heading-49">
+  
+  <a class="anchor" href="#heading-49">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -2014,13 +2233,25 @@ Done | 정상종료</p>
 </tr>
 </tbody>
 </table>
-<h1 id="heading-50"></h1>
-<h3 id="사용예제-3"><strong>사용예제</strong></h3>
-<h1 id="heading-51"></h1>
+<h1 id="heading-50">
+  
+  <a class="anchor" href="#heading-50">#</a>
+</h1>
+<h3 id="사용예제-3">
+  <strong>사용예제</strong>
+  <a class="anchor" href="#%ec%82%ac%ec%9a%a9%ec%98%88%ec%a0%9c-3">#</a>
+</h3>
+<h1 id="heading-51">
+  
+  <a class="anchor" href="#heading-51">#</a>
+</h1>
 <ul>
 <li><strong><code>-o</code> 옵션을 이용해서 현재 실행중인 프로세스의 정보 중 원하는 것만 확인하는 것도 가능합니다.</strong></li>
 </ul>
-<h1 id="heading-52"></h1>
+<h1 id="heading-52">
+  
+  <a class="anchor" href="#heading-52">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -2067,12 +2298,24 @@ Done | 정상종료</p>
 </tr>
 </tbody>
 </table>
-<h1 id="heading-53"></h1>
+<h1 id="heading-53">
+  
+  <a class="anchor" href="#heading-53">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-54"></h1>
-<h2 id="sar"><strong>sar</strong></h2>
-<h1 id="heading-55"></h1>
+<h1 id="heading-54">
+  
+  <a class="anchor" href="#heading-54">#</a>
+</h1>
+<h2 id="sar">
+  <strong>sar</strong>
+  <a class="anchor" href="#sar">#</a>
+</h2>
+<h1 id="heading-55">
+  
+  <a class="anchor" href="#heading-55">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>sar 명령어는 시스템이 운영 정보를 확인할 수 있는 명령어 입니다.</strong></p>
@@ -2084,9 +2327,18 @@ Done | 정상종료</p>
 <p><strong>만약 sar 패키지가 존재하지 않을 경우 <code>yum -y install sysstat</code>으로 패키지의 설치가 가능합니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-56"></h1>
-<h3 id="주요-옵션-6"><strong>주요 옵션</strong></h3>
-<h1 id="heading-57"></h1>
+<h1 id="heading-56">
+  
+  <a class="anchor" href="#heading-56">#</a>
+</h1>
+<h3 id="주요-옵션-6">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-6">#</a>
+</h3>
+<h1 id="heading-57">
+  
+  <a class="anchor" href="#heading-57">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -2113,18 +2365,39 @@ Done | 정상종료</p>
 </tr>
 </tbody>
 </table>
-<h1 id="heading-58"></h1>
+<h1 id="heading-58">
+  
+  <a class="anchor" href="#heading-58">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-59"></h1>
-<h2 id="top"><strong>top</strong></h2>
-<h1 id="heading-60"></h1>
+<h1 id="heading-59">
+  
+  <a class="anchor" href="#heading-59">#</a>
+</h1>
+<h2 id="top">
+  <strong>top</strong>
+  <a class="anchor" href="#top">#</a>
+</h2>
+<h1 id="heading-60">
+  
+  <a class="anchor" href="#heading-60">#</a>
+</h1>
 <ul>
 <li><strong>프로세스의 정보를 실시간으로 표시하는 명령어입니다.</strong></li>
 </ul>
-<h1 id="heading-61"></h1>
-<h3 id="주요-옵션-7"><strong>주요 옵션</strong></h3>
-<h1 id="heading-62"></h1>
+<h1 id="heading-61">
+  
+  <a class="anchor" href="#heading-61">#</a>
+</h1>
+<h3 id="주요-옵션-7">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-7">#</a>
+</h3>
+<h1 id="heading-62">
+  
+  <a class="anchor" href="#heading-62">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -2147,9 +2420,18 @@ Done | 정상종료</p>
 </tr>
 </tbody>
 </table>
-<h1 id="heading-63"></h1>
-<h3 id="프로세스-정보-칼럼"><strong>프로세스 정보 칼럼</strong></h3>
-<h1 id="heading-64"></h1>
+<h1 id="heading-63">
+  
+  <a class="anchor" href="#heading-63">#</a>
+</h1>
+<h3 id="프로세스-정보-칼럼">
+  <strong>프로세스 정보 칼럼</strong>
+  <a class="anchor" href="#%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4-%ec%a0%95%eb%b3%b4-%ec%b9%bc%eb%9f%bc">#</a>
+</h3>
+<h1 id="heading-64">
+  
+  <a class="anchor" href="#heading-64">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -2208,9 +2490,18 @@ Done | 정상종료</p>
 </tr>
 </tbody>
 </table>
-<h1 id="heading-65"></h1>
-<h3 id="s칼럼--프로세스-상태"><strong>S칼럼 : 프로세스 상태</strong></h3>
-<h1 id="heading-66"></h1>
+<h1 id="heading-65">
+  
+  <a class="anchor" href="#heading-65">#</a>
+</h1>
+<h3 id="s칼럼--프로세스-상태">
+  <strong>S칼럼 : 프로세스 상태</strong>
+  <a class="anchor" href="#s%ec%b9%bc%eb%9f%bc--%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4-%ec%83%81%ed%83%9c">#</a>
+</h3>
+<h1 id="heading-66">
+  
+  <a class="anchor" href="#heading-66">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -2241,10 +2532,22 @@ Done | 정상종료</p>
 </tr>
 </tbody>
 </table>
-<h1 id="heading-67"></h1>
-<h1 id="heading-68"></h1>
-<h3 id="헤더--cpus"><strong>헤더 : Cpu(s)</strong></h3>
-<h1 id="heading-69"></h1>
+<h1 id="heading-67">
+  
+  <a class="anchor" href="#heading-67">#</a>
+</h1>
+<h1 id="heading-68">
+  
+  <a class="anchor" href="#heading-68">#</a>
+</h1>
+<h3 id="헤더--cpus">
+  <strong>헤더 : Cpu(s)</strong>
+  <a class="anchor" href="#%ed%97%a4%eb%8d%94--cpus">#</a>
+</h3>
+<h1 id="heading-69">
+  
+  <a class="anchor" href="#heading-69">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -2287,10 +2590,22 @@ Done | 정상종료</p>
 </tr>
 </tbody>
 </table>
-<h1 id="heading-70"></h1>
-<h1 id="heading-71"></h1>
-<h3 id="단축키"><strong>단축키</strong></h3>
-<h1 id="heading-72"></h1>
+<h1 id="heading-70">
+  
+  <a class="anchor" href="#heading-70">#</a>
+</h1>
+<h1 id="heading-71">
+  
+  <a class="anchor" href="#heading-71">#</a>
+</h1>
+<h3 id="단축키">
+  <strong>단축키</strong>
+  <a class="anchor" href="#%eb%8b%a8%ec%b6%95%ed%82%a4">#</a>
+</h3>
+<h1 id="heading-72">
+  
+  <a class="anchor" href="#heading-72">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -2309,18 +2624,39 @@ Done | 정상종료</p>
 </tr>
 </tbody>
 </table>
-<h1 id="heading-73"></h1>
+<h1 id="heading-73">
+  
+  <a class="anchor" href="#heading-73">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-74"></h1>
-<h2 id="unmae"><strong>unmae</strong></h2>
-<h1 id="heading-75"></h1>
+<h1 id="heading-74">
+  
+  <a class="anchor" href="#heading-74">#</a>
+</h1>
+<h2 id="unmae">
+  <strong>unmae</strong>
+  <a class="anchor" href="#unmae">#</a>
+</h2>
+<h1 id="heading-75">
+  
+  <a class="anchor" href="#heading-75">#</a>
+</h1>
 <ul>
 <li><strong>uname은 시스템 정보를 표시하는 명령어입니다.</strong></li>
 </ul>
-<h1 id="heading-76"></h1>
-<h3 id="주요-옵션-8"><strong>주요 옵션</strong></h3>
-<h1 id="heading-77"></h1>
+<h1 id="heading-76">
+  
+  <a class="anchor" href="#heading-76">#</a>
+</h1>
+<h3 id="주요-옵션-8">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-8">#</a>
+</h3>
+<h1 id="heading-77">
+  
+  <a class="anchor" href="#heading-77">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -2355,18 +2691,39 @@ Done | 정상종료</p>
 </tr>
 </tbody>
 </table>
-<h1 id="heading-78"></h1>
+<h1 id="heading-78">
+  
+  <a class="anchor" href="#heading-78">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-79"></h1>
-<h2 id="wait"><strong>wait</strong></h2>
-<h1 id="heading-80"></h1>
+<h1 id="heading-79">
+  
+  <a class="anchor" href="#heading-79">#</a>
+</h1>
+<h2 id="wait">
+  <strong>wait</strong>
+  <a class="anchor" href="#wait">#</a>
+</h2>
+<h1 id="heading-80">
+  
+  <a class="anchor" href="#heading-80">#</a>
+</h1>
 <ul>
 <li><strong>wait는 실행한 프로세스가 종료되는 것을 대기하게 하는 명령어로, 여러작업을 동시에 실행할 때 모든 작업이 종료되는 것을 대기하게 하거나, 특정 작업이 종료되는 것을 기다릴 때 사용합니다.</strong></li>
 </ul>
-<h1 id="heading-81"></h1>
-<h3 id="사용예제-4"><strong>사용예제</strong></h3>
-<h1 id="heading-82"></h1>
+<h1 id="heading-81">
+  
+  <a class="anchor" href="#heading-81">#</a>
+</h1>
+<h3 id="사용예제-4">
+  <strong>사용예제</strong>
+  <a class="anchor" href="#%ec%82%ac%ec%9a%a9%ec%98%88%ec%a0%9c-4">#</a>
+</h3>
+<h1 id="heading-82">
+  
+  <a class="anchor" href="#heading-82">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ command1 &amp;
 </span></span><span style="display:flex;"><span>command2 &amp;
 </span></span><span style="display:flex;"><span>command3 &amp;
@@ -2376,18 +2733,39 @@ Done | 정상종료</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>wait <span style="color:#ae81ff">100</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 100 PID를 가진 프로세스가 종료되는 것을 대기</span>
-</span></span></code></pre></div><h1 id="heading-83"></h1>
+</span></span></code></pre></div><h1 id="heading-83">
+  
+  <a class="anchor" href="#heading-83">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-84"></h1>
-<h2 id="watch"><strong>watch</strong></h2>
-<h1 id="heading-85"></h1>
+<h1 id="heading-84">
+  
+  <a class="anchor" href="#heading-84">#</a>
+</h1>
+<h2 id="watch">
+  <strong>watch</strong>
+  <a class="anchor" href="#watch">#</a>
+</h2>
+<h1 id="heading-85">
+  
+  <a class="anchor" href="#heading-85">#</a>
+</h1>
 <ul>
 <li><strong>watch는 주기적으로 명령어를 실행하고, 결과를 화면에 출력하는 명령어입니다.</strong></li>
 </ul>
-<h1 id="heading-86"></h1>
-<h3 id="주요-옵션-9"><strong>주요 옵션</strong></h3>
-<h1 id="heading-87"></h1>
+<h1 id="heading-86">
+  
+  <a class="anchor" href="#heading-86">#</a>
+</h1>
+<h3 id="주요-옵션-9">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-9">#</a>
+</h3>
+<h1 id="heading-87">
+  
+  <a class="anchor" href="#heading-87">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -2406,12 +2784,24 @@ Done | 정상종료</p>
 </tr>
 </tbody>
 </table>
-<h1 id="heading-88"></h1>
+<h1 id="heading-88">
+  
+  <a class="anchor" href="#heading-88">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-89"></h1>
-<h2 id="which"><strong>which</strong></h2>
-<h1 id="heading-90"></h1>
+<h1 id="heading-89">
+  
+  <a class="anchor" href="#heading-89">#</a>
+</h1>
+<h2 id="which">
+  <strong>which</strong>
+  <a class="anchor" href="#which">#</a>
+</h2>
+<h1 id="heading-90">
+  
+  <a class="anchor" href="#heading-90">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>명령어의 경로를 /(엘리어스)를 표시합니다.</strong></p>
@@ -2420,9 +2810,18 @@ Done | 정상종료</p>
 <p><strong>지정한 명령어의 절대경로나 엘리어스를 표시합니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-91"></h1>
-<h3 id="주요-옵션-10"><strong>주요 옵션</strong></h3>
-<h1 id="heading-92"></h1>
+<h1 id="heading-91">
+  
+  <a class="anchor" href="#heading-91">#</a>
+</h1>
+<h3 id="주요-옵션-10">
+  <strong>주요 옵션</strong>
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ec%98%b5%ec%85%98-10">#</a>
+</h3>
+<h1 id="heading-92">
+  
+  <a class="anchor" href="#heading-92">#</a>
+</h1>
 <table>
 <thead>
 <tr>
@@ -2437,12 +2836,24 @@ Done | 정상종료</p>
 </tr>
 </tbody>
 </table>
-<h1 id="heading-93"></h1>
+<h1 id="heading-93">
+  
+  <a class="anchor" href="#heading-93">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-94"></h1>
-<h2 id="yes"><strong>yes</strong></h2>
-<h1 id="heading-95"></h1>
+<h1 id="heading-94">
+  
+  <a class="anchor" href="#heading-94">#</a>
+</h1>
+<h2 id="yes">
+  <strong>yes</strong>
+  <a class="anchor" href="#yes">#</a>
+</h2>
+<h1 id="heading-95">
+  
+  <a class="anchor" href="#heading-95">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>같은 문자를 반복하여 출력하는 명령어 입니다.</strong></p>
@@ -2451,7 +2862,10 @@ Done | 정상종료</p>
 <p><strong>파일 삭제, 원격 연결 등의 명령에서 <code>y</code>, <code>n</code> 등의 사용자 입력을 필요로 하는 경우 함께 사용하여 스크립트에서 사용자 입력을 처리할 수 있습니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-96"></h1>
+<h1 id="heading-96">
+  
+  <a class="anchor" href="#heading-96">#</a>
+</h1>
 </article>
  
       
@@ -2750,7 +3164,6 @@ Done | 정상종료</p>
 </body>
 </div>
 </html>
-
 
 
 

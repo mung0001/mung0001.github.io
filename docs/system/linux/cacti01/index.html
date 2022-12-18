@@ -2,18 +2,14 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cacti : 시스템 네트워크 모니터링 솔루션 Cacti Cacti는 업계 표준 오픈 소스 데이터 로깅 도구인 RRDtool에 대한 프론트 엔드용 프로그램으로 설계된, 오픈 소스 웹 기반 네트워크 모니터링 및 그래프 도구를 의미
+<meta name="description" content="Cacti : 시스템 네트워크 모니터링 솔루션##Cacti##Cacti는 업계 표준 오픈 소스 데이터 로깅 도구인 RRDtool에 대한 프론트 엔드용 프로그램으로 설계된, 오픈 소스 웹 기반 네트워크 모니터링 및 그래프 도구를 의미
 Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결과 데이터를 그래프로 표시할 수 있으며, 일반적으로 CPU 가부하 및 네트워크 대역폭 같은 수치를 데이터 그래프로 변환가능
 일반적인 사용은 단순 네트워크 관리 프로토콜 SNMP를 통해 네트워크 스위치 또는 라우터 인터페이스를 폴링하여 네트워크 트래픽을 감시하는 역할을 수행">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/system/linux/cacti01/><meta property="og:title" content="Cacti" />
-<meta property="og:description" content="Cacti : 시스템 네트워크 모니터링 솔루션 Cacti Cacti는 업계 표준 오픈 소스 데이터 로깅 도구인 RRDtool에 대한 프론트 엔드용 프로그램으로 설계된, 오픈 소스 웹 기반 네트워크 모니터링 및 그래프 도구를 의미
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Cacti" />
+<meta property="og:description" content="Cacti : 시스템 네트워크 모니터링 솔루션##Cacti##Cacti는 업계 표준 오픈 소스 데이터 로깅 도구인 RRDtool에 대한 프론트 엔드용 프로그램으로 설계된, 오픈 소스 웹 기반 네트워크 모니터링 및 그래프 도구를 의미
 Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결과 데이터를 그래프로 표시할 수 있으며, 일반적으로 CPU 가부하 및 네트워크 대역폭 같은 수치를 데이터 그래프로 변환가능
 일반적인 사용은 단순 네트워크 관리 프로토콜 SNMP를 통해 네트워크 스위치 또는 라우터 인터페이스를 폴링하여 네트워크 트래픽을 감시하는 역할을 수행" />
 <meta property="og:type" content="article" />
@@ -21,25 +17,28 @@ Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결�
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Cacti | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -52,7 +51,7 @@ Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결�
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1379,6 +1378,9 @@ Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결�
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1390,14 +1392,15 @@ Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결�
   <strong>Cacti</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1474,11 +1477,23 @@ Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결�
 <br>
 <br>
       
-  <article class="markdown"><h1 id="cacti--시스템-네트워크-모니터링-솔루션"><strong>Cacti : 시스템 네트워크 모니터링 솔루션</strong></h1>
+  <article class="markdown"><h1 id="cacti--시스템-네트워크-모니터링-솔루션">
+  <strong>Cacti : 시스템 네트워크 모니터링 솔루션</strong>
+  <a class="anchor" href="#cacti--%ec%8b%9c%ec%8a%a4%ed%85%9c-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%eb%aa%a8%eb%8b%88%ed%84%b0%eb%a7%81-%ec%86%94%eb%a3%a8%ec%85%98">#</a>
+</h1>
 <hr>
-<h1 id="heading"></h1>
-<h2 id="cacti"><strong>Cacti</strong></h2>
-<h1 id="heading-1"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="cacti">
+  <strong>Cacti</strong>
+  <a class="anchor" href="#cacti">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Cacti는 업계 표준 오픈 소스 데이터 로깅 도구인 RRDtool에 대한 프론트 엔드용 프로그램으로 설계된, 오픈 소스 웹 기반 네트워크 모니터링 및 그래프 도구를 의미</strong></p>
@@ -1499,13 +1514,31 @@ Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결�
 <p><strong>단, Cacti의 대부분의 구성이 자사의 웹 인터페이스를 통해 이루어지며 사용자인터페이스는 훌륭하지만, 신뢰성과 유연성 부분에서는 그리 좋은 평을 듣지 못하고 있음</strong></p>
 </li>
 </ul>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-3"></h1>
-<h2 id="cacti-설치"><strong>Cacti 설치</strong></h2>
-<h1 id="heading-4"></h1>
-<h3 id="환경"><strong>환경</strong></h3>
-<h1 id="heading-5"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h2 id="cacti-설치">
+  <strong>Cacti 설치</strong>
+  <a class="anchor" href="#cacti-%ec%84%a4%ec%b9%98">#</a>
+</h2>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="환경">
+  <strong>환경</strong>
+  <a class="anchor" href="#%ed%99%98%ea%b2%bd">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <ul>
 <li><strong>Vmware : CentOS7 2/2 cpu 4096 ram / ens33 / Cacti@localhost</strong></li>
 </ul>
@@ -1515,11 +1548,23 @@ Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결�
 </span></span><span style="display:flex;"><span>$ Cacti&gt; setenforce <span style="color:#ae81ff">0</span>
 </span></span><span style="display:flex;"><span>$ Cacti&gt; mv /etc/localtime /etc/localtime_org
 </span></span><span style="display:flex;"><span>$ Cacti&gt; ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime
-</span></span></code></pre></div><h1 id="heading-6"></h1>
+</span></span></code></pre></div><h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-7"></h1>
-<h3 id="apache-install"><strong>Apache Install</strong></h3>
-<h1 id="heading-8"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<h3 id="apache-install">
+  <strong>Apache Install</strong>
+  <a class="anchor" href="#apache-install">#</a>
+</h3>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ Cacti&gt; yum -y install httpd
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
@@ -1549,10 +1594,19 @@ Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결�
 </span></span><span style="display:flex;"><span>$ Cacti&gt; firewall-cmd --add-service<span style="color:#f92672">=</span>http --permanent
 </span></span><span style="display:flex;"><span>$ Cacti&gt; firewall-cmd --reload
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 방화벽 설정</span>
-</span></span></code></pre></div><h1 id="heading-9"></h1>
+</span></span></code></pre></div><h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-10"></h1>
-<h3 id="php-install"><strong>PHP Install</strong></h3>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="php-install">
+  <strong>PHP Install</strong>
+  <a class="anchor" href="#php-install">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ Cacti&gt; yum -y install php php-mbstring php-pear
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ Cacti&gt; vi /etc/php.ini
@@ -1565,10 +1619,19 @@ Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결�
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>memory_limit <span style="color:#f92672">=</span> 800M
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># line 405: uncomment and add your timezone</span>
-</span></span></code></pre></div><h1 id="heading-11"></h1>
+</span></span></code></pre></div><h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-12"></h1>
-<h3 id="mysql-57-install"><strong>MySQL 5.7 Install</strong></h3>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<h3 id="mysql-57-install">
+  <strong>MySQL 5.7 Install</strong>
+  <a class="anchor" href="#mysql-57-install">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ Cacti&gt; yum -y install http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ Cacti&gt; yum -y install mysql-community-server
@@ -1625,10 +1688,19 @@ Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결�
 </span></span><span style="display:flex;"><span>$ Cacti&gt; firewall-cmd --add-service<span style="color:#f92672">=</span>mysql --permanent
 </span></span><span style="display:flex;"><span>$ Cacti&gt; firewall-cmd --reload
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 방화벽 설정</span>
-</span></span></code></pre></div><h1 id="heading-13"></h1>
+</span></span></code></pre></div><h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-14"></h1>
-<h3 id="cacti-snmp-install"><strong>Cacti SNMP Install</strong></h3>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<h3 id="cacti-snmp-install">
+  <strong>Cacti SNMP Install</strong>
+  <a class="anchor" href="#cacti-snmp-install">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ Cacti&gt; yum --enablerepo<span style="color:#f92672">=</span>epel -y install cacti net-snmp net-snmp-utils php-mysql php-snmp rrdtool
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
@@ -1700,31 +1772,64 @@ Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결�
 </span></span><span style="display:flex;"><span>$ Cacti&gt; php -q input_whitelist.php --audit
 </span></span><span style="display:flex;"><span>$ Cacti&gt; php -q input_whitelist.php --push
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Whitelist는 아직 정리 필요</span>
-</span></span></code></pre></div><h1 id="heading-15"></h1>
+</span></span></code></pre></div><h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-16"></h1>
-<h3 id="cacti-setup"><strong>Cacti Setup</strong></h3>
-<h1 id="heading-17"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h3 id="cacti-setup">
+  <strong>Cacti Setup</strong>
+  <a class="anchor" href="#cacti-setup">#</a>
+</h3>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <ul>
 <li><strong>http://[IP or hostname]/cacti/접속</strong></li>
 </ul>
-<h1 id="heading-18"></h1>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
 <p><img src="/Linux/c00.png" alt="" /></p>
-<h1 id="heading-19"></h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 <p> 
 <img src="/Linux/c01.png" alt="" /></p>
-<h1 id="heading-20"></h1>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <p> 
 <img src="/Linux/c02.png" alt="" /></p>
-<h1 id="heading-21"></h1>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <p> 
 <img src="/Linux/c03.png" alt="" /></p>
-<h1 id="heading-22"></h1>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
 <p> 
 <img src="/Linux/c04.png" alt="" /></p>
-<h1 id="heading-23"></h1>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-24"></h1>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ Cacti&gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
@@ -1738,7 +1843,10 @@ Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결�
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ Cacti&gt;
-</span></span></code></pre></div><h1 id="heading-25"></h1>
+</span></span></code></pre></div><h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
 <p> </p>
 </article>
  
@@ -1846,7 +1954,6 @@ Cacti는 사용자가 소정의 간격으로 서비스를 폴링하고 그 결�
 </body>
 </div>
 </html>
-
 
 
 

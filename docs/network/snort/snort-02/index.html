@@ -2,33 +2,29 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="시스템통합 관리 침입 탐지 시스템(IDS) &ndash; Snort 이용 주된 기능
+<meta name="description" content="시스템통합 관리#침입 탐지 시스템(IDS) &ndash; Snort 이용##주된 기능
 탐지(Detection)
 잘못된 패킷을 감지하면 사용자에게 알림(주체적으로 처리하지 X, only 안내)
-탐지 종류 2가지
+#탐지 종류 2가지
 (1)오용 탐지	알고 있는 것 탐지
 (2)이상 탐지	모르는 것도 탐지(100% 탐지 X)
 너무 민감하게 처리하면 필요한 정보도 차단하는 실수를 할 수 있음
-설치위치 ( 성능이 달라짐 )
+#설치위치 ( 성능이 달라짐 )
 패킷이 라우터로 들어오기 전
 내부 네트워크로 들어오는 모든 패킷은 IDS를 거침
 쓸 데 없는 패킷을 많이 훑기 때문에 효율적이지 X">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/network/snort/snort-02/><meta property="og:title" content="Snort 역할" />
-<meta property="og:description" content="시스템통합 관리 침입 탐지 시스템(IDS) &ndash; Snort 이용 주된 기능
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Snort 역할" />
+<meta property="og:description" content="시스템통합 관리#침입 탐지 시스템(IDS) &ndash; Snort 이용##주된 기능
 탐지(Detection)
 잘못된 패킷을 감지하면 사용자에게 알림(주체적으로 처리하지 X, only 안내)
-탐지 종류 2가지
+#탐지 종류 2가지
 (1)오용 탐지	알고 있는 것 탐지
 (2)이상 탐지	모르는 것도 탐지(100% 탐지 X)
 너무 민감하게 처리하면 필요한 정보도 차단하는 실수를 할 수 있음
-설치위치 ( 성능이 달라짐 )
+#설치위치 ( 성능이 달라짐 )
 패킷이 라우터로 들어오기 전
 내부 네트워크로 들어오는 모든 패킷은 IDS를 거침
 쓸 데 없는 패킷을 많이 훑기 때문에 효율적이지 X" />
@@ -37,25 +33,28 @@
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Snort 역할 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -68,7 +67,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1225,6 +1224,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1236,14 +1238,15 @@
   <strong>Snort 역할</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1293,9 +1296,18 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="시스템통합-관리"><strong>시스템통합 관리</strong></h1>
-<h2 id="침입-탐지-시스템ids----snort-이용">침입 탐지 시스템(IDS) &ndash; Snort 이용</h2>
-<h1 id="heading"></h1>
+  <article class="markdown"><h1 id="시스템통합-관리">
+  <strong>시스템통합 관리</strong>
+  <a class="anchor" href="#%ec%8b%9c%ec%8a%a4%ed%85%9c%ed%86%b5%ed%95%a9-%ea%b4%80%eb%a6%ac">#</a>
+</h1>
+<h2 id="침입-탐지-시스템ids----snort-이용">
+  침입 탐지 시스템(IDS) &ndash; Snort 이용
+  <a class="anchor" href="#%ec%b9%a8%ec%9e%85-%ed%83%90%ec%a7%80-%ec%8b%9c%ec%8a%a4%ed%85%9cids----snort-%ec%9d%b4%ec%9a%a9">#</a>
+</h2>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>주된 기능</strong></p>
@@ -1309,7 +1321,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-1"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>탐지 종류 2가지</strong></p>
@@ -1326,7 +1341,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>설치위치 ( 성능이 달라짐 )</strong></p>
@@ -1379,8 +1397,12 @@
 </ol>
 </li>
 </ul>
-<h2 id="snort-설치"><strong>Snort 설치</strong></h2>
-<h4 id="hahahugoshortcode-s0-hbhb"><div class="book-expand">
+<h2 id="snort-설치">
+  <strong>Snort 설치</strong>
+  <a class="anchor" href="#snort-%ec%84%a4%ec%b9%98">#</a>
+</h2>
+<h4 id="hahahugoshortcode-s0-hbhb">
+  <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
       <span>Snort 설치</span>
@@ -1392,7 +1414,10 @@
 <ol>
 <li><strong>의존성 관련 프로그램 설치</strong></li>
 </ol>
-<h1 id="heading"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <pre><code>- yum -y install http://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/d/daq-2.0.6-1.el7.x86_64.rpm
 
 - yum -y install gcc gcc-c++ flex bison zlib libpcap pcre libdnet tcpdump
@@ -1432,13 +1457,19 @@ cd /[ doc ]
 </blockquote>
 </blockquote>
 </blockquote>
-<h1 id="heading-1"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <hr>
 <hr>
 <ol start="2">
 <li><strong>스노트 설치</strong></li>
 </ol>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <ul>
 <li>
 <p><a href="https://www.snort.org/downloads">Snort 다운로드</a></p>
@@ -1450,7 +1481,10 @@ cd /[ doc ]
 <p>rpm -ivh snort&hellip;.</p>
 </li>
 </ul>
-<h1 id="heading-3"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <hr>
 <hr>
 <ol start="3">
@@ -1523,10 +1557,19 @@ cd /[ doc ]
     </div>
   </label>
 </div>
+
+  <a class="anchor" href="#hahahugoshortcode-s0-hbhb">#</a>
 </h4>
-<h2 id="snort-rules"><strong>Snort rules</strong></h2>
-<h1 id="heading-3"></h1>
-<h4 id="hahahugoshortcode-s1-hbhb"><div class="book-expand">
+<h2 id="snort-rules">
+  <strong>Snort rules</strong>
+  <a class="anchor" href="#snort-rules">#</a>
+</h2>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h4 id="hahahugoshortcode-s1-hbhb">
+  <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
       <span>Snort rules</span>
@@ -1534,13 +1577,28 @@ cd /[ doc ]
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h1 id="rule"><strong>Rule</strong></h1>
-<h1 id="heading"></h1>
-<h2 id="rule-형태--ruleheader-tcp-udp-icmp-ip-출발지ip-포트----도착지ip-포트-ruleoption"><strong>Rule 형태</strong> : [RuleHeader] [tcp, udp, icmp, ip] [출발지IP] [포트] [-&gt;, &lt;&gt;] [도착지IP] [포트] [RuleOption]</h2>
+      <h1 id="rule">
+  <strong>Rule</strong>
+  <a class="anchor" href="#rule">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="rule-형태--ruleheader-tcp-udp-icmp-ip-출발지ip-포트----도착지ip-포트-ruleoption">
+  <strong>Rule 형태</strong> : [RuleHeader] [tcp, udp, icmp, ip] [출발지IP] [포트] [-&gt;, &lt;&gt;] [도착지IP] [포트] [RuleOption]
+  <a class="anchor" href="#rule-%ed%98%95%ed%83%9c--ruleheader-tcp-udp-icmp-ip-%ec%b6%9c%eb%b0%9c%ec%a7%80ip-%ed%8f%ac%ed%8a%b8----%eb%8f%84%ec%b0%a9%ec%a7%80ip-%ed%8f%ac%ed%8a%b8-ruleoption">#</a>
+</h2>
 <pre><code>- ex)alert icmp any any -&gt; any any ( msg:&quot;ICMP Detected&quot;; sid:1000001; )
 </code></pre>
-<h2 id="rule-header"><strong>Rule Header</strong></h2>
-<h1 id="heading-1"></h1>
+<h2 id="rule-header">
+  <strong>Rule Header</strong>
+  <a class="anchor" href="#rule-header">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <ol>
 <li>
 <p><strong>Rule Action</strong></p>
@@ -1566,7 +1624,10 @@ cd /[ doc ]
 </ul>
 </li>
 </ol>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <ol start="2">
 <li>
 <p><strong>프로토콜</strong></p>
@@ -1575,7 +1636,10 @@ cd /[ doc ]
 </ul>
 </li>
 </ol>
-<h1 id="heading-3"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <ol start="3">
 <li>
 <p><strong>IP 주소</strong></p>
@@ -1620,8 +1684,14 @@ cd /[ doc ]
 </ul>
 </li>
 </ol>
-<h2 id="rule-option"><strong>Rule Option</strong></h2>
-<h1 id="heading-4"></h1>
+<h2 id="rule-option">
+  <strong>Rule Option</strong>
+  <a class="anchor" href="#rule-option">#</a>
+</h2>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <ul>
 <li>
 <p>Rule Option은 새미콜론(;)으로 구분한다.</p>
@@ -1760,12 +1830,21 @@ cd /[ doc ]
     </div>
   </label>
 </div>
+
+  <a class="anchor" href="#hahahugoshortcode-s1-hbhb">#</a>
 </h4>
 <hr>
 <hr>
-<h1 id="heading-4"></h1>
-<h2 id="스노트-실습"><strong>스노트 실습</strong></h2>
-<h4 id="hahahugoshortcode-s2-hbhb"><div class="book-expand">
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h2 id="스노트-실습">
+  <strong>스노트 실습</strong>
+  <a class="anchor" href="#%ec%8a%a4%eb%85%b8%ed%8a%b8-%ec%8b%a4%ec%8a%b5">#</a>
+</h2>
+<h4 id="hahahugoshortcode-s2-hbhb">
+  <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
       <span>스노트 실습</span>
@@ -1774,20 +1853,40 @@ cd /[ doc ]
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
       <p><img src="/snort/Base.png" alt="Snort_t01" /></p>
-<h1 id="heading"></h1>
-<h2 id="실습-환경-구성"><strong>실습 환경 구성</strong></h2>
-<h1 id="heading-1"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="실습-환경-구성">
+  <strong>실습 환경 구성</strong>
+  <a class="anchor" href="#%ec%8b%a4%ec%8a%b5-%ed%99%98%ea%b2%bd-%ea%b5%ac%ec%84%b1">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <hr>
 <hr>
-<h1 id="heading-2"></h1>
-<h2 id="스노트-실습"><strong>스노트 실습</strong></h2>
-<h1 id="heading-3"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<h2 id="스노트-실습">
+  <strong>스노트 실습</strong>
+  <a class="anchor" href="#%ec%8a%a4%eb%85%b8%ed%8a%b8-%ec%8b%a4%ec%8a%b5">#</a>
+</h2>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <p><img src="/snort/Base.png" alt="Snort_t01" /></p>
 <p><img src="/snort/Snort_t01" alt="S_t" /></p>
 
     </div>
   </label>
 </div>
+
+  <a class="anchor" href="#hahahugoshortcode-s2-hbhb">#</a>
 </h4>
 <p>~
 ~</p>
@@ -1870,7 +1969,6 @@ cd /[ doc ]
 </body>
 </div>
 </html>
-
 
 
 

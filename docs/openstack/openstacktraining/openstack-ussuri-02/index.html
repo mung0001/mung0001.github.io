@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="OpenStack Ussuri : 기본 환경설정 ----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached | ----------------------- OpenStack Ussuri : 기본 환경설정 앞 기본 환경설정을 모든 노드에서 진행한 후, DB, RabbitMQ, Memcached는 controller에서만 설치를 진행합니다. $ all&gt; $ controller&gt; $ controller ~(keystone)&gt; $ compute&gt; $ network&gt; # 위와 같은 호스트를 주의헤 주세요 ! # (keystone)은 keystone 설치 후 인증 받은 터미널입니다. Ussuri repository 등록 OpenStack 구현을 위해 Ussuri repository를 구현합니다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/openstack/openstacktraining/openstack-ussuri-02/><meta property="og:title" content="OpenStack Ussuri : 환경설정" />
-<meta property="og:description" content="OpenStack Ussuri : 기본 환경설정 ----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached | ----------------------- OpenStack Ussuri : 기본 환경설정 앞 기본 환경설정을 모든 노드에서 진행한 후, DB, RabbitMQ, Memcached는 controller에서만 설치를 진행합니다. $ all&gt; $ controller&gt; $ controller ~(keystone)&gt; $ compute&gt; $ network&gt; # 위와 같은 호스트를 주의헤 주세요 ! # (keystone)은 keystone 설치 후 인증 받은 터미널입니다. Ussuri repository 등록 OpenStack 구현을 위해 Ussuri repository를 구현합니다." />
+<meta name="description" content="OpenStack Ussuri : 기본 환경설정##----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached | ----------------------- #OpenStack Ussuri : 기본 환경설정##앞 기본 환경설정을 모든 노드에서 진행한 후, DB, RabbitMQ, Memcached는 controller에서만 설치를 진행합니다. $ all&gt; $ controller&gt; $ controller ~(keystone)&gt; $ compute&gt; $ network&gt; # 위와 같은 호스트를 주의헤 주세요 ! # (keystone)은 keystone 설치 후 인증 받은 터미널입니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="OpenStack Ussuri : 환경설정" />
+<meta property="og:description" content="OpenStack Ussuri : 기본 환경설정##----------------------- | [ Controller Node ] | | | | MariaDB RabbitMQ | | Memcached | ----------------------- #OpenStack Ussuri : 기본 환경설정##앞 기본 환경설정을 모든 노드에서 진행한 후, DB, RabbitMQ, Memcached는 controller에서만 설치를 진행합니다. $ all&gt; $ controller&gt; $ controller ~(keystone)&gt; $ compute&gt; $ network&gt; # 위와 같은 호스트를 주의헤 주세요 ! # (keystone)은 keystone 설치 후 인증 받은 터미널입니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-02/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>OpenStack Ussuri : 환경설정 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -48,7 +47,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1375,6 +1374,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1386,14 +1388,15 @@
   <strong>OpenStack Ussuri : 환경설정</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1450,17 +1453,32 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="openstack-ussuri--기본-환경설정"><strong>OpenStack Ussuri : 기본 환경설정</strong></h1>
-<h1 id="heading"></h1>
+  <article class="markdown"><h1 id="openstack-ussuri--기본-환경설정">
+  <strong>OpenStack Ussuri : 기본 환경설정</strong>
+  <a class="anchor" href="#openstack-ussuri--%ea%b8%b0%eb%b3%b8-%ed%99%98%ea%b2%bd%ec%84%a4%ec%a0%95">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <pre tabindex="0"><code> -----------------------   
 |  [ Controller Node ]  |    
 |                       |   
 |  MariaDB    RabbitMQ  |   
 |  Memcached            |   
  -----------------------      
-</code></pre><h1 id="heading-1"></h1>
-<h2 id="openstack-ussuri--기본-환경설정-1"><strong>OpenStack Ussuri : 기본 환경설정</strong></h2>
-<h1 id="heading-2"></h1>
+</code></pre><h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h2 id="openstack-ussuri--기본-환경설정-1">
+  <strong>OpenStack Ussuri : 기본 환경설정</strong>
+  <a class="anchor" href="#openstack-ussuri--%ea%b8%b0%eb%b3%b8-%ed%99%98%ea%b2%bd%ec%84%a4%ec%a0%95-1">#</a>
+</h2>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <ul>
 <li><strong>앞 기본 환경설정을 모든 노드에서 진행한 후, DB, RabbitMQ, Memcached는 controller에서만 설치를 진행합니다.</strong></li>
 </ul>
@@ -1471,20 +1489,41 @@
 </span></span><span style="display:flex;"><span>$ network&gt;
 </span></span><span style="display:flex;"><span># 위와 같은 호스트를 주의헤 주세요 !
 </span></span><span style="display:flex;"><span># (keystone)은 keystone 설치 후 인증 받은 터미널입니다.
-</span></span></code></pre></div><h1 id="heading-3"></h1>
-<h3 id="ussuri-repository-등록"><strong>Ussuri repository 등록</strong></h3>
-<h1 id="heading-4"></h1>
+</span></span></code></pre></div><h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h3 id="ussuri-repository-등록">
+  <strong>Ussuri repository 등록</strong>
+  <a class="anchor" href="#ussuri-repository-%eb%93%b1%eb%a1%9d">#</a>
+</h3>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <ul>
 <li><strong>OpenStack 구현을 위해 Ussuri repository를 구현합니다.</strong></li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ all&gt; dnf -y install centos-release-openstack-ussuri
 </span></span><span style="display:flex;"><span>$ all&gt; sed -i -e &#34;s/enabled=1/enabled=0/g&#34; /etc/yum.repos.d/CentOS-OpenStack-ussuri.repo
 </span></span><span style="display:flex;"><span>$ all&gt; dnf --enablerepo=centos-openstack-ussuri -y upgrade
-</span></span></code></pre></div><h1 id="heading-5"></h1>
+</span></span></code></pre></div><h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-6"></h1>
-<h3 id="ntp--network-time-protocol--server-설치"><strong>NTP ( Network Time Protocol ) Server 설치</strong></h3>
-<h1 id="heading-7"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<h3 id="ntp--network-time-protocol--server-설치">
+  <strong>NTP ( Network Time Protocol ) Server 설치</strong>
+  <a class="anchor" href="#ntp--network-time-protocol--server-%ec%84%a4%ec%b9%98">#</a>
+</h3>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <ul>
 <li><strong>NTP Server는 모든 Node에서 설정을 진행합니다.</strong></li>
 </ul>
@@ -1518,11 +1557,23 @@
 </span></span><span style="display:flex;"><span>^* ntp-b3.nict.go.jp             1   6    17    10  +1015us[ -490us] +/-   22ms
 </span></span><span style="display:flex;"><span>^- ntp-b2.nict.go.jp             1   6    17    10  +2720us[+2720us] +/-   22ms
 </span></span><span style="display:flex;"><span># 방화벽을 등록 후 확인합니다.
-</span></span></code></pre></div><h1 id="heading-8"></h1>
+</span></span></code></pre></div><h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-9"></h1>
-<h3 id="controller-mariadb-설치"><strong>Controller MariaDB 설치</strong></h3>
-<h1 id="heading-10"></h1>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<h3 id="controller-mariadb-설치">
+  <strong>Controller MariaDB 설치</strong>
+  <a class="anchor" href="#controller-mariadb-%ec%84%a4%ec%b9%98">#</a>
+</h3>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller&gt; dnf module -y install mariadb:10.3
 </span></span><span style="display:flex;"><span>$ controller&gt; vi /etc/my.cnf.d/charaset.cnf
 </span></span><span style="display:flex;"><span>[mysqld]
@@ -1543,11 +1594,23 @@
 </span></span><span style="display:flex;"><span>$ controller&gt; mysql_secure_installation
 </span></span><span style="display:flex;"><span>$ controller&gt; mysql -u root -p
 </span></span><span style="display:flex;"><span># 설정을 초기화 후, 비빌번호를 생성합니다.
-</span></span></code></pre></div><h1 id="heading-11"></h1>
+</span></span></code></pre></div><h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-12"></h1>
-<h3 id="rabbitmq-memcached-설치"><strong>RabbitMQ, Memcached 설치</strong></h3>
-<h1 id="heading-13"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<h3 id="rabbitmq-memcached-설치">
+  <strong>RabbitMQ, Memcached 설치</strong>
+  <a class="anchor" href="#rabbitmq-memcached-%ec%84%a4%ec%b9%98">#</a>
+</h3>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
 <ul>
 <li><strong>RabbitMQ는 오픈 소스 메시지 브로커 소프트웨어이며, AMQP를 구현합니다. RabbitMQ는 OpenStack에서는 서로간의 통신을 위해 사용됩니다.</strong></li>
 <li><strong>Memcached이란 Memcached 는 범용 분산 캐시 시스템로, OpenStack에서 캐시값을 관리합니다.</strong></li>
@@ -1688,7 +1751,6 @@
 </body>
 </div>
 </html>
-
 
 
 

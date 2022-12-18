@@ -2,46 +2,43 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shell Programming UNIX/ Linux 기본 명령어와 개념 Redirection &amp; Pipes $ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt; $ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt; &lt;Pipe&gt; &lt;File Descriptor&gt; ... ex) $ cat /log/var/message | grep ERR # cat = &lt;File Descripotr&gt; # /log/var/message = &lt;PATH&gt; # | = &lt;Redirection&gt; File Descriptor Process가 File이나 Device를 access 하기 위해 사용
+<meta name="description" content="Shell Programming##UNIX/ Linux 기본 명령어와 개념##Redirection &amp; Pipes##$ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt; $ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt; &lt;Pipe&gt; &lt;File Descriptor&gt; ... ex) $ cat /log/var/message | grep ERR # cat = &lt;File Descripotr&gt; # /log/var/message = &lt;PATH&gt; # | = &lt;Redirection&gt; #File Descriptor Process가 File이나 Device를 access 하기 위해 사용
 Standard File Descriptor
-stdin(standard input) : 표준 입력 (예시 : 키보드)
-stdout(standard output) : 표준 출력 (예시 : 모니터)">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/development/shell/shell-2/><meta property="og:title" content="UNIX/ Linux 개념과 명령어" />
-<meta property="og:description" content="Shell Programming UNIX/ Linux 기본 명령어와 개념 Redirection &amp; Pipes $ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt; $ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt; &lt;Pipe&gt; &lt;File Descriptor&gt; ... ex) $ cat /log/var/message | grep ERR # cat = &lt;File Descripotr&gt; # /log/var/message = &lt;PATH&gt; # | = &lt;Redirection&gt; File Descriptor Process가 File이나 Device를 access 하기 위해 사용
+stdin(standard input) : 표준 입력 (예시 : 키보드)">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="UNIX/ Linux 개념과 명령어" />
+<meta property="og:description" content="Shell Programming##UNIX/ Linux 기본 명령어와 개념##Redirection &amp; Pipes##$ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt; $ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt; &lt;Pipe&gt; &lt;File Descriptor&gt; ... ex) $ cat /log/var/message | grep ERR # cat = &lt;File Descripotr&gt; # /log/var/message = &lt;PATH&gt; # | = &lt;Redirection&gt; #File Descriptor Process가 File이나 Device를 access 하기 위해 사용
 Standard File Descriptor
-stdin(standard input) : 표준 입력 (예시 : 키보드)
-stdout(standard output) : 표준 출력 (예시 : 모니터)" />
+stdin(standard input) : 표준 입력 (예시 : 키보드)" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/development/shell/shell-2/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>UNIX/ Linux 개념과 명령어 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -54,7 +51,7 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)" />
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1361,6 +1358,9 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)" />
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1372,14 +1372,15 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)" />
   <strong>UNIX/ Linux 개념과 명령어</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1436,12 +1437,30 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)" />
 <br>
 <br>
       
-  <article class="markdown"><h1 id="shell-programming"><strong>Shell Programming</strong></h1>
-<h1 id="heading"></h1>
-<h2 id="unix-linux-기본-명령어와-개념"><strong>UNIX/ Linux 기본 명령어와 개념</strong></h2>
-<h1 id="heading-1"></h1>
-<h3 id="redirection--pipes"><strong>Redirection &amp; Pipes</strong></h3>
-<h1 id="heading-2"></h1>
+  <article class="markdown"><h1 id="shell-programming">
+  <strong>Shell Programming</strong>
+  <a class="anchor" href="#shell-programming">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="unix-linux-기본-명령어와-개념">
+  <strong>UNIX/ Linux 기본 명령어와 개념</strong>
+  <a class="anchor" href="#unix-linux-%ea%b8%b0%eb%b3%b8-%eb%aa%85%eb%a0%b9%ec%96%b4%ec%99%80-%ea%b0%9c%eb%85%90">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h3 id="redirection--pipes">
+  <strong>Redirection &amp; Pipes</strong>
+  <a class="anchor" href="#redirection--pipes">#</a>
+</h3>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt;
 </span></span><span style="display:flex;"><span>$ &lt;File Descriptor&gt; &lt;PATH&gt; &lt;Redirection&gt; &lt;Pipe&gt; &lt;File Descriptor&gt; ...
 </span></span><span style="display:flex;"><span>ex) $ cat /log/var/message | grep ERR
@@ -1451,7 +1470,10 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)" />
 </span></span><span style="display:flex;"><span># /log/var/message = &lt;PATH&gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span># | = &lt;Redirection&gt;
-</span></span></code></pre></div><h1 id="heading-3"></h1>
+</span></span></code></pre></div><h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <ul>
 <li><strong>File Descriptor</strong>
 <ul>
@@ -1473,7 +1495,10 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-4"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>PATH</strong>
@@ -1487,7 +1512,10 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-5"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Redirction</strong>
@@ -1507,7 +1535,10 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-6"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Pipe (|)</strong>
@@ -1524,7 +1555,10 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-7"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>예시</strong></li>
@@ -1579,16 +1613,34 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)" />
 </span></span><span style="display:flex;"><span># ps = stdout
 </span></span><span style="display:flex;"><span># &gt; = Redirction
 </span></span><span style="display:flex;"><span># lsoutput.txt = PATH &amp; stdin
-</span></span></code></pre></div><h1 id="heading-8"></h1>
+</span></span></code></pre></div><h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-9"></h1>
-<h3 id="shell-programming의-방법"><strong>Shell Programming의 방법</strong></h3>
-<h1 id="heading-10"></h1>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<h3 id="shell-programming의-방법">
+  <strong>Shell Programming의 방법</strong>
+  <a class="anchor" href="#shell-programming%ec%9d%98-%eb%b0%a9%eb%b2%95">#</a>
+</h3>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <ul>
 <li><strong>Shell Programming을 사용하기 위해서는 두 가지 방법이 존재</strong></li>
 </ul>
-<h1 id="heading-11"></h1>
-<h3 id="line-command"><strong>Line command</strong></h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<h3 id="line-command">
+  <strong>Line command</strong>
+  <a class="anchor" href="#line-command">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ for file in *
 </span></span><span style="display:flex;"><span>&gt; do
 </span></span><span style="display:flex;"><span>&gt; if grep -l ps $file
@@ -1605,9 +1657,15 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)" />
 </span></span></code></pre></div><ul>
 <li><strong>Line command는 CLI환경에서 특정 파일을 통해서가 아닌 직접 함수와 변수를 코딩함으로서 Programming을 수행하는 방법</strong></li>
 </ul>
-<h1 id="heading-12"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p> </p>
-<h3 id="script"><strong>Script</strong></h3>
+<h3 id="script">
+  <strong>Script</strong>
+  <a class="anchor" href="#script">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ vi Script.sh
 </span></span><span style="display:flex;"><span># !/bin/bash
 </span></span><span style="display:flex;"><span>
@@ -1630,7 +1688,10 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)" />
 </span></span></code></pre></div><ul>
 <li><strong>Script는 특정 파일 내부에 함수와 변수의 코드함으로서 이를 실행시켜 Programing을 수행하는 방법</strong></li>
 </ul>
-<h1 id="heading-13"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
 <p> </p>
 </article>
  
@@ -1718,7 +1779,6 @@ stdout(standard output) : 표준 출력 (예시 : 모니터)" />
 </body>
 </div>
 </html>
-
 
 
 

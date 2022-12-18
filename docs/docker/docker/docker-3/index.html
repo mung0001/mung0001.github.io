@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Docker 이미지와 컨테이너 Docker 이미지와 컨테이너 Docker 이미지 $ docker image --help $ docker image [ options ] 옵션 설명 build 이미지 빌드 history history 출력 inspect 임포트 load 로드 ls 이미지 리스트르 보여준다 prune 사용하지 않는 이미지를 제거 pull 저장소에서 이미지를 다운로드 push 저장소에 이미지를 업로드 rm 삭제 save tar로 이미지를 저장 tag 태그를 생성 $ docker pull [ options ] [ 레포지터리 : 태그 ] $ docker image pull [ options ] [ 레포지터리 : 태그 ] # 도커 이미지 다운로드 $ docker images $ docker image list # 도커 이미지 리스트 리스트 출력 $ docker image tags [ 기반이미지 : 태그 ] [ 새이미지 | 태그 ] # 도커 이미지에 태그 입력 $ docker image push [ 레포지터리 : 태그 ] # 지정된 레포지터리에 업로드 도커 이미지의 태그는 버전을 구별하기 위한 역할을 수행합니다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/docker/docker/docker-3/><meta property="og:title" content="Docker 이미지와 컨테이너" />
-<meta property="og:description" content="Docker 이미지와 컨테이너 Docker 이미지와 컨테이너 Docker 이미지 $ docker image --help $ docker image [ options ] 옵션 설명 build 이미지 빌드 history history 출력 inspect 임포트 load 로드 ls 이미지 리스트르 보여준다 prune 사용하지 않는 이미지를 제거 pull 저장소에서 이미지를 다운로드 push 저장소에 이미지를 업로드 rm 삭제 save tar로 이미지를 저장 tag 태그를 생성 $ docker pull [ options ] [ 레포지터리 : 태그 ] $ docker image pull [ options ] [ 레포지터리 : 태그 ] # 도커 이미지 다운로드 $ docker images $ docker image list # 도커 이미지 리스트 리스트 출력 $ docker image tags [ 기반이미지 : 태그 ] [ 새이미지 | 태그 ] # 도커 이미지에 태그 입력 $ docker image push [ 레포지터리 : 태그 ] # 지정된 레포지터리에 업로드 도커 이미지의 태그는 버전을 구별하기 위한 역할을 수행합니다." />
+<meta name="description" content="Docker 이미지와 컨테이너##Docker 이미지와 컨테이너##Docker 이미지##$ docker image --help $ docker image [ options ] 옵션 설명 build 이미지 빌드 history history 출력 inspect 임포트 load 로드 ls 이미지 리스트르 보여준다 prune 사용하지 않는 이미지를 제거 pull 저장소에서 이미지를 다운로드 push 저장소에 이미지를 업로드 rm 삭제 save tar로 이미지를 저장 tag 태그를 생성 ##$ docker pull [ options ] [ 레포지터리 : 태그 ] $ docker image pull [ options ] [ 레포지터리 : 태그 ] # 도커 이미지 다운로드 $ docker images $ docker image list # 도커 이미지 리스트 리스트 출력 $ docker image tags [ 기반이미지 : 태그 ] [ 새이미지 | 태그 ] # 도커 이미지에 태그 입력 $ docker image push [ 레포지터리 : 태그 ] # 지정된 레포지터리에 업로드 도커 이미지의 태그는 버전을 구별하기 위한 역할을 수행합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Docker 이미지와 컨테이너" />
+<meta property="og:description" content="Docker 이미지와 컨테이너##Docker 이미지와 컨테이너##Docker 이미지##$ docker image --help $ docker image [ options ] 옵션 설명 build 이미지 빌드 history history 출력 inspect 임포트 load 로드 ls 이미지 리스트르 보여준다 prune 사용하지 않는 이미지를 제거 pull 저장소에서 이미지를 다운로드 push 저장소에 이미지를 업로드 rm 삭제 save tar로 이미지를 저장 tag 태그를 생성 ##$ docker pull [ options ] [ 레포지터리 : 태그 ] $ docker image pull [ options ] [ 레포지터리 : 태그 ] # 도커 이미지 다운로드 $ docker images $ docker image list # 도커 이미지 리스트 리스트 출력 $ docker image tags [ 기반이미지 : 태그 ] [ 새이미지 | 태그 ] # 도커 이미지에 태그 입력 $ docker image push [ 레포지터리 : 태그 ] # 지정된 레포지터리에 업로드 도커 이미지의 태그는 버전을 구별하기 위한 역할을 수행합니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/docker/docker/docker-3/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Docker 이미지와 컨테이너 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -48,7 +47,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1255,6 +1254,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1266,14 +1268,15 @@
   <strong>Docker 이미지와 컨테이너</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1378,16 +1381,34 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="docker-이미지와-컨테이너"><strong>Docker 이미지와 컨테이너</strong></h1>
+  <article class="markdown"><h1 id="docker-이미지와-컨테이너">
+  <strong>Docker 이미지와 컨테이너</strong>
+  <a class="anchor" href="#docker-%ec%9d%b4%eb%af%b8%ec%a7%80%ec%99%80-%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88">#</a>
+</h1>
 <hr>
-<h1 id="heading"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <blockquote>
-<h2 id="docker-이미지와-컨테이너-1"><strong>Docker 이미지와 컨테이너</strong></h2>
+<h2 id="docker-이미지와-컨테이너-1">
+  <strong>Docker 이미지와 컨테이너</strong>
+  <a class="anchor" href="#docker-%ec%9d%b4%eb%af%b8%ec%a7%80%ec%99%80-%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88-1">#</a>
+</h2>
 </blockquote>
-<h1 id="heading-1"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <p> </p>
-<h2 id="docker-이미지"><strong>Docker 이미지</strong></h2>
-<h1 id="heading-2"></h1>
+<h2 id="docker-이미지">
+  <strong>Docker 이미지</strong>
+  <a class="anchor" href="#docker-%ec%9d%b4%eb%af%b8%ec%a7%80">#</a>
+</h2>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ docker image --help
 </span></span><span style="display:flex;"><span>$ docker image [ options ]
 </span></span></code></pre></div><table>
@@ -1444,9 +1465,15 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-3"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-4"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ docker pull [ options ] [ 레포지터리 : 태그 ]
 </span></span><span style="display:flex;"><span>$ docker image pull [ options ] [ 레포지터리 : 태그 ]
 </span></span><span style="display:flex;"><span># 도커 이미지 다운로드
@@ -1464,11 +1491,23 @@
 <li><strong>도커 이미지의 태그는 버전을 구별하기 위한 역할을 수행합니다.</strong></li>
 <li><strong>이미지에 태그를 부착하지 않을 경구 latest 태그가 부여됩니다.</strong></li>
 </ul>
-<h1 id="heading-5"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-6"></h1>
-<h3 id="dockerfile-인스트럭션"><strong>Dockerfile 인스트럭션</strong></h3>
-<h1 id="heading-7"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<h3 id="dockerfile-인스트럭션">
+  <strong>Dockerfile 인스트럭션</strong>
+  <a class="anchor" href="#dockerfile-%ec%9d%b8%ec%8a%a4%ed%8a%b8%eb%9f%ad%ec%85%98">#</a>
+</h3>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <ul>
 <li><strong>Dockerfile을 사용하면 보다 쉽게 Docker 이미지를 생성할 수 있습니다.</strong></li>
 </ul>
@@ -1514,9 +1553,15 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-8"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-9"></h1>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ vi main.go
 </span></span><span style="display:flex;"><span>package main 
 </span></span><span style="display:flex;"><span>import ( 
@@ -1550,18 +1595,36 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ docker run --rm test:test
 </span></span><span style="display:flex;"><span># docker image 실행
-</span></span></code></pre></div><h1 id="heading-10"></h1>
+</span></span></code></pre></div><h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-11"></h1>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ docker container run -t -p 9000:8080 gihyodocker/echo:latest
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ curl http:///localhost:9000/
 </span></span><span style="display:flex;"><span># 다른 터미널로 테스트
-</span></span></code></pre></div><h1 id="heading-12"></h1>
+</span></span></code></pre></div><h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-13"></h1>
-<h2 id="docker-컨테이너"><strong>Docker 컨테이너</strong></h2>
-<h1 id="heading-14"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h2 id="docker-컨테이너">
+  <strong>Docker 컨테이너</strong>
+  <a class="anchor" href="#docker-%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88">#</a>
+</h2>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <ul>
 <li><strong>도커 컨테이너 생애주기</strong>
 <ul>
@@ -1571,10 +1634,19 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-15"></h1>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-16"></h1>
-<h3 id="컨테이너-생성-및-실행"><strong>컨테이너 생성 및 실행</strong></h3>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h3 id="컨테이너-생성-및-실행">
+  <strong>컨테이너 생성 및 실행</strong>
+  <a class="anchor" href="#%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88-%ec%83%9d%ec%84%b1-%eb%b0%8f-%ec%8b%a4%ed%96%89">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ docker container run [ options ] [ 이미지명 : 태그 ] [ 명령 ] [ 명령인자 ]
 </span></span><span style="display:flex;"><span>$ docker container run [ options ] [ 이미지 ID ] [ 명령 ] [ 명령인자 ]
 </span></span></code></pre></div><table>
@@ -1599,10 +1671,19 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-17"></h1>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-18"></h1>
-<h3 id="컨테이너-이름-추가"><strong>컨테이너 이름 추가</strong></h3>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<h3 id="컨테이너-이름-추가">
+  <strong>컨테이너 이름 추가</strong>
+  <a class="anchor" href="#%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88-%ec%9d%b4%eb%a6%84-%ec%b6%94%ea%b0%80">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ docker container run --name [ 컨테이너 이름 ] [ 이미지명 | 태그 ]
 </span></span></code></pre></div><table>
 <thead>
@@ -1630,10 +1711,19 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-19"></h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-20"></h1>
-<h3 id="컨테이너-정보-출력"><strong>컨테이너 정보 출력</strong></h3>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<h3 id="컨테이너-정보-출력">
+  <strong>컨테이너 정보 출력</strong>
+  <a class="anchor" href="#%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88-%ec%a0%95%eb%b3%b4-%ec%b6%9c%eb%a0%a5">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ docker container ls [ options ]
 </span></span><span style="display:flex;"><span># 도커 컨테이너 목록 출력
 </span></span><span style="display:flex;"><span>
@@ -1683,10 +1773,19 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-21"></h1>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-22"></h1>
-<h3 id="컨테이너-상태변경"><strong>컨테이너 상태변경</strong></h3>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<h3 id="컨테이너-상태변경">
+  <strong>컨테이너 상태변경</strong>
+  <a class="anchor" href="#%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88-%ec%83%81%ed%83%9c%eb%b3%80%ea%b2%bd">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ docker container stop
 </span></span><span style="display:flex;"><span># 컨테이너 징지
 </span></span><span style="display:flex;"><span>
@@ -1700,19 +1799,40 @@
 </span></span><span style="display:flex;"><span>$ docekr container logs
 </span></span><span style="display:flex;"><span>$ docker container logs [ options ] [ 컨테이너 ID 또는 컨테이너명 ]
 </span></span><span style="display:flex;"><span># 표준 출력 연결하기, -f 옵션을 통해 새로 출력되는 표준 출력 내용을 출력
-</span></span></code></pre></div><h1 id="heading-23"></h1>
+</span></span></code></pre></div><h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-24"></h1>
-<h3 id="컨테이너-내부에서-명령실행"><strong>컨테이너 내부에서 명령실행</strong></h3>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<h3 id="컨테이너-내부에서-명령실행">
+  <strong>컨테이너 내부에서 명령실행</strong>
+  <a class="anchor" href="#%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88-%eb%82%b4%eb%b6%80%ec%97%90%ec%84%9c-%eb%aa%85%eb%a0%b9%ec%8b%a4%ed%96%89">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ docker container exec [ options ] [ 컨테이너 ID or 컨테이너 명 ] [ 컨테이너에서 실행할 명령 ]
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ docker container cp [ options ] [ 컨테이너ip 또는 컨테이너 명 :원본파일] [ 대상파일 ]
 </span></span><span style="display:flex;"><span>$ docker container cp [ options ] [ 호스트_원본파일 ] [ 컨테이너ID 또는 컨테이너명 : 대상 파일 ]
-</span></span></code></pre></div><h1 id="heading-25"></h1>
+</span></span></code></pre></div><h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-26"></h1>
-<h3 id="운영관리"><strong>운영관리</strong></h3>
-<h1 id="heading-27"></h1>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
+<h3 id="운영관리">
+  <strong>운영관리</strong>
+  <a class="anchor" href="#%ec%9a%b4%ec%98%81%ea%b4%80%eb%a6%ac">#</a>
+</h3>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ docker image prune [ options ]
 </span></span><span style="display:flex;"><span># 태그가 붙지 않은 모든 이미지 삭제
 </span></span><span style="display:flex;"><span>
@@ -1724,15 +1844,30 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ docker container stats [ options ] [ 대상 컨테이너 ID ]
 </span></span><span style="display:flex;"><span># 사용 현황 확인하기
-</span></span></code></pre></div><h1 id="heading-28"></h1>
+</span></span></code></pre></div><h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-29"></h1>
-<h3 id="컴포즈로-여러-컨테이너-실행하기"><strong>컴포즈로 여러 컨테이너 실행하기</strong></h3>
-<h1 id="heading-30"></h1>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
+<h3 id="컴포즈로-여러-컨테이너-실행하기">
+  <strong>컴포즈로 여러 컨테이너 실행하기</strong>
+  <a class="anchor" href="#%ec%bb%b4%ed%8f%ac%ec%a6%88%eb%a1%9c-%ec%97%ac%eb%9f%ac-%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88-%ec%8b%a4%ed%96%89%ed%95%98%ea%b8%b0">#</a>
+</h3>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
 <ul>
 <li><strong>도커는 어플리케이션 배포에 특화된 컨테이너이다.</strong></li>
 </ul>
-<h1 id="heading-31"></h1>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
 <ul>
 <li><strong>docker-compose 설치</strong></li>
 </ul>
@@ -1750,7 +1885,10 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ docker-compose down
 </span></span><span style="display:flex;"><span># 컨테이너 정지
-</span></span></code></pre></div><h1 id="heading-32"></h1>
+</span></span></code></pre></div><h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
 <ul>
 <li><strong>Jenkins Master-Slave</strong></li>
 </ul>
@@ -1768,22 +1906,46 @@
 <li><strong>http://localhost:8080/ 접속, 로그인 후 플러그인 설치, 사용자 생성</strong>
  </li>
 </ul>
-<h1 id="heading-33"></h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"></code></pre></div><h1 id="heading-34"></h1>
+<h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"></code></pre></div><h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-35"></h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"></code></pre></div><h1 id="heading-36"></h1>
+<h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"></code></pre></div><h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-37"></h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"></code></pre></div><h1 id="heading-38"></h1>
+<h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"></code></pre></div><h1 id="heading-38">
+  
+  <a class="anchor" href="#heading-38">#</a>
+</h1>
 <p><img src="/Docker/DockerUse0.png" alt="" /></p>
 <ul>
 <li>
 <hr>
 </li>
 </ul>
-<h4 id="예제-1">예제 1.</h4>
-<h4 id="다음의-인스턴스를-생성해보세요">다음의 인스턴스를 생성해보세요.</h4>
+<h4 id="예제-1">
+  예제 1.
+  <a class="anchor" href="#%ec%98%88%ec%a0%9c-1">#</a>
+</h4>
+<h4 id="다음의-인스턴스를-생성해보세요">
+  다음의 인스턴스를 생성해보세요.
+  <a class="anchor" href="#%eb%8b%a4%ec%9d%8c%ec%9d%98-%ec%9d%b8%ec%8a%a4%ed%84%b4%ec%8a%a4%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%b4%eb%b3%b4%ec%84%b8%ec%9a%94">#</a>
+</h4>
 <blockquote>
 <div class="book-expand">
   <label>
@@ -1937,7 +2099,6 @@
 </body>
 </div>
 </html>
-
 
 
 

@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DevStack Stein 설치 DevStack Devbian 계열 ( ex : Ubuntu )의 OpenStack 자동화 설치 툴 DevStack 설치 Update Ubuntu System $ sudo apt -y update $ sudo apt -y upgrade $ sudo apt -y dist-upgrade # Ubuntu의 시스템 및 패키지를 업데이트 합니다. $ sudo init 6 # 시스템을 재시작합니다. Add Stack User $ sudo useradd -s /bin/bash -d /opt/stack -m stack # devstack 설치를 위해 stack 유저를 생성합니다. $ echo &#34;stack ALL=(ALL) NOPASSWD: ALL&#34; | sudo tee /etc/sudoers.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/openstack/openstacktraining/devstack/><meta property="og:title" content="DevStack" />
-<meta property="og:description" content="DevStack Stein 설치 DevStack Devbian 계열 ( ex : Ubuntu )의 OpenStack 자동화 설치 툴 DevStack 설치 Update Ubuntu System $ sudo apt -y update $ sudo apt -y upgrade $ sudo apt -y dist-upgrade # Ubuntu의 시스템 및 패키지를 업데이트 합니다. $ sudo init 6 # 시스템을 재시작합니다. Add Stack User $ sudo useradd -s /bin/bash -d /opt/stack -m stack # devstack 설치를 위해 stack 유저를 생성합니다. $ echo &#34;stack ALL=(ALL) NOPASSWD: ALL&#34; | sudo tee /etc/sudoers." />
+<meta name="description" content="#DevStack Stein 설치##DevStack##Devbian 계열 ( ex : Ubuntu )의 OpenStack 자동화 설치 툴 #DevStack 설치##Update Ubuntu System $ sudo apt -y update $ sudo apt -y upgrade $ sudo apt -y dist-upgrade # Ubuntu의 시스템 및 패키지를 업데이트 합니다. $ sudo init 6 # 시스템을 재시작합니다. ##Add Stack User $ sudo useradd -s /bin/bash -d /opt/stack -m stack # devstack 설치를 위해 stack 유저를 생성합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="DevStack" />
+<meta property="og:description" content="#DevStack Stein 설치##DevStack##Devbian 계열 ( ex : Ubuntu )의 OpenStack 자동화 설치 툴 #DevStack 설치##Update Ubuntu System $ sudo apt -y update $ sudo apt -y upgrade $ sudo apt -y dist-upgrade # Ubuntu의 시스템 및 패키지를 업데이트 합니다. $ sudo init 6 # 시스템을 재시작합니다. ##Add Stack User $ sudo useradd -s /bin/bash -d /opt/stack -m stack # devstack 설치를 위해 stack 유저를 생성합니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/openstack/openstacktraining/devstack/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>DevStack | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -48,7 +47,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1375,6 +1374,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1386,14 +1388,15 @@
   <strong>DevStack</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1426,17 +1429,41 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="heading"></h1>
-<h1 id="devstack-stein-설치"><strong>DevStack Stein 설치</strong></h1>
-<h1 id="heading-1"></h1>
-<h2 id="devstack"><strong>DevStack</strong></h2>
-<h1 id="heading-2"></h1>
+  <article class="markdown"><h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h1 id="devstack-stein-설치">
+  <strong>DevStack Stein 설치</strong>
+  <a class="anchor" href="#devstack-stein-%ec%84%a4%ec%b9%98">#</a>
+</h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h2 id="devstack">
+  <strong>DevStack</strong>
+  <a class="anchor" href="#devstack">#</a>
+</h2>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <ul>
 <li><strong>Devbian 계열 ( ex : Ubuntu )의 OpenStack 자동화 설치 툴</strong></li>
 </ul>
-<h1 id="heading-3"></h1>
-<h3 id="devstack-설치"><strong>DevStack 설치</strong></h3>
-<h1 id="heading-4"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h3 id="devstack-설치">
+  <strong>DevStack 설치</strong>
+  <a class="anchor" href="#devstack-%ec%84%a4%ec%b9%98">#</a>
+</h3>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <ul>
 <li><strong>Update Ubuntu System</strong></li>
 </ul>
@@ -1447,9 +1474,15 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ sudo init 6
 </span></span><span style="display:flex;"><span># 시스템을 재시작합니다.
-</span></span></code></pre></div><h1 id="heading-5"></h1>
+</span></span></code></pre></div><h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-6"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <ul>
 <li><strong>Add Stack User</strong></li>
 </ul>
@@ -1458,9 +1491,15 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ echo &#34;stack ALL=(ALL) NOPASSWD: ALL&#34; | sudo tee /etc/sudoers.d/stack
 </span></span><span style="display:flex;"><span># 암호 없이 접근할 권한을 부여합니다.
-</span></span></code></pre></div><h1 id="heading-7"></h1>
+</span></span></code></pre></div><h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-8"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <ul>
 <li><strong>Download DevStack</strong></li>
 <li><strong>loacl.conf 파일의 추가적인 설정은 <a href="https://docs.openstack.org/devstack/latest/configuration.html">DevStack</a>을 참조해주세요.</strong></li>
@@ -1479,24 +1518,39 @@
 </span></span><span style="display:flex;"><span>HOST_IP=[ 현재 호스트의 IP ]
 </span></span><span style="display:flex;"><span># 설치를 위한 설정 파일을 생성합니다.
 </span></span><span style="display:flex;"><span># PW, IP에는 사용자가 원하는 PW, 설치 호스트 네트워크의 IP를 기입합니다.
-</span></span></code></pre></div><h1 id="heading-9"></h1>
+</span></span></code></pre></div><h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-10"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <ul>
 <li><strong>Start OpenStack Deployment On Ubuntu 18.04 with DevStack</strong></li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ cd devstack
 </span></span><span style="display:flex;"><span>./stack.sh
-</span></span></code></pre></div><h1 id="heading-11"></h1>
+</span></span></code></pre></div><h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-12"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <ul>
 <li><strong>Access OpenStack Dashboard</strong></li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>http://[ HOST IP ]/dashboard로 접속합니다.
 </span></span><span style="display:flex;"><span>User Name = admin
 </span></span><span style="display:flex;"><span>Password = local.conf의 PW
-</span></span></code></pre></div><h1 id="heading-13"></h1>
+</span></span></code></pre></div><h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
 <p> </p>
 </article>
  
@@ -1560,7 +1614,6 @@
 </body>
 </div>
 </html>
-
 
 
 

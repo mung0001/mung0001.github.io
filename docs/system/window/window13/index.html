@@ -2,48 +2,45 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Windows Active Directory Windows Active Directory 일반적인 회사의 네트워크 상황을 Windows Server에서 구현하기 위한한 기술입니다.
+<meta name="description" content="Windows Active Directory##Windows Active Directory##일반적인 회사의 네트워크 상황을 Windows Server에서 구현하기 위한한 기술입니다.
 네트워크 상으로 나누어져 있는 여러 자원을 중앙의 관리자가 통합하여 관리함으로써, 본사 및 지사의 직원들은 자신의 PC에 몯느 정보를 보관할 필요가 없어집니다.
 한 PC에서 관리하는 만큼 타 지사에 출장을 가서도 자신의 아이디로 로그인만 하면 타인의 PC가 자신의 PC 환경과 동일하게 변경되어집니다.
-PC가 있는 장소와 무관하게 회사의 어디서든지 회사 전체 자원을 편리하게 이용하기 위해 사용되어집니다.
-Active Directory 용어 Directory Service">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/system/window/window13/><meta property="og:title" content="Active Directory" />
-<meta property="og:description" content="Windows Active Directory Windows Active Directory 일반적인 회사의 네트워크 상황을 Windows Server에서 구현하기 위한한 기술입니다.
+PC가 있는 장소와 무관하게 회사의 어디서든지 회사 전체 자원을 편리하게 이용하기 위해 사용되어집니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Active Directory" />
+<meta property="og:description" content="Windows Active Directory##Windows Active Directory##일반적인 회사의 네트워크 상황을 Windows Server에서 구현하기 위한한 기술입니다.
 네트워크 상으로 나누어져 있는 여러 자원을 중앙의 관리자가 통합하여 관리함으로써, 본사 및 지사의 직원들은 자신의 PC에 몯느 정보를 보관할 필요가 없어집니다.
 한 PC에서 관리하는 만큼 타 지사에 출장을 가서도 자신의 아이디로 로그인만 하면 타인의 PC가 자신의 PC 환경과 동일하게 변경되어집니다.
-PC가 있는 장소와 무관하게 회사의 어디서든지 회사 전체 자원을 편리하게 이용하기 위해 사용되어집니다.
-Active Directory 용어 Directory Service" />
+PC가 있는 장소와 무관하게 회사의 어디서든지 회사 전체 자원을 편리하게 이용하기 위해 사용되어집니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/system/window/window13/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Active Directory | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -56,7 +53,7 @@ Active Directory 용어 Directory Service" />
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1373,6 +1370,9 @@ Active Directory 용어 Directory Service" />
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1384,14 +1384,15 @@ Active Directory 용어 Directory Service" />
   <strong>Active Directory</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1432,11 +1433,23 @@ Active Directory 용어 Directory Service" />
 <br>
 <br>
       
-  <article class="markdown"><h2 id="windows-active-directory"><strong>Windows Active Directory</strong></h2>
+  <article class="markdown"><h2 id="windows-active-directory">
+  <strong>Windows Active Directory</strong>
+  <a class="anchor" href="#windows-active-directory">#</a>
+</h2>
 <hr>
-<h1 id="heading"></h1>
-<h3 id="windows-active-directory-1"><strong>Windows Active Directory</strong></h3>
-<h1 id="heading-1"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h3 id="windows-active-directory-1">
+  <strong>Windows Active Directory</strong>
+  <a class="anchor" href="#windows-active-directory-1">#</a>
+</h3>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>일반적인 회사의 네트워크 상황을 Windows Server에서 구현하기 위한한 기술입니다.</strong></p>
@@ -1451,11 +1464,23 @@ Active Directory 용어 Directory Service" />
 <p><strong>PC가 있는 장소와 무관하게 회사의 어디서든지 회사 전체 자원을 편리하게 이용하기 위해 사용되어집니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-3"></h1>
-<h3 id="active-directory-용어"><strong>Active Directory 용어</strong></h3>
-<h1 id="heading-4"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h3 id="active-directory-용어">
+  <strong>Active Directory 용어</strong>
+  <a class="anchor" href="#active-directory-%ec%9a%a9%ec%96%b4">#</a>
+</h3>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Directory Service</strong></p>
@@ -1464,7 +1489,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-5"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Active Directory(AD)</strong></p>
@@ -1473,7 +1501,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-6"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Active Directory 도메인 서비스 (Active Directory Domain Service, AD DS)</strong></p>
@@ -1482,7 +1513,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-7"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>도메인</strong></p>
@@ -1491,7 +1525,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-8"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>트리와 포리스트</strong></p>
@@ -1500,7 +1537,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-9"></h1>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>사이트</strong></p>
@@ -1509,7 +1549,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-10"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>트러스트</strong></p>
@@ -1518,7 +1561,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-11"></h1>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>조직 구성 단위(Organizational Unit, OU)</strong></p>
@@ -1527,7 +1573,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-12"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>도메인 컨트롤러(Domain Controller, DC)</strong></p>
@@ -1536,7 +1585,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-13"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>읽기 전용 도메인 컨트롤러(Read Only Dmain Controller, RODC)</strong></p>
@@ -1545,7 +1597,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-14"></h1>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>글로벌 카탈로그(Global Catalog, 약자로 GC)</strong></p>
@@ -1554,7 +1609,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-15"></h1>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <ul>
 <li>
 <hr>
@@ -1565,7 +1623,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-16"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
 <ul>
 <li>
 <hr>
@@ -1576,7 +1637,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-17"></h1>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <ul>
 <li>
 <hr>
@@ -1587,7 +1651,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-18"></h1>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
 <ul>
 <li>
 <hr>
@@ -1598,7 +1665,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-19"></h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 <ul>
 <li>
 <hr>
@@ -1609,7 +1679,10 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-20"></h1>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <ul>
 <li>
 <hr>
@@ -1620,20 +1693,38 @@ Active Directory 용어 Directory Service" />
 </ul>
 </li>
 </ul>
-<h1 id="heading-21"></h1>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-22"></h1>
-<h1 id="heading-23"></h1>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-24"></h1>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 <ul>
 <li>
 <hr>
 </li>
 </ul>
-<h1 id="heading-25"></h1>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
 <p><img src="/System/Window/AD0.png" alt="" /></p>
-<h1 id="heading-26"></h1>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
 </article>
  
       
@@ -1704,7 +1795,6 @@ Active Directory 용어 Directory Service" />
 </body>
 </div>
 </html>
-
 
 
 

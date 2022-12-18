@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Openstack Stain Manual 설치 1. 시스템 및 네트워크 구성 여기서는 Nat 네트워크를 외부, host1 대역을 내부로 사용하여 Openstack을 구축해보도록 하겠습니다. 운영체제 및 네트워크 구성 Hypervisor : Vmware Workstation 15 OS : CentOS7 노드 구성 OS Hostname Network Interface Network Interface2 CPU RAM DISK CentOS7 controller Nat ( 192.168.10.100 ) HOST1 ( 10.10.10.10 ) 2cpu 4thread 8 RAm 30G CentOS7 natwork Nat ( 192.168.10.101 ) HOST1 ( 10.10.10.20 ) 1cpu 2thread 2 RAm 20G CentOS7 compute Nat ( 192.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/openstack/openstacktraining/openstack-stein/><meta property="og:title" content="Openstack Stain Manual 설치" />
-<meta property="og:description" content="Openstack Stain Manual 설치 1. 시스템 및 네트워크 구성 여기서는 Nat 네트워크를 외부, host1 대역을 내부로 사용하여 Openstack을 구축해보도록 하겠습니다. 운영체제 및 네트워크 구성 Hypervisor : Vmware Workstation 15 OS : CentOS7 노드 구성 OS Hostname Network Interface Network Interface2 CPU RAM DISK CentOS7 controller Nat ( 192.168.10.100 ) HOST1 ( 10.10.10.10 ) 2cpu 4thread 8 RAm 30G CentOS7 natwork Nat ( 192.168.10.101 ) HOST1 ( 10.10.10.20 ) 1cpu 2thread 2 RAm 20G CentOS7 compute Nat ( 192." />
+<meta name="description" content="Openstack Stain Manual 설치##1. 시스템 및 네트워크 구성#여기서는 Nat 네트워크를 외부, host1 대역을 내부로 사용하여 Openstack을 구축해보도록 하겠습니다. #운영체제 및 네트워크 구성 Hypervisor : Vmware Workstation 15 OS : CentOS7 #노드 구성 OS Hostname Network Interface Network Interface2 CPU RAM DISK CentOS7 controller Nat ( 192.168.10.100 ) HOST1 ( 10.10.10.10 ) 2cpu 4thread 8 RAm 30G CentOS7 natwork Nat ( 192.168.10.101 ) HOST1 ( 10.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Openstack Stain Manual 설치" />
+<meta property="og:description" content="Openstack Stain Manual 설치##1. 시스템 및 네트워크 구성#여기서는 Nat 네트워크를 외부, host1 대역을 내부로 사용하여 Openstack을 구축해보도록 하겠습니다. #운영체제 및 네트워크 구성 Hypervisor : Vmware Workstation 15 OS : CentOS7 #노드 구성 OS Hostname Network Interface Network Interface2 CPU RAM DISK CentOS7 controller Nat ( 192.168.10.100 ) HOST1 ( 10.10.10.10 ) 2cpu 4thread 8 RAm 30G CentOS7 natwork Nat ( 192.168.10.101 ) HOST1 ( 10." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/openstack/openstacktraining/openstack-stein/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Openstack Stain Manual 설치 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -48,7 +47,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1375,6 +1374,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1386,14 +1388,15 @@
   <strong>Openstack Stain Manual 설치</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1534,16 +1537,28 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="openstack-stain-manual-설치"><strong>Openstack Stain Manual 설치</strong></h1>
+  <article class="markdown"><h1 id="openstack-stain-manual-설치">
+  <strong>Openstack Stain Manual 설치</strong>
+  <a class="anchor" href="#openstack-stain-manual-%ec%84%a4%ec%b9%98">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading"></h1>
-<h3 id="1-시스템-및-네트워크-구성"><strong>1. 시스템 및 네트워크 구성</strong></h3>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h3 id="1-시스템-및-네트워크-구성">
+  <strong>1. 시스템 및 네트워크 구성</strong>
+  <a class="anchor" href="#1-%ec%8b%9c%ec%8a%a4%ed%85%9c-%eb%b0%8f-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ea%b5%ac%ec%84%b1">#</a>
+</h3>
 <hr>
 <ul>
 <li><strong>여기서는 Nat 네트워크를 외부, host1 대역을 내부로 사용하여 Openstack을 구축해보도록 하겠습니다.</strong></li>
 </ul>
-<h1 id="heading-1"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <ul>
 <li><strong>운영체제 및 네트워크 구성</strong>
 <ul>
@@ -1552,7 +1567,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <ul>
 <li><strong>노드 구성</strong></li>
 </ul>
@@ -1598,7 +1616,10 @@
 </tr>
 </tbody>
 </table>
-<h1 id="heading-3"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <ul>
 <li><strong>기본적인 업데이트 및 설정을 모든 노드에 진행합니다.</strong></li>
 </ul>
@@ -1610,7 +1631,10 @@
 </span></span><span style="display:flex;"><span>10.10.10.20 network
 </span></span><span style="display:flex;"><span>10.10.10.30 compute
 </span></span><span style="display:flex;"><span># known host 등록
-</span></span></code></pre></div><h1 id="heading-4"></h1>
+</span></span></code></pre></div><h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <ul>
 <li><strong>설정이 완료되면 기본 구성을 모든 노드에 진행합니다.</strong></li>
 </ul>
@@ -1639,10 +1663,19 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ chronyc sources
 </span></span><span style="display:flex;"><span># 확인
-</span></span></code></pre></div><h1 id="heading-5"></h1>
+</span></span></code></pre></div><h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-6"></h1>
-<h3 id="2-openstack-기본-패키지-구성"><strong>2. Openstack 기본 패키지 구성</strong></h3>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<h3 id="2-openstack-기본-패키지-구성">
+  <strong>2. Openstack 기본 패키지 구성</strong>
+  <a class="anchor" href="#2-openstack-%ea%b8%b0%eb%b3%b8-%ed%8c%a8%ed%82%a4%ec%a7%80-%ea%b5%ac%ec%84%b1">#</a>
+</h3>
 <hr>
 <ul>
 <li><strong>Openstack의 기본 패키지 구성은 먼저 contorller 노드만을 통해 진행됨을 유의해주시길 바랍니다.</strong></li>
@@ -1654,14 +1687,20 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-7"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <ul>
 <li><strong>Openstack 패키지 설치 및 레포지토리 구성</strong></li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ yum -y install centos-release-openstack-stein
 </span></span><span style="display:flex;"><span>$ sed -i -e &#34;s/enabled=1/enabled=0/g&#34; /etc/yum.repos.d/CentOS-OpenStack-stein.repo
 </span></span><span style="display:flex;"><span># stein 패캐지를 등록합니다.
-</span></span></code></pre></div><h1 id="heading-8"></h1>
+</span></span></code></pre></div><h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <ul>
 <li><strong>MariaDB를 설치합니다.</strong></li>
 </ul>
@@ -1680,7 +1719,10 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ firewall-cmd --add-service=mysql --permanent
 </span></span><span style="display:flex;"><span>$ firewall-cmd --reload
-</span></span></code></pre></div><h1 id="heading-9"></h1>
+</span></span></code></pre></div><h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <ul>
 <li><strong>RabbitMQ 및 Memcached를 설치합니다.</strong></li>
 </ul>
@@ -1710,16 +1752,28 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ firewall-cmd --add-port=<span style="color:#75715e">{</span><span style="color:#ae81ff">11211</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">5672</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#75715e">}</span> --permanent
 </span></span><span style="display:flex;"><span>$ firewall-cmd --reload
-</span></span></code></pre></div><h1 id="heading-10"></h1>
+</span></span></code></pre></div><h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-11"></h1>
-<h3 id="3-keystone--인증-서비스--구성"><strong>3. Keystone ( 인증 서비스 ) 구성</strong></h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<h3 id="3-keystone--인증-서비스--구성">
+  <strong>3. Keystone ( 인증 서비스 ) 구성</strong>
+  <a class="anchor" href="#3-keystone--%ec%9d%b8%ec%a6%9d-%ec%84%9c%eb%b9%84%ec%8a%a4--%ea%b5%ac%ec%84%b1">#</a>
+</h3>
 <hr>
 <ul>
 <li><strong>Keystone 또한 controller의 설치를 진행합니다.</strong></li>
 <li><strong>keystone에 대한 설명은 <a href="https://mung0001.github.io/docs/study/openstack/keystone/">keystone</a>을 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-12"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <ul>
 <li><strong>keyston DB 생성</strong></li>
 </ul>
@@ -1729,7 +1783,10 @@
 </span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; grant all privileges on keystone.* to keystone@&#39;%&#39; identified by &#39;pw&#39;;
 </span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; flush privileges;
 </span></span><span style="display:flex;"><span># keystone 구성을 위한 db를 생성합니다. ( 저는 편의를 위해 모든 pw로 qwer1234 설정하였습니다. )
-</span></span></code></pre></div><h1 id="heading-13"></h1>
+</span></span></code></pre></div><h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
 <ul>
 <li><strong>keystone 패키지 설치 및 수정</strong></li>
 </ul>
@@ -1777,7 +1834,10 @@
 </span></span><span style="display:flex;"><span>$ systemctl start httpd
 </span></span><span style="display:flex;"><span>$ systemctl enable httpd
 </span></span><span style="display:flex;"><span># keystone 설정 활성화 및 httpd 를 시작합니다.
-</span></span></code></pre></div><h1 id="heading-14"></h1>
+</span></span></code></pre></div><h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <ul>
 <li><strong>정상 동작 확인을 위한 토큰 파일 생성</strong></li>
 </ul>
@@ -1793,7 +1853,10 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ chmod 600 ~/admin
 </span></span><span style="display:flex;"><span>$ source ~/admin
-</span></span></code></pre></div><h1 id="heading-15"></h1>
+</span></span></code></pre></div><h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <ul>
 <li><strong>project 생성</strong></li>
 </ul>
@@ -1822,21 +1885,36 @@
 </span></span><span style="display:flex;"><span>| 3f0b3ef5b8c94a0a9cca8e34ea2fdbd6 | service |
 </span></span><span style="display:flex;"><span>| ec1a4336cfa64d04bbc8f908b26a6cda | admin   |
 </span></span><span style="display:flex;"><span>+----------------------------------+---------+
-</span></span></code></pre></div><h1 id="heading-16"></h1>
+</span></span></code></pre></div><h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
 <ul>
 <li><strong>이것으로 keystone에 대한 설치가 끝났습니다.</strong></li>
 <li><strong>혹시 오류가 발생할 경우 /var/log/keystone/ 혹은 /var/log/httpd/에서 error 로그, keystone 로그를 검색하여 오류를 찾아내시면 보다 쉽게 문제를 해결하실 수 있습니다.</strong></li>
 </ul>
-<h1 id="heading-17"></h1>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-18"></h1>
-<h3 id="4-glance--이미지-서비스--구성"><strong>4. Glance ( 이미지 서비스 ) 구성</strong></h3>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<h3 id="4-glance--이미지-서비스--구성">
+  <strong>4. Glance ( 이미지 서비스 ) 구성</strong>
+  <a class="anchor" href="#4-glance--%ec%9d%b4%eb%af%b8%ec%a7%80-%ec%84%9c%eb%b9%84%ec%8a%a4--%ea%b5%ac%ec%84%b1">#</a>
+</h3>
 <hr>
 <ul>
 <li><strong>Glance 또한 controller에서만 설치를 진행합니다.</strong></li>
 <li><strong>에 대한 설명은 <a href="https://mung0001.github.io/docs/study/openstack/glance/">Glance</a>을 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-19"></h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 <ul>
 <li><strong>glance 사용자 추가</strong></li>
 </ul>
@@ -1886,7 +1964,10 @@
 </span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; grant all privileges on glance.* to glance@&#39;%&#39; identified by &#39;pw&#39;;
 </span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; flush privileges;
 </span></span><span style="display:flex;"><span>#  구성을 위한 db를 생성합니다. ( 저는 편의를 위해 모든 pw로 qwer1234 설정하였습니다. )
-</span></span></code></pre></div><h1 id="heading-20"></h1>
+</span></span></code></pre></div><h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <ul>
 <li><strong>glance 패키지 설치 및 수정</strong></li>
 </ul>
@@ -1931,7 +2012,10 @@
 </span></span><span style="display:flex;"><span>$ firewall-cmd --add-port=9292/tcp --permanent
 </span></span><span style="display:flex;"><span>$ firewall-cmd --reload
 </span></span><span style="display:flex;"><span># Selinux 및 firewall을 설정합니다.
-</span></span></code></pre></div><h1 id="heading-21"></h1>
+</span></span></code></pre></div><h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <ul>
 <li><strong>확인을 위한 이미지 생성</strong></li>
 </ul>
@@ -1948,17 +2032,29 @@
 </span></span><span style="display:flex;"><span>| 38e15009-022b-49ce-bcdf-b220eb3c5b12 | Cirros | active |
 </span></span><span style="display:flex;"><span>+--------------------------------------+--------+--------+
 </span></span><span style="display:flex;"><span># 확인
-</span></span></code></pre></div><h1 id="heading-22"></h1>
+</span></span></code></pre></div><h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-23"></h1>
-<h3 id="5-nova--컴퓨트-서비스--구성"><strong>5. Nova ( 컴퓨트 서비스 ) 구성</strong></h3>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<h3 id="5-nova--컴퓨트-서비스--구성">
+  <strong>5. Nova ( 컴퓨트 서비스 ) 구성</strong>
+  <a class="anchor" href="#5-nova--%ec%bb%b4%ed%93%a8%ed%8a%b8-%ec%84%9c%eb%b9%84%ec%8a%a4--%ea%b5%ac%ec%84%b1">#</a>
+</h3>
 <hr>
 <ul>
 <li><strong>Nova 서비스는 controller 노드와 compute노드에 구성됩니다.</strong></li>
 <li><strong>설치는 contoller &gt; compute 순으로 진행하도록 하겠습니다.</strong></li>
 <li><strong>Nova에 대한 설명은 <a href="https://mung0001.github.io/docs/study/openstack/nova/">Nova</a>을 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-24"></h1>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 <ul>
 <li><strong>Nova, Placement 추가 및 등록</strong></li>
 </ul>
@@ -2016,7 +2112,10 @@
 </span></span><span style="display:flex;"><span>| bdd7df7c8cba46f6ada2c12155a9f1d6 | RegionOne | keystone     | identity     | True    | internal  | http://10.10.10.10:5000/v3/                |
 </span></span><span style="display:flex;"><span>| d394eaf13ac840b3b2e69e074c2c1c20 | RegionOne | glance       | image        | True    | admin     | http://10.10.10.10:9292                    |
 </span></span><span style="display:flex;"><span>+----------------------------------+-----------+--------------+--------------+---------+-----------+--------------------------------------------+
-</span></span></code></pre></div><h1 id="heading-25"></h1>
+</span></span></code></pre></div><h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
 <ul>
 <li><strong>Nova DB 생성</strong></li>
 </ul>
@@ -2038,7 +2137,10 @@
 </span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; grant all privileges on nova_cell0.* to nova@&#39;%&#39; identified by &#39;pw&#39;;
 </span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; flush privileges;
 </span></span><span style="display:flex;"><span>#  nova 구성을 위한 db를 생성합니다. ( 저는 편의를 위해 모든 pw로 qwer1234 설정하였습니다. )
-</span></span></code></pre></div><h1 id="heading-26"></h1>
+</span></span></code></pre></div><h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
 <ul>
 <li><strong>nova 서비스를 설치 및 수정합니다.</strong></li>
 </ul>
@@ -2094,7 +2196,10 @@
 </span></span><span style="display:flex;"><span>[wsgi]
 </span></span><span style="display:flex;"><span>api_paste_config = /etc/nova/api-paste.ini
 </span></span><span style="display:flex;"><span># nova의 설정 파일을 수정합니다.
-</span></span></code></pre></div><h1 id="heading-27"></h1>
+</span></span></code></pre></div><h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
 <ul>
 <li><strong>Selinux 및 firewalld을 설정합니다.</strong></li>
 </ul>
@@ -2102,7 +2207,10 @@
 </span></span><span style="display:flex;"><span>$ semanage port -a -t http_port_t -p tcp 8778
 </span></span><span style="display:flex;"><span>$ firewall-cmd --add-port=<span style="color:#75715e">{</span><span style="color:#ae81ff">6080</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">6081</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">6082</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">8774</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">8775</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">8778</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#75715e">}</span> --permanent
 </span></span><span style="display:flex;"><span>$ firewall-cmd --reload
-</span></span></code></pre></div><h1 id="heading-28"></h1>
+</span></span></code></pre></div><h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
 <ul>
 <li><strong>nova 서비스를 DB에 저장합니다.</strong></li>
 </ul>
@@ -2110,7 +2218,10 @@
 </span></span><span style="display:flex;"><span>$ su -s /bin/bash nova -c &#34;nova-manage cell_v2 map_cell0&#34;
 </span></span><span style="display:flex;"><span>$ su -s /bin/bash nova -c &#34;nova-manage db sync&#34;
 </span></span><span style="display:flex;"><span>$ su -s /bin/bash nova -c &#34;nova-manage cell_v2 create_cell --name cell1&#34;
-</span></span></code></pre></div><h1 id="heading-29"></h1>
+</span></span></code></pre></div><h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
 <ul>
 <li><strong>nova 서비스를 시작 및 자동시작을 설정합니다.</strong></li>
 </ul>
@@ -2124,16 +2235,25 @@
 <li><strong>이상으로 controller 노드에서의 구성을 마치겠습니다.</strong></li>
 <li><strong>하단부터의 패키지 설치는 compute노드에서 진행해주세요</strong></li>
 </ul>
-<h1 id="heading-30"></h1>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-31"></h1>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
 <ul>
 <li><strong>Stein 레포지터리를 활성화합니다.</strong></li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ yum -y install centos-release-openstack-stein
 </span></span><span style="display:flex;"><span>$ sed -i -e &#34;s/enabled=1/enabled=0/g&#34; /etc/yum.repos.d/CentOS-OpenStack-stein.repo
 </span></span><span style="display:flex;"><span># stein 패캐지를 등록합니다.
-</span></span></code></pre></div><h1 id="heading-32"></h1>
+</span></span></code></pre></div><h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
 <ul>
 <li><strong>KVM 하이퍼바이저를 구성합니다.</strong></li>
 </ul>
@@ -2145,7 +2265,10 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ systemctl start libvirtd
 </span></span><span style="display:flex;"><span>$ systenctk ebable libvirtd
-</span></span></code></pre></div><h1 id="heading-33"></h1>
+</span></span></code></pre></div><h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
 <ul>
 <li><strong>compute 노드에 nova 서비스를 설치 및 수정합니다.</strong></li>
 </ul>
@@ -2201,14 +2324,20 @@
 </span></span><span style="display:flex;"><span>[wsgi]
 </span></span><span style="display:flex;"><span>api_paste_config = /etc/nova/api-paste.ini
 </span></span><span style="display:flex;"><span># nova의 설정 파일을 수정합니다.
-</span></span></code></pre></div><h1 id="heading-34"></h1>
+</span></span></code></pre></div><h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
 <ul>
 <li><strong>Selinux 및 firewall 설정</strong></li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ yum --enablerepo=centos-openstack-stein -y install openstack-selinux
 </span></span><span style="display:flex;"><span>$ firewall-cmd --add-port=5900-5999/tcp --permanent
 </span></span><span style="display:flex;"><span>$ firewall-cmd --reload
-</span></span></code></pre></div><h1 id="heading-35"></h1>
+</span></span></code></pre></div><h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
 <ul>
 <li><strong>nova 서비스 시작</strong></li>
 </ul>
@@ -2225,10 +2354,19 @@
 </span></span><span style="display:flex;"><span>|  8 | nova-scheduler   | controller | internal | enabled | up    | 2020-07-19T02:47:12.000000 |
 </span></span><span style="display:flex;"><span>|  9 | nova-compute     | compute    | nova     | enabled | up    | 2020-07-19T02:47:08.000000 |
 </span></span><span style="display:flex;"><span>+----+------------------+------------+----------+---------+-------+----------------------------+
-</span></span></code></pre></div><h1 id="heading-36"></h1>
+</span></span></code></pre></div><h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-37"></h1>
-<h3 id="6-neutron--네트워크-서비스--구성"><strong>6. Neutron ( 네트워크 서비스 ) 구성</strong></h3>
+<h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
+<h3 id="6-neutron--네트워크-서비스--구성">
+  <strong>6. Neutron ( 네트워크 서비스 ) 구성</strong>
+  <a class="anchor" href="#6-neutron--%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%84%9c%eb%b9%84%ec%8a%a4--%ea%b5%ac%ec%84%b1">#</a>
+</h3>
 <hr>
 <ul>
 <li><strong>Neutron 서비스르르 구성하는 과정에서는 모든 노드에 설치가 진행됩니다.</strong></li>
@@ -2236,7 +2374,10 @@
 <li><strong>설치 과정은 controller, compute, network 노드 순으로 진행하겠습니다.</strong></li>
 <li><strong>Neutron에 대한 설명은 <a href="https://mung0001.github.io/docs/study/openstack/neutron/">Neutron</a>을 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-38"></h1>
+<h1 id="heading-38">
+  
+  <a class="anchor" href="#heading-38">#</a>
+</h1>
 <ul>
 <li><strong>Neutron 사용자 추가</strong></li>
 </ul>
@@ -2250,7 +2391,10 @@
 </span></span><span style="display:flex;"><span>$ openstack endpoint create --region RegionOne network internal http://$controller:9696
 </span></span><span style="display:flex;"><span>$ openstack endpoint create --region RegionOne network admin http://$controller:9696
 </span></span><span style="display:flex;"><span># neutron의 endpoint를 생성합니다.
-</span></span></code></pre></div><h1 id="heading-39"></h1>
+</span></span></code></pre></div><h1 id="heading-39">
+  
+  <a class="anchor" href="#heading-39">#</a>
+</h1>
 <ul>
 <li><strong>Neutron DB 생성</strong></li>
 </ul>
@@ -2260,7 +2404,10 @@
 </span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; grant all privileges on neutron_ml2.* to neutron@&#39;%&#39; identified by &#39;pw&#39;;
 </span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; flush privileges;
 </span></span><span style="display:flex;"><span>#  neutron 구성을 위한 db를 생성합니다. ( 저는 편의를 위해 모든 pw로 qwer1234 설정하였습니다. )
-</span></span></code></pre></div><h1 id="heading-40"></h1>
+</span></span></code></pre></div><h1 id="heading-40">
+  
+  <a class="anchor" href="#heading-40">#</a>
+</h1>
 <ul>
 <li><strong>Neutron 설치 및 설정</strong></li>
 </ul>
@@ -2321,7 +2468,10 @@
 </span></span><span style="display:flex;"><span>mechanism_drivers = openvswitch
 </span></span><span style="display:flex;"><span>extension_drivers = port_security
 </span></span><span style="display:flex;"><span># ml2_conf.ini 파일에 설정을 수정합니다.
-</span></span></code></pre></div><h1 id="heading-41"></h1>
+</span></span></code></pre></div><h1 id="heading-41">
+  
+  <a class="anchor" href="#heading-41">#</a>
+</h1>
 <ul>
 <li><strong>이어 nova.conf 파일에 설정을 추가합니다.</strong></li>
 </ul>
@@ -2343,7 +2493,10 @@
 </span></span><span style="display:flex;"><span>password = qwer1234
 </span></span><span style="display:flex;"><span>service_metadata_proxy = True
 </span></span><span style="display:flex;"><span>metadata_proxy_shared_secret = metadata_secret
-</span></span></code></pre></div><h1 id="heading-42"></h1>
+</span></span></code></pre></div><h1 id="heading-42">
+  
+  <a class="anchor" href="#heading-42">#</a>
+</h1>
 <ul>
 <li><strong>Selinux 및 방화벽 설정</strong></li>
 </ul>
@@ -2353,7 +2506,10 @@
 </span></span><span style="display:flex;"><span>$ firewall-cmd --add-port=9696/tcp --permanent
 </span></span><span style="display:flex;"><span>$ firewall-cmd --reload
 </span></span><span style="display:flex;"><span># Selinux 및 방화벽을 설정합니다.
-</span></span></code></pre></div><h1 id="heading-43"></h1>
+</span></span></code></pre></div><h1 id="heading-43">
+  
+  <a class="anchor" href="#heading-43">#</a>
+</h1>
 <ul>
 <li><strong>Neutron DB를 생성 및 서비스를 시작합니다.</strong></li>
 </ul>
@@ -2364,9 +2520,15 @@
 </span></span><span style="display:flex;"><span>$ systemctl start neutron-server neutron-metadata-agent
 </span></span><span style="display:flex;"><span>$ systemctl enable neutron-server neutron-metadata-agent
 </span></span><span style="display:flex;"><span>$ systemctl restart openstack-nova-api
-</span></span></code></pre></div><h1 id="heading-44"></h1>
+</span></span></code></pre></div><h1 id="heading-44">
+  
+  <a class="anchor" href="#heading-44">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-45"></h1>
+<h1 id="heading-45">
+  
+  <a class="anchor" href="#heading-45">#</a>
+</h1>
 <ul>
 <li><strong>이제 다음으로는 network 노드에 구현해보도록 하겠습니다.</strong></li>
 </ul>
@@ -2376,7 +2538,10 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ yum --enablerepo=centos-openstack-stein,epel -y install openstack-neutron openstack-neutron-ml2 openstack-neutron-openvswitch libibverbs
 </span></span><span style="display:flex;"><span># neutron 패키지를 설치합니다.
-</span></span></code></pre></div><h1 id="heading-46"></h1>
+</span></span></code></pre></div><h1 id="heading-46">
+  
+  <a class="anchor" href="#heading-46">#</a>
+</h1>
 <ul>
 <li><strong>neutron 설정합니다.</strong></li>
 </ul>
@@ -2438,7 +2603,10 @@
 </span></span><span style="display:flex;"><span>enable_security_group = true
 </span></span><span style="display:flex;"><span>enable_ipset = true
 </span></span><span style="display:flex;"><span># openvswitch_agent.ini 파일의 하단에 추가합니다.
-</span></span></code></pre></div><h1 id="heading-47"></h1>
+</span></span></code></pre></div><h1 id="heading-47">
+  
+  <a class="anchor" href="#heading-47">#</a>
+</h1>
 <ul>
 <li><strong>Selinux 및 방화벽 설정</strong></li>
 </ul>
@@ -2463,7 +2631,10 @@
 </span></span><span style="display:flex;"><span>$ semodule_package --outfile my-ovsofctl.pp --module my-ovsofctl.mod 
 </span></span><span style="display:flex;"><span>$ semodule -i my-ovsofctl.pp 
 </span></span><span style="display:flex;"><span># Selinux 및 방화벽을 추가설정합니다.
-</span></span></code></pre></div><h1 id="heading-48"></h1>
+</span></span></code></pre></div><h1 id="heading-48">
+  
+  <a class="anchor" href="#heading-48">#</a>
+</h1>
 <ul>
 <li><strong>시스템을 재시작 합니다.</strong></li>
 </ul>
@@ -2474,13 +2645,19 @@
 </span></span><span style="display:flex;"><span>$ systemctl restart openstack-nova-compute
 </span></span><span style="display:flex;"><span>$ systemctl start neutron-openvswitch-agent
 </span></span><span style="display:flex;"><span>$ systemctl enable neutron-openvswitch-agent
-</span></span></code></pre></div><h1 id="heading-49"></h1>
+</span></span></code></pre></div><h1 id="heading-49">
+  
+  <a class="anchor" href="#heading-49">#</a>
+</h1>
 <ul>
 <li><strong>이어서 compute 노드에서의 설정을 진행하겠습니다.</strong></li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ yum --enablerepo=centos-openstack-stein,epel -y install openstack-neutron openstack-neutron-ml2 openstack-neutron-openvswitch
 </span></span><span style="display:flex;"><span># neutron 패키지를 설치합니다.
-</span></span></code></pre></div><h1 id="heading-50"></h1>
+</span></span></code></pre></div><h1 id="heading-50">
+  
+  <a class="anchor" href="#heading-50">#</a>
+</h1>
 <ul>
 <li><strong>neutron 설정합니다.</strong></li>
 </ul>
@@ -2522,7 +2699,10 @@
 </span></span><span style="display:flex;"><span>enable_security_group = true
 </span></span><span style="display:flex;"><span>enable_ipset = true
 </span></span><span style="display:flex;"><span># openvswitch_agent.ini 파일의 하단에 추가합니다.
-</span></span></code></pre></div><h1 id="heading-51"></h1>
+</span></span></code></pre></div><h1 id="heading-51">
+  
+  <a class="anchor" href="#heading-51">#</a>
+</h1>
 <ul>
 <li><strong>이어서 Nova.conf 파일을 수정합니다.</strong></li>
 </ul>
@@ -2546,7 +2726,10 @@
 </span></span><span style="display:flex;"><span>password = qwer1234
 </span></span><span style="display:flex;"><span>service_metadata_proxy = True
 </span></span><span style="display:flex;"><span>metadata_proxy_shared_secret = metadata_secret
-</span></span></code></pre></div><h1 id="heading-52"></h1>
+</span></span></code></pre></div><h1 id="heading-52">
+  
+  <a class="anchor" href="#heading-52">#</a>
+</h1>
 <ul>
 <li><strong>Selinux 및 방화벽 설정</strong></li>
 </ul>
@@ -2570,7 +2753,10 @@
 </span></span><span style="display:flex;"><span>$ semodule_package --outfile my-ovsofctl.pp --module my-ovsofctl.mod 
 </span></span><span style="display:flex;"><span>$ semodule -i my-ovsofctl.pp 
 </span></span><span style="display:flex;"><span># Selinux 및 방화벽을 추가설정합니다.
-</span></span></code></pre></div><h1 id="heading-53"></h1>
+</span></span></code></pre></div><h1 id="heading-53">
+  
+  <a class="anchor" href="#heading-53">#</a>
+</h1>
 <ul>
 <li><strong>시스템을 재시작 합니다.</strong></li>
 </ul>
@@ -2582,9 +2768,15 @@
 </span></span><span style="display:flex;"><span>systemctl start neutron-$service
 </span></span><span style="display:flex;"><span>systemctl enable neutron-$service
 </span></span><span style="display:flex;"><span>done
-</span></span></code></pre></div><h1 id="heading-54"></h1>
+</span></span></code></pre></div><h1 id="heading-54">
+  
+  <a class="anchor" href="#heading-54">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-55"></h1>
+<h1 id="heading-55">
+  
+  <a class="anchor" href="#heading-55">#</a>
+</h1>
 <ul>
 <li><strong>이제 이어 compute 노드에서 neutron 서비스를 설치하도록 하겠습니다.</strong></li>
 </ul>
@@ -2627,7 +2819,10 @@
 </span></span><span style="display:flex;"><span>firewall_driver = openvswitch
 </span></span><span style="display:flex;"><span>enable_security_group = true
 </span></span><span style="display:flex;"><span>enable_ipset = true
-</span></span></code></pre></div><h1 id="heading-56"></h1>
+</span></span></code></pre></div><h1 id="heading-56">
+  
+  <a class="anchor" href="#heading-56">#</a>
+</h1>
 <ul>
 <li><strong>이어서 nova.conf 파일을 수정합니다.</strong></li>
 </ul>
@@ -2651,7 +2846,10 @@
 </span></span><span style="display:flex;"><span>password = qwer1234
 </span></span><span style="display:flex;"><span>service_metadata_proxy = True
 </span></span><span style="display:flex;"><span>metadata_proxy_shared_secret = metadata_secret
-</span></span></code></pre></div><h1 id="heading-57"></h1>
+</span></span></code></pre></div><h1 id="heading-57">
+  
+  <a class="anchor" href="#heading-57">#</a>
+</h1>
 <ul>
 <li><strong>Selinux 및 방화벽 설정</strong></li>
 </ul>
@@ -2675,7 +2873,10 @@
 </span></span><span style="display:flex;"><span>$ semodule_package --outfile my-ovsofctl.pp --module my-ovsofctl.mod 
 </span></span><span style="display:flex;"><span>$ semodule -i my-ovsofctl.pp 
 </span></span><span style="display:flex;"><span># Selinux 및 방화벽을 추가설정합니다.
-</span></span></code></pre></div><h1 id="heading-58"></h1>
+</span></span></code></pre></div><h1 id="heading-58">
+  
+  <a class="anchor" href="#heading-58">#</a>
+</h1>
 <ul>
 <li><strong>서비스를 재시작 및 등록합니다.</strong></li>
 </ul>
@@ -2686,9 +2887,15 @@
 </span></span><span style="display:flex;"><span>$ systemctl restart openstack-nova-compute
 </span></span><span style="display:flex;"><span>$ systemctl start neutron-openvswitch-agent
 </span></span><span style="display:flex;"><span>$ systemctl enable neutron-openvswitch-agent
-</span></span></code></pre></div><h1 id="heading-59"></h1>
+</span></span></code></pre></div><h1 id="heading-59">
+  
+  <a class="anchor" href="#heading-59">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-60"></h1>
+<h1 id="heading-60">
+  
+  <a class="anchor" href="#heading-60">#</a>
+</h1>
 <ul>
 <li><strong>이제 다음으로는 본격적으로 neutron 네트워크를 구현해보도록 하겠습니다.</strong></li>
 <li><strong>먼저 controller 노드에서 ml2_conf 파일을 수정 및 추가합니다.</strong></li>
@@ -2708,15 +2915,24 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ systemctl restart neutron-server
 </span></span><span style="display:flex;"><span># neutron 서비스를 재시작 합니다.
-</span></span></code></pre></div><h1 id="heading-61"></h1>
+</span></span></code></pre></div><h1 id="heading-61">
+  
+  <a class="anchor" href="#heading-61">#</a>
+</h1>
 <ul>
 <li><strong>이제 Network 노드에서의 설치를 진행해보도록 하겠습니다.</strong></li>
 </ul>
-<h1 id="heading-62"></h1>
+<h1 id="heading-62">
+  
+  <a class="anchor" href="#heading-62">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ ovs-vsctl add-br br-eth1
 </span></span><span style="display:flex;"><span>$ ovs-vsctl add-port br-eth1 ens33
 </span></span><span style="display:flex;"><span># 네트워크 브릿지를 생성하고, 네트워크 노드의 외부대역의 인터페이스 번호를 바인딩합니다.
-</span></span></code></pre></div><h1 id="heading-63"></h1>
+</span></span></code></pre></div><h1 id="heading-63">
+  
+  <a class="anchor" href="#heading-63">#</a>
+</h1>
 <ul>
 <li><strong>neutron 서비스 사용을 위한 설정을 진행합니다.</strong></li>
 </ul>
@@ -2751,7 +2967,10 @@
 </span></span><span style="display:flex;"><span>$ systemctl stop firewalld
 </span></span><span style="display:flex;"><span>$ systemctl disable firewalld
 </span></span><span style="display:flex;"><span># 방화벽을 해제합니다.
-</span></span></code></pre></div><h1 id="heading-64"></h1>
+</span></span></code></pre></div><h1 id="heading-64">
+  
+  <a class="anchor" href="#heading-64">#</a>
+</h1>
 <ul>
 <li><strong>바인딩 오류를 해결하기 위해 설정을 진행합니다.</strong></li>
 </ul>
@@ -2788,7 +3007,10 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ systemctl enable set_interface
 </span></span><span style="display:flex;"><span>$ init 6
-</span></span></code></pre></div><h1 id="heading-65"></h1>
+</span></span></code></pre></div><h1 id="heading-65">
+  
+  <a class="anchor" href="#heading-65">#</a>
+</h1>
 <ul>
 <li><strong>이어 compute 노드에서의 설정을 진행합니다.</strong></li>
 </ul>
@@ -2822,7 +3044,10 @@
 </span></span><span style="display:flex;"><span>$ systemctl stop firewalld
 </span></span><span style="display:flex;"><span>$ systemctl disable firewalld
 </span></span><span style="display:flex;"><span># 방화벽을 해제합니다.
-</span></span></code></pre></div><h1 id="heading-66"></h1>
+</span></span></code></pre></div><h1 id="heading-66">
+  
+  <a class="anchor" href="#heading-66">#</a>
+</h1>
 <ul>
 <li><strong>확인</strong></li>
 </ul>
@@ -2918,22 +3143,37 @@
 </span></span></code></pre></div><ul>
 <li><strong>이것으로 기본적인 openstack-stein 버전의 설치를 완료하였습니다.</strong></li>
 </ul>
-<h1 id="heading-67"></h1>
+<h1 id="heading-67">
+  
+  <a class="anchor" href="#heading-67">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-68"></h1>
-<h3 id="7-horizon--대시보드-서비스--구성"><strong>7. Horizon ( 대시보드 서비스 ) 구성</strong></h3>
+<h1 id="heading-68">
+  
+  <a class="anchor" href="#heading-68">#</a>
+</h1>
+<h3 id="7-horizon--대시보드-서비스--구성">
+  <strong>7. Horizon ( 대시보드 서비스 ) 구성</strong>
+  <a class="anchor" href="#7-horizon--%eb%8c%80%ec%8b%9c%eb%b3%b4%eb%93%9c-%ec%84%9c%eb%b9%84%ec%8a%a4--%ea%b5%ac%ec%84%b1">#</a>
+</h3>
 <hr>
 <ul>
 <li><strong>Horizon은 controller 노드에서 설치가 진행됩니다.</strong></li>
 <li><strong>에 대한 설명은 <a href="https://mung0001.github.io/docs/study/openstack/horizon/">Horizone</a>을 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-69"></h1>
+<h1 id="heading-69">
+  
+  <a class="anchor" href="#heading-69">#</a>
+</h1>
 <ul>
 <li><strong>Horizon 패키지 설치</strong></li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$  yum --enablerepo=centos-openstack-stein,epel -y install openstack-dashboard
 </span></span><span style="display:flex;"><span># Horizon 패키지를 설치합니다.
-</span></span></code></pre></div><h1 id="heading-70"></h1>
+</span></span></code></pre></div><h1 id="heading-70">
+  
+  <a class="anchor" href="#heading-70">#</a>
+</h1>
 <ul>
 <li><strong>대시보드를 설정합니다.</strong></li>
 </ul>
@@ -2976,7 +3216,10 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>WSGIApplicationGroup %<span style="color:#75715e">{</span><span style="color:#a6e22e">GLOBAL</span><span style="color:#75715e">}</span>
 </span></span><span style="display:flex;"><span># 추가
-</span></span></code></pre></div><h1 id="heading-71"></h1>
+</span></span></code></pre></div><h1 id="heading-71">
+  
+  <a class="anchor" href="#heading-71">#</a>
+</h1>
 <ul>
 <li><strong>Selinux 및 방화벽 설정</strong></li>
 </ul>
@@ -2985,7 +3228,10 @@
 </span></span><span style="display:flex;"><span>$ firewall-cmd --reload
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ systemctl restart httpd
-</span></span></code></pre></div><h1 id="heading-72"></h1>
+</span></span></code></pre></div><h1 id="heading-72">
+  
+  <a class="anchor" href="#heading-72">#</a>
+</h1>
 <ul>
 <li>** DB 생성**</li>
 </ul>
@@ -2995,10 +3241,19 @@
 </span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; grant all privileges on .* to @&#39;%&#39; identified by &#39;pw&#39;;
 </span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; flush privileges;
 </span></span><span style="display:flex;"><span>#  구성을 위한 db를 생성합니다. ( 저는 편의를 위해 모든 pw로 qwer1234 설정하였습니다. )
-</span></span></code></pre></div><h1 id="heading-73"></h1>
+</span></span></code></pre></div><h1 id="heading-73">
+  
+  <a class="anchor" href="#heading-73">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-74"></h1>
-<h3 id="8-cinder--오브젝트-스토리지-및-블록-스토리지-구성-"><strong>8. Cinder ( 오브젝트 스토리지 및 블록 스토리지 구성 )</strong></h3>
+<h1 id="heading-74">
+  
+  <a class="anchor" href="#heading-74">#</a>
+</h1>
+<h3 id="8-cinder--오브젝트-스토리지-및-블록-스토리지-구성-">
+  <strong>8. Cinder ( 오브젝트 스토리지 및 블록 스토리지 구성 )</strong>
+  <a class="anchor" href="#8-cinder--%ec%98%a4%eb%b8%8c%ec%a0%9d%ed%8a%b8-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%eb%b0%8f-%eb%b8%94%eb%a1%9d-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%ea%b5%ac%ec%84%b1-">#</a>
+</h3>
 <hr>
 <ul>
 <li><strong>Cinder는 기본적으로 독립적으로 storage 노드를 구성하거나 혹은 compute 노드에 추가하여 사용합니다.</strong></li>
@@ -3006,7 +3261,10 @@
 <li><strong>구성 순서는 controller &gt; compute 노드 순으로 진행하겠습니다.</strong></li>
 <li><strong>Cinder에 대한 설명은 <a href="https://mung0001.github.io/docs/study/openstack/cinder/">Cinder</a>을 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-75"></h1>
+<h1 id="heading-75">
+  
+  <a class="anchor" href="#heading-75">#</a>
+</h1>
 <ul>
 <li><strong>Cinder 서비스 등록</strong></li>
 </ul>
@@ -3021,7 +3279,10 @@
 </span></span><span style="display:flex;"><span>$ openstack endpoint create --region RegionOne volumev3 internal http://$controller:8776/v3/%\(tenant_id\)s
 </span></span><span style="display:flex;"><span>$ openstack endpoint create --region RegionOne volumev3 admin http://$controller:8776/v3/%\(tenant_id\)s
 </span></span><span style="display:flex;"><span># cinder의 endpoint를 생성합니다.
-</span></span></code></pre></div><h1 id="heading-76"></h1>
+</span></span></code></pre></div><h1 id="heading-76">
+  
+  <a class="anchor" href="#heading-76">#</a>
+</h1>
 <ul>
 <li><strong>Cinder DB 생성</strong></li>
 </ul>
@@ -3031,7 +3292,10 @@
 </span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; grant all privileges on cinder.* to cinder@&#39;%&#39; identified by &#39;pw&#39;;
 </span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; flush privileges;
 </span></span><span style="display:flex;"><span># cinder 구성을 위한 db를 생성합니다. ( 저는 편의를 위해 모든 pw로 qwer1234 설정하였습니다. )
-</span></span></code></pre></div><h1 id="heading-77"></h1>
+</span></span></code></pre></div><h1 id="heading-77">
+  
+  <a class="anchor" href="#heading-77">#</a>
+</h1>
 <ul>
 <li><strong>cinder 패키지 설치 및 수정</strong></li>
 </ul>
@@ -3078,9 +3342,15 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ firewall-cmd --add-port=8776/tcp --permanent
 </span></span><span style="display:flex;"><span>$ firewall-cmd --reload
-</span></span></code></pre></div><h1 id="heading-78"></h1>
+</span></span></code></pre></div><h1 id="heading-78">
+  
+  <a class="anchor" href="#heading-78">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-79"></h1>
+<h1 id="heading-79">
+  
+  <a class="anchor" href="#heading-79">#</a>
+</h1>
 <ul>
 <li><strong>이어서 compute 노드에 설치를 진행하겠습니다.</strong></li>
 <li><strong>cinder 패키지 설치 및 수정</strong></li>
@@ -3128,11 +3398,23 @@
 </span></span><span style="display:flex;"><span>+------------------+------------+------+---------+-------+----------------------------+
 </span></span><span style="display:flex;"><span>| cinder-scheduler | controller | nova | enabled | up    | 2020-07-20T04:02:31.000000 |
 </span></span><span style="display:flex;"><span>+------------------+------------+------+---------+-------+----------------------------+
-</span></span></code></pre></div><h1 id="heading-80"></h1>
+</span></span></code></pre></div><h1 id="heading-80">
+  
+  <a class="anchor" href="#heading-80">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-81"></h1>
-<h3 id="8-2-lvm으로-블록-스토리지-백엔드-구성"><strong>8-2. LVM으로 블록 스토리지 백엔드 구성</strong></h3>
-<h1 id="heading-82"></h1>
+<h1 id="heading-81">
+  
+  <a class="anchor" href="#heading-81">#</a>
+</h1>
+<h3 id="8-2-lvm으로-블록-스토리지-백엔드-구성">
+  <strong>8-2. LVM으로 블록 스토리지 백엔드 구성</strong>
+  <a class="anchor" href="#8-2-lvm%ec%9c%bc%eb%a1%9c-%eb%b8%94%eb%a1%9d-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%eb%b0%b1%ec%97%94%eb%93%9c-%ea%b5%ac%ec%84%b1">#</a>
+</h3>
+<h1 id="heading-82">
+  
+  <a class="anchor" href="#heading-82">#</a>
+</h1>
 <ul>
 <li><strong>compute 노드에 cinder 서비스를 설치한 것에 이어 LVM 백엔드를 설정해보도록 하겠습니다.</strong></li>
 <li><strong><a href="">VG 생성 참조</a></strong></li>
@@ -3163,7 +3445,10 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ systemctl restart openstack-cinder-volume
 </span></span><span style="display:flex;"><span># 서비스를 재시작합니다.
-</span></span></code></pre></div><h1 id="heading-83"></h1>
+</span></span></code></pre></div><h1 id="heading-83">
+  
+  <a class="anchor" href="#heading-83">#</a>
+</h1>
 <ul>
 <li><strong>이어서 compute 노드의 nova.conf 파일을 수정합니다.</strong></li>
 </ul>
@@ -3219,10 +3504,19 @@
 </span></span><span style="display:flex;"><span>+--------------------------------------+------+-----------+------+-------------+
 </span></span><span style="display:flex;"><span>| f09ee80f-3ec8-4eaf-a4a5-af13cccbd5ae | test | available |    1 |             |
 </span></span><span style="display:flex;"><span>+--------------------------------------+------+-----------+------+-------------+
-</span></span></code></pre></div><h1 id="heading-84"></h1>
+</span></span></code></pre></div><h1 id="heading-84">
+  
+  <a class="anchor" href="#heading-84">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-85"></h1>
-<h3 id="8-3-lbaas-설치"><strong>8-3. LBaaS 설치</strong></h3>
+<h1 id="heading-85">
+  
+  <a class="anchor" href="#heading-85">#</a>
+</h1>
+<h3 id="8-3-lbaas-설치">
+  <strong>8-3. LBaaS 설치</strong>
+  <a class="anchor" href="#8-3-lbaas-%ec%84%a4%ec%b9%98">#</a>
+</h3>
 <ul>
 <li><strong>로드밸런싱을 위해서는 LBaaS를 사용해야 합니다.</strong></li>
 <li><strong>LBaaS에 대해서는 <a href="https://mung0001.github.io/docs/study/openstack/neutron/">LBaaS</a>를 참조해주세요.</strong></li>
@@ -3245,7 +3539,10 @@
 </span></span><span style="display:flex;"><span>$ su -s /bin/bash neutron -c &#34;neutron-db-manage --subproject neutron-lbaas --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugin.ini upgrade head&#34;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ systemctl restart neutron-server
-</span></span></code></pre></div><h1 id="heading-86"></h1>
+</span></span></code></pre></div><h1 id="heading-86">
+  
+  <a class="anchor" href="#heading-86">#</a>
+</h1>
 <ul>
 <li><strong>network 노드와 compute 노드는 동일하게 진행합니다.</strong></li>
 </ul>
@@ -3264,21 +3561,42 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ systemctl start neutron-lbaasv2-agent
 </span></span><span style="display:flex;"><span>$ systemctl enable neutron-lbaasv2-agent
-</span></span></code></pre></div><h1 id="heading-87"></h1>
+</span></span></code></pre></div><h1 id="heading-87">
+  
+  <a class="anchor" href="#heading-87">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-88"></h1>
-<h3 id="8-4-lfs-lvm-기반-다중-스토리지-노드-구성"><strong>8-4. LFS, LVM 기반 다중 스토리지 노드 구성</strong></h3>
-<h1 id="heading-89"></h1>
+<h1 id="heading-88">
+  
+  <a class="anchor" href="#heading-88">#</a>
+</h1>
+<h3 id="8-4-lfs-lvm-기반-다중-스토리지-노드-구성">
+  <strong>8-4. LFS, LVM 기반 다중 스토리지 노드 구성</strong>
+  <a class="anchor" href="#8-4-lfs-lvm-%ea%b8%b0%eb%b0%98-%eb%8b%a4%ec%a4%91-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%eb%85%b8%eb%93%9c-%ea%b5%ac%ec%84%b1">#</a>
+</h3>
+<h1 id="heading-89">
+  
+  <a class="anchor" href="#heading-89">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-90"></h1>
-<h3 id="9-swift--오브젝트-스토리지-서비스--구성"><strong>9. Swift ( 오브젝트 스토리지 서비스 ) 구성</strong></h3>
+<h1 id="heading-90">
+  
+  <a class="anchor" href="#heading-90">#</a>
+</h1>
+<h3 id="9-swift--오브젝트-스토리지-서비스--구성">
+  <strong>9. Swift ( 오브젝트 스토리지 서비스 ) 구성</strong>
+  <a class="anchor" href="#9-swift--%ec%98%a4%eb%b8%8c%ec%a0%9d%ed%8a%b8-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%ec%84%9c%eb%b9%84%ec%8a%a4--%ea%b5%ac%ec%84%b1">#</a>
+</h3>
 <hr>
 <ul>
 <li><strong>Swift란 오브젝트 스토리지 서비스로, 흔히 우리가 생각하는 네이버 클라우드와 거의 동일한 맥락이라 할 수 있습니다.</strong></li>
 <li><strong>swift는 기본적으로 controller에 설치하나 여기서는 비교적 자원소모가 적은 network 노드에 proxy-sever를, compute 노드를 storage로 사용하여 설치하여 진행하겠습니다.</strong></li>
 <li><strong>swift</strong>에 대한 설명은 <a href="https://mung0001.github.io/docs/study/openstack/swift/">swift</a>을 참조해주세요.**</li>
 </ul>
-<h1 id="heading-91"></h1>
+<h1 id="heading-91">
+  
+  <a class="anchor" href="#heading-91">#</a>
+</h1>
 <ul>
 <li><strong>swift 서비스 생성</strong></li>
 <li><strong>controlloer 노드에는 swift 관련 패키지를 설치하지는 않지만 서비스의 관리를 위해 유저, 엔드포인트, url을 생성합니다.</strong></li>
@@ -3293,9 +3611,15 @@
 </span></span><span style="display:flex;"><span>$ openstack endpoint create --region RegionOne object-store internal http://$swift_proxy:8080/v1/AUTH_%\(tenant_id\)s
 </span></span><span style="display:flex;"><span>$ openstack endpoint create --region RegionOne object-store admin http://$swift_proxy:8080/v1/AUTH_%\(tenant_id\)s
 </span></span><span style="display:flex;"><span># swift의 endpoint를 등록합니다. 여기서 proxy 서버는 네트워크 노드를 등록합니다.
-</span></span></code></pre></div><h1 id="heading-92"></h1>
+</span></span></code></pre></div><h1 id="heading-92">
+  
+  <a class="anchor" href="#heading-92">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-93"></h1>
+<h1 id="heading-93">
+  
+  <a class="anchor" href="#heading-93">#</a>
+</h1>
 <ul>
 <li><strong>이어서 network 노드에서의 swift 설치 및 설정을 진행하겠습니다.</strong></li>
 </ul>
@@ -3339,7 +3663,10 @@
 </span></span><span style="display:flex;"><span>#swift_hash_path_suffix = %SWIFT_HASH_PATH_SUFFIX%
 </span></span><span style="display:flex;"><span>swift_hash_path_suffix = swift_shared_path
 </span></span><span style="display:flex;"><span>swift_hash_path_prefix = swift_shared_path
-</span></span></code></pre></div><h1 id="heading-94"></h1>
+</span></span></code></pre></div><h1 id="heading-94">
+  
+  <a class="anchor" href="#heading-94">#</a>
+</h1>
 <ul>
 <li><strong>swift 서비스의 사용을 위해 account, container, object를 생성합니다.</strong></li>
 </ul>
@@ -3370,9 +3697,15 @@
 </span></span><span style="display:flex;"><span>$ firewall-cmd --add-port=8080/tcp --permanent
 </span></span><span style="display:flex;"><span>$ firewall-cmd --reload
 </span></span><span style="display:flex;"><span># 방화벽을 사용 중이라면 방화벽을 등록합니다.
-</span></span></code></pre></div><h1 id="heading-95"></h1>
+</span></span></code></pre></div><h1 id="heading-95">
+  
+  <a class="anchor" href="#heading-95">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-96"></h1>
+<h1 id="heading-96">
+  
+  <a class="anchor" href="#heading-96">#</a>
+</h1>
 <ul>
 <li><strong>이제 이어 storage를 구성하기 위해 compute 노드에서의 설치를 진행해보도록 하겠습니다.</strong></li>
 <li><strong>compute 노드는 이미 cinder 서비스가 동작하고 있어 기본적인 네트워크, 시간 설정, 레포지터리 지정 등은 구성이 마친 상태의 노드입니다.</strong></li>
@@ -3453,7 +3786,10 @@
 </span></span><span style="display:flex;"><span>max connections = 5
 </span></span><span style="display:flex;"><span>lock file =     /var/lock/swift_server.lock
 </span></span><span style="display:flex;"><span># swift 서비스관련 파일을 수정합니다.
-</span></span></code></pre></div><h1 id="heading-97"></h1>
+</span></span></code></pre></div><h1 id="heading-97">
+  
+  <a class="anchor" href="#heading-97">#</a>
+</h1>
 <ul>
 <li><strong>compute 노드에서 disk 설정을 진행합니다.</strong></li>
 </ul>
@@ -3477,9 +3813,15 @@
 </span></span><span style="display:flex;"><span>$ vi /etc/fstab
 </span></span><span style="display:flex;"><span>/dev/sdc1     /srv/node/device0     xfs     noatime,nodiratime,nobarrier 0 0
 </span></span><span style="display:flex;"><span># 재부팅할 경우를 대비하여 생성한 볼륨을 fstab에 등록합니다.
-</span></span></code></pre></div><h1 id="heading-98"></h1>
+</span></span></code></pre></div><h1 id="heading-98">
+  
+  <a class="anchor" href="#heading-98">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-99"></h1>
+<h1 id="heading-99">
+  
+  <a class="anchor" href="#heading-99">#</a>
+</h1>
 <ul>
 <li><strong>selinux 및 방화벽 관련 서비스를 설정합니다.</strong></li>
 </ul>
@@ -3487,13 +3829,19 @@
 </span></span><span style="display:flex;"><span>$ restorecon /srv/node/device0
 </span></span><span style="display:flex;"><span>$ firewall-cmd --add-port=<span style="color:#75715e">{</span><span style="color:#ae81ff">873</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">6200</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">6201</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">6202</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#75715e">}</span> --permanent 
 </span></span><span style="display:flex;"><span>$ firewall-cmd --reload 
-</span></span></code></pre></div><h1 id="heading-100"></h1>
+</span></span></code></pre></div><h1 id="heading-100">
+  
+  <a class="anchor" href="#heading-100">#</a>
+</h1>
 <ul>
 <li><strong>swift 관련 서비스를 재시작합니다.</strong></li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ systemctl restart rsyncd openstack-swift-account-auditor openstack-swift-account-replicator openstack-swift-account openstack-swift-container-auditor openstack-swift-container-replicator openstack-swift-container-updater openstack-swift-container openstack-swift-object-auditor openstack-swift-object-replicator openstack-swift-object-updater openstack-swift-object
 </span></span><span style="display:flex;"><span>$ systemctl enable rsyncd openstack-swift-account-auditor openstack-swift-account-replicator openstack-swift-account openstack-swift-container-auditor openstack-swift-container-replicator openstack-swift-container-updater openstack-swift-container openstack-swift-object-auditor openstack-swift-object-replicator openstack-swift-object-updater openstack-swift-object
-</span></span></code></pre></div><h1 id="heading-101"></h1>
+</span></span></code></pre></div><h1 id="heading-101">
+  
+  <a class="anchor" href="#heading-101">#</a>
+</h1>
 <ul>
 <li><strong>확인을 위해 controller 노드에 httpd를 재시작합니다.</strong></li>
 </ul>
@@ -3513,17 +3861,32 @@
 </span></span><span style="display:flex;"><span>test
 </span></span><span style="display:flex;"><span>$ swift list test
 </span></span><span style="display:flex;"><span>test.txt
-</span></span></code></pre></div><h1 id="heading-102"></h1>
+</span></span></code></pre></div><h1 id="heading-102">
+  
+  <a class="anchor" href="#heading-102">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-103"></h1>
-<h3 id="10-heat--orchestration--설치"><strong>10. Heat ( Orchestration ) 설치</strong></h3>
-<h1 id="heading-104"></h1>
+<h1 id="heading-103">
+  
+  <a class="anchor" href="#heading-103">#</a>
+</h1>
+<h3 id="10-heat--orchestration--설치">
+  <strong>10. Heat ( Orchestration ) 설치</strong>
+  <a class="anchor" href="#10-heat--orchestration--%ec%84%a4%ec%b9%98">#</a>
+</h3>
+<h1 id="heading-104">
+  
+  <a class="anchor" href="#heading-104">#</a>
+</h1>
 <ul>
 <li><strong>클라우딩 컴퓨팅이 꽃인 Orchestaration 기능을 수행하는 Heat 서비스를 설치해보도록 하겠습니다.</strong></li>
 <li><strong>Heat 설치는 controller, network 노드 순으로 우리어집니다.</strong></li>
 <li><strong>Heat*에 대한 설명은 <a href="https://mung0001.github.io/docs/study/openstack/heat/">Heat</a>을 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-105"></h1>
+<h1 id="heading-105">
+  
+  <a class="anchor" href="#heading-105">#</a>
+</h1>
 <ul>
 <li><strong>Heat 서비스 생성</strong></li>
 </ul>
@@ -3552,7 +3915,10 @@
 </span></span><span style="display:flex;"><span>$ openstack user create --domain heat --password qwer1234 heat_domain_admin
 </span></span><span style="display:flex;"><span>$ openstack role add --domain heat --user heat_domain_admin admin
 </span></span><span style="display:flex;"><span># heat domain을 생성하고 heat 유저에게 권한을 부여합니다.
-</span></span></code></pre></div><h1 id="heading-106"></h1>
+</span></span></code></pre></div><h1 id="heading-106">
+  
+  <a class="anchor" href="#heading-106">#</a>
+</h1>
 <ul>
 <li><strong>heat의 DB를 생성합니다.</strong></li>
 </ul>
@@ -3562,7 +3928,10 @@
 </span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; grant all privileges on heat.* to keystone@&#39;%&#39; identified by &#39;pw&#39;;
 </span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; flush privileges;
 </span></span><span style="display:flex;"><span># heat DB를 생성합니다. 여기서 pw는 qwer1234으로 모두 통일하였습니다.
-</span></span></code></pre></div><h1 id="heading-107"></h1>
+</span></span></code></pre></div><h1 id="heading-107">
+  
+  <a class="anchor" href="#heading-107">#</a>
+</h1>
 <ul>
 <li><strong>이어서 network 노드에서 heat 서비스를 설치해보겠습니다.</strong></li>
 </ul>
@@ -3636,15 +4005,24 @@
 </span></span><span style="display:flex;"><span>$ systemctl start openstack-heat-api openstack-heat-api-cfn openstack-heat-engine
 </span></span><span style="display:flex;"><span>$ systemctl enable openstack-heat-api openstack-heat-api-cfn openstack-heat-engine
 </span></span><span style="display:flex;"><span># DB의 데이터를 삽입하고, 서비스슬 등록합니다.
-</span></span></code></pre></div><h1 id="heading-108"></h1>
+</span></span></code></pre></div><h1 id="heading-108">
+  
+  <a class="anchor" href="#heading-108">#</a>
+</h1>
 <ul>
 <li><strong>방화벽을 사용중이면 방화벽을 설정합니다.</strong></li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ firewall-cmd --add-port=<span style="color:#75715e">{</span><span style="color:#ae81ff">8000</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">8004</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#75715e">}</span> --permanent
 </span></span><span style="display:flex;"><span>$ firewall-cmd --reload
-</span></span></code></pre></div><h1 id="heading-109"></h1>
+</span></span></code></pre></div><h1 id="heading-109">
+  
+  <a class="anchor" href="#heading-109">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-110"></h1>
+<h1 id="heading-110">
+  
+  <a class="anchor" href="#heading-110">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ yum --enablerepo=centos-openstack-stein,epel -y install openstack-designate-api openstack-designate-central openstack-designate-worker openstack-designate-producer openstack-designate-mdns python-designateclient bind bind-utils
 </span></span><span style="display:flex;"><span>#  서비스 관련 패키지를 설치합니다.
 </span></span><span style="display:flex;"><span>
@@ -3760,7 +4138,10 @@
 </span></span><span style="display:flex;"><span>Updating Pools Configuration
 </span></span><span style="display:flex;"><span>$ systemctl start designate-worker designate-producer designate-mdns
 </span></span><span style="display:flex;"><span>$ systemctl enable designate-worker designate-producer designate-mdns
-</span></span></code></pre></div><h1 id="heading-111"></h1>
+</span></span></code></pre></div><h1 id="heading-111">
+  
+  <a class="anchor" href="#heading-111">#</a>
+</h1>
 <ul>
 <li><strong>이어서 selinux와 방화벽을 설정합니다.</strong></li>
 </ul>
@@ -3771,19 +4152,46 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>controller&gt; $openstack dns service list
 </span></span><span style="display:flex;"><span># 확인
-</span></span></code></pre></div><h1 id="heading-112"></h1>
+</span></span></code></pre></div><h1 id="heading-112">
+  
+  <a class="anchor" href="#heading-112">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-113"></h1>
+<h1 id="heading-113">
+  
+  <a class="anchor" href="#heading-113">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-114"></h1>
-<h3 id="11-openstack-대시보드-메인-로고-및-링크-변경"><strong>11. Openstack 대시보드 메인 로고 및 링크 변경</strong></h3>
-<h1 id="heading-115"></h1>
+<h1 id="heading-114">
+  
+  <a class="anchor" href="#heading-114">#</a>
+</h1>
+<h3 id="11-openstack-대시보드-메인-로고-및-링크-변경">
+  <strong>11. Openstack 대시보드 메인 로고 및 링크 변경</strong>
+  <a class="anchor" href="#11-openstack-%eb%8c%80%ec%8b%9c%eb%b3%b4%eb%93%9c-%eb%a9%94%ec%9d%b8-%eb%a1%9c%ea%b3%a0-%eb%b0%8f-%eb%a7%81%ed%81%ac-%eb%b3%80%ea%b2%bd">#</a>
+</h3>
+<h1 id="heading-115">
+  
+  <a class="anchor" href="#heading-115">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-116"></h1>
-<h3 id="12-neutron-기반-service-functon-chaining--sfc--기능-구성"><strong>12. Neutron 기반 Service Functon Chaining ( SFC ) 기능 구성</strong></h3>
-<h1 id="heading-117"></h1>
+<h1 id="heading-116">
+  
+  <a class="anchor" href="#heading-116">#</a>
+</h1>
+<h3 id="12-neutron-기반-service-functon-chaining--sfc--기능-구성">
+  <strong>12. Neutron 기반 Service Functon Chaining ( SFC ) 기능 구성</strong>
+  <a class="anchor" href="#12-neutron-%ea%b8%b0%eb%b0%98-service-functon-chaining--sfc--%ea%b8%b0%eb%8a%a5-%ea%b5%ac%ec%84%b1">#</a>
+</h3>
+<h1 id="heading-117">
+  
+  <a class="anchor" href="#heading-117">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-118"></h1>
+<h1 id="heading-118">
+  
+  <a class="anchor" href="#heading-118">#</a>
+</h1>
 </article>
  
       
@@ -3954,7 +4362,6 @@
 </body>
 </div>
 </html>
-
 
 
 

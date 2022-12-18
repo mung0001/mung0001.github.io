@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Docker 환경구축 이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다. 설치에 대한 자세한 설명은 Docker docs를 참고해주세요. Docker 설치 Docker는 기본적으로 Linux 플랫폼, MacOS, Window 10을 지원하고 있습니다. Docker 지원 DESKTOP Docker 지원 SERVER Debian 설치 Debian 환경 Debian계열 Linux에 Docker Engine을 설치 하기 위해서는 하단의 요구조건을 충족해야 합니다. Debian Buster 10 or Debian Stretch 9/ Raspbian Streetch x86_64 or amd 64, armhf, arm64 Debian 구 버전 Docker 삭제 $ sudo apt-get remove docker docker-engine docker.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/docker/docker/docker-2/><meta property="og:title" content="Docker 환경구축" />
-<meta property="og:description" content="Docker 환경구축 이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다. 설치에 대한 자세한 설명은 Docker docs를 참고해주세요. Docker 설치 Docker는 기본적으로 Linux 플랫폼, MacOS, Window 10을 지원하고 있습니다. Docker 지원 DESKTOP Docker 지원 SERVER Debian 설치 Debian 환경 Debian계열 Linux에 Docker Engine을 설치 하기 위해서는 하단의 요구조건을 충족해야 합니다. Debian Buster 10 or Debian Stretch 9/ Raspbian Streetch x86_64 or amd 64, armhf, arm64 Debian 구 버전 Docker 삭제 $ sudo apt-get remove docker docker-engine docker." />
+<meta name="description" content="Docker 환경구축##이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다. 설치에 대한 자세한 설명은 Docker docs를 참고해주세요. #Docker 설치##Docker는 기본적으로 Linux 플랫폼, MacOS, Window 10을 지원하고 있습니다. Docker 지원 DESKTOP #Docker 지원 SERVER ##Debian 설치##Debian 환경##Debian계열 Linux에 Docker Engine을 설치 하기 위해서는 하단의 요구조건을 충족해야 합니다. Debian Buster 10 or Debian Stretch 9/ Raspbian Streetch x86_64 or amd 64, armhf, arm64 ##Debian 구 버전 Docker 삭제#$ sudo apt-get remove docker docker-engine docker.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Docker 환경구축" />
+<meta property="og:description" content="Docker 환경구축##이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다. 설치에 대한 자세한 설명은 Docker docs를 참고해주세요. #Docker 설치##Docker는 기본적으로 Linux 플랫폼, MacOS, Window 10을 지원하고 있습니다. Docker 지원 DESKTOP #Docker 지원 SERVER ##Debian 설치##Debian 환경##Debian계열 Linux에 Docker Engine을 설치 하기 위해서는 하단의 요구조건을 충족해야 합니다. Debian Buster 10 or Debian Stretch 9/ Raspbian Streetch x86_64 or amd 64, armhf, arm64 ##Debian 구 버전 Docker 삭제#$ sudo apt-get remove docker docker-engine docker." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/docker/docker/docker-2/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Docker 환경구축 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -48,7 +47,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1255,6 +1254,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1266,14 +1268,15 @@
   <strong>Docker 환경구축</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1338,36 +1341,72 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="docker-환경구축"><strong>Docker 환경구축</strong></h1>
+  <article class="markdown"><h1 id="docker-환경구축">
+  <strong>Docker 환경구축</strong>
+  <a class="anchor" href="#docker-%ed%99%98%ea%b2%bd%ea%b5%ac%ec%b6%95">#</a>
+</h1>
 <hr>
-<h1 id="heading"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <ul>
 <li><strong>이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다.</strong></li>
 <li><strong>설치에 대한 자세한 설명은 <a href="https://docs.docker.com/engine/install/">Docker docs</a>를 참고해주세요.</strong></li>
 </ul>
-<h1 id="heading-1"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <blockquote>
-<h2 id="docker-설치"><strong>Docker 설치</strong></h2>
+<h2 id="docker-설치">
+  <strong>Docker 설치</strong>
+  <a class="anchor" href="#docker-%ec%84%a4%ec%b9%98">#</a>
+</h2>
 </blockquote>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <ul>
 <li><strong>Docker는 기본적으로 Linux 플랫폼, MacOS, Window 10을 지원하고 있습니다.</strong></li>
 <li><strong>Docker 지원 DESKTOP</strong>
 <img src="/Docker/Docker06.png" alt="" /></li>
 </ul>
-<h1 id="heading-3"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <ul>
 <li><strong>Docker 지원 SERVER</strong>
 <img src="/Docker/Docker08.png" alt="" /></li>
 </ul>
-<h1 id="heading-4"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-5"></h1>
-<h2 id="debian-설치"><strong>Debian 설치</strong></h2>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<h2 id="debian-설치">
+  <strong>Debian 설치</strong>
+  <a class="anchor" href="#debian-%ec%84%a4%ec%b9%98">#</a>
+</h2>
 <hr>
-<h1 id="heading-6"></h1>
-<h3 id="debian-환경"><strong>Debian 환경</strong></h3>
-<h1 id="heading-7"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<h3 id="debian-환경">
+  <strong>Debian 환경</strong>
+  <a class="anchor" href="#debian-%ed%99%98%ea%b2%bd">#</a>
+</h3>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <ul>
 <li><strong>Debian계열 Linux에 Docker Engine을 설치 하기 위해서는 하단의 요구조건을 충족해야 합니다.</strong>
 <ul>
@@ -1376,18 +1415,39 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-8"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-9"></h1>
-<h3 id="debian-구-버전-docker-삭제"><strong>Debian 구 버전 Docker 삭제</strong></h3>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<h3 id="debian-구-버전-docker-삭제">
+  <strong>Debian 구 버전 Docker 삭제</strong>
+  <a class="anchor" href="#debian-%ea%b5%ac-%eb%b2%84%ec%a0%84-docker-%ec%82%ad%ec%a0%9c">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo apt-get remove docker docker-engine docker.io containerd runc
 </span></span><span style="display:flex;"><span># 기존 Docker 패키지를 삭제합니다.
 </span></span><span style="display:flex;"><span># /var/lib/docker/의 존재하는 이미지, 컨테이너, 볼륨 및 네트워크를 포함한 컨텐츠들은 보존됩니다.
-</span></span></code></pre></div><h1 id="heading-10"></h1>
+</span></span></code></pre></div><h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-11"></h1>
-<h2 id="debian-docker-실치"><strong>Debian Docker 실치</strong></h2>
-<h1 id="heading-12"></h1>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<h2 id="debian-docker-실치">
+  <strong>Debian Docker 실치</strong>
+  <a class="anchor" href="#debian-docker-%ec%8b%a4%ec%b9%98">#</a>
+</h2>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <ul>
 <li><strong>Docker는 하단과 같이 다양한 방법으로 Docker Engine의 설치가 가능합니다.</strong>
 <ul>
@@ -1397,9 +1457,18 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-13"></h1>
-<h3 id="저장소를-이용한-설치"><strong>저장소를 이용한 설치</strong></h3>
-<h1 id="heading-14"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h3 id="저장소를-이용한-설치">
+  <strong>저장소를 이용한 설치</strong>
+  <a class="anchor" href="#%ec%a0%80%ec%9e%a5%ec%86%8c%eb%a5%bc-%ec%9d%b4%ec%9a%a9%ed%95%9c-%ec%84%a4%ec%b9%98">#</a>
+</h3>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo apt update -y
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ sudo apt-get -y install \
@@ -1436,12 +1505,24 @@
 </span></span><span style="display:flex;"><span># Docker 설치
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ docker version
-</span></span></code></pre></div><h1 id="heading-15"></h1>
+</span></span></code></pre></div><h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-16"></h1>
-<h3 id="centos-7"><strong>CentOS 7</strong></h3>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h3 id="centos-7">
+  <strong>CentOS 7</strong>
+  <a class="anchor" href="#centos-7">#</a>
+</h3>
 <hr>
-<h1 id="heading-17"></h1>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo yum update -y
 </span></span><span style="display:flex;"><span>$ sudo yum install –y docker docker-registry epel-release jq
 </span></span><span style="display:flex;"><span># Docker 설치 및 Docker 레지스트리 설치
@@ -1459,9 +1540,15 @@
 </span></span><span style="display:flex;"><span>		    docker-latest-logrotate \
 </span></span><span style="display:flex;"><span>		    docker-engine
 </span></span><span style="display:flex;"><span># Docker 구버전 제거
-</span></span></code></pre></div><h1 id="heading-18"></h1>
+</span></span></code></pre></div><h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-19"></h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 </article>
  
       
@@ -1556,7 +1643,6 @@
 </body>
 </div>
 </html>
-
 
 
 

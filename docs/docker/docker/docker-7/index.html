@@ -2,48 +2,47 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Docker Swarm Swarm은 Docker와 별개로 개발되었지만 Docker 1.12 버전부터 Swarm mode라는 이름으로 합쳐졌습니다.
+<meta name="description" content="Docker Swarm##Swarm은 Docker와 별개로 개발되었지만 Docker 1.12 버전부터 Swarm mode라는 이름으로 합쳐졌습니다.
 도커에 모든 게 내장되어 다른 툴을 설치할 필요가 없고 도커 명령어와 compose를 그대로 사용할 수 있어 다른 툴에 비해 압도적으로 쉬우며 편리합니다.
 기능이 단순하고 필요한 것만 구현되어 있어 세부적인 컨트롤의 난이도는 높은 편입니다.
-Docker Swarm 용어절리 Swarm 정식 명칭은 도커 1.12버전에서 Swarm이 Swarm Mode로 바뀌었지만 그냥 Swarm이라고 하는 듯합니다.
-Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을 만들다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/docker/docker/docker-7/><meta property="og:title" content="Docker Swarm" />
-<meta property="og:description" content="Docker Swarm Swarm은 Docker와 별개로 개발되었지만 Docker 1.12 버전부터 Swarm mode라는 이름으로 합쳐졌습니다.
+##Docker Swarm 용어절리##Swarm 정식 명칭은 도커 1.12버전에서 Swarm이 Swarm Mode로 바뀌었지만 그냥 Swarm이라고 하는 듯합니다.
+Swarm Cluster자체도 Swarm이라고 합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Docker Swarm" />
+<meta property="og:description" content="Docker Swarm##Swarm은 Docker와 별개로 개발되었지만 Docker 1.12 버전부터 Swarm mode라는 이름으로 합쳐졌습니다.
 도커에 모든 게 내장되어 다른 툴을 설치할 필요가 없고 도커 명령어와 compose를 그대로 사용할 수 있어 다른 툴에 비해 압도적으로 쉬우며 편리합니다.
 기능이 단순하고 필요한 것만 구현되어 있어 세부적인 컨트롤의 난이도는 높은 편입니다.
-Docker Swarm 용어절리 Swarm 정식 명칭은 도커 1.12버전에서 Swarm이 Swarm Mode로 바뀌었지만 그냥 Swarm이라고 하는 듯합니다.
-Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을 만들다." />
+##Docker Swarm 용어절리##Swarm 정식 명칭은 도커 1.12버전에서 Swarm이 Swarm Mode로 바뀌었지만 그냥 Swarm이라고 하는 듯합니다.
+Swarm Cluster자체도 Swarm이라고 합니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/docker/docker/docker-7/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Docker Swarm | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -56,7 +55,7 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1263,6 +1262,9 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1274,14 +1276,15 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
   <strong>Docker Swarm</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1362,9 +1365,15 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 <br>
 <br>
       
-  <article class="markdown"><h2 id="docker-swarm"><strong>Docker Swarm</strong></h2>
+  <article class="markdown"><h2 id="docker-swarm">
+  <strong>Docker Swarm</strong>
+  <a class="anchor" href="#docker-swarm">#</a>
+</h2>
 <hr>
-<h1 id="heading"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>Swarm은 Docker와 별개로 개발되었지만 Docker 1.12 버전부터 Swarm mode라는 이름으로 합쳐졌습니다.</strong></p>
@@ -1376,11 +1385,23 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 <p><strong>기능이 단순하고 필요한 것만 구현되어 있어 세부적인 컨트롤의 난이도는 높은 편입니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-1"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-2"></h1>
-<h3 id="docker-swarm-용어절리"><strong>Docker Swarm 용어절리</strong></h3>
-<h1 id="heading-3"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<h3 id="docker-swarm-용어절리">
+  <strong>Docker Swarm 용어절리</strong>
+  <a class="anchor" href="#docker-swarm-%ec%9a%a9%ec%96%b4%ec%a0%88%eb%a6%ac">#</a>
+</h3>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <ul>
 <li><strong>Swarm</strong>
 <ul>
@@ -1393,7 +1414,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-4"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Node</strong>
@@ -1407,7 +1431,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-5"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Manager node</strong>
@@ -1421,7 +1448,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-6"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Worker node</strong>
@@ -1430,7 +1460,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-7"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Service</strong>
@@ -1439,7 +1472,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-8"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>task</strong>
@@ -1448,11 +1484,23 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-9"></h1>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-10"></h1>
-<h3 id="도커-스윔이-제공하는-기능"><strong>도커 스윔이 제공하는 기능</strong></h3>
-<h1 id="heading-11"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="도커-스윔이-제공하는-기능">
+  <strong>도커 스윔이 제공하는 기능</strong>
+  <a class="anchor" href="#%eb%8f%84%ec%bb%a4-%ec%8a%a4%ec%9c%94%ec%9d%b4-%ec%a0%9c%ea%b3%b5%ed%95%98%eb%8a%94-%ea%b8%b0%eb%8a%a5">#</a>
+</h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <ul>
 <li><strong>Scheduling</strong>
 <ul>
@@ -1468,7 +1516,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-12"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>High Available</strong>
@@ -1482,7 +1533,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-13"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Multi Host NEtwork</strong>
@@ -1496,7 +1550,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-14"></h1>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Service Discovey</strong>
@@ -1513,7 +1570,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-15"></h1>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Rolling Update</strong>
@@ -1527,7 +1587,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-16"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Heath Check</strong>
@@ -1541,7 +1604,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-17"></h1>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Secret Management</strong>
@@ -1555,7 +1621,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-18"></h1>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Logging</strong>
@@ -1569,7 +1638,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-19"></h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Monitoring</strong>
@@ -1578,7 +1650,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-20"></h1>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>Cron</strong>
@@ -1587,11 +1662,23 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-21"></h1>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-22"></h1>
-<h3 id="docker-swarm-실습"><strong>Docker Swarm 실습</strong></h3>
-<h1 id="heading-23"></h1>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<h3 id="docker-swarm-실습">
+  <strong>Docker Swarm 실습</strong>
+  <a class="anchor" href="#docker-swarm-%ec%8b%a4%ec%8a%b5">#</a>
+</h3>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <ul>
 <li><strong>구성</strong>
 <ul>
@@ -1602,9 +1689,15 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </ul>
 </li>
 </ul>
-<h1 id="heading-24"></h1>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-25"></h1>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ (master : 10.10.10.10)&gt; sudo docker swarm leave --force
 </span></span><span style="display:flex;"><span># 만약 에러 발생시
 </span></span><span style="display:flex;"><span>
@@ -1664,11 +1757,23 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 <p><strong>ingress는 routing mesh라는 재미있는 개념을 가지고 있는 데, 이 개념은 서비스가 포트를 오픈하 경우 모든 노드에 포트가 오픈되고 어떤 노드에 요청을 보내도 실행 중인 컨테이너에 자동으로 전달해 줍니다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-26"></h1>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-27"></h1>
-<h3 id="docker-swarm-scale"><strong>Docker Swarm scale</strong></h3>
-<h1 id="heading-28"></h1>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
+<h3 id="docker-swarm-scale">
+  <strong>Docker Swarm scale</strong>
+  <a class="anchor" href="#docker-swarm-scale">#</a>
+</h3>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
 <ul>
 <li><strong>여기서는 Docker Swarm을 통해 서비스의 개수를 늘려보도록 하겠습니다.</strong></li>
 </ul>
@@ -1745,11 +1850,23 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </span></span><span style="display:flex;"><span>n61ei91lbs7o        whoami.5            subicura/whoami:2   ip-10-10-10-12      Running             Running 2 minutes ago
 </span></span><span style="display:flex;"><span>dsi6rogdtwvk         \_ whoami.5        subicura/whoami:1   ip-10-10-10-10      Shutdown            Shutdown 3 minutes ago
 </span></span><span style="display:flex;"><span># Healthcheck를 확인 할 수 있습니다.
-</span></span></code></pre></div><h1 id="heading-29"></h1>
+</span></span></code></pre></div><h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-30"></h1>
-<h3 id="방문자-수-체크-웹-애플리케이션-생성"><strong>방문자 수 체크 웹 애플리케이션 생성</strong></h3>
-<h1 id="heading-31"></h1>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
+<h3 id="방문자-수-체크-웹-애플리케이션-생성">
+  <strong>방문자 수 체크 웹 애플리케이션 생성</strong>
+  <a class="anchor" href="#%eb%b0%a9%eb%ac%b8%ec%9e%90-%ec%88%98-%ec%b2%b4%ed%81%ac-%ec%9b%b9-%ec%95%a0%ed%94%8c%eb%a6%ac%ec%bc%80%ec%9d%b4%ec%85%98-%ec%83%9d%ec%84%b1">#</a>
+</h3>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ (master : 10.10.10.10)&gt; sudo docker network create --attachable \
 </span></span><span style="display:flex;"><span>  --driver overlay \
 </span></span><span style="display:flex;"><span>  backend
@@ -1788,10 +1905,19 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </span></span><span style="display:flex;"><span>$ (master : 10.10.10.10)&gt; curl localhost:4568
 </span></span><span style="display:flex;"><span>$ (master : 10.10.10.10)&gt; curl localhost:4568
 </span></span><span style="display:flex;"><span># .... &gt; 1..2..3 순으로 증가하는 것을 확인하실 수 있습니다.
-</span></span></code></pre></div><h1 id="heading-32"></h1>
+</span></span></code></pre></div><h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-33"></h1>
-<h3 id="비밀키-조회-애플리케이션"><strong>비밀키 조회 애플리케이션</strong></h3>
+<h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
+<h3 id="비밀키-조회-애플리케이션">
+  <strong>비밀키 조회 애플리케이션</strong>
+  <a class="anchor" href="#%eb%b9%84%eb%b0%80%ed%82%a4-%ec%a1%b0%ed%9a%8c-%ec%95%a0%ed%94%8c%eb%a6%ac%ec%bc%80%ec%9d%b4%ec%85%98">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ (master : 10.10.10.10)&gt; echo &#34;this is my password!&#34; | docker secret create my-password -
 </span></span><span style="display:flex;"><span>1p5vcpdcii599ggu8bh4pdh91
 </span></span><span style="display:flex;"><span># 비밀 키를 생성합니다.
@@ -1805,10 +1931,19 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ (master : 10.10.10.10)&gt; curl localhost:4569
 </span></span><span style="display:flex;"><span>this is my password!
-</span></span></code></pre></div><h1 id="heading-34"></h1>
+</span></span></code></pre></div><h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-35"></h1>
-<h3 id="traefik-리버스-프록시-서버"><strong>Traefik 리버스 프록시 서버</strong></h3>
+<h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
+<h3 id="traefik-리버스-프록시-서버">
+  <strong>Traefik 리버스 프록시 서버</strong>
+  <a class="anchor" href="#traefik-%eb%a6%ac%eb%b2%84%ec%8a%a4-%ed%94%84%eb%a1%9d%ec%8b%9c-%ec%84%9c%eb%b2%84">#</a>
+</h3>
 <ul>
 <li>
 <p><strong>스웜은 매니저 노드에서 모든 서비스를 관리할 수 있고 서비스가 생성된 것을 체크하면 무언가를 자동화할 수 있습니다.</strong></p>
@@ -1850,7 +1985,10 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </span></span><span style="display:flex;"><span># raefik과 접속할 수 있도록 frontend네트워크에 연결했고 --label옵션으로 내부적으로 사용하는 웹 포트를 알려주었습니다. traefik은 traefik.port라벨의 값을 읽어 해당 포트로 리버스 프록시를 연결합니다. portainer는 스웜을 관리해주는 툴이기 때문에 매니저 노드에 실행하도록 했습니다.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span># 서비스 이름을 portainer로 했기 때문에 서비스가 실행되면 traefik서비스가 자동으로 portainer.local.dev도메인 정보를 생성하고 portainer컨테이너의 9000번 포트로 연결합니다. 서비스를 생성하고 잠시 기다리면 프록시 설정이 자동으로 완료됩니다.
-</span></span></code></pre></div><h1 id="heading-36"></h1>
+</span></span></code></pre></div><h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
 <p> </p>
 </article>
  
@@ -1962,7 +2100,6 @@ Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을
 </body>
 </div>
 </html>
-
 
 
 

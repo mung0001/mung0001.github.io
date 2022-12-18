@@ -12,10 +12,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window01/</guid>
-      <description>Windows Sever Roadmap Windows Sever Roadmap Windows Server을 사용하기 위한 준비
+      <description>Windows Sever Roadmap##Windows Sever Roadmap##Windows Server을 사용하기 위한 준비
 응용 프로그램 : VMware workstation
 가상머신의 종류와 하드웨어 사양
-FIRST SECOND THIRD Windows Client SERVERCORE 주 용도 서버 전용 서버/ 클라이언트 겸용 서버/ 클라이언트 겸용 클라이언트 전용 서버 코어 테스트 용도 Guest OS 종류 Windows Server 2016 Windows Server 2016 Windows Sever 2016 Windows Sever 2016 Windows Sever 2016 가상머신 FIRST SECOND THIRD WINCLIENT SEVERCORE CPU 코어수/ 쓰레드 1/2 1/2 1/2 2/2 1/2 하드용량 100GB 60GB 60GB 60GB 60GB 메모리 할당 2048MB 2048MB 2048MB 2048MB 2048MB 네트워크 타입 NAT NAT NAT NAT NAT CD/DVD O O O O O Audio X X X O X USB X X X O X Printer X X X O X 가상머신의 네트워크 FIRST SECOND THIRD WINCLIENT SEVERCORE IP 주소 192.</description>
+FIRST SECOND THIRD Windows Client SERVERCORE 주 용도 서버 전용 서버/ 클라이언트 겸용 서버/ 클라이언트 겸용 클라이언트 전용 서버 코어 테스트 용도 Guest OS 종류 Windows Server 2016 Windows Server 2016 Windows Sever 2016 Windows Sever 2016 Windows Sever 2016 가상머신 FIRST SECOND THIRD WINCLIENT SEVERCORE CPU 코어수/ 쓰레드 1/2 1/2 1/2 2/2 1/2 하드용량 100GB 60GB 60GB 60GB 60GB 메모리 할당 2048MB 2048MB 2048MB 2048MB 2048MB 네트워크 타입 NAT NAT NAT NAT NAT CD/DVD O O O O O Audio X X X O X USB X X X O X Printer X X X O X #가상머신의 네트워크 FIRST SECOND THIRD WINCLIENT SEVERCORE IP 주소 192.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@ FIRST SECOND THIRD Windows Client SERVERCORE 주 용도 서버 전용 서버/ �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window02/</guid>
-      <description>Windows Server Install 설치순서 Windows Server 2016 ISO 다운로드 및 인스톨
+      <description>Windows Server Install##설치순서##Windows Server 2016 ISO 다운로드 및 인스톨
 관리자 비밀번호지정
 평가기간 라이선스 확인
 한글 언어팩 설치
@@ -36,7 +36,7 @@ Internet Explorer 보안 설정 끄기
 Administrator 암호 기간 제한 제거
 자동 업데이트 기능 끄기
 종료 후 설정 완료된 가상머신을 스냅샷
-Windows Server 2016 Install 이미지를 삽입 후에 시간을 Korea로 설정 후 설치를 진행합니다. 설치를 진행합니다. 서버 및 클라이언트를 모두 사용할 것이기 때문에 최하단를 선택합니다.</description>
+##Windows Server 2016 Install##이미지를 삽입 후에 시간을 Korea로 설정 후 설치를 진행합니다.</description>
     </item>
     
     <item>
@@ -45,18 +45,15 @@ Windows Server 2016 Install 이미지를 삽입 후에 시간을 Korea로 설정
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window03/</guid>
-      <description>Windows Sever 부팅 및 종료 Windows Server 종료 Windows Server는 대체로 컴퓨터를 종료하는 일이 없으며, 만약 컴퓨터를 종료하거나 재부팅할 때는 왜 종료하는 이유를 선택하거나 입력해주어야 합니다.
+      <description>Windows Sever 부팅 및 종료##Windows Server 종료###Windows Server는 대체로 컴퓨터를 종료하는 일이 없으며, 만약 컴퓨터를 종료하거나 재부팅할 때는 왜 종료하는 이유를 선택하거나 입력해주어야 합니다.
 이전에 종료 및 부팅된 이벤트 기록을 확인하기 위해서는 Windows의 Event Viewer에서 System View로 확인이 가능합니다.
 이벤트 ID로도 검색이 가능합니다.
-Windows의 부팅과정 전원
+##Windows의 부팅과정##전원
 POST(Power On Self Test)
 MBR 읽기
 BOOTMGR 실행
 멀티 부팅 선택
-Windows Loader 실행
-로그인 화면
-필수 관리 프로그램 실행
-안전모드 윈도우 서버 또한 문제가 발생시 안전모드로 진입이 가능합니다.</description>
+Windows Loader 실행</description>
     </item>
     
     <item>
@@ -65,11 +62,11 @@ Windows Loader 실행
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window04/</guid>
-      <description>Windows Server 사용자 계정 사용자 계정 Windows는 여러 명의 사용자가 존재할 수 있고, 각 사용자마다 별도의 환경을 구성할 수 있습니다.
+      <description>Windows Server 사용자 계정##사용자 계정##Windows는 여러 명의 사용자가 존재할 수 있고, 각 사용자마다 별도의 환경을 구성할 수 있습니다.
 컴퓨터의 자원들에 대한 사용권한을 각 사용자마다 제한할 수 있습니다.
 독립 실행형 서버에서 생성한 사용자 계정을 로컬 사용자 계정이라 부르며, 이 계정으로는 AD(Active Directory) 도메인에 로그온할 수 없으며 현재 컴퓨터의 자원에만 접근할 수 있습니다.
 독립 실행형 서버의 경우 기본적으로 Administrato와 Guest 사용자가 있습니다.
-그룹 계정 그룹은 간단히 여러 권한을 묶은 집합을 의미하며, 여러 권한을 묶어서 하나의 그룹으로 구성하는 것을 뜻합니다.</description>
+##그룹 계정##그룹은 간단히 여러 권한을 묶은 집합을 의미하며, 여러 권한을 묶어서 하나의 그룹으로 구성하는 것을 뜻합니다.</description>
     </item>
     
     <item>
@@ -78,7 +75,7 @@ Windows Loader 실행
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window05/</guid>
-      <description>파일 및 폴더 관리 확장자 및 숨은 파일 보기 기본적으로 윈도우는 파일확장자 및 숨은 파일들은 표시되어 있게 설정되어있습니다. 이에 대한 설정을 위해 파일 탐색기 &amp;gt; 보기에서 설정하거나 혹은 옵션을 통해 설정합니다. 파일 및 폴더 공유 각 PC들은 네트워크를 통해 파일 및 폴더의 공유가 가능합니다.
+      <description>파일 및 폴더 관리##확장자 및 숨은 파일 보기##기본적으로 윈도우는 파일확장자 및 숨은 파일들은 표시되어 있게 설정되어있습니다. #이에 대한 설정을 위해 파일 탐색기 &amp;gt; 보기에서 설정하거나 혹은 옵션을 통해 설정합니다. ####파일 및 폴더 공유##각 PC들은 네트워크를 통해 파일 및 폴더의 공유가 가능합니다.
 이를 사용하기 위해 먼저 FIRST 서버에서 네트워크 설정으르 수행합니다.
 하단의 그림과 같이 제어판 &amp;gt; 네트워크 및 공유 센터 &amp;gt; 고급 공유 설정 &amp;gt; 엑세스가 가능하도록 개인, 게스트 또는 공용 및 모든 네트워크를 설정합니다.</description>
     </item>
@@ -89,10 +86,11 @@ Windows Loader 실행
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window06/</guid>
-      <description>암호화 암호화 암호화 연습을 위해 C 에 암호화연습, 그 안에 암호화.txt에 중요파일을 기업 후 저장하고, 그냥.txt에 일반파일을 기입 후 저장합니다.
+      <description>암호화##암호화####암호화 연습을 위해 C 에 암호화연습, 그 안에 암호화.txt에 중요파일을 기업 후 저장하고, 그냥.txt에 일반파일을 기입 후 저장합니다.
 저장이 완료되면 암호화파일에 속성에서 고급 &amp;gt; 데이터 보호를 위한 암호화를 설정합니다.
-파일만 암호화를 선택합니다. 설정이 완료되면 다음과 같이 암호화가 완료되며, 암호화시킨 유저만이 이 파일에 접근이 가능해집니다.
-만약 문제가 생길 경우 키 파일이 있으면 접근이 가능합니다.</description>
+####파일만 암호화를 선택합니다. ###설정이 완료되면 다음과 같이 암호화가 완료되며, 암호화시킨 유저만이 이 파일에 접근이 가능해집니다.
+만약 문제가 생길 경우 키 파일이 있으면 접근이 가능합니다.
+#####</description>
     </item>
     
     <item>
@@ -101,7 +99,7 @@ Windows Loader 실행
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window07/</guid>
-      <description>Windows Shell Windows CLI Windows Server는 GUI환경이 아닌 도스환경으로도 실행될 수 있으며, GUI 환경이 아닌 만큼 리소스의 낭비가 적은 특징을 가지고 있습니다. 명렁어 사용자 컴퓨터의 이름을 나타내는 명령어 $ hostname $ echo %computername% 입력 문자를 출력하는 명령어 $ echo Hello # 사용자 컴퓨터의 이름을 변경하는 명령어 $ netdom renamecomputer %COMPUTERNAME% /newname:CORE # 컴퓨터의 이름을 CORE로 변경 재부팅 $ shutdown /r /t 0 # 0/ 초/ 안에 reboot를 진행 # /s stop /r reboot /t time 네트워크 인터페이스 및 네트워크 정보 확인 $ ipconfig DNS 확인 $ nslookup 화면의 텍스트를 지우는 명령어 $ cls 네트워크 shell 명령어 $ netsh netsh&amp;gt; interface ipv4 show interface # 인터페이스 관련 정보를 출력 netsh&amp;gt; interface ipv4 set address name=&amp;#34;3&amp;#34; source=static address=192.</description>
+      <description>Windows Shell##Windows CLI##Windows Server는 GUI환경이 아닌 도스환경으로도 실행될 수 있으며, GUI 환경이 아닌 만큼 리소스의 낭비가 적은 특징을 가지고 있습니다. ###명렁어##사용자 컴퓨터의 이름을 나타내는 명령어 $ hostname $ echo %computername% ##입력 문자를 출력하는 명령어 $ echo Hello # ##사용자 컴퓨터의 이름을 변경하는 명령어 $ netdom renamecomputer %COMPUTERNAME% /newname:CORE # 컴퓨터의 이름을 CORE로 변경 ##재부팅 $ shutdown /r /t 0 # 0/ 초/ 안에 reboot를 진행 # /s stop /r reboot /t time ##네트워크 인터페이스 및 네트워크 정보 확인 $ ipconfig ##DNS 확인 $ nslookup ##화면의 텍스트를 지우는 명령어 $ cls ##네트워크 shell 명령어 $ netsh netsh&amp;gt; interface ipv4 show interface # 인터페이스 관련 정보를 출력 netsh&amp;gt; interface ipv4 set address name=&amp;#34;3&amp;#34; source=static address=192.</description>
     </item>
     
     <item>
@@ -110,11 +108,10 @@ Windows Loader 실행
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window08/</guid>
-      <description>Windows Server 백업과 복구 Windows Server의 백업 기능 사고는 언제나 발생할 수 있으며, 이러한 사고를 대비하기 위한 방편 중에서 반드시 해야할 것이 백업입니다.
+      <description>Windows Server 백업과 복구##Windows Server의 백업 기능##사고는 언제나 발생할 수 있으며, 이러한 사고를 대비하기 위한 방편 중에서 반드시 해야할 것이 백업입니다.
 기존의 폴더 또는 파일을 다른 안전한 장소에 보관하여 문제가 생길기 백업했던 데이터를 원래대로 복원혹은 복구가 가느하도록 합니다.
 Windows Server에서는 자체적으로 백업 기능을 제공하며, 백업은 대체로 별도의 하드디스크나 다른 컴퓨터의 공유 폴더에 하는 것이 효과적입니다.
-복구는 삭제된 일부 폴더만 복구할 수도 있으며, 볼륨 전체를 복구할 수도 있습니다.
-Windows Serer 2012부턴느 ReFS 파일시스템의 백업도 지원합니다.</description>
+복구는 삭제된 일부 폴더만 복구할 수도 있으며, 볼륨 전체를 복구할 수도 있습니다.</description>
     </item>
     
     <item>
@@ -123,7 +120,7 @@ Windows Serer 2012부턴느 ReFS 파일시스템의 백업도 지원합니다.</
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window09/</guid>
-      <description>원격접속을 위한 TELNET Server, SSH Server TELNET Server TELNET 서버는 오랫동안 전통적으로 사용되어 온 원격 접속 서버로, 보안이 취약하지만 최근에는 보안 기능을 첨가하여 사용되어지고 있습니다.
+      <description>원격접속을 위한 TELNET Server, SSH Server##TELNET Server##TELNET 서버는 오랫동안 전통적으로 사용되어 온 원격 접속 서버로, 보안이 취약하지만 최근에는 보안 기능을 첨가하여 사용되어지고 있습니다.
 기본적으로서버에 접속하기 이해서는 꼭 클라이언트 프로그램이 필요합니다.
 서버 OS Windows라고 클라이언트 OS도 반드시 Windows일 필요는 없으며, 즉 서버의 OS와 클라이어트의 OS가 같을 할 필요는 없습니다.
 Windows Server 2016부터는 내장된 TELNET 서버가 제거되어 직접 설치가 필요합니다.
@@ -136,15 +133,14 @@ Windows Server 2016부터는 내장된 TELNET 서버가 제거되어 직접 설�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window10/</guid>
-      <description>VNC Server VNC Server 원격지에서 Windows 환경 자체를 사용할 수 있도록 제공하는 서버
+      <description>VNC Server##VNC Server##원격지에서 Windows 환경 자체를 사용할 수 있도록 제공하는 서버
 Windows Server는 VNC 서버를 제공하지 않습니다.
 오픈소스로 제공되므로별도의 추가 비용 없이 자유롭게 사용가능하지만, 텍스트만 전송되는 Telnet에 비해 속도가 느린 단점을 가지고 있습니다.
-FIRST 서버에서 VNC를 설치합니다.
+####FIRST 서버에서 VNC를 설치합니다.
 기본 값으로 설정 후, 설치를 진행합니다.
-패스워드 입력시 12345를 입력합니다.
+###패스워드 입력시 12345를 입력합니다.
 실무에서 사용시에는 복잡한 암호를 사용해야합니다.
-다른 서버들과 동일하게 서비스와 방화벽이 허용되었는 지를 확인해야합니다. 접속확인을 위해 WINCLIENT에서 VNC설치를 진행합니다.
-단, 커스텀 설치를 선택하여 뷰어만을 선택하여 설치합니다.</description>
+###다른 서버들과 동일하게 서비스와 방화벽이 허용되었는 지를 확인해야합니다.</description>
     </item>
     
     <item>
@@ -153,9 +149,9 @@ FIRST 서버에서 VNC를 설치합니다.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window11/</guid>
-      <description>SQL Server 데이터베이스의 정의 데이터의 저장 공간으로 자료가 저장되는 디스크 공간을 의미합니다. Windows SQL Sever Microsoft사에서 제작한 데이터베이스 관리 소프트웨어로 대용량 데이터를 운영하기에 적합한 툴로 인정받고 있습니다.
+      <description>SQL Server##데이터베이스의 정의##데이터의 저장 공간으로 자료가 저장되는 디스크 공간을 의미합니다. ##Windows SQL Sever##Microsoft사에서 제작한 데이터베이스 관리 소프트웨어로 대용량 데이터를 운영하기에 적합한 툴로 인정받고 있습니다.
 SQL Server 2016 주요 에디션
-특징 Enterprise Standard Express 라이선스 유료 유료 무료 주용도 대규모 중소규모 소규모 혹은 개인 최대 CPU OS 지원 최대 개수 소켓 4개 또는 코어 16개 소켓 1개 또는 코어 4개 최대 RAM 사용량 OS 지원 최대 크기 128GB 1GB DB 크기 524PB 524PB 10GB SQL Server 실습 SQL Server 설치를 위해 FIRST 서버에서 SQL Server를 설치합니다.</description>
+특징 Enterprise Standard Express 라이선스 유료 유료 무료 주용도 대규모 중소규모 소규모 혹은 개인 최대 CPU OS 지원 최대 개수 소켓 4개 또는 코어 16개 소켓 1개 또는 코어 4개 최대 RAM 사용량 OS 지원 최대 크기 128GB 1GB DB 크기 524PB 524PB 10GB ##SQL Server 실습##SQL Server 설치를 위해 FIRST 서버에서 SQL Server를 설치합니다.</description>
     </item>
     
     <item>
@@ -164,7 +160,7 @@ SQL Server 2016 주요 에디션
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window12/</guid>
-      <description>Windows Web Server IIS, FTP Server IIS(Internet Information Services) WIndows Server 2016에 내장되어 있는 웹 서버 및 FTP 서버는 IIS라는 이름으로제공됩니다. IIS 실습 IIS 설치를 위해 FIRST Server에서 서버매니저 &amp;gt; 관리 &amp;gt; 역할 및 기능 추가를 선택합니다. 서버역할에서 Web Server IIS를 선택 후 킷을 포함하여 설치를 진행합니다. 역할 서비스 에서 Application Development &amp;gt; CGI 및 FTP Server를 설치하기 위해 체크 후, 설치합니다. 설치가 완료되면 방화벽에 허용되었는 지와 서비스가 실행중인지를 확인합니다.</description>
+      <description>Windows Web Server IIS, FTP Server##IIS(Internet Information Services)##WIndows Server 2016에 내장되어 있는 웹 서버 및 FTP 서버는 IIS라는 이름으로제공됩니다. ##IIS 실습##IIS 설치를 위해 FIRST Server에서 서버매니저 &amp;gt; 관리 &amp;gt; 역할 및 기능 추가를 선택합니다. ###서버역할에서 Web Server IIS를 선택 후 킷을 포함하여 설치를 진행합니다. ####역할 서비스 에서 Application Development &amp;gt; CGI 및 FTP Server를 설치하기 위해 체크 후, 설치합니다.</description>
     </item>
     
     <item>
@@ -173,11 +169,10 @@ SQL Server 2016 주요 에디션
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window13/</guid>
-      <description>Windows Active Directory Windows Active Directory 일반적인 회사의 네트워크 상황을 Windows Server에서 구현하기 위한한 기술입니다.
+      <description>Windows Active Directory##Windows Active Directory##일반적인 회사의 네트워크 상황을 Windows Server에서 구현하기 위한한 기술입니다.
 네트워크 상으로 나누어져 있는 여러 자원을 중앙의 관리자가 통합하여 관리함으로써, 본사 및 지사의 직원들은 자신의 PC에 몯느 정보를 보관할 필요가 없어집니다.
 한 PC에서 관리하는 만큼 타 지사에 출장을 가서도 자신의 아이디로 로그인만 하면 타인의 PC가 자신의 PC 환경과 동일하게 변경되어집니다.
-PC가 있는 장소와 무관하게 회사의 어디서든지 회사 전체 자원을 편리하게 이용하기 위해 사용되어집니다.
-Active Directory 용어 Directory Service</description>
+PC가 있는 장소와 무관하게 회사의 어디서든지 회사 전체 자원을 편리하게 이용하기 위해 사용되어집니다.</description>
     </item>
     
     <item>
@@ -186,9 +181,9 @@ Active Directory 용어 Directory Service</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window14/</guid>
-      <description>DHCP Server DHCP Server의 정의 DHCP란 Dynamic Host Configuration Protocol 서버가 하는 역할은 자신의 네트워크 안에 있는 클라이언트 컴퓨터가 부팅될 떄 자동으로 IP, Subnet, Gateway, DNS를 할당해 주는 역할을 수행합니다.
+      <description>DHCP Server##DHCP Server의 정의##DHCP란 Dynamic Host Configuration Protocol 서버가 하는 역할은 자신의 네트워크 안에 있는 클라이언트 컴퓨터가 부팅될 떄 자동으로 IP, Subnet, Gateway, DNS를 할당해 주는 역할을 수행합니다.
 DHCP의 가장 큰 장점은 관리하기 편하고 이용자가 편하다는 장점을 가지고 있습니다.
-DHCP Server 실습 DHCP 서버 설치를 위해 FIRST 서버에서 서비스 매니저 &amp;gt; 역할 및 기능 추가 &amp;gt; DHCP 서버를 설치합니다. 설치가 완료되면 도구 &amp;gt; DHCP를 실행합니다. 하단의 그림과 같이 새 범위를 선택합니다.</description>
+##DHCP Server 실습##DHCP 서버 설치를 위해 FIRST 서버에서 서비스 매니저 &amp;gt; 역할 및 기능 추가 &amp;gt; DHCP 서버를 설치합니다. ###설치가 완료되면 도구 &amp;gt; DHCP를 실행합니다.</description>
     </item>
     
     <item>
@@ -197,11 +192,10 @@ DHCP Server 실습 DHCP 서버 설치를 위해 FIRST 서버에서 서비스 매
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window15/</guid>
-      <description>DNS Server DNS Server의 정의 DNS 서버란 Domain Name System으로 읽기 힘든 IP(192.168.10.123)을 사람이 읽기 쉽게 이름(www.xxx.xxx)으로 바꾸어주는 역할을 수행하는 기술입니다.
+      <description>DNS Server##DNS Server의 정의##DNS 서버란 Domain Name System으로 읽기 힘든 IP(192.168.10.123)을 사람이 읽기 쉽게 이름(www.xxx.xxx)으로 바꾸어주는 역할을 수행하는 기술입니다.
 hosts 파일을 이용하여 네트워크를 접속할 수 있으며, 기하급수적으로 늘어나는 네트워크 상의 컴퓨터에 대한 모든 IP 정보를 파일 하나에 기록하는 것이 무리이기 때문에 전문적으로 해석해주는 서버 컴퓨터가 필요해졌습니다.
-DNS Server 실습 FIRST 서버에서 cmd 창을 실행 후 nslookup을 입력합니다.
-nslookup은 현재 할당되어있는 DNS서버를 확인할 수 있습니다.
-DNS에 대한 설정은 네트워크 인터페이스에 설정에 있습니다.</description>
+##DNS Server 실습##FIRST 서버에서 cmd 창을 실행 후 nslookup을 입력합니다.
+nslookup은 현재 할당되어있는 DNS서버를 확인할 수 있습니다.</description>
     </item>
     
     <item>
@@ -210,10 +204,10 @@ DNS에 대한 설정은 네트워크 인터페이스에 설정에 있습니다.<
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window15-2/</guid>
-      <description>Mail Server E-Mail 작동 개념 SMTP(Simple Mail Transfer Protocol)을 사용하여 클라이언트가 메일을 보내거나, 메일 서버끼리 메일을 주고 받습니다.
+      <description>Mail Server##E-Mail 작동 개념##SMTP(Simple Mail Transfer Protocol)을 사용하여 클라이언트가 메일을 보내거나, 메일 서버끼리 메일을 주고 받습니다.
 POP3(Post Office Protocol)을 사용하여 메일 서버에 도착되어 있는 메일을 클라이언트로 가져옵니다.
 IMAP(Internet Mail Access Protocol)은 POP3와 동일합니다.
-Mail Server 실습 </description>
+##Mail Server 실습###################################</description>
     </item>
     
     <item>
@@ -222,15 +216,14 @@ Mail Server 실습 </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window16/</guid>
-      <description>Windows 배포 서비스 WDS(Windows Deployment Services)의 정의 WDS를 구성하면 사내 네트워크 안의 컴퓨터에서 Windows를 설치할 때 DVD 매체 없이도 자동 부팅 및 설치를 진행할 수 있습니다. WDS로 구성할 수 있는 내용
+      <description>Windows 배포 서비스##WDS(Windows Deployment Services)의 정의##WDS를 구성하면 사내 네트워크 안의 컴퓨터에서 Windows를 설치할 때 DVD 매체 없이도 자동 부팅 및 설치를 진행할 수 있습니다. #WDS로 구성할 수 있는 내용
 설치할 컴퓨터의 디스크 분할 및 포맷
 운영체제 설치 및 구성
 설치의 단순화
 회사 전체에 통일되고 일관적인 작업 환경을 제공
-WDS의 장점
+#WDS의 장점
 효율적인 자동 설치를 통한 비용 감소 및 시간 절약
-네트워크 기반으로 하는 운영체제 설치
-Windows 이미지를 클라이언트 컴퓨터에 배포</description>
+네트워크 기반으로 하는 운영체제 설치</description>
     </item>
     
     <item>
@@ -239,12 +232,11 @@ Windows 이미지를 클라이언트 컴퓨터에 배포</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/system/window/window17/</guid>
-      <description>Windows 가상화 Hyper-V의 정의 Hyper-V는 Windows Server에 내장되어 있는 가상화 기술로, 최신의 인텔 및 AMD CPU의 강력한 하드웨어 가상화 기술로 사용되어지고 있습니다.
+      <description>Windows 가상화##Hyper-V의 정의##Hyper-V는 Windows Server에 내장되어 있는 가상화 기술로, 최신의 인텔 및 AMD CPU의 강력한 하드웨어 가상화 기술로 사용되어지고 있습니다.
 hosts 파일을 이용하여 네트워크를 접속할 수 있으며, 기하급수적으로 늘어나는 네트워크 상의 컴퓨터에 대한 모든 IP 정보를 파일 하나에 기록하는 것이 무리이기 때문에 전문적으로 해석해주는 서버 컴퓨터가 필요해졌습니다.
 Hyper-V의 장점
 하드웨어 사용률을 높여 물리적인 서버의 운영 및 유지 관리비용 감소
-테스트 환경을 재현하는 데 소요되는 시간을 줄여줍니다.
-장애 조치구성에서 필요한 만큼의 물리적 컴퓨터를 사용하지 않아도 되므로 서버 가용성이 향상됩니다.</description>
+테스트 환경을 재현하는 데 소요되는 시간을 줄여줍니다.</description>
     </item>
     
   </channel>

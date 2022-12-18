@@ -2,46 +2,43 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Linux Server Management DNS 서버 DNS(Domain Name Server)는 TCP/IP 네트워크에서 이름 해석 서비스를 제공하는 서버 애플리케이션으로 이름 해석이란 호스트 이름과 도메인 이름을 IP 주소로 변환하는, 혹은 반대로 IP 주소에서 호스트 이름이나 도메인 이름으로 변환하는 작업이다.
+<meta name="description" content="Linux Server Management##DNS 서버##DNS(Domain Name Server)는 TCP/IP 네트워크에서 이름 해석 서비스를 제공하는 서버 애플리케이션으로 이름 해석이란 호스트 이름과 도메인 이름을 IP 주소로 변환하는, 혹은 반대로 IP 주소에서 호스트 이름이나 도메인 이름으로 변환하는 작업이다.
 DNS 서버는 자신의 도메인 정보를 관리하고 외부 DNS 서버의 문의에 대응하는 기능을 수행하며, DNS 서버가 관리하는 도메인의 범위를 영역(Zoen)이라 한다.
-Domain 이름의 기술 형식 도메인 이름 : 서브도메인 이름 또는 공백
-서브 도메인 이름 : 레이블 또는 서브도메인 이름.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/system/linux/ls02/><meta property="og:title" content="서버도입" />
-<meta property="og:description" content="Linux Server Management DNS 서버 DNS(Domain Name Server)는 TCP/IP 네트워크에서 이름 해석 서비스를 제공하는 서버 애플리케이션으로 이름 해석이란 호스트 이름과 도메인 이름을 IP 주소로 변환하는, 혹은 반대로 IP 주소에서 호스트 이름이나 도메인 이름으로 변환하는 작업이다.
+#Domain 이름의 기술 형식##도메인 이름 : 서브도메인 이름 또는 공백">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="서버도입" />
+<meta property="og:description" content="Linux Server Management##DNS 서버##DNS(Domain Name Server)는 TCP/IP 네트워크에서 이름 해석 서비스를 제공하는 서버 애플리케이션으로 이름 해석이란 호스트 이름과 도메인 이름을 IP 주소로 변환하는, 혹은 반대로 IP 주소에서 호스트 이름이나 도메인 이름으로 변환하는 작업이다.
 DNS 서버는 자신의 도메인 정보를 관리하고 외부 DNS 서버의 문의에 대응하는 기능을 수행하며, DNS 서버가 관리하는 도메인의 범위를 영역(Zoen)이라 한다.
-Domain 이름의 기술 형식 도메인 이름 : 서브도메인 이름 또는 공백
-서브 도메인 이름 : 레이블 또는 서브도메인 이름." />
+#Domain 이름의 기술 형식##도메인 이름 : 서브도메인 이름 또는 공백" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/system/linux/ls02/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>서버도입 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -54,7 +51,7 @@ Domain 이름의 기술 형식 도메인 이름 : 서브도메인 이름 또는 
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1381,6 +1378,9 @@ Domain 이름의 기술 형식 도메인 이름 : 서브도메인 이름 또는 
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1392,14 +1392,15 @@ Domain 이름의 기술 형식 도메인 이름 : 서브도메인 이름 또는 
   <strong>서버도입</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1452,11 +1453,23 @@ Domain 이름의 기술 형식 도메인 이름 : 서브도메인 이름 또는 
 <br>
 <br>
       
-  <article class="markdown"><h1 id="linux-server-management"><strong>Linux Server Management</strong></h1>
+  <article class="markdown"><h1 id="linux-server-management">
+  <strong>Linux Server Management</strong>
+  <a class="anchor" href="#linux-server-management">#</a>
+</h1>
 <hr>
-<h1 id="heading"></h1>
-<h2 id="dns-서버"><strong>DNS 서버</strong></h2>
-<h1 id="heading-1"></h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="dns-서버">
+  <strong>DNS 서버</strong>
+  <a class="anchor" href="#dns-%ec%84%9c%eb%b2%84">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>DNS(Domain Name Server)는 TCP/IP 네트워크에서 이름 해석 서비스를 제공하는 서버 애플리케이션으로 이름 해석이란 호스트 이름과 도메인 이름을 IP 주소로 변환하는, 혹은 반대로 IP 주소에서 호스트 이름이나 도메인 이름으로 변환하는 작업이다.</strong></p>
@@ -1465,9 +1478,18 @@ Domain 이름의 기술 형식 도메인 이름 : 서브도메인 이름 또는 
 <p><strong>DNS 서버는 자신의 도메인 정보를 관리하고 외부 DNS 서버의 문의에 대응하는 기능을 수행하며, DNS 서버가 관리하는 도메인의 범위를 영역(Zoen)이라 한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-2"></h1>
-<h3 id="domain-이름의-기술-형식"><strong>Domain 이름의 기술 형식</strong></h3>
-<h1 id="heading-3"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<h3 id="domain-이름의-기술-형식">
+  <strong>Domain 이름의 기술 형식</strong>
+  <a class="anchor" href="#domain-%ec%9d%b4%eb%a6%84%ec%9d%98-%ea%b8%b0%ec%88%a0-%ed%98%95%ec%8b%9d">#</a>
+</h3>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>도메인 이름 : 서브도메인 이름 또는 공백</strong></p>
@@ -1503,7 +1525,10 @@ Domain 이름의 기술 형식 도메인 이름 : 서브도메인 이름 또는 
 <p><strong>숫자 : 0~9까지의 숫자들</strong></p>
 </li>
 </ul>
-<h1 id="heading-4"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -1530,15 +1555,33 @@ Domain 이름의 기술 형식 도메인 이름 : 서브도메인 이름 또는 
 </ul>
 </li>
 </ul>
-<h1 id="heading-5"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <p> </p>
-<h3 id="이름-해석-과정"><strong>이름 해석 과정</strong></h3>
-<h1 id="heading-6"></h1>
+<h3 id="이름-해석-과정">
+  <strong>이름 해석 과정</strong>
+  <a class="anchor" href="#%ec%9d%b4%eb%a6%84-%ed%95%b4%ec%84%9d-%ea%b3%bc%ec%a0%95">#</a>
+</h3>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-7"></h1>
-<h2 id="mail-server"><strong>Mail Server</strong></h2>
-<h1 id="heading-8"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<h2 id="mail-server">
+  <strong>Mail Server</strong>
+  <a class="anchor" href="#mail-server">#</a>
+</h2>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>메일서버는 우리가 사용하는 메일서버와 동일하며 여기서는 sendmail을 이용하여 서버를 구축한다.</strong></p>
@@ -1547,10 +1590,19 @@ Domain 이름의 기술 형식 도메인 이름 : 서브도메인 이름 또는 
 <p><strong>이 때 sendmail의 구성 파일인 sendmail.cf는 WIDE 프로젝트의 CF 패키지를 이용해서 작성한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-9"></h1>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <p> </p>
-<h3 id="메일-서버의-구조"><strong>메일 서버의 구조</strong></h3>
-<h1 id="heading-10"></h1>
+<h3 id="메일-서버의-구조">
+  <strong>메일 서버의 구조</strong>
+  <a class="anchor" href="#%eb%a9%94%ec%9d%bc-%ec%84%9c%eb%b2%84%ec%9d%98-%ea%b5%ac%ec%a1%b0">#</a>
+</h3>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>메일 서버(smtp/pop3) 설정과 구체적인 메일 송수신 구조를 설정 파일과 연계하여 설명할 수 있으며, 이 글에서 사용하는 메일 서버 소프트웨어는 sendmail이다.</strong></p>
@@ -1562,34 +1614,76 @@ Domain 이름의 기술 형식 도메인 이름 : 서브도메인 이름 또는 
 <p><strong>메일주소를 보고 서버에 등록된 주소로 보내는 메일이면 계정별 메일 보관함으로 전송하며, 외부로 보내는 메일이면 해당 주소 도메인의 smtp 서버로 메일을 전송한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-11"></h1>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-12"></h1>
-<h1 id="heading-13"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-14"></h1>
-<h1 id="heading-15"></h1>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-16"></h1>
-<h1 id="heading-17"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-18"></h1>
-<h1 id="heading-19"></h1>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-20"></h1>
-<h1 id="heading-21"></h1>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-22"></h1>
-<h1 id="heading-23"></h1>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <hr>
 <p> </p>
-<h1 id="heading-24"></h1>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 </article>
  
       
@@ -1672,7 +1766,6 @@ Domain 이름의 기술 형식 도메인 이름 : 서브도메인 이름 또는 
 </body>
 </div>
 </html>
-
 
 
 

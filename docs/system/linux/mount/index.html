@@ -2,44 +2,43 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Linux HD Mount 디스크의 구조 1. 물리적 구조
-스핀들 : 디스크는 하나의 스핀들을 기준으로 여러 개의 플래터로 구성되어 있고 스핀들은 여러 개의 플랫터를 회전시키는 역할을 한다. 플래터 : 플래터는 마그네틱으로 코딩되어져 있고 연속으로 구성되어 있다. 헤더 : 회전중인 플래터에 데이터를 읽거나 쓰기 위해서는 엑세스 암에 부착된 헤더를 이용하여 엑세스 한다. 2. 논리적 구조
-섹터 : 플래터의 가장 작은 단위, 일반적으로 1섹터의 크기는 512바이트 트랙 : 섹터가 모여 하나의 원을 구성 실린더 : 트랙의 스택 구조 파티션 : MBR의 파티션 테이블(64바이트)에 정보가 저장, 주 파티션 (16바이트, 4개까지 생성이 가능), 확장 파티션 생성이 가능 논리적 구조 크기 비교 : 섹터 &lt; 트랙 &lt; 실린더 &lt; 실린더 그룹 or 파티션 &lt; 디스크 3.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/system/linux/mount/><meta property="og:title" content="Linux Mount" />
-<meta property="og:description" content="Linux HD Mount 디스크의 구조 1. 물리적 구조
-스핀들 : 디스크는 하나의 스핀들을 기준으로 여러 개의 플래터로 구성되어 있고 스핀들은 여러 개의 플랫터를 회전시키는 역할을 한다. 플래터 : 플래터는 마그네틱으로 코딩되어져 있고 연속으로 구성되어 있다. 헤더 : 회전중인 플래터에 데이터를 읽거나 쓰기 위해서는 엑세스 암에 부착된 헤더를 이용하여 엑세스 한다. 2. 논리적 구조
-섹터 : 플래터의 가장 작은 단위, 일반적으로 1섹터의 크기는 512바이트 트랙 : 섹터가 모여 하나의 원을 구성 실린더 : 트랙의 스택 구조 파티션 : MBR의 파티션 테이블(64바이트)에 정보가 저장, 주 파티션 (16바이트, 4개까지 생성이 가능), 확장 파티션 생성이 가능 논리적 구조 크기 비교 : 섹터 &lt; 트랙 &lt; 실린더 &lt; 실린더 그룹 or 파티션 &lt; 디스크 3." />
+<meta name="description" content="Linux HD Mount##디스크의 구조#1. 물리적 구조
+스핀들 : 디스크는 하나의 스핀들을 기준으로 여러 개의 플래터로 구성되어 있고 스핀들은 여러 개의 플랫터를 회전시키는 역할을 한다. 플래터 : 플래터는 마그네틱으로 코딩되어져 있고 연속으로 구성되어 있다. 헤더 : 회전중인 플래터에 데이터를 읽거나 쓰기 위해서는 엑세스 암에 부착된 헤더를 이용하여 엑세스 한다. #2. 논리적 구조
+섹터 : 플래터의 가장 작은 단위, 일반적으로 1섹터의 크기는 512바이트 트랙 : 섹터가 모여 하나의 원을 구성 실린더 : 트랙의 스택 구조 파티션 : MBR의 파티션 테이블(64바이트)에 정보가 저장, 주 파티션 (16바이트, 4개까지 생성이 가능), 확장 파티션 생성이 가능 논리적 구조 크기 비교 : 섹터 &lt; 트랙 &lt; 실린더 &lt; 실린더 그룹 or 파티션 &lt; 디스크 #3.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Linux Mount" />
+<meta property="og:description" content="Linux HD Mount##디스크의 구조#1. 물리적 구조
+스핀들 : 디스크는 하나의 스핀들을 기준으로 여러 개의 플래터로 구성되어 있고 스핀들은 여러 개의 플랫터를 회전시키는 역할을 한다. 플래터 : 플래터는 마그네틱으로 코딩되어져 있고 연속으로 구성되어 있다. 헤더 : 회전중인 플래터에 데이터를 읽거나 쓰기 위해서는 엑세스 암에 부착된 헤더를 이용하여 엑세스 한다. #2. 논리적 구조
+섹터 : 플래터의 가장 작은 단위, 일반적으로 1섹터의 크기는 512바이트 트랙 : 섹터가 모여 하나의 원을 구성 실린더 : 트랙의 스택 구조 파티션 : MBR의 파티션 테이블(64바이트)에 정보가 저장, 주 파티션 (16바이트, 4개까지 생성이 가능), 확장 파티션 생성이 가능 논리적 구조 크기 비교 : 섹터 &lt; 트랙 &lt; 실린더 &lt; 실린더 그룹 or 파티션 &lt; 디스크 #3." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/system/linux/mount/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>Linux Mount | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -52,7 +51,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1379,6 +1378,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1390,14 +1392,15 @@
   <strong>Linux Mount</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1442,17 +1445,29 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="linux-hd-mount">Linux HD Mount</h1>
+  <article class="markdown"><h1 id="linux-hd-mount">
+  Linux HD Mount
+  <a class="anchor" href="#linux-hd-mount">#</a>
+</h1>
 <hr>
-<h1 id="heading"></h1>
-<h2 id="디스크의-구조">디스크의 구조</h2>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="디스크의-구조">
+  디스크의 구조
+  <a class="anchor" href="#%eb%94%94%ec%8a%a4%ed%81%ac%ec%9d%98-%ea%b5%ac%ec%a1%b0">#</a>
+</h2>
 <p><strong>1. 물리적 구조</strong></p>
 <ul>
 <li><strong>스핀들 :</strong> 디스크는 하나의 스핀들을 기준으로 여러 개의 플래터로 구성되어 있고 스핀들은 여러 개의 플랫터를 회전시키는 역할을 한다.</li>
 <li><strong>플래터 :</strong> 플래터는 마그네틱으로 코딩되어져 있고 연속으로 구성되어 있다.</li>
 <li><strong>헤더 :</strong> 회전중인 플래터에 데이터를 읽거나 쓰기 위해서는 엑세스 암에 부착된 헤더를 이용하여 엑세스 한다.</li>
 </ul>
-<h1 id="heading-1"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <p><strong>2. 논리적 구조</strong></p>
 <ul>
 <li><strong>섹터 :</strong> 플래터의 가장 작은 단위, 일반적으로 1섹터의 크기는 512바이트</li>
@@ -1461,7 +1476,10 @@
 <li><strong>파티션 :</strong> MBR의 파티션 테이블(64바이트)에 정보가 저장, 주 파티션 (16바이트, 4개까지 생성이 가능), 확장 파티션 생성이 가능</li>
 <li><strong>논리적 구조 크기 비교 :</strong> 섹터 &lt; 트랙 &lt; 실린더 &lt; 실린더 그룹 or 파티션 &lt; 디스크</li>
 </ul>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <p><strong>3. 디스크의 종류</strong></p>
 <ul>
 <li><strong>IDE :</strong> 과거에 사용하던 방식, 하나의 채널에 여러 개의 장치를 연결 가능, 병렬</li>
@@ -1469,10 +1487,19 @@
 <li><strong>SCSI :</strong> 서버용으로 사용되는 방식, 데이터 안전성에 집중 및 부가기능 추가 별도으 컨트롤러 필요, 일반적으로 스카시로 읽음, 병렬</li>
 <li><strong>SAS :</strong> Serial Attached SCSI, scsi 타입의 직렬 연결 버전, 마찬가지로 별도의 컨트롤러 필요, SATA와 SCSI의 장점으로 만들어짐.</li>
 </ul>
-<h1 id="heading-3"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-4"></h1>
-<h2 id="linux-hd-추가">Linux HD 추가</h2>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h2 id="linux-hd-추가">
+  Linux HD 추가
+  <a class="anchor" href="#linux-hd-%ec%b6%94%ea%b0%80">#</a>
+</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ df -h
 </span></span><span style="display:flex;"><span># 용량 확인
 </span></span><span style="display:flex;"><span>
@@ -1481,14 +1508,20 @@
 </span></span></code></pre></div><ul>
 <li><strong>VMware에 하드 5G HD2개 추가</strong></li>
 </ul>
-<h1 id="heading-5"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ echo &#34;- - -&#34; &gt; /sys/class/scsi_host/host[ n ]/scan
 </span></span><span style="display:flex;"><span># 디스크 인식
 </span></span></code></pre></div><p><img src="/System/LVM/LVM01.png" alt="LVM" /></p>
 <ul>
 <li><strong>그림과 같이 5G 섹터가 2개 추가됩니다.</strong></li>
 </ul>
-<h1 id="heading-6"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ fdisk [ /dev/sd* ] 
 </span></span><span style="display:flex;"><span># 디스크 이름
 </span></span><span style="display:flex;"><span>
@@ -1519,7 +1552,10 @@
 <ul>
 <li><strong>파티션을 생성합니다.</strong></li>
 </ul>
-<h1 id="heading-7"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ mkfs /dev/sd*   # 생성 파티션 이름
 </span></span><span style="display:flex;"><span># 디스크 포맷
 </span></span><span style="display:flex;"><span>
@@ -1528,7 +1564,10 @@
 </span></span></code></pre></div><ul>
 <li><strong>디스크를 포맷합니다.</strong></li>
 </ul>
-<h1 id="heading-8"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ mkdir disk1
 </span></span><span style="display:flex;"><span>$ mount /dev/sd* disk1
 </span></span><span style="display:flex;"><span>
@@ -1542,7 +1581,10 @@
 <ul>
 <li><strong>디스크를 마운트 합니다.</strong></li>
 </ul>
-<h1 id="heading-9"></h1>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ umount /dev/sd*
 </span></span><span style="display:flex;"><span># 디스크의 마운트를 해제 합니다.
 </span></span></code></pre></div><ul>
@@ -1550,23 +1592,41 @@
 <hr>
 </li>
 </ul>
-<h1 id="heading-10"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ vi /etc/fstab
 </span></span><span style="display:flex;"><span>[ 장치명 ]  [ 마운트 포인트 ] FStype   [ 옵션 ] dump fsck
 </span></span></code></pre></div><p><img src="/System/LVM/LVM04.png" alt="LVM" /></p>
 <ul>
 <li><strong>자동 마운트 등록</strong></li>
 </ul>
-<h1 id="heading-11"></h1>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-12"></h1>
-<h2 id="raid--redundant-array-of-inexpensive-disks-">RAID ( Redundant Array of Inexpensive Disks )</h2>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<h2 id="raid--redundant-array-of-inexpensive-disks-">
+  RAID ( Redundant Array of Inexpensive Disks )
+  <a class="anchor" href="#raid--redundant-array-of-inexpensive-disks-">#</a>
+</h2>
 <ul>
 <li>여러 디스크를 논리적으로 묶어 하나의 논리 디스크를 생성하는 것</li>
 </ul>
 <hr>
-<h1 id="heading-13"></h1>
-<h3 id="raid-종류">RAID 종류</h3>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h3 id="raid-종류">
+  RAID 종류
+  <a class="anchor" href="#raid-%ec%a2%85%eb%a5%98">#</a>
+</h3>
 <ul>
 <li><strong>0 :</strong> 하나의 디스크에 데이터를 기록하면서 동시에 다른 디스크에는 나머지 데이터를 기록하는 방법, 읽기/ 쓰기 속도는 n배, 안정성은 1/n배, FT = 0</li>
 <li><strong>1 :</strong> 하나의 디스크에 기록되는 모든 데이터가 다른 디스크에 고스란히 복사되는 방법, 읽기, 쓰기 속도는 1배, 안전성은 n배, FT = n-1</li>
@@ -1575,7 +1635,10 @@
 <li><strong>1 + 0 :</strong> 2개의 디스크를 먼저 raid 1로 묶고, 묶인 논리 디스크를 다시 raid 0으로 묶는 방법</li>
 <li><strong>0 + 1 :</strong> 2개의 디스크를 먼저 raid 0로 묶고, 묶인 논리 디스크를 다시 raid 1으로 묶는 방법</li>
 </ul>
-<h1 id="heading-14"></h1>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>madam [ 옵션 ]
 </span></span><span style="display:flex;"><span>--create : 생성할 RAID 장치의 이름
 </span></span><span style="display:flex;"><span>--level : RAID 레벨을 지정
@@ -1593,7 +1656,10 @@
 <li><strong>RAID 명령어</strong></li>
 <li><strong>RAID 생성 후, 다시 포맷, 마운트 작업을 진행해야 됨</strong></li>
 </ul>
-<h1 id="heading-15"></h1>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ mdadm  --create  /dev/md/linear  --level linear  --raid-devices=2 /dev/sd* /dev/sd*
 </span></span><span style="display:flex;"><span># Linear : 디스크를 배열 형태로 단순하게 연결시킨 구조
 </span></span><span style="display:flex;"><span>
@@ -1604,26 +1670,44 @@
 <ul>
 <li><strong>RAID 0 구성</strong></li>
 </ul>
-<h1 id="heading-16"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ mdadm  --create  /dev/md/mirror  --level mirror --raid-devices=2 /dev/sd* /dev/sd*
 </span></span><span style="display:flex;"><span># RAID 1 구성
 </span></span></code></pre></div><ul>
 <li><strong>RAID 1 구성</strong></li>
 </ul>
-<h1 id="heading-17"></h1>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ mdadm  --create  /dev/md/raid5  --level=5 --raid-devices=3 /dev/sdh1 /dev/sdi1 /dev/sdj1
 </span></span><span style="display:flex;"><span># RAID 5 구성
 </span></span></code></pre></div><ul>
 <li><strong>RAID 5 구성</strong></li>
 </ul>
-<h1 id="heading-18"></h1>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-19"></h1>
-<h2 id="lvm">LVM</h2>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<h2 id="lvm">
+  LVM
+  <a class="anchor" href="#lvm">#</a>
+</h2>
 <ul>
 <li><strong>위와 같이 파티션만 생성 후 ( 단 생성시 타입을 LVM으로 변경 ( t -&gt; 8e ) )</strong></li>
 </ul>
-<h1 id="heading-20"></h1>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <ul>
 <li><strong>PV 생성 및 확인</strong></li>
 </ul>
@@ -1635,7 +1719,10 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ pvdisplay [ 파티션명 ]
 </span></span><span style="display:flex;"><span># PV 확인
-</span></span></code></pre></div><h1 id="heading-21"></h1>
+</span></span></code></pre></div><h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
 <ul>
 <li><strong>VG 생성 및 확인</strong></li>
 </ul>
@@ -1647,7 +1734,10 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ vgdisplay  [ 볼륨그룹명 ]
 </span></span><span style="display:flex;"><span># VG 확인
-</span></span></code></pre></div><h1 id="heading-22"></h1>
+</span></span></code></pre></div><h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
 <ul>
 <li><strong>LV 생성 및 확인</strong></li>
 </ul>
@@ -1659,7 +1749,10 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ lvdisplay  [ 볼륨명 ]
 </span></span><span style="display:flex;"><span># LV 확인
-</span></span></code></pre></div><h1 id="heading-23"></h1>
+</span></span></code></pre></div><h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <ul>
 <li><strong>파일 시스템 적용 후 및 마운트</strong></li>
 </ul>
@@ -1671,7 +1764,10 @@
 </span></span></code></pre></div><ul>
 <li><strong>상시 적용 또한 /etc/fstab에 수정을 통해 등록이 가능합니다.</strong></li>
 </ul>
-<h1 id="heading-24"></h1>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 </article>
  
       
@@ -1746,7 +1842,6 @@
 </body>
 </div>
 </html>
-
 
 
 

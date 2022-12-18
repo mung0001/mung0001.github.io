@@ -2,50 +2,47 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SQL 기본 SQL 기본 DataBase
-특정 기업이나 조직 또는 개인이 필요에 의해 데이터를 일정한 형태로 저장해 놓은 것을 의미한다. DBMS
-효율적인 데이터 관리 뿐만 아니라 예기치 못한 사건으로 인한 데이터의 손상을 피하고, 필요시 필요한 데이터를 복구하기 위한 강력한 기능의 SW(SoftWare) DB 발전 1960 : 플로우차트 중심의 개발, 파일구조 사용
+<meta name="description" content="SQL 기본#SQL 기본##DataBase
+특정 기업이나 조직 또는 개인이 필요에 의해 데이터를 일정한 형태로 저장해 놓은 것을 의미한다. #DBMS
+효율적인 데이터 관리 뿐만 아니라 예기치 못한 사건으로 인한 데이터의 손상을 피하고, 필요시 필요한 데이터를 복구하기 위한 강력한 기능의 SW(SoftWare) #DB 발전 1960 : 플로우차트 중심의 개발, 파일구조 사용
 1970 : DB 관리기법이 처음 태동, 계층-망형 DB등장
-1980 : 관계형 DB 상용화, Oracle, Sybase 등장
-1990 : 객체 관계형 DB로 발전">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/database/sqld/sqld-2/><meta property="og:title" content="SQLD : SQL 기본" />
-<meta property="og:description" content="SQL 기본 SQL 기본 DataBase
-특정 기업이나 조직 또는 개인이 필요에 의해 데이터를 일정한 형태로 저장해 놓은 것을 의미한다. DBMS
-효율적인 데이터 관리 뿐만 아니라 예기치 못한 사건으로 인한 데이터의 손상을 피하고, 필요시 필요한 데이터를 복구하기 위한 강력한 기능의 SW(SoftWare) DB 발전 1960 : 플로우차트 중심의 개발, 파일구조 사용
+1980 : 관계형 DB 상용화, Oracle, Sybase 등장">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="SQLD : SQL 기본" />
+<meta property="og:description" content="SQL 기본#SQL 기본##DataBase
+특정 기업이나 조직 또는 개인이 필요에 의해 데이터를 일정한 형태로 저장해 놓은 것을 의미한다. #DBMS
+효율적인 데이터 관리 뿐만 아니라 예기치 못한 사건으로 인한 데이터의 손상을 피하고, 필요시 필요한 데이터를 복구하기 위한 강력한 기능의 SW(SoftWare) #DB 발전 1960 : 플로우차트 중심의 개발, 파일구조 사용
 1970 : DB 관리기법이 처음 태동, 계층-망형 DB등장
-1980 : 관계형 DB 상용화, Oracle, Sybase 등장
-1990 : 객체 관계형 DB로 발전" />
+1980 : 관계형 DB 상용화, Oracle, Sybase 등장" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/database/sqld/sqld-2/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>SQLD : SQL 기본 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -58,7 +55,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1225,6 +1222,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1236,14 +1236,15 @@
   <strong>SQLD : SQL 기본</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1404,10 +1405,19 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="sql-기본"><strong>SQL 기본</strong></h1>
+  <article class="markdown"><h1 id="sql-기본">
+  <strong>SQL 기본</strong>
+  <a class="anchor" href="#sql-%ea%b8%b0%eb%b3%b8">#</a>
+</h1>
 <hr>
-<h2 id="sql-기본-1"><strong>SQL 기본</strong></h2>
-<h1 id="heading"></h1>
+<h2 id="sql-기본-1">
+  <strong>SQL 기본</strong>
+  <a class="anchor" href="#sql-%ea%b8%b0%eb%b3%b8-1">#</a>
+</h2>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>DataBase</strong></p>
@@ -1416,7 +1426,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-1"></h1>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -1426,7 +1439,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-2"></h1>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>DB 발전</strong>
@@ -1446,7 +1462,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-3"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -1456,7 +1475,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-4"></h1>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>SQL 문장들의 종류</strong>
@@ -1476,7 +1498,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-5"></h1>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -1486,7 +1511,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-6"></h1>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -1496,7 +1524,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-7"></h1>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -1506,7 +1537,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-8"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -1516,11 +1550,23 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-9"></h1>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-10"></h1>
-<h3 id="데이터-유형"><strong>데이터 유형</strong></h3>
-<h1 id="heading-11"></h1>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="데이터-유형">
+  <strong>데이터 유형</strong>
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%9c%a0%ed%98%95">#</a>
+</h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>CHAR(s)</strong></p>
@@ -1529,7 +1575,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-12"></h1>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -1539,7 +1588,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-13"></h1>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -1549,7 +1601,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-14"></h1>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
 <p> </p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#960050;background-color:#1e0010">테이블이름</span> (
 </span></span><span style="display:flex;"><span>    ...
@@ -1578,7 +1633,10 @@
 <p><strong>DATETIME 데이터 유형에는 별도로 크기를 지정x</strong></p>
 </li>
 </ul>
-<h1 id="heading-15"></h1>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>제약조건</strong>
@@ -1601,16 +1659,31 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-16"></h1>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
 <p> </p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">DESC</span>(RIBE) <span style="color:#960050;background-color:#1e0010">테이블명</span>; <span style="color:#75715e">--&gt; 테이블 구조 확인(Oracle)
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">exec</span> sp_help <span style="color:#960050;background-color:#1e0010">‘</span>db0.<span style="color:#960050;background-color:#1e0010">테이블명’</span> <span style="color:#75715e">--&gt; (SQL Server)
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">go</span>
-</span></span></code></pre></div><h1 id="heading-17"></h1>
+</span></span></code></pre></div><h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-18"></h1>
-<h3 id="테이블-구조-변경칼럼-추가-삭제-등-ddl"><strong>테이블 구조 변경(칼럼 추가, 삭제 등) DDL</strong></h3>
-<h1 id="heading-19"></h1>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<h3 id="테이블-구조-변경칼럼-추가-삭제-등-ddl">
+  <strong>테이블 구조 변경(칼럼 추가, 삭제 등) DDL</strong>
+  <a class="anchor" href="#%ed%85%8c%ec%9d%b4%eb%b8%94-%ea%b5%ac%ec%a1%b0-%eb%b3%80%ea%b2%bd%ec%b9%bc%eb%9f%bc-%ec%b6%94%ea%b0%80-%ec%82%ad%ec%a0%9c-%eb%93%b1-ddl">#</a>
+</h3>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>ALTER TABLE 테이블명</strong></p>
@@ -1655,15 +1728,30 @@
 <p><strong>TRUNCATE TABLE 테이블명: 행 제거, 저장공간 재사용</strong></p>
 </li>
 </ul>
-<h1 id="heading-20"></h1>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-21"></h1>
-<h3 id="dml"><strong>DML</strong></h3>
-<h1 id="heading-22"></h1>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<h3 id="dml">
+  <strong>DML</strong>
+  <a class="anchor" href="#dml">#</a>
+</h3>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
 <ul>
 <li><strong>DDL 명령어의 경우 실행시 AUTO COMMIT 하지만 DML의 경우 COMMIT을 입력해야 한다.</strong></li>
 </ul>
-<h1 id="heading-23"></h1>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -1688,7 +1776,10 @@
 <p><strong>SELECT PLAYER AS “선수명” FROM PLAYER;</strong></p>
 </li>
 </ul>
-<h1 id="heading-24"></h1>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>와일드카드</strong>
@@ -1705,7 +1796,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-25"></h1>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>합성 연산자</strong>
@@ -1719,11 +1813,23 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-26"></h1>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-27"></h1>
-<h3 id="tcl"><strong>TCL</strong></h3>
-<h1 id="heading-28"></h1>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
+<h3 id="tcl">
+  <strong>TCL</strong>
+  <a class="anchor" href="#tcl">#</a>
+</h3>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>트랜잭션</strong></p>
@@ -1732,7 +1838,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-29"></h1>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -1742,7 +1851,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-30"></h1>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -1752,7 +1864,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-31"></h1>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -1762,10 +1877,19 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-32"></h1>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-33"></h1>
-<h3 id="트랜잭션의-특성acid"><strong>트랜잭션의 특성(ACID)</strong></h3>
+<h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
+<h3 id="트랜잭션의-특성acid">
+  <strong>트랜잭션의 특성(ACID)</strong>
+  <a class="anchor" href="#%ed%8a%b8%eb%9e%9c%ec%9e%ad%ec%85%98%ec%9d%98-%ed%8a%b9%ec%84%b1acid">#</a>
+</h3>
 <ul>
 <li>
 <p><strong>원자성(Atomicity)</strong></p>
@@ -1792,18 +1916,33 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-34"></h1>
+<h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
 <p> </p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span>SAVEPOINT SVPT1; (Oracle)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">ROLLBACK</span> <span style="color:#66d9ef">TO</span> SVPT1; (Oracle)
 </span></span><span style="display:flex;"><span>SAVE TRAN SVPT1; (<span style="color:#66d9ef">SQL</span> Server)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">ROLLBACK</span> TRAN SVPT1; (<span style="color:#66d9ef">SQL</span> Server)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">COMMIT</span>;
-</span></span></code></pre></div><h1 id="heading-35"></h1>
+</span></span></code></pre></div><h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-36"></h1>
-<h3 id="연산자의-종류"><strong>연산자의 종류</strong></h3>
-<h1 id="heading-37"></h1>
+<h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
+<h3 id="연산자의-종류">
+  <strong>연산자의 종류</strong>
+  <a class="anchor" href="#%ec%97%b0%ec%82%b0%ec%9e%90%ec%9d%98-%ec%a2%85%eb%a5%98">#</a>
+</h3>
+<h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>연산자 우선순위 : ()-&gt;NOT-&gt;비교연산자-&gt;AND-&gt;OR</strong></p>
@@ -1827,7 +1966,10 @@
 <p><strong>IS NOT NULL : NULL 값을 갖지 않는다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-38"></h1>
+<h1 id="heading-38">
+  
+  <a class="anchor" href="#heading-38">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -1867,11 +2009,23 @@
 <p><strong>SELECT TOP(1) PLAYER_NAME FROM PLAYER;</strong></p>
 </li>
 </ul>
-<h1 id="heading-39"></h1>
+<h1 id="heading-39">
+  
+  <a class="anchor" href="#heading-39">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-40"></h1>
-<h3 id="함수의-종류"><strong>함수의 종류</strong></h3>
-<h1 id="heading-41"></h1>
+<h1 id="heading-40">
+  
+  <a class="anchor" href="#heading-40">#</a>
+</h1>
+<h3 id="함수의-종류">
+  <strong>함수의 종류</strong>
+  <a class="anchor" href="#%ed%95%a8%ec%88%98%ec%9d%98-%ec%a2%85%eb%a5%98">#</a>
+</h3>
+<h1 id="heading-41">
+  
+  <a class="anchor" href="#heading-41">#</a>
+</h1>
 <ul>
 <li><strong>문자형 함수</strong>
 <ul>
@@ -1914,9 +2068,15 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-42"></h1>
+<h1 id="heading-42">
+  
+  <a class="anchor" href="#heading-42">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-43"></h1>
+<h1 id="heading-43">
+  
+  <a class="anchor" href="#heading-43">#</a>
+</h1>
 <ul>
 <li><strong>숫자형 함수</strong>
 <ul>
@@ -1953,7 +2113,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-44"></h1>
+<h1 id="heading-44">
+  
+  <a class="anchor" href="#heading-44">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>날짜형 함수</strong>
@@ -1976,7 +2139,10 @@
 </span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">ELSE</span> <span style="color:#960050;background-color:#1e0010">‘</span>LOW<span style="color:#960050;background-color:#1e0010">’</span>
 </span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">AS</span> SALARY_GRADE
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> EMP;
-</span></span></code></pre></div><h1 id="heading-45"></h1>
+</span></span></code></pre></div><h1 id="heading-45">
+  
+  <a class="anchor" href="#heading-45">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>NULL 관련 함수</strong>
@@ -1996,7 +2162,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-46"></h1>
+<h1 id="heading-46">
+  
+  <a class="anchor" href="#heading-46">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>집계 함수</strong>
@@ -2037,10 +2206,19 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-47"></h1>
+<h1 id="heading-47">
+  
+  <a class="anchor" href="#heading-47">#</a>
+</h1>
 <p> </p>
-<h3 id="group-by-having-절의-특징"><strong>GROUP BY, HAVING 절의 특징</strong></h3>
-<h1 id="heading-48"></h1>
+<h3 id="group-by-having-절의-특징">
+  <strong>GROUP BY, HAVING 절의 특징</strong>
+  <a class="anchor" href="#group-by-having-%ec%a0%88%ec%9d%98-%ed%8a%b9%ec%a7%95">#</a>
+</h3>
+<h1 id="heading-48">
+  
+  <a class="anchor" href="#heading-48">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>GROUP BY 절을 통해 소그룹별 기준을 정한 후, SELECT 절에 집계 함수를 사용한다.</strong></p>
@@ -2061,7 +2239,10 @@
 <p><strong>HAVING 절은 일반적으로 GROUP BY 뒤에 위치</strong></p>
 </li>
 </ul>
-<h1 id="heading-49"></h1>
+<h1 id="heading-49">
+  
+  <a class="anchor" href="#heading-49">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2080,11 +2261,23 @@
 <p><strong>이 2문장은 같은 의미이다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-50"></h1>
+<h1 id="heading-50">
+  
+  <a class="anchor" href="#heading-50">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-51"></h1>
-<h3 id="order-by-특징"><strong>ORDER BY 특징</strong></h3>
-<h1 id="heading-52"></h1>
+<h1 id="heading-51">
+  
+  <a class="anchor" href="#heading-51">#</a>
+</h1>
+<h3 id="order-by-특징">
+  <strong>ORDER BY 특징</strong>
+  <a class="anchor" href="#order-by-%ed%8a%b9%ec%a7%95">#</a>
+</h3>
+<h1 id="heading-52">
+  
+  <a class="anchor" href="#heading-52">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>SQL 문장으로 조회된 데이터들을 다양한 목적에 맞게 특정한 칼럼을 기준으로 정렬하여 출력하는데 사용한다.</strong></p>
@@ -2102,13 +2295,22 @@
 <p><strong>SELECT 절에서 정의하지 않은 칼럼 사용 가능</strong></p>
 </li>
 </ul>
-<h1 id="heading-53"></h1>
+<h1 id="heading-53">
+  
+  <a class="anchor" href="#heading-53">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-54"></h1>
+<h1 id="heading-54">
+  
+  <a class="anchor" href="#heading-54">#</a>
+</h1>
 <ul>
 <li><strong>Oracle에서는 NULL을 가장 큰 값으로 취급하며 SQL Server에서는 NULL을 가장 작은 값으로 취급한다.</strong></li>
 </ul>
-<h1 id="heading-55"></h1>
+<h1 id="heading-55">
+  
+  <a class="anchor" href="#heading-55">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2124,11 +2326,23 @@
 </span></span></code></pre></div><ul>
 <li><strong>위는 급여가 높은 2명을 내림차순으로 출력하는데 같은 급여를 받는 사원은 같이 출력한다(WITH TIES)</strong></li>
 </ul>
-<h1 id="heading-56"></h1>
+<h1 id="heading-56">
+  
+  <a class="anchor" href="#heading-56">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-57"></h1>
-<h3 id="join"><strong>JOIN</strong></h3>
-<h1 id="heading-58"></h1>
+<h1 id="heading-57">
+  
+  <a class="anchor" href="#heading-57">#</a>
+</h1>
+<h3 id="join">
+  <strong>JOIN</strong>
+  <a class="anchor" href="#join">#</a>
+</h3>
+<h1 id="heading-58">
+  
+  <a class="anchor" href="#heading-58">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>두 개 이상의 테이블들을 연결 또는 결합하여 데이터를 출력하는 것</strong></p>
@@ -2143,7 +2357,10 @@
 <p><strong>5가지 테이블을 JOIN 하기 위해서는 최소 4번의 JOIN 과정이 필요하다. (N-1)</strong></p>
 </li>
 </ul>
-<h1 id="heading-59"></h1>
+<h1 id="heading-59">
+  
+  <a class="anchor" href="#heading-59">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2157,7 +2374,10 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> table1, table2
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> table1.<span style="color:#66d9ef">column_name</span> <span style="color:#f92672">=</span> table2.<span style="color:#66d9ef">column_name</span>;
 </span></span><span style="display:flex;"><span><span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">위</span> SQL처럼 <span style="color:#960050;background-color:#1e0010">컬럼명</span> <span style="color:#960050;background-color:#1e0010">앞에</span> <span style="color:#960050;background-color:#1e0010">테이블</span> <span style="color:#960050;background-color:#1e0010">명을</span> <span style="color:#960050;background-color:#1e0010">기술해줘야</span> <span style="color:#960050;background-color:#1e0010">함</span>
-</span></span></code></pre></div><h1 id="heading-60"></h1>
+</span></span></code></pre></div><h1 id="heading-60">
+  
+  <a class="anchor" href="#heading-60">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2176,11 +2396,23 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> EMP E, SALGRADE S
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> E.SAL <span style="color:#66d9ef">BETWEEN</span> S.LOSAL <span style="color:#66d9ef">AND</span> S.HSAL;
 </span></span><span style="display:flex;"><span><span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">위는</span> E의 SAL의 <span style="color:#960050;background-color:#1e0010">값을</span> S의 LOSAL과 HSAL <span style="color:#960050;background-color:#1e0010">범위에서</span> <span style="color:#960050;background-color:#1e0010">찾는</span> <span style="color:#960050;background-color:#1e0010">것이다</span>.
-</span></span></code></pre></div><h1 id="heading-61"></h1>
+</span></span></code></pre></div><h1 id="heading-61">
+  
+  <a class="anchor" href="#heading-61">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-62"></h1>
-<h3 id="집합-연산자"><strong>집합 연산자</strong></h3>
-<h1 id="heading-63"></h1>
+<h1 id="heading-62">
+  
+  <a class="anchor" href="#heading-62">#</a>
+</h1>
+<h3 id="집합-연산자">
+  <strong>집합 연산자</strong>
+  <a class="anchor" href="#%ec%a7%91%ed%95%a9-%ec%97%b0%ec%82%b0%ec%9e%90">#</a>
+</h3>
+<h1 id="heading-63">
+  
+  <a class="anchor" href="#heading-63">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>두 개 이상의 테이블에서 조인을 사용하지 않고 연관된 데이터를 조회할 때 사용</strong></p>
@@ -2189,7 +2421,10 @@
 <p><strong>SELECT 절의 칼럼 수가 동일하고 SELECT 절의 동일 위치에 존재하는 칼럼의 데이터 타입이 상호 호환할 때 사용 가능</strong></p>
 </li>
 </ul>
-<h1 id="heading-64"></h1>
+<h1 id="heading-64">
+  
+  <a class="anchor" href="#heading-64">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>일반 집합 연산자</strong>
@@ -2212,7 +2447,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-65"></h1>
+<h1 id="heading-65">
+  
+  <a class="anchor" href="#heading-65">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>순수 관계 연산자 : 관계형 DB를 새롭게 구현</strong>
@@ -2235,11 +2473,23 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-66"></h1>
+<h1 id="heading-66">
+  
+  <a class="anchor" href="#heading-66">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-67"></h1>
-<h3 id="from-절-join-형태"><strong>FROM 절 JOIN 형태</strong></h3>
-<h1 id="heading-68"></h1>
+<h1 id="heading-67">
+  
+  <a class="anchor" href="#heading-67">#</a>
+</h1>
+<h3 id="from-절-join-형태">
+  <strong>FROM 절 JOIN 형태</strong>
+  <a class="anchor" href="#from-%ec%a0%88-join-%ed%98%95%ed%83%9c">#</a>
+</h3>
+<h1 id="heading-68">
+  
+  <a class="anchor" href="#heading-68">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2249,7 +2499,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-69"></h1>
+<h1 id="heading-69">
+  
+  <a class="anchor" href="#heading-69">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2259,7 +2512,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-70"></h1>
+<h1 id="heading-70">
+  
+  <a class="anchor" href="#heading-70">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2269,7 +2525,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-71"></h1>
+<h1 id="heading-71">
+  
+  <a class="anchor" href="#heading-71">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2279,7 +2538,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-72"></h1>
+<h1 id="heading-72">
+  
+  <a class="anchor" href="#heading-72">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2289,7 +2551,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-73"></h1>
+<h1 id="heading-73">
+  
+  <a class="anchor" href="#heading-73">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2299,7 +2564,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-74"></h1>
+<h1 id="heading-74">
+  
+  <a class="anchor" href="#heading-74">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2309,7 +2577,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-75"></h1>
+<h1 id="heading-75">
+  
+  <a class="anchor" href="#heading-75">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2319,7 +2590,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-76"></h1>
+<h1 id="heading-76">
+  
+  <a class="anchor" href="#heading-76">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2329,15 +2603,30 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-77"></h1>
+<h1 id="heading-77">
+  
+  <a class="anchor" href="#heading-77">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-78"></h1>
-<h3 id="계층형-질의"><strong>계층형 질의</strong></h3>
-<h1 id="heading-79"></h1>
+<h1 id="heading-78">
+  
+  <a class="anchor" href="#heading-78">#</a>
+</h1>
+<h3 id="계층형-질의">
+  <strong>계층형 질의</strong>
+  <a class="anchor" href="#%ea%b3%84%ec%b8%b5%ed%98%95-%ec%a7%88%ec%9d%98">#</a>
+</h3>
+<h1 id="heading-79">
+  
+  <a class="anchor" href="#heading-79">#</a>
+</h1>
 <ul>
 <li><strong>테이블에 계층형 데이터가 존재하는 경우 데이터를 조회하기 위해 사용</strong></li>
 </ul>
-<h1 id="heading-80"></h1>
+<h1 id="heading-80">
+  
+  <a class="anchor" href="#heading-80">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>SATRT WITH : 계층 구조 전개의 시작 위치 지정</strong></p>
@@ -2396,7 +2685,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-81"></h1>
+<h1 id="heading-81">
+  
+  <a class="anchor" href="#heading-81">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>단일 행 비교 연산자 : =, &lt;, &gt;, &lt;&gt; 등</strong></p>
@@ -2411,11 +2703,23 @@
 <p><strong>인라인 뷰 : 테이블 명이 올 수 있는 곳에 사용, ORDER BY 사용 가능</strong></p>
 </li>
 </ul>
-<h1 id="heading-82"></h1>
+<h1 id="heading-82">
+  
+  <a class="anchor" href="#heading-82">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-83"></h1>
-<h3 id="뷰"><strong>뷰</strong></h3>
-<h1 id="heading-84"></h1>
+<h1 id="heading-83">
+  
+  <a class="anchor" href="#heading-83">#</a>
+</h1>
+<h3 id="뷰">
+  <strong>뷰</strong>
+  <a class="anchor" href="#%eb%b7%b0">#</a>
+</h3>
+<h1 id="heading-84">
+  
+  <a class="anchor" href="#heading-84">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>테이블은 실제로 데이터를 가지고 있는 반면, 뷰는 실제 데이터를 가지고 있지 않다. 가상 테이블이라고도 함</strong></p>
@@ -2437,7 +2741,10 @@
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">VIEW</span> V_PLAYER_TEAM <span style="color:#66d9ef">AS</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">VIEW</span> V_PLAYER_TEAM;
-</span></span></code></pre></div><h1 id="heading-85"></h1>
+</span></span></code></pre></div><h1 id="heading-85">
+  
+  <a class="anchor" href="#heading-85">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2453,15 +2760,30 @@
 <p><strong>GROUPING SETS : 인수들에 대한 개별 집계를 구할 수 있다, 다양한 소계 집합 생성 가능</strong></p>
 </li>
 </ul>
-<h1 id="heading-86"></h1>
+<h1 id="heading-86">
+  
+  <a class="anchor" href="#heading-86">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-87"></h1>
-<h3 id="윈도우-함수"><strong>윈도우 함수</strong></h3>
-<h1 id="heading-88"></h1>
+<h1 id="heading-87">
+  
+  <a class="anchor" href="#heading-87">#</a>
+</h1>
+<h3 id="윈도우-함수">
+  <strong>윈도우 함수</strong>
+  <a class="anchor" href="#%ec%9c%88%eb%8f%84%ec%9a%b0-%ed%95%a8%ec%88%98">#</a>
+</h3>
+<h1 id="heading-88">
+  
+  <a class="anchor" href="#heading-88">#</a>
+</h1>
 <ul>
 <li><strong>행과 행간의 관계를 정의하거나 행과 행간을 비교, 연산하는 함수</strong></li>
 </ul>
-<h1 id="heading-89"></h1>
+<h1 id="heading-89">
+  
+  <a class="anchor" href="#heading-89">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>RANK : 특정 항목에 대한 순위를 구하는 함수, 동일한 값에 대해서는 동일한 순위를 부여(1,2,2,4)</strong></p>
@@ -2525,7 +2847,10 @@
 <p><strong>NTILE : 파티션별 전체 건수를 인수 값으로 N등분한 결과를 구할 수 있다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-90"></h1>
+<h1 id="heading-90">
+  
+  <a class="anchor" href="#heading-90">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2592,7 +2917,10 @@
 <p><strong>저장 모듈 : PL/SQL 문장을 DB 서버에 저장하여 사용자와 애플리케이션 사이에서 공유할 수 있도록 만든 일종의 SQL 컴포넌트 프로그램, 독립적으로 실행되거나 다른 프로그램으로부터 실행될 수 있는 완전한 실행 프로그램</strong></p>
 </li>
 </ul>
-<h1 id="heading-91"></h1>
+<h1 id="heading-91">
+  
+  <a class="anchor" href="#heading-91">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2647,14 +2975,26 @@
 </li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">Procedure</span> <span style="color:#66d9ef">schema_NAME</span>.Procedure_name
-</span></span></code></pre></div><h1 id="heading-92"></h1>
+</span></span></code></pre></div><h1 id="heading-92">
+  
+  <a class="anchor" href="#heading-92">#</a>
+</h1>
 <p> </p>
-<h3 id="trigger"><strong>Trigger</strong></h3>
-<h1 id="heading-93"></h1>
+<h3 id="trigger">
+  <strong>Trigger</strong>
+  <a class="anchor" href="#trigger">#</a>
+</h3>
+<h1 id="heading-93">
+  
+  <a class="anchor" href="#heading-93">#</a>
+</h1>
 <ul>
 <li><strong>특정한 테이블에 INSERT, UPDATE, DELETE와 같은 DML문이 수행되었을 때, DB에서 자동으로 동작하도록 작성된 프로그램, 사용자 호출이 아닌 DB 자동 수행</strong></li>
 </ul>
-<h1 id="heading-94"></h1>
+<h1 id="heading-94">
+  
+  <a class="anchor" href="#heading-94">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">Trigger</span> <span style="color:#66d9ef">Trigger_name</span>
 </span></span></code></pre></div><ul>
 <li>
@@ -2664,15 +3004,30 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-95"></h1>
+<h1 id="heading-95">
+  
+  <a class="anchor" href="#heading-95">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-96"></h1>
-<h3 id="옵티마이저"><strong>옵티마이저</strong></h3>
-<h1 id="heading-97"></h1>
+<h1 id="heading-96">
+  
+  <a class="anchor" href="#heading-96">#</a>
+</h1>
+<h3 id="옵티마이저">
+  <strong>옵티마이저</strong>
+  <a class="anchor" href="#%ec%98%b5%ed%8b%b0%eb%a7%88%ec%9d%b4%ec%a0%80">#</a>
+</h3>
+<h1 id="heading-97">
+  
+  <a class="anchor" href="#heading-97">#</a>
+</h1>
 <ul>
 <li><strong>사용자가 질의한 SQL문에 대해 최적의 실행 방법을 결정하는 역할 수행</strong></li>
 </ul>
-<h1 id="heading-98"></h1>
+<h1 id="heading-98">
+  
+  <a class="anchor" href="#heading-98">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>규칙기반 옵티마이저</strong></p>
@@ -2681,7 +3036,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-99"></h1>
+<h1 id="heading-99">
+  
+  <a class="anchor" href="#heading-99">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>비용기반 옵티마이저</strong></p>
@@ -2690,9 +3048,15 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-100"></h1>
+<h1 id="heading-100">
+  
+  <a class="anchor" href="#heading-100">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-101"></h1>
+<h1 id="heading-101">
+  
+  <a class="anchor" href="#heading-101">#</a>
+</h1>
 <ul>
 <li>
 <p><strong>실행계획</strong></p>
@@ -2701,7 +3065,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-102"></h1>
+<h1 id="heading-102">
+  
+  <a class="anchor" href="#heading-102">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2711,7 +3078,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-103"></h1>
+<h1 id="heading-103">
+  
+  <a class="anchor" href="#heading-103">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>B-TREE 인덱스에서 원하는 값을 찾는 과정</strong>
@@ -2728,7 +3098,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-104"></h1>
+<h1 id="heading-104">
+  
+  <a class="anchor" href="#heading-104">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2752,7 +3125,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="heading-105"></h1>
+<h1 id="heading-105">
+  
+  <a class="anchor" href="#heading-105">#</a>
+</h1>
 <p> </p>
 <ul>
 <li>
@@ -2768,14 +3144,20 @@
 <p><strong>인덱스 역순 범위 스캔 : 인덱스의 리프 블록의 양방향 링크를 이용하여 내림차순으로 데이터를 읽는다</strong></p>
 </li>
 </ul>
-<h1 id="heading-106"></h1>
+<h1 id="heading-106">
+  
+  <a class="anchor" href="#heading-106">#</a>
+</h1>
 <p> </p>
 <ul>
 <li><strong>NL Join : 프로그래밍에서 사용하는 중첩된 반복문과 유사한 방식으로 조인을 수행, 랜덤 액세스 방식으로 데이터를 읽는다.</strong></li>
 <li><strong>Sort Merge Join : 조인 칼럼을 기준으로 데이터를 정렬하여 조인을 수행, 스캔 방식으로 데이터 읽음.</strong></li>
 <li><strong>Hash Join : CPU 작업 위주로 처리, 해슁 기법 이용, NL Join의 랜덤 액세스 문제와 SMJ의 정렬 작업 부담을 해결하기 위한 대안으로 등장</strong></li>
 </ul>
-<h1 id="heading-107"></h1>
+<h1 id="heading-107">
+  
+  <a class="anchor" href="#heading-107">#</a>
+</h1>
 <p> </p>
 </article>
  
@@ -2967,7 +3349,6 @@
 </body>
 </div>
 </html>
-
 
 
 

@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="OpenStack Ussuri : Gnocch ----------------------- ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch | | MariaDB RabbitMQ | | Nova compute | | L2 Agent | | Memcached Keystone | | Open vSwitch | | L3 Agent | | httpd Cinder API | | L2 Agent | | metadata agent | | Nova-API Compute | | Cinder-LVM | | Swift-proxy | | L2 agent L3 agent | | NFS | | Heat API | | metadata agent | ----------------------- | API-CFN | | Neutron Server | | Heat Engine | | Gnocchi | ----------------------- ----------------------- --------------------------------- | [ Storage Node 1, 2, 3 ] | | | | Swift-account-auditor | | Swift-account-replicator | | Swift-account | | Swift-container-auditor | | Swift-container-replicator | | Swift-container-updater | | Swift-container | | Swift-object-auditor | | Swift-object-replicator | | Swift-object-updater | | Swift-swift-object | --------------------------------- OpenStack Ussuri : Gnnoch Gnnoch Gnocchi service 및 User 생성 $ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 gnocchi &#43;---------------------&#43;----------------------------------&#43; | Field | Value | &#43;---------------------&#43;----------------------------------&#43; | default_project_id | b470c69e28db47cdbfc81e06cc67f627 | | domain_id | default | | enabled | True | | id | 3217be4917454641994660bd1f3ea007 | | name | gnocchi | | options | {} | | password_expires_at | None | &#43;---------------------&#43;----------------------------------&#43; $ controller ~(keystone)&gt; openstack role add --project service --user gnocchi admin $ controller ~(keystone)&gt; openstack service create --name gnocchi --description &#34;Metric Service&#34; metric -------------------------------------------------&#43; | Field | Value | &#43;-------------&#43;----------------------------------&#43; | description | Metric Service | | enabled | True | | id | 6ac9ec31386f4291b582bd5b504ac485 | | name | gnocchi | | type | metric | &#43;-------------&#43;----------------------------------&#43; $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne metric public http://controller:8041 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | 12f4410ed82240b0b1340d48b0627612 | | interface | public | | region | RegionOne | | region_id | RegionOne | | service_id | 6ac9ec31386f4291b582bd5b504ac485 | | service_name | gnocchi | | service_type | metric | | url | http://controller:8041 | &#43;-------------------------------------------------&#43; $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne metric internal http://controller:8041 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | 70f43453f93b407e94d2dd11ddce7260 | | interface | internal | | region | RegionOne | | region_id | RegionOne | | service_id | 6ac9ec31386f4291b582bd5b504ac485 | | service_name | gnocchi | | service_type | metric | | url | http://controller:8041 | &#43;--------------&#43;----------------------------------&#43; $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne metric admin http://controller:8041 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | bb9a955359fd4af18599913465f46958 | | interface | admin | | region | RegionOne | | region_id | RegionOne | | service_id | 6ac9ec31386f4291b582bd5b504ac485 | | service_name | gnocchi | | service_type | metric | | url | http://controller:8041 | &#43;--------------&#43;----------------------------------&#43; Gnocchi 유저의 DB를 생성합니다.">
-
-
-
-<meta name="robots" content="index,follow">
-<link rel="canonical" href=/docs/openstack/openstacktraining/openstack-ussuri-11/><meta property="og:title" content="OpenStack Ussuri : Gnocch" />
-<meta property="og:description" content="OpenStack Ussuri : Gnocch ----------------------- ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch | | MariaDB RabbitMQ | | Nova compute | | L2 Agent | | Memcached Keystone | | Open vSwitch | | L3 Agent | | httpd Cinder API | | L2 Agent | | metadata agent | | Nova-API Compute | | Cinder-LVM | | Swift-proxy | | L2 agent L3 agent | | NFS | | Heat API | | metadata agent | ----------------------- | API-CFN | | Neutron Server | | Heat Engine | | Gnocchi | ----------------------- ----------------------- --------------------------------- | [ Storage Node 1, 2, 3 ] | | | | Swift-account-auditor | | Swift-account-replicator | | Swift-account | | Swift-container-auditor | | Swift-container-replicator | | Swift-container-updater | | Swift-container | | Swift-object-auditor | | Swift-object-replicator | | Swift-object-updater | | Swift-swift-object | --------------------------------- OpenStack Ussuri : Gnnoch Gnnoch Gnocchi service 및 User 생성 $ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 gnocchi &#43;---------------------&#43;----------------------------------&#43; | Field | Value | &#43;---------------------&#43;----------------------------------&#43; | default_project_id | b470c69e28db47cdbfc81e06cc67f627 | | domain_id | default | | enabled | True | | id | 3217be4917454641994660bd1f3ea007 | | name | gnocchi | | options | {} | | password_expires_at | None | &#43;---------------------&#43;----------------------------------&#43; $ controller ~(keystone)&gt; openstack role add --project service --user gnocchi admin $ controller ~(keystone)&gt; openstack service create --name gnocchi --description &#34;Metric Service&#34; metric -------------------------------------------------&#43; | Field | Value | &#43;-------------&#43;----------------------------------&#43; | description | Metric Service | | enabled | True | | id | 6ac9ec31386f4291b582bd5b504ac485 | | name | gnocchi | | type | metric | &#43;-------------&#43;----------------------------------&#43; $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne metric public http://controller:8041 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | 12f4410ed82240b0b1340d48b0627612 | | interface | public | | region | RegionOne | | region_id | RegionOne | | service_id | 6ac9ec31386f4291b582bd5b504ac485 | | service_name | gnocchi | | service_type | metric | | url | http://controller:8041 | &#43;-------------------------------------------------&#43; $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne metric internal http://controller:8041 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | 70f43453f93b407e94d2dd11ddce7260 | | interface | internal | | region | RegionOne | | region_id | RegionOne | | service_id | 6ac9ec31386f4291b582bd5b504ac485 | | service_name | gnocchi | | service_type | metric | | url | http://controller:8041 | &#43;--------------&#43;----------------------------------&#43; $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne metric admin http://controller:8041 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | bb9a955359fd4af18599913465f46958 | | interface | admin | | region | RegionOne | | region_id | RegionOne | | service_id | 6ac9ec31386f4291b582bd5b504ac485 | | service_name | gnocchi | | service_type | metric | | url | http://controller:8041 | &#43;--------------&#43;----------------------------------&#43; Gnocchi 유저의 DB를 생성합니다." />
+<meta name="description" content="OpenStack Ussuri : Gnocch##----------------------- ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch | | MariaDB RabbitMQ | | Nova compute | | L2 Agent | | Memcached Keystone | | Open vSwitch | | L3 Agent | | httpd Cinder API | | L2 Agent | | metadata agent | | Nova-API Compute | | Cinder-LVM | | Swift-proxy | | L2 agent L3 agent | | NFS | | Heat API | | metadata agent | ----------------------- | API-CFN | | Neutron Server | | Heat Engine | | Gnocchi | ----------------------- ----------------------- --------------------------------- | [ Storage Node 1, 2, 3 ] | | | | Swift-account-auditor | | Swift-account-replicator | | Swift-account | | Swift-container-auditor | | Swift-container-replicator | | Swift-container-updater | | Swift-container | | Swift-object-auditor | | Swift-object-replicator | | Swift-object-updater | | Swift-swift-object | --------------------------------- #OpenStack Ussuri : Gnnoch##Gnnoch ##Gnocchi service 및 User 생성#$ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 gnocchi &#43;---------------------&#43;----------------------------------&#43; | Field | Value | &#43;---------------------&#43;----------------------------------&#43; | default_project_id | b470c69e28db47cdbfc81e06cc67f627 | | domain_id | default | | enabled | True | | id | 3217be4917454641994660bd1f3ea007 | | name | gnocchi | | options | {} | | password_expires_at | None | &#43;---------------------&#43;----------------------------------&#43; $ controller ~(keystone)&gt; openstack role add --project service --user gnocchi admin $ controller ~(keystone)&gt; openstack service create --name gnocchi --description &#34;Metric Service&#34; metric -------------------------------------------------&#43; | Field | Value | &#43;-------------&#43;----------------------------------&#43; | description | Metric Service | | enabled | True | | id | 6ac9ec31386f4291b582bd5b504ac485 | | name | gnocchi | | type | metric | &#43;-------------&#43;----------------------------------&#43; $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne metric public http://controller:8041 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | 12f4410ed82240b0b1340d48b0627612 | | interface | public | | region | RegionOne | | region_id | RegionOne | | service_id | 6ac9ec31386f4291b582bd5b504ac485 | | service_name | gnocchi | | service_type | metric | | url | http://controller:8041 | &#43;-------------------------------------------------&#43; $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne metric internal http://controller:8041 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | 70f43453f93b407e94d2dd11ddce7260 | | interface | internal | | region | RegionOne | | region_id | RegionOne | | service_id | 6ac9ec31386f4291b582bd5b504ac485 | | service_name | gnocchi | | service_type | metric | | url | http://controller:8041 | &#43;--------------&#43;----------------------------------&#43; $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne metric admin http://controller:8041 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | bb9a955359fd4af18599913465f46958 | | interface | admin | | region | RegionOne | | region_id | RegionOne | | service_id | 6ac9ec31386f4291b582bd5b504ac485 | | service_name | gnocchi | | service_type | metric | | url | http://controller:8041 | &#43;--------------&#43;----------------------------------&#43; #Gnocchi 유저의 DB를 생성합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="OpenStack Ussuri : Gnocch" />
+<meta property="og:description" content="OpenStack Ussuri : Gnocch##----------------------- ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch | | MariaDB RabbitMQ | | Nova compute | | L2 Agent | | Memcached Keystone | | Open vSwitch | | L3 Agent | | httpd Cinder API | | L2 Agent | | metadata agent | | Nova-API Compute | | Cinder-LVM | | Swift-proxy | | L2 agent L3 agent | | NFS | | Heat API | | metadata agent | ----------------------- | API-CFN | | Neutron Server | | Heat Engine | | Gnocchi | ----------------------- ----------------------- --------------------------------- | [ Storage Node 1, 2, 3 ] | | | | Swift-account-auditor | | Swift-account-replicator | | Swift-account | | Swift-container-auditor | | Swift-container-replicator | | Swift-container-updater | | Swift-container | | Swift-object-auditor | | Swift-object-replicator | | Swift-object-updater | | Swift-swift-object | --------------------------------- #OpenStack Ussuri : Gnnoch##Gnnoch ##Gnocchi service 및 User 생성#$ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 gnocchi &#43;---------------------&#43;----------------------------------&#43; | Field | Value | &#43;---------------------&#43;----------------------------------&#43; | default_project_id | b470c69e28db47cdbfc81e06cc67f627 | | domain_id | default | | enabled | True | | id | 3217be4917454641994660bd1f3ea007 | | name | gnocchi | | options | {} | | password_expires_at | None | &#43;---------------------&#43;----------------------------------&#43; $ controller ~(keystone)&gt; openstack role add --project service --user gnocchi admin $ controller ~(keystone)&gt; openstack service create --name gnocchi --description &#34;Metric Service&#34; metric -------------------------------------------------&#43; | Field | Value | &#43;-------------&#43;----------------------------------&#43; | description | Metric Service | | enabled | True | | id | 6ac9ec31386f4291b582bd5b504ac485 | | name | gnocchi | | type | metric | &#43;-------------&#43;----------------------------------&#43; $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne metric public http://controller:8041 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | 12f4410ed82240b0b1340d48b0627612 | | interface | public | | region | RegionOne | | region_id | RegionOne | | service_id | 6ac9ec31386f4291b582bd5b504ac485 | | service_name | gnocchi | | service_type | metric | | url | http://controller:8041 | &#43;-------------------------------------------------&#43; $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne metric internal http://controller:8041 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | 70f43453f93b407e94d2dd11ddce7260 | | interface | internal | | region | RegionOne | | region_id | RegionOne | | service_id | 6ac9ec31386f4291b582bd5b504ac485 | | service_name | gnocchi | | service_type | metric | | url | http://controller:8041 | &#43;--------------&#43;----------------------------------&#43; $ controller ~(keystone)&gt; openstack endpoint create --region RegionOne metric admin http://controller:8041 &#43;--------------&#43;----------------------------------&#43; | Field | Value | &#43;--------------&#43;----------------------------------&#43; | enabled | True | | id | bb9a955359fd4af18599913465f46958 | | interface | admin | | region | RegionOne | | region_id | RegionOne | | service_id | 6ac9ec31386f4291b582bd5b504ac485 | | service_name | gnocchi | | service_type | metric | | url | http://controller:8041 | &#43;--------------&#43;----------------------------------&#43; #Gnocchi 유저의 DB를 생성합니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-11/" /><meta property="article:section" content="docs" />
 
 
 
-
-<title>뭉게뭉게</title>
+<title>OpenStack Ussuri : Gnocch | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
-<script defer src="/en.search.min.2da5aaed4cee5fd260e1dbc6da076cea2c0c2e0aa8fc404f41f1b27230fd1489.js" integrity="sha256-LaWq7UzuX9Jg4dvG2gds6iwMLgqo/EBPQfGycjD9FIk="></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.cfd5901d536ba4555b5a8759e680ba2314bb881633fd65607554987055667178.js" integrity="sha256-z9WQHVNrpFVbWodZ5oC6IxS7iBYz/WVgdVSYcFVmcXg=" crossorigin="anonymous"></script>
 <!--
-
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
 -->
-
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
-
 <body>
   <div class="background">
-  <input type="checkbox" class="hidden" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex" style="max-width:100%;" >
+    
     <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
+      <div class="book-menu-content">
       
   
 <nav styles="background-color:red; position=none;">
@@ -48,7 +47,7 @@
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1375,6 +1374,9 @@
  
     </aside>
 
+
+
+    
     <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
@@ -1386,14 +1388,15 @@
   <strong>OpenStack Ussuri : Gnocch</strong>
 
   <label for="toc-control">
+    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
+  <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1442,8 +1445,14 @@
 <br>
 <br>
       
-  <article class="markdown"><h1 id="openstack-ussuri--gnocch"><strong>OpenStack Ussuri : Gnocch</strong></h1>
-<h1 id="heading"></h1>
+  <article class="markdown"><h1 id="openstack-ussuri--gnocch">
+  <strong>OpenStack Ussuri : Gnocch</strong>
+  <a class="anchor" href="#openstack-ussuri--gnocch">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span> -----------------------         -----------------------        -----------------------
 </span></span><span style="display:flex;"><span>|  [ Controller Node ]  |       |    [ Compute Node ]   |      |   [ Network Node ]    | 
 </span></span><span style="display:flex;"><span>|                       |       |        Libvirt        |      |     Open vSwitch      |
@@ -1472,16 +1481,34 @@
 </span></span><span style="display:flex;"><span>|      Swift-object-updater       |
 </span></span><span style="display:flex;"><span>|      Swift-swift-object         |
 </span></span><span style="display:flex;"><span> ---------------------------------
-</span></span></code></pre></div><h1 id="heading-1"></h1>
-<h2 id="openstack-ussuri--gnnoch"><strong>OpenStack Ussuri : Gnnoch</strong></h2>
-<h1 id="heading-2"></h1>
+</span></span></code></pre></div><h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h2 id="openstack-ussuri--gnnoch">
+  <strong>OpenStack Ussuri : Gnnoch</strong>
+  <a class="anchor" href="#openstack-ussuri--gnnoch">#</a>
+</h2>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
 <ul>
 <li><strong>Gnnoch</strong></li>
 </ul>
-<h1 id="heading-3"></h1>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-4"></h1>
-<h3 id="gnocchi-service-및-user-생성"><strong>Gnocchi service 및 User 생성</strong></h3>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="gnocchi-service-및-user-생성">
+  <strong>Gnocchi service 및 User 생성</strong>
+  <a class="anchor" href="#gnocchi-service-%eb%b0%8f-user-%ec%83%9d%ec%84%b1">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 gnocchi
 </span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
 </span></span><span style="display:flex;"><span>| Field               | Value                            |
@@ -1551,20 +1578,41 @@
 </span></span><span style="display:flex;"><span>| service_type | metric                           |
 </span></span><span style="display:flex;"><span>| url          | http://controller:8041           |
 </span></span><span style="display:flex;"><span>+--------------+----------------------------------+
-</span></span></code></pre></div><h1 id="heading-5"></h1>
-<h3 id="gnocchi-유저의-db를-생성합니다"><strong>Gnocchi 유저의 DB를 생성합니다.</strong></h3>
-<h1 id="heading-6"></h1>
+</span></span></code></pre></div><h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<h3 id="gnocchi-유저의-db를-생성합니다">
+  <strong>Gnocchi 유저의 DB를 생성합니다.</strong>
+  <a class="anchor" href="#gnocchi-%ec%9c%a0%ec%a0%80%ec%9d%98-db%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
+</h3>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller&gt; mysql -u root -p
 </span></span><span style="display:flex;"><span>$ MariaDB&gt; create database gnocchi;  
 </span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on gnocchi.* to gnocchi@&#39;localhost&#39; identified by &#39;qwer1234&#39;; 
 </span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on gnocchi.* to gnocchi@&#39;%&#39; identified by &#39;qwer1234&#39;; 
 </span></span><span style="display:flex;"><span>$ MariaDB&gt; flush privileges; 
 </span></span><span style="display:flex;"><span>$ MariaDB&gt; exit;
-</span></span></code></pre></div><h1 id="heading-7"></h1>
+</span></span></code></pre></div><h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
 <p> </p>
-<h1 id="heading-8"></h1>
-<h3 id="controller-node-gnoochi-설치"><strong>controller node Gnoochi 설치</strong></h3>
-<h1 id="heading-9"></h1>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<h3 id="controller-node-gnoochi-설치">
+  <strong>controller node Gnoochi 설치</strong>
+  <a class="anchor" href="#controller-node-gnoochi-%ec%84%a4%ec%b9%98">#</a>
+</h3>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-gnocchi-api openstack-gnocchi-metricd python3-gnocchiclient
 </span></span><span style="display:flex;"><span># gnoochi 및 관련 모듈을 설치합니다.
 </span></span><span style="display:flex;"><span>
@@ -1704,7 +1752,6 @@
 </body>
 </div>
 </html>
-
 
 
 
