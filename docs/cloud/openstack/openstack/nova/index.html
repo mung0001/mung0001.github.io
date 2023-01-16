@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="가상의 서버를 생성하는 서비스 : Nova##가상의 서버를 생성하는 서비스 : Nova##Nova는 compute 서비스의 핵심 compute 서비스란, 가상머신이 필요한 자원을 할당하고, 관리하는 서비스로 하이퍼바이저, 메시지 Queue, 인스턴스 접속을 하는 콘솔 등의 다양한 기능이 유기적으로 연결되어 가상 서버를 생성할 수 있는 시스템을 구성하는 시스템 ##Nova 서비스의 고려사항##고려사항 설명 CPU compute 서비스가 동작할 호스트 시스템의 cpu가 기본적으로 자체 하드웨어 가상화를 지원이 필수 Hypervisor 서비스에 사용할 하이퍼바이저를 맞게 설정해야 하며, 기본적으로 사용하는 Hypervisor은 KVM/QEMU Storage compute 서비스를 통해 인스턴스가 생성되면서 시스템의 디스크 용량의 제한을 가할 수 있음, 이를 위해 넉넉한 공간이 필요 Overcommit 기본적으로 자원을 할당하는 경우 1:1이 아닌 CPU는 16:1, Memory는 1.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Nova" />
+<meta property="og:description" content="가상의 서버를 생성하는 서비스 : Nova##가상의 서버를 생성하는 서비스 : Nova##Nova는 compute 서비스의 핵심 compute 서비스란, 가상머신이 필요한 자원을 할당하고, 관리하는 서비스로 하이퍼바이저, 메시지 Queue, 인스턴스 접속을 하는 콘솔 등의 다양한 기능이 유기적으로 연결되어 가상 서버를 생성할 수 있는 시스템을 구성하는 시스템 ##Nova 서비스의 고려사항##고려사항 설명 CPU compute 서비스가 동작할 호스트 시스템의 cpu가 기본적으로 자체 하드웨어 가상화를 지원이 필수 Hypervisor 서비스에 사용할 하이퍼바이저를 맞게 설정해야 하며, 기본적으로 사용하는 Hypervisor은 KVM/QEMU Storage compute 서비스를 통해 인스턴스가 생성되면서 시스템의 디스크 용량의 제한을 가할 수 있음, 이를 위해 넉넉한 공간이 필요 Overcommit 기본적으로 자원을 할당하는 경우 1:1이 아닌 CPU는 16:1, Memory는 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/openstack/openstack/nova/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Nova | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Nova</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#가상의-서버를-생성하는-서비스--nova-1"><strong>가상의 서버를 생성하는 서비스 : Nova</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova-서비스의-고려사항"><strong>Nova 서비스의 고려사항</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova의-논리-아키텍처"><strong>Nova의 논리 아키텍처</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova가-지원하는-하이퍼바이저의-종류"><strong>Nova가 지원하는 하이퍼바이저의 종류</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="가상의-서버를-생성하는-서비스--nova">
+  <strong>가상의 서버를 생성하는 서비스 : Nova</strong>
+  <a class="anchor" href="#%ea%b0%80%ec%83%81%ec%9d%98-%ec%84%9c%eb%b2%84%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%98%eb%8a%94-%ec%84%9c%eb%b9%84%ec%8a%a4--nova">#</a>
+</h1>
+<hr>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="가상의-서버를-생성하는-서비스--nova-1">
+  <strong>가상의 서버를 생성하는 서비스 : Nova</strong>
+  <a class="anchor" href="#%ea%b0%80%ec%83%81%ec%9d%98-%ec%84%9c%eb%b2%84%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%98%eb%8a%94-%ec%84%9c%eb%b9%84%ec%8a%a4--nova-1">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<ul>
+<li><strong>Nova는 compute 서비스의 핵심</strong></li>
+<li><strong>compute 서비스란, 가상머신이 필요한 자원을 할당하고, 관리하는 서비스로 하이퍼바이저, 메시지 Queue, 인스턴스 접속을 하는 콘솔 등의 다양한 기능이 유기적으로 연결되어 가상 서버를 생성할 수 있는 시스템을 구성하는 시스템</strong></li>
+</ul>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h3 id="nova-서비스의-고려사항">
+  <strong>Nova 서비스의 고려사항</strong>
+  <a class="anchor" href="#nova-%ec%84%9c%eb%b9%84%ec%8a%a4%ec%9d%98-%ea%b3%a0%eb%a0%a4%ec%82%ac%ed%95%ad">#</a>
+</h3>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>고려사항</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>compute 서비스가 동작할 호스트 시스템의 cpu가 기본적으로 자체 하드웨어 가상화를 지원이 필수</td>
+</tr>
+<tr>
+<td>Hypervisor</td>
+<td>서비스에 사용할 하이퍼바이저를 맞게 설정해야 하며, 기본적으로 사용하는 Hypervisor은 KVM/QEMU</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>compute 서비스를 통해 인스턴스가 생성되면서 시스템의 디스크 용량의 제한을 가할 수 있음, 이를 위해 넉넉한 공간이 필요</td>
+</tr>
+<tr>
+<td>Overcommit</td>
+<td>기본적으로 자원을 할당하는 경우 1:1이 아닌 CPU는 16:1, Memory는 1.5:1로 할당 되어짐</td>
+</tr>
+<tr>
+<td>네트워킹</td>
+<td>생성된 인스턴스의 경우 nova가 독자적으로 구현하는 것이 아닌 다른 network 서비스를 연게해서 사용해야하며, 주로 Neutron 네트워크 서비스와 함께 사용</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<h3 id="nova의-논리-아키텍처">
+  <strong>Nova의 논리 아키텍처</strong>
+  <a class="anchor" href="#nova%ec%9d%98-%eb%85%bc%eb%a6%ac-%ec%95%84%ed%82%a4%ed%85%8d%ec%b2%98">#</a>
+</h3>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p><img src="/Openstack/Nova/Nova01.png" alt="Nova" /></p>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>서비스</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nova-api</td>
+<td>최종 사용자즈이 API콜을 통해 서비스 간 질의 응답을 담당</td>
+</tr>
+<tr>
+<td>nova-compute</td>
+<td>가상화 API를 이용하여 가상 머신 인스턴스를 생성하고 종료하는 역할을 수행</td>
+</tr>
+<tr>
+<td>nova-scheduler</td>
+<td>compute host가 다수인 경우 큐를 통해 받은 메시지를 누구에게 명령할 것인지를 결정</td>
+</tr>
+<tr>
+<td>nova-conductor</td>
+<td>코디네이션과 데이터베이스 쿼리를 지원하는 서버 데몬</td>
+</tr>
+<tr>
+<td>nova-cert</td>
+<td>X509 인증서에 대한 Nova Cert서비스를 제공하는 서버 데몬</td>
+</tr>
+<tr>
+<td>nova-consoleauth</td>
+<td>데몬, 콘솔 프록시를 제공하는 사용자에 대한 인증 토큰 제공</td>
+</tr>
+<tr>
+<td>Guest Agent</td>
+<td>실제 compute 시스템 상에 구축된 인스턴스로 Nova-compute 서비스에 의해 제어되어짐</td>
+</tr>
+<tr>
+<td>nova-api-metadata</td>
+<td>인스턴스의 메타데이터의 요청을 처리</td>
+</tr>
+<tr>
+<td>nova-novncproxy</td>
+<td>VNC 콘솔화면을 제공</td>
+</tr>
+<tr>
+<td>nova-novaclient: nova REST API를 사용하는 클라이언트 프로그램</td>
+<td></td>
+</tr>
+<tr>
+<td>nova-network</td>
+<td>인스턴스의 네트워크 기능을 수행</td>
+</tr>
+<tr>
+<td>nova-compute-kvm</td>
+<td>인스턴스(가상 머신)와 관련된 모든 프로세스를 처리</td>
+</tr>
+<tr>
+<td>python-guestfs</td>
+<td>파일 생성 기능을 지원하는 Python 라이브러리</td>
+</tr>
+<tr>
+<td>qemu-kvm</td>
+<td>KVM 하이퍼바이저</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<ul>
+<li><strong>위와 같이 많은 서비스들이 존재</strong></li>
+</ul>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<ul>
+<li><strong>Nova는 대시보드나 콘솔에서 호출하는 nova-api에서 시작</strong></li>
+<li><strong>Queue를 이용해 nova-compute에 인스턴스를 생성하라는 명령을 전달</strong></li>
+<li><strong>nova-compute는 하이퍼바이저 라이브러리를 이용해 하이퍼바이저에 인스턴스를 생성하려는 명령어를 전달</strong></li>
+<li><strong>Hypervisor을 통해 인스턴스를 생성</strong></li>
+<li><strong>생성된 인스턴스는 nova-api로 접근할 수 있으며 Nova의 모든 기능은 메시지 Queue로 처리할 수 있음</strong></li>
+</ul>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<h3 id="nova가-지원하는-하이퍼바이저의-종류">
+  <strong>Nova가 지원하는 하이퍼바이저의 종류</strong>
+  <a class="anchor" href="#nova%ea%b0%80-%ec%a7%80%ec%9b%90%ed%95%98%eb%8a%94-%ed%95%98%ec%9d%b4%ed%8d%bc%eb%b0%94%ec%9d%b4%ec%a0%80%ec%9d%98-%ec%a2%85%eb%a5%98">#</a>
+</h3>
+<ul>
+<li><strong>기본 하이퍼바이저는 KVM과 QEMU</strong></li>
+<li><strong>프로바이더가 테스트하는 Hyper-V, VMware, XenServer, Sen via libvirt</strong></li>
+<li><strong>몇 번의 테스트만 하는 하이퍼바이저 드라이버인 베어메탈, Docker, LXC via libvirt</strong></li>
+</ul>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#가상의-서버를-생성하는-서비스--nova-1"><strong>가상의 서버를 생성하는 서비스 : Nova</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova-서비스의-고려사항"><strong>Nova 서비스의 고려사항</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova의-논리-아키텍처"><strong>Nova의 논리 아키텍처</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova가-지원하는-하이퍼바이저의-종류"><strong>Nova가 지원하는 하이퍼바이저의 종류</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

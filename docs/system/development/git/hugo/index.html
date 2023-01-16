@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hugo##휴고 다운로드
+#So cutey
+Hugo는 Go언어를 기반으로 Go 언어를 이용한 프로그램 사용 및 수정
+Markdown으로 글을 작성
+git을 활용한 글 관리 및 버전 관리
+#Hugo 적용##Hugo 환경변수 등록
+휴고 사이트 시작
+hugo new site testproject cd testproject hugo server -D #테마 적용 Hugo 테마 다운로드
+testproject 안의 themes 폴더에 테마를 넣는다
+config.toml 파일에 theme = &ldquo;테마이름을 추가&rdquo;
+themes/[ 테마이름 ]/examplesite/로 이동 후 config 파일을 제외한 모든 파일을 복사하여 testproject 아래에 복사한다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="Hugo##휴고 다운로드
+#So cutey
+Hugo는 Go언어를 기반으로 Go 언어를 이용한 프로그램 사용 및 수정
+Markdown으로 글을 작성
+git을 활용한 글 관리 및 버전 관리
+#Hugo 적용##Hugo 환경변수 등록
+휴고 사이트 시작
+hugo new site testproject cd testproject hugo server -D #테마 적용 Hugo 테마 다운로드
+testproject 안의 themes 폴더에 테마를 넣는다
+config.toml 파일에 theme = &ldquo;테마이름을 추가&rdquo;
+themes/[ 테마이름 ]/examplesite/로 이동 후 config 파일을 제외한 모든 파일을 복사하여 testproject 아래에 복사한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/development/git/hugo/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Hugo | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/git/git/" class="">Git</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/git/hugo/" class="active">Hugo</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Hugo</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugo"><strong>Hugo</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#hugo-적용"><strong>Hugo 적용</strong></a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h2 id="hugo">
+  <strong>Hugo</strong>
+  <a class="anchor" href="#hugo">#</a>
+</h2>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<p><img src="/Hugo.jpg" alt="Hugo" />
+<strong><a href="https://gohugo.io/">휴고 다운로드</a></strong></p>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<ul>
+<li>
+<p><del>So cutey</del></p>
+</li>
+<li>
+<p>Hugo는 Go언어를 기반으로 Go 언어를 이용한 프로그램 사용 및 수정</p>
+</li>
+<li>
+<p>Markdown으로 글을 작성</p>
+</li>
+<li>
+<p>git을 활용한 글 관리 및 버전 관리</p>
+</li>
+</ul>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<hr>
+<hr>
+<h2 id="hugo-적용">
+  <strong>Hugo 적용</strong>
+  <a class="anchor" href="#hugo-%ec%a0%81%ec%9a%a9">#</a>
+</h2>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<ul>
+<li>
+<p>Hugo 환경변수 등록</p>
+</li>
+<li>
+<p><strong>휴고 사이트 시작</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>hugo new site testproject
+</span></span><span style="display:flex;"><span>cd testproject
+</span></span><span style="display:flex;"><span>hugo server <span style="color:#f92672">-</span>D
+</span></span></code></pre></div><h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<ul>
+<li><strong>테마 적용</strong></li>
+<li>
+<ul>
+<li>
+<p><a href="https://themes.gohugo.io/">Hugo 테마</a> 다운로드</p>
+</li>
+<li>
+<p>testproject 안의 themes 폴더에 테마를 넣는다</p>
+</li>
+<li>
+<p>config.toml 파일에 theme = &ldquo;테마이름을 추가&rdquo;</p>
+</li>
+<li>
+<p>themes/[ 테마이름 ]/examplesite/로 이동 후 config 파일을 제외한 모든 파일을 복사하여 testproject 아래에 복사한다.</p>
+</li>
+<li>
+<p>hugo server -D를 통해 동작을 확인한다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<ul>
+<li><strong>Github Page 적용</strong></li>
+</ul>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git remote add origin [ base Storage url ]
+</span></span><span style="display:flex;"><span>git submodule add <span style="color:#f92672">-</span>b master [ github<span style="color:#f92672">.</span>io Storage url ] public 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>hugo <span style="color:#f92672">-</span>t [ theme name ]
+</span></span><span style="display:flex;"><span>cd public
+</span></span><span style="display:flex;"><span>git add <span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span>git commit <span style="color:#f92672">-</span>m <span style="color:#e6db74">&#34;message&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin master
+</span></span><span style="display:flex;"><span>cd <span style="color:#f92672">..</span>
+</span></span><span style="display:flex;"><span>git add <span style="color:#f92672">.</span> 
+</span></span><span style="display:flex;"><span>git commit <span style="color:#f92672">-</span>m <span style="color:#e6db74">&#34;message&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin master
+</span></span></code></pre></div><ul>
+<li>
+<p><strong>submodule 생성시 public 폴더가 없어야 함</strong></p>
+</li>
+<li>
+<p><strong>username.git.io로 확인</strong></p>
+</li>
+</ul>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugo"><strong>Hugo</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#hugo-적용"><strong>Hugo 적용</strong></a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

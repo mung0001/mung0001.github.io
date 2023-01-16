@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Amazon Web Service Certified Solutions Architect#AWS SAA의 개요##1장 AWS의 핵심 서비스#2장 EC2와 EBS#3장 S3와 Glacier#4장 VPC#5장 데이터베이스#6장 인증과 권한#7장 AWS 관리도구#8장 DNS와 네트워크 라우팅#9장 안전성 핵심요소#10장 성능 효율성 핵심요소#11장 보안 핵심요소#12장 비용 최적화 핵심요소#13장 운영 우수성 핵심요소#14장 평가문제 정리#15장 기출문제 정리###">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="AWS SAA 시험정리" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/aws/awssaa/" />
+
+<title>AWS SAA 시험정리 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="https://mung0001.github.io/docs/cloud/aws/awssaa/index.xml" title="뭉게뭉게" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>AWS SAA 시험정리</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-saa의-개요"><strong><a href="">AWS SAA의 개요</a></strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1장-aws의-핵심-서비스httpsmung0001githubiodocsawsawssaasaa-1"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-1/">1장 AWS의 핵심 서비스</a></strong></a></li>
+        <li><a href="#2장-ec2와-ebshttpsmung0001githubiodocsawsawssaasaa-2"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-2/">2장 EC2와 EBS</a></strong></a></li>
+        <li><a href="#3장-s3와-glacierhttpsmung0001githubiodocsawsawssaasaa-3"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-3/">3장 S3와 Glacier</a></strong></a></li>
+        <li><a href="#4장-vpchttpsmung0001githubiodocsawsawssaasaa-4"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-4/">4장 VPC</a></strong></a></li>
+        <li><a href="#5장-데이터베이스httpsmung0001githubiodocsawsawssaasaa-5"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-5/">5장 데이터베이스</a></strong></a></li>
+        <li><a href="#6장-인증과-권한httpsmung0001githubiodocsawsawssaasaa-6"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-6/">6장 인증과 권한</a></strong></a></li>
+        <li><a href="#7장-aws-관리도구httpsmung0001githubiodocsawsawssaasaa-7"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-7/">7장 AWS 관리도구</a></strong></a></li>
+        <li><a href="#8장-dns와-네트워크-라우팅httpsmung0001githubiodocsawsawssaasaa-8"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-8/">8장 DNS와 네트워크 라우팅</a></strong></a></li>
+        <li><a href="#9장-안전성-핵심요소httpsmung0001githubiodocsawsawssaasaa-9"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-9/">9장 안전성 핵심요소</a></strong></a></li>
+        <li><a href="#10장-성능-효율성-핵심요소httpsmung0001githubiodocsawsawssaasaa-10"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-10/">10장 성능 효율성 핵심요소</a></strong></a></li>
+        <li><a href="#11장-보안-핵심요소httpsmung0001githubiodocsawsawssaasaa-11"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-11/">11장 보안 핵심요소</a></strong></a></li>
+        <li><a href="#12장-비용-최적화-핵심요소httpsmung0001githubiodocsawsawssaasaa-12"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-12/">12장 비용 최적화 핵심요소</a></strong></a></li>
+        <li><a href="#13장-운영-우수성-핵심요소httpsmung0001githubiodocsawsawssaasaa-13"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-13/">13장 운영 우수성 핵심요소</a></strong></a></li>
+        <li><a href="#14장-평가문제-정리httpsmung0001githubiodocsawsawssaasaa-14"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-14/">14장 평가문제 정리</a></strong></a></li>
+        <li><a href="#15장-기출문제-정리httpsmung0001githubiodocsawsawssaasaa-15"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-15/">15장 기출문제 정리</a></strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="amazon-web-service-certified-solutions-architect">
+  <strong>Amazon Web Service Certified Solutions Architect</strong>
+  <a class="anchor" href="#amazon-web-service-certified-solutions-architect">#</a>
+</h1>
+<p><img src="/Line/AWS.png" alt="AWS" /></p>
+<h3 id="aws-saa의-개요">
+  <strong><a href="">AWS SAA의 개요</a></strong>
+  <a class="anchor" href="#aws-saa%ec%9d%98-%ea%b0%9c%ec%9a%94">#</a>
+</h3>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h3 id="1장-aws의-핵심-서비스httpsmung0001githubiodocsawsawssaasaa-1">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-1/">1장 AWS의 핵심 서비스</a></strong>
+  <a class="anchor" href="#1%ec%9e%a5-aws%ec%9d%98-%ed%95%b5%ec%8b%ac-%ec%84%9c%eb%b9%84%ec%8a%a4httpsmung0001githubiodocsawsawssaasaa-1">#</a>
+</h3>
+<h3 id="2장-ec2와-ebshttpsmung0001githubiodocsawsawssaasaa-2">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-2/">2장 EC2와 EBS</a></strong>
+  <a class="anchor" href="#2%ec%9e%a5-ec2%ec%99%80-ebshttpsmung0001githubiodocsawsawssaasaa-2">#</a>
+</h3>
+<h3 id="3장-s3와-glacierhttpsmung0001githubiodocsawsawssaasaa-3">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-3/">3장 S3와 Glacier</a></strong>
+  <a class="anchor" href="#3%ec%9e%a5-s3%ec%99%80-glacierhttpsmung0001githubiodocsawsawssaasaa-3">#</a>
+</h3>
+<h3 id="4장-vpchttpsmung0001githubiodocsawsawssaasaa-4">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-4/">4장 VPC</a></strong>
+  <a class="anchor" href="#4%ec%9e%a5-vpchttpsmung0001githubiodocsawsawssaasaa-4">#</a>
+</h3>
+<h3 id="5장-데이터베이스httpsmung0001githubiodocsawsawssaasaa-5">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-5/">5장 데이터베이스</a></strong>
+  <a class="anchor" href="#5%ec%9e%a5-%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%b2%a0%ec%9d%b4%ec%8a%a4httpsmung0001githubiodocsawsawssaasaa-5">#</a>
+</h3>
+<h3 id="6장-인증과-권한httpsmung0001githubiodocsawsawssaasaa-6">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-6/">6장 인증과 권한</a></strong>
+  <a class="anchor" href="#6%ec%9e%a5-%ec%9d%b8%ec%a6%9d%ea%b3%bc-%ea%b6%8c%ed%95%9chttpsmung0001githubiodocsawsawssaasaa-6">#</a>
+</h3>
+<h3 id="7장-aws-관리도구httpsmung0001githubiodocsawsawssaasaa-7">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-7/">7장 AWS 관리도구</a></strong>
+  <a class="anchor" href="#7%ec%9e%a5-aws-%ea%b4%80%eb%a6%ac%eb%8f%84%ea%b5%achttpsmung0001githubiodocsawsawssaasaa-7">#</a>
+</h3>
+<h3 id="8장-dns와-네트워크-라우팅httpsmung0001githubiodocsawsawssaasaa-8">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-8/">8장 DNS와 네트워크 라우팅</a></strong>
+  <a class="anchor" href="#8%ec%9e%a5-dns%ec%99%80-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%eb%9d%bc%ec%9a%b0%ed%8c%85httpsmung0001githubiodocsawsawssaasaa-8">#</a>
+</h3>
+<h3 id="9장-안전성-핵심요소httpsmung0001githubiodocsawsawssaasaa-9">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-9/">9장 안전성 핵심요소</a></strong>
+  <a class="anchor" href="#9%ec%9e%a5-%ec%95%88%ec%a0%84%ec%84%b1-%ed%95%b5%ec%8b%ac%ec%9a%94%ec%86%8chttpsmung0001githubiodocsawsawssaasaa-9">#</a>
+</h3>
+<h3 id="10장-성능-효율성-핵심요소httpsmung0001githubiodocsawsawssaasaa-10">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-10/">10장 성능 효율성 핵심요소</a></strong>
+  <a class="anchor" href="#10%ec%9e%a5-%ec%84%b1%eb%8a%a5-%ed%9a%a8%ec%9c%a8%ec%84%b1-%ed%95%b5%ec%8b%ac%ec%9a%94%ec%86%8chttpsmung0001githubiodocsawsawssaasaa-10">#</a>
+</h3>
+<h3 id="11장-보안-핵심요소httpsmung0001githubiodocsawsawssaasaa-11">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-11/">11장 보안 핵심요소</a></strong>
+  <a class="anchor" href="#11%ec%9e%a5-%eb%b3%b4%ec%95%88-%ed%95%b5%ec%8b%ac%ec%9a%94%ec%86%8chttpsmung0001githubiodocsawsawssaasaa-11">#</a>
+</h3>
+<h3 id="12장-비용-최적화-핵심요소httpsmung0001githubiodocsawsawssaasaa-12">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-12/">12장 비용 최적화 핵심요소</a></strong>
+  <a class="anchor" href="#12%ec%9e%a5-%eb%b9%84%ec%9a%a9-%ec%b5%9c%ec%a0%81%ed%99%94-%ed%95%b5%ec%8b%ac%ec%9a%94%ec%86%8chttpsmung0001githubiodocsawsawssaasaa-12">#</a>
+</h3>
+<h3 id="13장-운영-우수성-핵심요소httpsmung0001githubiodocsawsawssaasaa-13">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-13/">13장 운영 우수성 핵심요소</a></strong>
+  <a class="anchor" href="#13%ec%9e%a5-%ec%9a%b4%ec%98%81-%ec%9a%b0%ec%88%98%ec%84%b1-%ed%95%b5%ec%8b%ac%ec%9a%94%ec%86%8chttpsmung0001githubiodocsawsawssaasaa-13">#</a>
+</h3>
+<h3 id="14장-평가문제-정리httpsmung0001githubiodocsawsawssaasaa-14">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-14/">14장 평가문제 정리</a></strong>
+  <a class="anchor" href="#14%ec%9e%a5-%ed%8f%89%ea%b0%80%eb%ac%b8%ec%a0%9c-%ec%a0%95%eb%a6%achttpsmung0001githubiodocsawsawssaasaa-14">#</a>
+</h3>
+<h3 id="15장-기출문제-정리httpsmung0001githubiodocsawsawssaasaa-15">
+  <strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-15/">15장 기출문제 정리</a></strong>
+  <a class="anchor" href="#15%ec%9e%a5-%ea%b8%b0%ec%b6%9c%eb%ac%b8%ec%a0%9c-%ec%a0%95%eb%a6%achttpsmung0001githubiodocsawsawssaasaa-15">#</a>
+</h3>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<p><img src="/Line/AWS2.png" alt="AWS" /></p>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-saa의-개요"><strong><a href="">AWS SAA의 개요</a></strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1장-aws의-핵심-서비스httpsmung0001githubiodocsawsawssaasaa-1"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-1/">1장 AWS의 핵심 서비스</a></strong></a></li>
+        <li><a href="#2장-ec2와-ebshttpsmung0001githubiodocsawsawssaasaa-2"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-2/">2장 EC2와 EBS</a></strong></a></li>
+        <li><a href="#3장-s3와-glacierhttpsmung0001githubiodocsawsawssaasaa-3"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-3/">3장 S3와 Glacier</a></strong></a></li>
+        <li><a href="#4장-vpchttpsmung0001githubiodocsawsawssaasaa-4"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-4/">4장 VPC</a></strong></a></li>
+        <li><a href="#5장-데이터베이스httpsmung0001githubiodocsawsawssaasaa-5"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-5/">5장 데이터베이스</a></strong></a></li>
+        <li><a href="#6장-인증과-권한httpsmung0001githubiodocsawsawssaasaa-6"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-6/">6장 인증과 권한</a></strong></a></li>
+        <li><a href="#7장-aws-관리도구httpsmung0001githubiodocsawsawssaasaa-7"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-7/">7장 AWS 관리도구</a></strong></a></li>
+        <li><a href="#8장-dns와-네트워크-라우팅httpsmung0001githubiodocsawsawssaasaa-8"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-8/">8장 DNS와 네트워크 라우팅</a></strong></a></li>
+        <li><a href="#9장-안전성-핵심요소httpsmung0001githubiodocsawsawssaasaa-9"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-9/">9장 안전성 핵심요소</a></strong></a></li>
+        <li><a href="#10장-성능-효율성-핵심요소httpsmung0001githubiodocsawsawssaasaa-10"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-10/">10장 성능 효율성 핵심요소</a></strong></a></li>
+        <li><a href="#11장-보안-핵심요소httpsmung0001githubiodocsawsawssaasaa-11"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-11/">11장 보안 핵심요소</a></strong></a></li>
+        <li><a href="#12장-비용-최적화-핵심요소httpsmung0001githubiodocsawsawssaasaa-12"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-12/">12장 비용 최적화 핵심요소</a></strong></a></li>
+        <li><a href="#13장-운영-우수성-핵심요소httpsmung0001githubiodocsawsawssaasaa-13"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-13/">13장 운영 우수성 핵심요소</a></strong></a></li>
+        <li><a href="#14장-평가문제-정리httpsmung0001githubiodocsawsawssaasaa-14"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-14/">14장 평가문제 정리</a></strong></a></li>
+        <li><a href="#15장-기출문제-정리httpsmung0001githubiodocsawsawssaasaa-15"><strong><a href="https://mung0001.github.io/docs/aws/awssaa/saa-15/">15장 기출문제 정리</a></strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

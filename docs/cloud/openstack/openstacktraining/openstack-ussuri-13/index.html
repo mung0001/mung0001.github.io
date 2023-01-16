@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="OpenStack Ussuri : Designate##----------------------- ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch | | MariaDB RabbitMQ | | Nova compute | | L2 Agent | | Memcached Keystone | | Open vSwitch | | L3 Agent | | httpd Cinder API | | L2 Agent | | metadata agent | | Nova-API Compute | | Cinder-LVM | | Swift-proxy | | L2 agent L3 agent | | NFS | | Heat API | | metadata agent | ----------------------- | API-CFN | | Neutron Server | | Heat Engine | | Gnocchi Trove API | | Designate Services | ----------------------- ----------------------- #OpenStack Ussuri : Designate##Designate는 OpenStack 서비스에서 DNS 서비스를 배포, 관리를 담당합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="OpenStack Ussuri : Designate" />
+<meta property="og:description" content="OpenStack Ussuri : Designate##----------------------- ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch | | MariaDB RabbitMQ | | Nova compute | | L2 Agent | | Memcached Keystone | | Open vSwitch | | L3 Agent | | httpd Cinder API | | L2 Agent | | metadata agent | | Nova-API Compute | | Cinder-LVM | | Swift-proxy | | L2 agent L3 agent | | NFS | | Heat API | | metadata agent | ----------------------- | API-CFN | | Neutron Server | | Heat Engine | | Gnocchi Trove API | | Designate Services | ----------------------- ----------------------- #OpenStack Ussuri : Designate##Designate는 OpenStack 서비스에서 DNS 서비스를 배포, 관리를 담당합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-13/" /><meta property="article:section" content="docs" />
+
+
+
+<title>OpenStack Ussuri : Designate | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>OpenStack Ussuri : Designate</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#openstack-ussuri--designate-1"><strong>OpenStack Ussuri : Designate</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#designate-service-및-user-생성"><strong>Designate service 및 User 생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#designate-유저의-db를-생성합니다"><strong>Designate 유저의 DB를 생성합니다.</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#network-node-desigante-설치"><strong>Network Node Desigante 설치</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#확인"><strong>확인</strong></a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="openstack-ussuri--designate">
+  <strong>OpenStack Ussuri : Designate</strong>
+  <a class="anchor" href="#openstack-ussuri--designate">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span> -----------------------         -----------------------        -----------------------
+</span></span><span style="display:flex;"><span>|  [ Controller Node ]  |       |    [ Compute Node ]   |      |   [ Network Node ]    | 
+</span></span><span style="display:flex;"><span>|                       |       |        Libvirt        |      |     Open vSwitch      |
+</span></span><span style="display:flex;"><span>| MariaDB    RabbitMQ   |       |      Nova compute     |      |       L2 Agent        |
+</span></span><span style="display:flex;"><span>| Memcached  Keystone   |       |      Open vSwitch     |      |       L3 Agent        |
+</span></span><span style="display:flex;"><span>| httpd      Cinder API |       |       L2 Agent        |      |     metadata agent    |
+</span></span><span style="display:flex;"><span>| Nova-API   Compute    |       |      Cinder-LVM       |      |      Swift-proxy      |
+</span></span><span style="display:flex;"><span>| L2 agent   L3 agent   |       |          NFS          |      |       Heat API        |
+</span></span><span style="display:flex;"><span>| metadata agent        |        -----------------------       |        API-CFN        |
+</span></span><span style="display:flex;"><span>| Neutron Server        |                                      |      Heat Engine      |
+</span></span><span style="display:flex;"><span>| Gnocchi    Trove API  |                                      |   Designate Services  |
+</span></span><span style="display:flex;"><span> -----------------------                                        -----------------------
+</span></span></code></pre></div><h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h2 id="openstack-ussuri--designate-1">
+  <strong>OpenStack Ussuri : Designate</strong>
+  <a class="anchor" href="#openstack-ussuri--designate-1">#</a>
+</h2>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<ul>
+<li><strong>Designate는 OpenStack 서비스에서 DNS 서비스를 배포, 관리를 담당합니다.</strong></li>
+<li><strong>Desigante는 Network node의 설치를 진행하고, controller node의 API를 이용하겠습니다.</strong></li>
+<li><strong>Designate의 보다 자세한 설명은 <a href="">Designate</a>를 참조해주세요.</strong></li>
+</ul>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="designate-service-및-user-생성">
+  <strong>Designate service 및 User 생성</strong>
+  <a class="anchor" href="#designate-service-%eb%b0%8f-user-%ec%83%9d%ec%84%b1">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 designate
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field               | Value                            |
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| default_project_id  | b470c69e28db47cdbfc81e06cc67f627 |
+</span></span><span style="display:flex;"><span>| domain_id           | default                          |
+</span></span><span style="display:flex;"><span>| enabled             | True                             |
+</span></span><span style="display:flex;"><span>| id                  | 7563701765d24b4884c0b324b7997530 |
+</span></span><span style="display:flex;"><span>| name                | designate                        |
+</span></span><span style="display:flex;"><span>| options             | <span style="color:#75715e">{}</span>                               |
+</span></span><span style="display:flex;"><span>| password_expires_at | None                             |
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack role add --project service --user designate admin
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack service create --name designate --description &#34;OpenStack DNS Service&#34; dns
+</span></span><span style="display:flex;"><span>+-------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field       | Value                            |
+</span></span><span style="display:flex;"><span>+-------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| description | OpenStack DNS Service            |
+</span></span><span style="display:flex;"><span>| enabled     | True                             |
+</span></span><span style="display:flex;"><span>| id          | 0e7dacc11b5b48c099d3fe110f8b8197 |
+</span></span><span style="display:flex;"><span>| name        | designate                        |
+</span></span><span style="display:flex;"><span>| type        | dns                              |
+</span></span><span style="display:flex;"><span>+-------------+----------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne dns public http://network:9001/
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                            |
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                             |
+</span></span><span style="display:flex;"><span>| id           | 20b26900a14d44209ade2fab0a0f3bbc |
+</span></span><span style="display:flex;"><span>| interface    | public                           |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                        |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                        |
+</span></span><span style="display:flex;"><span>| service_id   | 0e7dacc11b5b48c099d3fe110f8b8197 |
+</span></span><span style="display:flex;"><span>| service_name | designate                        |
+</span></span><span style="display:flex;"><span>| service_type | dns                              |
+</span></span><span style="display:flex;"><span>| url          | http://network:9001/             |
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne dns internal http://network:9001/
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                            |
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                             |
+</span></span><span style="display:flex;"><span>| id           | 856883757b604b93a1273ecc4775f549 |
+</span></span><span style="display:flex;"><span>| interface    | internal                         |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                        |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                        |
+</span></span><span style="display:flex;"><span>| service_id   | 0e7dacc11b5b48c099d3fe110f8b8197 |
+</span></span><span style="display:flex;"><span>| service_name | designate                        |
+</span></span><span style="display:flex;"><span>| service_type | dns                              |
+</span></span><span style="display:flex;"><span>| url          | http://network:9001/             |
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne dns admin http://network:9001/
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                            |
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                             |
+</span></span><span style="display:flex;"><span>| id           | c6fef7cbb6a848228fa8ef4067ebcc49 |
+</span></span><span style="display:flex;"><span>| interface    | admin                            |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                        |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                        |
+</span></span><span style="display:flex;"><span>| service_id   | 0e7dacc11b5b48c099d3fe110f8b8197 |
+</span></span><span style="display:flex;"><span>| service_name | designate                        |
+</span></span><span style="display:flex;"><span>| service_type | dns                              |
+</span></span><span style="display:flex;"><span>| url          | http://network:9001/             |
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span></code></pre></div><h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<h3 id="designate-유저의-db를-생성합니다">
+  <strong>Designate 유저의 DB를 생성합니다.</strong>
+  <a class="anchor" href="#designate-%ec%9c%a0%ec%a0%80%ec%9d%98-db%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
+</h3>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller&gt; mysql -u root -p
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; create database designate;  
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on designate.* to designate@&#39;localhost&#39; identified by &#39;qwer1234&#39;; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on designate.* to designate@&#39;%&#39; identified by &#39;qwer1234&#39;; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; flush privileges; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; exit;
+</span></span></code></pre></div><h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<h2 id="network-node-desigante-설치">
+  <strong>Network Node Desigante 설치</strong>
+  <a class="anchor" href="#network-node-desigante-%ec%84%a4%ec%b9%98">#</a>
+</h2>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ network&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-designate-api openstack-designate-central openstack-designate-worker openstack-designate-producer openstack-designate-mdns python3-designateclient bind bind-utils
+</span></span><span style="display:flex;"><span># designate 및 관련 모듈을 설치합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ network&gt; rndc-confgen -a -k designate -c /etc/designate.key -r /dev/urandom
+</span></span><span style="display:flex;"><span>$ network&gt; chown named:designate /etc/designate.key
+</span></span><span style="display:flex;"><span>$ network&gt; chmod 640 /etc/designate.key
+</span></span><span style="display:flex;"><span># 역할기반 키를 생성하고 권한을 설정합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ network&gt; cp /etc/named.conf /etc/named.conf.backup
+</span></span><span style="display:flex;"><span>$ network&gt; vi /etc/named.conf
+</span></span><span style="display:flex;"><span>options <span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">listen</span><span style="color:#f92672">-</span><span style="color:#a6e22e">on</span> <span style="color:#a6e22e">port</span> <span style="color:#ae81ff">53</span> <span style="color:#75715e">{</span> <span style="color:#a6e22e">any</span><span style="color:#f92672">;</span> <span style="color:#75715e">}</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">listen</span><span style="color:#f92672">-</span><span style="color:#a6e22e">on</span><span style="color:#f92672">-</span><span style="color:#a6e22e">v6</span> <span style="color:#a6e22e">port</span> <span style="color:#ae81ff">53</span> <span style="color:#75715e">{</span> <span style="color:#a6e22e">none</span><span style="color:#f92672">;</span> <span style="color:#75715e">}</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">directory</span>       <span style="color:#e6db74">&#34;/var/named&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">dump</span><span style="color:#f92672">-</span><span style="color:#a6e22e">file</span>       <span style="color:#e6db74">&#34;/var/named/data/cache_dump.db&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">statistics</span><span style="color:#f92672">-</span><span style="color:#a6e22e">file</span> <span style="color:#e6db74">&#34;/var/named/data/named_stats.txt&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">memstatistics</span><span style="color:#f92672">-</span><span style="color:#a6e22e">file</span> <span style="color:#e6db74">&#34;/var/named/data/named_mem_stats.txt&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">replace</span> <span style="color:#a6e22e">query</span> <span style="color:#a6e22e">range</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">your</span> <span style="color:#a6e22e">environment</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">allow</span><span style="color:#f92672">-</span><span style="color:#a6e22e">query</span>     <span style="color:#75715e">{</span> <span style="color:#a6e22e">localhost</span><span style="color:#f92672">;</span> <span style="color:#ae81ff">10.10</span><span style="color:#f92672">.</span><span style="color:#ae81ff">10.0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">24</span><span style="color:#f92672">;</span> <span style="color:#75715e">}</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">allow</span><span style="color:#f92672">-</span><span style="color:#a6e22e">new</span><span style="color:#f92672">-</span><span style="color:#a6e22e">zones</span> <span style="color:#a6e22e">yes</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">request</span><span style="color:#f92672">-</span><span style="color:#a6e22e">ixfr</span> <span style="color:#a6e22e">no</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">recursion</span> <span style="color:#a6e22e">no</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">bindkeys</span><span style="color:#f92672">-</span><span style="color:#a6e22e">file</span> <span style="color:#e6db74">&#34;/etc/named.iscdlv.key&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">managed</span><span style="color:#f92672">-</span><span style="color:#a6e22e">keys</span><span style="color:#f92672">-</span><span style="color:#a6e22e">directory</span> <span style="color:#e6db74">&#34;/var/named/dynamic&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">pid</span><span style="color:#f92672">-</span><span style="color:#a6e22e">file</span> <span style="color:#e6db74">&#34;/run/named/named.pid&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">session</span><span style="color:#f92672">-</span><span style="color:#a6e22e">keyfile</span> <span style="color:#e6db74">&#34;/run/named/session.key&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">}</span>;
+</span></span><span style="display:flex;"><span>include &#34;/etc/designate.key&#34;;
+</span></span><span style="display:flex;"><span>controls <span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">inet</span> <span style="color:#ae81ff">0.0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0.0</span> <span style="color:#a6e22e">port</span> <span style="color:#ae81ff">953</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">allow</span> <span style="color:#75715e">{</span> <span style="color:#a6e22e">localhost</span><span style="color:#f92672">;</span> <span style="color:#75715e">}</span> <span style="color:#a6e22e">keys</span> <span style="color:#75715e">{</span> <span style="color:#e6db74">&#34;designate&#34;</span><span style="color:#f92672">;</span> <span style="color:#75715e">}</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">}</span>;
+</span></span><span style="display:flex;"><span>logging <span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">channel</span> <span style="color:#a6e22e">default_debug</span> <span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">file</span> <span style="color:#e6db74">&#34;data/named.run&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">severity</span> <span style="color:#a6e22e">dynamic</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">}</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">}</span>;
+</span></span><span style="display:flex;"><span>zone &#34;.&#34; IN <span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">type</span> <span style="color:#a6e22e">hint</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">file</span> <span style="color:#e6db74">&#34;named.ca&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">}</span>;
+</span></span><span style="display:flex;"><span>$ network&gt; chmod 640 /etc/named.conf
+</span></span><span style="display:flex;"><span>$ network&gt; chgrp named /etc/named.conf
+</span></span><span style="display:flex;"><span>$ network&gt; chown -R named. /var/named
+</span></span><span style="display:flex;"><span>$ network&gt; systemctl enable --now named
+</span></span><span style="display:flex;"><span># named dns 서비스를 시작합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ network&gt; vi /etc/designate/designate.conf
+</span></span><span style="display:flex;"><span>[DEFAULT]
+</span></span><span style="display:flex;"><span>log_dir = /var/log/designate
+</span></span><span style="display:flex;"><span>transport_url = rabbit://openstack:qwer1234@controller
+</span></span><span style="display:flex;"><span>root_helper = sudo designate-rootwrap /etc/designate/rootwrap.conf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[database]
+</span></span><span style="display:flex;"><span>connection = mysql+pymysql://designate:qwer1234@controller/designate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[service:api]
+</span></span><span style="display:flex;"><span>listen = 0.0.0.0:9001
+</span></span><span style="display:flex;"><span>auth_strategy = keystone
+</span></span><span style="display:flex;"><span>api_base_uri = http://network:9001
+</span></span><span style="display:flex;"><span>enable_api_v2 = True
+</span></span><span style="display:flex;"><span>enabled_extensions_v2 = quotas, reports
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[keystone_authtoken]
+</span></span><span style="display:flex;"><span>www_authenticate_uri = http://controller:5000
+</span></span><span style="display:flex;"><span>auth_url = http://controller:5000
+</span></span><span style="display:flex;"><span>memcached_servers = controller:11211
+</span></span><span style="display:flex;"><span>auth_type = password
+</span></span><span style="display:flex;"><span>project_domain_name = default
+</span></span><span style="display:flex;"><span>user_domain_name = default
+</span></span><span style="display:flex;"><span>project_name = service
+</span></span><span style="display:flex;"><span>username = designate
+</span></span><span style="display:flex;"><span>password = qwer1234
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[service:worker]
+</span></span><span style="display:flex;"><span>enabled = True
+</span></span><span style="display:flex;"><span>notify = True
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[storage:sqlalchemy]
+</span></span><span style="display:flex;"><span>connection = mysql+pymysql://designate:qwer1234@controller/designate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ network&gt; su -s /bin/bash -c &#34;designate-manage database sync&#34; designate
+</span></span><span style="display:flex;"><span>$ network&gt; systemctl enable --now designate-central designate-api
+</span></span><span style="display:flex;"><span># designate api db를 임포트 시키고 서비스를 시작 및 등록합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ network&gt; vi /etc/designate/pools.yaml
+</span></span><span style="display:flex;"><span>- name: default
+</span></span><span style="display:flex;"><span>  description: Default Pool
+</span></span><span style="display:flex;"><span>  attributes: <span style="color:#75715e">{}</span>
+</span></span><span style="display:flex;"><span>  ns_records:
+</span></span><span style="display:flex;"><span>    - hostname: network
+</span></span><span style="display:flex;"><span>      priority: 1
+</span></span><span style="display:flex;"><span>  nameservers:
+</span></span><span style="display:flex;"><span>    - host: network
+</span></span><span style="display:flex;"><span>      port: 53
+</span></span><span style="display:flex;"><span>  targets:
+</span></span><span style="display:flex;"><span>    - type: bind9
+</span></span><span style="display:flex;"><span>      description: BIND9 Server
+</span></span><span style="display:flex;"><span>      masters:
+</span></span><span style="display:flex;"><span>        - host: network
+</span></span><span style="display:flex;"><span>          port: 5354
+</span></span><span style="display:flex;"><span>      options:
+</span></span><span style="display:flex;"><span>        host: network
+</span></span><span style="display:flex;"><span>        port: 53
+</span></span><span style="display:flex;"><span>        rndc_host: network
+</span></span><span style="display:flex;"><span>        rndc_port: 953
+</span></span><span style="display:flex;"><span>        rndc_key_file: /etc/designate.key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ network&gt; chmod 640 /etc/designate/pools.yaml
+</span></span><span style="display:flex;"><span>$ network&gt; chgrp designate /etc/designate/pools.yaml
+</span></span><span style="display:flex;"><span>$ network&gt; su -s /bin/bash -c &#34;designate-manage pool update&#34; designate
+</span></span><span style="display:flex;"><span>$ network&gt; systemctl enable --now designate-worker designate-producer designate-mdns
+</span></span><span style="display:flex;"><span># designate pool db를 임포트 시키고 서비스를 시작 및 등록합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ network&gt; setsebool -P named_write_master_zones on
+</span></span><span style="display:flex;"><span>$ network&gt; firewall-cmd --add-service=dns --permanent
+</span></span><span style="display:flex;"><span>$ network&gt; firewall-cmd --add-port=<span style="color:#75715e">{</span><span style="color:#ae81ff">5354</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">9001</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#75715e">}</span> --permanent
+</span></span><span style="display:flex;"><span>$ network&gt; firewall-cmd --reload
+</span></span><span style="display:flex;"><span># SELinux 및 방화벽을 설정합니다.
+</span></span></code></pre></div><h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<h2 id="확인">
+  <strong>확인</strong>
+  <a class="anchor" href="#%ed%99%95%ec%9d%b8">#</a>
+</h2>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack dns service list
+</span></span><span style="display:flex;"><span>+--------------------------------------+----------+--------------+--------+-------+--------------+
+</span></span><span style="display:flex;"><span>| id                                   | hostname | service_name | status | stats | capabilities |
+</span></span><span style="display:flex;"><span>+--------------------------------------+----------+--------------+--------+-------+--------------+
+</span></span><span style="display:flex;"><span>| 43f62f8d-20bc-43b9-8c64-758ac0a2a074 | network  | central      | UP     | -     | -            |
+</span></span><span style="display:flex;"><span>| ab90b2dc-381d-4ca8-ae66-fad57a9f9c11 | network  | api          | UP     | -     | -            |
+</span></span><span style="display:flex;"><span>| 2dbc8027-0c6a-4c4a-b7a0-92a2b19517a7 | network  | worker       | UP     | -     | -            |
+</span></span><span style="display:flex;"><span>| 502ce893-3256-432f-9c6f-2353078ee585 | network  | producer     | UP     | -     | -            |
+</span></span><span style="display:flex;"><span>| 078b306a-e3bb-461d-9c97-71679c9f8830 | network  | mdns         | UP     | -     | -            |
+</span></span><span style="display:flex;"><span>+--------------------------------------+----------+--------------+--------+-------+--------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack zone create --email dnsmaster@server.education server.education.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack zone list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack recordset create --record &#39;192.168.100.10&#39; --type A server.education. node01
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack recordset list server.education.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; dig -p 5354 @network.srv.world node01.server.education.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack zone create --email dnsmaster@server.education 100.168.192.in-addr.arpa.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack zone list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack recordset create --record &#39;node01.server.education.&#39; --type PTR 100.168.192.in-addr.arpa. 10
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack recordset list 100.168.192.in-addr.arpa.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; dig -p 5354 @network.srv.world -x 192.168.100.10
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack recordset list server.education.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack recordset delete server.education. node01.server.education.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack recordset list server.education.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack zone list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack zone delete server.education.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack zone list
+</span></span></code></pre></div><h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#openstack-ussuri--designate-1"><strong>OpenStack Ussuri : Designate</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#designate-service-및-user-생성"><strong>Designate service 및 User 생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#designate-유저의-db를-생성합니다"><strong>Designate 유저의 DB를 생성합니다.</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#network-node-desigante-설치"><strong>Network Node Desigante 설치</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#확인"><strong>확인</strong></a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

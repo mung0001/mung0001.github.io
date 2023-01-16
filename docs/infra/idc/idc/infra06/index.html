@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Solution###Solution##IT 인프라 운영에 이용되는 여러 장비를 효율적으로 관리하기위해서 다양한 솔루션을 활용합니다. ##감시 솔루션##나기오스 감시 솔루션
+웹 설정 화면이 없으며 설정을 텍스트 파일로 저장힙니다.
+장애가 발생했는 지에 대한 이력을 데이터베이스가 아닌 텍스트 파일에 저장합니다.
+감시 설정은 플러그인으로 추가할 수 있으며, 플러그인은 직접 만들 수 있고, 전용 커뮤니티에도 다량 공개되어 있습니다.
+#자빅스 솔루션
+서버 네트워크 디바이스의 오토 디스커버리 지원">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Solution" />
+<meta property="og:description" content="Solution###Solution##IT 인프라 운영에 이용되는 여러 장비를 효율적으로 관리하기위해서 다양한 솔루션을 활용합니다. ##감시 솔루션##나기오스 감시 솔루션
+웹 설정 화면이 없으며 설정을 텍스트 파일로 저장힙니다.
+장애가 발생했는 지에 대한 이력을 데이터베이스가 아닌 텍스트 파일에 저장합니다.
+감시 설정은 플러그인으로 추가할 수 있으며, 플러그인은 직접 만들 수 있고, 전용 커뮤니티에도 다량 공개되어 있습니다.
+#자빅스 솔루션
+서버 네트워크 디바이스의 오토 디스커버리 지원" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/infra/idc/idc/infra06/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Solution | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/idc/idc/idc01/" class="">Idc01</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/idc/idc/infra01/" class="">Infra engineer란?</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/idc/idc/infra02/" class="">Server</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/idc/idc/infra03/" class="">Operating System</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/idc/idc/infra04/" class="">Network</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/idc/idc/infra05/" class="">Storage</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/idc/idc/infra06/" class="active">Solution</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/infra/idc/idc/infra07/" class="">Infra operation</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Solution</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#solution-1"><strong>Solution</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#감시-솔루션"><strong>감시 솔루션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#기타-solution"><strong>기타 Solution</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#security"><strong>Security</strong></a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="solution">
+  <strong>Solution</strong>
+  <a class="anchor" href="#solution">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h2 id="solution-1">
+  <strong>Solution</strong>
+  <a class="anchor" href="#solution-1">#</a>
+</h2>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<ul>
+<li><strong>IT 인프라 운영에 이용되는 여러 장비를 효율적으로 관리하기위해서 다양한 솔루션을 활용합니다.</strong></li>
+</ul>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="감시-솔루션">
+  <strong>감시 솔루션</strong>
+  <a class="anchor" href="#%ea%b0%90%ec%8b%9c-%ec%86%94%eb%a3%a8%ec%85%98">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>나기오스 감시 솔루션</strong></p>
+<ul>
+<li>
+<p><strong>웹 설정 화면이 없으며 설정을 텍스트 파일로 저장힙니다.</strong></p>
+</li>
+<li>
+<p><strong>장애가 발생했는 지에 대한 이력을 데이터베이스가 아닌 텍스트 파일에 저장합니다.</strong></p>
+</li>
+<li>
+<p><strong>감시 설정은 플러그인으로 추가할 수 있으며, 플러그인은 직접 만들 수 있고, 전용 커뮤니티에도 다량 공개되어 있습니다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>자빅스 솔루션</strong></p>
+<ul>
+<li>
+<p><strong>서버 네트워크 디바이스의 오토 디스커버리 지원</strong></p>
+</li>
+<li>
+<p><strong>로우 레벨 디스커버리 지원</strong></p>
+</li>
+<li>
+<p><strong>중앙 웹 관리 인터페이스로부터의 분산 감시 지원</strong></p>
+</li>
+<li>
+<p><strong>폴링과 트래핑 지원</strong></p>
+</li>
+<li>
+<p><strong>서버 운영체제로는 리눅스, 솔라리스, HP-UX, FreeBSD, OpenBSD, OS X를 지원</strong></p>
+</li>
+<li>
+<p><strong>고성능 전용 에이전트 지원</strong></p>
+</li>
+<li>
+<p><strong>에이전트 없는 감시</strong></p>
+</li>
+<li>
+<p><strong>암호화로 보호된 사용자 인증</strong></p>
+</li>
+<li>
+<p><strong>유연한 사용자 퍼미션 관리</strong></p>
+</li>
+<li>
+<p><strong>웹 인터페이스</strong></p>
+</li>
+<li>
+<p><strong>감시 대상 리소스의 고급 표시 기능</strong></p>
+</li>
+<li>
+<p><strong>사전 정의된 이벤트를 메일 기반의 유연한 경고 기능으로 통지</strong></p>
+</li>
+<li>
+<p><strong>감사 로그</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>캑타이</strong></p>
+<ul>
+<li>
+<p><strong>Cacti 지원</strong></p>
+</li>
+<li>
+<p><strong>RRDTool 지원</strong></p>
+</li>
+<li>
+<p><strong>NET-SNMP 지원</strong></p>
+</li>
+<li>
+<p><strong>Apache</strong></p>
+</li>
+<li>
+<p><strong>PHP</strong></p>
+</li>
+<li>
+<p><strong>MySQL</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<h3 id="기타-solution">
+  <strong>기타 Solution</strong>
+  <a class="anchor" href="#%ea%b8%b0%ed%83%80-solution">#</a>
+</h3>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<ul>
+<li><strong>자산 관리 도구</strong></li>
+</ul>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>많은 장비를 효율적으로 관리하려면 자산 관리 도구를 활용하는 것이 편리합니다.</strong></p>
+</li>
+<li>
+<p><strong>자산 관리 도구는 상용 소프트웨어가 다수 존재하지만, 대부분 사내 PC의 효율적 관리를 목적으로 하기에 IT 인프라 자산 관리에는 맞지 않는 제품들이 많지만, 이런 이유로 특정 기업에 맞춰 자산 관리 도구 자체적으로 개발해주는 회사가 다수 존재합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>배포 시스템</strong></p>
+<ul>
+<li>
+<p><strong>여러 서버에 동시에 같은 소스 코드와 설정 파일 등을 배포 할 때, 한 대씩 수작으로 배포하는 것은 상당시간 시간을 소모하여, 이럴 때는 배포 시스템을 활용합니다.</strong></p>
+</li>
+<li>
+<p><strong>배포 자체는 리눅스에서는 rsync 명령으로 윈도우에서는 robocopy 명령 등을 사용하면 구현할 수 있으며, 배포 이력 관리를 위해 배포 시스템을 만들거나 배포 기능에 특화된 오픈 소스를 이용하기도 합니다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>보안</strong></p>
+<ul>
+<li><strong>서버 단위로 이루어지는 보안 대책으로는 백신 등의 소프트웨어를 서버에 설치하는 방법이 있으며, IT 인프라 전체에서 하는 대책으로는 LAN 내에 방화벽이나 IDS를 설치하는 방법이 존재합니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>퍼실리티 관리 시스템</strong></p>
+<ul>
+<li><strong>데이터 센터의 물리적 환경을 감시하는 시스템으로, 서버 랙의 온도와 각 랙의 전기 사용량, 다양한 센서를 실시간으로 감시하고 관리할 수 있습니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>스토리지 관리 시스템</strong></p>
+<ul>
+<li><strong>스토리지를 집중적으로 관리할 수 있는 시스템으로 각 스토리지의 가동 상황이나 사용 상황을 감시할 수 있음은 물론이고, 가상 스토리지를 동적으로 생성하고 용량을 확장/축소, 삭제가 가능합니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<h2 id="security">
+  <strong>Security</strong>
+  <a class="anchor" href="#security">#</a>
+</h2>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>보안 대책은 전체적인 관점에서의 보안 대책과 실시간으로 보안 인시던트를 감지하는 체제를 만드는 양면에서 접근할 필요가 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>특히 규모가 큰 인프라 환경에서는 각 서버에 맞춰 보안적 요소를 커스터마이징 하는 것이 필요하며, 보안 담당자를 두는 경우도 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>기업의 보안 대책은 그 자체로 직접적인 이익을 낳는 것은 아니지만, 보험과도 같은 것이라 할 수 있습니다. 해 두면 어느정도 안심은 되지만, 완벽한 상태는 절대 만들 수 없다는 성질을 가지고 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>하단은 일반적인 IT 인프라에서 지켜야할 정보의 예시입니다.</strong></p>
+<ul>
+<li>
+<p><strong>고객 데이터 전반</strong></p>
+</li>
+<li>
+<p><strong>매출 정보</strong></p>
+</li>
+<li>
+<p><strong>이메일 정보</strong></p>
+</li>
+<li>
+<p><strong>각종 문서류</strong></p>
+</li>
+<li>
+<p><strong>각종 소스 코드</strong></p>
+</li>
+<li>
+<p><strong>종업원 명부</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>보안 담당자와 서버 담당자의 연계</strong></p>
+<ul>
+<li><strong>서버에는 보안 구멍이 될 수 있는 요소가 다수 존재하며, 이를 위해 서버 및 보안 담당자는 유연한 연계를 통해 일을 계속해 나가야합니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>외부 보안 업체 활용</strong></p>
+<ul>
+<li><strong>부정 침입의 수법은 나날이 발전해나가고 있으며, 최신 부정 침입 수법을 모두 파악하긴 어려우므로 외부 보안 업체를 활용할 수 있습니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>데이터 해시화 암호화</strong></p>
+<ul>
+<li><strong>데이터를 해시화 및 암호화를 통해 데이터의 유출이 발생하더라도 이에 대한 악용을 사전에 예방하는 것 또한 하나의 방법입니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#solution-1"><strong>Solution</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#감시-솔루션"><strong>감시 솔루션</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#기타-solution"><strong>기타 Solution</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#security"><strong>Security</strong></a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

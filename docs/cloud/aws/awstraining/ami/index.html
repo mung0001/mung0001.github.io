@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AWS AMI 생성##저번 장에서는 EC2를 생성해보았습니다. 이번 Marketplace에서 AMI를 사용해서 인스턴스를 만들고, 생성한 인스턴스를 사용해서 AMI를 만들어 보도록하겠습니다. AMI에 대한 학습을 원하는 분들은 AWS AMI를 참고해주세요. #AWS AMI 생성###먼저 EC2 생성을 위해 인스턴스 시작을 클릭 합니다. ##AMI 선택화면이 나오면 AWS Marketplace에서 CentOS를 입력 후, 선택합니다. 이와 같이 Marketplace에서는 사람들이 만들어둔 이미지를 사용할 수 있습니다. ( 단, 유료도 있으니 주의가 필요합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="AWS AMI 생성" />
+<meta property="og:description" content="AWS AMI 생성##저번 장에서는 EC2를 생성해보았습니다. 이번 Marketplace에서 AMI를 사용해서 인스턴스를 만들고, 생성한 인스턴스를 사용해서 AMI를 만들어 보도록하겠습니다. AMI에 대한 학습을 원하는 분들은 AWS AMI를 참고해주세요. #AWS AMI 생성###먼저 EC2 생성을 위해 인스턴스 시작을 클릭 합니다. ##AMI 선택화면이 나오면 AWS Marketplace에서 CentOS를 입력 후, 선택합니다. 이와 같이 Marketplace에서는 사람들이 만들어둔 이미지를 사용할 수 있습니다. ( 단, 유료도 있으니 주의가 필요합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/aws/awstraining/ami/" /><meta property="article:section" content="docs" />
+
+
+
+<title>AWS AMI 생성 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>AWS AMI 생성</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#aws-ami-생성-1"><strong>AWS AMI 생성</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-cli로-ami-생성"><strong>AWS CLI로 AMI 생성</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="aws-ami-생성">
+  <strong>AWS AMI 생성</strong>
+  <a class="anchor" href="#aws-ami-%ec%83%9d%ec%84%b1">#</a>
+</h1>
+<hr>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<ul>
+<li><strong>저번 장에서는 EC2를 생성해보았습니다.</strong></li>
+<li><strong>이번 Marketplace에서 AMI를 사용해서 인스턴스를 만들고, 생성한 인스턴스를 사용해서 AMI를 만들어 보도록하겠습니다.</strong></li>
+<li><strong>AMI에 대한 학습을 원하는 분들은 <a href="">AWS AMI</a>를 참고해주세요.</strong></li>
+</ul>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<blockquote>
+<h2 id="aws-ami-생성-1">
+  <strong>AWS AMI 생성</strong>
+  <a class="anchor" href="#aws-ami-%ec%83%9d%ec%84%b1-1">#</a>
+</h2>
+</blockquote>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p><img src="/AWS/AMI/AMI01.png" alt="" /></p>
+<ul>
+<li><strong>먼저 EC2 생성을 위해 인스턴스 시작을 클릭 합니다.</strong></li>
+</ul>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<p><img src="/AWS/AMI/AMI02.png" alt="" /></p>
+<ul>
+<li><strong>AMI 선택화면이 나오면 AWS Marketplace에서 CentOS를 입력 후, 선택합니다.</strong></li>
+<li><strong>이와 같이 Marketplace에서는 사람들이 만들어둔 이미지를 사용할 수 있습니다. ( 단, 유료도 있으니 주의가 필요합니다. )</strong></li>
+</ul>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p><img src="/AWS/AMI/AMI03.png" alt="" /></p>
+<ul>
+<li><strong>AMI를 선택 후, EC2를 생성합니다. 혹시 생성방법을 모르시는 분들은 <a href="https://mung0001.github.io/docs/cloudcomputing/training/ec2/">EC2 생성</a> 를 참조해주세요</strong></li>
+<li><strong>인스턴스의 생성이 완료되면 퍼블릭 IP로 접속합니다.</strong></li>
+</ul>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo yum install -y httpd
+</span></span><span style="display:flex;"><span>$ sudo systemctl enable httpd
+</span></span></code></pre></div><ul>
+<li><strong>Apache 설치 및 자동시작을 등록합니다.</strong></li>
+<li><strong>퍼블릭 IP로 접속하여 확인해보세요.</strong></li>
+</ul>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<p><img src="/AWS/AMI/AMI04.png" alt="" /></p>
+<ul>
+<li><strong>이제 AMI를 만들어보겠습니다. AWS Console 환경에서 AMI를 만들 인스턴스를 우 클릭 후, 이미지 -&gt; 이미지 생성을 클릭합니다.</strong></li>
+</ul>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<p><img src="/AWS/AMI/AMI05.png" alt="" /></p>
+<ul>
+<li><strong>이미지 이름과 설명을 입력 후, 원하는 볼륨을 설정하여 이미지를 생성합니다.</strong></li>
+</ul>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<p><img src="/AWS/AMI/AMI06.png" alt="" /></p>
+<ul>
+<li><strong>메뉴바의 이미지에서 AMI를 클릭하면, 현재 만든 AMI를 확인할 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<p><img src="/AWS/AMI/AMI07.png" alt="" /></p>
+<ul>
+<li><strong>만든 AMI의 상태가 available이 되면, 다시 인스턴스 생성으로 돌아와 AMI 선택에서 이번에는 AWS Marketplace가 아닌, 나의 AMI를 선택하여 생성합니다.</strong></li>
+<li><strong>생성 후, 퍼블릭 IP로 접속하면 Apache가 설치되어 있는 것을 확인 할 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<ul>
+<li><strong>이와 같이 AMI를 사용하면, 보다 편리하고 빠르개 인스턴스를 생성할 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<h2 id="aws-cli로-ami-생성">
+  <strong>AWS CLI로 AMI 생성</strong>
+  <a class="anchor" href="#aws-cli%eb%a1%9c-ami-%ec%83%9d%ec%84%b1">#</a>
+</h2>
+<hr>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<ul>
+<li><strong>AMI 또한 AWS CLI를 통해 생성이 가능합니다.</strong></li>
+</ul>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws ec2 create-image \
+</span></span><span style="display:flex;"><span>--instance-id [ 인스턴스 ID ]
+</span></span><span style="display:flex;"><span>--name &#34;[ AMI 이름 ]&#34;
+</span></span><span style="display:flex;"><span>--description &#34;[ AMI 설명 ]&#34;
+</span></span><span style="display:flex;"><span># 인스턴스 ID를 가진 인스턴스를 AMI 이름과 AMI 설명을 가진 AMI 이미지로 생성합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ aws ec2 describe-images \
+</span></span><span style="display:flex;"><span>--image-id [ AMI ID ]
+</span></span><span style="display:flex;"><span># AMI ID를 가진 AMI에 대한 정보를 알려줍니다.
+</span></span></code></pre></div><h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<h4 id="예제-1">
+  예제 1.
+  <a class="anchor" href="#%ec%98%88%ec%a0%9c-1">#</a>
+</h4>
+<h4 id="ubuntu1804의-os에서-apache2가-설치되어-있고-자동시작되는-ami를-생성해보세요--단-putty로-접속하여-설치하면-안됩니다-">
+  Ubuntu18.04의 OS에서 Apache2가 설치되어 있고, 자동시작되는 AMI를 생성해보세요. ( 단, Putty로 접속하여 설치하면 안됩니다. )
+  <a class="anchor" href="#ubuntu1804%ec%9d%98-os%ec%97%90%ec%84%9c-apache2%ea%b0%80-%ec%84%a4%ec%b9%98%eb%90%98%ec%96%b4-%ec%9e%88%ea%b3%a0-%ec%9e%90%eb%8f%99%ec%8b%9c%ec%9e%91%eb%90%98%eb%8a%94-ami%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%b4%eb%b3%b4%ec%84%b8%ec%9a%94--%eb%8b%a8-putty%eb%a1%9c-%ec%a0%91%ec%86%8d%ed%95%98%ec%97%ac-%ec%84%a4%ec%b9%98%ed%95%98%eb%a9%b4-%ec%95%88%eb%90%a9%eb%8b%88%eb%8b%a4-">#</a>
+</h4>
+<blockquote>
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>예제 1. 답안</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <blockquote>
+<p><strong>User data를 사용하여, 자동 설치 후 AMI를 생성합니다.</strong></p>
+</blockquote>
+
+    </div>
+  </label>
+</div>
+
+</blockquote>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#aws-ami-생성-1"><strong>AWS AMI 생성</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-cli로-ami-생성"><strong>AWS CLI로 AMI 생성</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

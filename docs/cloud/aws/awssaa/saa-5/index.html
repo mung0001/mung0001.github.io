@@ -1,0 +1,2940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="5장 데이터베이스##5장의 목표##복원력을 갖춘 아키텍처 설계 안정적이고/ 복원력을 갖춘 스토리지를 선택한다.
+어떻게 AWS 서비스를 사용해 결합 해제 매커니즘을 설계할지 결정한다.
+어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.
+어떻게 고 가용성 및/ 내결함성을 갖춘 아키텍처를 설계할지 결정한다.
+#성능이 뛰어난 아키텍처 정의 성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다. ##데이터베이스##데이터베이스를 사용하면 어플리케이션을 데이터를 저장하고 구성하며, 신속하게 검색할 수 있다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="5장 데이터베이스" />
+<meta property="og:description" content="5장 데이터베이스##5장의 목표##복원력을 갖춘 아키텍처 설계 안정적이고/ 복원력을 갖춘 스토리지를 선택한다.
+어떻게 AWS 서비스를 사용해 결합 해제 매커니즘을 설계할지 결정한다.
+어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.
+어떻게 고 가용성 및/ 내결함성을 갖춘 아키텍처를 설계할지 결정한다.
+#성능이 뛰어난 아키텍처 정의 성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다. ##데이터베이스##데이터베이스를 사용하면 어플리케이션을 데이터를 저장하고 구성하며, 신속하게 검색할 수 있다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/aws/awssaa/saa-5/" /><meta property="article:section" content="docs" />
+
+
+
+<title>5장 데이터베이스 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>5장 데이터베이스</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#5장의-목표"><strong>5장의 목표</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터베이스"><strong>데이터베이스</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#관계형-데이터베이스"><strong>관계형 데이터베이스</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#열과-속성"><strong>열과 속성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#다중-테이블-사용"><strong>다중 테이블 사용</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#sql"><strong>SQL</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-쿼리"><strong>데이터 쿼리</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-저장"><strong>데이터 저장</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#온라인-트랙잭션-처리와-온라인-분석-처리"><strong>온라인 트랙잭션 처리와 온라인 분석 처리</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#oltp"><strong>OLTP</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#olap"><strong>OLAP</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#amazone-relational-database-server--이하-rds-"><strong>Amazone Relational Database Server ( 이하 RDS )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#읽기-전용-복제본"><strong>읽기 전용 복제본</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#고-가용성다중-az"><strong>고 가용성(다중-AZ)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#백업과-복구"><strong>백업과 복구</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#자동화된-스냅샷"><strong>자동화된 스냅샷</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#유지-관리-항목"><strong>유지 관리 항목</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#amazon-redshift"><strong>Amazon Redshift</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#비관계형-데이터베이스-no-sql"><strong>비관계형 데이터베이스 No-SQL</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dynamodb"><strong>DynamoDB</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#요약"><strong>요약</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#시험핵심"><strong>시험핵심</strong></a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="5장-데이터베이스">
+  <strong>5장 데이터베이스</strong>
+  <a class="anchor" href="#5%ec%9e%a5-%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%b2%a0%ec%9d%b4%ec%8a%a4">#</a>
+</h1>
+<hr>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="5장의-목표">
+  <strong>5장의 목표</strong>
+  <a class="anchor" href="#5%ec%9e%a5%ec%9d%98-%eb%aa%a9%ed%91%9c">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<ul>
+<li><strong>복원력을 갖춘 아키텍처 설계</strong>
+<ul>
+<li>
+<p><strong>안정적이고/ 복원력을 갖춘 스토리지를 선택한다.</strong></p>
+</li>
+<li>
+<p><strong>어떻게 AWS 서비스를 사용해 결합 해제 매커니즘을 설계할지 결정한다.</strong></p>
+</li>
+<li>
+<p><strong>어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.</strong></p>
+</li>
+<li>
+<p><strong>어떻게 고 가용성 및/ 내결함성을 갖춘 아키텍처를 설계할지 결정한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<ul>
+<li><strong>성능이 뛰어난 아키텍처 정의</strong>
+<ul>
+<li><strong>성능이 뛰어난 스토리지 및 데이터베이스를 선택한다.</strong></li>
+<li><strong>탄력성과 확장성을 갖춘 솔루션을 설계한다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="데이터베이스">
+  <strong>데이터베이스</strong>
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%b2%a0%ec%9d%b4%ec%8a%a4">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>데이터베이스를 사용하면 어플리케이션을 데이터를 저장하고 구성하며, 신속하게 검색할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>단층 파일(Flat File)에 데이터를 저장할 수도 있지만, 데이터양이 증가하게 디면 검색 속도가 느려지는 단점이 있으며, 개발자는 데이터를 저장하고 검색하기 위해 직접 파일 시스템에서 작업하는 대신, 데이터베이스로 작업을 수행함으로써 애플리케이션 개발에 집중하는 것이 가능하다.</strong></p>
+</li>
+<li>
+<p><strong>데이터베이스에 기반한 애플리케이션을 구현할 때, 애플리케이션의 가용성과 성능은 데이터베이스 선택과 구성 방법에 다려 있으며, 데이터베이스는 관계형과 비관계형 두 가지로 나뉘어 지며, 사용자는 데이터 저장, 구성, 검색 방법에 따라 애플리케이션에 가장 적합한 데이터베이스를 선택할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>데이터베이스에 장애가 발생할 때 데이터를 보호 및 복구하는 방법 뿐이 아닌, 애플리케이션의 필요한 수준의 성능과 안정성을 얻기 위해 AWS가 제공하는 데이터베이스 서비스를 학습한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<h3 id="관계형-데이터베이스">
+  <strong>관계형 데이터베이스</strong>
+  <a class="anchor" href="#%ea%b4%80%ea%b3%84%ed%98%95-%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%b2%a0%ec%9d%b4%ec%8a%a4">#</a>
+</h3>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>관계형 데이터베이스는 하나 이상의 테이블을 포함한 열과 행이 있어 스프레드시트로 시각화가 가능한 데이터베이스를 의미한다.</strong></p>
+</li>
+<li>
+<p><strong>관계형 데이터베이스 테이블에서 열은 속성, 행은 레코드 또는 튜플이라고 한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<p> </p>
+<h3 id="열과-속성">
+  <strong>열과 속성</strong>
+  <a class="anchor" href="#%ec%97%b4%ea%b3%bc-%ec%86%8d%ec%84%b1">#</a>
+</h3>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>관계형 데이터베이스 테이블에 데이털르 추가하기 전에, 각 열의 이름과 입력될 데이터의 형식을 사전에 정의해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>열에는 순서가 있으며, 테이블을 생성한 후에는 이 순서를 변경할 수는 없다.</strong></p>
+</li>
+<li>
+<p><strong>열의 순서를 정하려면 테이블에 있는 속성 간에 관계를 만들어야 하며, 여기에서 관계형 데이터베이스라는 용어가 등자하게 되었다.</strong></p>
+</li>
+<li>
+<p><strong>하단은 테이블의 예시를 나타낸다.</strong></p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>사원 ID(숫자)</th>
+<th>부서(문자열)</th>
+<th>성(문자열)</th>
+<th>이름(문자열)</th>
+<th>셍일(날짜)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>전산</td>
+<td>Smith</td>
+<td>Charlotte</td>
+<td>7-16-87</td>
+</tr>
+<tr>
+<td>102</td>
+<td>마케팅</td>
+<td>Colson</td>
+<td>Thomas</td>
+<td>7-4-00</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>데이터는 각 열에서 정의된 형식에 반드시 일치해야 하며, 이와 다르게 숫자에 문자열을 입력하는 등의 작업을 진행할 경우 오류가 발생하게 된다.</strong></li>
+<li><strong>관계형 데이터베이스의 이점은 데이터를 어떻게 쿼리할지 이해할 필요가 없다는 것이며, 데이터가 일관된 형식으로 존재하는 한 필요한 데이털르 원하는 방식으로 얻기 위해 여러 쿼리를 가공할 수 있다.</strong></li>
+<li><strong>관계형 데이터베이스는 임의의 열에 데이터를 쿼리하고 사용자가 데이터를 제공 방식을 지정해야 하는 애플리케이션에 적합하다.</strong></li>
+</ul>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<h3 id="다중-테이블-사용">
+  <strong>다중 테이블 사용</strong>
+  <a class="anchor" href="#%eb%8b%a4%ec%a4%91-%ed%85%8c%ec%9d%b4%eb%b8%94-%ec%82%ac%ec%9a%a9">#</a>
+</h3>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>모든 데이터를 단일 테이블에 저장하면 불피요한 중복이 생기기 때문에 데이터베이스가 불필요하게 커지고 쿼리 속도가 느려지므로, 일반적으로 애플리케이션은 다중 테이블을 연결해서 사용한다.</strong></p>
+</li>
+<li>
+<p><strong>하단은 상단의 테이블을 원하는 자료를 모아 생성한 테이블이다.</strong></p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>부서 ID(숫자)</th>
+<th>부서명(문자열)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>전산</td>
+</tr>
+<tr>
+<td>20</td>
+<td>마케팅</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>사원 테이블의 각 사원 레코드에 부서명을 입력하는 대신 부서 테이블에 레코드를 하나를 생성한 후, 사원 테이블의 사원 ID를 통해 각 부서를 참조하는 것이 가능하다.</strong></li>
+<li><strong>이러한 관계에서 부서 테이블은 상위 테이블(Prarent Table)이며, 사원 테이블은 하위 테이블(Child Table)이다.</strong></li>
+<li><strong>사원 테이블의 부서 열에 있는 값은 부서 테이블의 부서 ID를 참조한다.</strong></li>
+<li><strong>여기서 부서 ID는 기본 키(Primary Key)라 하며, 기본 키는 행을 고유하게 식별하기 위해서 테이블 내에서 유일해야 한다.</strong></li>
+<li><strong>사원 테이블은 부서 ID를 외래 키(Foregin Key)로 참조한다.</strong></li>
+<li><strong>데이터베이스가 여러 테이블의 열이 어떻게 연관됐는지 알 수 있도록 기본 키와 외래 키를 반드시 정해야 하며, 데이터베이스는 외래 키 제약 조건을 활성화해 하위 테이블이 외래 키를 참조할 때 해당 키가 상위 테이블에도 존재하는 지 확인해야 한다.</strong></li>
+</ul>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<h3 id="sql">
+  <strong>SQL</strong>
+  <a class="anchor" href="#sql">#</a>
+</h3>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>관계형 데이터베이스에서는 구조화 질의 언어 SQL(Structured Query Language)를 사용해 데이터를 저장하고 쿼리하고 유지 관리 작업을 수행하므로 SQL 데이터베이스라고 불린다.</strong></p>
+</li>
+<li>
+<p><strong>SQL문은 관계형 데이터베이스 관리 시스템(RDBMS, Relational Database Management System) 마다 조금씩 차이가 있으며, 이는 주요 프로그래밍 언어들에 SQL 문을 만들고 데이터베이스에 입출력하는 라이브러리가 이기 때문으로, AWS 아키텍처로써 SQL까지는 알 필요는 없지만 AWS 관리형 데이터베이스에 작업하기 위한 일반적인 SQL 용어의 개념은 이해할 필요가 있다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<h3 id="데이터-쿼리">
+  <strong>데이터 쿼리</strong>
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%bf%bc%eb%a6%ac">#</a>
+</h3>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>SELECT 문은 SQL 데이터베이스에서 데이터를 쿼리하는 데 사용되며, 데이터베이스에서 조회하고 싶은 특정 열을 지정할 뿐 아니라 모든 열에서 값을 기반으로 쿼리가 가능하다.</strong></p>
+</li>
+<li>
+<p><strong>테이블의 에측 가능한 구조와 외래 키 제약 조건을 사용해서 SELECT 문과 함께 JOIN 절을 사용해 여러 테이블의 데이터를 결합할 수 있다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<h3 id="데이터-저장">
+  <strong>데이터 저장</strong>
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%a0%80%ec%9e%a5">#</a>
+</h3>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<ul>
+<li><strong>INSERT 문을 사용하면 테이블에 직접 데이터를 삽입할 수 있으며, 대량의 레코드를 저장해야 할 때 COPY 명령을 사용하면 적절하게 형식을 ㅁ맞춘 파일에서 지정한 테이블로 데이터를 복사할 수 있다.</strong></li>
+</ul>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<h3 id="온라인-트랙잭션-처리와-온라인-분석-처리">
+  <strong>온라인 트랙잭션 처리와 온라인 분석 처리</strong>
+  <a class="anchor" href="#%ec%98%a8%eb%9d%bc%ec%9d%b8-%ed%8a%b8%eb%9e%99%ec%9e%ad%ec%85%98-%ec%b2%98%eb%a6%ac%ec%99%80-%ec%98%a8%eb%9d%bc%ec%9d%b8-%eb%b6%84%ec%84%9d-%ec%b2%98%eb%a6%ac">#</a>
+</h3>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<ul>
+<li><strong>관계형 데이터베이스는 구성에 따라 온라인 트랜잭션 처리(OLTP, OnLine Transaction Processing)과 온라인 분석 처리(OLAP, Online Analytical Processing)</strong></li>
+</ul>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
+<h3 id="oltp">
+  <strong>OLTP</strong>
+  <a class="anchor" href="#oltp">#</a>
+</h3>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>OLTP 데이터베이스는 초당 몇 회씩 순차적으로 데이터를 버번하게 읽고 쓰는 애플리케이션에 적합하며, OLTP 데이터베이스는 빠른 쿼리에 최적화 되어 있다.</strong></p>
+</li>
+<li>
+<p><strong>OLTP 데이터베이스는 정기적이고 예측 가능한 경향이 있으며, 요구조건에 따라 메모리가 상당량 필요할 수 있으며, 이는 빠른 액세스를 위해 자주 사용하는 테이블의 일부를 메모리에 저장하기 때문이다.</strong></p>
+</li>
+<li>
+<p><strong>OLTP 데이터베이스는 1분당 수백 건의 주문을 처리해야 하는 온라인 주문 시스템을 지원하는 데 적합하다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
+<p> </p>
+<h3 id="olap">
+  <strong>OLAP</strong>
+  <a class="anchor" href="#olap">#</a>
+</h3>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>OLAP 데이터베이스는 복잡한 대형 데이터 세트 쿼리에 최적화 되어 있으며, 상단하 스토리지와 컴퓨팅이 필요하여 데이터웨어하우징 애플리케이션으르 구축하여 여러 OLTP 데이터베이스를 단일 OLAP 데이터베이스로 모으는 것이 일반적이다.</strong></p>
+</li>
+<li>
+<p><strong>보통 대형 OLAP 데이터베이스에서는 복잡한 쿼리로 인한 컴퓨팅 부하를 여러 데이터베이스 서버가 나눠 처리하며, 파티셔닝이라는 프로세스에서 각 서버는 데이터베이스 일부를 맡아 처리한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
+<h3 id="amazone-relational-database-server--이하-rds-">
+  <strong>Amazone Relational Database Server ( 이하 RDS )</strong>
+  <a class="anchor" href="#amazone-relational-database-server--%ec%9d%b4%ed%95%98-rds-">#</a>
+</h3>
+<h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>RDS는 클라우드에서 관계형 데이터베이스 시스템을 실행할 수 있게 하는 관리형 데이터베이스 서비스로, 데이터베이스 시스템 설정, 백업 수행, 고 가용성 보장, 데이터베이스와 기반 운영체제 패치 적용 등과 같은 작업을 수행한다.</strong></p>
+</li>
+<li>
+<p><strong>RDS를 사용하면 데이터베이스 장애로부터 복구, 데이터 복원, 데이터베이스 확장을 쉽게 사용하여 애플리케이션이 요구하는 수준의 가용성과 성능을 달성할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>RDS를 사용해 데이터베이스를 배포할 때, 격리된 데이터베이스 환경인 데이터베이스 인스턴스 구성에서부 시작한다. 데이터베이스 인스턴스는 지정한 가상 프라이빗 클라우드(VPC)에 존재하나, EC2 인스턴스와는 다르게 AWS가 전적으로 데이터베이스 인스턴스를 관리한다. SSH를 사용해 엑세스할 수 없으며, EC2 인스턴스 사이에서도 보이지 않는다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>데이터베이스 엔진</strong>
+<ul>
+<li>
+<p><strong>데이터베이스 엔진은 데이터베이스에 데이터를 저장, 구성, 반환하는 소프트웨어이며, 데이터베이스 인스턴스는 하나의 데이터베이스 엔진만 실행한다.</strong></p>
+</li>
+<li>
+<p><strong>RDS는 다음 여섯 가지 데이터베이스 엔진 중에서 선택할 수 있다.</strong></p>
+<ul>
+<li><strong>MySQL</strong>
+<ul>
+<li><strong>MySQL은 블로그 및 전자상거래와 같은 OLTP 애플리케이션으로 설계되었으며, RDS는 5.5, 5.6, 5.6 등 최신 MySQL Community Edition 버전을 제공한다.</strong></li>
+<li><strong>MySQL은 myISAM과 InnoDB 두 가지 스토리지 엔진에서 하나를 선택할 수 있지만, 유일하게 RDS 관리형 자동 백업과 호환할 수 있는 엔진은 InnoDB이다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
+<ul>
+<li><strong>Maria DB</strong>
+<ul>
+<li><strong>Maria DB는 MySQL과 바이너리 수준의 호환성을 가지면서 기능을 향상한 데이터베이스이다.</strong></li>
+<li><strong>Maria DB는 오라클이 MySQL을 개발한 회사를 인수한 이후, MySQL의 미래를 우려해서 개발되었으며, MariaDB는 XtraDB와 InnoDB 스토리지 엔진을 지원하지만, AWS에서는 RDS와의 호환성을 최대화하기 위해 InnoDB를 사용할 것이 권장된다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
+<ul>
+<li><strong>Oracle</strong>
+<ul>
+<li><strong>Oracle은 가장 널리된 DBMS로 일부 애플리케이션은 데이터베이스사양으로 Oracle을 데이터베이스로 명시하기도 한다. RDS는 다음 Oracle 데이터베이스 에디션을 제공한다.</strong></li>
+<li><strong>Standare Edition One(SE1)</strong></li>
+<li><strong>Standare Edition Two(SE2)</strong></li>
+<li><strong>Standare Edition(SE)</strong></li>
+<li><strong>Enterprise Edition One(SE)</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
+<ul>
+<li><strong>PostgreSQL</strong>
+<ul>
+<li><strong>PostgreSQL은 Oracle과 호환되는 오픈 소스 데이터베이스이며, Oracle 기반으로 애플리케이션을 제작하였어도, 비용을 위해 PostgreSQL을 선택하기도 한다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-38">
+  
+  <a class="anchor" href="#heading-38">#</a>
+</h1>
+<ul>
+<li><strong>Amazone Aurora</strong>
+<ul>
+<li><strong>Amazon Aurora는 Amazon이 MySQL과 PostgreSQL과 바이이너리 수준의 호환성을 가지면서 기능을 향상시킨 데이터베이스이며, 가상 스토리지 계층을 사용해서 하부 스토리지 쓰기 횟수를 줄이기 때문에 MySQL, PostgreSQL보다 쓰기 성능이 우수하며 하단의 세 가디 에디션을 제공한다.</strong></li>
+<li><strong>MySQL 5.6-compatible</strong></li>
+<li><strong>MySQL 5.7-compatible</strong></li>
+<li><strong>PostgreSQL compatible</strong></li>
+<li><strong>Aurora는 에디션에 따라서 PostgreSQL이나 MySQL과 부러오기/ 내보내기 도구, 스냅샷에서 호환되며, 두 오픈 소스 데이터베이스에서 언할하게 마이그레이션 할 수 있도록 설게되어 있다.</strong></li>
+<li><strong>Aurora는 MySQL 호한 에디션에서 InnoDB 스토리지 엔진만 지원하며, MySQL에서 사용할 수 있는 Aurora Backtrack 기능으로 데이터베이스를 지난 72시간 이내 특정 시점으로 단 몇 초 만에 복구가 가능하다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-39">
+  
+  <a class="anchor" href="#heading-39">#</a>
+</h1>
+<ul>
+<li><strong>Microsoft SQL Server</strong>
+<ul>
+<li><strong>여러 Microsoft SQL Server과 Express, Web, Standard, Enterprise 에디션을 사용할 수 있으며, 다양한 기능을 사용해서 데이터베이스 업그레이드를 수행하지 않고도 온프레미스에 배포된 기존 SQL 데이터베이스를 RDS로 마이그레이션 할 수 있다.</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-40">
+  
+  <a class="anchor" href="#heading-40">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>라이센스 고려사항</strong>
+<ul>
+<li>
+<p><strong>RDS는 데이터베이스 엔진을 실행하는 데 필요한 두 가지 소프트웨어 라이선스 모델을 제공하며, 라이센스가 포함된 모델은 RDS 인스턴스 요금에 라이센스 비용이 포함되여 제공된다.</strong></p>
+</li>
+<li>
+<p><strong>기존 보유 라이센스 사용(BTOL : Bring Your Own License)모델을 선택하려면 실행 중인 데이터베이스 엔진의 라이센스를 확보해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>라이센스가 포함된 모델 MariaDB나 MySQL은 GNU GPL(General Public License)v2.0을 사용하며, PostgreSQL은 PostgreSQL 라이선스를 사용하고, 별도의 라이선스 비용은 없다.</strong></p>
+</li>
+<li>
+<p><strong>RDS에서 실행하는 Microsoft SQL 서버의 모든 버전과 에디션은 라이선스를 포함하며, Oracle Database Standard Edition One과 Oracle Database Standard Edition Tow도 라이선스를 포함하고 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-41">
+  
+  <a class="anchor" href="#heading-41">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>데이터베이스 옵션 그룹</strong>
+<ul>
+<li>
+<p><strong>데이터베이스 엔진은 데이터베이스 관리와 보안 향상을 지원하는 다양한 기능을 제공한다.</strong></p>
+</li>
+<li>
+<p><strong>옵션 그룹은 옵션이라는 관리 및 보안 기능을 지정해서 하나 이상의 인스턴스에 적용할 수 있게 한다.</strong></p>
+</li>
+<li>
+<p><strong>옵션을 사용하려면 메모리가 더 필요하므로 인스턴스에 충반한 메모리가 있는지 확인하고 필요한 것만 활성화 해야한다.</strong></p>
+</li>
+<li>
+<p><strong>옵션 그룹에서 사용 가능한 옵션들은 데이터베이스 엔진마다 다르며, Microsoft SQL Server와 Oracle은 TDE를 제공해 스토리지에 쓰기를 수행하기 전에 엔진이 데이터를 암호화하게 한다.</strong></p>
+</li>
+<li>
+<p><strong>MySQL과 MariaDB는 데이터베이스 사용자 로그인 쿼리 활동을 기록하게 하는 감사 플러그인을 제공한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-42">
+  
+  <a class="anchor" href="#heading-42">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>데이터베이스 인스턴스 클래스</strong>
+<ul>
+<li>
+<p><strong>데이터베이스 인스턴스를 시작할 때 처리 성능, 메모리, 네트워크 대역폭, 디스크 처리량이 어느 정도 필요한지를 결정해야 하며, RDS는 여러 데이터베이스를 다양한 성능 요구 사항을 충족하기 위해 다양한 데이터베이스 인스턴스 클래스를 제공한다.</strong></p>
+</li>
+<li>
+<p><strong>선택을 잘못 했거나 요구 사항이 변경될 때 인스턴스를 다른 클래스로 전환할 수도 있으며, RDS 데이터베이스 인스턴스 클래스를 다음의 세 가지 유형으로 분류한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-43">
+  
+  <a class="anchor" href="#heading-43">#</a>
+</h1>
+<ul>
+<li><strong>표준</strong>
+<ul>
+<li><strong>256G 메모리</strong></li>
+<li><strong>64v CPU</strong></li>
+<li><strong>25Gbps 네트워크 대역폭</strong></li>
+<li><strong>10.000Mbps(1.280Mbps) 디스크 처리량</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-44">
+  
+  <a class="anchor" href="#heading-44">#</a>
+</h1>
+<ul>
+<li><strong>메모리 최적화 (대용량의 처리량)</strong>
+<ul>
+<li><strong>3.940GB 메모라</strong></li>
+<li><strong>128 vCPU</strong></li>
+<li><strong>25Gbps 네트워크 대역폭</strong></li>
+<li><strong>14.000Mbps(1.750P 디스크 처리향</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-45">
+  
+  <a class="anchor" href="#heading-45">#</a>
+</h1>
+<ul>
+<li><strong>순간확장 가능 (개발 및 테스트 용도)</strong>
+<ul>
+<li><strong>32GB 메모리</strong></li>
+<li><strong>8 vCPU</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-46">
+  
+  <a class="anchor" href="#heading-46">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>스토리지</strong>
+<ul>
+<li>
+<p><strong>데이터베이스 인스턴스에 적합한 스토리지 선택은 충분한 디스크 공간 확보 이상으로 중요하다.</strong></p>
+</li>
+<li>
+<p><strong>데이터베이스 기반 애플리케이션의 성능 요구사항을 충족하기 위해서는 얼마나 빠른 스토리지를 선택할지도 판단해야 한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-47">
+  
+  <a class="anchor" href="#heading-47">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>IOPS의 이해</strong>
+<ul>
+<li>
+<p><strong>AWS는 초당 입력/ 출력 작업(IOPS, Input/ Output Operations Per Second)를 사용해 스토리지 성능을 측정한다.</strong></p>
+</li>
+<li>
+<p><strong>입출력 작업은 스토리지 읽기 또는 쓰기 작업으로 다른 모든 조건이 같을 때, IOPS가 큰 데이터베이스는 데이터를 저장하고 검색하는 속도가 더 빠르다.</strong></p>
+</li>
+<li>
+<p><strong>RDS는 스토리지 타입에 따라 IOPS를 할당할 수 있으나, 임계 값을 초과할 수는 없다.</strong></p>
+</li>
+<li>
+<p><strong>데이터베이스 스토리지의 속도는 할당된 IOPS 수에 제한되며, 단일 I/O 작업에서 전송할 수 있는 데이터의 양은 데이터베이스 엔진이 사용하는 페이지 크기에 달려 있어, 요구되는 IOPS 수준을 파악하려면 먼저 필요한 디스크 처리량을 확인해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>MySQL과 MariaDB의 페이지 크기는 16KB이므로, 디스크에 16KB의 데이터 쓰기가 하나의 I/O 작업을 구성한다.</strong></p>
+</li>
+<li>
+<p><strong>반면 Oracle, PostgreSQL, Microsoft SQL Server는 8KB 크기의 페이지를 사용하며, 이 경우 16KB의 데이터를 쓰면 I/O 작업이 두 번 이루어진다.</strong></p>
+</li>
+<li>
+<p><strong>페이지 크기가 클수록 단일 I/O 작업에서 더 많은 데이터를 전송할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>페이지의 크기가 16KB라고 하고, 데이터베이스가 초당 102,400KB(100MB)의 데이터를 읽어야 한다고 할 때, 이러한 성능 요구를 달성하려먼 데이터베이스는 매초 16KB 페이지 크기로 6,400 페이지를 읽어여 하며, 페이지 당 I/O 작업 하나로 계산하기 때문에 스토리지와 인스턴스 클래스는 6,400 IOPS를 유지해야 한다. 이 때, IOPS 수와 페이지 크기는 반비례 관계이며, 페이지가 클 수록 같은 처리량을 달성하는 데 필요한 IOPS는 작아진다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-48">
+  
+  <a class="anchor" href="#heading-48">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>스토리지 유형에 따라 IOPS 수가 달라지며, RDS는 다음 세가 유형의 스토리지를 제공한다.</strong>
+<ul>
+<li><strong>범용 SSD</strong>
+<ul>
+<li>
+<p><strong>데이터베이스의 대부분은 범용 SSD(gp2) 스토리지로 충분하다.</strong></p>
+</li>
+<li>
+<p><strong>범용SSD 스토리지는 속도가 빠르고 한 자릿수 밀리초 지연 시간을 제공하며, 최대 16TB의 보륨을 할당할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>RDS는 기본적으로 기가바이트당 3 IOPS 성능을 볼륨에 할당하며, 최대 10,000 IOPS까지 볼륨을 할당할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>볼륨이 커지면 성능이 향상되며, 데이터베이스 엔진의 따라 만들 수 있는 스토리지 볼륨의 최소 크기는 다르다.</strong></p>
+</li>
+<li>
+<p><strong>gp2 스토리지 유형의 최대 처리량은 1,280(160MB)이며, 최대 처리량을 만족하기 위해서는 인스턴스가 적어도 1,280(160MB) 이상의 디스크를 지원할 수 있어여 하며, 처리량을 유지하기 위해 IOPS를 할당해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>예시로 Maria DB를 16KB 페이지 크기로 실행한다고 가저하였을 때, 1,280Mbps 디스크 처리량을 유지하는 데 필요한 IOPS 수는 1,280MBPS/0.128MB = 10,000 IOPS이다.</strong></p>
+</li>
+<li>
+<p><strong>즉, 볼륨에서 1,280Mbps의 디스크 처리량을 달성하려면 10,000 IOPS가 할당되어야 하며,  이것은 gp2에서 할당 가능한 최대 IOPS 수라는 것에 주목한다. 이것을 다시 계산해보면 이 정도의 IOPS를 확보라혀면 볼륨 크기가 3,333,3GB(3.34TB)가 되어야한다.</strong></p>
+</li>
+<li>
+<p><strong>최대 3,000 IOPS가 필요하지만 그렇게 큰 스토리지가 필요하지 않을 때, 필요한 IOPS를 얻기 위해서는 스토리지를 과도하게 할당할 필요는 없다. 1TB보다 작은 볼륨은 일시적으로 3,000 IOPS까지 순간 확장이 가능하며, 순간 확장 지속 시간은 다음과 같은 공식으로 결정된다.</strong></p>
+</li>
+<li>
+<p><strong>순간 확장 지속시간(초) = (Credit 잔약)/[3,000 - 3 X (저장용량(GB))]</strong></p>
+</li>
+<li>
+<p><strong>데이터베이스 인스턴스를 처음 부팅할 때, 5,400,000 IOPS의 Credit 잔액을 갖게 되며 인스턴스가 기준치 이상으로 IOPS를 사용하면 그 만큼 Credit 잔액이 차감된다.</strong></p>
+</li>
+<li>
+<p><strong>Credit 잔액이 고갈되면 순간 확장 기능을 사용할 수 없으며, 예를 들어 200GB 볼륨의 순간 확장 지속시간은 2,250초(37.5분)이다.</strong></p>
+</li>
+<li>
+<p><strong>Creidt 잔액은 1초마다 IOPS 기준치가 보충된다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-49">
+  
+  <a class="anchor" href="#heading-49">#</a>
+</h1>
+<ul>
+<li><strong>프로비저닝된 IOPS SSD(io1)</strong>
+<ul>
+<li>
+<p><strong>앞에 나온 식이 복잡하다면 프로비저닝된 IOPS SSD를 사용하면 인스턴스를 만들 때 필요한 IOPS 수를 간단하게 할당할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>io1 스토리지에서는 순간 확장의 개념이 없으며, 프로비저닝된 IOPS 수는 사용 여부와 관계없이 일정한 성능이 제공되고 그에 따른 비용이 청구되므로, 일관된 짧은 지연 시간에 성능이 필요한 OLTP 데이터베이스에 유용하다.</strong></p>
+</li>
+<li>
+<p><strong>표준 또는 메모리 최적화 인스턴스 클래스를 사용할 때, RDS는 프로비저닝된 IOPS의 성능 변동 범위가 10% 이내로 유지되는 기간을 1년의 99.9%로 보장한다.</strong></p>
+</li>
+<li>
+<p><strong>즉 지정한 IOPS 수보다 낮은 성능이 제공되는 기간이 1년 동안 약 2시간 45분밖에 안 된다는 의미이기도 하다.</strong></p>
+</li>
+<li>
+<p><strong>4,000Mbps 처리량의 표준 인스턴스와 16KB 페이지 크기의 데이터베이스 엔진을 사용한다고 가정하면 최대 31,250 IOPS를 달성할 수 있으며, 이러한 성능을 달성하려면 인스턴스를 생성할 때 32,000 IOPS를 프로비저닝해야 하며, 프로비전이된 IOPS는 1,000단윈로 지정할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>데이터베이스 엔진에 따라 달성할 수 있는 최대 IOPS 수와 할당할 수 있는 스토리지 크기가 다르며, Oracle, PostgreSQL, MariaDB, MySQL, Aurora를 사용하면 100GB ~ 16TB의 스토리지를 선택할 수 있고, 1,000~ 4,000 프로비저닝된 IOPS를 할당할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>Microsoft SQL Server는 최대 16TB 스토리지를 제공한고 1,000~ 32,000 범위의 프로비저닝된 IOPS를 제공한다.</strong></p>
+</li>
+<li>
+<p><strong>IOPS 기가바이트 비율은 최소 50:1(IOPS:GB)이어야 하며, 32,000 IOPS가 필요하다면 최소 640GB의 스토리지를 제공해야 한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-50">
+  
+  <a class="anchor" href="#heading-50">#</a>
+</h1>
+<ul>
+<li><strong>마그네틱 스토리지</strong>
+<ul>
+<li><strong>마그네틱 스토리지는 RDS 구형 인스턴스의 호환성을 위해 제공되며 최대 크기는 4TB, 최대 성능은 1,000 IOPS이다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-51">
+  
+  <a class="anchor" href="#heading-51">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-52">
+  
+  <a class="anchor" href="#heading-52">#</a>
+</h1>
+<h3 id="읽기-전용-복제본">
+  <strong>읽기 전용 복제본</strong>
+  <a class="anchor" href="#%ec%9d%bd%ea%b8%b0-%ec%a0%84%ec%9a%a9-%eb%b3%b5%ec%a0%9c%eb%b3%b8">#</a>
+</h3>
+<h1 id="heading-53">
+  
+  <a class="anchor" href="#heading-53">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>데이터베이스 인스턴스가 성능 요구 사항을 충족하지 못할 때, 병목 현상 발생 위치에 따라 해결 방법을 적용할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>만약 메모리, 컴퓨팅, 네트워크 속도, 디스크 처리량에 문제가 발생 시에 인스턴스 클래스를 업그레이드 하여 데이터베이스를 확장할 수 있는 데 이를 수직확장(Scale Up)이라 한다.</strong></p>
+</li>
+<li>
+<p><strong>리소스를 증가시키는 수직확장 외에 읽기 전용 복제본이라는 추가 데이터베이스 인스턴스를 생성하는 작업을 수행하는 것을 수평확장(Scale Out)이라 한다.</strong></p>
+</li>
+<li>
+<p><strong>수평확장은 Oracle과 Microsoft SQL Server를 제외한 모든 데이터베이스 엔진에 읽기 전용 복제본을 지원하며, Aurora에는 Aurora 복제본이라는 특정 유형의 읽기 전용 복제본이 존재한다.</strong></p>
+</li>
+<li>
+<p><strong>읽기 전용 복제본은 데이터베이스 쿼리만 제공하는 데이터베이스 인스턴스로, 마스터 데이터베이스 인스턴스의 쿼리 부하 부분을 맡는다.</strong></p>
+</li>
+<li>
+<p><strong>즉 마스터 데이터베이스 인스턴스는 데이터 쓰기만을 책임지게 되므로, 읽기 작업량이 매우 많은 애플리케이션에 적합하다.</strong></p>
+</li>
+<li>
+<p><strong>RDS는 최대 5개 읽기 복제본을 둘 수 있으며, Aurora에서는 최대 15개까지 가능하다.</strong></p>
+</li>
+<li>
+<p><strong>마스터로부터 모든 읽기 복제본에 비동기로 복제되므로, 데이터가 마스터 데이터베이스에 저장되는 시점과 그 데이터가 복제본에 저장되는 시점에는 지연이 발생한다.</strong></p>
+</li>
+<li>
+<p><strong>지연이 발생하는 이유로 읽기 전용 복제본은 재해 복구에는 적합하지 않으며, MySQL의 경우 복제 지연 시간을 설정이 가능하다.</strong></p>
+</li>
+<li>
+<p><strong>RDS는 읽기 전용 복제본을 만들면 도메인 이름을 제공하며, 이를 읽기 전용 엔드포인트라고 한다.</strong></p>
+</li>
+<li>
+<p><strong>RDS의 읽기 전용 복제본이 다수 존재할 경우, 해당 복제본 중 하나에 연결해 로드 밸런싱하므로, 사용자는 데이터를 읽기만을 하는 분석 도구만 있다면 그 도구에 읽기 전용 엔드포인트를 지정해 주면 된다.</strong></p>
+</li>
+<li>
+<p><strong>읽기 전용 복제본과 마스터는 서로 다른 가용 영역에 둘 수 있으며, 다른 리전에도 두는 것이 가능하다.</strong></p>
+</li>
+<li>
+<p><strong>마스터 인스턴스는 장애가 발생했을 시에, 읽기 전용 복제본을 마스터로 승격시킬 수는 있지만, 비동기 복제의 특성이 존재하므로 어느 정도의 손실은 감수해야 한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-54">
+  
+  <a class="anchor" href="#heading-54">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-55">
+  
+  <a class="anchor" href="#heading-55">#</a>
+</h1>
+<h3 id="고-가용성다중-az">
+  <strong>고 가용성(다중-AZ)</strong>
+  <a class="anchor" href="#%ea%b3%a0-%ea%b0%80%ec%9a%a9%ec%84%b1%eb%8b%a4%ec%a4%91-az">#</a>
+</h3>
+<h1 id="heading-56">
+  
+  <a class="anchor" href="#heading-56">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>데이터베이스 인스턴스가 중단되어도 데이터베이스를 계속 운영하려면, RDS의 다중 AZ배포를 통해 여러 가용 영역에 데이터베이스 인스턴스를 다수 배포한다.</strong></p>
+</li>
+<li>
+<p><strong>다중 AZ 배포를 사용하면 한 가용 영역에 읽기 및 쓰기를 처리하는 기본 데이터베이스 인스턴스를 두고, 다른 가용 영역에는 예비 데이터베이스 인스턴스를 두게 되며, 기본 인스턴스가 중단되면 보통 2분 이내에 예비 인스턴스로 장애 조치가 수행된다.</strong></p>
+</li>
+<li>
+<p><strong>하단은 인스턴스 중단의 대표적인 이유를 나타낸다.</strong></p>
+<ul>
+<li><strong>가용 영역 중단</strong></li>
+<li><strong>데이터베이스 인스턴스 유형 변경</strong></li>
+<li><strong>인스턴스의 운영 체제 패치</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>데이터베이스 인스턴스를 만들 때나 만든 후라도 다중 AZ를 구성할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>모든 데이터베이스 엔진은 다중 AZ를 지원하지만 구현 방식은 약간씩 다르며, 인스턴스를 만든 후에 다중 AZ를 활성화하면 성능이 상당히 떨어지므로 유지 관리 주기를 짧게 설정해야 한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-57">
+  
+  <a class="anchor" href="#heading-57">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>Oracle, PostgreSQL, MariaDB, MySQL, Microsoft SQL Server의 다중-AZ</strong>
+<ul>
+<li>
+<p><strong>다중 AZ 배포시, 모든 인스턴스가 같은 리전에 존재해야 하며, RDS는 주 인스턴스에서 예비 인스턴스로 데이터를 동기식(Synchronously)으로 복제하며, 이 때 지연시간이 발생할 수 있으므로, EBS 최적화 인스턴스와 프로비저닝된 IOPS SSD 스토리지를 사용해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>예비 인스턴는 읽기 전용 복제본이 아니므로, 읽기 트래픽 처리가 불가능하다.</strong></p>
+</li>
+<li>
+<p><strong>Oracle과 같이 기존 보유 라이선스(BYOL) 모델을 사용할 경우, 기본 인스턴스와 예비 인스턴스 모두 라이선스를 보유하고 있어야 한다.</strong></p>
+</li>
+<li>
+<p><strong>MySQL과 MariaDB는 다른 리전에서 다중 AZ 읽기 전용 복제본을 만들 수 있으며, 다른 리전으로 장애 조치를 수행할 수 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-58">
+  
+  <a class="anchor" href="#heading-58">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>Amazon Aurora에서 다중-AZ</strong>
+<ul>
+<li>
+<p><strong>Amazon Aurora의 다중 AZ 구현 방식은 위에서 설명한 방식과는 차이가 있으며, Amazon Aurora 클러스트는 기본 인스턴스로 구성되며, 항상 기본 인스턴스를 가리키는 클러스터 엔드폰이트를 함께 제공한다.</strong></p>
+</li>
+<li>
+<p><strong>Aurora 클러스터에는 Aurora 복제본도 포함될 수 있으며, 기본 복제본과 모든 복제본은 단일 클러스터 볼륨을 공유한다.</strong></p>
+</li>
+<li>
+<p><strong>이 클러스터 볼륨은 3개 가용 영역에 동시에 복제되며, 필요에 따라 최대 64TB까지 자동으로 확장된다.</strong></p>
+</li>
+<li>
+<p><strong>기본 인스턴스에 자애가 발생했을 때, Aurora 복제본이 없으면 Aurora는 새로운 기본 인스턴스를 생성하고, Aurora 복제본이 있으면 Aurora는 복제본을 기본 복제본으로 승격시킨다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-59">
+  
+  <a class="anchor" href="#heading-59">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-60">
+  
+  <a class="anchor" href="#heading-60">#</a>
+</h1>
+<h3 id="백업과-복구">
+  <strong>백업과 복구</strong>
+  <a class="anchor" href="#%eb%b0%b1%ec%97%85%ea%b3%bc-%eb%b3%b5%ea%b5%ac">#</a>
+</h3>
+<h1 id="heading-61">
+  
+  <a class="anchor" href="#heading-61">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>RDS는 데이터베이스 인스턴스의 EBS 볼륨 스냇샷 기능을 제공한다. 일단 EBS 스냅샷처럼 인스턴스에 기반한 모든 데이터베이스는 스냅샷을 생성하여 S3에 저장할 수 있으며, 스냅샷은 중복성을 위해 같은 리전 여러 영역에 보관된다.</strong></p>
+</li>
+<li>
+<p><strong>Microsoft SQL Server 이외의 데이터베이스 엔진에서는 다중 AZ를 사용하지 않는한 스냅샷을 하면 몇 초 동안 모든 I/O 작업이 일시 중단되므로 사용량이 적은 시간에 스냅샬을 생성해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>백업 및 복구가 필요할 때 고려해야할 두가지 지표가 존재한다.</strong></p>
+<ul>
+<li><strong>복구 목표시간(Recovery Time Objective 이하 RTO)으로 장애 후 데이터르르 복구하고 처리를 재개하는 데까지 최대의 최대 허용시간을 의미한다.</strong></li>
+<li><strong>복구 목표 지점(Recovery Point Object 이하 RPO)으로서 데이터 손실을 허용할 수 있는 최대 기간을 의미하며, RDS 백업 옵션을 선택할 때는 RTO, RPO 요구를 모두 고려해야 한다.</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>RDS 스냅샷을 복수할 때 스냅샷을 새 인스턴스로 복구하는데, 복구 시간은 몇 분정도도 걸리며 크기에 따라 차이가 존재한다.</strong></p>
+</li>
+<li>
+<p><strong>새 인스턴스에 더 빠른 성능의 프로비저닝된 IOPS를 할당하면 복구 시간이 빨라진다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-62">
+  
+  <a class="anchor" href="#heading-62">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-63">
+  
+  <a class="anchor" href="#heading-63">#</a>
+</h1>
+<h3 id="자동화된-스냅샷">
+  <strong>자동화된 스냅샷</strong>
+  <a class="anchor" href="#%ec%9e%90%eb%8f%99%ed%99%94%eb%90%9c-%ec%8a%a4%eb%83%85%ec%83%b7">#</a>
+</h3>
+<h1 id="heading-64">
+  
+  <a class="anchor" href="#heading-64">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>RDS는 매일 30분 백업 기간에 인스턴스 스냅샷을 자동 생성할 수 있으며, 이 기간은 사용자가 지정할 수도 있고 RDS가 자동으로 수행하게 할 수도 있다.</strong></p>
+</li>
+<li>
+<p><strong>스냅샷을 진행하면 성능에 영향을 주기 때문에 데이터베이스가 가장 적게 사용되는 시간에 진행하는 것이 좋으며, RDS 백업을 진행하도록 설정하면, 리전마다 다르게 8시간 간격으로 80분 백업을 진행한다.</strong></p>
+</li>
+<li>
+<p><strong>자동 백업을 사용하면 특정 시점 복구가 가능해지며, 데이터베이스 변경 로그를 5분마다 S3로 저장한다.</strong></p>
+</li>
+<li>
+<p><strong>장애 이벤트가 발생하면 최대 5분 불량의 데이터만 손실이 발생하며, 특정 시점 복구는 몇 시간이 걸릴 수도 있으며, 트랜잭션 로그에 있는 데이터의 양에 따라 차이가 있다.</strong></p>
+</li>
+<li>
+<p><strong>RDS는 자동화된 스냅샷을 일정 기간동안 유지하고, 기간이 지나면 삭제한다. 사용자는 1일에서 35일 사이의 보존 기간을 선택할 수 있으며, 기본 값은 7일이다.</strong></p>
+</li>
+<li>
+<p><strong>자동 스냅샷을 사용하지 않으려면 보존 기간을 0으로 설정하고, 자동 스냅샷을 비활성화하면 기존의 자동화된 스냅샷 모두가 즉시 삭제되고, 특정 시점 복구가 비활성화된다.</strong></p>
+</li>
+<li>
+<p><strong>보존 기간을 0에서 다른 값으로 변경하면 즉시 스냅샷이 트리거된다.</strong></p>
+</li>
+<li>
+<p><strong>데이터베이스 인스턴스에 대해 수동으로 스냅샷을 수행할 수 있으며, 자동화된 스냅샷과 달리 수동 스냅샷은 삭제할 때까지 유지된다. 인스턴스를 삭제하면 사용자는 RDS의 최종 스냅샷 작업 수행 여부와 자동 스냅샷 여부를 선택하야 하고, 최종 스냅샷과 모든 수동 스냅샷은 유지되지만, 자동 백업을 유지하지 않기로 선택한다면 자동 스냅샷은 즉시 삭제된다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-65">
+  
+  <a class="anchor" href="#heading-65">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-66">
+  
+  <a class="anchor" href="#heading-66">#</a>
+</h1>
+<h3 id="유지-관리-항목">
+  <strong>유지 관리 항목</strong>
+  <a class="anchor" href="#%ec%9c%a0%ec%a7%80-%ea%b4%80%eb%a6%ac-%ed%95%ad%eb%aa%a9">#</a>
+</h3>
+<h1 id="heading-67">
+  
+  <a class="anchor" href="#heading-67">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>RDS는 관리형 서비스이므로 패치 및 업그레이드 처리는 AWS가 책임지며, 데이터베이스 인스턴스에서 운영 체제 보안과 안정성 패치 등의 유지 관리를 몇 달에 한 번씩 정기적으로 수행한다.</strong></p>
+</li>
+<li>
+<p><strong>유지 관리 기간 동안 데이터베이스 엔진을 업그레이드 할 수도 있으며, AWS에서 새 버전의 데이터베이스 엔진을 지원하게 되면, 사용자는 새 버전 업그레이드를 결정할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>메이저 버전 업그레이드는 이전 버전과 호환하지 않는 데이터베이스 변경 사항이 포함되어 있을 수 있으므로, 메이저 버전 업그레이드는 사용자가 직접 적용해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>AWS는 데이터베이스를 다시 빌드할 필요가 없는 nonbreaking 마이너 버전 번경을 적용한다.</strong></p>
+</li>
+<li>
+<p><strong>유지 관리 기간을 매주 30분으로 지정해 유지 관리 작업이 수행되는 시기를 결정할 수 있으며, 유지 관리와 백업을 같은 기간에 지정할 수 있다. 유지 관리 기간을 30분으로 설정해도 작업은 유지 관리 기간을 넘어서 진행될 수도 있다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-68">
+  
+  <a class="anchor" href="#heading-68">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-69">
+  
+  <a class="anchor" href="#heading-69">#</a>
+</h1>
+<h3 id="amazon-redshift">
+  <strong>Amazon Redshift</strong>
+  <a class="anchor" href="#amazon-redshift">#</a>
+</h3>
+<h1 id="heading-70">
+  
+  <a class="anchor" href="#heading-70">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Redshift는 OLAP 데이터베이스를 위해 설계된 PostgreSQL 기반의 관리형 데이터베이스 웨어하우스 솔루션으로 RDS와는 별개의 서비스로 존재한다.</strong></p>
+</li>
+<li>
+<p><strong>Redshfit는 열 기반 스토리지를 사용하므로, 저장 속도와 효율성이 향상되고 개별 열의 데이터를 더 빨리 쿼리할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>Redshift는 ODBC와 JDBC 데이터베이스 커넥터를 지원한다.</strong></p>
+</li>
+<li>
+<p><strong>Redshift는 압축 인코딩을 사용해 각 열의 스토리지에서 차지하는 크기를 줄이며, 수동으로 열 단위 압축을 수행할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>COPY 명령을 사용해 파일에서 Redshift 데이터베이스로 데이터를 가져올 때 Redshift는 어떤 열을 압축할지 선택할 수 있다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-71">
+  
+  <a class="anchor" href="#heading-71">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-72">
+  
+  <a class="anchor" href="#heading-72">#</a>
+</h1>
+<ul>
+<li><strong>컴퓨팅 노드</strong>
+<ul>
+<li>
+<p><strong>Redshift 클러스터에는 두 가지 범주로 나눠진 하나 이상의 컴퓨터 노드가 있다. 고밀도는 컴퓨팅 노드의 마그네틱 스토리지에 최대 326TB 데이터를 저장할 수 있고, 고밀도 스토로지 노드의 고속 SSD에 최대 2PB 데이터를 저장할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>둘 이상의 컴퓨팅 노드가 있을 때, Redshift에는 클라이언트와 통신하고 컴퓨팅 노드 간의 통신을 조정하는 리더 노드가 포함되어 있다. 이 리더 노드의 추가 비용은 없다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-73">
+  
+  <a class="anchor" href="#heading-73">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>데이터 분산 스타일</strong>
+<ul>
+<li>
+<p><strong>Redshift 데이터베이스의 행은 컴퓨팅 노드에 걸쳐 분산되며, 데이터가 분산되는 방식은 분산 스타일에 따라 다르다.</strong></p>
+</li>
+<li>
+<p><strong>EVEN 분산은 기본 스타일이며 리더 노드가 데이터를 모든 컴퓨팅 노드에 걸쳐 고르게 분산시킨다.</strong></p>
+</li>
+<li>
+<p><strong>KEY 분산은 열 1개 값에 따라 데이터를 분산시키며, 값은 값을 가진 열은 같은 노드에 저장된다.</strong></p>
+</li>
+<li>
+<p><strong>ALL 분산에서는 테이블이 컴퓨팅 노드에 분산된다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-74">
+  
+  <a class="anchor" href="#heading-74">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-75">
+  
+  <a class="anchor" href="#heading-75">#</a>
+</h1>
+<h3 id="비관계형-데이터베이스-no-sql">
+  <strong>비관계형 데이터베이스 No-SQL</strong>
+  <a class="anchor" href="#%eb%b9%84%ea%b4%80%ea%b3%84%ed%98%95-%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%b2%a0%ec%9d%b4%ec%8a%a4-no-sql">#</a>
+</h3>
+<h1 id="heading-76">
+  
+  <a class="anchor" href="#heading-76">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>비관계형 데이터베이스는 초당 수만 개의 트랜잭션을 일관성 있게 처리하도록 설계되어 있다.</strong></p>
+</li>
+<li>
+<p><strong>관계형 데이터베이스에서 다룰 수 있는 데이터를 저장할 수 있다 하더라도 비관계형 데이터베이스는 비정형 데이터라고 하는 것에 최적화 되어있다.</strong></p>
+</li>
+<li>
+<p><strong>비정형의 데이터는 정형의 데이터가 아니라는 것을 설명하기 위해 사용되지만, 더 정확한 표현은 다중-정형 데이터라고 할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>이와 같이 비관계형 데이터베이스에 저장하는 데이터의 형태는 다양하고 계속변경할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>비관계형과 관계형 데이터베이스에는 공통된 요소가 존재핸다.</strong></p>
+<ul>
+<li>
+<p><strong>비관계형 데이터베이스는 No-SQL 데이터베이스라 불리며, 컬렉션으로 구성된다. 컬렉션은 때로는 테이블이라 불리기도 하며 관계형 데이터베이스에서 행 또는 튜플 개념과 유사한 항목이 테이블에 저장된다.</strong></p>
+</li>
+<li>
+<p><strong>각 항목은 하나 이상의 속성으로 구성되며, 이 속성은 SQL 데이터베이스의 칼럼에 해당한다.</strong></p>
+</li>
+<li>
+<p><strong>속성은 키, 데이터 형식, 값이라고 하는 고유한 이름으로 구성되며, 속성은 키-값 페어라고도 불린다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-77">
+  
+  <a class="anchor" href="#heading-77">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>데이터 저장</strong>
+<ul>
+<li>
+<p><strong>비관계형 데이터베이스가 관계형 데이터베이스와 다른 점은 스키마가 없으며, 테이블의 모든 항목이 같은 속성을 갖도록 요구하지 않는다는 것이다.</strong></p>
+</li>
+<li>
+<p><strong>각 항목에는 테이블 내에서 고유한 값이 있는 기본 속성이 있어야 하는 데, 기본 키는 항목을 고유하게 식별하고 값에 따라 정렬하기 위해서 사용된다.</strong></p>
+</li>
+<li>
+<p><strong>비관계형 데이터베이스는 저장 데이터 형식이 유연할 때 사용하며, 테이블을 만들 때 기본 키 속성 이외에는 속성을 미리 정의하지 않아도 되며, 항목을 작성하거나 수정할 때 바로 속성을 작성하는 데, 이 때 속성은 순서가 없고 서로 관계도 없으므로 비관계형이라고 부른다.</strong></p>
+</li>
+<li>
+<p><strong>비관계형 데이터베이스에서는 여러 테이블에 걸쳐 데이터를 나눈 뒤 이 데이터를 병합해서 쿼리할 수 있는 방법이 없으므로, 애플리케이션은 모든 데이터를 하나의 테이블에 보관하는 경우가 많으며, 이는 중복으로 이어지고 데이터베이스가 커지면서 심각한 스토리지 비용을 발생시킬 수 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-78">
+  
+  <a class="anchor" href="#heading-78">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>데이터 쿼리</strong>
+<ul>
+<li>
+<p><strong>비관계형 데이터베이스는 비정형 데이터를 저장할 수 있는 유연성이 있지만, 쿼리가 제한돼 있다는 단점이 따르며, 기본 키 기반의 쿼리에 최적화 되어 있다.</strong></p>
+</li>
+<li>
+<p><strong>다른 속성을 쿼리할 때 속도가 더 느려지므로 비관계형 데이터베이스는 복잡하거나 임의의 쿼리에는 적합하지 않으며, 테이블을 만들기 전에 데이터에 어떠한 쿼리를 수행할지 정확히 이해해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>하단의 표는 데이터 쿼리의 예시이다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>키</th>
+<th>형식</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>사원 ID(기본 키)</td>
+<td>숫자</td>
+<td>101</td>
+</tr>
+<tr>
+<td>부서</td>
+<td>문자</td>
+<td>전산실</td>
+</tr>
+<tr>
+<td>성</td>
+<td>문자</td>
+<td>Smith</td>
+</tr>
+<tr>
+<td>이름</td>
+<td>문자</td>
+<td>Charlotte</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>비관계형 데이터베이스에서 Charlotte라는 사원이 있는 모든 부서의 목록을 조회하는 것은 어려울 수 있으며, 사원 ID로 항목이 정렬되어 있으므로, 이름의 값이 Charlotte인 항목을 찾으려면 시스템은 모든 항목을 검색해야하는 문제점이 존재한다.</strong></li>
+<li><strong>각 항목의 데이터들은 정형화되어 있지 않기 때문에, 모든 속성마다 검색해서 부서 속성이 포함된 항목을 판별해야 하며, 이러한 쿼리는 느릴 뿐 아니라 컴퓨팅 자원도 상당히 소모한다.</strong></li>
+</ul>
+<h1 id="heading-79">
+  
+  <a class="anchor" href="#heading-79">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>비관계형 데이터베이스 유형</strong>
+<ul>
+<li>
+<p><strong>비관계형 데이터베이스가 키-값 저장소, 문서 지향적 저장소, 그래프 데이터베이스 등으로 분류되며, 기본적으로는 모든 비관계형 데이터베이스는 키-값 저장소 데이터베이스이다.</strong></p>
+</li>
+<li>
+<p><strong>문서 지향적 저장소는 값으로 지정된 문서의 내용을 분석하고 메타 데이터를 추출하는 특정한 비관계형 데이터베이스 애플리케이션이다.</strong></p>
+</li>
+<li>
+<p><strong>그래프 데이터베이스는 여러 항목에 있는 속성 간의 관계를 분석하며, 이는 레코드간의 관계를 묶는 관계형 데이터베이스와는 다르다. 그래프 데이터베이스는 비정형 데이터에서 이와 같은 관계를 찾아낸다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-80">
+  
+  <a class="anchor" href="#heading-80">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-81">
+  
+  <a class="anchor" href="#heading-81">#</a>
+</h1>
+<h3 id="dynamodb">
+  <strong>DynamoDB</strong>
+  <a class="anchor" href="#dynamodb">#</a>
+</h3>
+<h1 id="heading-82">
+  
+  <a class="anchor" href="#heading-82">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>DynamoDB는 초당 수천 개 읽기 및 쓰기를 처리할 수 있는 관리형 비관계형 데이터베이스 서비스로, 데이터를 여러 파티션에 걸쳐 분산시켜서 이러한 성능을 얻는다.</strong></p>
+</li>
+<li>
+<p><strong>파티션은 테이블용 스토리지 할당으로, 여러 가용 영역의 SSD에 백업된다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-83">
+  
+  <a class="anchor" href="#heading-83">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>파티션/ 해시 키</strong>
+<ul>
+<li>
+<p><strong>테이블을 만들 때 기본 키와 데이터 형식을 지정해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>기본 키는 테이블의 항목을 고유하게 식별하므로, 값이 테이블 내에서 유일해야 하며, 하단과 같이 두 가지의 유형의 기본 키를 생성할 수 있다.</strong></p>
+<ul>
+<li>
+<p><strong>파티션 키는 해시키라고도 하며 단일 값을 가지는 기본 키며, 파티션 키만 기본 키로 사용할 때 이를 단순 기본 키라고 한다.</strong></p>
+</li>
+<li>
+<p><strong>이메일 주소, 고유 사용자 이름, 임의로 생성한 ID 식별자 등이 파티션 키로 사용하기에 적합하며, 파티션 키로 저장할 수 있는 최대 크기는 2.048 바이트이다.</strong></p>
+</li>
+<li>
+<p><strong>기본 키로 파티션 키와 정렬 키를 조합해서 사용할 수도 있으며, 이를 복합 키라 한다.</strong></p>
+</li>
+<li>
+<p><strong>파티션 키는 고유할 필요는 없지만, 파티션 키와 정렬 키의 조합은 고유해야 하며, 사람이 성을 파티션 키로 이름을 정렬 키로 쓰는 예를 살펴보자. 이 방법으로 하면 테이블용 복합 키로 다음 값을 사용할 수 있디.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>성(파티션 키)</th>
+<th>이름(정렬 키)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lewis</td>
+<td>Clive</td>
+</tr>
+<tr>
+<td>Lewis</td>
+<td>Warren</td>
+</tr>
+<tr>
+<td>Williams</td>
+<td>Warren</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>성 Lewis나 이름 Warren은 이 테이블에서 유일하지 않지만, 파티션 키와 정령 키를 함께 사용하면 고유한 기본 키를 생성 할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>DynamoDB는 기본 키를 기반으로 파티션에 걸쳐 항목을 배포한다.</strong></p>
+</li>
+<li>
+<p><strong>앞의 예에서 보면 성이 Lewis인 항목은 모두 같은 파티션에 저장되며, DynamoDB는 정렬 키를 사용해서 오름차순으로 항목을 정렬하고, 정렬 키로 저장할 수 있는 최대 크기는 1,024바이트이다.</strong></p>
+</li>
+<li>
+<p><strong>대량의 읽기 쓰기 작업이 발생하는 파티션을 핫 파티션이라 하며, 이는 성능에 악영향을 끼친다.</strong></p>
+</li>
+<li>
+<p><strong>핫 파티션이 되는 것을 피하려면 파티션 키를 최대한 고유하게 생성해야 한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-84">
+  
+  <a class="anchor" href="#heading-84">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>속성과 항목</strong>
+<ul>
+<li>
+<p><strong>각 키-값 페어는 속성을 구성하고, 하나 이상의 속성은 항목을 구성한다. DynamoDB가 저정할 수 있는 항목의 최대 크기는 400KB이며, 이는 대략 50,000개의 영어 단어 수와 동일하다.</strong></p>
+</li>
+<li>
+<p><strong>모든 항목은 최소한 기본 키와 키에 해당하는 값을 가지고 있으며, 속성을 생성할 때는 데이터 형식을 정하고, 하단과 같이 세 가지 범주로 정할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>스칼라</strong></p>
+<ul>
+<li>
+<p><strong>문자열 데이터 형식은 UTF-8 인코딩을 사용해 최대 400KB의 유니코드 데이터를 저장할 수 있고, 문자열 길이는 0보다 커야 한다.</strong></p>
+</li>
+<li>
+<p><strong>숫자 데이터 형식은 최대 38자리의 양수나 음수를 저장하며, DynamoDB는 앞과 끝의 0을 자른다.</strong></p>
+</li>
+<li>
+<p><strong>바이너리 데이터 형식은 바이너리 데이터를 Base64 비트 인코딩 형식으로 저장하며, 문자열 형식과 마찬가지로 최대 항목 크기는 400KB로 제한한다.</strong></p>
+</li>
+<li>
+<p><strong>부울 데이터 형식은 ture 또는 false 값을 저장할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>null 데이터 형식은 정의되지 않았거나 알려지지 않은 속성을 나타내며, null 데이터 형식에는 null 값이 포함되어야 한다.</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>집합</strong></p>
+<ul>
+<li><strong>집합 데이터 형식은 수서가 없는 스칼라 값 목록을 담고 있으며, 값은 집합 내에서 고유해야 하고, 집합에는 하나 이상의 값이 포함되어 있어야 하며, 숫자 집합, 문자열 집합, 바이너리 집합의 작성이 가능하다.</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>문서</strong></p>
+<ul>
+<li><strong>문서 데이터 형식은 스칼라 집합 데이터 형식의 제약을 벗어나는 여러 형식의 데이터를 담을 수 있도록 설계되어 있으며, 최대 32레벨의 문서 형식을 중첩할 수 있다.</strong></li>
+<li><strong>목록 문서 형식은 순서가 지정된 모든 형식의 값 모음을 저장할 수 있다.</strong></li>
+<li><strong>하단은 목록 문서의 예시를 나타낸다</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>Chroes : [&#34;Make coffee&#34;, Groceries : [&#34;milk&#34;, &#34;eggs&#34;, &#34;cheese&#34;], &#34;Pay bills&#34;, Bills:[water: [60], electric:[100]]]
+</span></span><span style="display:flex;"><span># Chroes 목록에는 문자열 데이터, 숫자 데이터, 중첩 목록이 포함되어 있다.
+</span></span></code></pre></div><ul>
+<li><strong>맵 데이터 형식</strong>
+<ul>
+<li><strong>맵 데이터 형식은 정렬되지 않은 키-값 페어의 집합을 JSON과 유사한 형식으로 저장할 수 있으며, 목록형식과 마찬가지로 포함할 수 있는 데이터 형시에는 제한이 없다.</strong></li>
+<li><strong>하단은 맵 데이터 형식의 예시을 나타낸다.</strong></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span><span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">Day</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Friday&#34;</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">Chores</span><span style="color:#f92672">:</span> <span style="color:#f92672">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Make coffee&#34;</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Groceries&#34;</span><span style="color:#f92672">,</span> <span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">Milk</span><span style="color:#f92672">:</span> <span style="color:#75715e">{</span> <span style="color:#a6e22e">Quantity</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span><span style="color:#75715e">}</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">eggs</span><span style="color:#f92672">:</span> <span style="color:#75715e">{</span> <span style="color:#a6e22e">Quantity</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">12</span><span style="color:#75715e">}</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Mow the lawn&#34;</span><span style="color:#f92672">],</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">}</span>
+</span></span></code></pre></div><h1 id="heading-85">
+  
+  <a class="anchor" href="#heading-85">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>처리용량</strong>
+<ul>
+<li>
+<p><strong>테이블을 만들 때 애플리테이션에 필요한 초당 읽기 및 쓰기 횟수를 지정해야 하며, 이를 프로비저닝된 처리량이라 한다.</strong></p>
+</li>
+<li>
+<p><strong>DynamoDB는 테이블을을 만들 때 지정한 읽기 용량 단위 (Read Capacity Unitss : RCU) 및 쓰기 용량 단위 (Write Capacity Units : WCU) 갯수로 파티션을 예약한다.</strong></p>
+</li>
+<li>
+<p><strong>최대 4KB 크기의 항목을 기준으로 할 때, 1개의 RCU는 1개의 강력한 일관된 초당읽리를 제공하며, 일관된 읽기를 매초 8KB를 읽으려면 2개의 RCU가 필요하다.</strong></p>
+</li>
+<li>
+<p><strong>1개의 RCU는 초당 2개의 최종적 일관된 읽기를 제공하며, 최종적 일관된 읽기를 매초 8KB 항목을 읽으려면 1개의 RCU만 있으면 된다.</strong></p>
+</li>
+<li>
+<p><strong>데이터 쓰기의 경우, 1개의 WCU는 최대 1KB 크기의 항목 1개 쓰기를 제공하며, 1KB 미만인 항목을 초당 100개 쓰기 해야 한다면, 100개 WCU가 필요하다. 2KB 항목을 초당 10개 쓰기 위해서는 20개의 WCU가 필요하다.</strong></p>
+</li>
+<li>
+<p><strong>DynamoDB가 제공하는 최대 처리 용량은 사용자가 지정하며, 이를 초과하면 DynamoDB요청을 차단하고, &lsquo;HTTP 400(bad request)&rsquo; 오류를 발생시킬 수 있다. AWS SDK는 조정 후 요청 재시도 기능을 지원하므로, 요청을 조정해서 애플리케이션이 데이터를 읽거나 쓰는 것을 막을 수는 있지만, 애플리케이션의 반응 속도는 느려지게 된다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-86">
+  
+  <a class="anchor" href="#heading-86">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>Auto Scaling</strong>
+<ul>
+<li>
+<p><strong>테이블에 얼마만큼 처리량을 프로비저닝해야 할지 정확하지 않거나 시간에 따라 처리량의 요구가 달라질 것으로 예상할 때, Auto Scaling을 구성해서 정해 놓은 임계치에 가깝게 도달하면 자동으로 프로비저닝된 처리량을 증가하게 할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>Auto Scaling을 구성할 때 최소/ 최대 RCU와 WCU를 지정하고, 목표 사용률을 지정한다.</strong></p>
+</li>
+<li>
+<p><strong>DynamoDB는 RCU와 WCU를 자동으로 조정해서 이 목표 사용률에 따라 사용률을 유지한다.</strong></p>
+</li>
+<li>
+<p><strong>예를 들어 70%, 최소 10 RCU, 최대 50 RCU로 설정하는 경우, 21 RCU를 소비할 때 Auto Scaling은 프로비저닝된 용량을 약 30 RCU로 조정한다.</strong></p>
+</li>
+<li>
+<p><strong>소비자가 14 RCU로 떨어지면 Auto Scaling은 프로비저닝된 처리량을 20 RCU로 축소한다.</strong></p>
+</li>
+<li>
+<p><strong>적절한 사용률을 설정하면 작업에 균형을 이룰 수 있으나, 사용률을 높게 설정할수록 프로비정된 용량을 초과할 가능성은 커지고, 요청이 제한될 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>반면 사용률을 너무 낮게 설정하면 필요하지 않은 용량에 비용을 지급하게 된다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-87">
+  
+  <a class="anchor" href="#heading-87">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>예약 용령</strong>
+<ul>
+<li><strong>100 이상의 WCU나 RCU가 필요할 때 예약 처리 용량을 구매해서 비용을 절약할 수 있다. RCU와 WCU를 별도로 예약해야 하며, 각각 100,000유닛으로 제한되 있으며, 1년이나 3년 사용 기간을 약정하고 선불로 지급한다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-88">
+  
+  <a class="anchor" href="#heading-88">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>데이터 읽기</strong>
+<ul>
+<li>
+<p><strong>DynamoDB는 테이블에서 두 가지 방식으로 데이터를 읽는다.</strong></p>
+</li>
+<li>
+<p><strong>스캔은 모든 테이블 항목을 나열하며, 읽기 집약적 작업이므로 프로비저닝된 용량 단위를 모두 사용할 가능성이 있다.</strong></p>
+</li>
+<li>
+<p><strong>쿼리는 파티션 키값을 기반으로 항목을 반환하며, 쿼리를 수행할 때 검색하는 파티션의 키의 값은 항목의 갑과 정확히 일치해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>테이블에 정렬 키가 포함되어 있으면, 정렬 키로도 쿼리할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>정렬 키를 사용하면 정확한 값, 키보다 크거나 작은 값, 값의 범위, 값의 시작 등으로 더 유연하게 검색을 수행할 수 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-89">
+  
+  <a class="anchor" href="#heading-89">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>보조 인덱스</strong>
+<ul>
+<li>
+<p><strong>보조 인덱스는 DynamoDB에서 데이터를 쿼리할 때 발생하는 두 가지 문제를 해결한다.</strong></p>
+</li>
+<li>
+<p><strong>사용자는 특정 항목을 쿼리할 때 파티션 키를 정확하게 지정해야한 한다.</strong></p>
+</li>
+<li>
+<p><strong>보조 인덱스를 만들 때 기본 테이블에서 인덱스로 복사할 속성을 선택할 수 있는 데, 이를 프로젝션된 속성 (Projected Attributes)라고 한다.</strong></p>
+</li>
+<li>
+<p><strong>보조 인덱스는 항상 기본 테이블의 파티션 키와 정렬 키 속성을 포함하며, 파티션 키와 정렬 키, 키 값만은 선택해서 복사하거나 키 값에 다른 속성을 추가해서 필요한 방식으로 데이터를 추출할 수 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-90">
+  
+  <a class="anchor" href="#heading-90">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>글로벌 보조 인덱스</strong>
+<ul>
+<li>
+<p><strong>테이블을 만든 후에 언제든지 글로벌 보조 인덱스 (Global Secondary Index)를 만들 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>글로벌 보조 인덱스에서 파티션 키와 해시 키는 기본 테이블과 다를 수 있지만, 기본 키 선택과 같은 규칙이 여전히 적용된다.</strong></p>
+</li>
+<li>
+<p><strong>인덱스의 기본 키는 고유하게 유지해야 하고, 복합 기본 키를 사용하면 파티션 키에서 같은 값을 가진 항목이 같은 파티션에 저장된다.</strong></p>
+</li>
+<li>
+<p><strong>글로벌 보조 인덱스에서 읽을 때는 항상 읽기 일관성이 유지되며, 항모을 테이블에 추가하더라도 즉시 보조 인덱스로 복사되지 않을 수 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-91">
+  
+  <a class="anchor" href="#heading-91">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>로컬 보조 인덱스</strong>
+<ul>
+<li>
+<p><strong>로컬 보조 인덱스 (Local Secondary Index : LSI)는 기본 테이블과 동시에 만들어져야 하며 일단 만들면 삭제할 수 없다.</strong></p>
+</li>
+<li>
+<p><strong>파티션 키는 항상 기본 테이블과 같아야 하지만, 정령 키는 다룰 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>예를 들어 기본 테이블에 LastName이 파티션 키이고 FirstName이 정렬 키이면, 파티션 키를 LastName이고 정렬 키를 BirthYear로 하는 로컬 보조 인덱스를 만들 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>로컬 보조 인덱스의 읽기 시간을 얼마에 지정하냐에 ㄸ라 강력한 일관성 또는 최종적 일관성이 될 수 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-92">
+  
+  <a class="anchor" href="#heading-92">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-93">
+  
+  <a class="anchor" href="#heading-93">#</a>
+</h1>
+<h3 id="요약">
+  <strong>요약</strong>
+  <a class="anchor" href="#%ec%9a%94%ec%95%bd">#</a>
+</h3>
+<h1 id="heading-94">
+  
+  <a class="anchor" href="#heading-94">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>관계형 데이터베이스 또는 비관계형 데이터베이스의 사용 여부는 애플리케이션의 속성에 달려 있다.</strong></p>
+</li>
+<li>
+<p><strong>관계형 데이터베이스는 오랫동안 사용되어 왔으며, 많은 애플리케이션 개발자들은 기본적으로 관게형 데이터베이스에 맞게 데이터를 설계한다.</strong></p>
+</li>
+<li>
+<p><strong>애플리케이션은 특정 데이터베이스의 SDK를 사용해 데이터베이스와 상호 작용하므로 애플리케이션의 요구에 따라 특정 데이터베이스 엔진이 필요하게 된다.</strong></p>
+</li>
+<li>
+<p><strong>이러한 이유로 AWS RDS는 가장 널리 사용되는 6개 데이터베이스 엔진과 광범위한 버전 호환성을 지원함, 이는 애플리케이션을 변경하지 않고 기존 데이터베이스를 가져와서 RDS로 옮길 수 있도록 하려는 것이다.</strong></p>
+</li>
+<li>
+<p><strong>비관계형 데이터베이스는 최근에 창안되었으며, DynamoDBsms Amazon이 소유권을 가지고 있는 비관계형 데이터베이스 서비스이다.</strong></p>
+</li>
+<li>
+<p><strong>보통 관계형 데이터베이스용으로 설계된 애플리케이션과는 달리 온프레미스에서 배포해 사용하던 비관게형 데이터베이스용 애플리케이션은 대부분 코드를 변겨해야 DynamoDB로 이식할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>따라서 DynamoDB를 사용하는 애플리케이션을 개발하거나 재개발할 때 개발자에게 데이터베이스를 설계하는 법을 자문할 수도 있다.</strong></p>
+</li>
+<li>
+<p><strong>이 경우 파티션 키, 정렬 키, 데이터 형식을 선택하는 방법과 애플리에키션 성능 요구를 충족하기 위해 처리 용량을 할당하는 법을 이해하는 것이 중요하다.</strong></p>
+</li>
+<li>
+<p><strong>AWS 아키텍트는 적절한 데이터베이스와 AWS 서비스를 사용해서 성능 및 가용성 요구사항을 결정하고 올바르게 구현해야 한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-95">
+  
+  <a class="anchor" href="#heading-95">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-96">
+  
+  <a class="anchor" href="#heading-96">#</a>
+</h1>
+<h2 id="시험핵심">
+  <strong>시험핵심</strong>
+  <a class="anchor" href="#%ec%8b%9c%ed%97%98%ed%95%b5%ec%8b%ac">#</a>
+</h2>
+<h1 id="heading-97">
+  
+  <a class="anchor" href="#heading-97">#</a>
+</h1>
+<ul>
+<li><strong>관계형 데이터베이스와 비관계형 데이터베이스의 차이점을 이해한다.</strong>
+<ul>
+<li>
+<p><strong>관계형 데이터베이스에서는 테이블을 생성하기 전에 속성을 정해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>테이블에 입력하는 모든 데이터는 사전에 정한 속성과 부합해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>데이터를 읽고 쓰는 데 SQL을 사용하므로 이를 SQL 데이터베이스라고도 한다.</strong></p>
+</li>
+<li>
+<p><strong>비 관계형 데이터베이스에서 테이블을 만들 때 요구하는 것은 기본 키 속성뿐이다.</strong></p>
+</li>
+<li>
+<p><strong>테이블의 모든 항목은 기본 키를 포함해야 한다는 것만 제외하면 속성을 다양하게 가질 수 있다는 유연성도 있다.</strong></p>
+</li>
+<li>
+<p><strong>비관계형 데이터베이스 또는 NoSQL 데이터베이스는 비정형 데이터를 저장한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-98">
+  
+  <a class="anchor" href="#heading-98">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>RDS가 지원하는 여러 데이터베이스 엔진을 파악하자</strong>
+<ul>
+<li>
+<p><strong>RDS는 MySQL, MariaDB, Oracle, PostgreSQL, Amazon Aurora, Microsoft SQL Server와 같이 많이 사용되는 대부분 데이터베이스 엔진을 지원한다.</strong></p>
+</li>
+<li>
+<p><strong>기본 보유 라이센스 사용과 라이센스 포함된 모델의 차이점을 이해해야 하며, 어떤 데이터베이스 엔진이 어떤 라이센스 모델을 지원하는 지 파악해야 한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-99">
+  
+  <a class="anchor" href="#heading-99">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>특정 스토리지 요구 사항에 맞는 인스턴스 클래스와 스토리지 유형으르 선택할 수 있어야 한다.</strong>
+<ul>
+<li>
+<p><strong>메모리와 스토리지가 관계형 데이터베이스의 제약 요인이 되는 경향이 있으므로 데이터베이스의 성능 요구 사항을 기반으로 올바른 인스턴스 클래스와 스토리지 유형을 선택하는 방법을 알고 있어야 한다.</strong></p>
+</li>
+<li>
+<p><strong>표준, 메모리 최적화, 순간 확장 가능의 세 가지 인스턴스 클래스를 파악해야 하며, 또한 세 클래스의 범용 SSD(gp2), 프로비저닝된 IOPS SSD(io1), 마그네틱 세 가지 스토리지 유형과 어떤 관련이 있는지 알아야 한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-100">
+  
+  <a class="anchor" href="#heading-100">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>다른 AZ와 읽기 전용 복제본의 차이점을 이해한다.</strong>
+<ul>
+<li>
+<p><strong>다중 AZ와 읽기 전용 복제본 모두 추가 데이터베이스 인스턴스를 만든다는 점에서는 연관되지만, 몇 가지 주요 차이점이 존재한다.</strong></p>
+</li>
+<li>
+<p><strong>읽기 전용 복제보은 쿼리를 처리할 수 있지만, 다중 AZ 배포에서 예비 인스턴스는 불가능하다.</strong></p>
+</li>
+<li>
+<p><strong>마스터 인스턴스는 읽기 전용 복제본에 비동기로 복제하지만, 다중 AZ 구성에서는 기본 인스턴스에서 예비 인스턴스로 동기로 데이터 복제가 이루어 진다.</strong></p>
+</li>
+<li>
+<p><strong>Auroa 복제본은 작동 방식과 Aurora 다중 AZ가 다른 데이터베이스 엔진의 AZ와 어떻게 다른지 이해해야 한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-101">
+  
+  <a class="anchor" href="#heading-101">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>DynamoDB 테이블에 적합한 기본 키 형식을 결정할 수 있어야 한다.</strong>
+<ul>
+<li>
+<p><strong>DynamoDB 테이블은 두 가지 종류의 기본 키를 제공한다.</strong></p>
+</li>
+<li>
+<p><strong>단순 기본 키 파티션 키로만 구성되며 단일 값을 가지고 있다. DynamoDB는 파티션 키의 값에 따라 항목을 파티션에 분산시킨다.</strong></p>
+</li>
+<li>
+<p><strong>단순 기본 키를 사용할 때 파티션 키는 테이블 내에서 고유해야 하며, 복합 기본 키는 파티션 키와 정렬 키로 구성된다.</strong></p>
+</li>
+<li>
+<p><strong>파티션 키는 고유할 필요는 없지만, 파티션 키와 정렬 키의 조합은 고유해야한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-102">
+  
+  <a class="anchor" href="#heading-102">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>DynamoDB 처리 용량이 어떻게 작동하는지 파악한다.</strong>
+<ul>
+<li>
+<p><strong>테이블을 생성할 때 쓰기 용량 단위와 읽기 용량 단위로 처리용량을 지저해야 한다.</strong></p>
+</li>
+<li>
+<p><strong>다음 두 가지의 따라 읽기 작업이 읽기 용량 단위를 얼마나 소모할지 결정된다.</strong></p>
+<ul>
+<li><strong>읽기 작업이 강력하게 읽관적인지 최종적으로 일관적인지와 1초에 읽을 데이터의 용량이다.</strong></li>
+<li><strong>최대 4KB 크기 항모글 강력한 일관된 읽기 작업을 할 때 하나의 읽기 용량을 단위로 사용한다.</strong></li>
+<li><strong>최종적으로 일관된 읽기작업은 그 절반을 소비한다.</strong></li>
+<li><strong>쓰기 용량 단위 하나를 사용해 쓰기 작업을 하면 초당 하나의 1KB 항목을 쓸 수 있다.</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-103">
+  
+  <a class="anchor" href="#heading-103">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#5장의-목표"><strong>5장의 목표</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터베이스"><strong>데이터베이스</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#관계형-데이터베이스"><strong>관계형 데이터베이스</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#열과-속성"><strong>열과 속성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#다중-테이블-사용"><strong>다중 테이블 사용</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#sql"><strong>SQL</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-쿼리"><strong>데이터 쿼리</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-저장"><strong>데이터 저장</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#온라인-트랙잭션-처리와-온라인-분석-처리"><strong>온라인 트랙잭션 처리와 온라인 분석 처리</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#oltp"><strong>OLTP</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#olap"><strong>OLAP</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#amazone-relational-database-server--이하-rds-"><strong>Amazone Relational Database Server ( 이하 RDS )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#읽기-전용-복제본"><strong>읽기 전용 복제본</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#고-가용성다중-az"><strong>고 가용성(다중-AZ)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#백업과-복구"><strong>백업과 복구</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#자동화된-스냅샷"><strong>자동화된 스냅샷</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#유지-관리-항목"><strong>유지 관리 항목</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#amazon-redshift"><strong>Amazon Redshift</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#비관계형-데이터베이스-no-sql"><strong>비관계형 데이터베이스 No-SQL</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dynamodb"><strong>DynamoDB</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#요약"><strong>요약</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#시험핵심"><strong>시험핵심</strong></a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

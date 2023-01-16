@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AWS SES 메일 시스템 구축##이번 장에서는 SES로 메일을 전송하는 시스템을 구축하여 보겠습니다. 단, SES 사용을 위해서는 버지나이 북부, 오레곤, 아일랜드만이 사용이 가능합니다. #메일 시스템 구축 순서
+1. Simple Email Service ( SES ) 사용
+2. EC2 인스턴스로 메일 서버를 구축
+3. 서드 파티 도구를 사용
+#AWS SES 메일 시스템 구축###먼저, SES 서비스를 이용하기 위해 AWS에서 SES를 검색합니다. ##Email Addresses &gt; Verify a New Email Address를 클릭하여 인증을 진행합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="AWS SES 메일 시스템 구축" />
+<meta property="og:description" content="AWS SES 메일 시스템 구축##이번 장에서는 SES로 메일을 전송하는 시스템을 구축하여 보겠습니다. 단, SES 사용을 위해서는 버지나이 북부, 오레곤, 아일랜드만이 사용이 가능합니다. #메일 시스템 구축 순서
+1. Simple Email Service ( SES ) 사용
+2. EC2 인스턴스로 메일 서버를 구축
+3. 서드 파티 도구를 사용
+#AWS SES 메일 시스템 구축###먼저, SES 서비스를 이용하기 위해 AWS에서 SES를 검색합니다. ##Email Addresses &gt; Verify a New Email Address를 클릭하여 인증을 진행합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/aws/awstraining/ses/" /><meta property="article:section" content="docs" />
+
+
+
+<title>AWS SES 메일 시스템 구축 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>AWS SES 메일 시스템 구축</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#aws-ses-메일-시스템-구축-1"><strong>AWS SES 메일 시스템 구축</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="aws-ses-메일-시스템-구축">
+  <strong>AWS SES 메일 시스템 구축</strong>
+  <a class="anchor" href="#aws-ses-%eb%a9%94%ec%9d%bc-%ec%8b%9c%ec%8a%a4%ed%85%9c-%ea%b5%ac%ec%b6%95">#</a>
+</h1>
+<hr>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<ul>
+<li><strong>이번 장에서는 SES로 메일을 전송하는 시스템을 구축하여 보겠습니다.</strong></li>
+<li><strong>단, SES 사용을 위해서는 버지나이 북부, 오레곤, 아일랜드만이 사용이 가능합니다.</strong></li>
+</ul>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<blockquote>
+<p><strong>메일 시스템 구축 순서</strong><br>
+<strong>1. Simple Email Service ( SES ) 사용</strong><br>
+<strong>2. EC2 인스턴스로 메일 서버를 구축</strong><br>
+<strong>3. 서드 파티 도구를 사용</strong></p>
+</blockquote>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<blockquote>
+<h2 id="aws-ses-메일-시스템-구축-1">
+  <strong>AWS SES 메일 시스템 구축</strong>
+  <a class="anchor" href="#aws-ses-%eb%a9%94%ec%9d%bc-%ec%8b%9c%ec%8a%a4%ed%85%9c-%ea%b5%ac%ec%b6%95-1">#</a>
+</h2>
+</blockquote>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<p><img src="/AWS/SES/SES01.png" alt="" /></p>
+<ul>
+<li><strong>먼저, SES 서비스를 이용하기 위해 <a href="https://aws.com">AWS</a>에서 SES를 검색합니다.</strong></li>
+</ul>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<p><img src="/AWS/SES/SES02.png" alt="" /><br>
+<img src="/AWS/SES/SES02-1.png" alt="" /></p>
+<ul>
+<li><strong>Email Addresses &gt; Verify a New Email Address를 클릭하여 인증을 진행합니다.</strong></li>
+<li><strong>사용하실 메일주소를 입력 후, 인증을 진행합니다.</strong></li>
+</ul>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<p><img src="/AWS/SES/SES03.png" alt="" /></p>
+<ul>
+<li><strong>사용하실 메일로 접속하여 인증을 진행하면, 다음과 같이 verified 항목이 체크됩니다.</strong></li>
+</ul>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<p><img src="/AWS/SES/SES04.png" alt="" /></p>
+<ul>
+<li><strong>확인을 위해 등록하신 메일주소를 체크하고 상단의 Send a Test Email을 클릭합니다.</strong></li>
+</ul>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<p><img src="/AWS/SES/SES05.png" alt="" /></p>
+<ul>
+<li><strong>값을 입력하고 이메일을 발송합니다.</strong></li>
+</ul>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<p><img src="/AWS/SES/SES06.png" alt="" /></p>
+<ul>
+<li><strong>메일주소로 접속하면, 메일이 도착한 것을 확인할 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<p><img src="/AWS/SES/SES07.png" alt="" /></p>
+<ul>
+<li><strong>좌측 메뉴의 Sending Statistics를 클릭하면 현재 메일 사용량과 제한을 알 수 있습니다.</strong></li>
+<li><strong>또한 현재 그림에는 보이지 않지만 상단의 Request a Sending Limit Increase를 클릭하면 허용량을 증가시키는 것이 가능합니다.</strong></li>
+<li><strong>단, 신청 시, 완료까지 평균적으로 1일의 시간이 소요됩니다.</strong></li>
+</ul>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<p><img src="/AWS/SES/SES0.png" alt="" /></p>
+<ul>
+<li><strong>메일함 완성 후에 업데이트 예정</strong></li>
+</ul>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<p><img src="/AWS/SES/SES0.png" alt="" /></p>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<p><img src="/AWS/SES/SES0.png" alt="" /></p>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<p><img src="/AWS/SES/SES0.png" alt="" /></p>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+<h4 id="예제-1">
+  예제 1.
+  <a class="anchor" href="#%ec%98%88%ec%a0%9c-1">#</a>
+</h4>
+<h4 id="다음의-인스턴스를-생성해보세요">
+  다음의 인스턴스를 생성해보세요.
+  <a class="anchor" href="#%eb%8b%a4%ec%9d%8c%ec%9d%98-%ec%9d%b8%ec%8a%a4%ed%84%b4%ec%8a%a4%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%b4%eb%b3%b4%ec%84%b8%ec%9a%94">#</a>
+</h4>
+<blockquote>
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>예제 1. 답안</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <ul>
+<li>사용자 계정을 생성할 시, 엑세스 유형에서 프로그래밍 방식 엑세스만을 선택합니다.</li>
+<li>정책에서 admin의 권한을 선택 후 생성합니다.</li>
+</ul>
+
+    </div>
+  </label>
+</div>
+
+</blockquote>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#aws-ses-메일-시스템-구축-1"><strong>AWS SES 메일 시스템 구축</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Naver Cloud AI##AI 플랫폼인 Clova, PaPago
+딥러닝을 위한 Tensorflow가 탑재된 이미지를 제공
+#Chat bot##CS나 주문 시스템과 같은 고객 대응을 로봇으로 대체하는 상품
+학습을 통해 적절한 답변을 자동화, CSR, CSS와 연동을 통해 메신저 뿐만 아니라 음성 채팅까지 확장 가능
+라인, 톡톡, 페이스북 메신저와 연동
+##Clova Speech Recognition ( CSR )##음성을 텍스트로 변환
+국내에서 가장 높은 한국어 인식률
+Android 및 IOS SDK 제공">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Naver Cloud AI" />
+<meta property="og:description" content="Naver Cloud AI##AI 플랫폼인 Clova, PaPago
+딥러닝을 위한 Tensorflow가 탑재된 이미지를 제공
+#Chat bot##CS나 주문 시스템과 같은 고객 대응을 로봇으로 대체하는 상품
+학습을 통해 적절한 답변을 자동화, CSR, CSS와 연동을 통해 메신저 뿐만 아니라 음성 채팅까지 확장 가능
+라인, 톡톡, 페이스북 메신저와 연동
+##Clova Speech Recognition ( CSR )##음성을 텍스트로 변환
+국내에서 가장 높은 한국어 인식률
+Android 및 IOS SDK 제공" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/nc/ncptraining/nca06/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Naver Cloud AI | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Naver Cloud AI</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#naver-cloud-ai"><strong>Naver Cloud AI</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#chat-bot"><strong>Chat bot</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#clova-speech-recognition--csr-"><strong>Clova Speech Recognition ( CSR )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#clova-speech-synthesis--css-"><strong>Clova Speech Synthesis ( CSS )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#clova-premium-voice"><strong>Clova Premium Voice</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#clova-ocr"><strong>Clova OCR</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#papago-nmt--neutrl-machine-translation-"><strong>PaPago NMT ( Neutrl Machine Translation )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pose-estimation"><strong>Pose Estimation</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#object-detection"><strong>Object Detection</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h2 id="naver-cloud-ai">
+  <strong>Naver Cloud AI</strong>
+  <a class="anchor" href="#naver-cloud-ai">#</a>
+</h2>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>AI 플랫폼인 Clova, PaPago</strong></p>
+</li>
+<li>
+<p><strong>딥러닝을 위한 Tensorflow가 탑재된 이미지를 제공</strong></p>
+</li>
+</ul>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<p> </p>
+<h3 id="chat-bot">
+  <strong>Chat bot</strong>
+  <a class="anchor" href="#chat-bot">#</a>
+</h3>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>CS나 주문 시스템과 같은 고객 대응을 로봇으로 대체하는 상품</strong></p>
+<ul>
+<li>
+<p><strong>학습을 통해 적절한 답변을 자동화, CSR, CSS와 연동을 통해 메신저 뿐만 아니라 음성 채팅까지 확장 가능</strong></p>
+</li>
+<li>
+<p><strong>라인, 톡톡, 페이스북 메신저와 연동</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="clova-speech-recognition--csr-">
+  <strong>Clova Speech Recognition ( CSR )</strong>
+  <a class="anchor" href="#clova-speech-recognition--csr-">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>음성을 텍스트로 변환</strong></p>
+<ul>
+<li>
+<p><strong>국내에서 가장 높은 한국어 인식률</strong></p>
+</li>
+<li>
+<p><strong>Android 및 IOS SDK 제공</strong></p>
+</li>
+<li>
+<p><strong>Rest API 제공</strong></p>
+</li>
+<li>
+<p><strong>한국어, 영어, 일어, 중국어(간체) 제공</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<h3 id="clova-speech-synthesis--css-">
+  <strong>Clova Speech Synthesis ( CSS )</strong>
+  <a class="anchor" href="#clova-speech-synthesis--css-">#</a>
+</h3>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>텍스트를 음성으로 변환</strong></p>
+<ul>
+<li>
+<p><strong>자연스러운 합성음</strong></p>
+</li>
+<li>
+<p><strong>총 9개의 음색 제공 ( 언어별 2개 이하 )</strong></p>
+</li>
+<li>
+<p><strong>Rest API 제공</strong></p>
+</li>
+<li>
+<p><strong>한국어, 영어, 일어 중국어, 스페인어 제공</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="clova-premium-voice">
+  <strong>Clova Premium Voice</strong>
+  <a class="anchor" href="#clova-premium-voice">#</a>
+</h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>사랑의 음성에 가까운 고품질 합성을 제공</strong></p>
+<ul>
+<li>
+<p><strong>실시간 음성 생성이 가능한 Neural Vocoder를 사용하여 실제 사람의 음성에 가까운 자연스럽고 깨끗한 합성음을 제공</strong></p>
+</li>
+<li>
+<p><strong>입력한 텍스트를 RESTful API 방식으로 전달하면 서버에서 인식해 mp3 포맷의 스트리밍 데이터나 파일로 리턴</strong></p>
+</li>
+<li>
+<p><strong>엄격한 뉴스 앵커 스타일, 부드러운 친구 스타일, 담백한 스타일 등 다양한 감정과 스타일의 합성기가 제공될 예정</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h3 id="clova-ocr">
+  <strong>Clova OCR</strong>
+  <a class="anchor" href="#clova-ocr">#</a>
+</h3>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>진보된 템플릿 기능</strong></p>
+<ul>
+<li><strong>지정된 템플릿에 맞추어 데이터를 추출하고 데이터베이스화</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h3 id="papago-nmt--neutrl-machine-translation-">
+  <strong>PaPago NMT ( Neutrl Machine Translation )</strong>
+  <a class="anchor" href="#papago-nmt--neutrl-machine-translation-">#</a>
+</h3>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>통계 기반 번역</strong></p>
+<ul>
+<li>
+<p><strong>번역할 언어의 종류를 자동 감지</strong></p>
+</li>
+<li>
+<p><strong>학습을 통해 높아지는 성능</strong></p>
+</li>
+<li>
+<p><strong>Rest API 제공</strong></p>
+</li>
+<li>
+<p><strong>자연스러운 번역 기술 제공</strong></p>
+</li>
+<li>
+<p><strong>영어, 일어, 중국어 제공</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<h3 id="pose-estimation">
+  <strong>Pose Estimation</strong>
+  <a class="anchor" href="#pose-estimation">#</a>
+</h3>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>이미지내의 주요 신체 영역을 인식하고 해당 영역을 좌표로 변환</strong></p>
+<ul>
+<li>
+<p><strong>이미지를 분석하여 신체 영역 좌표를 결과값으로 제공</strong></p>
+</li>
+<li>
+<p><strong>RESTful API 방식으로 제공</strong></p>
+</li>
+<li>
+<p><strong>이미지는 2MB 이하로 제한</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<h3 id="object-detection">
+  <strong>Object Detection</strong>
+  <a class="anchor" href="#object-detection">#</a>
+</h3>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>이미지내의 객체를 탐지하고 객체를 분석</strong></p>
+<ul>
+<li>
+<p><strong>객체를 탐지하여 객체의 이름, 바운딩 박스, 탐지 정확률을 제공</strong></p>
+</li>
+<li>
+<p><strong>RESTful API 방식으로 제공</strong></p>
+</li>
+<li>
+<p><strong>이미지는 2MB 이하로 제한</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#naver-cloud-ai"><strong>Naver Cloud AI</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#chat-bot"><strong>Chat bot</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#clova-speech-recognition--csr-"><strong>Clova Speech Recognition ( CSR )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#clova-speech-synthesis--css-"><strong>Clova Speech Synthesis ( CSS )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#clova-premium-voice"><strong>Clova Premium Voice</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#clova-ocr"><strong>Clova OCR</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#papago-nmt--neutrl-machine-translation-"><strong>PaPago NMT ( Neutrl Machine Translation )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pose-estimation"><strong>Pose Estimation</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#object-detection"><strong>Object Detection</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

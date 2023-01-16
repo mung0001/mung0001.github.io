@@ -1,0 +1,2301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="가상화 기술과 Naver Cloud##전가상화와 반가상화##전가상화
+하드웨어 전체를 가상화하는 방식
+하드웨어를 관리하는 하이퍼바이저(DOMO)가 VM들에게 하드웨어 리소스를 할당하는 방식
+하이퍼바이저가 모든 리소스를 관리하는 만큼 성능적으로 오버헤드가 발생
+기본적으로 Cloud 업체들이 제공하는 방식은 전가상화 방식을 사용
+#반가상화
+전 가상화의 성능 저하를 해결하고자 모든 명령에 대해 DOMO를 통해 요청하는 방식이 아닌 하이퍼콜을 통해 직업 요청
+하이퍼콜을 사용하기 위해서는 VM의 OS가 이를 지원해야 함
+#Hyper Visor 하드웨어와 VM 사이에 VM과 하드웨어를 관리하기 위한 가상화 관리 소프트웨어 ##Server의 특징##CPU">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Professional 가상화" />
+<meta property="og:description" content="가상화 기술과 Naver Cloud##전가상화와 반가상화##전가상화
+하드웨어 전체를 가상화하는 방식
+하드웨어를 관리하는 하이퍼바이저(DOMO)가 VM들에게 하드웨어 리소스를 할당하는 방식
+하이퍼바이저가 모든 리소스를 관리하는 만큼 성능적으로 오버헤드가 발생
+기본적으로 Cloud 업체들이 제공하는 방식은 전가상화 방식을 사용
+#반가상화
+전 가상화의 성능 저하를 해결하고자 모든 명령에 대해 DOMO를 통해 요청하는 방식이 아닌 하이퍼콜을 통해 직업 요청
+하이퍼콜을 사용하기 위해서는 VM의 OS가 이를 지원해야 함
+#Hyper Visor 하드웨어와 VM 사이에 VM과 하드웨어를 관리하기 위한 가상화 관리 소프트웨어 ##Server의 특징##CPU" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/nc/ncptraining/ncp01/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Professional 가상화 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Professional 가상화</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#가상화-기술과-naver-cloud"><strong>가상화 기술과 Naver Cloud</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#전가상화와-반가상화"><strong>전가상화와 반가상화</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server의-특징"><strong>Server의 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server의-종류"><strong>Server의 종류</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#preinstall-image"><strong>Preinstall Image</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server-operation---서버생성"><strong>Server Operation - 서버생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server-operation---상세변경"><strong>Server Operation - 상세변경</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server-operation"><strong>Server Operation</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#storage"><strong>Storage</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h2 id="가상화-기술과-naver-cloud">
+  <strong>가상화 기술과 Naver Cloud</strong>
+  <a class="anchor" href="#%ea%b0%80%ec%83%81%ed%99%94-%ea%b8%b0%ec%88%a0%ea%b3%bc-naver-cloud">#</a>
+</h2>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<p> </p>
+<h3 id="전가상화와-반가상화">
+  <strong>전가상화와 반가상화</strong>
+  <a class="anchor" href="#%ec%a0%84%ea%b0%80%ec%83%81%ed%99%94%ec%99%80-%eb%b0%98%ea%b0%80%ec%83%81%ed%99%94">#</a>
+</h3>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>전가상화</strong></p>
+<ul>
+<li>
+<p><strong>하드웨어 전체를 가상화하는 방식</strong></p>
+</li>
+<li>
+<p><strong>하드웨어를 관리하는 하이퍼바이저(DOMO)가 VM들에게 하드웨어 리소스를 할당하는 방식</strong></p>
+</li>
+<li>
+<p><strong>하이퍼바이저가 모든 리소스를 관리하는 만큼 성능적으로 오버헤드가 발생</strong></p>
+</li>
+<li>
+<p><strong>기본적으로 Cloud 업체들이 제공하는 방식은 전가상화 방식을 사용</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>반가상화</strong></p>
+<ul>
+<li>
+<p><strong>전 가상화의 성능 저하를 해결하고자 모든 명령에 대해 DOMO를 통해 요청하는 방식이 아닌 하이퍼콜을 통해 직업 요청</strong></p>
+</li>
+<li>
+<p><strong>하이퍼콜을 사용하기 위해서는 VM의 OS가 이를 지원해야 함</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p> </p>
+<blockquote>
+<ul>
+<li><strong>Hyper Visor</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>하드웨어와 VM 사이에 VM과 하드웨어를 관리하기 위한 가상화 관리 소프트웨어</strong></li>
+</ul>
+</blockquote>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<h3 id="server의-특징">
+  <strong>Server의 특징</strong>
+  <a class="anchor" href="#server%ec%9d%98-%ed%8a%b9%ec%a7%95">#</a>
+</h3>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>CPU</strong></p>
+<ul>
+<li>
+<p><strong>vCPU 단위로 할당</strong></p>
+</li>
+<li>
+<p><strong>CPU의 Core가 vCPU에 맵핑되는 구조</strong></p>
+</li>
+<li>
+<p><strong>Over Commit 허용</strong></p>
+</li>
+<li>
+<p><strong>스펙 변경 가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Memory</strong></p>
+<ul>
+<li>
+<p><strong>GB 단위로 할당</strong></p>
+</li>
+<li>
+<p><strong>Over Commit 허용 안함</strong></p>
+</li>
+<li>
+<p><strong>스펙 변경 가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>HDD</strong></p>
+<ul>
+<li>
+<p><strong>OS 영역이 기본 할당 (50GB or 100GB)</strong></p>
+</li>
+<li>
+<p><strong>OS 영역은 용량 확장이나 축소 불가</strong></p>
+</li>
+<li>
+<p><strong>SSD 타입과 HDD타입으로 구분</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>GPU</strong></p>
+<ul>
+<li>
+<p><strong>GPU 단위로 할당 (GPU Core 단위로 할당하지 않음)</strong></p>
+</li>
+<li>
+<p><strong>Pass Through 방식으로 제공</strong></p>
+</li>
+<li>
+<blockquote>
+<p><strong>Passthrough는 NIC, 디스크 컨트롤러, HBA, USB 컨트롤러와 사운드 카드 등의 PCI 장치를 직접적으로 Guest에게 할당하여 바로 제어하고 접근 할 수 있도록 하는 방법</strong></p>
+</blockquote>
+</li>
+<li>
+<p><strong>최대 2장까지 제공</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Network</strong></p>
+<ul>
+<li>
+<p><strong>Physical 10Gbs</strong></p>
+</li>
+<li>
+<p><strong>Logical 1Gbps</strong></p>
+</li>
+<li>
+<p><strong>실제로 500Mbps~ 1Gbps 제공(Rx+TX)</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<h3 id="server의-종류">
+  <strong>Server의 종류</strong>
+  <a class="anchor" href="#server%ec%9d%98-%ec%a2%85%eb%a5%98">#</a>
+</h3>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Micro Server</strong></p>
+<ul>
+<li>
+<p><strong>회원 가입 후 결제 정보를 등록한 월부터 1년간 무료로 사용할 수 있는 상품 ( 1세데 only )</strong></p>
+</li>
+<li>
+<p><strong>테스으 용도 및 네이버 클라우드 플랫폼 기능 테스트 용도로 적당</strong></p>
+</li>
+<li>
+<p><strong>해외 리전은 제공을 하지 않음</strong></p>
+</li>
+<li>
+<p><strong>추가 디스크 사용 불가</strong></p>
+</li>
+<li>
+<p><strong>서버 사양</strong></p>
+<ul>
+<li><strong>1vCPU, 1G RAM, 50G HDD</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>지원 OS</strong></p>
+<ul>
+<li><strong>CentOS 6.3 6.6 7.2 7.3</strong></li>
+<li><strong>Ubuntu 12.04, 14.04, 16.04</strong></li>
+<li><strong>Windows 지원 X</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Compact Type</strong></p>
+<ul>
+<li>
+<p><strong>유료 서버중 사양이 낮은 서버로 구성</strong></p>
+</li>
+<li>
+<p><strong>Server 스펙변경이 가능</strong></p>
+</li>
+<li>
+<p><strong>작은 웹서버 용도로 적당</strong></p>
+</li>
+<li>
+<p><strong>서버 사양 및 지원 OS</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>부팅 디스크 크기</th>
+<th>CPU</th>
+<th>Memory</th>
+<th>OS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50GB</td>
+<td>1</td>
+<td>2</td>
+<td>CentOS, Ubuntu</td>
+</tr>
+<tr>
+<td>50GB</td>
+<td>2</td>
+<td>2</td>
+<td>CentOS, Ubuntu, Windows</td>
+</tr>
+<tr>
+<td>100GB</td>
+<td>2</td>
+<td>2</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Standard Type</strong></p>
+<ul>
+<li><strong>일반적으로 사용하는 서버 타입</strong></li>
+<li><strong>Sever 스펙변경이 가능</strong></li>
+<li><strong>서버 사양 지원 OS</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>CPU</th>
+<th>Memory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2</td>
+<td>16</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>8</td>
+</tr>
+<tr>
+<td>4</td>
+<td>16</td>
+</tr>
+<tr>
+<td>8</td>
+<td>8</td>
+</tr>
+<tr>
+<td>8</td>
+<td>16</td>
+</tr>
+<tr>
+<td>8</td>
+<td>32</td>
+</tr>
+<tr>
+<td>12</td>
+<td>16</td>
+</tr>
+<tr>
+<td>12</td>
+<td>32</td>
+</tr>
+<tr>
+<td>16</td>
+<td>16</td>
+</tr>
+<tr>
+<td>16</td>
+<td>32</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>OS(50GB) : CentOS, Ubuntu, Windows</strong></li>
+<li><strong>OS(100GB) : Windows</strong></li>
+</ul>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>High Memory Type</strong></p>
+<ul>
+<li>
+<p><strong>대용량 메모리가 필요한 경우</strong></p>
+</li>
+<li>
+<p><strong>서버 사양 및 지원 OS</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>CPU</th>
+<th>Memory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CentOS, Ubuntu</td>
+<td>8</td>
+<td>64</td>
+</tr>
+<tr>
+<td>CentOS, Ubuntu</td>
+<td>16</td>
+<td>64</td>
+</tr>
+<tr>
+<td>CentOS, Ubuntu</td>
+<td>16</td>
+<td>128</td>
+</tr>
+<tr>
+<td>CentOS, Ubuntu</td>
+<td>32</td>
+<td>256</td>
+</tr>
+<tr>
+<td>CentOS 5.x, 6.x</td>
+<td>8</td>
+<td>64</td>
+</tr>
+<tr>
+<td>CentOS 5.x, 6.x</td>
+<td>16</td>
+<td>64</td>
+</tr>
+<tr>
+<td>CentOS 5.x, 6.x</td>
+<td>16</td>
+<td>128</td>
+</tr>
+<tr>
+<td>CentOS 5.x, 6.x</td>
+<td>32</td>
+<td>128</td>
+</tr>
+<tr>
+<td>Windows 2012</td>
+<td>8</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Windows 2012</td>
+<td>16</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Windows 2012</td>
+<td>16</td>
+<td>128</td>
+</tr>
+<tr>
+<td>Windows 2016</td>
+<td>8</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Windows 2016</td>
+<td>16</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Windows 2016</td>
+<td>16</td>
+<td>128</td>
+</tr>
+<tr>
+<td>Windows 2016</td>
+<td>32</td>
+<td>128</td>
+</tr>
+<tr>
+<td>Windows 2016</td>
+<td>32</td>
+<td>256</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>부팅 디스크의 크기 : 50GB / Windows : 100GB</li>
+</ul>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>VDS Server</strong></p>
+<ul>
+<li>
+<p><strong>Virtual Dedicated Server</strong></p>
+<ul>
+<li><strong>기존 클라우드 일반적인 서버가 물리서버 기반에 하이퍼바이저 위에 다수의 VM이 생성되는 것을 비교하여 VDS는 하나의 VM만을 생성</strong></li>
+<li><strong>Over Commit이 발생하지 않음</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Bare Metal Server</strong></p>
+<ul>
+<li>
+<p><strong>하이퍼바이저 없이 하드웨어의 자원을 그대로 사용</strong></p>
+<ul>
+<li><strong>기본적인 관리는 IPMI를 통해 관리</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>오라클과 같이 라이센스상 클라우드에 대한 제약이 있는 경우 사용</strong></p>
+</li>
+<li>
+<p><strong>서바 사양 및 지원 OS</strong></p>
+<ul>
+<li><strong>RAID 5, 1+0 지원</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<h3 id="preinstall-image">
+  <strong>Preinstall Image</strong>
+  <a class="anchor" href="#preinstall-image">#</a>
+</h3>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>DBMS</strong></p>
+<ul>
+<li>
+<p><strong>MySQL 5.7, 5.6</strong></p>
+</li>
+<li>
+<p><strong>Cubrid 9.2</strong></p>
+</li>
+<li>
+<p><strong>Redis 3.2.8</strong></p>
+</li>
+<li>
+<p><strong>MariaDB 10.2</strong></p>
+</li>
+<li>
+<p><strong>PostgreSQl 9.4</strong></p>
+</li>
+<li>
+<p><strong>MS-SQL 2008(std), 2012(std), 2014(std), 2016(exp, std), 2017(exp,std), 2019(std)</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>Application</strong></p>
+<ul>
+<li>
+<p><strong>LAMP</strong></p>
+</li>
+<li>
+<p><strong>WordPress</strong></p>
+</li>
+<li>
+<p><strong>Pinpoint</strong></p>
+</li>
+<li>
+<p><strong>RabbitMQ</strong></p>
+</li>
+<li>
+<p><strong>Tensorflow</strong></p>
+</li>
+<li>
+<p><strong>Jenkins 2.73</strong></p>
+</li>
+<li>
+<p><strong>WebtoB, JEUS</strong></p>
+</li>
+<li>
+<p><strong>Tomcat</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
+<h3 id="server-operation---서버생성">
+  <strong>Server Operation - 서버생성</strong>
+  <a class="anchor" href="#server-operation---%ec%84%9c%eb%b2%84%ec%83%9d%ec%84%b1">#</a>
+</h3>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
+<ol>
+<li>
+<p><strong>리전 선택</strong></p>
+</li>
+<li>
+<p><strong>부팅 디스크 이미지 선택</strong></p>
+</li>
+<li>
+<p><strong>OS 선택</strong></p>
+</li>
+<li>
+<p><strong>서버 설정</strong></p>
+</li>
+</ol>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
+<p> </p>
+<h3 id="server-operation---상세변경">
+  <strong>Server Operation - 상세변경</strong>
+  <a class="anchor" href="#server-operation---%ec%83%81%ec%84%b8%eb%b3%80%ea%b2%bd">#</a>
+</h3>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>서버 스펙 변경</strong></p>
+<ul>
+<li>
+<p><strong>동일한 서버 타입에 한하여 CPU, Memory 스펙 변경가능</strong></p>
+</li>
+<li>
+<p><strong>반드시 정지된 상태에서 변경</strong></p>
+</li>
+<li>
+<p><strong>다른 서버 타입으로 변경하고자 할 경우에는 내 서버 이미지를 생성하여 해당 이미지로 다른 타입의 서버 생성</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>내 서버 이미지 생성</strong></p>
+<ul>
+<li>
+<p><strong>서버의 현재 상태를 이미지로 생성</strong></p>
+</li>
+<li>
+<p><strong>이미지 생성시 반드시 정지된 상태에서 변경</strong></p>
+</li>
+<li>
+<p><strong>타 리전에 서버 생성시에는 먼저 대상 리전으로 복제</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>유사 서버 생성</strong></p>
+<ul>
+<li>
+<p><strong>선택한 서버와 동일한 스펙의 서버 생성시 사용</strong></p>
+</li>
+<li>
+<p><strong>서버 이미지, 스토리지, 서버 타입, 요금제, Zone, 인증키, ACG 정보를 동일하게 적용</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>스트로지 생성</strong></p>
+<ul>
+<li>
+<p><strong>OS 영역 50GB에 추가적으로 디스크 생성시 사용</strong></p>
+</li>
+<li>
+<p><strong>최소 10GB에서 최대 2TB까지 디스크 생성 가능</strong></p>
+</li>
+<li>
+<p><strong>최대 16개 디스크 추가 가능</strong></p>
+</li>
+<li>
+<p><strong>생성된 스토리지는 용량 증설 가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>스토리지 용량 변경</strong></p>
+<ul>
+<li>
+<p><strong>disk manager을 통해 늘어나거나, 증가되는 disk 용량을 관리</strong></p>
+</li>
+<li>
+<p><strong>최소 10GB로 최대 2TB까지 Disk 생성 가능</strong></p>
+</li>
+<li>
+<p><strong>최대 16개 디스크 사용 가능</strong></p>
+</li>
+<li>
+<p><strong>스토리지에 대해 용량 증설가능</strong></p>
+</li>
+<li>
+<p><strong>용량 증설은 서버 정지 혹은 연결 해제 후 가능</strong></p>
+</li>
+<li>
+<p><strong>용량 증설후 데이터 삭제 없이 해당 공간을 사용하기 위해서는 볼륨 관리 툴을 이용하여야만 함</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>서버그룹 생성 및 관리</strong></p>
+<ul>
+<li><strong>서버그룹은 서버 리스트 뷰에서 필터링을 위한 용도</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>반납 보호 설정</strong></p>
+<ul>
+<li><strong>사용자 부주의로 서버가 반납되지 않도록 설정하는 기능</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>상세 모니터링</strong></p>
+<ul>
+<li>
+<p><strong>서버들의 모니터링에 대해 보다 상세하게 모니터링하는 기능</strong></p>
+</li>
+<li>
+<p><strong>상세 모니터링 설정시 해당 서버는 모니터링 서비스에서 정보 확인 가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-38">
+  
+  <a class="anchor" href="#heading-38">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>네트워크 모니터링 설정</strong></p>
+<ul>
+<li>
+<p><strong>서버에서 발생하는 트래픽에 대한 상세 내용을 확인할 수 있다록 설정하는 기능</strong></p>
+</li>
+<li>
+<p><strong>네트윅 트래픽 모니터링 서비스에서 정보 확인 가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-39">
+  
+  <a class="anchor" href="#heading-39">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>서버 이름 변경</strong></p>
+<ul>
+<li>
+<p><strong>MC에서 보여지는 서버 이름 변경</strong></p>
+</li>
+<li>
+<p><strong>실제 서버명이 변경되지는 않음</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-40">
+  
+  <a class="anchor" href="#heading-40">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>인증키 변경</strong></p>
+<ul>
+<li>
+<p><strong>서버 생성시 생성한 인증키를 다른 인증키로 변경</strong></p>
+</li>
+<li>
+<p><strong>초기 패스워드를 변경하지 않은 상태에서 인증키 분실시 초기 패스워드를 확인하기 위해 인증키 변경이 필요</strong></p>
+</li>
+<li>
+<p><strong>인증키 변경시에는 ID인 이메일로 인증 정보 전송</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-41">
+  
+  <a class="anchor" href="#heading-41">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-42">
+  
+  <a class="anchor" href="#heading-42">#</a>
+</h1>
+<hr>
+<h1 id="heading-43">
+  
+  <a class="anchor" href="#heading-43">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-44">
+  
+  <a class="anchor" href="#heading-44">#</a>
+</h1>
+<h3 id="server-operation">
+  <strong>Server Operation</strong>
+  <a class="anchor" href="#server-operation">#</a>
+</h3>
+<h1 id="heading-45">
+  
+  <a class="anchor" href="#heading-45">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>서버 스펙 변경</strong></p>
+<ul>
+<li>
+<p><strong>동일한 서버 타입에 한하여 CPU, Mem 스펙 변경가능</strong></p>
+</li>
+<li>
+<p><strong>정지된 상태에서만 가능</strong></p>
+</li>
+<li>
+<p><strong>다른 서버 타입으로 변경하고자 할 경우에는 내 서버 이미질르 생성하여 해당 이미지로 다른 타입의 서버 생성</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-46">
+  
+  <a class="anchor" href="#heading-46">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>내 서버 이미지 생성</strong></p>
+<ul>
+<li>
+<p><strong>서버의 현재 상태를 이미지로 생성</strong></p>
+</li>
+<li>
+<p><strong>이미 생성 또한 정지된 상태에서 가능</strong></p>
+</li>
+<li>
+<p><strong>타 리전에 서버 생성시 먼저 대상 리전으로 복제필요</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-47">
+  
+  <a class="anchor" href="#heading-47">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>유사 서버 생성</strong></p>
+<ul>
+<li>
+<p><strong>선택한 서버와 동일한 스펙의 서버 생성시 사용</strong></p>
+</li>
+<li>
+<p><strong>서버 이미지, 스토리지, 서버 타입, 요금제, Zone, 인증키, ACG 정보를 동이하게 적용</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-48">
+  
+  <a class="anchor" href="#heading-48">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-49">
+  
+  <a class="anchor" href="#heading-49">#</a>
+</h1>
+<hr>
+<h1 id="heading-50">
+  
+  <a class="anchor" href="#heading-50">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-51">
+  
+  <a class="anchor" href="#heading-51">#</a>
+</h1>
+<h3 id="storage">
+  <strong>Storage</strong>
+  <a class="anchor" href="#storage">#</a>
+</h3>
+<h1 id="heading-52">
+  
+  <a class="anchor" href="#heading-52">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Block Storage</strong></p>
+<ul>
+<li>
+<p><strong>볼륨 타입은 HDD/ SDD 제공</strong></p>
+<ul>
+<li><strong>SDD는 10G 당 40IOPS를 가지며 최대 20000을 넘지않음</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>기본 스토리지 Linux(50G), Windows(100G) 고정</strong></p>
+</li>
+<li>
+<p><strong>볼륨 용량은 최소 10G ~ 2,000G로 선택가능</strong></p>
+</li>
+<li>
+<p><strong>VM당 최대 16개의 볼륨 attach기능</strong></p>
+</li>
+<li>
+<p><strong>볼륨 detach 기능제공</strong></p>
+</li>
+<li>
+<p><strong>볼륨 upsizing 기능제공</strong></p>
+</li>
+<li>
+<p><strong>볼륨 live snapshot 가능</strong></p>
+</li>
+<li>
+<p><strong>AZ 간 스토리지 팜이 분리되어 존 간 공유 불가능</strong></p>
+</li>
+<li>
+<p><strong>볼륨 Detach 기능</strong></p>
+<ul>
+<li><strong>VM에 이미 할당 된 볼륨에 대해서 detach 기능 제공</strong></li>
+<li><strong>동일 볼륨을 필요에 따라 detatch하여 동일 계정의 다른 VM에 할당하여 사용가능</strong></li>
+<li><strong>Detach 할 수 있는 VM의 상태</strong>
+<ul>
+<li><strong>VM shutdown 상태</strong></li>
+<li><strong>VM running &gt; VM 내부에서 물륨 umount 상태</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-53">
+  
+  <a class="anchor" href="#heading-53">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>볼륨 Upsizing 기능</strong></p>
+<ul>
+<li><strong>볼륨 생성 시 할당 된 용량 증설이 필요할 경우에 대비 용량 증설 기능을 제공</strong></li>
+<li><strong>upsizing만 기능</strong></li>
+<li><strong>기본 스토리지(=root 볼륨)에 대한 resizing은 불가능</strong></li>
+<li><strong>upsizing이 가능한 볼륨 상태</strong>
+<ul>
+<li><strong>볼륨 available 상태 (= VM에 할당되지 않은 상태)</strong></li>
+<li><strong>볼륨이 할당된 VM의 상태가 Shutdown 일때</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-54">
+  
+  <a class="anchor" href="#heading-54">#</a>
+</h1>
+</li>
+<li>
+<p><strong>Shapshot</strong></p>
+<ul>
+<li>
+<p><strong>현 시점 볼륨 데이터를 이미지화 하는 기능</strong></p>
+</li>
+<li>
+<p><strong>Naver cloud는 VM 대상의 내서버이미지와 볼륨 대상의 스냅샷 구분 제공</strong></p>
+</li>
+<li>
+<p><strong>스냅샷 이미지를 이용해서 신규 볼륨 생성 가능</strong></p>
+</li>
+</ul>
+<h1 id="heading-55">
+  
+  <a class="anchor" href="#heading-55">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Shapshot 이미지 이용</strong></p>
+<ul>
+<li>
+<p><strong>리전 간 동일 데이터의 볼륨 생성이 필요할 때 &ldquo;리전 간 복제&rdquo; 기능을 이용해서 이전 가능</strong></p>
+</li>
+<li>
+<p><strong>존 간 동일 데이터 볼륨 생성 가능</strong></p>
+</li>
+<li>
+<p><strong>볼륨 타입(HDD/SSD)변경 가능</strong></p>
+</li>
+<li>
+<p><strong>볼륨 사이즈 변경 불가능(Detach 후 upsizing가능)</strong></p>
+</li>
+<li>
+<p><strong>root 볼륨 이슈 발생 시 (커널 패닉 등의 OS로 인해 VM 정상 사용이 불가능한 경우) 해당 스냅샷 이미지를 이용해 root 볼륨 데이터 복원시 사용가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-56">
+  
+  <a class="anchor" href="#heading-56">#</a>
+</h1>
+<p>nbsp;</p>
+<h1 id="heading-57">
+  
+  <a class="anchor" href="#heading-57">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Object Storage</strong></p>
+<ul>
+<li>
+<p><strong>AWS S3와 같은 오브젝트 단위의 무제한 파일 저장 스토리지</strong></p>
+</li>
+<li>
+<p><strong>비정형 데이터를 안전하게 저장하고 관리하기 위한 스토리지</strong></p>
+</li>
+<li>
+<p><strong>AWS S3 Compatibility API를 통해서 3rd Party Solution 사용가능</strong></p>
+</li>
+<li>
+<p><strong>콘솔, RESTful API, SDK, CLI를 통해서 파일을 관리하고, 저장된 파일은 각 파일마다 고유한 접근 URL이 부여되어 인터넷 상에서 쉽게 접근이 가능</strong></p>
+</li>
+<li>
+<p><strong>버킷 단위, 오브젝트 단위의 접근 궎나 설정 기능 제공</strong></p>
+</li>
+<li>
+<p><strong>CDN+/GCDN의 Origin, CLA의 Logging, VOD Transcoder 등 Naver Cloud 내 상품과 연동하여 사용가능</strong></p>
+</li>
+<li>
+<p><strong>Sub Account 연동을 통한 권한 기능제공</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-58">
+  
+  <a class="anchor" href="#heading-58">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-59">
+  
+  <a class="anchor" href="#heading-59">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>NAS</strong></p>
+<ul>
+<li>
+<p><strong>다수의 VM의 공유 가능한 네트워크 볼륨 디바이스</strong></p>
+</li>
+<li>
+<p><strong>용량은 500G ~ 10,000G으로 생성가능, 100G 단위로 용량 증설이 가능</strong></p>
+</li>
+<li>
+<p><strong>NFS/ CIFS 프로토콜 제공, 이기종 OS간 공유 사용을 위해 Samba 등의 추가 지원 필요</strong></p>
+</li>
+<li>
+<p><strong>Live resizing 가능</strong></p>
+</li>
+<li>
+<p><strong>스냅샷 기능 제공: 즉시 / 스케쥴 -&gt; 시점 복원 기능 제공</strong></p>
+</li>
+<li>
+<p><strong>모니터링 기능 제공(볼륨 사용량(%))</strong></p>
+</li>
+<li>
+<p><strong>Custom IP에 Naver Cloud Platform 내 VM 사설IP 등록을 통해 타 계정 VM간 공유 사용가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-60">
+  
+  <a class="anchor" href="#heading-60">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-61">
+  
+  <a class="anchor" href="#heading-61">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Archive Storage</strong></p>
+<ul>
+<li>
+<p><strong>AWS glacier에 대응되는 제품</strong></p>
+</li>
+<li>
+<p><strong>cold 데이터 보관 및 백업 아카이빙 데이터 저장을 주 목적으로 하는 스토리지</strong></p>
+</li>
+<li>
+<p><strong>콘솔, API(swift, s3), CLI,SDK를 이용해 데이터 관리 가능</strong></p>
+</li>
+<li>
+<p><strong>데이터 최소 보관 기간없이 사용이 가능</strong></p>
+</li>
+<li>
+<p><strong>Sub Account 연동을 통한 권환 관리 기능 제공</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-62">
+  
+  <a class="anchor" href="#heading-62">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-63">
+  
+  <a class="anchor" href="#heading-63">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Backup</strong></p>
+<ul>
+<li>
+<p><strong>파일 DBMS(이미지 빌트인 DB)에 대한 백업 서비스</strong></p>
+</li>
+<li>
+<p><strong>백업 요청서를 작성하여 신청하고 서버에 Agent 설치 필요</strong></p>
+</li>
+<li>
+<p><strong>백업 수행 주기로 8가지 옵션을 제공</strong></p>
+<ul>
+<li><strong>1회성, 1일 1회 전체백업, 1주 1회 전체백업, 1주 1회 전체백업 &amp; 매일 증분 백업 등</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>최대 24주까지 백업 파일 보관가능</strong></p>
+</li>
+<li>
+<p><strong>백업 결과를 일 단위 결과 리포트로 전달</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-64">
+  
+  <a class="anchor" href="#heading-64">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-65">
+  
+  <a class="anchor" href="#heading-65">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Data Teleporter</strong></p>
+<ul>
+<li>
+<p><strong>AWS snowball과 대응되는 상품</strong></p>
+</li>
+<li>
+<p><strong>대용량 데이터 이전을 위한 전용 어플라이언스 장비 대여 서비스</strong></p>
+</li>
+<li>
+<p><strong>대용량 데이터 / 보안적으로 안전한 데이ㅓ를 시간과 비용을 효과적으로 줄일 수 있는 서비스</strong></p>
+</li>
+<li>
+<p><strong>어플라이언스를 통한 대용량 데이터의 신속한 이전 (1GB, 10GB, 40GB)</strong></p>
+</li>
+<li>
+<p><strong>1대(DT) 55TB 데이터 저장 공간 차후 100TB 지원예정</strong></p>
+</li>
+<li>
+<p><strong>다양한 네트워크 인터페이스를 지원 (NFS, FTP, SMB)</strong></p>
+</li>
+<li>
+<p><strong>이전에 소요되는 트래픽 비용 절약(데이터 공중망 보안이슈, 대용량 데이터 빠르게 전송)</strong></p>
+</li>
+<li>
+<p><strong>스토리지 암호화, Data Erasing과 같은 기술 적용으로 안전한 데이터 이전이 가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-66">
+  
+  <a class="anchor" href="#heading-66">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#가상화-기술과-naver-cloud"><strong>가상화 기술과 Naver Cloud</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#전가상화와-반가상화"><strong>전가상화와 반가상화</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server의-특징"><strong>Server의 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server의-종류"><strong>Server의 종류</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#preinstall-image"><strong>Preinstall Image</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server-operation---서버생성"><strong>Server Operation - 서버생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server-operation---상세변경"><strong>Server Operation - 상세변경</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#server-operation"><strong>Server Operation</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#storage"><strong>Storage</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

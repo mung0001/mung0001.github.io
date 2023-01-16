@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="OpenStack : Horizon##OpenStack : Horizon##Horizon은 openstack에서 GUI 환경을 제공해주는 서비스입니다. Horizon에 대한 자세한 설명은 Horizon을 참조해주세요. #$ controller&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-dashboard $ controller&gt; vi /etc/openstack-dashboard/local_settings ALLOWED_HOSTS = [&#39;*&#39;,&#39;&#39;] # 모든 host의 접속이 가능하게 설정합니다. CACHES = { &#39;default&#39;: { &#39;BACKEND&#39;: &#39;django.core.cache.backends.memcached.MemcachedCache&#39;, &#39;LOCATION&#39;: &#39;controller:11211&#39;, }, } SESSION_ENGINE = &#34;django.contrib.sessions.backends.cache&#34; OPENSTACK_HOST = &#34;controller&#34; OPENSTACK_KEYSTONE_URL = &#34;http://controller:5000/v3&#34; # openstack host와 SESSION 서버의 host를 지정합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="OpenStack Ussuri : Horizon" />
+<meta property="og:description" content="OpenStack : Horizon##OpenStack : Horizon##Horizon은 openstack에서 GUI 환경을 제공해주는 서비스입니다. Horizon에 대한 자세한 설명은 Horizon을 참조해주세요. #$ controller&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-dashboard $ controller&gt; vi /etc/openstack-dashboard/local_settings ALLOWED_HOSTS = [&#39;*&#39;,&#39;&#39;] # 모든 host의 접속이 가능하게 설정합니다. CACHES = { &#39;default&#39;: { &#39;BACKEND&#39;: &#39;django.core.cache.backends.memcached.MemcachedCache&#39;, &#39;LOCATION&#39;: &#39;controller:11211&#39;, }, } SESSION_ENGINE = &#34;django.contrib.sessions.backends.cache&#34; OPENSTACK_HOST = &#34;controller&#34; OPENSTACK_KEYSTONE_URL = &#34;http://controller:5000/v3&#34; # openstack host와 SESSION 서버의 host를 지정합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-08/" /><meta property="article:section" content="docs" />
+
+
+
+<title>OpenStack Ussuri : Horizon | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>OpenStack Ussuri : Horizon</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#openstack--horizon-1"><strong>OpenStack : Horizon</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#확인"><strong>확인</strong></a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="openstack--horizon">
+  <strong>OpenStack : Horizon</strong>
+  <a class="anchor" href="#openstack--horizon">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="openstack--horizon-1">
+  <strong>OpenStack : Horizon</strong>
+  <a class="anchor" href="#openstack--horizon-1">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<ul>
+<li><strong>Horizon은 openstack에서 GUI 환경을 제공해주는 서비스입니다.</strong></li>
+<li><strong>Horizon에 대한 자세한 설명은 <a href="">Horizon</a>을 참조해주세요.</strong></li>
+</ul>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-dashboard
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; vi /etc/openstack-dashboard/local_settings
+</span></span><span style="display:flex;"><span>ALLOWED_HOSTS = [&#39;*&#39;,&#39;&#39;]
+</span></span><span style="display:flex;"><span># 모든 host의 접속이 가능하게 설정합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CACHES = <span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;default&#39;</span><span style="color:#f92672">:</span> <span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;BACKEND&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;django.core.cache.backends.memcached.MemcachedCache&#39;</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;LOCATION&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;controller:11211&#39;</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">}</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SESSION_ENGINE = &#34;django.contrib.sessions.backends.cache&#34;
+</span></span><span style="display:flex;"><span>OPENSTACK_HOST = &#34;controller&#34;
+</span></span><span style="display:flex;"><span>OPENSTACK_KEYSTONE_URL = &#34;http://controller:5000/v3&#34;
+</span></span><span style="display:flex;"><span># openstack host와 SESSION 서버의 host를 지정합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TIME_ZONE = &#34;Asia/Seoul&#34;
+</span></span><span style="display:flex;"><span># 시간을 지정합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>WEBROOT = &#39;/dashboard/&#39;
+</span></span><span style="display:flex;"><span>LOGIN_URL = &#39;/dashboard/auth/login/&#39;
+</span></span><span style="display:flex;"><span>LOGOUT_URL = &#39;/dashboard/auth/logout/&#39;
+</span></span><span style="display:flex;"><span>LOGIN_REDIRECT_URL = &#39;/dashboard/&#39;
+</span></span><span style="display:flex;"><span>OPENSTACK_KEYSTONE_MULTIDOMAIN_SUPPORT = True
+</span></span><span style="display:flex;"><span>OPENSTACK_KEYSTONE_DEFAULT_DOMAIN = &#39;Default&#39;
+</span></span><span style="display:flex;"><span>OPENSTACK_API_VERSIONS = <span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;identity&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;volume&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;compute&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">}</span>
+</span></span><span style="display:flex;"><span># 끝에 추가합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; vi /etc/httpd/conf.d/openstack-dashboard.conf
+</span></span><span style="display:flex;"><span>....
+</span></span><span style="display:flex;"><span>....
+</span></span><span style="display:flex;"><span>WSGIApplicationGroup %<span style="color:#75715e">{</span><span style="color:#a6e22e">GLOBAL</span><span style="color:#75715e">}</span>
+</span></span><span style="display:flex;"><span># 상단에 추가합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; systemctl restart httpd
+</span></span><span style="display:flex;"><span># httpd를 재 시작합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; setsebool -P httpd_can_network_connect on
+</span></span><span style="display:flex;"><span>$ controller&gt; firewall-cmd --add-service=<span style="color:#75715e">{</span><span style="color:#a6e22e">http</span><span style="color:#f92672">,</span><span style="color:#a6e22e">https</span><span style="color:#75715e">}</span> --permanent
+</span></span><span style="display:flex;"><span>$ controller&gt; firewall-cmd --reload
+</span></span><span style="display:flex;"><span># SELinux 및 방화벽을 설정합니다.
+</span></span></code></pre></div><h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h2 id="확인">
+  <strong>확인</strong>
+  <a class="anchor" href="#%ed%99%95%ec%9d%b8">#</a>
+</h2>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<ul>
+<li><strong>접속확인</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>http://[ controller의 IP ]/dashboard/
+</span></span></code></pre></div></article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#openstack--horizon-1"><strong>OpenStack : Horizon</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#확인"><strong>확인</strong></a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Django Project#Django Boardapp project##모델을 구성하기에 앞서 django에서 지원하는 admin을 사용하기 위해 기본적인 database를 받아온다.
+(ve) $ ./manage.py migrate #DB 테이블 생성
+# User table ALTER TABLE auth_user ADD COLUMN phone VARCHAR(45) NOT NULL AFTER date_joined, ADD COLUMN date_of_birth DATETIME NOT NULL AFTER phone, CHANGE COLUMN date_joined date_joined DATETIME NOT NULL AFTER email, CHANGE COLUMN first_name first_name VARCHAR(30) NULL AFTER is_active, CHANGE COLUMN is_staff is_staff TINYINT(1) NULL, CHANGE COLUMN is_active is_active TINYINT(1) NULL; # Board table ## board_categories create table board_categories( id int(10) not null auto_increment, category_type varchar(45) not null default &#39;Normal&#39;, category_code varchar(100) not null, category_name varchar(100) not null, category_desc varchar(200) not null, list_count int(10) default &#39;20&#39;, authority int(1) default &#39;0&#39;, creation_date datetime default current_timestamp, last_update_date datetime default null, primary key(id) )engine=InnoDB default CHARSET=utf8; ## boards create table boards( id int(10) not null auto_increment, category_id int(10) not null, user_id int(10) not null, title varchar(300) not null, content text not null, registered_date datetime default current_timestamp, last_update_date datetime default null, view_count int(10) default &#39;0&#39;, image varchar(255) default null, primary key(id), key board_category_fk_idx(category_id), key board_user_fk_idx(user_id), constraint board_category_fk foreign key(category_id) references board_categories(id) on delete no action on update no action, constraint board_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; ## board_replies create table board_replies( id int(10) not null auto_increment, article_id int(10) not null, user_id int(10) not null, `level` tinyint(1) default &#39;1&#39;, content text not null, reference_reply_id int(10) default &#39;0&#39;, registered_date datetime default current_timestamp, last_update_date datetime default null, primary key(id), key user_reply_fk_idx(user_id), key article_reply_fk_idx(article_id), constraint article_reply_fk foreign key(article_id) references boards(id) on delete no action on update no action, constraint user_reply_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; ## board_likes create table board_likes( id int(10) not null auto_increment, article_id int(10) not null, user_id int(11) not null, registered_date datetime default current_timestamp, primary key(id), key like_article_fk_idx(article_id), key like_user_fk_idx(user_id), constraint like_article_fk foreign key(article_id) references boards(id) on delete no action on update no action, constraint like_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; pip3 install Pillow">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Django DB(model) create" />
+<meta property="og:description" content="Django Project#Django Boardapp project##모델을 구성하기에 앞서 django에서 지원하는 admin을 사용하기 위해 기본적인 database를 받아온다.
+(ve) $ ./manage.py migrate #DB 테이블 생성
+# User table ALTER TABLE auth_user ADD COLUMN phone VARCHAR(45) NOT NULL AFTER date_joined, ADD COLUMN date_of_birth DATETIME NOT NULL AFTER phone, CHANGE COLUMN date_joined date_joined DATETIME NOT NULL AFTER email, CHANGE COLUMN first_name first_name VARCHAR(30) NULL AFTER is_active, CHANGE COLUMN is_staff is_staff TINYINT(1) NULL, CHANGE COLUMN is_active is_active TINYINT(1) NULL; # Board table ## board_categories create table board_categories( id int(10) not null auto_increment, category_type varchar(45) not null default &#39;Normal&#39;, category_code varchar(100) not null, category_name varchar(100) not null, category_desc varchar(200) not null, list_count int(10) default &#39;20&#39;, authority int(1) default &#39;0&#39;, creation_date datetime default current_timestamp, last_update_date datetime default null, primary key(id) )engine=InnoDB default CHARSET=utf8; ## boards create table boards( id int(10) not null auto_increment, category_id int(10) not null, user_id int(10) not null, title varchar(300) not null, content text not null, registered_date datetime default current_timestamp, last_update_date datetime default null, view_count int(10) default &#39;0&#39;, image varchar(255) default null, primary key(id), key board_category_fk_idx(category_id), key board_user_fk_idx(user_id), constraint board_category_fk foreign key(category_id) references board_categories(id) on delete no action on update no action, constraint board_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; ## board_replies create table board_replies( id int(10) not null auto_increment, article_id int(10) not null, user_id int(10) not null, `level` tinyint(1) default &#39;1&#39;, content text not null, reference_reply_id int(10) default &#39;0&#39;, registered_date datetime default current_timestamp, last_update_date datetime default null, primary key(id), key user_reply_fk_idx(user_id), key article_reply_fk_idx(article_id), constraint article_reply_fk foreign key(article_id) references boards(id) on delete no action on update no action, constraint user_reply_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; ## board_likes create table board_likes( id int(10) not null auto_increment, article_id int(10) not null, user_id int(11) not null, registered_date datetime default current_timestamp, primary key(id), key like_article_fk_idx(article_id), key like_user_fk_idx(user_id), constraint like_article_fk foreign key(article_id) references boards(id) on delete no action on update no action, constraint like_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; pip3 install Pillow" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/development/web/django/test/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Django DB(model) create | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/html/" class="">HTML 문법</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/css/" class="">CSS 문법</a>
+  
+
+</li>
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/django/" class="collapsed ">Djnago</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/django/" class="">Django Install</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/basic/" class="">Django란?</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/test/" class="active">Django DB(model) create</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/django01/" class="">Django - </a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/django02/" class="">Django - </a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/django03/" class="">Django - </a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/django04/" class="">Django - </a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/django00/" class="">Django - Starter</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/django05/" class="">Django05</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Django DB(model) create</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#django-boardapp-project"><strong>Django Boardapp project</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#mtv-패턴-models-구성"><strong>MTV 패턴 Models 구성</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#models"><strong>models</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#djnago-어플리케이션-흐름"><strong>Djnago 어플리케이션 흐름</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#basehtml-main-페이지-작성"><strong>base.html main 페이지 작성</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#user_register"><strong>user_register</strong></a></li>
+        <li><a href="#user_register_idcheck"><strong>user_register_idcheck</strong></a></li>
+        <li><a href="#user_register_res"><strong>user_register_res</strong></a></li>
+        <li><a href="#user_register_complete"><strong>user_register_complete</strong></a></li>
+        <li><a href="#login"><strong>login</strong></a></li>
+        <li><a href="#logoute"><strong>logoute</strong></a></li>
+        <li><a href="#modify"><strong>modify</strong></a></li>
+        <li><a href="#passwordchangedoneview"><strong>PasswordChangeDoneView</strong></a></li>
+        <li><a href="#settingpy"><strong>setting.py</strong></a></li>
+        <li><a href="#test"><strong>test</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="django-project">
+  <strong>Django Project</strong>
+  <a class="anchor" href="#django-project">#</a>
+</h1>
+<hr>
+<p> </p>
+<h2 id="django-boardapp-project">
+  <strong>Django Boardapp project</strong>
+  <a class="anchor" href="#django-boardapp-project">#</a>
+</h2>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<p>모델을 구성하기에 앞서 django에서 지원하는 admin을 사용하기 위해 기본적인 database를 받아온다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>(ve) <span style="color:#960050;background-color:#1e0010">$</span> <span style="color:#f92672">./</span>manage<span style="color:#f92672">.</span>py migrate
+</span></span></code></pre></div><h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<p><strong>DB 테이블 생성</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#f92672">#</span> <span style="color:#66d9ef">User</span> <span style="color:#66d9ef">table</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> auth_user
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">COLUMN</span> phone VARCHAR(<span style="color:#ae81ff">45</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">AFTER</span> date_joined,
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">COLUMN</span> date_of_birth DATETIME <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">AFTER</span> phone,
+</span></span><span style="display:flex;"><span>CHANGE <span style="color:#66d9ef">COLUMN</span> date_joined date_joined DATETIME <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">AFTER</span> email,
+</span></span><span style="display:flex;"><span>CHANGE <span style="color:#66d9ef">COLUMN</span> first_name first_name VARCHAR(<span style="color:#ae81ff">30</span>) <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">AFTER</span> is_active,
+</span></span><span style="display:flex;"><span>CHANGE <span style="color:#66d9ef">COLUMN</span> is_staff is_staff TINYINT(<span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>CHANGE <span style="color:#66d9ef">COLUMN</span> is_active is_active TINYINT(<span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">NULL</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span> Board <span style="color:#66d9ef">table</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">##</span> board_categories
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> board_categories(
+</span></span><span style="display:flex;"><span>    id int(<span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span> auto_increment,
+</span></span><span style="display:flex;"><span>    category_type varchar(<span style="color:#ae81ff">45</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span> <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#39;Normal&#39;</span>,
+</span></span><span style="display:flex;"><span>    category_code varchar(<span style="color:#ae81ff">100</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    category_name varchar(<span style="color:#ae81ff">100</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    category_desc varchar(<span style="color:#ae81ff">200</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    list_count int(<span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#39;20&#39;</span>,
+</span></span><span style="display:flex;"><span>    authority int(<span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#39;0&#39;</span>,
+</span></span><span style="display:flex;"><span>    creation_date datetime <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">current_timestamp</span>,
+</span></span><span style="display:flex;"><span>    last_update_date datetime <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">primary</span> <span style="color:#66d9ef">key</span>(id)
+</span></span><span style="display:flex;"><span>)engine<span style="color:#f92672">=</span>InnoDB <span style="color:#66d9ef">default</span> CHARSET<span style="color:#f92672">=</span>utf8;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">##</span> boards
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> boards(
+</span></span><span style="display:flex;"><span>    id int(<span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span> auto_increment,
+</span></span><span style="display:flex;"><span>    category_id int(<span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    user_id int(<span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    title varchar(<span style="color:#ae81ff">300</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    content text <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    registered_date datetime <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">current_timestamp</span>,
+</span></span><span style="display:flex;"><span>    last_update_date datetime <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    view_count int(<span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#39;0&#39;</span>,
+</span></span><span style="display:flex;"><span>    image varchar(<span style="color:#ae81ff">255</span>) <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">primary</span> <span style="color:#66d9ef">key</span>(id),
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">key</span> board_category_fk_idx(category_id),
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">key</span> board_user_fk_idx(user_id),
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constraint</span> board_category_fk <span style="color:#66d9ef">foreign</span> <span style="color:#66d9ef">key</span>(category_id) <span style="color:#66d9ef">references</span> board_categories(id) <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">delete</span> <span style="color:#66d9ef">no</span> action <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">update</span> <span style="color:#66d9ef">no</span> action,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constraint</span> board_user_fk <span style="color:#66d9ef">foreign</span> <span style="color:#66d9ef">key</span>(user_id) <span style="color:#66d9ef">references</span> auth_user(id) <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">delete</span> <span style="color:#66d9ef">no</span> action <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">update</span> <span style="color:#66d9ef">no</span> action
+</span></span><span style="display:flex;"><span>)engine<span style="color:#f92672">=</span>InnoDB <span style="color:#66d9ef">default</span> CHARSET<span style="color:#f92672">=</span>utf8;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">##</span> board_replies
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> board_replies(
+</span></span><span style="display:flex;"><span>    id int(<span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span> auto_increment,
+</span></span><span style="display:flex;"><span>    article_id int(<span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    user_id int(<span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">`</span><span style="color:#66d9ef">level</span><span style="color:#f92672">`</span> tinyint(<span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#39;1&#39;</span>,
+</span></span><span style="display:flex;"><span>    content text <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    reference_reply_id int(<span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#39;0&#39;</span>,
+</span></span><span style="display:flex;"><span>    registered_date datetime <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">current_timestamp</span>,
+</span></span><span style="display:flex;"><span>    last_update_date datetime <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">primary</span> <span style="color:#66d9ef">key</span>(id),
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">key</span> user_reply_fk_idx(user_id),
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">key</span> article_reply_fk_idx(article_id),
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constraint</span> article_reply_fk <span style="color:#66d9ef">foreign</span> <span style="color:#66d9ef">key</span>(article_id) <span style="color:#66d9ef">references</span> boards(id) <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">delete</span> <span style="color:#66d9ef">no</span> action <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">update</span> <span style="color:#66d9ef">no</span> action,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constraint</span> user_reply_fk <span style="color:#66d9ef">foreign</span> <span style="color:#66d9ef">key</span>(user_id) <span style="color:#66d9ef">references</span> auth_user(id) <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">delete</span> <span style="color:#66d9ef">no</span> action <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">update</span> <span style="color:#66d9ef">no</span> action
+</span></span><span style="display:flex;"><span>)engine<span style="color:#f92672">=</span>InnoDB <span style="color:#66d9ef">default</span> CHARSET<span style="color:#f92672">=</span>utf8;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">##</span> board_likes
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> board_likes(
+</span></span><span style="display:flex;"><span>    id int(<span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span> auto_increment,
+</span></span><span style="display:flex;"><span>    article_id int(<span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    user_id int(<span style="color:#ae81ff">11</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>    registered_date datetime <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">current_timestamp</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">primary</span> <span style="color:#66d9ef">key</span>(id),
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">key</span> like_article_fk_idx(article_id),
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">key</span> like_user_fk_idx(user_id),
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constraint</span> like_article_fk <span style="color:#66d9ef">foreign</span> <span style="color:#66d9ef">key</span>(article_id) <span style="color:#66d9ef">references</span> boards(id) <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">delete</span> <span style="color:#66d9ef">no</span> action <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">update</span> <span style="color:#66d9ef">no</span> action,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constraint</span> like_user_fk <span style="color:#66d9ef">foreign</span> <span style="color:#66d9ef">key</span>(user_id) <span style="color:#66d9ef">references</span> auth_user(id) <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">delete</span> <span style="color:#66d9ef">no</span> action <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">update</span> <span style="color:#66d9ef">no</span> action
+</span></span><span style="display:flex;"><span>)engine<span style="color:#f92672">=</span>InnoDB <span style="color:#66d9ef">default</span> CHARSET<span style="color:#f92672">=</span>utf8;
+</span></span></code></pre></div><p>pip3 install Pillow</p>
+<p>어플리케이션 생성 및 settings.py 수정</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>(ve) <span style="color:#960050;background-color:#1e0010">$</span> <span style="color:#f92672">./</span>manage<span style="color:#f92672">.</span>py startapp boardapp
+</span></span><span style="display:flex;"><span>(ve) <span style="color:#960050;background-color:#1e0010">$</span> vi Django<span style="color:#f92672">/</span>setting<span style="color:#f92672">.</span>py
+</span></span></code></pre></div><p>INSTALLE_APPS에 생성한 어플리케이션을 등록한다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>INSTALLED_APPS <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;django.contrib.messages&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;django.contrib.staticfiles&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;boardapp.apps.BoardappConfig&#39;</span>,
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p>AUTH_USER_MODEL = &lsquo;boardapp.user&rsquo;</p>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h2 id="mtv-패턴-models-구성">
+  <strong>MTV 패턴 Models 구성</strong>
+  <a class="anchor" href="#mtv-%ed%8c%a8%ed%84%b4-models-%ea%b5%ac%ec%84%b1">#</a>
+</h2>
+<hr>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="models">
+  <strong>models</strong>
+  <a class="anchor" href="#models">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<ul>
+<li>boardapp에서 사용할 table을 만들었으니 model에 추가</li>
+<li>기본적인 틀 생성을 위해 inspectdb를 사용</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>(ve) <span style="color:#960050;background-color:#1e0010">$</span> <span style="color:#f92672">./</span>manage<span style="color:#f92672">.</span>py inspectdb <span style="color:#f92672">&gt;</span> boardapp<span style="color:#f92672">/</span>models<span style="color:#f92672">.</span>py
+</span></span></code></pre></div><ul>
+<li>받아온 모델을 앞으로 사용할 모델에 적합하게 수정</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib.auth.models <span style="color:#f92672">import</span> AbstractBaseUser,BaseUserManager,PermissionsMixin
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.db <span style="color:#f92672">import</span> models
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.utils <span style="color:#f92672">import</span> timezone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserManager</span>(BaseUserManager):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_user</span>(self,
+</span></span><span style="display:flex;"><span>                username,
+</span></span><span style="display:flex;"><span>                password,
+</span></span><span style="display:flex;"><span>                last_name,
+</span></span><span style="display:flex;"><span>                email,
+</span></span><span style="display:flex;"><span>                phone,
+</span></span><span style="display:flex;"><span>                date_of_birth):
+</span></span><span style="display:flex;"><span>        user <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>model(
+</span></span><span style="display:flex;"><span>            username<span style="color:#f92672">=</span>username,
+</span></span><span style="display:flex;"><span>            last_name<span style="color:#f92672">=</span>last_name,
+</span></span><span style="display:flex;"><span>            email<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>normalize_email(email),
+</span></span><span style="display:flex;"><span>            phone<span style="color:#f92672">=</span>phone,
+</span></span><span style="display:flex;"><span>            date_of_birth<span style="color:#f92672">=</span>date_of_birth,
+</span></span><span style="display:flex;"><span>            date_joined<span style="color:#f92672">=</span>timezone<span style="color:#f92672">.</span>now(),
+</span></span><span style="display:flex;"><span>            is_superuser<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>            is_staff<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>            is_active<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        user<span style="color:#f92672">.</span>set_password(password)
+</span></span><span style="display:flex;"><span>        user<span style="color:#f92672">.</span>save(using<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>_db)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> user
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_superuser</span>(self,
+</span></span><span style="display:flex;"><span>                        username,
+</span></span><span style="display:flex;"><span>                        last_name,
+</span></span><span style="display:flex;"><span>                        email,
+</span></span><span style="display:flex;"><span>                        phone,
+</span></span><span style="display:flex;"><span>                        date_of_birth,
+</span></span><span style="display:flex;"><span>                        password):
+</span></span><span style="display:flex;"><span>        user <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>create_user(
+</span></span><span style="display:flex;"><span>            username<span style="color:#f92672">=</span>username,
+</span></span><span style="display:flex;"><span>            password<span style="color:#f92672">=</span>password,
+</span></span><span style="display:flex;"><span>            last_name<span style="color:#f92672">=</span>last_name,
+</span></span><span style="display:flex;"><span>            email<span style="color:#f92672">=</span>email,
+</span></span><span style="display:flex;"><span>            phone<span style="color:#f92672">=</span>phone,
+</span></span><span style="display:flex;"><span>            date_of_birth<span style="color:#f92672">=</span>date_of_birth
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        user<span style="color:#f92672">.</span>is_superuser <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        user<span style="color:#f92672">.</span>is_staff <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        user<span style="color:#f92672">.</span>save(using<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>_db)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> user
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>(AbstractBaseUser, PermissionsMixin):
+</span></span><span style="display:flex;"><span>    password <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">128</span>)
+</span></span><span style="display:flex;"><span>    username <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(unique<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>)
+</span></span><span style="display:flex;"><span>    is_superuser <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField()
+</span></span><span style="display:flex;"><span>    last_name <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>)
+</span></span><span style="display:flex;"><span>    phone <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">45</span>)
+</span></span><span style="display:flex;"><span>    email <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">254</span>)
+</span></span><span style="display:flex;"><span>    date_of_birth <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>DateTimeField()
+</span></span><span style="display:flex;"><span>    date_joined <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>DateTimeField()
+</span></span><span style="display:flex;"><span>    last_login <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>DateTimeField(blank<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, null<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    is_staff <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField(blank<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, null<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    is_active <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField(blank<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, null<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    first_name <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, blank<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, null<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    objects <span style="color:#f92672">=</span> UserManager()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    USERNAME_FIELD <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;username&#39;</span>
+</span></span><span style="display:flex;"><span>    REQUIRED_FIELD <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;last_name&#39;</span>, <span style="color:#e6db74">&#39;phone&#39;</span>, <span style="color:#e6db74">&#39;email&#39;</span>, <span style="color:#e6db74">&#39;date_of_birth&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">has_perm</span>(self, perm, obj<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">has_module_perms</span>(self, app_lable):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
+</span></span><span style="display:flex;"><span>        db_table <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;auth_user&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BoardCategories</span>(models<span style="color:#f92672">.</span>Model):
+</span></span><span style="display:flex;"><span>    category_type <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">45</span>)
+</span></span><span style="display:flex;"><span>    category_code <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>    category_name <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>    category_desc <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</span></span><span style="display:flex;"><span>    list_count <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField(blank<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, null<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    authority <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField(blank<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, null<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    creation_date <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>DateTimeField(default<span style="color:#f92672">=</span>timezone<span style="color:#f92672">.</span>now)
+</span></span><span style="display:flex;"><span>    last_update_date <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>DateTimeField(default<span style="color:#f92672">=</span>timezone<span style="color:#f92672">.</span>now)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __str__(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (self<span style="color:#f92672">.</span>category_name, self<span style="color:#f92672">.</span>category_code)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
+</span></span><span style="display:flex;"><span>        managed <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        db_table <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;board_categories&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Boards</span>(models<span style="color:#f92672">.</span>Model):
+</span></span><span style="display:flex;"><span>    category <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(BoardCategories, models<span style="color:#f92672">.</span>DO_NOTHING)
+</span></span><span style="display:flex;"><span>    user <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(User, models<span style="color:#f92672">.</span>DO_NOTHING)
+</span></span><span style="display:flex;"><span>    title <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>    content <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>TextField()
+</span></span><span style="display:flex;"><span>    registered_date <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>DateTimeField(default<span style="color:#f92672">=</span>timezone<span style="color:#f92672">.</span>now)
+</span></span><span style="display:flex;"><span>    last_update_date <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>DateTimeField(default<span style="color:#f92672">=</span>timezone<span style="color:#f92672">.</span>now)
+</span></span><span style="display:flex;"><span>    view_count <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField(blank<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, default<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    image <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ImageField(upload_to<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;images/%Y/%m/</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#34;</span>, blank<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __str__(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;[</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">] </span><span style="color:#e6db74">%.40s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (self<span style="color:#f92672">.</span>id, self<span style="color:#f92672">.</span>title)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
+</span></span><span style="display:flex;"><span>        managed <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        db_table <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;boards&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BoardReplies</span>(models<span style="color:#f92672">.</span>Model):
+</span></span><span style="display:flex;"><span>    article <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(Boards, models<span style="color:#f92672">.</span>DO_NOTHING)
+</span></span><span style="display:flex;"><span>    user <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(User, models<span style="color:#f92672">.</span>DO_NOTHING)
+</span></span><span style="display:flex;"><span>    level <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField(blank<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, null<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    content <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>TextField()
+</span></span><span style="display:flex;"><span>    reference_reply_id <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField(blank<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, null<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    registered_date <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>DateTimeField(default<span style="color:#f92672">=</span>timezone<span style="color:#f92672">.</span>now)
+</span></span><span style="display:flex;"><span>    last_update_date <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>DateTimeField(default<span style="color:#f92672">=</span>timezone<span style="color:#f92672">.</span>now)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __str__(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;[</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">] </span><span style="color:#e6db74">%.40s</span><span style="color:#e6db74"> - [</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">] </span><span style="color:#e6db74">%.40s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (self<span style="color:#f92672">.</span>article<span style="color:#f92672">.</span>id, self<span style="color:#f92672">.</span>article<span style="color:#f92672">.</span>title, self<span style="color:#f92672">.</span>id, self<span style="color:#f92672">.</span>content)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
+</span></span><span style="display:flex;"><span>        managed <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        db_table <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;board_replies&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BoardLikes</span>(models<span style="color:#f92672">.</span>Model):
+</span></span><span style="display:flex;"><span>    article <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(Boards, models<span style="color:#f92672">.</span>DO_NOTHING)
+</span></span><span style="display:flex;"><span>    user <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(User, models<span style="color:#f92672">.</span>DO_NOTHING)
+</span></span><span style="display:flex;"><span>    registered_date <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>DateTimeField(default<span style="color:#f92672">=</span>timezone<span style="color:#f92672">.</span>now)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __str__(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;[</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">] </span><span style="color:#e6db74">%.40s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (self<span style="color:#f92672">.</span>article<span style="color:#f92672">.</span>id, self<span style="color:#f92672">.</span>article<span style="color:#f92672">.</span>title, self<span style="color:#f92672">.</span>user<span style="color:#f92672">.</span>last_name)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
+</span></span><span style="display:flex;"><span>        managed <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        db_table <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;board_likes&#39;</span>
+</span></span></code></pre></div><hr>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<h3 id="djnago-어플리케이션-흐름">
+  <strong>Djnago 어플리케이션 흐름</strong>
+  <a class="anchor" href="#djnago-%ec%96%b4%ed%94%8c%eb%a6%ac%ec%bc%80%ec%9d%b4%ec%85%98-%ed%9d%90%eb%a6%84">#</a>
+</h3>
+<ul>
+<li>urls.py에 등록되어 있는 url을 따라간다.</li>
+<li>urls.py에 특정 url에 접근 했을 때 동작할 행동을 지정</li>
+<li>지정한 동작을 views.py에 def, class로 만들어 행동을 이행</li>
+<li>필요하다면 models.py에 접근하여 만들어 놓은 모델을 사용</li>
+</ul>
+<p><strong>urls.py 작성</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.conf.urls.static <span style="color:#f92672">import</span> static
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.conf <span style="color:#f92672">import</span> settings
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib <span style="color:#f92672">import</span> admin
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> include, path
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    path(<span style="color:#e6db74">&#39;admin/&#39;</span>, admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span>urls),
+</span></span><span style="display:flex;"><span>    path(<span style="color:#e6db74">&#39;boardapp/&#39;</span>, include(<span style="color:#e6db74">&#39;boardapp.urls&#39;</span>)),
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">+=</span> static(settings<span style="color:#f92672">.</span>MEDIA_URL, document_root<span style="color:#f92672">=</span>settings<span style="color:#f92672">.</span>MEDIA_ROOT)
+</span></span></code></pre></div><h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p><strong>boardapp/urls.py</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.conf.urls.static <span style="color:#f92672">import</span> static
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.conf <span style="color:#f92672">import</span> settings
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> path
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib.auth <span style="color:#f92672">import</span> views <span style="color:#66d9ef">as</span> auth_views
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> boardapp.views <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    path(<span style="color:#e6db74">&#39;&#39;</span>, main_page, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;main&#39;</span>),
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">+=</span> static(settings<span style="color:#f92672">.</span>MEDIA_URL, document_root<span style="color:#f92672">=</span>settings<span style="color:#f92672">.</span>MEDIA_ROOT)
+</span></span></code></pre></div><p>boardapp/views.py에 앞으로 사용될 모듈을 모두 import 시켜둔다</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> render, redirect
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.http <span style="color:#f92672">import</span> HttpResponse, HttpResponseRedirect, JsonResponse
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> boardapp.models <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.utils <span style="color:#f92672">import</span> timezone
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> math
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.db.models <span style="color:#f92672">import</span> Count
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.core.paginator <span style="color:#f92672">import</span> Paginator
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib.auth.decorators <span style="color:#f92672">import</span> login_required
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.views.generic <span style="color:#f92672">import</span> DetailView
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main_page</span>(request):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> HttpResponse(<span style="color:#e6db74">&#34;&lt;h2&gt;hi&lt;/h2&gt;&#34;</span>)
+</span></span></code></pre></div><p>hi 라는 문자가 확인이 가능해진다</p>
+<p>template를 사용하여 Page를 보이게 한다</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">$</span> <span style="color:#a6e22e">vi</span> <span style="color:#a6e22e">boardapp</span><span style="color:#f92672">/</span><span style="color:#a6e22e">views</span>.<span style="color:#a6e22e">py</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">def</span> <span style="color:#a6e22e">main_page</span>(<span style="color:#a6e22e">request</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">request</span>, <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">main</span>.<span style="color:#a6e22e">html</span><span style="color:#960050;background-color:#1e0010">&#39;</span>)
+</span></span></code></pre></div><p>admin 페이지에 djnago 에서 지원하는 페이지를 상속받아 사용</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>vi boardapp<span style="color:#f92672">/</span>admin<span style="color:#f92672">.</span>py
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib <span style="color:#f92672">import</span> admin
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> boardapp.models <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span>register(Boards)
+</span></span><span style="display:flex;"><span>admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span>register(BoardCategories)
+</span></span><span style="display:flex;"><span>admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span>register(BoardReplies)
+</span></span><span style="display:flex;"><span>admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span>register(BoardLikes)
+</span></span></code></pre></div><p>static, media 지정</p>
+<p>각각의 파일의 위치를 settings.py에서 지정</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>STATIC_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/static/&#39;</span>
+</span></span><span style="display:flex;"><span>STATIC_ROOT <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(BASE_DIR, <span style="color:#e6db74">&#39;static&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MEDIA_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/media/&#39;</span>
+</span></span><span style="display:flex;"><span>MEDIA_ROOT <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(BASE_DIR, <span style="color:#e6db74">&#39;media&#39;</span>)<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74">&#39;/&#39;</span>)
+</span></span></code></pre></div><p>흩어져있는 static 파일을 지정한 URL로 복사한다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>(ve) <span style="color:#960050;background-color:#1e0010">$</span> <span style="color:#f92672">./</span>manage<span style="color:#f92672">.</span>py collectstatic
+</span></span></code></pre></div><p>runserver 확인</p>
+<p>board/templates 디렉토리를 생성</p>
+<p>main.html을 생성</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">title</span>&gt;타이틀&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">h1</span>&gt;template로 작성되었습니다.&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>확인</p>
+<p>마이그레이트 boardapp</p>
+<p>&ndash;&gt; 마이그레이트</p>
+<ul>
+<li>거의 모든 templates의 틀이 되는 base.html 생성</li>
+</ul>
+<h2 id="basehtml-main-페이지-작성">
+  <strong>base.html main 페이지 작성</strong>
+  <a class="anchor" href="#basehtml-main-%ed%8e%98%ec%9d%b4%ec%a7%80-%ec%9e%91%ec%84%b1">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>vi boardapp/templates/base.html
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;KO&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">title</span>&gt;{% block title %}AWS / Django Web Application{% endblock %}&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        {% load static %}
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% static &#39;boardapp/assets/css/bootstrap.min.css&#39; %}&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% static &#39;boardapp/assets/css/main.css&#39; %}&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% static &#39;boardapp/assets/js/jquery-3.3.1.min.js&#39; %}&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% static &#39;boardapp/assets/js/bootstrap.min.js&#39; %}&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;        
+</span></span><span style="display:flex;"><span>        {% block script %}{% endblock %}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;header&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;logo&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row bg-dark&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-8 logo-link dark-link&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;main&#39; %}&#34;</span>&gt;AWS / Django Web Application&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-4 center member-link dark-link bg-black&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                    {% if user.username %}
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;{{ user.last_name }} 님&lt;/<span style="color:#f92672">a</span>&gt; /
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;로그아웃&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>                    {% else %}
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;로그인&lt;/<span style="color:#f92672">a</span>&gt; /
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;회원가입&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>                    {% endif %}
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;menu&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row bg-dark&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-2 center sideline dark-link&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;main&#39; %}&#34;</span>&gt;HOME&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-2 center sideline dark-link&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;소개&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-2 center sideline dark-link&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;공지사항&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-2 center sideline dark-link&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;자유 게시판&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-2 center sideline dark-link&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;대화형 게시판&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-2 center sideline&#34;</span>&gt;&amp;nbsp;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            {% block content %}{% endblock %}
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;footer&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row bg-dark&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12 center&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:white&#34;</span>&gt;Copyright by Digitalbooks / &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mailto:mail&#34;</span>&gt;Contact Us&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>urls.py에 등록되지 않은 url은 &lsquo;#&lsquo;으로 변경<br>
+url을 추가할 때 마다 원래의 base.html을 업데이트 해 준다</p>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<p>main page</p>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>vi boardapp<span style="color:#f92672">/</span>urls<span style="color:#f92672">.</span>py
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.conf.urls.static <span style="color:#f92672">import</span> static
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.conf <span style="color:#f92672">import</span> settings
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> path
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib.auth <span style="color:#f92672">import</span> views <span style="color:#66d9ef">as</span> auth_views
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> boardapp.views <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    path(<span style="color:#e6db74">&#39;&#39;</span>, main_page, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;main&#39;</span>),
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">+=</span> static(settings<span style="color:#f92672">.</span>MEDIA_URL, document_root<span style="color:#f92672">=</span>settings<span style="color:#f92672">.</span>MEDIA_ROOT)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>vi boardapp<span style="color:#f92672">/</span>view<span style="color:#f92672">.</span>py
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> render, redirect
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.http <span style="color:#f92672">import</span> HttpResponse, HttpResponseRedirect, JsonResponse
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> boardapp.models <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.utils <span style="color:#f92672">import</span> timezone
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> math
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.db.models <span style="color:#f92672">import</span> Count
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.core.paginator <span style="color:#f92672">import</span> Paginator
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib.auth.decorators <span style="color:#f92672">import</span> login_required
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.views.generic <span style="color:#f92672">import</span> DetailView
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main_page</span>(request):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;main.html&#39;</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>vi boardapp<span style="color:#f92672">/</span>templates<span style="color:#f92672">/</span>main<span style="color:#f92672">.</span>html
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> extends <span style="color:#e6db74">&#34;base.html&#34;</span> <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block title <span style="color:#f92672">%</span>} Main {<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block script <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block content <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row block-center&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12 center&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span>h1<span style="color:#f92672">&gt;</span>Welcome to AWS Django Board<span style="color:#960050;background-color:#1e0010">!</span><span style="color:#f92672">&lt;/</span>h1<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span></code></pre></div><ul>
+<li><strong>boardapp/urls.py</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># urlpatterns에 추가한다.</span>
+</span></span><span style="display:flex;"><span>path(<span style="color:#e6db74">&#39;login/&#39;</span>, auth_views<span style="color:#f92672">.</span>LoginView<span style="color:#f92672">.</span>as_view(template_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;login.html&#39;</span>), name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;login&#39;</span>),
+</span></span><span style="display:flex;"><span>path(<span style="color:#e6db74">&#39;logout/&#39;</span>, auth_views<span style="color:#f92672">.</span>LogoutView<span style="color:#f92672">.</span>as_view(), name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;logout&#39;</span>),
+</span></span><span style="display:flex;"><span>path(<span style="color:#e6db74">&#39;password_change/&#39;</span>, auth_views<span style="color:#f92672">.</span>PasswordChangeView<span style="color:#f92672">.</span>as_view(template_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;password_change.html&#39;</span>), name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;password_change&#39;</span>),
+</span></span><span style="display:flex;"><span>path(<span style="color:#e6db74">&#39;password_change_done/&#39;</span>, auth_views<span style="color:#f92672">.</span>PasswordChangeDoneView<span style="color:#f92672">.</span>as_view(template_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;password_change_done.html&#39;</span>), name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;password_change_done&#39;</span>),
+</span></span><span style="display:flex;"><span>path(<span style="color:#e6db74">&#39;user_register/&#39;</span>, user_register_page, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;register&#39;</span>),
+</span></span><span style="display:flex;"><span>path(<span style="color:#e6db74">&#39;user_register_idcheck/&#39;</span>, user_register_idcheck, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;registeridcheck&#39;</span>),
+</span></span><span style="display:flex;"><span>path(<span style="color:#e6db74">&#39;user_register_res/&#39;</span>, user_register_result, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;registerres&#39;</span>),
+</span></span><span style="display:flex;"><span>path(<span style="color:#e6db74">&#39;user_register_completed/&#39;</span>, user_register_completed, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;registercompleted&#39;</span>),
+</span></span></code></pre></div><h3 id="user_register">
+  <strong>user_register</strong>
+  <a class="anchor" href="#user_register">#</a>
+</h3>
+<ul>
+<li>boardapp/views.py</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    {<span style="color:#f92672">%</span> extends <span style="color:#e6db74">&#34;base.html&#34;</span> <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block title <span style="color:#f92672">%</span>}회원가입{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block script <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> load static <span style="color:#f92672">%</span>}<span style="color:#f92672">&lt;</span>script src<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{</span><span style="color:#e6db74">% s</span><span style="color:#e6db74">tatic &#39;boardapp/assets/js/user.js&#39; %}&#34;</span><span style="color:#f92672">&gt;&lt;/</span>script<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block content <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row block-center&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-box col-6&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span>form id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;register_form&#34;</span> action<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/boardapp/user_register_res/&#34;</span> method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        {<span style="color:#f92672">%</span> csrf_token <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;phone&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;phone&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span><span style="color:#f92672">&gt;&lt;</span>h2<span style="color:#f92672">&gt;</span>회원가입<span style="color:#f92672">&lt;/</span>h2<span style="color:#f92672">&gt;&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    ID:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;8&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;중복확인&#34;</span> onclick<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;idCheck()&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;</span>span id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;idcheck-result&#34;</span><span style="color:#f92672">&gt;&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    Password:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;8&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>br<span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font-size: 0.7em&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">*</span> 비밀번호는 <span style="color:#ae81ff">8</span>글자 이상 입력해 주셔야 합니다<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    Password 확인:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password_check&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;8&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    이름:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;test&#34;</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;last_name&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;last_name&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;8&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    E<span style="color:#f92672">-</span>mail:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;test&#34;</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email_id&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email_id&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;8&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">@</span> <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email_domain&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;8&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;</span>select id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email_selection&#34;</span> onchange<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;changeEmailDomain()&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> selected<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;selected&#34;</span><span style="color:#f92672">&gt;--</span>선택하세요<span style="color:#f92672">--&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;naver.com&#34;</span><span style="color:#f92672">&gt;</span>naver<span style="color:#f92672">.</span>com<span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hanmail.net&#34;</span><span style="color:#f92672">&gt;</span>hanmail<span style="color:#f92672">.</span>net<span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gmail.com&#34;</span><span style="color:#f92672">&gt;</span>gmail<span style="color:#f92672">.</span>com<span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;me.com&#34;</span><span style="color:#f92672">&gt;</span>me<span style="color:#f92672">.</span>com<span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;/</span>select<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    전화번호:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;phone1&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span><span style="color:#f92672">/&gt;</span> <span style="color:#f92672">-</span> 
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;phone2&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;4&#34;</span><span style="color:#f92672">/&gt;</span> <span style="color:#f92672">-</span> 
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;phone3&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;4&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    생년월일:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;test&#34;</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;birth_year&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;birth_year&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;4&#34;</span><span style="color:#f92672">/&gt;</span> 년
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;</span>select name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;birth_month&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;birth_month&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span><span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">2</span><span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">3</span><span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;4&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">4</span><span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">5</span><span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;6&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">6</span><span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;7&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">7</span><span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;8&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">8</span><span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;9&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">9</span><span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;10&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span><span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;11&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">11</span><span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&lt;</span>option value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;12&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">12</span><span style="color:#f92672">&lt;/</span>option<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;/</span>select<span style="color:#f92672">&gt;</span> 월
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;birth_day&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;birth_day&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">/&gt;</span> 일
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12 center&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;회원가입&#34;</span> onclick<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;userRegister()&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;취소&#34;</span> onclick<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cancelUserRegister()&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/</span>form<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span></code></pre></div><ul>
+<li><strong>vi/boardapp/static/boardapp/assets/js/user.js</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>function idCheck() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#username&#39;</span>)<span style="color:#f92672">.</span>val()) {
+</span></span><span style="display:flex;"><span>        alert(<span style="color:#e6db74">&#34;ID를 입력해 주시기 바랍니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#f92672">.</span>ajax({
+</span></span><span style="display:flex;"><span>        type: <span style="color:#e6db74">&#34;POST&#34;</span>,
+</span></span><span style="display:flex;"><span>        url: <span style="color:#e6db74">&#34;/boardapp/user_register_idcheck/&#34;</span>,
+</span></span><span style="display:flex;"><span>        data: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;username&#39;</span>: <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#username&#39;</span>)<span style="color:#f92672">.</span>val(),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;csrfmiddlewaretoken&#39;</span>: <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#34;input[name=csrfmiddlewaretoken]&#34;</span>)<span style="color:#f92672">.</span>val()
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        success: function(response) {
+</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#idcheck-result&#39;</span>)<span style="color:#f92672">.</span>html(response);
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>function changeEmailDomain() {
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#email_domain&#39;</span>)<span style="color:#f92672">.</span>val(<span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#email_selection&#39;</span>)<span style="color:#f92672">.</span>val());
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>function cancelUserRegister() {
+</span></span><span style="display:flex;"><span>    var result <span style="color:#f92672">=</span> confirm(<span style="color:#e6db74">&#34;회원가입을 취소하시겠습니까?&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (result) {
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">$</span>(location)<span style="color:#f92672">.</span>attr(<span style="color:#e6db74">&#39;href&#39;</span>, <span style="color:#e6db74">&#39;/boardapp/login&#39;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>function userRegister() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#username&#39;</span>)<span style="color:#f92672">.</span>val()) {
+</span></span><span style="display:flex;"><span>        alert(<span style="color:#e6db74">&#34;아이디를 입력해 주시기 바랍니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#IDCheckResult&#39;</span>)<span style="color:#f92672">.</span>val()) {
+</span></span><span style="display:flex;"><span>        alert(<span style="color:#e6db74">&#34;ID 중복체크를 먼저 진행해 주시기 바랍니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#password&#39;</span>)<span style="color:#f92672">.</span>val()) {
+</span></span><span style="display:flex;"><span>        alert(<span style="color:#e6db74">&#34;비밀번호를 입력해 주시기 바랍니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#password&#39;</span>)<span style="color:#f92672">.</span>val() <span style="color:#f92672">!=</span> <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#password_check&#39;</span>)<span style="color:#f92672">.</span>val()) {
+</span></span><span style="display:flex;"><span>        alert(<span style="color:#e6db74">&#34;비밀번호가 일치하지 않습니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#last_name&#39;</span>)<span style="color:#f92672">.</span>val()) {
+</span></span><span style="display:flex;"><span>        alert(<span style="color:#e6db74">&#34;이름을 입력해 주시기 바랍니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#phone1&#39;</span>)<span style="color:#f92672">.</span>val() <span style="color:#f92672">||</span> <span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#phone2&#39;</span>)<span style="color:#f92672">.</span>val() <span style="color:#f92672">||</span> <span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#phone3&#39;</span>)<span style="color:#f92672">.</span>val()) {
+</span></span><span style="display:flex;"><span>        alert(<span style="color:#e6db74">&#34;전화번호를 올바르게 입력해 주시기 바랍니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#email_id&#39;</span>)<span style="color:#f92672">.</span>val() <span style="color:#f92672">||</span> <span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#email_domain&#39;</span>)<span style="color:#f92672">.</span>val()) {
+</span></span><span style="display:flex;"><span>        alert(<span style="color:#e6db74">&#34;E-mail 주소를 올바르게 입력해 주시기 바랍니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#birth_year&#39;</span>)<span style="color:#f92672">.</span>val() <span style="color:#f92672">||</span> <span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#birth_month&#39;</span>)<span style="color:#f92672">.</span>val() <span style="color:#f92672">||</span> <span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#birth_day&#39;</span>)<span style="color:#f92672">.</span>val()) {
+</span></span><span style="display:flex;"><span>        alert(<span style="color:#e6db74">&#34;생년월일을 올바르게 입력해 주시기 바랍니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#phone&#39;</span>)<span style="color:#f92672">.</span>val(<span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#phone1&#39;</span>)<span style="color:#f92672">.</span>val() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#phone2&#39;</span>)<span style="color:#f92672">.</span>val() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#phone3&#39;</span>)<span style="color:#f92672">.</span>val());
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#email&#39;</span>)<span style="color:#f92672">.</span>val(<span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#email_id&#39;</span>)<span style="color:#f92672">.</span>val() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;@&#34;</span> <span style="color:#f92672">+</span> <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#email_domain&#39;</span>)<span style="color:#f92672">.</span>val());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#register_form&#39;</span>)<span style="color:#f92672">.</span>submit();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="user_register_idcheck">
+  <strong>user_register_idcheck</strong>
+  <a class="anchor" href="#user_register_idcheck">#</a>
+</h3>
+<ul>
+<li>vi/boardapp/views.py</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">user_register_idcheck</span>(request):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;POST&#34;</span>:
+</span></span><span style="display:flex;"><span>        username <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;username&#39;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    idObject <span style="color:#f92672">=</span> User<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(username__exact<span style="color:#f92672">=</span>username)
+</span></span><span style="display:flex;"><span>    idCount <span style="color:#f92672">=</span> idObject<span style="color:#f92672">.</span>count()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> idCount <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        msg <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;font color=&#39;red&#39;&gt;이미 존재하는 ID입니다.&lt;/font&gt;&lt;input type=&#39;hidden&#39; name=&#39;IDCheckResult&#39; id=&#39;IDCheckResult&#39; value=0/&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        msg <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;font color=&#39;blue&#39;&gt;사용할 수 있는 ID입니다.&lt;/font&gt;&lt;input type=&#39;hidden&#39; name=&#39;IDCheckResult&#39; id=&#39;IDCheckResult&#39; value=1/&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> HttpResponse(msg)
+</span></span></code></pre></div><h3 id="user_register_res">
+  <strong>user_register_res</strong>
+  <a class="anchor" href="#user_register_res">#</a>
+</h3>
+<ul>
+<li>boardapp/view.py</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">user_register_result</span>(request):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;POST&#34;</span>:
+</span></span><span style="display:flex;"><span>        username <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;username&#39;</span>]
+</span></span><span style="display:flex;"><span>        password <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;password&#39;</span>]
+</span></span><span style="display:flex;"><span>        last_name <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;last_name&#39;</span>]
+</span></span><span style="display:flex;"><span>        phone <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;phone&#39;</span>]
+</span></span><span style="display:flex;"><span>        email <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;email&#39;</span>]
+</span></span><span style="display:flex;"><span>        birth_year <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;birth_year&#39;</span>]
+</span></span><span style="display:flex;"><span>        birth_month <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;birth_month&#39;</span>]
+</span></span><span style="display:flex;"><span>        birth_day <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;birth_day&#39;</span>]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> username <span style="color:#f92672">and</span> User<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(username__exact<span style="color:#f92672">=</span>username)<span style="color:#f92672">.</span>count() <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            date_of_birth <span style="color:#f92672">=</span> datetime(int(birth_year), int(birth_month), int(birth_day))
+</span></span><span style="display:flex;"><span>            user <span style="color:#f92672">=</span> User<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>create_user(username, password, last_name, email, phone, date_of_birth)
+</span></span><span style="display:flex;"><span>            redirection_page <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/boardapp/user_register_completed/&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            redirection_page <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/boardapp/error/&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">BaseException</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        print(e)
+</span></span><span style="display:flex;"><span>        redirection_page <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/boardapp/error/&#39;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> redirect(redirection_page)
+</span></span></code></pre></div><h3 id="user_register_complete">
+  <strong>user_register_complete</strong>
+  <a class="anchor" href="#user_register_complete">#</a>
+</h3>
+<ul>
+<li>vi boardapp/views.py</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">user_register_completed</span>(request):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;user_register_completed_page.html&#39;</span>)
+</span></span></code></pre></div><ul>
+<li>vi boardapp/templates/user_register_completed_page.html</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>{<span style="color:#f92672">%</span> extends <span style="color:#e6db74">&#34;base.html&#34;</span> <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block title <span style="color:#f92672">%</span>}회원가입 완료{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block script <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block content <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>div style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;height: 70px;&#34;</span><span style="color:#f92672">&gt;&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row block-center&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-box col-8&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>h3 class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-bottom-10&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    회원가입이 완료되었습니다<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>h3<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>h3 class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-bottom-10&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    AWS <span style="color:#f92672">/</span> Django Web Application의 서비스를 이용할 수 있습니다<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>h3<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12 center&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;로그인&#34;</span> onclick<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;location.href=&#39;{</span><span style="color:#e6db74">% u</span><span style="color:#e6db74">rl &#39;login&#39; %}&#39;&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;메인화면&#34;</span> onclick<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;location.href=&#39;{</span><span style="color:#e6db74">% u</span><span style="color:#e6db74">rl &#39;main&#39; %}&#39;&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span></code></pre></div><h3 id="login">
+  <strong>login</strong>
+  <a class="anchor" href="#login">#</a>
+</h3>
+<ul>
+<li>vi /boardapp/templates/login.html</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>{<span style="color:#f92672">%</span> extends <span style="color:#e6db74">&#34;base.html&#34;</span> <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block title <span style="color:#f92672">%</span>}Login{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block script <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> load static <span style="color:#f92672">%</span>}<span style="color:#f92672">&lt;</span>script src<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{</span><span style="color:#e6db74">% s</span><span style="color:#e6db74">tatic &#39;boardapp/assets/js/login.js&#39; %}&#34;</span><span style="color:#f92672">&gt;&lt;/</span>script<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block content <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> <span style="color:#66d9ef">if</span> form<span style="color:#f92672">.</span>errors <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>script<span style="color:#f92672">&gt;</span>alert(<span style="color:#e6db74">&#34;ID와 비밀번호를 올바르게 입력하십시오&#34;</span>);<span style="color:#f92672">&lt;/</span>script<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> endif <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>div style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;height: 70px;&#34;</span><span style="color:#f92672">&gt;&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row block-center&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-box col-12&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span>form id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;login_form&#34;</span> action<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.&#34;</span> method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            {<span style="color:#f92672">%</span> csrf_token <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12 center&#34;</span><span style="color:#f92672">&gt;&lt;</span>h2<span style="color:#f92672">&gt;</span>Login<span style="color:#f92672">&lt;/</span>h2<span style="color:#f92672">&gt;&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-6 right&#34;</span><span style="color:#f92672">&gt;</span>ID<span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-5&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;12&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div <span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">= &#34;</span><span style="color:#a6e22e">row</span><span style="color:#e6db74">&#34;&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-6 right&#34;</span><span style="color:#f92672">&gt;</span>PASSWORD<span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-5&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;12&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12 center&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;로그인&#34;</span> onclick<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;login()&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;회원가입&#34;</span> onclick<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;location.href=&#39;{</span><span style="color:#e6db74">% u</span><span style="color:#e6db74">rl &#39;register&#39; %}&#39;&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12 center&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>h4<span style="color:#f92672">&gt;</span>아이디가 없으십니까<span style="color:#960050;background-color:#1e0010">?</span> 회원가입을 해 주시기 바랍니다<span style="color:#960050;background-color:#1e0010">!</span><span style="color:#f92672">&lt;/</span>h4<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/</span>form<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span></code></pre></div><ul>
+<li>vi boardapp/static/boardapp/assets/js/login.js</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">$</span>(document)<span style="color:#f92672">.</span>ready(function() {
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;input&#39;</span>)<span style="color:#f92672">.</span>keydown(function(e) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (e<span style="color:#f92672">.</span>which <span style="color:#f92672">==</span> <span style="color:#ae81ff">13</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;form&#39;</span>)<span style="color:#f92672">.</span>submit();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>function login() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#username&#39;</span>)<span style="color:#f92672">.</span>val()) {
+</span></span><span style="display:flex;"><span>        alert(<span style="color:#e6db74">&#34;아이디를 입력해 주시기 바랍니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#password&#39;</span>)<span style="color:#f92672">.</span>val()) {
+</span></span><span style="display:flex;"><span>        alert(<span style="color:#e6db74">&#34;비밀번호를 입력해 주시기 바랍니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#login_form&#39;</span>)<span style="color:#f92672">.</span>submit();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="logoute">
+  <strong>logoute</strong>
+  <a class="anchor" href="#logoute">#</a>
+</h3>
+<ul>
+<li>LogoutView
+<ul>
+<li>LogoutView는 django에서 지원하는 auth의 views를 사용한다.</li>
+<li>template는 따로 지정하지 않았다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="modify">
+  <strong>modify</strong>
+  <a class="anchor" href="#modify">#</a>
+</h3>
+<ul>
+<li>PasswordChangeView
+<ul>
+<li>PasswordChangeView는 django에서 지원하는 auth의 views를 사용한다.</li>
+<li>urls.py에서 template_name을 password_change.html로 지정하였다.</li>
+</ul>
+</li>
+<li>vi boardapp/templates/password_change.html</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>{<span style="color:#f92672">%</span> extends <span style="color:#e6db74">&#34;base.html&#34;</span> <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block title <span style="color:#f92672">%</span>}회원정보 조회{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block script <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> load static <span style="color:#f92672">%</span>}<span style="color:#f92672">&lt;</span>script src<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{</span><span style="color:#e6db74">% s</span><span style="color:#e6db74">tatic &#39;boardapp/assets/js/user.js&#39; %}&#34;</span><span style="color:#f92672">&gt;&lt;/</span>script<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block content <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> <span style="color:#66d9ef">if</span> form<span style="color:#f92672">.</span>errors <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>script<span style="color:#f92672">&gt;</span>alert(<span style="color:#e6db74">&#34;비밀번호 변경이 잘못되었습니다. 올바르게 입력해 주시기 바랍니다.&#34;</span>)<span style="color:#f92672">&lt;/</span>script<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> endif <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row block-center&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-box col-6&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span>form id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password_change_form&#34;</span> action<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.&#34;</span> method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            {<span style="color:#f92672">%</span> csrf_token <span style="color:#f92672">%</span>}
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span><span style="color:#f92672">&gt;&lt;</span>h2<span style="color:#f92672">&gt;</span>회원정보 조회 <span style="color:#f92672">/</span> 비밀번호 변경<span style="color:#f92672">&lt;/</span>h2<span style="color:#f92672">&gt;&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    ID: <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>{{ user<span style="color:#f92672">.</span>username }}<span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    {{ form<span style="color:#f92672">.</span>old_password<span style="color:#f92672">.</span>label_tag }}
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>{{ form<span style="color:#f92672">.</span>old_password }}<span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    {{ form<span style="color:#f92672">.</span>new_password1<span style="color:#f92672">.</span>label_tag }}
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>{{ form<span style="color:#f92672">.</span>new_password1 }}<span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    {{ form<span style="color:#f92672">.</span>new_password2<span style="color:#f92672">.</span>label_tag }}
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>{{ form<span style="color:#f92672">.</span>new_password2 }}<span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    이름: <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>{{ user<span style="color:#f92672">.</span>last_name }}<span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    E<span style="color:#f92672">-</span>mail: <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>{{ user<span style="color:#f92672">.</span>email }}<span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    전화번호: <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>{{ user<span style="color:#f92672">.</span>phone }}<span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ml-1 col-11&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    생년월일: <span style="color:#f92672">&lt;</span>span class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-left-10&#34;</span><span style="color:#f92672">&gt;</span>{{ user<span style="color:#f92672">.</span>date_of_birth <span style="color:#f92672">|</span> date:<span style="color:#e6db74">&#34;Y년 n월 j일&#34;</span> }}<span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12 center&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;비밀번호 변경&#34;</span> onclick<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;changePassword()&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;이전화면&#34;</span> onclick<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;window.history.back()&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/</span>form<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
+</span></span></code></pre></div><ul>
+<li>vi boardapp/static/boardapp/assets/js/user.js</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>function changePassword() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#960050;background-color:#1e0010">!$</span>(<span style="color:#e6db74">&#39;#id_old_password&#39;</span>)<span style="color:#f92672">.</span>val()) {
+</span></span><span style="display:flex;"><span>        alert(<span style="color:#e6db74">&#34;비밀번호를 입력해 주시기 바랍니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#id_new_password1&#39;</span>)<span style="color:#f92672">.</span>val() <span style="color:#f92672">!=</span> <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#id_new_password2&#39;</span>)<span style="color:#f92672">.</span>val()) {
+</span></span><span style="display:flex;"><span>        alert(<span style="color:#e6db74">&#34;비밀번호가 일치하지 않습니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#password_change_form&#39;</span>)<span style="color:#f92672">.</span>submit();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="passwordchangedoneview">
+  <strong>PasswordChangeDoneView</strong>
+  <a class="anchor" href="#passwordchangedoneview">#</a>
+</h3>
+<ul>
+<li>PasswordChangeDoneView는 django에서 지원하는 auth의 views를 사용한다.</li>
+<li>urls.py에서 template_name을 password_change_done.html로 지정하였다.</li>
+<li>boardapp/templates/password_change_done.html</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>script<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    alert(<span style="color:#e6db74">&#34;비밀번호 변경이 완료되었습니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>    location<span style="color:#f92672">.</span>href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{</span><span style="color:#e6db74">% u</span><span style="color:#e6db74">rl &#39;main&#39; %}&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>script<span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><h3 id="settingpy">
+  <strong>setting.py</strong>
+  <a class="anchor" href="#settingpy">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>LOGIN_REDIRECT_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/boardapp/&#39;</span>
+</span></span><span style="display:flex;"><span>LOGOUT_REDIRECT_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/boardapp/&#39;</span>
+</span></span></code></pre></div><h3 id="test">
+  <strong>test</strong>
+  <a class="anchor" href="#test">#</a>
+</h3>
+<ul>
+<li>base.html에서 완성된 부분을 #에서 name에 맞게 변경하고 runserver를 실시한다.</li>
+<li>회원가입을 테스트한다.
+<ul>
+<li>id : admin</li>
+<li>이름 : administrator</li>
+<li>email : <a href="mailto:admin@admin.com">admin@admin.com</a></li>
+</ul>
+</li>
+<li>앞으로 관리자 계정이 필요하므로 mysql에 접속하여 해당 user의 컬럼을 변경
+<ul>
+<li>is_superuser = 1</li>
+<li>is_staff = 1</li>
+</ul>
+</li>
+<li>SQL : update auth_user set is_superuser = 1, is_staff = 1 where username = &lsquo;admin&rsquo;;</li>
+<li>admin 페이지에 접속하여 로그인을 테스트한다.</li>
+</ul>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#django-boardapp-project"><strong>Django Boardapp project</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#mtv-패턴-models-구성"><strong>MTV 패턴 Models 구성</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#models"><strong>models</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#djnago-어플리케이션-흐름"><strong>Djnago 어플리케이션 흐름</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#basehtml-main-페이지-작성"><strong>base.html main 페이지 작성</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#user_register"><strong>user_register</strong></a></li>
+        <li><a href="#user_register_idcheck"><strong>user_register_idcheck</strong></a></li>
+        <li><a href="#user_register_res"><strong>user_register_res</strong></a></li>
+        <li><a href="#user_register_complete"><strong>user_register_complete</strong></a></li>
+        <li><a href="#login"><strong>login</strong></a></li>
+        <li><a href="#logoute"><strong>logoute</strong></a></li>
+        <li><a href="#modify"><strong>modify</strong></a></li>
+        <li><a href="#passwordchangedoneview"><strong>PasswordChangeDoneView</strong></a></li>
+        <li><a href="#settingpy"><strong>setting.py</strong></a></li>
+        <li><a href="#test"><strong>test</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

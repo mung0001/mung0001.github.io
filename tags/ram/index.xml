@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ram on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/tags/ram/</link>
+    <description>Recent content in ram on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/tags/ram/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ram</title>
+      <link>https://mung0001.github.io/docs/infra/hardware/ram/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/infra/hardware/ram/</guid>
+      <description>What is RAM##RAM이란 Random Access Memory로 ROM Read Only Memotry과는 반대로 휘발성 메모리를 의미한다.
+Random Access라는 말은 어느 위치에든 똑같은 속도로 접근하여 읽고 쓸 수 있음을 의미하며, 사용자가 자유롭게 내용을 읽고 쓰고 지울 수 있는 기억장치로, 컴퓨터가 켜지면 CPU는 연산 및 동작에 필요한 내용이 전원이 유지되는 동안에 RAM에 저장된다.
+주로 주기억장치로 불리며 보조기억장치로는 흔이 우리가 사용하는 Disk(HDD, SDD 등)가 있다.
+단, RAM의 범주에는 &amp;lsquo;임의 접근&amp;rsquo;할 수 있는 메모리이므로 HDD 등의 장치들도 RAM의 범주에 들어가기도 하지만, HDD 등의 기억장치와 같이 어느 위치에나 직접 접근할 수 있으나 데이터의 물리적 위치에 따라 읽고 쓰는 시간에 차이가 발생하게 되는 기억장치들은 Direct Access Memory 또는 Direct Access Data Storage라고 부른다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cpu on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/tags/cpu/</link>
+    <description>Recent content in cpu on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/tags/cpu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cpu</title>
+      <link>https://mung0001.github.io/docs/infra/hardware/cpu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/infra/hardware/cpu/</guid>
+      <description>What is CPU#CPU란 (Central Processing Unit / main processor)으로 컴퓨터 시스템을 통제하고 프로그램(프로세스)의 연산을 실행하는 핵심적인 컴퓨터의 중앙 제어장치로 사람으로 따지면 뇌의 역할은 하는 내장형 칩을 의미한다.
+CPU는 기계어로 쓰인 명령어를 해석하며 실행하며, 외부의 정보를 입력받아 이를 기억하고, 연산하며 외부로 출력하는 역할을 수행한다.
+CPU는 크게 하기 3가지 구분할 수있다.
+처리할 명령어를 저장하는 프로세서와 레지스터 연산을 담당하는 산술논리연산장치(ALU / 연산장치), 명령어의 해석과 올바른 실행을 위해 CPU를 제어하는 제어장치(Control Unit) #CPU의 구조#Core : CPU의 Core 즉 CPU의 핵심적인 역할을 수행해내는 중심부 역할을 말하며 이 코어에서 시스템의 모든 연산처리를 수행한다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Azure DataBase##Azure DataBase는 기존 스토리지 문제를 해결하기 위해 클라우드에 데이터를 저장하는 것을 고려합니다.
+하지만 보안, 백업 및 재해 복구에 대한 우려가 존재합니다.
+Azure에서는 다양한 형식과 볼륨의 데이터를 저장하도록 여러 데이터베이스 서비스를 제공합니다.
+##Azure Database의 특징##Azure Database의 이점
+자동화된 백업 및 복구
+전 세계에서 복제
+데이터 분석 지원
+암호화 기능
+다양한 데이터 형식
+가상 디스크의 데이터 스토리지
+스토리지 계층
+데이터 형식
+정형 데이터 (Structured data) 정형 데이터는 스키마를 준수하는 데이터이므로 모든 데이터에 동일한 필드 또는 속성이 존재합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Azure DataBase" />
+<meta property="og:description" content="Azure DataBase##Azure DataBase는 기존 스토리지 문제를 해결하기 위해 클라우드에 데이터를 저장하는 것을 고려합니다.
+하지만 보안, 백업 및 재해 복구에 대한 우려가 존재합니다.
+Azure에서는 다양한 형식과 볼륨의 데이터를 저장하도록 여러 데이터베이스 서비스를 제공합니다.
+##Azure Database의 특징##Azure Database의 이점
+자동화된 백업 및 복구
+전 세계에서 복제
+데이터 분석 지원
+암호화 기능
+다양한 데이터 형식
+가상 디스크의 데이터 스토리지
+스토리지 계층
+데이터 형식
+정형 데이터 (Structured data) 정형 데이터는 스키마를 준수하는 데이터이므로 모든 데이터에 동일한 필드 또는 속성이 존재합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/azure/microsoftazure/azure10/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Azure DataBase | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Azure DataBase</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#azure-database"><strong>Azure DataBase</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-database의-특징"><strong>Azure Database의 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-cosmos-db-nosql"><strong>Azure Cosmos DB (NoSQL)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-sql-database"><strong>Azure SQL Database</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-blob-storage"><strong>Azure Blob Storage</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-data-lake-storage"><strong>Azure Data Lake Storage</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-files"><strong>Azure Files</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-queue-storage"><strong>Azure Queue Storage</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#disk-storage"><strong>Disk Storage</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-synapse-analytics"><strong>Azure Synapse Analytics</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-database-migration-service"><strong>Azure Database Migration Service</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-cache-for-redis"><strong>Azure Cache for Redis</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h2 id="azure-database">
+  <strong>Azure DataBase</strong>
+  <a class="anchor" href="#azure-database">#</a>
+</h2>
+<hr>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Azure DataBase는 기존 스토리지 문제를 해결하기 위해 클라우드에 데이터를 저장하는 것을 고려합니다.</strong></p>
+</li>
+<li>
+<p><strong>하지만 보안, 백업 및 재해 복구에 대한 우려가 존재합니다.</strong></p>
+</li>
+<li>
+<p><strong>Azure에서는 다양한 형식과 볼륨의 데이터를 저장하도록 여러 데이터베이스 서비스를 제공합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<h3 id="azure-database의-특징">
+  <strong>Azure Database의 특징</strong>
+  <a class="anchor" href="#azure-database%ec%9d%98-%ed%8a%b9%ec%a7%95">#</a>
+</h3>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Azure Database의 이점</strong></p>
+<ul>
+<li>
+<p><strong>자동화된 백업 및 복구</strong></p>
+</li>
+<li>
+<p><strong>전 세계에서 복제</strong></p>
+</li>
+<li>
+<p><strong>데이터 분석 지원</strong></p>
+</li>
+<li>
+<p><strong>암호화 기능</strong></p>
+</li>
+<li>
+<p><strong>다양한 데이터 형식</strong></p>
+</li>
+<li>
+<p><strong>가상 디스크의 데이터 스토리지</strong></p>
+</li>
+<li>
+<p><strong>스토리지 계층</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>데이터 형식</strong></p>
+<ul>
+<li><strong>정형 데이터 (Structured data)</strong>
+<ul>
+<li>
+<p><strong>정형 데이터는 스키마를 준수하는 데이터이므로 모든 데이터에 동일한 필드 또는 속성이 존재합니다.</strong></p>
+</li>
+<li>
+<p><strong>정형 데이터는 테이블의 한 행을 다른 테이블의 또 다른 행에 있는 데이터와 연결하는 방법을 나타내며, 이를 관계형 데이터라고도 합니다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>반정형 데이터 (Semi-structured data)</strong>
+<ul>
+<li>
+<p><strong>반정형 데이터는 테이블, 행, 열에 제약받지 않으며, 대신 태그 혹은 키 값을 사용합니다.</strong></p>
+</li>
+<li>
+<p><strong>반정형 데이터는 비관계형 데이터 혹은 NoSQL이라고도 합니다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>비정형 데이터 (Unstructured data)</strong>
+<ul>
+<li>
+<p><strong>비정형 데이터는 지정된 구조가 없는 데이터를 포괄합니다.</strong></p>
+</li>
+<li>
+<p><strong>데이터의 종류에 대한 제한이 없다는 것은 PDF, JPG, JSON와 같은 형식을 모두 포함하고 있습니다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>스토리지 서비스 암호화</strong>
+<ul>
+<li>
+<p><strong>Azure는 암호화 및 복제 기능을 통해 봉나 및 고가용성을 데이터에 제공합니다.</strong></p>
+</li>
+<li>
+<p><strong>미사용 데이터에 대한 Azure SSE (스토리지 서비스 암호화)를 사용하면 조직의 보안 및 규정준수를 충족하도록 데이터를 보호할 수 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>클라이언트 쪽의 암호화를 통해 클라이언트 라이브러이에 데이턱 ㅏ이미 암호화되어 있어, 검색 중에 이를 해독합니다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>스토리지 가용성 복제</strong>
+<ul>
+<li>
+<p><strong>복제 유형은 스토리지 계정을 만들 때 설정됩니다.</strong></p>
+</li>
+<li>
+<p><strong>복제 기능은 데이터가 내구성이 있으며 항상 사용할 수 있는 지 확인합니다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<h3 id="azure-cosmos-db-nosql">
+  <strong>Azure Cosmos DB (NoSQL)</strong>
+  <a class="anchor" href="#azure-cosmos-db-nosql">#</a>
+</h3>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<p><img src="/Azure/Azure/CosmosDB01.png" alt="" /></p>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<ul>
+<li><strong>Azure Cosmos DB는 글로벌 분산형 데이터베이스 서비스로, 지속적으로 변경되는 데이터를 지원하기 위해 응답성이 뛰어난 Always On 애플리케이션을 빌드할 수 있는 스키마 없는 데이터 (NoSQL)을 지원합니다.</strong></li>
+</ul>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h3 id="azure-sql-database">
+  <strong>Azure SQL Database</strong>
+  <a class="anchor" href="#azure-sql-database">#</a>
+</h3>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<p><img src="/Azure/Azure/MySQL01.png" alt="" /></p>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Azure SQL Database는 안정적으로 Microsoft SQL Server 데이터베이스 엔진으로 관계형 DaaS (Databases as a Service)입니다.</strong></p>
+</li>
+<li>
+<p><strong>완전 관리형 데이터베이스로, 인프라를 관리할 필요 없이 선택한 프로그래밍 언어와 옵티마이저를 통해 최적의 빌드가 가능합니다.</strong></p>
+</li>
+<li>
+<p><strong>기존 local 환경의 데이터베이스와 마이그레이션이 가능하며 이 때 Microsoft Data Migration Assistant를 사용합니다.</strong></p>
+</li>
+<li>
+<p><strong>자동 크기 조정과 필수 인텔리전스, 강력한 보안을 통해 완벽하게 ### 관리되는 관계형 데이터베이스입니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<h3 id="azure-blob-storage">
+  <strong>Azure Blob Storage</strong>
+  <a class="anchor" href="#azure-blob-storage">#</a>
+</h3>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<p><img src="/Azure/Azure/Blob01.png" alt="" /></p>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Azure Blob Storage는 비정형 데이터베이스로 포함될 수 있는 데이터의 종류에 제한이 없습니다.</strong></p>
+</li>
+<li>
+<p><strong>수천 개의 동시 업로드, 대용량 비디오 데이터, 끊임없이 증가하는 로그 파일을 관리할 수 있으며, 어디서나 인터넷을 통해 연결할 수 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>일반적으로 파일 형식으로 제한되지 않으며, 최대 8TB의 가상 머신용 데이터를 저장할 수 있습니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<h3 id="azure-data-lake-storage">
+  <strong>Azure Data Lake Storage</strong>
+  <a class="anchor" href="#azure-data-lake-storage">#</a>
+</h3>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<p><img src="/Azure/Azure/DataLinkStorage.png" alt="" /></p>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<ul>
+<li><strong>Azure Data Lake Storage는 개체 스토리지의 확정성 및 비용 혜택이 빅 데이터 파일 시스템 기능의 안정성 및 성능과 결합되어 있습니다.</strong></li>
+</ul>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<h3 id="azure-files">
+  <strong>Azure Files</strong>
+  <a class="anchor" href="#azure-files">#</a>
+</h3>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
+<p><img src="/Azure/Azure/Files01.png" alt="" /></p>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Azure Files는 산업 표준 SMB 프로토콜을 통해 엑세스할 수 있는, 클라우드에서 완전 관리형 파일 공유를 제공합니다.</strong></p>
+</li>
+<li>
+<p><strong>Azure File 공유는 Windows, Linux 및 macOS의 클라우드 또는 온-프레미스 배포를 통해 동시에 탑재될 수 있으며 공유 또한 가능합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
+<h3 id="azure-queue-storage">
+  <strong>Azure Queue Storage</strong>
+  <a class="anchor" href="#azure-queue-storage">#</a>
+</h3>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
+<p><img src="/Azure/Azure/Queue01.png" alt="" /></p>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Azure Queue Storage는 전 세계 어디에서나 엑세스할 수 있는 많은 수의 메시지를 저장하기 위한 서비스입니다.</strong></p>
+</li>
+<li>
+<p><strong>유연한 애플리케이션을 구축하고 기능을 분리하여 대용량 워크로드 전반에서 내구성을 향상 시킬 수 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>비동기식 메시지 대기열 기능을 제공합니다.</strong></p>
+</li>
+<li>
+<p><strong>기본적으로 하나 이상의 송신기 구성 요소와 하나 이상의 수신기 구성 요소가 존재합니다</strong></p>
+</li>
+</ul>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>Queue Storage를 사용하여 하단의 작업들의 수행이 가능합니다.</strong>
+<ul>
+<li>
+<p><strong>작업의 백로그를 만들고 다른 Azure 웹 서버 간에 메시지를 전달합니다.</strong></p>
+</li>
+<li>
+<p><strong>여러 웹 서버/ 인프라 간에 로드를 배포하고 트래픽 증가를 관리합니다.</strong></p>
+</li>
+<li>
+<p><strong>여러 사용자가 동싱에 데이터에 엑세스할 때 구성 요소 오류에 대한 복원력을 빌드합니다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
+<h2 id="disk-storage">
+  <strong>Disk Storage</strong>
+  <a class="anchor" href="#disk-storage">#</a>
+</h2>
+<h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
+<p><img src="/Azure/Azure/DiskStorage01.png" alt="" /></p>
+<h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Disk Storage는 가상 머신, 애플리케이션 및 기타 서비스가 온-프레미스 시나리오와 마찬가지로 필요에 따라 엑세스하여 사용할 수 있는 디스크를 제공합니다.</strong></p>
+</li>
+<li>
+<p><strong>Disk Storage는 데이터를 연결된 가상 하드 디스크에서 영구적으로 저장 및 엑세스가 가능하며, 디스크는 Azure 혹은 사용자가 직접 관리가 가능합니다.</strong></p>
+</li>
+<li>
+<p><strong>Disk Storage의 종류에는 SSD, HDD 등 종류가 다양합니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-38">
+  
+  <a class="anchor" href="#heading-38">#</a>
+</h1>
+<h3 id="azure-synapse-analytics">
+  <strong>Azure Synapse Analytics</strong>
+  <a class="anchor" href="#azure-synapse-analytics">#</a>
+</h3>
+<h1 id="heading-39">
+  
+  <a class="anchor" href="#heading-39">#</a>
+</h1>
+<ul>
+<li><strong>추가 비용 없이 모든 수준에서 필수 보안을 제공하며 완벽하게 관리되는 데이터 웨어하우스입니다.</strong></li>
+</ul>
+<h1 id="heading-40">
+  
+  <a class="anchor" href="#heading-40">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-41">
+  
+  <a class="anchor" href="#heading-41">#</a>
+</h1>
+<h3 id="azure-database-migration-service">
+  <strong>Azure Database Migration Service</strong>
+  <a class="anchor" href="#azure-database-migration-service">#</a>
+</h3>
+<h1 id="heading-42">
+  
+  <a class="anchor" href="#heading-42">#</a>
+</h1>
+<ul>
+<li><strong>애플리케이션 코드변경 없이 클라우드로 데이터베이스를 마이그레이션합니다.</strong></li>
+</ul>
+<h1 id="heading-43">
+  
+  <a class="anchor" href="#heading-43">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-44">
+  
+  <a class="anchor" href="#heading-44">#</a>
+</h1>
+<h3 id="azure-cache-for-redis">
+  <strong>Azure Cache for Redis</strong>
+  <a class="anchor" href="#azure-cache-for-redis">#</a>
+</h3>
+<h1 id="heading-45">
+  
+  <a class="anchor" href="#heading-45">#</a>
+</h1>
+<ul>
+<li><strong>자주 사용하는 정적 데이터를 캐시하여 데이터 및 애플리케이션 대기 ### 시간을 줄입니다.</strong></li>
+</ul>
+<h1 id="heading-46">
+  
+  <a class="anchor" href="#heading-46">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#azure-database"><strong>Azure DataBase</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-database의-특징"><strong>Azure Database의 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-cosmos-db-nosql"><strong>Azure Cosmos DB (NoSQL)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-sql-database"><strong>Azure SQL Database</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-blob-storage"><strong>Azure Blob Storage</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-data-lake-storage"><strong>Azure Data Lake Storage</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-files"><strong>Azure Files</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-queue-storage"><strong>Azure Queue Storage</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#disk-storage"><strong>Disk Storage</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-synapse-analytics"><strong>Azure Synapse Analytics</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-database-migration-service"><strong>Azure Database Migration Service</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-cache-for-redis"><strong>Azure Cache for Redis</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

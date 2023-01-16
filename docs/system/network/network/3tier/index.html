@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Local 3Tier 구현##OS, 구현 프로그램#Ubuntu18.04#Apache2#Tomcat8#Mysql5.8#GNS3##IP 대역#10.10.10.0/24 Public#20.20.20.0/24 Private#30.30.30.0/24 Private2##Public 대역#10.10.10.10 Apache1#10.10.10.11 Apache2##Private 대역#20.20.20.20 Tomcat1#20.20.20.21 Tomcat2##Public 대역#30.30.30.30 Mysql1#30.30.30.30 Mysql2###sudo vi /etc/netplan/50-cloud-init.yaml network: version: 2 ethernets: ens33: dhcp6: no addresses: - [ IP addresses ] gateway4: [ gateway ] nameservers: addresses: [ [nameserver] ] $ sudo netplan apply $ hostname -l 아키텍처 사진">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="3Tier" />
+<meta property="og:description" content="Local 3Tier 구현##OS, 구현 프로그램#Ubuntu18.04#Apache2#Tomcat8#Mysql5.8#GNS3##IP 대역#10.10.10.0/24 Public#20.20.20.0/24 Private#30.30.30.0/24 Private2##Public 대역#10.10.10.10 Apache1#10.10.10.11 Apache2##Private 대역#20.20.20.20 Tomcat1#20.20.20.21 Tomcat2##Public 대역#30.30.30.30 Mysql1#30.30.30.30 Mysql2###sudo vi /etc/netplan/50-cloud-init.yaml network: version: 2 ethernets: ens33: dhcp6: no addresses: - [ IP addresses ] gateway4: [ gateway ] nameservers: addresses: [ [nameserver] ] $ sudo netplan apply $ hostname -l 아키텍처 사진" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/network/network/3tier/" /><meta property="article:section" content="docs" />
+
+
+
+<title>3Tier | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/natwork-1/" class="">Network</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/packet/" class="">Network Packet</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/portnumber/" class="">Network PortNumber</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/sdn/" class="">SDN</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/3tier/" class="active">3Tier</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/gns3/" class="">GNS3</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/security/" class="">Network Security</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/firewall/" class="">Firewall</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>3Tier</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#os-구현-프로그램"><strong>OS, 구현 프로그램</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ip-대역"><strong>IP 대역</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#mysql-설치">Mysql 설치</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#tomcat8-설치">Tomcat8 설치</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#apache2-설치">Apache2 설치</a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="local-3tier-구현">
+  Local 3Tier 구현
+  <a class="anchor" href="#local-3tier-%ea%b5%ac%ed%98%84">#</a>
+</h1>
+<hr>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<blockquote>
+<h3 id="os-구현-프로그램">
+  <strong>OS, 구현 프로그램</strong>
+  <a class="anchor" href="#os-%ea%b5%ac%ed%98%84-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8">#</a>
+</h3>
+</blockquote>
+<h4 id="ubuntu1804">
+  Ubuntu18.04
+  <a class="anchor" href="#ubuntu1804">#</a>
+</h4>
+<h4 id="apache2">
+  Apache2
+  <a class="anchor" href="#apache2">#</a>
+</h4>
+<h4 id="tomcat8">
+  Tomcat8
+  <a class="anchor" href="#tomcat8">#</a>
+</h4>
+<h4 id="mysql58">
+  Mysql5.8
+  <a class="anchor" href="#mysql58">#</a>
+</h4>
+<h4 id="gns3">
+  GNS3
+  <a class="anchor" href="#gns3">#</a>
+</h4>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<blockquote>
+<h3 id="ip-대역">
+  <strong>IP 대역</strong>
+  <a class="anchor" href="#ip-%eb%8c%80%ec%97%ad">#</a>
+</h3>
+</blockquote>
+<h4 id="101010024-----public">
+  10.10.10.0/24     Public
+  <a class="anchor" href="#101010024-----public">#</a>
+</h4>
+<h4 id="202020024-----private">
+  20.20.20.0/24     Private
+  <a class="anchor" href="#202020024-----private">#</a>
+</h4>
+<h4 id="303030024-----private2">
+  30.30.30.0/24     Private2
+  <a class="anchor" href="#303030024-----private2">#</a>
+</h4>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<h4 id="public-대역">
+  Public 대역
+  <a class="anchor" href="#public-%eb%8c%80%ec%97%ad">#</a>
+</h4>
+<h4 id="10101010-------apache1">
+  10.10.10.10       Apache1
+  <a class="anchor" href="#10101010-------apache1">#</a>
+</h4>
+<h4 id="10101011-------apache2">
+  10.10.10.11       Apache2
+  <a class="anchor" href="#10101011-------apache2">#</a>
+</h4>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h4 id="private-대역">
+  Private 대역
+  <a class="anchor" href="#private-%eb%8c%80%ec%97%ad">#</a>
+</h4>
+<h4 id="20202020-------tomcat1">
+  20.20.20.20       Tomcat1
+  <a class="anchor" href="#20202020-------tomcat1">#</a>
+</h4>
+<h4 id="20202021-------tomcat2">
+  20.20.20.21       Tomcat2
+  <a class="anchor" href="#20202021-------tomcat2">#</a>
+</h4>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h4 id="public-대역-1">
+  Public 대역
+  <a class="anchor" href="#public-%eb%8c%80%ec%97%ad-1">#</a>
+</h4>
+<h4 id="30303030-------mysql1">
+  30.30.30.30       Mysql1
+  <a class="anchor" href="#30303030-------mysql1">#</a>
+</h4>
+<h4 id="30303030-------mysql2">
+  30.30.30.30       Mysql2
+  <a class="anchor" href="#30303030-------mysql2">#</a>
+</h4>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>sudo vi /etc/netplan/50-cloud-init.yaml
+</span></span><span style="display:flex;"><span>network:
+</span></span><span style="display:flex;"><span>    version: 2
+</span></span><span style="display:flex;"><span>    ethernets:
+</span></span><span style="display:flex;"><span>        ens33:
+</span></span><span style="display:flex;"><span>            dhcp6: no
+</span></span><span style="display:flex;"><span>            addresses:
+</span></span><span style="display:flex;"><span>                - [ IP addresses ]
+</span></span><span style="display:flex;"><span>            gateway4: [ gateway ]
+</span></span><span style="display:flex;"><span>            nameservers:
+</span></span><span style="display:flex;"><span>                    addresses: [ [nameserver] ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ sudo netplan apply
+</span></span><span style="display:flex;"><span>$ hostname -l
+</span></span></code></pre></div><p>아키텍처 사진</p>
+<p>하단 부터 설치를 진행합니다.</p>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<hr>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<h2 id="mysql-설치">
+  Mysql 설치
+  <a class="anchor" href="#mysql-%ec%84%a4%ec%b9%98">#</a>
+</h2>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<ul>
+<li>30.30.30.30 Mysql1</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo apt-get install -y mysql-server
+</span></span><span style="display:flex;"><span># mysql 설치
+</span></span><span style="display:flex;"><span>$ sudo mysql_secure_installation
+</span></span><span style="display:flex;"><span># mysql pw 설정
+</span></span><span style="display:flex;"><span>$ systemctl enable mysql
+</span></span><span style="display:flex;"><span># mysql 자동실행 등록
+</span></span></code></pre></div><h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ mysql&gt; create database web; 
+</span></span><span style="display:flex;"><span>$ mysql&gt; create table web.people(name varchar(100), age int);
+</span></span><span style="display:flex;"><span>$ mysql&gt; insert into web.people values(&#39;kim&#39;,20);
+</span></span><span style="display:flex;"><span>$ mysql&gt; insert into web.people values(&#39;Lee&#39;,10);
+</span></span><span style="display:flex;"><span>$ mysql&gt; insert into web.people values(&#39;Hong&#39;,17);
+</span></span></code></pre></div><p><img src="/Network/3tier/mysql.png" alt="mysql" /></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ mysql&gt; select * from web.people;
+</span></span><span style="display:flex;"><span># 확인
+</span></span></code></pre></div><ul>
+<li><strong>연동 확인을 위한 데이터 삽입</strong></li>
+</ul>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ mysql&gt; create user &#39;web&#39;@&#39;%&#39; identified by &#39;Dkagh1234.&#39;;
+</span></span><span style="display:flex;"><span>$ mysql&gt; grant all privileges on web.* to &#39;web&#39;@&#39;%&#39;;
+</span></span></code></pre></div><h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<ul>
+<li><strong>원격 접속을 위한 유저 생성</strong></li>
+</ul>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ ufw allow 3306
+</span></span></code></pre></div><ul>
+<li><strong>방화벽 포트 등록</strong></li>
+</ul>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ vi /etc/mysql/mysql.conf.d/mysqld.cnf
+</span></span><span style="display:flex;"><span>bind-address    =   127.0.0.1 -&gt; tomcat IP
+</span></span></code></pre></div><ul>
+<li><strong>mysql 접속 허용 IP 설정</strong></li>
+</ul>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<hr>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h2 id="tomcat8-설치">
+  Tomcat8 설치
+  <a class="anchor" href="#tomcat8-%ec%84%a4%ec%b9%98">#</a>
+</h2>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<p>20.20.20.20 tomcat</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ apt-get install -y lrzsz
+</span></span><span style="display:flex;"><span># JAVA 간편 다운로드를 위한 Irzsz 설치
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ apt-get install -y openjdk-8-jre
+</span></span><span style="display:flex;"><span>$ apt-get install -y openjdk-8-jdk
+</span></span></code></pre></div><ul>
+<li><strong>JAVA 설치</strong></li>
+</ul>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ which javac
+</span></span><span style="display:flex;"><span>$ readlink -f /usr/bin/javac
+</span></span><span style="display:flex;"><span># 자바 위치 확인
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ vi /etc/profile
+</span></span><span style="display:flex;"><span>export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+</span></span><span style="display:flex;"><span>export PATH=$JAVA_HOME/bin/:$PATH
+</span></span><span style="display:flex;"><span>export CLASS_PATH=$JAVA_HOME/lib/:$CLASS_PATH
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ source /etc/profile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ echo $JAVA_HOME
+</span></span><span style="display:flex;"><span>$ $JAVA_HOME/bin/javac -version
+</span></span></code></pre></div><ul>
+<li><strong>환경변수 등록 및 확인</strong></li>
+</ul>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ apt-get install -y tomcat8
+</span></span><span style="display:flex;"><span>$ /usr/share/tomcat8/bin/version.sh
+</span></span><span style="display:flex;"><span># 톰캣 버전 확인
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ ufw allow 8080/tcp
+</span></span><span style="display:flex;"><span>$ ufw allow 8009/tcp
+</span></span><span style="display:flex;"><span># 톰캣 방화벽 포트 설정 ( 8080은 추후에 삭제 및 8009는 각 설정 포트에 맞게 변경 )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ systemctl enable tomcat8
+</span></span><span style="display:flex;"><span># tomcat8 자동시작 등록
+</span></span></code></pre></div><ul>
+<li><strong>톰캣 설치</strong></li>
+</ul>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ apt-get install -y libapache2-mod-jk 
+</span></span><span style="display:flex;"><span># 연동 모듈 설치
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ vi /etc/tomcat8/server.xml
+</span></span><span style="display:flex;"><span>&lt;Connector port=&#34;8009&#34; protocol=&#34;AJP/1.3&#34; redirectPort=&#34;8443&#34; /&gt;
+</span></span><span style="display:flex;"><span># 주석 헤제 및 포트 변경
+</span></span></code></pre></div><ul>
+<li><strong>톰캣 연동 모듈 설치 및 설정</strong></li>
+</ul>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>wget [ 다운로드 링크 ]
+</span></span></code></pre></div><ul>
+<li><strong><a href="https://dev.mysql.com/downloads/connector/j/">mysql-connector</a> 다운로드 및 적용</strong></li>
+</ul>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ vi /var/lib/tomcat8/webapps/ROOT/index.jsp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;%@page import=&#34;java.sql.*&#34;%&gt;
+</span></span><span style="display:flex;"><span>&lt;%@ page language=&#34;java&#34; contentType=&#34;text/html; charset=UTF-8&#34;
+</span></span><span style="display:flex;"><span>    pageEncoding=&#34;UTF-8&#34;%&gt;
+</span></span><span style="display:flex;"><span>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD HTML 4.01 Transitional//EN&#34; &#34;http://www.w3.org/TR/html4/loose.dtd&#34;&gt;
+</span></span><span style="display:flex;"><span>&lt;html&gt;
+</span></span><span style="display:flex;"><span>&lt;head&gt;
+</span></span><span style="display:flex;"><span>&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=UTF-8&#34;&gt;
+</span></span><span style="display:flex;"><span>&lt;title&gt;Insert title here&lt;/title&gt;
+</span></span><span style="display:flex;"><span>&lt;/head&gt;
+</span></span><span style="display:flex;"><span>&lt;body&gt;
+</span></span><span style="display:flex;"><span>	&lt;%
+</span></span><span style="display:flex;"><span>		Connection conn = null;
+</span></span><span style="display:flex;"><span>		ResultSet rs = null;
+</span></span><span style="display:flex;"><span>	      
+</span></span><span style="display:flex;"><span>		String url = &#34;jdbc:mysql://[ DB IP ]:3306/[ DB name ]?serverTimezone=UTC&#34;;
+</span></span><span style="display:flex;"><span>		String id = &#34;[ 원격 user ]&#34;;
+</span></span><span style="display:flex;"><span>		String pwd = &#34;[ 원격 pw ]&#34;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		try <span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">Class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.mysql.jdbc.Driver&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">conn</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">DriverManager</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span><span style="color:#a6e22e">url</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">pwd</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">Statement</span> <span style="color:#a6e22e">stmt</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">conn</span><span style="color:#f92672">.</span><span style="color:#a6e22e">createStatement</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>     
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">String</span> <span style="color:#a6e22e">sql</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT name, age FROM web.people&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">rs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">stmt</span><span style="color:#f92672">.</span><span style="color:#a6e22e">executeQuery</span><span style="color:#f92672">(</span><span style="color:#a6e22e">sql</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">while</span><span style="color:#f92672">(</span><span style="color:#a6e22e">rs</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">())</span> <span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#a6e22e">rs</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#a6e22e">rs</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;age&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">}</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">conn</span><span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">}</span> catch (Exception e) <span style="color:#75715e">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">e</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">}</span>	
+</span></span><span style="display:flex;"><span>	%&gt;
+</span></span><span style="display:flex;"><span>&lt;/body&gt;
+</span></span><span style="display:flex;"><span>&lt;/html&gt;
+</span></span></code></pre></div><ul>
+<li><strong>DB 연동을 위한 jsp 파일 생성</strong></li>
+</ul>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<p><img src="/Network/3tier/tomcat.png" alt="tomcat" /></p>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<hr>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<h2 id="apache2-설치">
+  Apache2 설치
+  <a class="anchor" href="#apache2-%ec%84%a4%ec%b9%98">#</a>
+</h2>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
+<p>10.10.10.10 Apache</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ apt-get -y install apache2
+</span></span><span style="display:flex;"><span># apache2 설치
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ systemctl enable apache2
+</span></span><span style="display:flex;"><span># apache2 자동실행 등록
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ ufw allow 80/tcp
+</span></span><span style="display:flex;"><span># 방화벽 등록
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ apt-get install -y libapache2-mod-jk
+</span></span><span style="display:flex;"><span># tomcat 연동 모듈 설치
+</span></span></code></pre></div><ul>
+<li><strong>Apache2 설치 및 tomcat 연동 모듈 설치</strong></li>
+</ul>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ vi /etc/apache2/workers.properties
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>workers.tomcat_home=/usr/share/tomcat8
+</span></span><span style="display:flex;"><span>workers.java_home=/usr/lib/jvm/java-8-openjdk-amd64
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>worker.list=tomcat8
+</span></span><span style="display:flex;"><span>worker.tomcat8.port = 8009
+</span></span><span style="display:flex;"><span>worker.tomcat8.host = tomcat IP
+</span></span><span style="display:flex;"><span>worker.tomcat8.type = ajp13
+</span></span><span style="display:flex;"><span>worker.tomcat8.lbfactor = 1
+</span></span></code></pre></div><ul>
+<li><strong>tomcat 워커 파일 등록</strong></li>
+</ul>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ vi /etc/apache2/mods-available/jk.conf
+</span></span><span style="display:flex;"><span>JkWorkersFile /etc/libapache2-mod-jk/workers.properties
+</span></span><span style="display:flex;"><span>--&gt; JkWorkersFile /etc/apache2/workers.properties
+</span></span></code></pre></div><ul>
+<li><strong>jk.conf 파일 수정</strong></li>
+</ul>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ vi /etc/apache2/sites-available/000-default.conf
+</span></span><span style="display:flex;"><span>DocumentRoot /var/www/html
+</span></span><span style="display:flex;"><span>--&gt; DocumentRoot /var/lib/tomcat8/webapps/ROOT
+</span></span><span style="display:flex;"><span>JkMount /* tomcat8 # 추가
+</span></span><span style="display:flex;"><span>systemctl restart apache2
+</span></span></code></pre></div><ul>
+<li><strong>접근 디렉토리 수정</strong></li>
+</ul>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
+<p><img src="/Network/3tier/Apache.png" alt="tomcat" /></p>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#os-구현-프로그램"><strong>OS, 구현 프로그램</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ip-대역"><strong>IP 대역</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#mysql-설치">Mysql 설치</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#tomcat8-설치">Tomcat8 설치</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#apache2-설치">Apache2 설치</a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

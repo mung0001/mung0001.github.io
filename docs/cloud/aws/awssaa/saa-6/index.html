@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="6장 인증과 권한 부여 - AWS Identity and Access Management##6장의 목표##안전한 애플리케이션 및 아키텍처 설명 어떻게 애플리케이션 티어를 보호할지 결정한다.
+어떻게 데이터르 보호하맂 결정한다.
+##AWS 리소스는 기업의 소중한 자산이므로 엄격하게 보호돼야 한다.
+그렇다고 관리자와 고객조차 액세스 할 수 없을 정도로 보안 수준을 높일 수도 없다.
+높은 보안 수준을 유지하면서 관리자와 고객의 액세스는 허용할 수 있는 완벽한 절충점이 IAM이다.
+IAM은 사용자의 요청을 인증 (Authentification),해서 정당하게 사용하는 것을 확인하고 권한 부여 (Authorization)로 필요한 만큼 정확하게 액세스 할 수 있게 할 수 있다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="6장 인증과 권한" />
+<meta property="og:description" content="6장 인증과 권한 부여 - AWS Identity and Access Management##6장의 목표##안전한 애플리케이션 및 아키텍처 설명 어떻게 애플리케이션 티어를 보호할지 결정한다.
+어떻게 데이터르 보호하맂 결정한다.
+##AWS 리소스는 기업의 소중한 자산이므로 엄격하게 보호돼야 한다.
+그렇다고 관리자와 고객조차 액세스 할 수 없을 정도로 보안 수준을 높일 수도 없다.
+높은 보안 수준을 유지하면서 관리자와 고객의 액세스는 허용할 수 있는 완벽한 절충점이 IAM이다.
+IAM은 사용자의 요청을 인증 (Authentification),해서 정당하게 사용하는 것을 확인하고 권한 부여 (Authorization)로 필요한 만큼 정확하게 액세스 할 수 있게 할 수 있다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/aws/awssaa/saa-6/" /><meta property="article:section" content="docs" />
+
+
+
+<title>6장 인증과 권한 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>6장 인증과 권한</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#6장의-목표"><strong>6장의 목표</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#iam-자격-증명"><strong>IAM 자격 증명</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="6장-인증과-권한-부여---aws-identity-and-access-management">
+  <strong>6장 인증과 권한 부여 - AWS Identity and Access Management</strong>
+  <a class="anchor" href="#6%ec%9e%a5-%ec%9d%b8%ec%a6%9d%ea%b3%bc-%ea%b6%8c%ed%95%9c-%eb%b6%80%ec%97%ac---aws-identity-and-access-management">#</a>
+</h1>
+<hr>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="6장의-목표">
+  <strong>6장의 목표</strong>
+  <a class="anchor" href="#6%ec%9e%a5%ec%9d%98-%eb%aa%a9%ed%91%9c">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<ul>
+<li><strong>안전한 애플리케이션 및 아키텍처 설명</strong>
+<ul>
+<li>
+<p><strong>어떻게 애플리케이션 티어를 보호할지 결정한다.</strong></p>
+</li>
+<li>
+<p><strong>어떻게 데이터르 보호하맂 결정한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>AWS 리소스는 기업의 소중한 자산이므로 엄격하게 보호돼야 한다.</strong></p>
+</li>
+<li>
+<p><strong>그렇다고 관리자와 고객조차 액세스 할 수 없을 정도로 보안 수준을 높일 수도 없다.</strong></p>
+</li>
+<li>
+<p><strong>높은 보안 수준을 유지하면서 관리자와 고객의 액세스는 허용할 수 있는 완벽한 절충점이 IAM이다.</strong></p>
+</li>
+<li>
+<p><strong>IAM은 사용자의 요청을 인증 (Authentification),해서 정당하게 사용하는 것을 확인하고 권한 부여 (Authorization)로 필요한 만큼 정확하게 액세스 할 수 있게 할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>AWS는 주로 IAM으 통해 자격을 인증학 권한을 부여한다.</strong></p>
+</li>
+<li>
+<p><strong>6장에서는 IAM 자격증명, 보안 주체를 학습하며 자격 증면은 AWS의 사용자의 역할을 나타내고, 여기서의 역할이란 애플리케이션 서비스, 사용자, 그룹에 일시적으로 할당할 수 있는 자격 증명을 의미한다.</strong></p>
+</li>
+<li>
+<p><strong>자격증명은 다른 서비스와 연동해서 사용할 수 있으며, AWS 계정 외부의 사용자나 애플리케이션을 인증하고, AWS 리소스에 임시 액세스하는 데 Kerberos, Microsoft Active Directory, LDAP (Lightweight Directory Access Protocol)과 같은 외부 서비스를 사용할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>정책을 통해서 AWS 계정의 모든 리소스아 상호 작용할 수 있는 방법을 정교하게 정의해서 자격 증명을 제어할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>정책은 보안 주체(Principal, 자격 증명 기반) 또는 리소스에 연결한다.</strong></p>
+<ul>
+<li>
+<p><strong>계정에서 보안 주체의 작업을 자세히 통제하기 위한 정책 수립</strong></p>
+</li>
+<li>
+<p><strong>보안 주체의 자격을 증명하기 위해 사용되는 다양한 종류의 키 또는 토큰 관리</strong></p>
+</li>
+<li>
+<p><strong>자격 증명 연동을 사용해서 IAM을 외부 공급자와 통합하기 위한 Single Sign-On 솔루션 제공</strong></p>
+</li>
+<li>
+<p><strong>리소스를 적절하게 보호하기 위해 계정과 역할을 구성하는 모범 사례 구현</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<h3 id="iam-자격-증명">
+  <strong>IAM 자격 증명</strong>
+  <a class="anchor" href="#iam-%ec%9e%90%ea%b2%a9-%ec%a6%9d%eb%aa%85">#</a>
+</h3>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>새 AWS 계정을 만들면 하나의 자격 증명이 같이 만들어지며, 이 자격 증명은 루트 사용자이다.</strong></p>
+</li>
+<li>
+<p><strong>루트는 기본적으로 계정에 연결된 서비스와 리소스 전체에 완전한 권한을 가지고 있으며, 오직 루트 사용자만이 모든 서비스에 완벽하게 액세스 할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>루트의 모든 권한을 가지고 있는 사용자는 해커에 공격에 매우 위험하며, 이 경우 계정 전체가 위험에 빠질 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>AWS는 보안 취약점 노출을 줄이기 위해 루트 계정을 철저하게 보호하고 일상적 작업에 필요한 구체적 권한을 다른 사용자에게 위임하는 것을 제안한다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>IAM 정책</strong>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+</li>
+</ul>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#6장의-목표"><strong>6장의 목표</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#iam-자격-증명"><strong>IAM 자격 증명</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

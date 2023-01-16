@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="! 아직 수정 중 문제있음#OpenStack Ussuri : Trove##----------------------- ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch | | MariaDB RabbitMQ | | Nova compute | | L2 Agent | | Memcached Keystone | | Open vSwitch | | L3 Agent | | httpd Cinder API | | L2 Agent | | metadata agent | | Nova-API Compute | | Cinder-LVM | | Swift-proxy | | L2 agent L3 agent | | NFS | | Heat API | | metadata agent | ----------------------- | API-CFN | | Neutron Server | | Heat Engine | | Gnocchi Trove API | ----------------------- ----------------------- --------------------------------- | [ Storage Node 1, 2, 3 ] | | | | Swift-account-auditor | | Swift-account-replicator | | Swift-account | | Swift-container-auditor | | Swift-container-replicator | | Swift-container-updater | | Swift-container | | Swift-object-auditor | | Swift-object-replicator | | Swift-object-updater | | Swift-swift-object | --------------------------------- #OpenStack Ussuri : Trove##Trove는 관리형 데이터베이스 서비스 입니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="OpenStack Ussuri : Trove" />
+<meta property="og:description" content="! 아직 수정 중 문제있음#OpenStack Ussuri : Trove##----------------------- ----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | [ Network Node ] | | | | Libvirt | | Open vSwitch | | MariaDB RabbitMQ | | Nova compute | | L2 Agent | | Memcached Keystone | | Open vSwitch | | L3 Agent | | httpd Cinder API | | L2 Agent | | metadata agent | | Nova-API Compute | | Cinder-LVM | | Swift-proxy | | L2 agent L3 agent | | NFS | | Heat API | | metadata agent | ----------------------- | API-CFN | | Neutron Server | | Heat Engine | | Gnocchi Trove API | ----------------------- ----------------------- --------------------------------- | [ Storage Node 1, 2, 3 ] | | | | Swift-account-auditor | | Swift-account-replicator | | Swift-account | | Swift-container-auditor | | Swift-container-replicator | | Swift-container-updater | | Swift-container | | Swift-object-auditor | | Swift-object-replicator | | Swift-object-updater | | Swift-swift-object | --------------------------------- #OpenStack Ussuri : Trove##Trove는 관리형 데이터베이스 서비스 입니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-12/" /><meta property="article:section" content="docs" />
+
+
+
+<title>OpenStack Ussuri : Trove | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>OpenStack Ussuri : Trove</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#openstack-ussuri--trove-1"><strong>OpenStack Ussuri : Trove</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#trove-service-및-user-생성"><strong>Trove service 및 User 생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#trove-유저의-db를-생성합니다"><strong>Trove 유저의 DB를 생성합니다.</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#trove-설치"><strong>Trove 설치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="-아직-수정-중-문제있음">
+  ! 아직 수정 중 문제있음
+  <a class="anchor" href="#-%ec%95%84%ec%a7%81-%ec%88%98%ec%a0%95-%ec%a4%91-%eb%ac%b8%ec%a0%9c%ec%9e%88%ec%9d%8c">#</a>
+</h1>
+<h1 id="openstack-ussuri--trove">
+  <strong>OpenStack Ussuri : Trove</strong>
+  <a class="anchor" href="#openstack-ussuri--trove">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span> -----------------------         -----------------------        -----------------------
+</span></span><span style="display:flex;"><span>|  [ Controller Node ]  |       |    [ Compute Node ]   |      |   [ Network Node ]    | 
+</span></span><span style="display:flex;"><span>|                       |       |        Libvirt        |      |     Open vSwitch      |
+</span></span><span style="display:flex;"><span>| MariaDB    RabbitMQ   |       |      Nova compute     |      |       L2 Agent        |
+</span></span><span style="display:flex;"><span>| Memcached  Keystone   |       |      Open vSwitch     |      |       L3 Agent        |
+</span></span><span style="display:flex;"><span>| httpd      Cinder API |       |       L2 Agent        |      |     metadata agent    |
+</span></span><span style="display:flex;"><span>| Nova-API   Compute    |       |      Cinder-LVM       |      |      Swift-proxy      |
+</span></span><span style="display:flex;"><span>| L2 agent   L3 agent   |       |          NFS          |      |       Heat API        |
+</span></span><span style="display:flex;"><span>| metadata agent        |        -----------------------       |        API-CFN        |
+</span></span><span style="display:flex;"><span>| Neutron Server        |                                      |      Heat Engine      |
+</span></span><span style="display:flex;"><span>| Gnocchi    Trove API  |                                       -----------------------
+</span></span><span style="display:flex;"><span> -----------------------                                        
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> ---------------------------------       
+</span></span><span style="display:flex;"><span>|     [ Storage Node 1, 2, 3 ]    |     
+</span></span><span style="display:flex;"><span>|                                 | 
+</span></span><span style="display:flex;"><span>|      Swift-account-auditor      |
+</span></span><span style="display:flex;"><span>|      Swift-account-replicator   |
+</span></span><span style="display:flex;"><span>|      Swift-account              |
+</span></span><span style="display:flex;"><span>|      Swift-container-auditor    |
+</span></span><span style="display:flex;"><span>|      Swift-container-replicator |
+</span></span><span style="display:flex;"><span>|      Swift-container-updater    |
+</span></span><span style="display:flex;"><span>|      Swift-container            |
+</span></span><span style="display:flex;"><span>|      Swift-object-auditor       |
+</span></span><span style="display:flex;"><span>|      Swift-object-replicator    |
+</span></span><span style="display:flex;"><span>|      Swift-object-updater       |
+</span></span><span style="display:flex;"><span>|      Swift-swift-object         |
+</span></span><span style="display:flex;"><span> ---------------------------------
+</span></span></code></pre></div><h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h2 id="openstack-ussuri--trove-1">
+  <strong>OpenStack Ussuri : Trove</strong>
+  <a class="anchor" href="#openstack-ussuri--trove-1">#</a>
+</h2>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<ul>
+<li><strong>Trove는 관리형 데이터베이스 서비스 입니다.</strong></li>
+<li><strong>Trove*에 대한 설명은 <a href="https://mung0001.github.io/docs/study/openstack/trove/">Heat</a>을 참조해주세요.</strong></li>
+</ul>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="trove-service-및-user-생성">
+  <strong>Trove service 및 User 생성</strong>
+  <a class="anchor" href="#trove-service-%eb%b0%8f-user-%ec%83%9d%ec%84%b1">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 trove
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field               | Value                            |
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| default_project_id  | b470c69e28db47cdbfc81e06cc67f627 |
+</span></span><span style="display:flex;"><span>| domain_id           | default                          |
+</span></span><span style="display:flex;"><span>| enabled             | True                             |
+</span></span><span style="display:flex;"><span>| id                  | 3cdb0abe0a3a429ba08f98d8db786b6d |
+</span></span><span style="display:flex;"><span>| name                | trove                            |
+</span></span><span style="display:flex;"><span>| options             | <span style="color:#75715e">{}</span>                               |
+</span></span><span style="display:flex;"><span>| password_expires_at | None                             |
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack role add --project service --user trove admin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack service create --name trove --description &#34;Database&#34; database
+</span></span><span style="display:flex;"><span>+-------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field       | Value                            |
+</span></span><span style="display:flex;"><span>+-------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| description | Database                         |
+</span></span><span style="display:flex;"><span>| enabled     | True                             |
+</span></span><span style="display:flex;"><span>| id          | 701b7dca93e74509aaf811eafc29cc03 |
+</span></span><span style="display:flex;"><span>| name        | trove                            |
+</span></span><span style="display:flex;"><span>| type        | database                         |
+</span></span><span style="display:flex;"><span>+-------------+----------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne database public http://controller:8779/v1.0/%\(tenant_id\)s
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                                     |
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                                      |
+</span></span><span style="display:flex;"><span>| id           | 58fa28821c444c869be463b550f48651          |
+</span></span><span style="display:flex;"><span>| interface    | public                                    |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                                 |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                                 |
+</span></span><span style="display:flex;"><span>| service_id   | 701b7dca93e74509aaf811eafc29cc03          |
+</span></span><span style="display:flex;"><span>| service_name | trove                                     |
+</span></span><span style="display:flex;"><span>| service_type | database                                  |
+</span></span><span style="display:flex;"><span>| url          | http://controller:8779/v1.0/%(tenant_id)s |
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne database internal http://controller:8779/v1.0/%\(tenant_id\)s
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                                     |
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                                      |
+</span></span><span style="display:flex;"><span>| id           | 2809c9cb57884ceabf2902c6b6e62ced          |
+</span></span><span style="display:flex;"><span>| interface    | internal                                  |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                                 |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                                 |
+</span></span><span style="display:flex;"><span>| service_id   | 701b7dca93e74509aaf811eafc29cc03          |
+</span></span><span style="display:flex;"><span>| service_name | trove                                     |
+</span></span><span style="display:flex;"><span>| service_type | database                                  |
+</span></span><span style="display:flex;"><span>| url          | http://controller:8779/v1.0/%(tenant_id)s |
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne database admin http://controller:8779/v1.0/%\(tenant_id\)s
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                                     |
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                                      |
+</span></span><span style="display:flex;"><span>| id           | d86280b59bf04be28e71a57ff8b36a0b          |
+</span></span><span style="display:flex;"><span>| interface    | admin                                     |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                                 |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                                 |
+</span></span><span style="display:flex;"><span>| service_id   | 701b7dca93e74509aaf811eafc29cc03          |
+</span></span><span style="display:flex;"><span>| service_name | trove                                     |
+</span></span><span style="display:flex;"><span>| service_type | database                                  |
+</span></span><span style="display:flex;"><span>| url          | http://controller:8779/v1.0/%(tenant_id)s |
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span></code></pre></div><h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<h3 id="trove-유저의-db를-생성합니다">
+  <strong>Trove 유저의 DB를 생성합니다.</strong>
+  <a class="anchor" href="#trove-%ec%9c%a0%ec%a0%80%ec%9d%98-db%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
+</h3>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller&gt; mysql -u root -p
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; create database trove;  
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on trove.* to trove@&#39;localhost&#39; identified by &#39;qwer1234&#39;; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on trove.* to trove@&#39;%&#39; identified by &#39;qwer1234&#39;; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; flush privileges; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; exit;
+</span></span></code></pre></div><h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<h3 id="trove-설치">
+  <strong>Trove 설치</strong>
+  <a class="anchor" href="#trove-%ec%84%a4%ec%b9%98">#</a>
+</h3>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller ~(keystone)&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-trove python-troveclient
+</span></span><span style="display:flex;"><span># Trove 서비스 및 관련 모듈을 설치합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; vi /etc/trove/trove.conf
+</span></span><span style="display:flex;"><span>[DEFAULT]
+</span></span><span style="display:flex;"><span>network_driver = trove.network.neutron.NeutronDriver
+</span></span><span style="display:flex;"><span>management_networks = ef7541ad-9599-4285-878a-e0ab62032b03
+</span></span><span style="display:flex;"><span>management_security_groups = d0d797f7-11d4-436e-89a3-ac8bca829f81
+</span></span><span style="display:flex;"><span>cinder_volume_type = lvmdriver-1
+</span></span><span style="display:flex;"><span>nova_keypair = trove-mgmt
+</span></span><span style="display:flex;"><span>default_datastore = mysql
+</span></span><span style="display:flex;"><span>taskmanager_manager = trove.taskmanager.manager.Manager
+</span></span><span style="display:flex;"><span>trove_api_workers = 5
+</span></span><span style="display:flex;"><span>transport_url = rabbit://openstack:qwer1234@controller
+</span></span><span style="display:flex;"><span>control_exchange = trove
+</span></span><span style="display:flex;"><span>rpc_backend = rabbit
+</span></span><span style="display:flex;"><span>reboot_time_out = 300
+</span></span><span style="display:flex;"><span>usage_timeout = 900
+</span></span><span style="display:flex;"><span>agent_call_high_timeout = 1200
+</span></span><span style="display:flex;"><span>use_syslog = False
+</span></span><span style="display:flex;"><span>debug = True
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[keystone_authtoken]
+</span></span><span style="display:flex;"><span>www_authenticate_uri = http://controller:5000
+</span></span><span style="display:flex;"><span>auth_url = http://controller:5000
+</span></span><span style="display:flex;"><span>memcached_servers = controller:11211
+</span></span><span style="display:flex;"><span>auth_type = password
+</span></span><span style="display:flex;"><span>project_domain_name = default
+</span></span><span style="display:flex;"><span>user_domain_name = default
+</span></span><span style="display:flex;"><span>project_name = service
+</span></span><span style="display:flex;"><span>username = trove
+</span></span><span style="display:flex;"><span>password = qwer1234
+</span></span><span style="display:flex;"><span>service_token_roles_required = true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[service_credentials]
+</span></span><span style="display:flex;"><span>auth_url = http://controller/identity/v3
+</span></span><span style="display:flex;"><span>region_name = RegionOne
+</span></span><span style="display:flex;"><span>project_name = service
+</span></span><span style="display:flex;"><span>password = qwer1234
+</span></span><span style="display:flex;"><span>project_domain_name = Default
+</span></span><span style="display:flex;"><span>user_domain_name = Default
+</span></span><span style="display:flex;"><span>username = trove
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[database]
+</span></span><span style="display:flex;"><span>connection = mysql+pymysql://trove:qwer1234@controller/trove
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[mariadb]
+</span></span><span style="display:flex;"><span>tcp_ports = 3306,4444,4567,4568
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[mysql]
+</span></span><span style="display:flex;"><span>tcp_ports = 3306
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[postgresql]
+</span></span><span style="display:flex;"><span>tcp_ports = 5432
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; vi /etc/trove/trove-guestagent.conf
+</span></span><span style="display:flex;"><span>[DEFAULT]
+</span></span><span style="display:flex;"><span>log_file = trove-guestagent.log
+</span></span><span style="display:flex;"><span>log_dir = /var/log/trove/
+</span></span><span style="display:flex;"><span>ignore_users = os_admin
+</span></span><span style="display:flex;"><span>control_exchange = trove
+</span></span><span style="display:flex;"><span>transport_url = rabbit://openstack:qwer1234@controller
+</span></span><span style="display:flex;"><span>rpc_backend = rabbit
+</span></span><span style="display:flex;"><span>command_process_timeout = 60
+</span></span><span style="display:flex;"><span>use_syslog = False
+</span></span><span style="display:flex;"><span>debug = True
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[service_credentials]
+</span></span><span style="display:flex;"><span>auth_url = http://controller/identity/v3
+</span></span><span style="display:flex;"><span>region_name = RegionOne
+</span></span><span style="display:flex;"><span>project_name = service
+</span></span><span style="display:flex;"><span>password = qwer1234
+</span></span><span style="display:flex;"><span>project_domain_name = Default
+</span></span><span style="display:flex;"><span>user_domain_name = Default
+</span></span><span style="display:flex;"><span>username = trove
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; su -s /bin/sh -c &#34;trove-manage db_sync&#34; trove
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; systemctl enable --now openstack-trove-api.service openstack-trove-taskmanager.service openstack-trove-conductor.service
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; 
+</span></span></code></pre></div><h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#openstack-ussuri--trove-1"><strong>OpenStack Ussuri : Trove</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#trove-service-및-user-생성"><strong>Trove service 및 User 생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#trove-유저의-db를-생성합니다"><strong>Trove 유저의 DB를 생성합니다.</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#trove-설치"><strong>Trove 설치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cloud ecurity Services##Site Safer / App Safer##Site Safer 고객의 웹 페이지에 악성 코드가 있는 지 주기적으로 검색
+NCP 외부 IP대역도 점검 가능
+행위 기반 탐지
+#App Safer 고객의 APP실행 모바일 환경에 대한 보안 위협 여부를 실시간으로 탐지
+치팅 프로그램, 핵 등으로 APP 무결성 검사
+##File Safer##업로드 / 다운로드 되는 파일의 악성코드 여부를 탐지 고객의 웹 페이지에 업. 다운로드 되느 파일에 대한 체크">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Naver Cloud Security" />
+<meta property="og:description" content="Cloud ecurity Services##Site Safer / App Safer##Site Safer 고객의 웹 페이지에 악성 코드가 있는 지 주기적으로 검색
+NCP 외부 IP대역도 점검 가능
+행위 기반 탐지
+#App Safer 고객의 APP실행 모바일 환경에 대한 보안 위협 여부를 실시간으로 탐지
+치팅 프로그램, 핵 등으로 APP 무결성 검사
+##File Safer##업로드 / 다운로드 되는 파일의 악성코드 여부를 탐지 고객의 웹 페이지에 업. 다운로드 되느 파일에 대한 체크" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/nc/ncptraining/nca10/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Naver Cloud Security | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Naver Cloud Security</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cloud-ecurity-services"><strong>Cloud ecurity Services</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#site-safer--app-safer"><strong>Site Safer / App Safer</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#file-safer"><strong>File Safer</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#web-security-checker"><strong>Web Security Checker</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#system-security-checker"><strong>System Security Checker</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#certficate-manager"><strong>Certficate Manager</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#security-monitoring"><strong>Security Monitoring</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ssl-vpn"><strong>SSL VPN</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h2 id="cloud-ecurity-services">
+  <strong>Cloud ecurity Services</strong>
+  <a class="anchor" href="#cloud-ecurity-services">#</a>
+</h2>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<p> </p>
+<h3 id="site-safer--app-safer">
+  <strong>Site Safer / App Safer</strong>
+  <a class="anchor" href="#site-safer--app-safer">#</a>
+</h3>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<ul>
+<li><strong>Site Safer</strong>
+<ul>
+<li>
+<p><strong>고객의 웹 페이지에 악성 코드가 있는 지 주기적으로 검색</strong></p>
+</li>
+<li>
+<p><strong>NCP 외부 IP대역도 점검 가능</strong></p>
+</li>
+<li>
+<p><strong>행위 기반 탐지</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<ul>
+<li><strong>App Safer</strong>
+<ul>
+<li>
+<p><strong>고객의 APP실행 모바일 환경에 대한 보안 위협 여부를 실시간으로 탐지</strong></p>
+</li>
+<li>
+<p><strong>치팅 프로그램, 핵 등으로 APP 무결성 검사</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="file-safer">
+  <strong>File Safer</strong>
+  <a class="anchor" href="#file-safer">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<ul>
+<li><strong>업로드 / 다운로드 되는 파일의 악성코드 여부를 탐지</strong>
+<ul>
+<li>
+<p><strong>고객의 웹 페이지에 업. 다운로드 되느 파일에 대한 체크</strong></p>
+</li>
+<li>
+<p><strong>악성코드 여부를 신속하고 정확하게 탐지</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<h3 id="web-security-checker">
+  <strong>Web Security Checker</strong>
+  <a class="anchor" href="#web-security-checker">#</a>
+</h3>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<ul>
+<li><strong>고객의 웹 사이트 보안 취약점 진단</strong>
+<ul>
+<li>
+<p><strong>고객의 웹 페이지에 취약점이 없는지 체크</strong></p>
+</li>
+<li>
+<p><strong>현재 18가지 주요 웹 취약점에 대해 점검가능 ( 원하는 항목만 선택가능 )</strong></p>
+</li>
+<li>
+<p><strong>취약점에 대한 진단 뿐만 아니라 대응반안도 함께 제공</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="system-security-checker">
+  <strong>System Security Checker</strong>
+  <a class="anchor" href="#system-security-checker">#</a>
+</h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<ul>
+<li><strong>고객의 시스템 보안 취약점 진단</strong>
+<ul>
+<li>
+<p><strong>고객의 OS, WAS, 설정에 대한 취약점 점검</strong></p>
+</li>
+<li>
+<p><strong>점검 필요 서버에 Agent 설치 후 간편하게 사용 가능</strong></p>
+</li>
+<li>
+<p><strong>KISA 봉나 설정 가이드와 NAVER 보안 설정 저액에 근거하여 취약점 점검 및 수정 가이드 제공</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h3 id="certficate-manager">
+  <strong>Certficate Manager</strong>
+  <a class="anchor" href="#certficate-manager">#</a>
+</h3>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<ul>
+<li><strong>SSL 인증서 등록 및 관리의 통합</strong>
+<ul>
+<li>
+<p><strong>네이버 클라우드 플랫폼 연계상품 ( LB, CDN+, Image Optimizer)에서 사용할 인증서를 등록할 수 있으며, 등록 시 인증서 유효성을 체크</strong></p>
+</li>
+<li>
+<p><strong>인증서의 만료 예정일 한달 전부터 정기적으로 알람 메일과 SMS를 발송</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h3 id="security-monitoring">
+  <strong>Security Monitoring</strong>
+  <a class="anchor" href="#security-monitoring">#</a>
+</h3>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<ul>
+<li><strong>Naver Cloud의 향상된 보안 부가 상품</strong></li>
+</ul>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>서비스명</th>
+<th>서비스 설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic</td>
+<td>IDS 이벤트 탐지</td>
+<td>보안사고 의심 이벤트 발생이 탐지 및 분석 보고서 전달</td>
+</tr>
+<tr>
+<td>``</td>
+<td>Anti - Virus</td>
+<td>윈도우 OS에 한해 오피스 스캔 백신 지원</td>
+</tr>
+<tr>
+<td>Managed</td>
+<td>IDS 이벤트 탐지</td>
+<td>BASIC 서비스 내용을 기본적으로 포함</td>
+</tr>
+<tr>
+<td>``</td>
+<td>DDos 이벤트 탐지</td>
+<td>고객별 특화된 탐지 정책 허용</td>
+</tr>
+<tr>
+<td>``</td>
+<td>IPS 이벤트 탐지</td>
+<td>고객별 특화된 탐지/ 차단 정책 허용</td>
+</tr>
+<tr>
+<td>``</td>
+<td>침해 사고 기술 지원</td>
+<td>고객 요청 시 침해 서버 분석 서비스 제공</td>
+</tr>
+<tr>
+<td>``</td>
+<td>WAF</td>
+<td>고객별 특화된 탐지 정책 허용</td>
+</tr>
+<tr>
+<td>``</td>
+<td>Anti-Virus</td>
+<td>BASIC 서비스 내용 기본적으로 포함 / LINUX OS에 설치 가능한 백신 또한 제공</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<h3 id="ssl-vpn">
+  <strong>SSL VPN</strong>
+  <a class="anchor" href="#ssl-vpn">#</a>
+</h3>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<ul>
+<li><strong>SSL VPN을 통한 서버 접속</strong>
+<ul>
+<li>
+<p><strong>10대역의 28bit VPN IP대역 제공</strong></p>
+</li>
+<li>
+<p><strong>SSH, RDP와 같은 포트는 외부에서 접근할 수 없도록 ACG에서 차단</strong></p>
+</li>
+<li>
+<p><strong>ACG에 VPN IP 대역에 대해서 접근 가능하도록 설정하여 서버를 안전하게 관리가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<ul>
+<li><strong>최대 10개 ID 생성 가능 및 전용 VPN 프로그램 설치하여 VPN 사용</strong>
+<ul>
+<li>
+<p><strong>3개, 5개, 10개 ID 생성 가능</strong></p>
+</li>
+<li>
+<p><strong>사용자 가이드를 통해 프로그램 다운로드 가능</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<ul>
+<li><strong>1차 인증과 2차 인증 지원</strong>
+<ul>
+<li>
+<p><strong>ID/PW로 로그인 가능한 1차 인증</strong></p>
+</li>
+<li>
+<p><strong>ID / PW 뿐만 아니라 SMS / Mail의 OTP를 입력해야 하는 2차 인증</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cloud-ecurity-services"><strong>Cloud ecurity Services</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#site-safer--app-safer"><strong>Site Safer / App Safer</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#file-safer"><strong>File Safer</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#web-security-checker"><strong>Web Security Checker</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#system-security-checker"><strong>System Security Checker</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#certficate-manager"><strong>Certficate Manager</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#security-monitoring"><strong>Security Monitoring</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ssl-vpn"><strong>SSL VPN</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

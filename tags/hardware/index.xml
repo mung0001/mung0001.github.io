@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hardware on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/tags/hardware/</link>
+    <description>Recent content in hardware on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cpu</title>
+      <link>https://mung0001.github.io/docs/infra/hardware/cpu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/infra/hardware/cpu/</guid>
+      <description>What is CPU#CPU란 (Central Processing Unit / main processor)으로 컴퓨터 시스템을 통제하고 프로그램(프로세스)의 연산을 실행하는 핵심적인 컴퓨터의 중앙 제어장치로 사람으로 따지면 뇌의 역할은 하는 내장형 칩을 의미한다.
+CPU는 기계어로 쓰인 명령어를 해석하며 실행하며, 외부의 정보를 입력받아 이를 기억하고, 연산하며 외부로 출력하는 역할을 수행한다.
+CPU는 크게 하기 3가지 구분할 수있다.
+처리할 명령어를 저장하는 프로세서와 레지스터 연산을 담당하는 산술논리연산장치(ALU / 연산장치), 명령어의 해석과 올바른 실행을 위해 CPU를 제어하는 제어장치(Control Unit) #CPU의 구조#Core : CPU의 Core 즉 CPU의 핵심적인 역할을 수행해내는 중심부 역할을 말하며 이 코어에서 시스템의 모든 연산처리를 수행한다.</description>
+    </item>
+    
+    <item>
+      <title>Ram</title>
+      <link>https://mung0001.github.io/docs/infra/hardware/ram/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/infra/hardware/ram/</guid>
+      <description>What is RAM##RAM이란 Random Access Memory로 ROM Read Only Memotry과는 반대로 휘발성 메모리를 의미한다.
+Random Access라는 말은 어느 위치에든 똑같은 속도로 접근하여 읽고 쓸 수 있음을 의미하며, 사용자가 자유롭게 내용을 읽고 쓰고 지울 수 있는 기억장치로, 컴퓨터가 켜지면 CPU는 연산 및 동작에 필요한 내용이 전원이 유지되는 동안에 RAM에 저장된다.
+주로 주기억장치로 불리며 보조기억장치로는 흔이 우리가 사용하는 Disk(HDD, SDD 등)가 있다.
+단, RAM의 범주에는 &amp;lsquo;임의 접근&amp;rsquo;할 수 있는 메모리이므로 HDD 등의 장치들도 RAM의 범주에 들어가기도 하지만, HDD 등의 기억장치와 같이 어느 위치에나 직접 접근할 수 있으나 데이터의 물리적 위치에 따라 읽고 쓰는 시간에 차이가 발생하게 되는 기억장치들은 Direct Access Memory 또는 Direct Access Data Storage라고 부른다.</description>
+    </item>
+    
+    <item>
+      <title>NIC</title>
+      <link>https://mung0001.github.io/docs/infra/hardware/nic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/infra/hardware/nic/</guid>
+      <description>What is NIC#NIC(Network Interface Controller)이란 서버가 네트워크에 연결하여 통신하기 위해 사용하는 하드웨어 장치이다.
+OSI 계층 1(물리 계층)과 계층 2(데이터 링크 계층) 장치를 가지는데, MAC 주소를 사용하여 낮은 수준의 주소 할당 시스템을 제공하고 네트워크 매개체로 물리적인 접근을 가능하게 한다.</description>
+    </item>
+    
+    <item>
+      <title>R/C</title>
+      <link>https://mung0001.github.io/docs/infra/hardware/raidcontroller/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/infra/hardware/raidcontroller/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Disk</title>
+      <link>https://mung0001.github.io/docs/infra/hardware/disk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/infra/hardware/disk/</guid>
+      <description> What is Disk#Disk란 보조기억장치로 RAM(주기억장치)이 전원이 없어지면 데이터가 삭제되는 반면, Disk는 전원이 없어진 이후에도 데이터가 유지되는 비휘발성 메모리이다. #HDD##HDD (Hard Disk drive) 하드 디스크는 플로피 디스크와 같은 자기 기록 매체이나, 플로피 디스크와 다르게 금속 재질의 플래터에 데이터를 기록하기 때문에 플로피디스크와 구분짓기 위해 재질적으로 단단하다는 뜻으로 하드디스크라 한다. HDD의 원리와 구조#저장되는 모든 데이터는 원리적으로 0 or 1 두 디지털 신호로 의해 이루어진다. </description>
+    </item>
+    
+  </channel>
+</rss>

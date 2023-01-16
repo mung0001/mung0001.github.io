@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS SAA 시험정리 on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/docs/cloud/aws/awssaa/</link>
+    <description>Recent content in AWS SAA 시험정리 on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/docs/cloud/aws/awssaa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1장 AWS의 핵심 서비스</title>
+      <link>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-1/</guid>
+      <description>SAA 요약정리#정리를 들어가기 전 핵심요소#자격 시험의 합격과 실패는 현장에서의 실무 경험과 실습 중심의 학습, 시험에 필요한 세부적인 정보와 숫자를 얼마나 잘 기억하는지에 달려 있다. AWS SAA는 핵심 AWS 서비스 구성 요소와 운영은 물론 서비스 간의 상호작용 방식도 이해가 필요 기본적인 공부는 Amazon의 공식문서 및 여러 실습 경험을 필요로 한다. #AWS SAA 참고자료 #시험영역 출제 비율 1. 복원력을 갖춘 아키텍처 설계 34% 1-1. 안정적이고, 복원력을 갖춘 스토리지를 선택한다.</description>
+    </item>
+    
+    <item>
+      <title>2장 EC2와 EBS</title>
+      <link>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-2/</guid>
+      <description>#2장 Amazon Elastic Compute Cloud와 Amazon Elastic Block Store##2장의 목표#복원력은 갖춘 아키텍처 설계 안정적이고, 복원력을 갖춘 스토리지를 선택 어떻게 고가용성 및/ 또는 내결함성을 갖춘 아키텍처를 설계할지를 결정 #성능이 뛰어난 아키텍처 정의 성능이 뛰어난 스토리지 및 데이터베이스를 선택 탄력성과 확장성을 갖춘 솔루션을 설계 #안전한 애플리케이션 및 아키텍처 설명 어떻게 애플리케이션 티어를 보호할지를 결정 어떻게 데이터를 보호할지 결정 비용에 최적화된 아키텍처 설계 어떻게 비용에 최적화된 스토리지를 설계할지를 결정 어떻게 비용에 최적화된 컴퓨팅을 설계할지 결정 ##EC2 인스턴스##EC2는 물리 서버의 기능을 함축적으로 가상화한 실제 서버와 유사하게 작동</description>
+    </item>
+    
+    <item>
+      <title>3장 S3와 Glacier</title>
+      <link>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-3/</guid>
+      <description>3장 Amazon Simple Storage Service와 Amazon Glacier Storage Service##3장의 목표#복원력을 갖춘 아키텍처 설계
+안정적이고/ 복원력을 갖춘 스로티리지를 선택한다. 어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다. 어떻게 고가용성 및 내결함성을 갖춘 아키텍처를 설계할지 결정한다. 성능이 뛰어난 아키텍처 정의
+성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다. 안전한 애플리케이션 및 아키텍처 설명
+어떻게 애플리케이션 티어를 보호할지 결정한다. 어떻게 데이터를 보호할지 결정한다. 비용에 최적화된 아키텍처 설게</description>
+    </item>
+    
+    <item>
+      <title>4장 VPC</title>
+      <link>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-4/</guid>
+      <description>4장 Amazon Virtual Private Cloud##4장의 목표##복원력을 갖춘 아키텍처 설계 어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다. #안전한 어플리케이션 및 아키텍처 설계 단일 VPC 어플리케이션을 위한 네트워킹 인프라르 정의한다. 단일 VPC 애플리케이션을 위한 네트워킹 인프라르 정의한다. ##Virtual Private Cloud ( 이하 VPC )##VPC란 EC2의 네트워크 계층으로, EC2 인스턴스를 비롯한 여러 AWS 서비스에 네트워크 리소스를 담을 수 있는 가상의 네트워크를 의미한다.</description>
+    </item>
+    
+    <item>
+      <title>5장 데이터베이스</title>
+      <link>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-5/</guid>
+      <description>5장 데이터베이스##5장의 목표##복원력을 갖춘 아키텍처 설계 안정적이고/ 복원력을 갖춘 스토리지를 선택한다.
+어떻게 AWS 서비스를 사용해 결합 해제 매커니즘을 설계할지 결정한다.
+어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.
+어떻게 고 가용성 및/ 내결함성을 갖춘 아키텍처를 설계할지 결정한다.
+#성능이 뛰어난 아키텍처 정의 성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다. ##데이터베이스##데이터베이스를 사용하면 어플리케이션을 데이터를 저장하고 구성하며, 신속하게 검색할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>6장 인증과 권한</title>
+      <link>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-6/</guid>
+      <description>6장 인증과 권한 부여 - AWS Identity and Access Management##6장의 목표##안전한 애플리케이션 및 아키텍처 설명 어떻게 애플리케이션 티어를 보호할지 결정한다.
+어떻게 데이터르 보호하맂 결정한다.
+##AWS 리소스는 기업의 소중한 자산이므로 엄격하게 보호돼야 한다.
+그렇다고 관리자와 고객조차 액세스 할 수 없을 정도로 보안 수준을 높일 수도 없다.
+높은 보안 수준을 유지하면서 관리자와 고객의 액세스는 허용할 수 있는 완벽한 절충점이 IAM이다.
+IAM은 사용자의 요청을 인증 (Authentification),해서 정당하게 사용하는 것을 확인하고 권한 부여 (Authorization)로 필요한 만큼 정확하게 액세스 할 수 있게 할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>15장 기출문제 정리</title>
+      <link>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-15/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-15/</guid>
+      <description>15장 기출문제 정리##답들은 정확하지 않습니다. 공부하시면서 찾아보셔야 합니다.##QUESTION 1-100##QUESTION#A company has a web application with sporadic usage patterns. There is heavy usage at the beginning of each month, moderate usage at the start of each week, and unpredictable usage during the week. The application consists of a web server and a MySQL database server running inside the data center.</description>
+    </item>
+    
+    <item>
+      <title>16장 기출문제(kr)</title>
+      <link>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-16/</guid>
+      <description>15장 기출문제##답들은 정확하지 않습니다. 공부하시면서 찾아보셔야 합니다.##질문 1-100##질문#question 회사에 산발적인 사용 패턴이 있는 웹 응용 프로그램이 있습니다. 매월 초에는 사용량이 많고 매주 초에는 사용량이 보통이며 주중에는 사용량이 예측할 수 없습니다. 애플리케이션은 웹 서버와 내부에서 실행되는 MySQL 데이터베이스 서버로 구성됩니다. 데이터 센터. 이 회사는 애플리케이션을 AWS 클라우드로 옮기고자 하며 데이터베이스 수정이 필요하지 않은 비용 효율적인 데이터베이스 플랫폼을 선택해야 합니다. 어떤 솔루션이 이러한 요구 사항을 충족합니까?</description>
+    </item>
+    
+    <item>
+      <title>aws SAA 총정리</title>
+      <link>https://mung0001.github.io/docs/cloud/aws/awssaa/saa_all/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/awssaa/saa_all/</guid>
+      <description>aws 총정리#Global service = can`t choose a region IAN##IAM (Identity and Access Management, Global service) root account create by default, shouldn`t be used or shared Users are people within your organization, and can be grouped Group only contain users, not other groups -&amp;gt; Group can`t contain other group Users don`t have to belong to a group, and usre can belong to multiple groups User or Groups can be assigned JSON documents called polcies These polices define the permissions of the users In AWS you apply the least privilege principle: don`t give more permissions than a user needs #IAM Policies inheritance consists of</description>
+    </item>
+    
+    <item>
+      <title>SAA02-기출</title>
+      <link>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-17/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-17/</guid>
+      <description>기출문제##Q1#회사는 Amazon S3를 사용하여 기밀 감사 문서를 저장합니다.S3 버킷은 버킷 정책을 사용하여 최소 권한의 원칙에 따라 감사 팀 IAM 사용자 자격 증명에 대한 액세스를 제한합니다.회사 관리자는 S3 버킷에서 실수로 문서를 삭제하는 것에 대해 우려하고 있으며 보다 안전한 솔루션을 원합니다. 솔루션 설계자는 감사 문서를 보호하기 위해 무엇을 해야 합니까?
+A. S3 버킷에서 버전 관리 및 MFA 삭제 기능을 활성화합니다. B. 각 감사 팀 IAM 사용자 계정에 대한 IAM 사용자 자격 증명에서 멀티 팩터 인증 (MFA) 을 활성화합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

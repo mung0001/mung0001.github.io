@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Django##Django - 기본 용어정리##CGI (Common Gateway Interface) 정해진 양식을 사용해서 요청하고 결과를 받아오는 방식 (ex : Apache-fast_cgi 등) ##WSGI (WEB Server Gateway Interface) CGI의 일종으로, 기존 python app에서는 CGI, mod_python, Fast CGI 등등 만을 사용했으나, wsgi는 프레임워크의 웹서버로, route web에서는 표준 인터페이스로 개발되었다. #Web Server 실제적으로 요청을 처리하는 컴퓨터 (ex : Apache, Nginx 등) #Cache Server 들어온 요청에 대한 응답을 미리 파일이나 메모리 캐시로 저장해두는 컴퓨터 (ex : Redis, Memcached 등) #DB Server 기존 DATABASE를 보다 빠르고, 편리하게 관리하기 위한 데이터 관리 전용 서비스 (ex : MySQL, MS-SQL, Oracle DB 등) #File Server 사용자가 업로드한 파일을 여러 사용자가 볼 수 있게 하는 서버 (ex : 인스타그램, faecbook 등) #제네릭 뷰 (Generic View) 기본적으로 Django에서 제공하는 뷰어로 뷰 클래스를 의미 #Model : Model(Django) DB의 구조를 결정, 대부분의 경우 테이블을 작성할 때 사용하는 데, 테이블의 이름, 각 열의 이름과 타입 등을 설계할 때 사용 #View : Template(Django) 사용자에게 보여지는 UI 부분으로, HTML 코드 등 실질적으로 클라이언트에게 보여질 부분 #Controller : View(Django) 기능, 로직 부분으로, 넘겨받은 데이터를 어떻게 해석하고 가공할지 그리고 처리된 결과를 어떻게 클라이언트에게 돌려줄지 결정하는 부분 ####Django - 프로젝트 구조 살펴보기##config 프로젝트 설정 파일과 웹 서비스 실행으르 위한 파일들이 들어있음 #config - init.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Django - Starter" />
+<meta property="og:description" content="Django##Django - 기본 용어정리##CGI (Common Gateway Interface) 정해진 양식을 사용해서 요청하고 결과를 받아오는 방식 (ex : Apache-fast_cgi 등) ##WSGI (WEB Server Gateway Interface) CGI의 일종으로, 기존 python app에서는 CGI, mod_python, Fast CGI 등등 만을 사용했으나, wsgi는 프레임워크의 웹서버로, route web에서는 표준 인터페이스로 개발되었다. #Web Server 실제적으로 요청을 처리하는 컴퓨터 (ex : Apache, Nginx 등) #Cache Server 들어온 요청에 대한 응답을 미리 파일이나 메모리 캐시로 저장해두는 컴퓨터 (ex : Redis, Memcached 등) #DB Server 기존 DATABASE를 보다 빠르고, 편리하게 관리하기 위한 데이터 관리 전용 서비스 (ex : MySQL, MS-SQL, Oracle DB 등) #File Server 사용자가 업로드한 파일을 여러 사용자가 볼 수 있게 하는 서버 (ex : 인스타그램, faecbook 등) #제네릭 뷰 (Generic View) 기본적으로 Django에서 제공하는 뷰어로 뷰 클래스를 의미 #Model : Model(Django) DB의 구조를 결정, 대부분의 경우 테이블을 작성할 때 사용하는 데, 테이블의 이름, 각 열의 이름과 타입 등을 설계할 때 사용 #View : Template(Django) 사용자에게 보여지는 UI 부분으로, HTML 코드 등 실질적으로 클라이언트에게 보여질 부분 #Controller : View(Django) 기능, 로직 부분으로, 넘겨받은 데이터를 어떻게 해석하고 가공할지 그리고 처리된 결과를 어떻게 클라이언트에게 돌려줄지 결정하는 부분 ####Django - 프로젝트 구조 살펴보기##config 프로젝트 설정 파일과 웹 서비스 실행으르 위한 파일들이 들어있음 #config - init." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/development/web/django/django00/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Django - Starter | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/html/" class="">HTML 문법</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/css/" class="">CSS 문법</a>
+  
+
+</li>
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/django/" class="collapsed ">Djnago</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/django/" class="">Django Install</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/basic/" class="">Django란?</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/test/" class="">Django DB(model) create</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/django01/" class="">Django - </a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/django02/" class="">Django - </a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/django03/" class="">Django - </a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/django04/" class="">Django - </a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/django00/" class="active">Django - Starter</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/web/django/django05/" class="">Django05</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Django - Starter</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#django---기본-용어정리"><strong>Django - 기본 용어정리</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#django---프로젝트-구조-살펴보기"><strong>Django - 프로젝트 구조 살펴보기</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#django---app-구조-살펴보기"><strong>Django - app 구조 살펴보기</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#django---명령어"><strong>Django - 명령어</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="django">
+  <strong>Django</strong>
+  <a class="anchor" href="#django">#</a>
+</h1>
+<hr>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<p> </p>
+<h2 id="django---기본-용어정리">
+  <strong>Django - 기본 용어정리</strong>
+  <a class="anchor" href="#django---%ea%b8%b0%eb%b3%b8-%ec%9a%a9%ec%96%b4%ec%a0%95%eb%a6%ac">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<ul>
+<li><strong>CGI (Common Gateway Interface)</strong>
+<ul>
+<li><strong>정해진 양식을 사용해서 요청하고 결과를 받아오는 방식 (ex : Apache-fast_cgi 등)</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<ul>
+<li><strong>WSGI (WEB Server Gateway Interface)</strong>
+<ul>
+<li><strong>CGI의 일종으로, 기존 python app에서는 CGI, mod_python, Fast CGI 등등 만을 사용했으나, wsgi는 프레임워크의 웹서버로, route web에서는 표준 인터페이스로 개발되었다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>Web Server</strong>
+<ul>
+<li><strong>실제적으로 요청을 처리하는 컴퓨터 (ex : Apache, Nginx 등)</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>Cache Server</strong>
+<ul>
+<li><strong>들어온 요청에 대한 응답을 미리 파일이나 메모리 캐시로 저장해두는 컴퓨터 (ex : Redis, Memcached 등)</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>DB Server</strong>
+<ul>
+<li><strong>기존 DATABASE를 보다 빠르고, 편리하게 관리하기 위한 데이터 관리 전용 서비스 (ex : MySQL, MS-SQL, Oracle DB 등)</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>File Server</strong>
+<ul>
+<li><strong>사용자가 업로드한 파일을 여러 사용자가 볼 수 있게 하는 서버 (ex : 인스타그램, faecbook 등)</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>제네릭 뷰 (Generic View)</strong>
+<ul>
+<li><strong>기본적으로 Django에서 제공하는 뷰어로 뷰 클래스를 의미</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>Model : Model(Django)</strong>
+<ul>
+<li><strong>DB의 구조를 결정, 대부분의 경우 테이블을 작성할 때 사용하는 데, 테이블의 이름, 각 열의 이름과 타입 등을 설계할 때 사용</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>View : Template(Django)</strong>
+<ul>
+<li><strong>사용자에게 보여지는 UI 부분으로, HTML 코드 등 실질적으로 클라이언트에게 보여질 부분</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>Controller : View(Django)</strong>
+<ul>
+<li><strong>기능, 로직 부분으로, 넘겨받은 데이터를 어떻게 해석하고 가공할지 그리고 처리된 결과를 어떻게 클라이언트에게 돌려줄지 결정하는 부분</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<hr>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<h2 id="django---프로젝트-구조-살펴보기">
+  <strong>Django - 프로젝트 구조 살펴보기</strong>
+  <a class="anchor" href="#django---%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ec%a1%b0-%ec%82%b4%ed%8e%b4%eb%b3%b4%ea%b8%b0">#</a>
+</h2>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<ul>
+<li><strong>config</strong>
+<ul>
+<li><strong>프로젝트 설정 파일과 웹 서비스 실행으르 위한 파일들이 들어있음</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>config - <strong>init</strong>.py</strong>
+<ul>
+<li><strong>파이썬 2.x 버전과의 화환을 위해 만들어진 비어있는 파일, 파이썬 3.x 이상에서는 불 필요해졌으며, 삭제해도 프로젝트를 진행하는 데 지장이 없음</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>config - setting.py</strong>
+<ul>
+<li><strong>프로젝트 설정에 관한 전반적인 내용이 들어가 있는 파일</strong></li>
+</ul>
+</li>
+</ul>
+<pre tabindex="0"><code>BASE_DIR : 프로젝트 루트 폴더
+SECRET_KEY : 세션 값의 보호나 비밀번호 변경시 사용, 보안 URL을 만드는 일에 주로 사용
+DEBUG : 디버그 모드의 대한 설정 (True : 오류 메시지 즉시 확인 / False : 다른 설정값을 이용해 관리자가 오류 메시지를 확인 가능)
+ALLOWED_HOSTS : 현재 서비스의 호스트를 설정
+INSTALLED_APPS : 현재 프로젝트에서 사용하는 앱의 목록을 기록하고 관리
+MIDDLEWARE : 장고의 모든 요청/ 응답 메시지 사이에 실행되는 특수한 프레임워크의 집합
+ROOT_URLCONF : 기준이 되는 urls.py 파일의 경로를 설정
+TEMPLATES : 장고에서 사용하는 템플릿 시스템에 관한 설정으로, 템플릿 해석 엔진과 템플릿 폴더의 경로 등을 변경하는 데 사용
+WSGI_APPLICATION : 실행을 위한 WSGI 어플리케이션을 설정
+DATABASES : DB관련 설정
+AUTH_PASSWORD_VALIDATORS : 비밀번호 검증을 위한 설정
+LANGUAGE_CODE : 다국어에 관한 설정
+</code></pre><h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>config - urls.py</strong>
+<ul>
+<li><strong>특정 기증을 수행하기 위해 접속하는 URL이며, 이를 설정해 주는 파일에 대한 설정을 urls.py 기록</strong></li>
+<li><strong>config - urls는 파일이 최초로 탐색되는 기준 URL 파일</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>wsgi.py</strong>
+<ul>
+<li><strong>웹 서비스를 실행하기 위한 WSGI 관련 내용이 들어있음</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<ul>
+<li><strong>venv</strong>
+<ul>
+<li><strong>프로젝트 구동에 필요한 가상호나경이 들어있는 폴더</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>db.sqlite3</strong>
+<ul>
+<li><strong>SQLite3 DB 파일로 다른 DB를 사용한다면 필요없는 파일</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>manage.py</strong>
+<ul>
+<li><strong>Django의 다양한 명령어를 사용하기 위한 파일</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
+<hr>
+<h2 id="django---app-구조-살펴보기">
+  <strong>Django - app 구조 살펴보기</strong>
+  <a class="anchor" href="#django---app-%ea%b5%ac%ec%a1%b0-%ec%82%b4%ed%8e%b4%eb%b3%b4%ea%b8%b0">#</a>
+</h2>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
+<ul>
+<li><strong>models.py</strong>
+<ul>
+<li><strong>model은 DB의 구졸르 결정하며, 장고에서는 DB의 명세를 관리, 모델은 클래스로 만드는 데, 클래스의 이름이 테이블의 이름이 되고, 클래스의 속성들이 각각의 컬럼(Columm)이 됨</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>admin.py</strong>
+<ul>
+<li><strong>생성한 model을 확인하거나 기능을 추가하기 위해서는 해당 파일이 필요</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>views.py</strong>
+<ul>
+<li><strong>뷰는 클래스형 및 함수형이 있이 존재</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>urls.py</strong>
+<ul>
+<li><strong>views.py에 어떤 기능을 만들면 해당 기능을 동작시키는 방식은 URL을 통한 호출 방식을 사용</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>templates</strong>
+<ul>
+<li><strong>HTML이 들어있는 파일</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
+<hr>
+<h3 id="django---명령어">
+  <strong>Django - 명령어</strong>
+  <a class="anchor" href="#django---%eb%aa%85%eb%a0%b9%ec%96%b4">#</a>
+</h3>
+<h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">$</span> <span style="color:#f92672">./</span>manage<span style="color:#f92672">.</span>py <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>django<span style="color:#f92672">-</span>admin [project name] : 장고 프로젝트를 생성
+</span></span><span style="display:flex;"><span>startapp [app name] : 프로젝트에 기능 단위의 앱를 생성
+</span></span><span style="display:flex;"><span>makemigrations : 어플리케이션 변경 사항을 추적해 DB에 적용할 내용을 정리에 사용, 보통 앱 안에 있는 모델의 변경 사항이 있을 때 주로 사용
+</span></span><span style="display:flex;"><span>sqlmigrate : 실행한 SQL 명령문을 출력, 어떤 명령문을 실행할지 확인할 때 사용, 튜닝 및 슬로우 쿼리 여부 확인 가능
+</span></span><span style="display:flex;"><span>migrate : 실제 변경사항을 DB에 반영
+</span></span><span style="display:flex;"><span>showmigrations 프로젝트의 DB변경사항 목록과 상태를 출력
+</span></span><span style="display:flex;"><span>runserver : 테스트 서버를 실행, 웹 서비스를 실제로 동작시켜 확인할 때 사용
+</span></span><span style="display:flex;"><span>dumpdata : 현재 DB의 내용을 백업할 때 사용
+</span></span><span style="display:flex;"><span>loaddata : 백업 파일에서 DB로 내용을 복구할 때 사용
+</span></span><span style="display:flex;"><span>flush : DB 테이블은 그대로 두고 테이블의 내용만 전부 삭제
+</span></span><span style="display:flex;"><span>shell : 장고 쉘(shell)을 사용, 작성한 모델 드을 불러와 실제 테스트가 가능
+</span></span><span style="display:flex;"><span>dbshell : 장고 db에 직저 접근할 수 있는 쉘을 실행
+</span></span><span style="display:flex;"><span>createsuperuser : 관리자 계정을 생성
+</span></span><span style="display:flex;"><span>changepassword : 계정의 비밀번호 변경
+</span></span></code></pre></div><h1 id="heading-38">
+  
+  <a class="anchor" href="#heading-38">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#django---기본-용어정리"><strong>Django - 기본 용어정리</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#django---프로젝트-구조-살펴보기"><strong>Django - 프로젝트 구조 살펴보기</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#django---app-구조-살펴보기"><strong>Django - app 구조 살펴보기</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#django---명령어"><strong>Django - 명령어</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

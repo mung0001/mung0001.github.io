@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="리소스의 사용량과 부하를 관리하는 서비스 : Ceilometer##리소스의 사용량과 부하를 관리하는 서비스 : Ceilometer###Ceilometer은 각 서비스들의 예상 부하에 따라 추가 작업과 노드를 관리하는 역할을 수행 클라우드에서 배포된 자원의 사용량과 성능을 측정해 사용자가 자원 상태를 모니터링 할 수 있는 기능을 제공 Ceilomete는 리버티 버전에서 기존에 알람 서비스를 하던 부분을 aodh로 분리 #핵심 서비스 역할 Polling agent OpenStack 서비스를 폴링하고 미터를 빌드하도록 설계된 데몬 프로세스 Notification agent 메시지 큐에서 알림을 듣고 이벤트 및 샘플로 변환하며 파이프 라인 조치를 적용하도록 설계된 데몬 프로세스 #Ceilometer로 표준화 및 수집 된 데이터는 다양한 대상으로 전송 Gnocchi는 이러한 스토리지 및 쿼리를 최적화하기 위해 시계열 형식으로 측정 데이터를 캡처하도록 개발 Aodh는 사용자 정의 규칙이 깨졋을 때 경고를 보낼 수 있는 경보 서비스 Ceilomter은 이와 같이 리소스를 감시 및 예상하여 다른 작업을 수행할 수 있도록 하는 서비스를 의미 ##데이터 수집###위의 그림과 같이 Polling agents에서 각 서비스들의 API의 리소스를 읽어 데이터를 수집 Notification agents는 Polling agents에서 수집한 데이터들을 토대로 Ceilomter 서비스 혹은 Events로 변환하는 역할을 수행 ##데이터 처리###수집된 데이터를 토대로 Notification bus를 통해 엔드 포인트로 재분배하여 이벤트 및 샘플로 처리하느 역할을 수행 ##데이터 요청###데이터의 요청은 수집된 자료들을 토대로 서로 데이터를 주고 받으며, Polling agents라는 클라우드 컨트롤러에서 처리되며, 여러 플러그인을 사용하여 데이터를 통신합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Ceilometer" />
+<meta property="og:description" content="리소스의 사용량과 부하를 관리하는 서비스 : Ceilometer##리소스의 사용량과 부하를 관리하는 서비스 : Ceilometer###Ceilometer은 각 서비스들의 예상 부하에 따라 추가 작업과 노드를 관리하는 역할을 수행 클라우드에서 배포된 자원의 사용량과 성능을 측정해 사용자가 자원 상태를 모니터링 할 수 있는 기능을 제공 Ceilomete는 리버티 버전에서 기존에 알람 서비스를 하던 부분을 aodh로 분리 #핵심 서비스 역할 Polling agent OpenStack 서비스를 폴링하고 미터를 빌드하도록 설계된 데몬 프로세스 Notification agent 메시지 큐에서 알림을 듣고 이벤트 및 샘플로 변환하며 파이프 라인 조치를 적용하도록 설계된 데몬 프로세스 #Ceilometer로 표준화 및 수집 된 데이터는 다양한 대상으로 전송 Gnocchi는 이러한 스토리지 및 쿼리를 최적화하기 위해 시계열 형식으로 측정 데이터를 캡처하도록 개발 Aodh는 사용자 정의 규칙이 깨졋을 때 경고를 보낼 수 있는 경보 서비스 Ceilomter은 이와 같이 리소스를 감시 및 예상하여 다른 작업을 수행할 수 있도록 하는 서비스를 의미 ##데이터 수집###위의 그림과 같이 Polling agents에서 각 서비스들의 API의 리소스를 읽어 데이터를 수집 Notification agents는 Polling agents에서 수집한 데이터들을 토대로 Ceilomter 서비스 혹은 Events로 변환하는 역할을 수행 ##데이터 처리###수집된 데이터를 토대로 Notification bus를 통해 엔드 포인트로 재분배하여 이벤트 및 샘플로 처리하느 역할을 수행 ##데이터 요청###데이터의 요청은 수집된 자료들을 토대로 서로 데이터를 주고 받으며, Polling agents라는 클라우드 컨트롤러에서 처리되며, 여러 플러그인을 사용하여 데이터를 통신합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/openstack/openstack/ceilometer/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Ceilometer | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Ceilometer</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#리소스의-사용량과-부하를-관리하는-서비스--ceilometer-1"><strong>리소스의 사용량과 부하를 관리하는 서비스 : Ceilometer</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-수집"><strong>데이터 수집</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-처리"><strong>데이터 처리</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-요청"><strong>데이터 요청</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-처리-및-변형"><strong>데이터 처리 및 변형</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#openstack에서의-ceilomter의-위치"><strong>OpenStack에서의 Ceilomter의 위치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="리소스의-사용량과-부하를-관리하는-서비스--ceilometer">
+  <strong>리소스의 사용량과 부하를 관리하는 서비스 : Ceilometer</strong>
+  <a class="anchor" href="#%eb%a6%ac%ec%86%8c%ec%8a%a4%ec%9d%98-%ec%82%ac%ec%9a%a9%eb%9f%89%ea%b3%bc-%eb%b6%80%ed%95%98%eb%a5%bc-%ea%b4%80%eb%a6%ac%ed%95%98%eb%8a%94-%ec%84%9c%eb%b9%84%ec%8a%a4--ceilometer">#</a>
+</h1>
+<hr>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="리소스의-사용량과-부하를-관리하는-서비스--ceilometer-1">
+  <strong>리소스의 사용량과 부하를 관리하는 서비스 : Ceilometer</strong>
+  <a class="anchor" href="#%eb%a6%ac%ec%86%8c%ec%8a%a4%ec%9d%98-%ec%82%ac%ec%9a%a9%eb%9f%89%ea%b3%bc-%eb%b6%80%ed%95%98%eb%a5%bc-%ea%b4%80%eb%a6%ac%ed%95%98%eb%8a%94-%ec%84%9c%eb%b9%84%ec%8a%a4--ceilometer-1">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<p><img src="/Openstack/Ceilometer/Ceilometer01.png" alt="Ceilometer" /></p>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<ul>
+<li><strong>Ceilometer은 각 서비스들의 예상 부하에 따라 추가 작업과 노드를 관리하는 역할을 수행</strong></li>
+<li><strong>클라우드에서 배포된 자원의 사용량과 성능을 측정해 사용자가 자원 상태를 모니터링 할 수 있는 기능을 제공</strong></li>
+<li><strong>Ceilomete는 리버티 버전에서 기존에 알람 서비스를 하던 부분을 aodh로 분리</strong></li>
+</ul>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>핵심 서비스</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Polling agent</td>
+<td>OpenStack 서비스를 폴링하고 미터를 빌드하도록 설계된 데몬 프로세스</td>
+</tr>
+<tr>
+<td>Notification agent</td>
+<td>메시지 큐에서 알림을 듣고 이벤트 및 샘플로 변환하며 파이프 라인 조치를 적용하도록 설계된 데몬 프로세스</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>Ceilometer로 표준화 및 수집 된 데이터는 다양한 대상으로 전송</strong></li>
+<li><strong>Gnocchi는 이러한 스토리지 및 쿼리를 최적화하기 위해 시계열 형식으로 측정 데이터를 캡처하도록 개발</strong></li>
+<li><strong>Aodh는 사용자 정의 규칙이 깨졋을 때 경고를 보낼 수 있는 경보 서비스</strong></li>
+<li><strong>Ceilomter은 이와 같이 리소스를 감시 및 예상하여 다른 작업을 수행할 수 있도록 하는 서비스를 의미</strong></li>
+</ul>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<h3 id="데이터-수집">
+  <strong>데이터 수집</strong>
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%88%98%ec%a7%91">#</a>
+</h3>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p><img src="/Openstack/Ceilometer/Ceilometer02.png" alt="Ceilometer" /></p>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<ul>
+<li><strong>위의 그림과 같이 Polling agents에서 각 서비스들의 API의 리소스를 읽어 데이터를 수집</strong></li>
+<li><strong>Notification agents는 Polling agents에서 수집한 데이터들을 토대로 Ceilomter 서비스 혹은 Events로 변환하는 역할을 수행</strong></li>
+</ul>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="데이터-처리">
+  <strong>데이터 처리</strong>
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%b2%98%eb%a6%ac">#</a>
+</h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<p><img src="/Openstack/Ceilometer/Ceilometer03.png" alt="Ceilometer" /></p>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<ul>
+<li><strong>수집된 데이터를 토대로 Notification bus를 통해 엔드 포인트로 재분배하여 이벤트 및 샘플로 처리하느 역할을 수행</strong></li>
+</ul>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<h3 id="데이터-요청">
+  <strong>데이터 요청</strong>
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%9a%94%ec%b2%ad">#</a>
+</h3>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<p><img src="/Openstack/Ceilometer/Ceilometer04.png" alt="Ceilometer" /></p>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<ul>
+<li><strong>데이터의 요청은 수집된 자료들을 토대로 서로 데이터를 주고 받으며, Polling agents라는 클라우드 컨트롤러에서 처리되며, 여러 플러그인을 사용하여 데이터를 통신합니다.</strong></li>
+</ul>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<h3 id="데이터-처리-및-변형">
+  <strong>데이터 처리 및 변형</strong>
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%b2%98%eb%a6%ac-%eb%b0%8f-%eb%b3%80%ed%98%95">#</a>
+</h3>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<p><img src="/Openstack/Ceilometer/Ceilometer05.png" alt="Ceilometer" /></p>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<p><img src="/Openstack/Ceilometer/Ceilometer06.png" alt="Ceilometer" /></p>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<ul>
+<li><strong>위의 그림은 수집된 데이터를 수집, 분석 및 변형 배포하는 과정을 나타낸 그림으로 Ceilomter은 각 서비스들의 데이터를 수집하여, 변형시키는 여러 소스를 제공</strong></li>
+</ul>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<h3 id="openstack에서의-ceilomter의-위치">
+  <strong>OpenStack에서의 Ceilomter의 위치</strong>
+  <a class="anchor" href="#openstack%ec%97%90%ec%84%9c%ec%9d%98-ceilomter%ec%9d%98-%ec%9c%84%ec%b9%98">#</a>
+</h3>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<p><img src="/Openstack/Ceilometer/Ceilometer00.png" alt="Ceilometer" /></p>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>구성요소</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ceilometer-colletcor</td>
+<td>중앙 관리서버에서 실행되며, Queue 모니터링 하는 서비스</td>
+</tr>
+<tr>
+<td>Ceilometer-agent-notification</td>
+<td>ceilometer-collector와 함꼐 중앙 관리서버에서 실행, Queue를 이용해 이벤트와 미러링 데이터를 기록</td>
+</tr>
+<tr>
+<td>Ceilometer-agent-compute</td>
+<td>각 컴퓨팅 노드에 설치해서 실행, 자원 활용 통계로 사용</td>
+</tr>
+<tr>
+<td>Ceilometer-account-central</td>
+<td>중앙 관리 서버에서 실행, 인스턴스에 연결되지 않은 자원이나 컴퓨터 노드의 활용 가능한 자원 통계를 폴링</td>
+</tr>
+<tr>
+<td>Ceilometer-alarm-evaluator</td>
+<td>하나 이상의 중앙 관리 서버에서 실행, 슬라이딩 시간대에 임계 값을 추가할 때 발생하는 경보 시점을 결정</td>
+</tr>
+<tr>
+<td>Ceilometer-alarm-nottifier</td>
+<td>하나 이상의 중앙 관리 서버에서 실행되며, 샘플을 수집하는 임계 값 평가에 따라 알람을 설정</td>
+</tr>
+<tr>
+<td>Ceilometer database</td>
+<td>수집한 데이터를 저장할 Ceilometer 데이터 베이스</td>
+</tr>
+<tr>
+<td>Ceilometer-api</td>
+<td>하나 또는 그 이상의 중앙 관리 서버에서 실행되며 데이터베이스에서 데이터 엑세스를 제공</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#리소스의-사용량과-부하를-관리하는-서비스--ceilometer-1"><strong>리소스의 사용량과 부하를 관리하는 서비스 : Ceilometer</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-수집"><strong>데이터 수집</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-처리"><strong>데이터 처리</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-요청"><strong>데이터 요청</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#데이터-처리-및-변형"><strong>데이터 처리 및 변형</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#openstack에서의-ceilomter의-위치"><strong>OpenStack에서의 Ceilomter의 위치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

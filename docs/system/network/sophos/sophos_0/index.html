@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sophos##Sophos UTM ( United Threat Management )##Sophos UTM이란 Sophos사에서 리눅스 커널을 이용해 만든 UTM장비
+UTM : Anti Virus, Firewall, IPS ( 침입방지시스템 ) , VPN , IDS ( 침입탐지시스템 )등의 보안기능 중 적어도 2개, 많게는 7~8가지 기능을 하나의 장비에 포함하여 사용하는 통합보안장비
+#통합위협관리시스템( UTM )의 주요 기능##기능 설명 Firewall Stateful Packet Inspection( SPI ) Firewalld, SMTP, HTTP, POP3, DNS, Proxy 기능이 결합된 견고한 network보안 구축 VPN IPsec VPN(DES/3DES) 및 L2TP VPN 지원 IDS/ IPS 다양한 network 기반 공격 탐지 및 차단, 다양한 Application 기반 공격 탐지 및 차단, Anomaly Detection, Dos/DDos, Anti-Scan Attack Scan Attack 기반 공격 탐지 및 차단 Anti Virus 이메일 기반 내/외부 유입 바이러스 탐지 및 차단, Web 기반 내/외부 유입 바이러스 탐지 및 차단 Anti-Spam 베이시안(Baysian) 알고리즘 기반 스팸메일 탐지 및 차단, 점수(Score) 데이터 기반 스팸 메일 탐지 및 차단 Content Filtering 유해사이트 및 정책 위배 웹사이트 접근 탐지 및 차단 ext Transparent/Router/NAT 모드 지원, 피싱 차단 및 SIP Proxy 기능 제공 #Sophos UTM 메뉴의 역할##메뉴 역할 Webserver Protection WAF ( Web Application Firewall ) Web Hacking 방어 Support Tools ping test, traceroute Network Protection NAT Masquerding PAT Network Protection Firewall Country Blocking 특정 국가에서 들어오는 트래픽을 차단 Network Protection Firewall ICMP Ping 허용/차단 설정용도 ( ping settings에 &lsquo;Gateway forward pings를 허용해줘야 내부에서 외부로 ping이 전송 ) Network Protection Firewall Advanced Connection tracking helpers FTP Stateful기능 사용여부 Web Protection Client를 외부로부터 보호하는 역할 ( 사용자 보호하는 것으로 웹서버 보호 X ) Web Protection - Web Filtering Standard Mode Client측 장비한테 UTM장비에게 가라고 지정을 해줘야지만 UTM장비에서 검사 ( default : 외부로 전송 ) Transparent Mode 별도로 UTM장비에게 가라고 지정하지 않아도 UTM장비가 검사 #">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Sophos" />
+<meta property="og:description" content="Sophos##Sophos UTM ( United Threat Management )##Sophos UTM이란 Sophos사에서 리눅스 커널을 이용해 만든 UTM장비
+UTM : Anti Virus, Firewall, IPS ( 침입방지시스템 ) , VPN , IDS ( 침입탐지시스템 )등의 보안기능 중 적어도 2개, 많게는 7~8가지 기능을 하나의 장비에 포함하여 사용하는 통합보안장비
+#통합위협관리시스템( UTM )의 주요 기능##기능 설명 Firewall Stateful Packet Inspection( SPI ) Firewalld, SMTP, HTTP, POP3, DNS, Proxy 기능이 결합된 견고한 network보안 구축 VPN IPsec VPN(DES/3DES) 및 L2TP VPN 지원 IDS/ IPS 다양한 network 기반 공격 탐지 및 차단, 다양한 Application 기반 공격 탐지 및 차단, Anomaly Detection, Dos/DDos, Anti-Scan Attack Scan Attack 기반 공격 탐지 및 차단 Anti Virus 이메일 기반 내/외부 유입 바이러스 탐지 및 차단, Web 기반 내/외부 유입 바이러스 탐지 및 차단 Anti-Spam 베이시안(Baysian) 알고리즘 기반 스팸메일 탐지 및 차단, 점수(Score) 데이터 기반 스팸 메일 탐지 및 차단 Content Filtering 유해사이트 및 정책 위배 웹사이트 접근 탐지 및 차단 ext Transparent/Router/NAT 모드 지원, 피싱 차단 및 SIP Proxy 기능 제공 #Sophos UTM 메뉴의 역할##메뉴 역할 Webserver Protection WAF ( Web Application Firewall ) Web Hacking 방어 Support Tools ping test, traceroute Network Protection NAT Masquerding PAT Network Protection Firewall Country Blocking 특정 국가에서 들어오는 트래픽을 차단 Network Protection Firewall ICMP Ping 허용/차단 설정용도 ( ping settings에 &lsquo;Gateway forward pings를 허용해줘야 내부에서 외부로 ping이 전송 ) Network Protection Firewall Advanced Connection tracking helpers FTP Stateful기능 사용여부 Web Protection Client를 외부로부터 보호하는 역할 ( 사용자 보호하는 것으로 웹서버 보호 X ) Web Protection - Web Filtering Standard Mode Client측 장비한테 UTM장비에게 가라고 지정을 해줘야지만 UTM장비에서 검사 ( default : 외부로 전송 ) Transparent Mode 별도로 UTM장비에게 가라고 지정하지 않아도 UTM장비가 검사 #" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/network/sophos/sophos_0/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Sophos | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/sophos/sophos_0/" class="active">Sophos</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/sophos/sophos_1/" class="">Sophos 설치</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/sophos/sophos_2/" class="">Sophos 방화벽 구축</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Sophos</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sophos-utm--united-threat-management-"><strong>Sophos UTM ( United Threat Management )</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#통합위협관리시스템-utm-의-주요-기능"><strong>통합위협관리시스템( UTM )의 주요 기능</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#sophos-utm-메뉴의-역할"><strong>Sophos UTM 메뉴의 역할</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="sophos">
+  <strong>Sophos</strong>
+  <a class="anchor" href="#sophos">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="sophos-utm--united-threat-management-">
+  <strong>Sophos UTM ( United Threat Management )</strong>
+  <a class="anchor" href="#sophos-utm--united-threat-management-">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Sophos UTM이란 Sophos사에서 리눅스 커널을 이용해 만든 UTM장비</strong></p>
+</li>
+<li>
+<p><strong>UTM : Anti Virus, Firewall, IPS ( 침입방지시스템 ) , VPN , IDS ( 침입탐지시스템 )등의 보안기능 중 적어도 2개, 많게는 7~8가지 기능을 하나의 장비에 포함하여 사용하는 통합보안장비</strong></p>
+</li>
+</ul>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<p> </p>
+<h3 id="통합위협관리시스템-utm-의-주요-기능">
+  <strong>통합위협관리시스템( UTM )의 주요 기능</strong>
+  <a class="anchor" href="#%ed%86%b5%ed%95%a9%ec%9c%84%ed%98%91%ea%b4%80%eb%a6%ac%ec%8b%9c%ec%8a%a4%ed%85%9c-utm-%ec%9d%98-%ec%a3%bc%ec%9a%94-%ea%b8%b0%eb%8a%a5">#</a>
+</h3>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>기능</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Firewall</td>
+<td>Stateful Packet Inspection( SPI ) Firewalld, SMTP, HTTP, POP3, DNS, Proxy 기능이 결합된 견고한 network보안 구축</td>
+</tr>
+<tr>
+<td>VPN</td>
+<td>IPsec VPN(DES/3DES) 및 L2TP VPN 지원</td>
+</tr>
+<tr>
+<td>IDS/ IPS</td>
+<td>다양한 network 기반 공격 탐지 및 차단, 다양한 Application 기반 공격 탐지 및 차단, Anomaly Detection, Dos/DDos,</td>
+</tr>
+<tr>
+<td>Anti-Scan Attack</td>
+<td>Scan Attack 기반 공격 탐지 및 차단</td>
+</tr>
+<tr>
+<td>Anti Virus</td>
+<td>이메일 기반 내/외부 유입 바이러스 탐지 및 차단, Web 기반 내/외부 유입 바이러스 탐지 및 차단</td>
+</tr>
+<tr>
+<td>Anti-Spam</td>
+<td>베이시안(Baysian) 알고리즘 기반 스팸메일 탐지 및 차단, 점수(Score) 데이터 기반 스팸 메일 탐지 및 차단</td>
+</tr>
+<tr>
+<td>Content Filtering</td>
+<td>유해사이트 및 정책 위배 웹사이트 접근 탐지 및 차단</td>
+</tr>
+<tr>
+<td>ext</td>
+<td>Transparent/Router/NAT 모드 지원, 피싱 차단 및 SIP Proxy 기능 제공</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<p> </p>
+<h3 id="sophos-utm-메뉴의-역할">
+  <strong>Sophos UTM 메뉴의 역할</strong>
+  <a class="anchor" href="#sophos-utm-%eb%a9%94%eb%89%b4%ec%9d%98-%ec%97%ad%ed%95%a0">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>메뉴</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Webserver Protection</td>
+<td>WAF ( Web Application Firewall ) Web Hacking 방어</td>
+</tr>
+<tr>
+<td>Support Tools</td>
+<td>ping test, traceroute</td>
+</tr>
+<tr>
+<td>Network Protection NAT Masquerding</td>
+<td>PAT</td>
+</tr>
+<tr>
+<td>Network Protection Firewall Country Blocking</td>
+<td>특정 국가에서 들어오는 트래픽을 차단</td>
+</tr>
+<tr>
+<td>Network Protection Firewall ICMP</td>
+<td>Ping 허용/차단 설정용도 ( ping settings에 &lsquo;Gateway forward pings를 허용해줘야 내부에서 외부로 ping이 전송 )</td>
+</tr>
+<tr>
+<td>Network Protection Firewall Advanced Connection tracking helpers FTP</td>
+<td>Stateful기능 사용여부</td>
+</tr>
+<tr>
+<td>Web Protection</td>
+<td>Client를 외부로부터 보호하는 역할 ( 사용자 보호하는 것으로 웹서버 보호 X )</td>
+</tr>
+<tr>
+<td>Web Protection - Web Filtering</td>
+<td></td>
+</tr>
+<tr>
+<td>Standard Mode</td>
+<td>Client측 장비한테 UTM장비에게 가라고 지정을 해줘야지만 UTM장비에서 검사 ( default : 외부로 전송 )</td>
+</tr>
+<tr>
+<td>Transparent Mode</td>
+<td>별도로 UTM장비에게 가라고 지정하지 않아도 UTM장비가 검사</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sophos-utm--united-threat-management-"><strong>Sophos UTM ( United Threat Management )</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#통합위협관리시스템-utm-의-주요-기능"><strong>통합위협관리시스템( UTM )의 주요 기능</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#sophos-utm-메뉴의-역할"><strong>Sophos UTM 메뉴의 역할</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="이미지를 관리하는 서비스 : Glance##이미지를 관리하는 서비스 : Glance##Cloud Computing을 사용하기 위해서는 Virtual Machine을 생성하기 위한 이미지가 필요로 하며, Glance는 Nova에서 생성하는 인스턴스의 운영체제에 해당하는 이미지를 관리하는 서비스 ##Glance의 구성요소###Glance는 위의 그림과 같이 3가지의 구성요소로 이루어져 있다 #구성요소 역할 Glance-api 이미지를 확인/ 복구/ 저장하는 등의 질의를 하기 이한 api 요청/ 응답을 담당 Glance-registry 이미지에 대한 메타데이터를 저장하고 처리하는 역할을 담당 및 Glance database에 저장된 데이터를 불러들이는 역할을 수행 Glance-database 이미지의 관련 정보들을 보관 ##논리 아키텍처의 Glance##Glance 사용자들은 glance-api로 이미지를 등록, 삭제, 관리 glance-api는 glance-registry와 Glance database에서 이미지를 관리 이미지를 등록할 때는 glance-registry로 Glance database에 저장 등록된 이미지를 사용할 때는 Glance database에 바로 사용을 요청 관리자는 운영하려는 운영체제의 이미지를 glance-registry로 Glance database에 등록 ##가상 머신 이미지 포맷##aki: 아마존 커널 이미지 ami: 아마존 머신 이미지 ari: 아마존 ram 디스크 이미지 iso: 광학 디스크나 CD-ROM의 데이터 콘텐츠를 지원하는 아카이브 포맷 qcow2: QEMU 에뮬레이터가 지원하는 포맷, 동적으로 확장할 수 있으며, Copy on Write를 지원 raw: 구조화되지 않은 디스크 포맷 vdi: VirtalBox 모니터와 QEMU 에뮬레이터가 지원하는 디스크 포맷 vhd: VHD 디스크 포맷은 VMware, Xen 마이크로소프트, VirtualBox 같은 가상 머신 모니터가 사용하는 일반적인 디스크 포맷 vhdx: VHDX 디스크 포맷은 큰 디스크 크기를 지원하는 VHD 형식의 향상된 버전 vmdk: 일반적인 디스크 포맷으로 여러 가상 머신 모니터가 지원 ##컨테이너 포맷(container Format)##aki: 아마존 커널 이미지 ami: 아마존 머신 이미지 bare: 아마존 ram 디스크 이미지 docker: Docker 컨테이너 포맷 ova: tar 파일의 OVF 패키지 ovf: OVF 컨테이너 포맷 ####Glance 명령어#현재 이미지 목록 확인 openstack image list #특정 이미지의 자세한 정보 확인 openstack image show [이미지 이름] #이미지 삭제 openstack image delete [이미지 이름] #이미지 추가 openstack image create --public --container-format bare --disk-format qcow2 --file [경로를 포함한 이미지 파일 이름] [이미지 이름] ##커스텀 이미지 생성##xming 윈도우에 설치 #CentOS 준비 후 CentOS에 가상머신 프로그램 설치 및 실행 $ yum install qemu kvm qemu-kvm libvirt virt-install bridge-utils virt-manager dejavu-lgc-sans-fonts virt-viewer $ systemctl restart libvirtd #ISO 파일로 qcow2 각 이미지에 맞는 파일 생성 qemu-img create -f qcow2 [이미지 파일 위치] [이미지 파일 크기] qemu-img create -f qcow2 /test/centos7.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Glance" />
+<meta property="og:description" content="이미지를 관리하는 서비스 : Glance##이미지를 관리하는 서비스 : Glance##Cloud Computing을 사용하기 위해서는 Virtual Machine을 생성하기 위한 이미지가 필요로 하며, Glance는 Nova에서 생성하는 인스턴스의 운영체제에 해당하는 이미지를 관리하는 서비스 ##Glance의 구성요소###Glance는 위의 그림과 같이 3가지의 구성요소로 이루어져 있다 #구성요소 역할 Glance-api 이미지를 확인/ 복구/ 저장하는 등의 질의를 하기 이한 api 요청/ 응답을 담당 Glance-registry 이미지에 대한 메타데이터를 저장하고 처리하는 역할을 담당 및 Glance database에 저장된 데이터를 불러들이는 역할을 수행 Glance-database 이미지의 관련 정보들을 보관 ##논리 아키텍처의 Glance##Glance 사용자들은 glance-api로 이미지를 등록, 삭제, 관리 glance-api는 glance-registry와 Glance database에서 이미지를 관리 이미지를 등록할 때는 glance-registry로 Glance database에 저장 등록된 이미지를 사용할 때는 Glance database에 바로 사용을 요청 관리자는 운영하려는 운영체제의 이미지를 glance-registry로 Glance database에 등록 ##가상 머신 이미지 포맷##aki: 아마존 커널 이미지 ami: 아마존 머신 이미지 ari: 아마존 ram 디스크 이미지 iso: 광학 디스크나 CD-ROM의 데이터 콘텐츠를 지원하는 아카이브 포맷 qcow2: QEMU 에뮬레이터가 지원하는 포맷, 동적으로 확장할 수 있으며, Copy on Write를 지원 raw: 구조화되지 않은 디스크 포맷 vdi: VirtalBox 모니터와 QEMU 에뮬레이터가 지원하는 디스크 포맷 vhd: VHD 디스크 포맷은 VMware, Xen 마이크로소프트, VirtualBox 같은 가상 머신 모니터가 사용하는 일반적인 디스크 포맷 vhdx: VHDX 디스크 포맷은 큰 디스크 크기를 지원하는 VHD 형식의 향상된 버전 vmdk: 일반적인 디스크 포맷으로 여러 가상 머신 모니터가 지원 ##컨테이너 포맷(container Format)##aki: 아마존 커널 이미지 ami: 아마존 머신 이미지 bare: 아마존 ram 디스크 이미지 docker: Docker 컨테이너 포맷 ova: tar 파일의 OVF 패키지 ovf: OVF 컨테이너 포맷 ####Glance 명령어#현재 이미지 목록 확인 openstack image list #특정 이미지의 자세한 정보 확인 openstack image show [이미지 이름] #이미지 삭제 openstack image delete [이미지 이름] #이미지 추가 openstack image create --public --container-format bare --disk-format qcow2 --file [경로를 포함한 이미지 파일 이름] [이미지 이름] ##커스텀 이미지 생성##xming 윈도우에 설치 #CentOS 준비 후 CentOS에 가상머신 프로그램 설치 및 실행 $ yum install qemu kvm qemu-kvm libvirt virt-install bridge-utils virt-manager dejavu-lgc-sans-fonts virt-viewer $ systemctl restart libvirtd #ISO 파일로 qcow2 각 이미지에 맞는 파일 생성 qemu-img create -f qcow2 [이미지 파일 위치] [이미지 파일 크기] qemu-img create -f qcow2 /test/centos7." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/openstack/openstack/glance/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Glance | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Glance</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#이미지를-관리하는-서비스--glance-1"><strong>이미지를 관리하는 서비스 : Glance</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#glance의-구성요소"><strong>Glance의 구성요소</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#논리-아키텍처의-glance"><strong>논리 아키텍처의 Glance</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#가상-머신-이미지-포맷"><strong>가상 머신 이미지 포맷</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#컨테이너-포맷container-format"><strong>컨테이너 포맷(container Format)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#glance-명령어"><strong>Glance 명령어</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#커스텀-이미지-생성"><strong>커스텀 이미지 생성</strong></a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="이미지를-관리하는-서비스--glance">
+  <strong>이미지를 관리하는 서비스 : Glance</strong>
+  <a class="anchor" href="#%ec%9d%b4%eb%af%b8%ec%a7%80%eb%a5%bc-%ea%b4%80%eb%a6%ac%ed%95%98%eb%8a%94-%ec%84%9c%eb%b9%84%ec%8a%a4--glance">#</a>
+</h1>
+<hr>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="이미지를-관리하는-서비스--glance-1">
+  <strong>이미지를 관리하는 서비스 : Glance</strong>
+  <a class="anchor" href="#%ec%9d%b4%eb%af%b8%ec%a7%80%eb%a5%bc-%ea%b4%80%eb%a6%ac%ed%95%98%eb%8a%94-%ec%84%9c%eb%b9%84%ec%8a%a4--glance-1">#</a>
+</h2>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<ul>
+<li><strong>Cloud Computing을 사용하기 위해서는 Virtual Machine을 생성하기 위한 이미지가 필요로 하며, Glance는 Nova에서 생성하는 인스턴스의 운영체제에 해당하는 이미지를 관리하는 서비스</strong></li>
+</ul>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h3 id="glance의-구성요소">
+  <strong>Glance의 구성요소</strong>
+  <a class="anchor" href="#glance%ec%9d%98-%ea%b5%ac%ec%84%b1%ec%9a%94%ec%86%8c">#</a>
+</h3>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<p><img src="/Openstack/Glance/Glance01.png" alt="" /></p>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<ul>
+<li><strong>Glance는 위의 그림과 같이 3가지의 구성요소로 이루어져 있다</strong></li>
+</ul>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>구성요소</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Glance-api</td>
+<td>이미지를 확인/ 복구/ 저장하는 등의 질의를 하기 이한 api 요청/ 응답을 담당</td>
+</tr>
+<tr>
+<td>Glance-registry</td>
+<td>이미지에 대한 메타데이터를 저장하고 처리하는 역할을 담당 및 Glance database에 저장된 데이터를 불러들이는 역할을 수행</td>
+</tr>
+<tr>
+<td>Glance-database</td>
+<td>이미지의 관련 정보들을 보관</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<h3 id="논리-아키텍처의-glance">
+  <strong>논리 아키텍처의 Glance</strong>
+  <a class="anchor" href="#%eb%85%bc%eb%a6%ac-%ec%95%84%ed%82%a4%ed%85%8d%ec%b2%98%ec%9d%98-glance">#</a>
+</h3>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<ul>
+<li><strong>Glance 사용자들은 glance-api로 이미지를 등록, 삭제, 관리</strong></li>
+<li><strong>glance-api는 glance-registry와 Glance database에서 이미지를 관리</strong></li>
+<li><strong>이미지를 등록할 때는 glance-registry로 Glance database에 저장</strong></li>
+<li><strong>등록된 이미지를 사용할 때는 Glance database에 바로 사용을 요청</strong></li>
+<li><strong>관리자는 운영하려는 운영체제의 이미지를 glance-registry로 Glance database에 등록</strong></li>
+</ul>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<h3 id="가상-머신-이미지-포맷">
+  <strong>가상 머신 이미지 포맷</strong>
+  <a class="anchor" href="#%ea%b0%80%ec%83%81-%eb%a8%b8%ec%8b%a0-%ec%9d%b4%eb%af%b8%ec%a7%80-%ed%8f%ac%eb%a7%b7">#</a>
+</h3>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<ul>
+<li><strong>aki: 아마존 커널 이미지</strong></li>
+<li><strong>ami: 아마존 머신 이미지</strong></li>
+<li><strong>ari: 아마존 ram 디스크 이미지</strong></li>
+<li><strong>iso: 광학 디스크나 CD-ROM의 데이터 콘텐츠를 지원하는 아카이브 포맷</strong></li>
+<li><strong>qcow2: QEMU 에뮬레이터가 지원하는 포맷, 동적으로 확장할 수 있으며, Copy on Write를 지원</strong></li>
+<li><strong>raw: 구조화되지 않은 디스크 포맷</strong></li>
+<li><strong>vdi: VirtalBox 모니터와 QEMU 에뮬레이터가 지원하는 디스크 포맷</strong></li>
+<li><strong>vhd: VHD 디스크 포맷은 VMware, Xen 마이크로소프트, VirtualBox 같은 가상 머신 모니터가 사용하는 일반적인 디스크 포맷</strong></li>
+<li><strong>vhdx: VHDX 디스크 포맷은 큰 디스크 크기를 지원하는 VHD 형식의 향상된 버전</strong></li>
+<li><strong>vmdk: 일반적인 디스크 포맷으로 여러 가상 머신 모니터가 지원</strong></li>
+</ul>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<h3 id="컨테이너-포맷container-format">
+  <strong>컨테이너 포맷(container Format)</strong>
+  <a class="anchor" href="#%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88-%ed%8f%ac%eb%a7%b7container-format">#</a>
+</h3>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<ul>
+<li><strong>aki: 아마존 커널 이미지</strong></li>
+<li><strong>ami: 아마존 머신 이미지</strong></li>
+<li><strong>bare: 아마존 ram 디스크 이미지</strong></li>
+<li><strong>docker: Docker 컨테이너 포맷</strong></li>
+<li><strong>ova: tar 파일의 OVF 패키지</strong></li>
+<li><strong>ovf: OVF 컨테이너 포맷</strong></li>
+</ul>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<p><img src="/Line/Open.png" alt="Line" /></p>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<h2 id="glance-명령어">
+  <strong>Glance 명령어</strong>
+  <a class="anchor" href="#glance-%eb%aa%85%eb%a0%b9%ec%96%b4">#</a>
+</h2>
+<ul>
+<li>현재 이미지 목록 확인</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>openstack image list
+</span></span></code></pre></div><h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<ul>
+<li>특정 이미지의 자세한 정보 확인</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>openstack image show <span style="color:#f92672">[</span>이미지 이름<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<ul>
+<li>이미지 삭제</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>openstack image delete <span style="color:#f92672">[</span>이미지 이름<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<ul>
+<li>이미지 추가</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>openstack image create <span style="color:#f92672">--</span><span style="color:#66d9ef">public</span> <span style="color:#f92672">--</span>container<span style="color:#f92672">-</span>format bare <span style="color:#f92672">--</span>disk<span style="color:#f92672">-</span>format qcow2  <span style="color:#f92672">--</span>file <span style="color:#f92672">[</span>경로를 포함한 이미지 파일 이름<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>이미지 이름<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<h2 id="커스텀-이미지-생성">
+  <strong>커스텀 이미지 생성</strong>
+  <a class="anchor" href="#%ec%bb%a4%ec%8a%a4%ed%85%80-%ec%9d%b4%eb%af%b8%ec%a7%80-%ec%83%9d%ec%84%b1">#</a>
+</h2>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<ol>
+<li><strong>xming 윈도우에 설치</strong></li>
+</ol>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
+<ol start="2">
+<li><strong>CentOS 준비 후 CentOS에  가상머신 프로그램 설치 및 실행</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ yum install qemu kvm qemu-kvm libvirt virt-install bridge-utils virt-manager dejavu-lgc-sans-fonts virt-viewer
+</span></span><span style="display:flex;"><span>$ systemctl restart libvirtd
+</span></span></code></pre></div><h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
+<ol start="3">
+<li><strong>ISO 파일로 qcow2 각 이미지에 맞는 파일 생성</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>qemu-img create -f qcow2 [이미지 파일 위치] [이미지 파일 크기]
+</span></span><span style="display:flex;"><span>qemu-img create -f qcow2 /test/centos7.qcow2 10G
+</span></span></code></pre></div><h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
+<ol start="4">
+<li><strong>ISO로 가상머신 생성</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ virt-install --name centos \
+</span></span><span style="display:flex;"><span>--ram 1024 --disk \
+</span></span><span style="display:flex;"><span>[비어있는 이미지 파일 위치],format=qcow2 \ 
+</span></span><span style="display:flex;"><span>--network network=default \
+</span></span><span style="display:flex;"><span>--graphics vnc,listen=0.0.0.0  \
+</span></span><span style="display:flex;"><span>--noautoconsole \
+</span></span><span style="display:flex;"><span>--os-type=linux \
+</span></span><span style="display:flex;"><span>--os-variant=centos7.0 \
+</span></span><span style="display:flex;"><span>--location=[ISO 위치]
+</span></span></code></pre></div><h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
+<ol start="5">
+<li><strong>본체 윈도우에서 putty x11 설정</strong>
+<ul>
+<li><strong>Putty -&gt; SSH -&gt; X11 -&gt; Enable X11 Forwarding 체크 -&gt; X display location : localhost:0 설정 후 접속</strong></li>
+</ul>
+</li>
+</ol>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>virt-manager
+</span></span></code></pre></div><ol start="6">
+<li><strong>생성한 QEMU 가상머신 설정</strong>
+<ul>
+<li><strong>SELINUX 끄기</strong></li>
+<li><strong>acpid 설치 및 설정</strong></li>
+<li><strong>cloud-init 및 cloud-utils 설치 및 설정</strong></li>
+<li><strong>/etc/sysconfig/network</strong></li>
+<li><strong>qemu-guest-agent 설치 및 설정</strong></li>
+<li><strong>grub 수정</strong></li>
+</ul>
+</li>
+</ol>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
+<ol start="7">
+<li><strong>생성한 가상머신에서 이미지 작업 ( 커스터 마이징 )</strong></li>
+</ol>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
+<ol start="8">
+<li><strong>설치 후 설정</strong>
+<ul>
+<li><strong>yum install -y /usr/bin/virt-sysprep</strong></li>
+<li><strong>virt-sysprep -d centos			&lt;-네트워크 장치의 MAC주소와 같은 정보를 삭제하는 작업</strong></li>
+<li><strong>virsh undefine centos			&lt;-가상머신 삭제하는 작업</strong></li>
+</ul>
+</li>
+</ol>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#이미지를-관리하는-서비스--glance-1"><strong>이미지를 관리하는 서비스 : Glance</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#glance의-구성요소"><strong>Glance의 구성요소</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#논리-아키텍처의-glance"><strong>논리 아키텍처의 Glance</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#가상-머신-이미지-포맷"><strong>가상 머신 이미지 포맷</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#컨테이너-포맷container-format"><strong>컨테이너 포맷(container Format)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#glance-명령어"><strong>Glance 명령어</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#커스텀-이미지-생성"><strong>커스텀 이미지 생성</strong></a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

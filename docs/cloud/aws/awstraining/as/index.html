@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AWS AutoScaling##이번 장에서는 CloudComputing의 꽃이라고도 할 수 있는 AutoScaling 서비스를 구축해보겠습니다. AutoSacling의 대한 개념은 AutoScaling을 참조해주세요. #AWS AutoScaling ( 이하 As )###As 그룹 생성을 위해 AWS에 접속 합니다. 인스턴스를 생성하여, Apache가 자동시작되어있게 설정 후, AMI를 생성합니다. AMI 생성 참고 ##AMI 생성 후, As 그룹 생성을 위해 좌측의 메뉴에서 Auto Scaling &gt; Auto Scaling 그룹 생성을 클릭합니다. ##As그룹에서 시작하기를 클릭합니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="AWS AutoScaling" />
+<meta property="og:description" content="AWS AutoScaling##이번 장에서는 CloudComputing의 꽃이라고도 할 수 있는 AutoScaling 서비스를 구축해보겠습니다. AutoSacling의 대한 개념은 AutoScaling을 참조해주세요. #AWS AutoScaling ( 이하 As )###As 그룹 생성을 위해 AWS에 접속 합니다. 인스턴스를 생성하여, Apache가 자동시작되어있게 설정 후, AMI를 생성합니다. AMI 생성 참고 ##AMI 생성 후, As 그룹 생성을 위해 좌측의 메뉴에서 Auto Scaling &gt; Auto Scaling 그룹 생성을 클릭합니다. ##As그룹에서 시작하기를 클릭합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/aws/awstraining/as/" /><meta property="article:section" content="docs" />
+
+
+
+<title>AWS AutoScaling | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>AWS AutoScaling</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#aws-autoscaling--이하-as-"><strong>AWS AutoScaling ( 이하 As )</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-cli를-통한-생성"><strong>AWS CLI를 통한 생성</strong></a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="aws-autoscaling">
+  <strong>AWS AutoScaling</strong>
+  <a class="anchor" href="#aws-autoscaling">#</a>
+</h1>
+<hr>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<ul>
+<li><strong>이번 장에서는 CloudComputing의 꽃이라고도 할 수 있는 AutoScaling 서비스를 구축해보겠습니다.</strong></li>
+<li><strong>AutoSacling의 대한 개념은 <a href="https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_as/#auto-scaling-1">AutoScaling</a>을 참조해주세요.</strong></li>
+</ul>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<blockquote>
+<h2 id="aws-autoscaling--이하-as-">
+  <strong>AWS AutoScaling ( 이하 As )</strong>
+  <a class="anchor" href="#aws-autoscaling--%ec%9d%b4%ed%95%98-as-">#</a>
+</h2>
+</blockquote>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<ul>
+<li><strong>As 그룹 생성을 위해 <a href="https://aws.com">AWS</a>에 접속 합니다.</strong></li>
+<li><strong>인스턴스를 생성하여, Apache가 자동시작되어있게 설정 후, AMI를 생성합니다.</strong></li>
+<li><strong><a href="https://mung0001.github.io/docs/cloudcomputing/awstraining/ami/">AMI 생성</a> 참고</strong></li>
+</ul>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<p><img src="/AWS/As/As01.png" alt="" /></p>
+<ul>
+<li><strong>AMI 생성 후, As 그룹 생성을 위해 좌측의 메뉴에서 Auto Scaling &gt; Auto Scaling 그룹 생성을 클릭합니다.</strong></li>
+</ul>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p><img src="/AWS/As/As02.png" alt="" /></p>
+<ul>
+<li><strong>As그룹에서 시작하기를 클릭합니다.</strong></li>
+</ul>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<p><img src="/AWS/As/As03.png" alt="" /></p>
+<ul>
+<li><strong>내 AMI에서 생성한 AMI를 선택합니다.</strong></li>
+</ul>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<p><img src="/AWS/As/As04.png" alt="" /></p>
+<ul>
+<li><strong>AMI 선택이 완료되면 기본적인 시작 구성들을 입력합니다.</strong></li>
+<li><strong>보안 그룹을 기존의 80번 포트가 열려있는 보안그룹을 사용했습니다.</strong></li>
+</ul>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<p><img src="/AWS/As/As05.png" alt="" /></p>
+<ul>
+<li><strong>기본 구성이 완료되면, 바로 As 그룹생성으로 이동됩니다.</strong></li>
+<li><strong>그룹 생성에서 위의 그림과 VPC와 서브넷을 설정합니다.</strong></li>
+<li><strong>여기서 시작구성에서 선택한 보안그룹과 선택한 보안그룹이 일치하지 않으면 에러가 발생합니다.</strong></li>
+</ul>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<p><img src="/AWS/As/As06.png" alt="" /><br>
+<img src="/AWS/As/As07.png" alt="" /></p>
+<ul>
+<li><strong>As 그룹생성에서 정책을 설정합니다.</strong></li>
+</ul>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<p><img src="/AWS/As/As08.png" alt="" /></p>
+<ul>
+<li><strong>평균 cpu의 사용이 5분간 30%이상이면 증가하는 정책을 생성합니다.</strong></li>
+<li><strong>이와 동일하기 평균 cpu의 사용이 5분간 30%미만이면 삭제되는 정책을 생성합니다.</strong></li>
+</ul>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<p><img src="/AWS/As/As09.png" alt="" /></p>
+<ul>
+<li><strong>생성이 완료되면 As 보안그룹을 통해 인스턴스의 수, 최소, 최대 용량을 확인할 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<p><img src="/AWS/As/As10.png" alt="" /></p>
+<ul>
+<li><strong>인스턴스가 생성된 것을 확인 할 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ apt -y update
+</span></span><span style="display:flex;"><span>$ apt -y install stress
+</span></span><span style="display:flex;"><span>$ stress -c 1
+</span></span></code></pre></div><ul>
+<li><strong>이제 As 확인을 위해 stress를 설치 후 작동시킵니다.</strong></li>
+</ul>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<p><img src="/AWS/As/As11.png" alt="" /><br>
+<img src="/AWS/As/As12.png" alt="" /></p>
+<ul>
+<li><strong>stress를 실행 후, 설정시간이 경과하면 인스턴스가 증가됨을 확인할 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
+<ul>
+<li><strong>이와 같이 As를 통해 인스턴스를 정책에 따라 자동적으로 증가&amp; 감소 시키는 것이 가능합니다.</strong></li>
+<li><strong>또한 저번 장에서 구축했던 ELB에 As 그룹을 등록하면, 자동적으로 로드 밸런싱을 되어 유동적인 자원관리가 가능해집니다.</strong></li>
+</ul>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
+<h2 id="aws-cli를-통한-생성">
+  <strong>AWS CLI를 통한 생성</strong>
+  <a class="anchor" href="#aws-cli%eb%a5%bc-%ed%86%b5%ed%95%9c-%ec%83%9d%ec%84%b1">#</a>
+</h2>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws autoscaling create-launch-configuration \
+</span></span><span style="display:flex;"><span>--launch-configuration-name launch-config-sample \
+</span></span><span style="display:flex;"><span>--image-id [ AMI ID ] \
+</span></span><span style="display:flex;"><span>--key-name [ key name ] \
+</span></span><span style="display:flex;"><span>--no-ebs-optimized \
+</span></span><span style="display:flex;"><span>--instance-type [ instance type ] \
+</span></span><span style="display:flex;"><span>--instance-monitoring Enabled=true \
+</span></span><span style="display:flex;"><span>--security-groups [ 보안그룹 ID ] \
+</span></span><span style="display:flex;"><span>--associate-public-ip-address
+</span></span></code></pre></div><h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
+<blockquote>
+<p><strong>As 주요 설정 파라미터</strong></p>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>항목 이름</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Sacling Group Name</td>
+<td>As 그룹명</td>
+</tr>
+<tr>
+<td>Launch Configuration</td>
+<td>As 그룹에서 사용할 Launch Configuration</td>
+</tr>
+<tr>
+<td>Load Balancers</td>
+<td>As 그룹에서 사용할 ELB</td>
+</tr>
+<tr>
+<td>Desired</td>
+<td>As 그룹조건에 해당하지 않는 일반적인 인스턴스의 수</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>As 그룹에서 사용할 인스턴스의 최솟값</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>As 그룹에서 사용할 인스턴스의 최댓값</td>
+</tr>
+<tr>
+<td>Health Check Type</td>
+<td>As 그룹에서 사용할 헬스 체크 판단 유형 ( EC2 or ELB )</td>
+</tr>
+<tr>
+<td>Health Check Period</td>
+<td>As 그룹의 헬스 체크가 시작될 때 까지의 초</td>
+</tr>
+<tr>
+<td>Termination Policies</td>
+<td>As 그룹에 속한 인스턴스의 삭제방침</td>
+</tr>
+<tr>
+<td>Availability Zone</td>
+<td>As 그룹이 사용할 가용영역</td>
+</tr>
+<tr>
+<td>Subnet</td>
+<td>As 그룹이 사용할 서브넷</td>
+</tr>
+<tr>
+<td>Default Cooldown</td>
+<td>스케일링 처리 후에 새로운 스케일링 처리를 받을 때 까지의 시간</td>
+</tr>
+<tr>
+<td>Placemenet Group</td>
+<td>낮은 레이턴시 ( Latency ) 환경과 논 블로킹 통신이 가능한 Placement Group을 선택</td>
+</tr>
+<tr>
+<td>Suspended Processes</td>
+<td>처리를 일시적으로 정지시킬 프로세스 목록 ( AWS CLI의 suspend-processes 명령어로 설정 )</td>
+</tr>
+<tr>
+<td>Enabled Metrics</td>
+<td>CloudWatch 에서 활성화 되어 있는 매트릭스 목록</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
+<blockquote>
+<p><strong>Scaling Policy 유형</strong></p>
+<h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>유형</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChangelnCapacity</td>
+<td>그룹의 현재 용량을 지정한 수의 인스턴스만큼 늘리거나 줄입니다.</td>
+</tr>
+<tr>
+<td>ExactCapacity</td>
+<td>그룹의 현재 용량을 지정된 수의 인스턴스로 변경합니다.</td>
+</tr>
+<tr>
+<td>PercentChangelnCapacity</td>
+<td>그룹의 현재 용량을 지정된 비율만큼 늘리거나 줄입니다.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
+<blockquote>
+<p><strong>Scaling Policy의 주요 파라미터</strong></p>
+<h1 id="heading-38">
+  
+  <a class="anchor" href="#heading-38">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>항목 이름</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scaling policy Name</td>
+<td>이름 지정</td>
+</tr>
+<tr>
+<td>Execute policy when</td>
+<td>실행할 조건 ( CloudWatch의 Alram으로 설정 )</td>
+</tr>
+<tr>
+<td>Take the action</td>
+<td>Auto Scaling Group의 목표 인스턴스 수를 설정</td>
+</tr>
+<tr>
+<td>And than wait</td>
+<td>다른 스케일링 처리가 실행되고 있을 때 대기할 시간</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#aws-autoscaling--이하-as-"><strong>AWS AutoScaling ( 이하 As )</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#aws-cli를-통한-생성"><strong>AWS CLI를 통한 생성</strong></a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

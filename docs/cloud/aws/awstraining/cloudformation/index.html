@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AWS CloudFormation##이번 장에서는 CloudFormation의 탬플릿을 사용하여 서버를 자동 구축되도록 생성해보도록 하겠습니다. CloudFormation의 대한 개념은 CloudFormation을 참고하세요. #CloudFormation을 활용한 자동구축###CloudFormation 아키텍처 예시###먼저, AWS에서 CloudFormation 검색 후 클릭합니다. ##스택 생성을 클릭합니다. ###스택 생성을 위해 아래의 값을 cloudformation_instance.template 을 생성하여 업로드 합니다. 보통 Templates 파일은 S3에 저장된 것을 사용하지만, 여기서는 로컬환경에서 가져와 사용해보도록 하겠습니다. CloudFormation Templates 참조 #{ &#34;AWSTemplateFormatVersion&#34; : &#34;2010-09-09&#34;, &#34;Resources&#34;: { &#34;Instance&#34;: { &#34;Type&#34;: &#34;AWS::EC2::Instance&#34;, &#34;Properties&#34;:{ &#34;Monitoring&#34;: &#34;false&#34;, &#34;ImageId&#34;: &#34;[ AMI ID ]&#34;, &#34;KeyName&#34;: &#34;[ Key ]&#34;, &#34;InstanceType&#34;: &#34;t2.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="AWS CloudFormation" />
+<meta property="og:description" content="AWS CloudFormation##이번 장에서는 CloudFormation의 탬플릿을 사용하여 서버를 자동 구축되도록 생성해보도록 하겠습니다. CloudFormation의 대한 개념은 CloudFormation을 참고하세요. #CloudFormation을 활용한 자동구축###CloudFormation 아키텍처 예시###먼저, AWS에서 CloudFormation 검색 후 클릭합니다. ##스택 생성을 클릭합니다. ###스택 생성을 위해 아래의 값을 cloudformation_instance.template 을 생성하여 업로드 합니다. 보통 Templates 파일은 S3에 저장된 것을 사용하지만, 여기서는 로컬환경에서 가져와 사용해보도록 하겠습니다. CloudFormation Templates 참조 #{ &#34;AWSTemplateFormatVersion&#34; : &#34;2010-09-09&#34;, &#34;Resources&#34;: { &#34;Instance&#34;: { &#34;Type&#34;: &#34;AWS::EC2::Instance&#34;, &#34;Properties&#34;:{ &#34;Monitoring&#34;: &#34;false&#34;, &#34;ImageId&#34;: &#34;[ AMI ID ]&#34;, &#34;KeyName&#34;: &#34;[ Key ]&#34;, &#34;InstanceType&#34;: &#34;t2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/aws/awstraining/cloudformation/" /><meta property="article:section" content="docs" />
+
+
+
+<title>AWS CloudFormation | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>AWS CloudFormation</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cloudformation을-활용한-자동구축"><strong>CloudFormation을 활용한 자동구축</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#cloudformation-업데이트"><strong>CloudFormation 업데이트</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#cloudforamtion-파라미터-설정"><strong>CloudForamtion 파라미터 설정</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="aws-cloudformation">
+  <strong>AWS CloudFormation</strong>
+  <a class="anchor" href="#aws-cloudformation">#</a>
+</h1>
+<hr>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<ul>
+<li><strong>이번 장에서는 CloudFormation의 탬플릿을 사용하여 서버를 자동 구축되도록 생성해보도록 하겠습니다.</strong></li>
+<li><strong>CloudFormation의 대한 개념은 <a href="https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_management/#aws-cloudformation">CloudFormation</a>을 참고하세요.</strong></li>
+</ul>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<blockquote>
+<h2 id="cloudformation을-활용한-자동구축">
+  <strong>CloudFormation을 활용한 자동구축</strong>
+  <a class="anchor" href="#cloudformation%ec%9d%84-%ed%99%9c%ec%9a%a9%ed%95%9c-%ec%9e%90%eb%8f%99%ea%b5%ac%ec%b6%95">#</a>
+</h2>
+</blockquote>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<h4 id="cloudformation-아키텍처-예시">
+  <strong>CloudFormation 아키텍처 예시</strong>
+  <a class="anchor" href="#cloudformation-%ec%95%84%ed%82%a4%ed%85%8d%ec%b2%98-%ec%98%88%ec%8b%9c">#</a>
+</h4>
+<p><img src="/AWS/CloudFormation/CloudFormation01.png" alt="" /></p>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<p><img src="/AWS/CloudFormation/CloudFormation02.png" alt="" /></p>
+<ul>
+<li><strong>먼저, <a href="https://aws.com">AWS</a>에서 CloudFormation 검색 후 클릭합니다.</strong></li>
+</ul>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p><img src="/AWS/CloudFormation/CloudFormation03.png" alt="" /></p>
+<ul>
+<li><strong>스택 생성을 클릭합니다.</strong></li>
+</ul>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<p><img src="/AWS/CloudFormation/CloudFormation04.png" alt="" /></p>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<ul>
+<li><strong>스택 생성을 위해 아래의 값을 cloudformation_instance.template 을 생성하여 업로드 합니다.</strong></li>
+<li><strong>보통 Templates 파일은 S3에 저장된 것을 사용하지만, 여기서는 로컬환경에서 가져와 사용해보도록 하겠습니다.</strong></li>
+<li><strong><a href="https://docs.aws.amazon.com/ko_kr/AWSCloudFormation/latest/UserGuide/cfn-sample-templates.html">CloudFormation Templates 참조</a></strong></li>
+</ul>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;AWSTemplateFormatVersion&#34;</span> : <span style="color:#e6db74">&#34;2010-09-09&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Resources&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Instance&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Type&#34;</span>: <span style="color:#e6db74">&#34;AWS::EC2::Instance&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Properties&#34;</span>:{
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Monitoring&#34;</span>: <span style="color:#e6db74">&#34;false&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;ImageId&#34;</span>: <span style="color:#e6db74">&#34;[ AMI ID ]&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;KeyName&#34;</span>: <span style="color:#e6db74">&#34;[ Key ]&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;InstanceType&#34;</span>: <span style="color:#e6db74">&#34;t2.micro&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;NetworkInterfaces&#34;</span>: [ {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;DeviceIndex&#34;</span>: <span style="color:#e6db74">&#34;0&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;AssociatePublicIpAddress&#34;</span>: <span style="color:#e6db74">&#34;true&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;DeleteOnTermination&#34;</span>: <span style="color:#e6db74">&#34;true&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;SubnetId&#34;</span>: <span style="color:#e6db74">&#34;[ 서브넷 ID ]&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;GroupSet&#34;</span>: [<span style="color:#e6db74">&#34;[ 보안 그룹 ]&#34;</span>]
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                ]
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        } 
+</span></span><span style="display:flex;"><span>   },
+</span></span><span style="display:flex;"><span>   <span style="color:#e6db74">&#34;Description&#34;</span>: <span style="color:#e6db74">&#34;SampleInstance&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<ul>
+<li><strong>CloudFormation 기본형식</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;AWSTemplateFormatVersion&#34;</span> : <span style="color:#e6db74">&#34;version date&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Description&#34;</span> : <span style="color:#e6db74">&#34;JSON string&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Parameters&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">parameters</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Mappings&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">mappings</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Conditions&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">conditions</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Resources&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">resources</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Outputs&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">outpus</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWSTemplateFormatVersion</td>
+<td>템플릿의 버전</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>템플릿의 대한 설명 ( 시스템이 읽지 않음 )</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>스택 생성 때에 전달할 값, 탬플릿 내부에서 Ref 함수로 참조</td>
+</tr>
+<tr>
+<td>Mappings</td>
+<td>해시 테이블처럼 키에 따라 값을 지정할 수 있으며, 리전마다 사용할 AMI를 다르게 하는 경우 등의 사용</td>
+</tr>
+<tr>
+<td>Conditions</td>
+<td>조건을 판단, 조건에 일치하는 경우 실행할 리소스를 지정할 수 있음</td>
+</tr>
+<tr>
+<td>Resources</td>
+<td>생성할 자원을 정의, EC2 인스턴스, 보안 그룹 등의 생성할 자원 유형을 지정하고 설정 ( 아직 모든 서비스를 이용할 수는 없음 )</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td>탬플릿으로 생성한 결과를 출력</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<p><img src="/AWS/CloudFormation/CloudFormation05.png" alt="" /></p>
+<ul>
+<li><strong>업로드가 완료되면, 스택의 이름을 지정합니다.</strong></li>
+</ul>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<p><img src="/AWS/CloudFormation/CloudFormation06.png" alt="" /></p>
+<ul>
+<li><strong>스택 옵션 구성에서는 IAM 역할, 그 외에도 스택의 정책과 옵션들을 구성할 수 있습니다.</strong></li>
+<li><strong>여기에서는 기본 값으로 진행하겠습니다.</strong></li>
+</ul>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<p><img src="/AWS/CloudFormation/CloudFormation07.png" alt="" /><br>
+<img src="/AWS/CloudFormation/CloudFormation08.png" alt="" /></p>
+<ul>
+<li><strong>스택의 생성이 완료되면, 그림과 같이 상태에서 로그를 확인하실 수 있습니다.</strong></li>
+<li><strong>생성이 완료되면 인스턴스가 생성된 것을 확인 할 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<h2 id="cloudformation-업데이트">
+  <strong>CloudFormation 업데이트</strong>
+  <a class="anchor" href="#cloudformation-%ec%97%85%eb%8d%b0%ec%9d%b4%ed%8a%b8">#</a>
+</h2>
+<hr>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<ul>
+<li><strong>이번에는 생성된 Stack을 업데이트 하는 방법에 대해 알아보도록 하겠습니다.</strong></li>
+</ul>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<p><img src="/AWS/CloudFormation/CloudFormation09.png" alt="" /></p>
+<ul>
+<li><strong>먼저, 위에서 생성한 Stack &gt; 업데이트를 클릭합니다.</strong></li>
+</ul>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<p><img src="/AWS/CloudFormation/CloudFormation10.png" alt="" /></p>
+<ul>
+<li><strong>스택 업데이트를 클릭하면 현재 템플릿을 사용하면서 스택의 옵션만 바꿀건지, 혹은 탬플릿 자체를 변경할 것인지에 대한 옵션이 나옵니다.</strong></li>
+<li><strong>저희는 탬플릿 자체에 대한 옵션을 바꾸기 위해 기존 templates 파일을 아래와 같이 수정하여 업데이트 하도록 하겠습니다.</strong></li>
+<li><strong>Designer 편집기에서 추가하셔도 상관은 없습니다.</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;AWSTemplateFormatVersion&#34;</span> : <span style="color:#e6db74">&#34;2010-09-09&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Resources&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Instance&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Type&#34;</span>: <span style="color:#e6db74">&#34;AWS::EC2::Instance&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Properties&#34;</span>:{
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Monitoring&#34;</span>: <span style="color:#e6db74">&#34;false&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;ImageId&#34;</span>: <span style="color:#e6db74">&#34;ami-01af223aa7f274198&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;KeyName&#34;</span>: <span style="color:#e6db74">&#34;Study&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;InstanceType&#34;</span>: <span style="color:#e6db74">&#34;t2.micro&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;NetworkInterfaces&#34;</span>: [ {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;DeviceIndex&#34;</span>: <span style="color:#e6db74">&#34;0&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;AssociatePublicIpAddress&#34;</span>: <span style="color:#e6db74">&#34;true&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;DeleteOnTermination&#34;</span>: <span style="color:#e6db74">&#34;true&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;SubnetId&#34;</span>: <span style="color:#e6db74">&#34;subnet-463b3d0a&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;GroupSet&#34;</span>: [<span style="color:#e6db74">&#34;sg-f553af91&#34;</span>]
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                ],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;UserData&#34;</span>: { <span style="color:#e6db74">&#34;Fn::Base64&#34;</span> :
+</span></span><span style="display:flex;"><span>                    { <span style="color:#e6db74">&#34;Fn::Join&#34;</span> : [<span style="color:#e6db74">&#34;&#34;</span>, [
+</span></span><span style="display:flex;"><span>                      <span style="color:#e6db74">&#34;#!/bin/bash\n&#34;</span>,
+</span></span><span style="display:flex;"><span>                      <span style="color:#e6db74">&#34;yum update -y\n&#34;</span>,
+</span></span><span style="display:flex;"><span>                      <span style="color:#e6db74">&#34;yum install -y httpd\n&#34;</span>,
+</span></span><span style="display:flex;"><span>                      <span style="color:#e6db74">&#34;service httpd start\n&#34;</span>,
+</span></span><span style="display:flex;"><span>                      <span style="color:#e6db74">&#34;chkconfig httpd on\n&#34;</span> ]]
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        } 
+</span></span><span style="display:flex;"><span>   },
+</span></span><span style="display:flex;"><span>   <span style="color:#e6db74">&#34;Description&#34;</span>: <span style="color:#e6db74">&#34;SampleInstance&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
+<p><img src="/AWS/CloudFormation/CloudFormation11.png" alt="" /></p>
+<ul>
+<li><strong>탬플릿 업로드 후, 위와 동일하게 생성하면 보기와 같이 업데이트를 확인하실 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
+<p><img src="/AWS/CloudFormation/CloudFormation12.png" alt="" /></p>
+<ul>
+<li><strong>생성된 인스턴스로 접속하면, Apache가 설치되어 있는 것을 확인하실 수 있습니다.</strong></li>
+</ul>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
+<h2 id="cloudforamtion-파라미터-설정">
+  <strong>CloudForamtion 파라미터 설정</strong>
+  <a class="anchor" href="#cloudforamtion-%ed%8c%8c%eb%9d%bc%eb%af%b8%ed%84%b0-%ec%84%a4%ec%a0%95">#</a>
+</h2>
+<hr>
+<h1 id="heading-31">
+  
+  <a class="anchor" href="#heading-31">#</a>
+</h1>
+<ul>
+<li><strong>위에서는 고정 값으로 스택을 생성했지만, 만약 고정 값으로 생성을 진행할 경우, 에러가 발생할 수 있으며, 여러 탬플릿을 생성해야하는 번거로움이 존재합니다.</strong></li>
+<li><strong>이번에는 파라미터 값을 설정하여 CloudFormation을 사용하는 방법에 대해 알아보도록 하겠습니다.</strong></li>
+</ul>
+<h1 id="heading-32">
+  
+  <a class="anchor" href="#heading-32">#</a>
+</h1>
+<ul>
+<li><strong>먼저 위에서 생성한 템플릿을 Parameter 값을 사용하도록 수정하여 보겠습니다.</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;AWSTemplateFormatVersion&#34;</span> : <span style="color:#e6db74">&#34;2010-09-09&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Parameters&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ImageId&#34;</span> : {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Type&#34;</span>: <span style="color:#e6db74">&#34;String&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Default&#34;</span>: <span style="color:#e6db74">&#34;ami-01af223aa7f274198&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Description&#34;</span>: <span style="color:#e6db74">&#34;IamgeId&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;KeyName&#34;</span> : {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Type&#34;</span>: <span style="color:#e6db74">&#34;String&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Default&#34;</span>: <span style="color:#e6db74">&#34;Study&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Description&#34;</span>: <span style="color:#e6db74">&#34;Keypair name&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;InstanceType&#34;</span> : {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Type&#34;</span>: <span style="color:#e6db74">&#34;String&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Default&#34;</span>: <span style="color:#e6db74">&#34;t2.micro&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Description&#34;</span>: <span style="color:#e6db74">&#34;InstanceType&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;AssociatePublicIpAddress&#34;</span> : {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Type&#34;</span>: <span style="color:#e6db74">&#34;String&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Default&#34;</span>: <span style="color:#e6db74">&#34;true&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Description&#34;</span>: <span style="color:#e6db74">&#34;PublicIP&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;AllowedValues&#34;</span>: [<span style="color:#e6db74">&#34;true&#34;</span>, <span style="color:#e6db74">&#34;false&#34;</span>]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;DeleteOnTermination&#34;</span> : {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Type&#34;</span>: <span style="color:#e6db74">&#34;String&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Default&#34;</span>: <span style="color:#e6db74">&#34;true&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Description&#34;</span>: <span style="color:#e6db74">&#34;DeleteOnTermination&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;AllowedValues&#34;</span>: [<span style="color:#e6db74">&#34;true&#34;</span>, <span style="color:#e6db74">&#34;false&#34;</span>]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;SubnetId&#34;</span> : {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Type&#34;</span>: <span style="color:#e6db74">&#34;String&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Default&#34;</span>: <span style="color:#e6db74">&#34;subnet-463b3d0a&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Description&#34;</span>: <span style="color:#e6db74">&#34;SubnetId&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;GroupSet&#34;</span> : {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Type&#34;</span>: <span style="color:#e6db74">&#34;String&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Default&#34;</span>: <span style="color:#e6db74">&#34;sg-f553af91&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Description&#34;</span>: <span style="color:#e6db74">&#34;GroupSet&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Resources&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Instance&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Type&#34;</span>: <span style="color:#e6db74">&#34;AWS::EC2::Instance&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Properties&#34;</span>:{
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Monitoring&#34;</span>: <span style="color:#e6db74">&#34;false&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;ImageId&#34;</span>: { <span style="color:#e6db74">&#34;Ref&#34;</span> : <span style="color:#e6db74">&#34;ImageId&#34;</span> },
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;KeyName&#34;</span>: { <span style="color:#e6db74">&#34;Ref&#34;</span> : <span style="color:#e6db74">&#34;KeyName&#34;</span> },
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;InstanceType&#34;</span>: { <span style="color:#e6db74">&#34;Ref&#34;</span> : <span style="color:#e6db74">&#34;InstanceType&#34;</span> },
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;NetworkInterfaces&#34;</span>: [ {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;DeviceIndex&#34;</span>: <span style="color:#e6db74">&#34;0&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;AssociatePublicIpAddress&#34;</span>: { <span style="color:#e6db74">&#34;Ref&#34;</span> : <span style="color:#e6db74">&#34;AssociatePublicIpAddress&#34;</span> },
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;DeleteOnTermination&#34;</span>: { <span style="color:#e6db74">&#34;Ref&#34;</span> : <span style="color:#e6db74">&#34;DeleteOnTermination&#34;</span> },
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;SubnetId&#34;</span>: { <span style="color:#e6db74">&#34;Ref&#34;</span> : <span style="color:#e6db74">&#34;SubnetId&#34;</span> },
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;GroupSet&#34;</span>: [{ <span style="color:#e6db74">&#34;Ref&#34;</span> : <span style="color:#e6db74">&#34;GroupSet&#34;</span> }],
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                ],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;UserData&#34;</span>: { <span style="color:#e6db74">&#34;Fn::Base64&#34;</span> :
+</span></span><span style="display:flex;"><span>                    { <span style="color:#e6db74">&#34;Fn::Join&#34;</span> : [<span style="color:#e6db74">&#34;&#34;</span>, [
+</span></span><span style="display:flex;"><span>                      <span style="color:#e6db74">&#34;#!/bin/bash\n&#34;</span>,
+</span></span><span style="display:flex;"><span>                      <span style="color:#e6db74">&#34;yum update -y\n&#34;</span>,
+</span></span><span style="display:flex;"><span>                      <span style="color:#e6db74">&#34;yum install -y httpd\n&#34;</span>,
+</span></span><span style="display:flex;"><span>                      <span style="color:#e6db74">&#34;service httpd start\n&#34;</span>,
+</span></span><span style="display:flex;"><span>                      <span style="color:#e6db74">&#34;chkconfig httpd on\n&#34;</span> ]]
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        } 
+</span></span><span style="display:flex;"><span>   },
+</span></span><span style="display:flex;"><span>   <span style="color:#e6db74">&#34;Description&#34;</span>: <span style="color:#e6db74">&#34;SampleInstance&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li><strong>특정 리소스 값들은 파라미터 값에서 가져오는 방식으로 수정하였습니다.</strong></li>
+<li><strong>위와 같이 설정을 마친 후, 동일하게 스택의 생성을 진행해봅니다.</strong></li>
+</ul>
+<h1 id="heading-33">
+  
+  <a class="anchor" href="#heading-33">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-34">
+  
+  <a class="anchor" href="#heading-34">#</a>
+</h1>
+<p><img src="/AWS/CloudFormation/CloudFormation13.png" alt="" /></p>
+<ul>
+<li><strong>템플릿을 업로드 후 동일하게 진행합니다.</strong></li>
+</ul>
+<h1 id="heading-35">
+  
+  <a class="anchor" href="#heading-35">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-36">
+  
+  <a class="anchor" href="#heading-36">#</a>
+</h1>
+<p><img src="/AWS/CloudFormation/CloudFormation14.png" alt="" /></p>
+<ul>
+<li><strong>하지만 전과는 다르게 수정한 파라미터 값들을 선택하거나 기입하는 선택란이 추가되었습니다.</strong></li>
+<li><strong>기본적으로 Default 값들을 출력하며, AllowedValues 값이 존재할 시 그 값들만을 선택가능합니다.</strong></li>
+</ul>
+<h1 id="heading-37">
+  
+  <a class="anchor" href="#heading-37">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-38">
+  
+  <a class="anchor" href="#heading-38">#</a>
+</h1>
+<p><img src="/AWS/CloudFormation/CloudFormation15.png" alt="" /></p>
+<ul>
+<li><strong>생성이 완료되었습니다.</strong></li>
+<li><strong>이와 같이 파라미터 값을 사용하면 보다 편리하게 서비스들의 구현이 가능합니다.</strong></li>
+</ul>
+<h1 id="heading-39">
+  
+  <a class="anchor" href="#heading-39">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-40">
+  
+  <a class="anchor" href="#heading-40">#</a>
+</h1>
+<h4 id="예제-1">
+  예제 1.
+  <a class="anchor" href="#%ec%98%88%ec%a0%9c-1">#</a>
+</h4>
+<h4 id="다음의-탬플릿을-생성해보세요">
+  다음의 탬플릿을 생성해보세요.
+  <a class="anchor" href="#%eb%8b%a4%ec%9d%8c%ec%9d%98-%ed%83%ac%ed%94%8c%eb%a6%bf%ec%9d%84-%ec%83%9d%ec%84%b1%ed%95%b4%eb%b3%b4%ec%84%b8%ec%9a%94">#</a>
+</h4>
+<ul>
+<li><strong>VPC를 생성하고, 3개의 서브넷이 모두 인터넷 게이트웨이로 연결되게 생성하는 템플릿을 생성하세요.</strong></li>
+</ul>
+<h1 id="heading-41">
+  
+  <a class="anchor" href="#heading-41">#</a>
+</h1>
+<h4 id="예제-2">
+  예제 2.
+  <a class="anchor" href="#%ec%98%88%ec%a0%9c-2">#</a>
+</h4>
+<h4 id="다음의-탬플릿을-생성해보세요-1">
+  다음의 탬플릿을 생성해보세요.
+  <a class="anchor" href="#%eb%8b%a4%ec%9d%8c%ec%9d%98-%ed%83%ac%ed%94%8c%eb%a6%bf%ec%9d%84-%ec%83%9d%ec%84%b1%ed%95%b4%eb%b3%b4%ec%84%b8%ec%9a%94-1">#</a>
+</h4>
+<ul>
+<li><strong>웨어 생성한 VPC의 서브넷을 선택해 생성이 가능하도록 인스턴스를 만들고, userdata를 통해 인스턴스의 8080으로 바로 접속이 가능하게 tomcat을 설치해주세요.</strong></li>
+</ul>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cloudformation을-활용한-자동구축"><strong>CloudFormation을 활용한 자동구축</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#cloudformation-업데이트"><strong>CloudFormation 업데이트</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#cloudforamtion-파라미터-설정"><strong>CloudForamtion 파라미터 설정</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

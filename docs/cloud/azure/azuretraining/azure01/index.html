@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Azure 글로벌 인프라 아키텍처##Microsoft Geography###Azure는 전 세계를 지정학적 경계 또는 국가 경계로 정의되는 지리적 위치로 분할합니다.
+Azure Geography란 일반적으로 데이터 상주성 및 규정 준수 경계를 유지하는 두 개 이상의 Azure 지역을 포함하고 있는 별도의 시장을 의미합니다.
+Azure Geography을 사용하면 아래와 같은 이점을 가질 수 있습니다.
+지리적 위치를 통해 특정 데이터 상주성 및 규정 준수 요구 사항이 있는 고객은 데이터와 애플리케이션을 가깝게 유지할 수 있습니다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Az-900 : Region" />
+<meta property="og:description" content="Azure 글로벌 인프라 아키텍처##Microsoft Geography###Azure는 전 세계를 지정학적 경계 또는 국가 경계로 정의되는 지리적 위치로 분할합니다.
+Azure Geography란 일반적으로 데이터 상주성 및 규정 준수 경계를 유지하는 두 개 이상의 Azure 지역을 포함하고 있는 별도의 시장을 의미합니다.
+Azure Geography을 사용하면 아래와 같은 이점을 가질 수 있습니다.
+지리적 위치를 통해 특정 데이터 상주성 및 규정 준수 요구 사항이 있는 고객은 데이터와 애플리케이션을 가깝게 유지할 수 있습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/azure/azuretraining/azure01/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Az-900 : Region | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Az-900 : Region</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#azure-글로벌-인프라-아키텍처"><strong>Azure 글로벌 인프라 아키텍처</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#microsoft-geography"><strong>Microsoft Geography</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-region"><strong>Azure Region</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#가용성-옵션--availability-options-"><strong>가용성 옵션 ( Availability Options )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-sla-서비스-수준-계약"><strong>Azure SLA (서비스 수준 계약)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-sla를-통한-앱-안정성-향상"><strong>Azure SLA를 통한 앱 안정성 향상</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h2 id="azure-글로벌-인프라-아키텍처">
+  <strong>Azure 글로벌 인프라 아키텍처</strong>
+  <a class="anchor" href="#azure-%ea%b8%80%eb%a1%9c%eb%b2%8c-%ec%9d%b8%ed%94%84%eb%9d%bc-%ec%95%84%ed%82%a4%ed%85%8d%ec%b2%98">#</a>
+</h2>
+<hr>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h3 id="microsoft-geography">
+  <strong>Microsoft Geography</strong>
+  <a class="anchor" href="#microsoft-geography">#</a>
+</h3>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<p><img src="/Azure/Azure/Azure102.png" alt="" /></p>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Azure는 전 세계를 지정학적 경계 또는 국가 경계로 정의되는 지리적 위치로 분할합니다.</strong></p>
+</li>
+<li>
+<p><strong>Azure Geography란 일반적으로 데이터 상주성 및 규정 준수 경계를 유지하는 두 개 이상의 Azure 지역을 포함하고 있는 별도의 시장을 의미합니다.</strong></p>
+</li>
+<li>
+<p><strong>Azure Geography을 사용하면 아래와 같은 이점을 가질 수 있습니다.</strong></p>
+<ul>
+<li>
+<p><strong>지리적 위치를 통해 특정 데이터 상주성 및 규정 준수 요구 사항이 있는 고객은 데이터와 애플리케이션을 가깝게 유지할 수 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>지리적 위치는 지리적 경계 내에서 데이터 상주성, 주권, 규정 준수 및 복원력 요구 사항이 지켜지도록 보장합니다.</strong></p>
+</li>
+<li>
+<p><strong>지리적 위치는 전용 대용량 네트워킹 인프라 전체에 걸쳐 발생하는 Azure 지역 전체 장애를 견디는 내결함성을 갖고 있습니다.</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Azure의 Geography는 아래와 같이 4개로 분류됩니다.</strong></p>
+<ul>
+<li>
+<p><strong>아메리카</strong></p>
+</li>
+<li>
+<p><strong>유럽</strong></p>
+</li>
+<li>
+<p><strong>아시아 태평양</strong></p>
+</li>
+<li>
+<p><strong>중동 및 아프리카</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="azure-region">
+  <strong>Azure Region</strong>
+  <a class="anchor" href="#azure-region">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<p><img src="/Azure/Azure2.png" alt="" /></p>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Azure Region은 서로 가까운 곳에 있고 대기 시간이 짧은 네트워크를 통해 연결된 데이터 센터를 하나 이상 포함하고 있는 지리적 영역을 의미합니다.</strong></p>
+</li>
+<li>
+<p><strong>Azure는 전 셰계에 위차한 데이터 센터로 구성</strong></p>
+</li>
+<li>
+<p><strong>최소 한 개 이상의 데이터 센터를 포함</strong></p>
+</li>
+<li>
+<p><strong>데이터 센터는 서로 근접한 위치에 있어 네트워크의 대기 시간이 짧은 특징을 가짐</strong></p>
+</li>
+<li>
+<p><strong>Region은 각 지역에 맞는 Geography에 구성됩니다.</strong></p>
+</li>
+</ul>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>Region Pairs</strong></li>
+</ul>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<p><img src="/Azure/Azure/Azure104.png" alt="" /></p>
+<ul>
+<li>
+<p><strong>각 Azure 지역은 300마일 이상 떨어져 있는 동일한 지리적 위치(예: 미국, 유럽 또는 아시아) 내의 다른 Azure 지역과 항상 쌍을 이룹니다.</strong></p>
+</li>
+<li>
+<p><strong>Region Pairs를 통해 한 지리적 위치에서 가상 머신 스토리지 같은 리소스를 복제할 수 있으며, 이렇게 하면 두 Azure 지역에 동시에 영향을 주는 자연재해, 내전, 정전 또는 물리적 네트워크 중단 등의 이벤트 때문에 서비스가 중단될 가능성을 줄일 수 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>각 Azure region은 다른 region과 페어링 연결되어 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>특정 서비스는 paired region 사이의 자동 복제기능을 제공</strong></p>
+</li>
+<li>
+<p><strong>region 장애 시, paired 된 리전을 복제하는 것이 우선시 되어짐</strong></p>
+</li>
+</ul>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>특수 Azure Region</strong>
+<ul>
+<li>
+<p><strong>US DoD 중부, US Gov 버지니아, US Gov 아이오와 등 : 미국 정부 기관 및 파트너를 위한 물리적 및 논리적 네트워크로 격리된 Azure 인스턴스입니다. 이러한 데이터 센터는 선별된 미국인이 운영하며 추가 규정 준수 인증서를 포함하고 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>중국 동부, 중국 북부 등 : 이러한 지역은 Microsoft 및 21Vianet 간의 고유한 파트너십을 통해 사용할 수 있으며, Microsoft에서 데이터 센터를 직접 관리하지 않습니다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>Region을 사용하는 이유</strong>
+<ul>
+<li>
+<p><strong>보다 쉽게 확장이 가능하게 하는 확장성</strong></p>
+</li>
+<li>
+<p><strong>한 리전에 문제가 발생시 다른 리전에서 서비스가 가능토록 하는 가용성</strong></p>
+</li>
+<li>
+<p><strong>한국 중부, 한국 남부는 짝꿍 리전으로 한 리전이 오류가 발생 시 다른 리전에서 대신 서비스하도록 설정되어 있음</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<h3 id="가용성-옵션--availability-options-">
+  <strong>가용성 옵션 ( Availability Options )</strong>
+  <a class="anchor" href="#%ea%b0%80%ec%9a%a9%ec%84%b1-%ec%98%b5%ec%85%98--availability-options-">#</a>
+</h3>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<p><img src="/Azure/Azure/Azure103.png" alt="" /></p>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>가용성 영역은 Azure 지역 내에서 물리적으로 분리된 데이터 센터입니다.</strong></p>
+</li>
+<li>
+<p><strong>Vm을 나눠서 생성함으로써, 끊어지지 않는 연속적인 서비스가 가능토록 하는 개념</strong></p>
+</li>
+<li>
+<p><strong>프로미엄 스토리지를 사용하면 99.9%의 연결성을 보장해주지만, 일반적인 경우에는 가용성 집합 혹은 가용성 영역을 생성하는 것이 권장되어짐</strong></p>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<ul>
+<li><strong>가용성 집합 (Availability sets)</strong>
+<ul>
+<li>
+<p><strong>유지 관리 혹은 하드웨어 오류 발생 시에도 응용 프로그램을 온라인 상태로 유지하는 서비스</strong></p>
+</li>
+<li>
+<p><strong>Update domains (US) : 예약된 유지관리, 성능 또는 보안 업데이트는 업데이트 도메인을 통해 순서가 정해짐</strong></p>
+</li>
+<li>
+<p><strong>Fault domains (FD) : 데이터 센터 내에서 여러 하드웨어서 워크로드르 물리적으로 분</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>가용성 영역 ( Availability zones )</strong>
+<ul>
+<li>
+<p><strong>Azure Region 내에서의 물리적으로 분리된 영역</strong></p>
+</li>
+<li>
+<p><strong>가용성 영역보다 한 단게 확장된 개념</strong></p>
+</li>
+<li>
+<p><strong>하나 혹은 이상의 데이터센터로 구성되고 독립된 전원, 쿨링, 네트워크를 가짐</strong></p>
+</li>
+<li>
+<p><strong>독립된 영역으로 동작</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<h3 id="azure-sla-서비스-수준-계약">
+  <strong>Azure SLA (서비스 수준 계약)</strong>
+  <a class="anchor" href="#azure-sla-%ec%84%9c%eb%b9%84%ec%8a%a4-%ec%88%98%ec%a4%80-%ea%b3%84%ec%95%bd">#</a>
+</h3>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>Microsoft는 포괄적인 운영 정책, 표준 및 관례를 준수함으로써 고객에게 우수한 품질의 제품 및 서비스를 제공하기 위해 최선을 다하고 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>Azure 제품 및 서비스의 SLA는 세 가지 주요 특징을 가지고 있습니다.</strong></p>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>성능 목표</strong></p>
+<ul>
+<li><strong>SLA는 Azure 제품 또는 서비스의 성능 목표를 정의합니다. SLA가 정의하는 성능 목표는 각 Azure 제품 및 서비스로 한정됩니다. 예를 들어 일부 Azure 서비스의 성능 목표는 작동 시간 보증 또는 연결률로 표현됩니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>작동 시간 및 연결 보증</strong></p>
+<ul>
+<li>
+<p><strong>일반적인 SLA는 해당하는 각 Azure 제품 또는 서비스의 성능 목표 약정을 99.9%(&ldquo;3개의 9&rdquo;)에서 99.999%(&ldquo;5개의 9&rdquo;) 사이에서 지정합니다. 이러한 목표는 서비스의 작동 시간 또는 응답 시간 같은 성능 기준에 적용할 수 있습니다.</strong></p>
+</li>
+<li>
+<table>
+<thead>
+<tr>
+<th>SLA %</th>
+<th>주간 가동 중지</th>
+<th>시간	월간 가동 중지 시간</th>
+<th>연간 가동 중지 시간</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>99</td>
+<td>1.68시간</td>
+<td>7.2시간</td>
+<td>3.65일</td>
+</tr>
+<tr>
+<td>99.9</td>
+<td>10.1분</td>
+<td>43.2분</td>
+<td>8.76시간</td>
+</tr>
+<tr>
+<td>99.95</td>
+<td>5분</td>
+<td>21.6분</td>
+<td>4.38시간</td>
+</tr>
+<tr>
+<td>99.99</td>
+<td>1.01분</td>
+<td>4.32분</td>
+<td>52.56분</td>
+</tr>
+<tr>
+<td>99.999</td>
+<td>6초</td>
+<td>25.9초</td>
+<td>5.26분</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>서비스 크레딧</strong>
+<ul>
+<li>
+<p><strong>또한 SLA는 Azure 제품 또는 서비스가 관련 SLA 사양을 수행하는 데 실패할 경우 Microsoft에서 어떻게 대응할 것인지를 설명합니다.</strong></p>
+</li>
+<li>
+<p><strong>99.9 -&gt; 10</strong></p>
+</li>
+<li>
+<p><strong>99 -&gt; 25</strong></p>
+</li>
+<li>
+<p><strong>95 -&gt; 100</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<h3 id="azure-sla를-통한-앱-안정성-향상">
+  <strong>Azure SLA를 통한 앱 안정성 향상</strong>
+  <a class="anchor" href="#azure-sla%eb%a5%bc-%ed%86%b5%ed%95%9c-%ec%95%b1-%ec%95%88%ec%a0%95%ec%84%b1-%ed%96%a5%ec%83%81">#</a>
+</h3>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>SLA를 사용하여 Azure 솔루션이 클라이언트와 사용자의 비즈니스 요구 사항 및 수요를 얼마나 충족하는지 평가할 수 있습니다.</strong></p>
+</li>
+<li>
+<p><strong>고유한 SLA를 만들어서 고객의 특정 Azure 애플리케이션에 맞는 성능 목표를 설정할 수 있습니다. 이 접근 방식을 애플리케이션 SLA라고 합니다.</strong></p>
+</li>
+<li>
+<p><strong>SLA를 사용한 이점</strong></p>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>앱 요구 사항 이해</strong></p>
+<ul>
+<li><strong>효율적이고 신뢰할 수 있는 Azure 솔루션을 빌드하려면 워크로드 요구 사항을 알아야 합니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>복원력</strong></p>
+<ul>
+<li><strong>복원력은 오류를 복구하여 계속 작동하는 시스템 기능입니다. 오류를 방지하는 것이 아니라 가동 중지 또는 데이터 손실을 방지하는 방법으로 오류에 대응하는 것입니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>비용 및 복잡성과 고가용성</strong></p>
+<ul>
+<li><strong>가용성이란 시스템이 정상적으로 작동하는 시간을 말합니다. 가용성을 최대화하려면 가능한 서비스 오류를 방지하는 수단을 구현해야 합니다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-29">
+  
+  <a class="anchor" href="#heading-29">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>애플리케이션 SLA를 정의할 때 고려할 사항</strong></p>
+<ul>
+<li>
+<p><strong>플리케이션 SLA에서 정의하는 성능 목표가 4개의 9(99.99%)인 경우 수동 작업으로 오류를 복구하면 SLA를 충족하기에 충분하지 않을 수 있습니다. Azure 솔루션이 자체적으로 진단하고 자체적으로 복구해야 합니다.</strong></p>
+</li>
+<li>
+<p><strong>4개의 9보다 높은 SLA 성능 목표를 충족하도록 신속하게 오류에 대응하기는 쉽지 않습니다.</strong></p>
+</li>
+<li>
+<p><strong>애플리케이션 SLA 성능 목표를 측정할 시간 범위를 신중하게 고민해야 합니다. 시간 범위가 짧을수록 허용 오차도 작습니다. 애플리케이션 SLA를 시간 단위 또는 일 단위 가동 시간으로 정의하는 경우 허용 오차가 작으면 성능 목표를 달성하지 못할 수 있다는 점을 이해해야 합니다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-30">
+  
+  <a class="anchor" href="#heading-30">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#azure-글로벌-인프라-아키텍처"><strong>Azure 글로벌 인프라 아키텍처</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#microsoft-geography"><strong>Microsoft Geography</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-region"><strong>Azure Region</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#가용성-옵션--availability-options-"><strong>가용성 옵션 ( Availability Options )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-sla-서비스-수준-계약"><strong>Azure SLA (서비스 수준 계약)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#azure-sla를-통한-앱-안정성-향상"><strong>Azure SLA를 통한 앱 안정성 향상</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

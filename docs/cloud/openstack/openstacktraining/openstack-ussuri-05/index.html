@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="OpenStack Ussuri : Nova##----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | | | Libvirt | | MariaDB RabbitMQ | | Nova-compute | | Memcached Keystone | | Open vSwitch | | httpd nova | | L2 Agent | | Nova-API | ----------------------- ----------------------- #OpenStack Ussuri : Nova##Nova는 OpenStack에서 인스턴스를 생성하는 서비스입니다. Nova에 대한 자세한 설명은 Nova를 참조해주세요.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="OpenStack Ussuri : Nova" />
+<meta property="og:description" content="OpenStack Ussuri : Nova##----------------------- ----------------------- | [ Controller Node ] | | [ Compute Node ] | | | | Libvirt | | MariaDB RabbitMQ | | Nova-compute | | Memcached Keystone | | Open vSwitch | | httpd nova | | L2 Agent | | Nova-API | ----------------------- ----------------------- #OpenStack Ussuri : Nova##Nova는 OpenStack에서 인스턴스를 생성하는 서비스입니다. Nova에 대한 자세한 설명은 Nova를 참조해주세요." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-05/" /><meta property="article:section" content="docs" />
+
+
+
+<title>OpenStack Ussuri : Nova | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>OpenStack Ussuri : Nova</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#openstack-ussuri--nova-1"><strong>OpenStack Ussuri : Nova</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova-ceilometer-service-및-user-생성"><strong>Nova, ceilometer service 및 User 생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova-유저의-db를-생성합니다"><strong>Nova 유저의 DB를 생성합니다.</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova-설치"><strong>Nova 설치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#conpute-node-nova-설치"><strong>Conpute node Nova 설치</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova-설차"><strong>nova 설차</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova-설치-확인"><strong>Nova 설치 확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="openstack-ussuri--nova">
+  <strong>OpenStack Ussuri : Nova</strong>
+  <a class="anchor" href="#openstack-ussuri--nova">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span> -----------------------        -----------------------   
+</span></span><span style="display:flex;"><span>|  [ Controller Node ]  |      |   [ Compute Node ]    |       
+</span></span><span style="display:flex;"><span>|                       |      |       Libvirt         |
+</span></span><span style="display:flex;"><span>|  MariaDB    RabbitMQ  |      |     Nova-compute      |
+</span></span><span style="display:flex;"><span>|  Memcached  Keystone  |      |     Open vSwitch      |
+</span></span><span style="display:flex;"><span>|  httpd      nova      |      |       L2 Agent        |
+</span></span><span style="display:flex;"><span>|  Nova-API             |       -----------------------   
+</span></span><span style="display:flex;"><span> -----------------------        
+</span></span></code></pre></div><h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h2 id="openstack-ussuri--nova-1">
+  <strong>OpenStack Ussuri : Nova</strong>
+  <a class="anchor" href="#openstack-ussuri--nova-1">#</a>
+</h2>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<ul>
+<li><strong>Nova는 OpenStack에서 인스턴스를 생성하는 서비스입니다.</strong></li>
+<li><strong>Nova에 대한 자세한 설명은 <a href="">Nova</a>를 참조해주세요.</strong></li>
+</ul>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="nova-ceilometer-service-및-user-생성">
+  <strong>Nova, ceilometer service 및 User 생성</strong>
+  <a class="anchor" href="#nova-ceilometer-service-%eb%b0%8f-user-%ec%83%9d%ec%84%b1">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 nova
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field               | Value                            |
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| default_project_id  | 7c10c02365be496fb47f12bfd40fe4a7 |
+</span></span><span style="display:flex;"><span>| domain_id           | default                          |
+</span></span><span style="display:flex;"><span>| enabled             | True                             |
+</span></span><span style="display:flex;"><span>| id                  | f26027517d5e4b5b984b5db8d42398c8 |
+</span></span><span style="display:flex;"><span>| name                | nova                             |
+</span></span><span style="display:flex;"><span>| options             | <span style="color:#75715e">{}</span>                               |
+</span></span><span style="display:flex;"><span>| qwer1234_expires_at | None                             |
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack user create --domain default --project service --password qwer1234 placement
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field               | Value                            |
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| default_project_id  | 7c10c02365be496fb47f12bfd40fe4a7 |
+</span></span><span style="display:flex;"><span>| domain_id           | default                          |
+</span></span><span style="display:flex;"><span>| enabled             | True                             |
+</span></span><span style="display:flex;"><span>| id                  | 2394500b4512456f9d9d5066a5ecb1f7 |
+</span></span><span style="display:flex;"><span>| name                | placement                        |
+</span></span><span style="display:flex;"><span>| options             | <span style="color:#75715e">{}</span>                               |
+</span></span><span style="display:flex;"><span>| qwer1234_expires_at | None                             |
+</span></span><span style="display:flex;"><span>+---------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack role add --project service --user nova admin
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack role add --project service --user placement admin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack service create --name nova --description &#34;OpenStack Compute service&#34; compute
+</span></span><span style="display:flex;"><span>+-------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field       | Value                            |
+</span></span><span style="display:flex;"><span>+-------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| description | OpenStack Compute service        |
+</span></span><span style="display:flex;"><span>| enabled     | True                             |
+</span></span><span style="display:flex;"><span>| id          | 28d495eca718439f9dc6ce395e0720dc |
+</span></span><span style="display:flex;"><span>| name        | nova                             |
+</span></span><span style="display:flex;"><span>| type        | compute                          |
+</span></span><span style="display:flex;"><span>+-------------+----------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack service create --name placement --description &#34;OpenStack Compute Placement service&#34; placement
+</span></span><span style="display:flex;"><span>+-------------+-------------------------------------+
+</span></span><span style="display:flex;"><span>| Field       | Value                               |
+</span></span><span style="display:flex;"><span>+-------------+-------------------------------------+
+</span></span><span style="display:flex;"><span>| description | OpenStack Compute Placement service |
+</span></span><span style="display:flex;"><span>| enabled     | True                                |
+</span></span><span style="display:flex;"><span>| id          | 8515d3d046834de9b71b2938aae89898    |
+</span></span><span style="display:flex;"><span>| name        | placement                           |
+</span></span><span style="display:flex;"><span>| type        | placement                           |
+</span></span><span style="display:flex;"><span>+-------------+-------------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne compute public http://controller:8774/v2.1/%\(tenant_id\)s
+</span></span><span style="display:flex;"><span>--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                                     |
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                                      |
+</span></span><span style="display:flex;"><span>| id           | f13ca97a20eb46a3a1c1dfab546a00cc          |
+</span></span><span style="display:flex;"><span>| interface    | public                                    |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                                 |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                                 |
+</span></span><span style="display:flex;"><span>| service_id   | 28d495eca718439f9dc6ce395e0720dc          |
+</span></span><span style="display:flex;"><span>| service_name | nova                                      |
+</span></span><span style="display:flex;"><span>| service_type | compute                                   |
+</span></span><span style="display:flex;"><span>| url          | http://controller:8774/v2.1/%(tenant_id)s |
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne compute internal http://controller:8774/v2.1/%\(tenant_id\)s
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                                     |
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                                      |
+</span></span><span style="display:flex;"><span>| id           | 1bc41c829f2f47e7962cba46f0da8ddc          |
+</span></span><span style="display:flex;"><span>| interface    | internal                                  |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                                 |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                                 |
+</span></span><span style="display:flex;"><span>| service_id   | 28d495eca718439f9dc6ce395e0720dc          |
+</span></span><span style="display:flex;"><span>| service_name | nova                                      |
+</span></span><span style="display:flex;"><span>| service_type | compute                                   |
+</span></span><span style="display:flex;"><span>| url          | http://controller:8774/v2.1/%(tenant_id)s |
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne compute admin http://controller:8774/v2.1/%\(tenant_id\)s
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                                     |
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                                      |
+</span></span><span style="display:flex;"><span>| id           | 8022a415f22c400c92989320a2be3133          |
+</span></span><span style="display:flex;"><span>| interface    | admin                                     |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                                 |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                                 |
+</span></span><span style="display:flex;"><span>| service_id   | 28d495eca718439f9dc6ce395e0720dc          |
+</span></span><span style="display:flex;"><span>| service_name | nova                                      |
+</span></span><span style="display:flex;"><span>| service_type | compute                                   |
+</span></span><span style="display:flex;"><span>| url          | http://controller:8774/v2.1/%(tenant_id)s |
+</span></span><span style="display:flex;"><span>+--------------+-------------------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne placement public http://controller:8778
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                            |
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                             |
+</span></span><span style="display:flex;"><span>| id           | 5e988f2be72242f0b3923e27e9db009c |
+</span></span><span style="display:flex;"><span>| interface    | public                           |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                        |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                        |
+</span></span><span style="display:flex;"><span>| service_id   | 8515d3d046834de9b71b2938aae89898 |
+</span></span><span style="display:flex;"><span>| service_name | placement                        |
+</span></span><span style="display:flex;"><span>| service_type | placement                        |
+</span></span><span style="display:flex;"><span>| url          | http://controller:8778           |
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne placement internal http://controller:8778
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                            |
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                             |
+</span></span><span style="display:flex;"><span>| id           | a68cf8b6eeb043c2aa1ec95d7711cb50 |
+</span></span><span style="display:flex;"><span>| interface    | internal                         |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                        |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                        |
+</span></span><span style="display:flex;"><span>| service_id   | 8515d3d046834de9b71b2938aae89898 |
+</span></span><span style="display:flex;"><span>| service_name | placement                        |
+</span></span><span style="display:flex;"><span>| service_type | placement                        |
+</span></span><span style="display:flex;"><span>| url          | http://controller:8778           |
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack endpoint create --region RegionOne placement admin http://controller:8778
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| Field        | Value                            |
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| enabled      | True                             |
+</span></span><span style="display:flex;"><span>| id           | 63e47fcbfd7841dd95bb4d9d9a910ab5 |
+</span></span><span style="display:flex;"><span>| interface    | admin                            |
+</span></span><span style="display:flex;"><span>| region       | RegionOne                        |
+</span></span><span style="display:flex;"><span>| region_id    | RegionOne                        |
+</span></span><span style="display:flex;"><span>| service_id   | 8515d3d046834de9b71b2938aae89898 |
+</span></span><span style="display:flex;"><span>| service_name | placement                        |
+</span></span><span style="display:flex;"><span>| service_type | placement                        |
+</span></span><span style="display:flex;"><span>| url          | http://controller:8778           |
+</span></span><span style="display:flex;"><span>+--------------+----------------------------------+
+</span></span></code></pre></div><h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<h3 id="nova-유저의-db를-생성합니다">
+  <strong>Nova 유저의 DB를 생성합니다.</strong>
+  <a class="anchor" href="#nova-%ec%9c%a0%ec%a0%80%ec%9d%98-db%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
+</h3>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller&gt; mysql -u root -p
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; create database nova; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on nova.* to nova@&#39;localhost&#39; identified by &#39;qwer1234&#39;; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on nova.* to nova@&#39;%&#39; identified by &#39;qwer1234&#39;; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; create database nova_api; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on nova_api.* to nova@&#39;localhost&#39; identified by &#39;qwer1234&#39;; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on nova_api.* to nova@&#39;%&#39; identified by &#39;qwer1234&#39;; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; create database nova_cell0; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on nova_cell0.* to nova@&#39;localhost&#39; identified by &#39;qwer1234&#39;; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on nova_cell0.* to nova@&#39;%&#39; identified by &#39;qwer1234&#39;;
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; create database placement;  
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on placement.* to placement@&#39;localhost&#39; identified by &#39;qwer1234&#39;; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; grant all privileges on placement.* to placement@&#39;%&#39; identified by &#39;qwer1234&#39;; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; flush privileges; 
+</span></span><span style="display:flex;"><span>$ MariaDB&gt; exit;
+</span></span></code></pre></div><h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h3 id="nova-설치">
+  <strong>Nova 설치</strong>
+  <a class="anchor" href="#nova-%ec%84%a4%ec%b9%98">#</a>
+</h3>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-nova openstack-placement-api
+</span></span><span style="display:flex;"><span># nova 및 관련 모듈을 설치합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; vi /etc/nova/nova.conf
+</span></span><span style="display:flex;"><span>[DEFAULT]
+</span></span><span style="display:flex;"><span>my_ip = 10.10.10.10
+</span></span><span style="display:flex;"><span># my_ip는 반드시 IP로 적어주세요 !
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>state_path = /var/lib/nova
+</span></span><span style="display:flex;"><span>enabled_apis = osapi_compute,metadata
+</span></span><span style="display:flex;"><span>log_dir = /var/log/nova
+</span></span><span style="display:flex;"><span>transport_url = rabbit://openstack:qwer1234@controller
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[api]
+</span></span><span style="display:flex;"><span>auth_strategy = keystone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[glance]
+</span></span><span style="display:flex;"><span>api_servers = http://controller:9292
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[vnc]
+</span></span><span style="display:flex;"><span>enabled = true
+</span></span><span style="display:flex;"><span>server_listen = $my_ip
+</span></span><span style="display:flex;"><span>server_proxyclient_address = $my_ip
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[oslo_concurrency]
+</span></span><span style="display:flex;"><span>lock_path = $state_path/tmp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[api_database]
+</span></span><span style="display:flex;"><span>connection = mysql+pymysql://nova:qwer1234@controller/nova_api
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[database]
+</span></span><span style="display:flex;"><span>connection = mysql+pymysql://nova:qwer1234@controller/nova
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[keystone_authtoken]
+</span></span><span style="display:flex;"><span>www_authenticate_uri = http://controller:5000
+</span></span><span style="display:flex;"><span>auth_url = http://controller:5000
+</span></span><span style="display:flex;"><span>memcached_servers = controller:11211
+</span></span><span style="display:flex;"><span>auth_type = password
+</span></span><span style="display:flex;"><span>project_domain_name = default
+</span></span><span style="display:flex;"><span>user_domain_name = default
+</span></span><span style="display:flex;"><span>project_name = service
+</span></span><span style="display:flex;"><span>username = nova
+</span></span><span style="display:flex;"><span>password = qwer1234
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[placement]
+</span></span><span style="display:flex;"><span>auth_url = http://controller:5000
+</span></span><span style="display:flex;"><span>os_region_name = RegionOne
+</span></span><span style="display:flex;"><span>auth_type = password
+</span></span><span style="display:flex;"><span>project_domain_name = default
+</span></span><span style="display:flex;"><span>user_domain_name = default
+</span></span><span style="display:flex;"><span>project_name = service
+</span></span><span style="display:flex;"><span>username = placement
+</span></span><span style="display:flex;"><span>password = qwer1234
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[wsgi]
+</span></span><span style="display:flex;"><span>api_paste_config = /etc/nova/api-paste.ini
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; vi /etc/placement/placement.conf
+</span></span><span style="display:flex;"><span>[DEFAULT]
+</span></span><span style="display:flex;"><span>debug = false
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[api]
+</span></span><span style="display:flex;"><span>auth_strategy = keystone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[keystone_authtoken]
+</span></span><span style="display:flex;"><span>www_authenticate_uri = http://controller:5000
+</span></span><span style="display:flex;"><span>auth_url = http://controller:5000
+</span></span><span style="display:flex;"><span>memcached_servers = controller:11211
+</span></span><span style="display:flex;"><span>auth_type = password
+</span></span><span style="display:flex;"><span>project_domain_name = default
+</span></span><span style="display:flex;"><span>user_domain_name = default
+</span></span><span style="display:flex;"><span>project_name = service
+</span></span><span style="display:flex;"><span>username = placement
+</span></span><span style="display:flex;"><span>password = qwer1234
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[placement_database]
+</span></span><span style="display:flex;"><span>connection = mysql+pymysql://placement:qwer1234@controller/placement
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; vi /etc/httpd/conf.d/00-placement-api.conf
+</span></span><span style="display:flex;"><span>  &lt;Directory /usr/bin&gt;
+</span></span><span style="display:flex;"><span>    Require all granted
+</span></span><span style="display:flex;"><span>  &lt;/Directory&gt;
+</span></span><span style="display:flex;"><span># 15번 줄에 추가시킵니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; su -s /bin/bash placement -c &#34;placement-manage db sync&#34;
+</span></span><span style="display:flex;"><span>$ controller&gt; su -s /bin/bash nova -c &#34;nova-manage api_db sync&#34;
+</span></span><span style="display:flex;"><span>$ controller&gt; su -s /bin/bash nova -c &#34;nova-manage cell_v2 map_cell0&#34;
+</span></span><span style="display:flex;"><span>$ controller&gt; su -s /bin/bash nova -c &#34;nova-manage db sync&#34;
+</span></span><span style="display:flex;"><span>$ controller&gt; su -s /bin/bash nova -c &#34;nova-manage cell_v2 create_cell --name cell1&#34;
+</span></span><span style="display:flex;"><span># nova DB에 임포트 시킵니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; semanage port -a -t http_port_t -p tcp 8778
+</span></span><span style="display:flex;"><span>$ controller&gt; firewall-cmd --add-port=<span style="color:#75715e">{</span><span style="color:#ae81ff">6080</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">6081</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">6082</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">8774</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">8775</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#f92672">,</span><span style="color:#ae81ff">8778</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span><span style="color:#75715e">}</span> --permanent
+</span></span><span style="display:flex;"><span>$ controller&gt; firewall-cmd --reload
+</span></span><span style="display:flex;"><span>$ controller&gt; systemctl restart httpd
+</span></span><span style="display:flex;"><span>$ controller&gt; chown placement. /var/log/placement/placement-api.log
+</span></span><span style="display:flex;"><span>$ controller&gt; for service in api conductor scheduler novncproxy; do
+</span></span><span style="display:flex;"><span>systemctl enable --now openstack-nova-$service
+</span></span><span style="display:flex;"><span>done
+</span></span><span style="display:flex;"><span># Selinux 및 방화벽을 설정합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack compute service list
+</span></span><span style="display:flex;"><span>+----+----------------+------------+----------+---------+-------+----------------------------+
+</span></span><span style="display:flex;"><span>| ID | Binary         | Host       | Zone     | Status  | State | Updated At                 |
+</span></span><span style="display:flex;"><span>+----+----------------+------------+----------+---------+-------+----------------------------+
+</span></span><span style="display:flex;"><span>|  4 | nova-conductor | controller | internal | enabled | up    | 2020-08-06T12:10:34.000000 |
+</span></span><span style="display:flex;"><span>|  5 | nova-scheduler | controller | internal | enabled | up    | 2020-08-06T12:10:38.000000 |
+</span></span><span style="display:flex;"><span>+----+----------------+------------+----------+---------+-------+----------------------------+
+</span></span></code></pre></div><h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h2 id="conpute-node-nova-설치">
+  <strong>Conpute node Nova 설치</strong>
+  <a class="anchor" href="#conpute-node-nova-%ec%84%a4%ec%b9%98">#</a>
+</h2>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<h3 id="nova-설차">
+  <strong>nova 설차</strong>
+  <a class="anchor" href="#nova-%ec%84%a4%ec%b0%a8">#</a>
+</h3>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<ul>
+<li><strong>Nova 서비스를 설치하기 전에 가상화를 위한 KVM + QEMU를 설치합니다.</strong></li>
+<li><strong>이를 위해서는 Inter VT나 AMD-V가 필요합니다. ( CPU )</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ lsmod | grep kvm
+</span></span><span style="display:flex;"><span>kvm_amd               110592  0
+</span></span><span style="display:flex;"><span>ccp                    98304  1 kvm_amd
+</span></span><span style="display:flex;"><span>kvm                   786432  1 kvm_amd
+</span></span><span style="display:flex;"><span>irqbypass              16384  1 kvm
+</span></span></code></pre></div><h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ compute&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install qemu-kvm libvirt virt-install libguestfs-tools 
+</span></span><span style="display:flex;"><span># KVM 관련 모듈을 설치합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; systemctl enable --now libvirtd
+</span></span><span style="display:flex;"><span># libvirtd 서비스를 등록 및 시작합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; nmcli connection add type bridge autoconnect yes con-name br0 ifname br0
+</span></span><span style="display:flex;"><span># br0의 가상 브릿지를 추가합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; nmcli connection modify br0 ipv4.addresses 10.10.10.30/24 ipv4.method manual
+</span></span><span style="display:flex;"><span># 가상 브리지의 IP를 추가합니다. ( compute node ip )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; nmcli connection modify br0 ipv4.gateway 10.10.10.10
+</span></span><span style="display:flex;"><span># 가상 브리지의 GATEWAY를 등록합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; nmcli connection modify br0 ipv4.dns 8.8.8.8
+</span></span><span style="display:flex;"><span># 가상 브릿지의 DNS를 등록합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; nmcli connection del ens34
+</span></span><span style="display:flex;"><span># 본래의 네트워크 인터페이스를 삭제합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; nmcli connection add type bridge-slave autoconnect yes con-name ens34 ifname ens34 master br0
+</span></span><span style="display:flex;"><span># 삭제한 네트워크 인터페이스 대신 브릿지를 매핑시키고 네트워크를 재시작 시킵니다.
+</span></span><span style="display:flex;"><span># 제 compute node의 내부대역 IP는 10.10.10.30/24 ens34입니다 햇갈리지 마세요 !
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; init 6
+</span></span><span style="display:flex;"><span>$ compute&gt; ipfconfig
+</span></span><span style="display:flex;"><span>br0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+</span></span><span style="display:flex;"><span>        inet 10.10.10.30  netmask 255.255.255.0  broadcast 10.10.10.255
+</span></span><span style="display:flex;"><span>        inet6 fe80::6765:fe91:a94b:5529  prefixlen 64  scopeid 0x20&lt;link&gt;
+</span></span><span style="display:flex;"><span>        ether 00:0c:29:80:33:15  txqueuelen 1000  (Ethernet)
+</span></span><span style="display:flex;"><span>        RX packets 465  bytes 56335 (55.0 KiB)
+</span></span><span style="display:flex;"><span>        RX errors 0  dropped 0  overruns 0  frame 0
+</span></span><span style="display:flex;"><span>        TX packets 348  bytes 66663 (65.1 KiB)
+</span></span><span style="display:flex;"><span>        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+</span></span><span style="display:flex;"><span>ens34: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+</span></span><span style="display:flex;"><span>        ether 00:0c:29:80:33:15  txqueuelen 1000  (Ethernet)
+</span></span><span style="display:flex;"><span>        RX packets 471  bytes 63205 (61.7 KiB)
+</span></span><span style="display:flex;"><span>        RX errors 0  dropped 0  overruns 0  frame 0
+</span></span><span style="display:flex;"><span>        TX packets 450  bytes 75797 (74.0 KiB)
+</span></span><span style="display:flex;"><span>        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+</span></span><span style="display:flex;"><span># 재시작후 네트워크 인터페이스를 확인하면 위와 같이 생성된 것을 확인할 수 있습니다.
+</span></span></code></pre></div><h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ compute&gt; dnf --enablerepo=centos-openstack-ussuri,powertools,epel -y install openstack-nova-compute
+</span></span><span style="display:flex;"><span># nova 및 관련 모듈을 설치합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; scp /etc/nova/nova.conf compute:/etc/nova/nova.conf
+</span></span><span style="display:flex;"><span># nova의 기본설정파일을 복사합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; vi /etc/nova/nova.conf
+</span></span><span style="display:flex;"><span>[default]
+</span></span><span style="display:flex;"><span>my_ip = 10.10.10.30
+</span></span><span style="display:flex;"><span># my_ip는 반드시 IP로 적어주세요 !
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[libvirt]
+</span></span><span style="display:flex;"><span>virt_type = qemu
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[vnc]
+</span></span><span style="display:flex;"><span>enabled = True
+</span></span><span style="display:flex;"><span>server_listen = 0.0.0.0
+</span></span><span style="display:flex;"><span>server_proxyclient_address = $my_ip
+</span></span><span style="display:flex;"><span>novncproxy_base_url = http://controller:6080/vnc_auto.html 
+</span></span><span style="display:flex;"><span># nova관련 설정을 추가합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ compute&gt; firewall-cmd --add-port=5900-5999/tcp --permanent
+</span></span><span style="display:flex;"><span>$ compute&gt; firewall-cmd --reload
+</span></span><span style="display:flex;"><span>$ compute&gt; systemctl enable --now libvirtd
+</span></span><span style="display:flex;"><span>$ compute&gt; systemctl enable --now openstack-nova-compute
+</span></span></code></pre></div><h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<h3 id="nova-설치-확인">
+  <strong>Nova 설치 확인</strong>
+  <a class="anchor" href="#nova-%ec%84%a4%ec%b9%98-%ed%99%95%ec%9d%b8">#</a>
+</h3>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ controller&gt; su -s /bin/bash nova -c &#34;nova-manage cell_v2 discover_hosts&#34;
+</span></span><span style="display:flex;"><span># DB에 compute의 대한 설정을 업데이트 합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller&gt; nova-manage cell_v2 discover_hosts --verbose
+</span></span><span style="display:flex;"><span># compute 노드가 검색이 안되었을 시 추가적으로 검색합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ controller ~(keystone)&gt; openstack compute service list
+</span></span><span style="display:flex;"><span>+----+----------------+------------+----------+---------+-------+----------------------------+
+</span></span><span style="display:flex;"><span>| ID | Binary         | Host       | Zone     | Status  | State | Updated At                 |
+</span></span><span style="display:flex;"><span>+----+----------------+------------+----------+---------+-------+----------------------------+
+</span></span><span style="display:flex;"><span>|  4 | nova-conductor | controller | internal | enabled | up    | 2020-08-06T21:40:34.000000 |
+</span></span><span style="display:flex;"><span>|  5 | nova-scheduler | controller | internal | enabled | up    | 2020-08-06T21:40:37.000000 |
+</span></span><span style="display:flex;"><span>|  8 | nova-compute   | compute    | nova     | enabled | up    | 2020-08-06T21:40:36.000000 |
+</span></span><span style="display:flex;"><span>+----+----------------+------------+----------+---------+-------+----------------------------+
+</span></span></code></pre></div><h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#openstack-ussuri--nova-1"><strong>OpenStack Ussuri : Nova</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova-ceilometer-service-및-user-생성"><strong>Nova, ceilometer service 및 User 생성</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova-유저의-db를-생성합니다"><strong>Nova 유저의 DB를 생성합니다.</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova-설치"><strong>Nova 설치</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#conpute-node-nova-설치"><strong>Conpute node Nova 설치</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova-설차"><strong>nova 설차</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nova-설치-확인"><strong>Nova 설치 확인</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NetworkController on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/tags/networkcontroller/</link>
+    <description>Recent content in NetworkController on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/tags/networkcontroller/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NIC</title>
+      <link>https://mung0001.github.io/docs/infra/hardware/nic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/infra/hardware/nic/</guid>
+      <description>What is NIC#NIC(Network Interface Controller)이란 서버가 네트워크에 연결하여 통신하기 위해 사용하는 하드웨어 장치이다.
+OSI 계층 1(물리 계층)과 계층 2(데이터 링크 계층) 장치를 가지는데, MAC 주소를 사용하여 낮은 수준의 주소 할당 시스템을 제공하고 네트워크 매개체로 물리적인 접근을 가능하게 한다.</description>
+    </item>
+    
+  </channel>
+</rss>

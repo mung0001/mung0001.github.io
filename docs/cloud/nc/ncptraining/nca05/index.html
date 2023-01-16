@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cloud Database##Naver Cloud 스크립트 파일을 통한 서버 자체에 DB를 설치하는 것외에도 Cloud 상에 MySQL을 사용하는 서비스 또한 지원 #Cloud DB for MySQL##자동 Fail-Over 지원 및 사용자 환경에 맞는 구성 기능제공
+최대 32vCPU에 256GB 메모리 지원, 2TB 자동 디스크 확장 ( Standard, High Memory )
+자동 Fail-Over를 지원하며 최대 5대까지 복제 Slave (Read Only) 확장가능
+private Load Balancer를 이용해서 Read 부하 분산 가능">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Naver Cloud Database" />
+<meta property="og:description" content="Cloud Database##Naver Cloud 스크립트 파일을 통한 서버 자체에 DB를 설치하는 것외에도 Cloud 상에 MySQL을 사용하는 서비스 또한 지원 #Cloud DB for MySQL##자동 Fail-Over 지원 및 사용자 환경에 맞는 구성 기능제공
+최대 32vCPU에 256GB 메모리 지원, 2TB 자동 디스크 확장 ( Standard, High Memory )
+자동 Fail-Over를 지원하며 최대 5대까지 복제 Slave (Read Only) 확장가능
+private Load Balancer를 이용해서 Read 부하 분산 가능" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/nc/ncptraining/nca05/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Naver Cloud Database | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Naver Cloud Database</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cloud-database"><strong>Cloud Database</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cloud-db-for-mysql"><strong>Cloud DB for MySQL</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cloud-db-for-redis"><strong>Cloud DB for Redis</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cloud-db-for-ms-sql"><strong>Cloud DB for MS-SQL</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h2 id="cloud-database">
+  <strong>Cloud Database</strong>
+  <a class="anchor" href="#cloud-database">#</a>
+</h2>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<ul>
+<li><strong>Naver Cloud 스크립트 파일을 통한 서버 자체에 DB를 설치하는 것외에도 Cloud 상에 MySQL을 사용하는 서비스 또한 지원</strong></li>
+</ul>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<p> </p>
+<h3 id="cloud-db-for-mysql">
+  <strong>Cloud DB for MySQL</strong>
+  <a class="anchor" href="#cloud-db-for-mysql">#</a>
+</h3>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>자동 Fail-Over 지원 및 사용자 환경에 맞는 구성 기능제공</strong></p>
+<ul>
+<li>
+<p><strong>최대 32vCPU에 256GB 메모리 지원, 2TB 자동 디스크 확장 ( Standard, High Memory )</strong></p>
+</li>
+<li>
+<p><strong>자동 Fail-Over를 지원하며 최대 5대까지 복제 Slave (Read Only) 확장가능</strong></p>
+</li>
+<li>
+<p><strong>private Load Balancer를 이용해서 Read 부하 분산 가능</strong></p>
+</li>
+<li>
+<p><strong>자동 백업 주기를 설정할 수 있으며, 최대 30일 백업 파일 보관</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Master DB Failover</strong></p>
+<ul>
+<li>
+<p><strong>콘솔에서 수동으로 Failover에 실행이 가능</strong></p>
+</li>
+<li>
+<p><strong>서비스 오픈 전에 Master DB 장애로 Failover가 발생하는 상황을 재현하여 Application에 영향이 없는 지 사전에 점검이 가능</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>DB Process 모니터링</strong></p>
+<ul>
+<li>
+<p><strong>DB Server에 연결하여 수행 중인 Query를 확인할 수 있음</strong></p>
+</li>
+<li>
+<p><strong>Slow Query 로그 외에도 특징 시점에 어떤 Query가 수행 중인지 확인할 수 있어 DB 상태를 점검하는 데 도움을 받을 수 있음</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Stabd Alone 백업</strong></p>
+<ul>
+<li>
+<p><strong>Stabd Alone 서버도 DB 백업을 사용할 수 있음</strong></p>
+</li>
+<li>
+<p><strong>데이터가 삭제되어도 백업 보관일 설정 내에서 백업으로 데이터를 복구 할 수 있음</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<h3 id="cloud-db-for-redis">
+  <strong>Cloud DB for Redis</strong>
+  <a class="anchor" href="#cloud-db-for-redis">#</a>
+</h3>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<ul>
+<li><strong>자동 복구를 통해 안정적으로 운영되는 완전 관리형 클라우드 인 메모리 캐시 서비스</strong>
+<ul>
+<li>
+<p><strong>Redis가 제공하지 않는 자동 Fail-over 기능을 독자적으로 개발하여 제공함으로써 장애발생 시에도 안정적인 서비스 제공</strong></p>
+</li>
+<li>
+<p><strong>설치 후 Redis와 OS모니터링을 이용할 수 있으며 장애 또는 이벤트 발생 시 사용자의 메일, SMS로 장애 알람</strong></p>
+</li>
+<li>
+<p><strong>네이버 서비스에서 오랜 시간 검증된 Redis 설정을 기본으로 지원</strong></p>
+</li>
+<li>
+<p><strong>Redis Cluster은 현재는 미지원</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<h3 id="cloud-db-for-ms-sql">
+  <strong>Cloud DB for MS-SQL</strong>
+  <a class="anchor" href="#cloud-db-for-ms-sql">#</a>
+</h3>
+<ul>
+<li>
+<p><strong>네이버 서비스에 검증된 최적화된 설정을 통해 안정적으로 운영되며, 장애가 발생하면 다옹으로 복구</strong></p>
+<ul>
+<li>
+<p><strong>안정적인 서비스 제공을 위해 장애 발생 시 자동으로 Fail-over 기능 제공 ( Principal DB와 Mirror DB 총 2대 구성 )</strong></p>
+</li>
+<li>
+<p><strong>설치 후 즉시 MSSQL과 OS 모니터링을 이용할 수 있으며, MSSQL의 동작 상황을 그래프를 통해 손쉽게 확인이 가능</strong></p>
+</li>
+<li>
+<p><strong>1분 단위의 쿼리 레벨 성능 분석을 지원하여 서비스 성능과 안정성을 향상</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cloud-database"><strong>Cloud Database</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cloud-db-for-mysql"><strong>Cloud DB for MySQL</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cloud-db-for-redis"><strong>Cloud DB for Redis</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cloud-db-for-ms-sql"><strong>Cloud DB for MS-SQL</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

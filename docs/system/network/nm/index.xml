@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network Master on 뭉게뭉게</title>
+    <link>https://mung0001.github.io/docs/system/network/nm/</link>
+    <description>Recent content in Network Master on 뭉게뭉게</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language><atom:link href="https://mung0001.github.io/docs/system/network/nm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Network Master 2급 실기정리</title>
+      <link>https://mung0001.github.io/docs/system/network/nm/nm02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/network/nm/nm02/</guid>
+      <description>Network Master 2급##Network Master 실기정리##Network Master 시험일정
+시험시간 : 80분
+작업/서술/선택형
+합격기준 100/60점이상
+#네트워크 관리사 2급 시험 준비(실기)##검점과목
+LAN 전송매체
+네트워크 설계 구축
+TCP/IP
+NOS(Network Opration System)
+네트워크 운용장비
+##점수표 항목 문제 * 점수 다이렉트 케이블 제작 1 * 6.5 = 6.5 Windows Server 8 * 5.5 = 44 Router 3 * 5.5 = 16.5 Linux 2 * 5.</description>
+    </item>
+    
+    <item>
+      <title>Network Master 2급 필기정리</title>
+      <link>https://mung0001.github.io/docs/system/network/nm/nm01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mung0001.github.io/docs/system/network/nm/nm01/</guid>
+      <description>Network Master 2급##Network Master 필기정리##네트워크 개요##정보통신 (정보처리기능+정보전송기능)##개념 컴퓨터에 의한 정보처리기술과 정보전송기능이 통합된 형태
+정보의 공유,변환,전송이 가능한 처리기술
+#특징
+신속, 정확한 정보의전달.
+신뢰성이 높고 광대역 전송이 가능.
+정보 자원의 공유 및 이용.
+거리와 시간의 한계 극복.
+하드웨어 기술뿐만 아니라 소프트웨어 기술도 필요.
+에러제어방식이 요구.
+#정보통신 3요소
+정보원, 전송매체, 정보처리원 #정보통신 시스템 기본구성요소
+데이터 전송계: 단말장치(DTE), 데이터전송회선, 통신제어장치(CCU)</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shell Programming###Shell Script의 개요##UNIX/ Linux 소개 및 특징##UNIX 1969년 AT&amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다
+벨연구소는 대학과 연구기관에 UNIX를 활용할 수 있도록 라이선스를 제공하였으며, 버클리 대학교에서는 UNIX에 네트워크 프로토콜인 TCP/IP 등 다양한 기능을 보강하여 BSD 배포본을 제작하고 이후 파생되는 많은 UNIX에 영향을 끼쳤다.
+#Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원생에 의해 커널이 개발된 이래, 1984년부터 리처드 스토람에 의해 추진된 GNU 프로젝트의 다양한 소프트웨어들이 합쳐진 운영체제가 Linux이다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Shell Script란?" />
+<meta property="og:description" content="Shell Programming###Shell Script의 개요##UNIX/ Linux 소개 및 특징##UNIX 1969년 AT&amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다
+벨연구소는 대학과 연구기관에 UNIX를 활용할 수 있도록 라이선스를 제공하였으며, 버클리 대학교에서는 UNIX에 네트워크 프로토콜인 TCP/IP 등 다양한 기능을 보강하여 BSD 배포본을 제작하고 이후 파생되는 많은 UNIX에 영향을 끼쳤다.
+#Linux 1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원생에 의해 커널이 개발된 이래, 1984년부터 리처드 스토람에 의해 추진된 GNU 프로젝트의 다양한 소프트웨어들이 합쳐진 운영체제가 Linux이다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/development/shell/shell-1/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Shell Script란? | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell-1/" class="active">Shell Script란?</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell-2/" class="">UNIX/ Linux 개념과 명령어</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell-3/" class="">Shell Script 문법</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell-4/" class="">예약변수와 환경변수</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell-5/" class="">Shell Script System Management</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell-6/" class="">Shell Script System Security</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell-7/" class="">Shell Customizing</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell01/" class="">Shell Basics</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell02/" class="">Quotes</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell03/" class="">Variables</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell04/" class="">Fucnctions</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell05/" class="">Exit Status</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell06/" class="">Interactive</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell07/" class="">etc</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell08/" class="">Commands</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell09/" class="">Bourne Shell Builtins</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/shell/shell100/" class="">연습문제</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Shell Script란?</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#shell-script의-개요"><strong>Shell Script의 개요</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#unix-linux-소개-및-특징"><strong>UNIX/ Linux 소개 및 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#쉘의-역할-및-특징"><strong>쉘의 역할 및 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#shell의-종류"><strong>Shell의 종류</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-script"><strong>Shell Script</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#쉘-스크립트-활용-시-이점"><strong>쉘 스크립트 활용 시 이점</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#posixportable-operating-system-interface"><strong>POSIX(Portable Operating System Interface)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#shell-script-학습-환경-구축"><strong>Shell Script 학습 환경 구축</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#운영체제-이미지-파일-다운로드"><strong>운영체제 이미지 파일 다운로드</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="shell-programming">
+  <strong>Shell Programming</strong>
+  <a class="anchor" href="#shell-programming">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h2 id="shell-script의-개요">
+  <strong>Shell Script의 개요</strong>
+  <a class="anchor" href="#shell-script%ec%9d%98-%ea%b0%9c%ec%9a%94">#</a>
+</h2>
+<hr>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<h3 id="unix-linux-소개-및-특징">
+  <strong>UNIX/ Linux 소개 및 특징</strong>
+  <a class="anchor" href="#unix-linux-%ec%86%8c%ea%b0%9c-%eb%b0%8f-%ed%8a%b9%ec%a7%95">#</a>
+</h3>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<ul>
+<li><strong>UNIX</strong>
+<ul>
+<li>
+<p><strong>1969년 AT&amp;T 벨연구소의 직원이 켄 톰슨, 데니스 리치, 더글라스 매클로리 등이 최초로 개발하였으며, 이후 C언어로 재작성되어 다양한 플랫폼에 이식될 수 있도록 보완되었다</strong></p>
+</li>
+<li>
+<p><strong>벨연구소는 대학과 연구기관에 UNIX를 활용할 수 있도록 라이선스를 제공하였으며, 버클리 대학교에서는 UNIX에 네트워크 프로토콜인 TCP/IP 등 다양한 기능을 보강하여 BSD 배포본을 제작하고 이후 파생되는 많은 UNIX에 영향을 끼쳤다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<ul>
+<li><strong>Linux</strong>
+<ul>
+<li>
+<p><strong>1991년 리누스 토발즈라는 핀란드 헬싱키 대학의 대학원생에 의해 커널이 개발된 이래, 1984년부터 리처드 스토람에 의해 추진된 GNU 프로젝트의 다양한 소프트웨어들이 합쳐진 운영체제가 Linux이다.</strong></p>
+</li>
+<li>
+<p><strong>개인용 데스크톱 환경뿐만 아니라 안드로이드 등 스마트폼에서부터 기업용 엔터프라이즈 환경에 이르기까지 다양한 플랫폼에 이식되어 활용중이다.</strong></p>
+</li>
+<li>
+<p><strong>대표적인 리눅스 배포판에는 데비안, 레드햇, 슬렉웨어, SUSE, 우분투, 젠투가 있으며 그밖에도 다양한 배포본들이 파생되어 개발되고 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<h3 id="쉘의-역할-및-특징">
+  <strong>쉘의 역할 및 특징</strong>
+  <a class="anchor" href="#%ec%89%98%ec%9d%98-%ec%97%ad%ed%95%a0-%eb%b0%8f-%ed%8a%b9%ec%a7%95">#</a>
+</h3>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>쉘은 운영체제에서 커널(Kernel)과 사용자 사이의 인터페이스, 즉 가교 역할을 하는 프로그램으로, 운영체제의 내부 명령어나 응용프로그램을 실행하는 것을 지원</strong></p>
+</li>
+<li>
+<p><strong>시스템을 전체적으로 보면 운영체제는 결국 하드웨어의 한 부분인 저장장치의 일부에 저장</strong></p>
+</li>
+<li>
+<p><strong>운영체제를 좀 더 세부적으로 살펴보면, 운영체제가 설치되어 있는 저장장치(DISK 등)를 비롯하여 모니터, 그래픽카드, NIC 등 시스템에 직간접적으로 연결되는 하드웨어를 통제하는 커널과 이러한 커널과 사용자 및 응용 프로그램 사이에서의 명령을 전달을 담당하는 쉘로 구분</strong></p>
+</li>
+<li>
+<p><strong>운영체제 마다 기본적으로 다양한 쉘을 제공하고 있고 사용자가 별도의 쉘을 설치해서 활용</strong></p>
+</li>
+<li>
+<p><strong>CDE(Common Desktop Environment)</strong></p>
+<ul>
+<li><strong>공통 데스크톱 환경(CDE)은 유닉스를 위한 그래픽 데스크톱 환경이며 모티프 위젯 툴킷을 도입하고 있다.</strong></li>
+<li><strong>유닉스 표준화 단체들 가운데 하나인 공통 개방형 소프트웨어 환경이 지정한 유닉스 GUI 규격이다.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<h2 id="shell의-종류">
+  <strong>Shell의 종류</strong>
+  <a class="anchor" href="#shell%ec%9d%98-%ec%a2%85%eb%a5%98">#</a>
+</h2>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>개발자</th>
+<th>설치 위치</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sh</td>
+<td>Stephen Bouren</td>
+<td>/bin/sh</td>
+<td>대부분의 UNIX 및 Linux에 설치되어 있는 쉘</td>
+</tr>
+<tr>
+<td>bash</td>
+<td>Brain, Chet Ramey</td>
+<td>/bin/bash</td>
+<td>Linux의 기본 쉘로 sh와 호환</td>
+</tr>
+<tr>
+<td>ksh</td>
+<td>David Kron</td>
+<td>/bin/ksh</td>
+<td>1980년대 밸 연구서에서 개발, 부동 소수점 계산이 가능</td>
+</tr>
+<tr>
+<td>csh</td>
+<td>Bill Joy</td>
+<td>/bin/csh</td>
+<td>C언어와 비슷한 스타일로 Script를 작성 가능</td>
+</tr>
+<tr>
+<td>tcsh</td>
+<td>Ken Greer</td>
+<td>/bin/tcsh</td>
+<td>csh에 커맨드 히스토리 등 추가 기능을 보완</td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<ul>
+<li><strong>Shell 종류 확인 명령어</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ ps -p $$
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ tail /etc/passwd
+</span></span><span style="display:flex;"><span>user01:x:500:500::/home/user01:/bin/bash
+</span></span><span style="display:flex;"><span># 마지막 필드에 기술된 쉘의 경로를 통해 확인가능
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ /bin/bash --version
+</span></span><span style="display:flex;"><span>GNU bash, version 5.0.17(1)-release (x86_64-pc-linux-gnu)
+</span></span><span style="display:flex;"><span>Copyright (C) 2019 Free Software Foundation, Inc.
+</span></span><span style="display:flex;"><span>License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>This is free software; you are free to change and redistribute it.
+</span></span><span style="display:flex;"><span>There is NO WARRANTY, to the extent permitted by law.
+</span></span></code></pre></div><h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<h3 id="shell-script">
+  <strong>Shell Script</strong>
+  <a class="anchor" href="#shell-script">#</a>
+</h3>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>컴퓨터 사용의 편의성을 확보한 GUI 기반의 실행 환경인 Windows 초기 버전이 있었지만 DOS를 통해 구동되는 DOS의 확장 프로그램 수준이었기 때문에 일반 사용자가 쉽게 사용하기에는 어려움이 있었다.</strong></p>
+</li>
+<li>
+<p><strong>이러한 번거로움을 조금이나마 해소하고자 DOS 구성 시 메모리 구성 및 드라이버 로딩을 케이스별로 메뉴로 구성하여 케이스별로 선택할 수 있는 배치 파일을 만들어 활용하는 사람들이 있었다.</strong></p>
+</li>
+<li>
+<p><strong>그 당시의 배치 파일을 지금의 쉘 스크립트와 비슷한 개념으로 이해하면 된다.</strong></p>
+</li>
+<li>
+<p><strong>쉘 스크립트 : 운영체제의 쉘에서 사용할 수 있는 명령어를 해석하고 그 결과를 커널에게 전달하는 프로그램</strong></p>
+</li>
+<li>
+<p><strong>쉘 : 사용자가 내린 명령어를 해석하고 그 결과를 커널에게 전달하는 프로그램</strong></p>
+</li>
+</ul>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<h3 id="쉘-스크립트-활용-시-이점">
+  <strong>쉘 스크립트 활용 시 이점</strong>
+  <a class="anchor" href="#%ec%89%98-%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8-%ed%99%9c%ec%9a%a9-%ec%8b%9c-%ec%9d%b4%ec%a0%90">#</a>
+</h3>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<ul>
+<li><strong>반복 작업에 대한 자동화 기능</strong>
+<ul>
+<li>
+<p><strong>쉘 스크립트를 활용하는 가장 큰 장점은 관리자의 번거로움을 덜 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>스케줄 설정과 같이 주기적으로 수행하는 단순한 작업에 단순한 작업에 쉘 스크립트를 활용하면 관리자가 일일이 타이핑하지 않아도 된다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>기존의 명령어를 사용자만의 명령어로 보완</strong>
+<ul>
+<li>
+<p><strong>기본적으로 UNIX/Linux는 POSIX라는 표준 규약을 준수하지만 모든 명령어가 통일된 것은 아니기 때문에 운영체제 마다 명령 옵션이나 결과 형식에 약간의 차이가 있다.</strong></p>
+</li>
+<li>
+<p><strong>운영체제에서 제공하는 명령어 실행 결과를 사용자가 원하는 형식으로 재구성해야 할 때가 있다.</strong></p>
+</li>
+<li>
+<p><strong>예시</strong></p>
+<ul>
+<li>
+<p><strong>운영체제가 다른 시스템에서 동일한 형태의 로그를 추출해야 할 때가 있다.</strong></p>
+</li>
+<li>
+<p><strong>이 경우, 쉘 스크립트를 이용하여 기존의 명령어의 결과를 원하는 형태의 결과로 표시할 수 있다.</strong></p>
+</li>
+<li>
+<p><strong>이를 위해 입출력 재지정(Rdirection)을 활용</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>손쉽고 빠른 개발 및 보완이 가능</strong>
+<ul>
+<li>
+<p><strong>기본적으로, 쉘 스크립트 자체는 운영체제의 명령어 등을 묶어서 프로그램화한 후 인터프리터 방식으로 수행되기 때문에 별도의 컴파일러를 설치할 필요가 없다.</strong></p>
+</li>
+<li>
+<p><strong>운영체제의 명령어들을 잘 알고 있다면 손쉽고 빠른 개발 및 보완이 가능</strong></p>
+</li>
+<li>
+<p><strong>필요한 절차를 기술하는 것</strong></p>
+</li>
+<li>
+<p><strong>시스템 관리자가 관리하는 여러 대의 서버 및 원격지에 있는 서버를 설정하거나 패치할 때 쉘 스크립트를 활용하면 설정 및 패치 작업을 보다 더 효율적으로 할 수 있다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-21">
+  
+  <a class="anchor" href="#heading-21">#</a>
+</h1>
+<h3 id="posixportable-operating-system-interface">
+  <strong>POSIX(Portable Operating System Interface)</strong>
+  <a class="anchor" href="#posixportable-operating-system-interface">#</a>
+</h3>
+<h1 id="heading-22">
+  
+  <a class="anchor" href="#heading-22">#</a>
+</h1>
+<ul>
+<li>
+<p><strong>서로 다른 UNIX OS의 공통 API를 정리하여 이식성이 높은 유닉스 응용 프로그램을 개발하기 위한 목적으로 IEEE가 책정한 어플리케이션 인터페이스 규격</strong></p>
+</li>
+<li>
+<p><strong>대부분의 시스템들이 AT&amp;T에서 개발된 UNIX에 뿌리를 두고 있지만 시간이 흐르면서 다양한 제조사와 개발자의 손을 거치면서 운영체제별 의존성 문제가 발생</strong></p>
+</li>
+<li>
+<p><strong>POSIX는 운영체제별 의존성 문제를 해결하기 위해 서로 다른 UNIX 운영체제에서 공통 API를 정리하여 운영체제간 이식성이 높은 UNIX 응용 프로그램을 개발하기 위한 목적으로 제정된 API 규격</strong></p>
+</li>
+</ul>
+<h1 id="heading-23">
+  
+  <a class="anchor" href="#heading-23">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-24">
+  
+  <a class="anchor" href="#heading-24">#</a>
+</h1>
+<h2 id="shell-script-학습-환경-구축">
+  <strong>Shell Script 학습 환경 구축</strong>
+  <a class="anchor" href="#shell-script-%ed%95%99%ec%8a%b5-%ed%99%98%ea%b2%bd-%ea%b5%ac%ec%b6%95">#</a>
+</h2>
+<h1 id="heading-25">
+  
+  <a class="anchor" href="#heading-25">#</a>
+</h1>
+<ul>
+<li><strong>기본적인 준비 프로그램</strong></li>
+</ul>
+<blockquote>
+<p>x86에 설치되지 않는 UNIX/Linux 버전은 사용이 불가능하다.(IMB의 AIX, HP의 HP-UX, SUN의 SPARC CPU 버전 Solaris 등)<br>
+VMware 또는 VirtualBox 설치<br>
+기본 용량 cpu 1/1, ram 1GB, HDD 8GB(VDI, 동적할당)<br>
+PuTTY를 통해 ssh 접속<br>
+PuTTY의 문자를 UTF-8로 변경</p>
+</blockquote>
+<h1 id="heading-26">
+  
+  <a class="anchor" href="#heading-26">#</a>
+</h1>
+<h3 id="운영체제-이미지-파일-다운로드">
+  <strong>운영체제 이미지 파일 다운로드</strong>
+  <a class="anchor" href="#%ec%9a%b4%ec%98%81%ec%b2%b4%ec%a0%9c-%ec%9d%b4%eb%af%b8%ec%a7%80-%ed%8c%8c%ec%9d%bc-%eb%8b%a4%ec%9a%b4%eb%a1%9c%eb%93%9c">#</a>
+</h3>
+<h1 id="heading-27">
+  
+  <a class="anchor" href="#heading-27">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>운영체제/ 배포본</th>
+<th>웹 사이트 주소</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UNIX</td>
+<td>solaris</td>
+<td><a href="http://www.oracle.com/kr/index.html">http://www.oracle.com/kr/index.html</a></td>
+</tr>
+<tr>
+<td> </td>
+<td>FreeBSD</td>
+<td><a href="http://www.freebsd.org/">http://www.freebsd.org/</a></td>
+</tr>
+<tr>
+<td> </td>
+<td>NetBSD</td>
+<td><a href="http://www.netbsd.org/">http://www.netbsd.org/</a></td>
+</tr>
+<tr>
+<td> </td>
+<td>OpenBSD</td>
+<td><a href="http://www.openbsd.org/">http://www.openbsd.org/</a></td>
+</tr>
+<tr>
+<td>UNIX</td>
+<td>ubuntu</td>
+<td><a href="http://www.ubuntu.com/index_roadshow">http://www.ubuntu.com/index_roadshow</a></td>
+</tr>
+<tr>
+<td> </td>
+<td>fedora</td>
+<td><a href="http://getfedora.org/">http://getfedora.org/</a></td>
+</tr>
+<tr>
+<td> </td>
+<td>CentOS</td>
+<td><a href="http://www.centos.org/">http://www.centos.org/</a></td>
+</tr>
+<tr>
+<td> </td>
+<td>KALI linux</td>
+<td><a href="https://www.kali.org/">https://www.kali.org/</a></td>
+</tr>
+<tr>
+<td> </td>
+<td>SUlinux</td>
+<td><a href="https://www.sulinux.net/2014/">https://www.sulinux.net/2014/</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="heading-28">
+  
+  <a class="anchor" href="#heading-28">#</a>
+</h1>
+<p> </p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#shell-script의-개요"><strong>Shell Script의 개요</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#unix-linux-소개-및-특징"><strong>UNIX/ Linux 소개 및 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#쉘의-역할-및-특징"><strong>쉘의 역할 및 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#shell의-종류"><strong>Shell의 종류</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shell-script"><strong>Shell Script</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#쉘-스크립트-활용-시-이점"><strong>쉘 스크립트 활용 시 이점</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#posixportable-operating-system-interface"><strong>POSIX(Portable Operating System Interface)</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#shell-script-학습-환경-구축"><strong>Shell Script 학습 환경 구축</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#운영체제-이미지-파일-다운로드"><strong>운영체제 이미지 파일 다운로드</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

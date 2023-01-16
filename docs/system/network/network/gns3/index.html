@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="네트워크 실습을 위한 GNS3 설치##GNS3 Download Link###상단의 GNS3 다운로드 링크를 클릭하여 GNS3에 접속 후, 로그인 혹은 회원가입을 진행합니다. ##로그인 후, Download를 클릭하여 운영체제에 맞는 GNS3 설치파일을 다운로드 합니다. ##기본 값으로 설치를 진행합니다. 단 솔라윈드 톨킷은 설치하지 않습니다. ##GNS3의 설치가 완료되었습니다. ##GNS3가 설치되면 GNS3를 실행시킵니다. 설정에 맞는 사항을 체크합니다. 여기서는 첫 번째 항목을 체크하겠습니다. 1. Run appliances in a virtual machine#가상 머신을 통하여 최신 IOS를 포함한 IOSv, IOU, ASA와 다른 Vendor의 Appliance들을 작동시킨다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="GNS3" />
+<meta property="og:description" content="네트워크 실습을 위한 GNS3 설치##GNS3 Download Link###상단의 GNS3 다운로드 링크를 클릭하여 GNS3에 접속 후, 로그인 혹은 회원가입을 진행합니다. ##로그인 후, Download를 클릭하여 운영체제에 맞는 GNS3 설치파일을 다운로드 합니다. ##기본 값으로 설치를 진행합니다. 단 솔라윈드 톨킷은 설치하지 않습니다. ##GNS3의 설치가 완료되었습니다. ##GNS3가 설치되면 GNS3를 실행시킵니다. 설정에 맞는 사항을 체크합니다. 여기서는 첫 번째 항목을 체크하겠습니다. 1. Run appliances in a virtual machine#가상 머신을 통하여 최신 IOS를 포함한 IOSv, IOU, ASA와 다른 Vendor의 Appliance들을 작동시킨다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/network/network/gns3/" /><meta property="article:section" content="docs" />
+
+
+
+<title>GNS3 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/natwork-1/" class="">Network</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/packet/" class="">Network Packet</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/portnumber/" class="">Network PortNumber</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/sdn/" class="">SDN</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/3tier/" class="">3Tier</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/gns3/" class="active">GNS3</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/security/" class="">Network Security</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/network/network/firewall/" class="">Firewall</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>GNS3</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="네트워크-실습을-위한-gns3-설치">
+  네트워크 실습을 위한 GNS3 설치
+  <a class="anchor" href="#%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%8b%a4%ec%8a%b5%ec%9d%84-%ec%9c%84%ed%95%9c-gns3-%ec%84%a4%ec%b9%98">#</a>
+</h1>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<hr>
+<blockquote>
+<h4 id="gns3-download-linkhttpswwwgns3com">
+  <a href="https://www.gns3.com/">GNS3 Download Link</a>
+  <a class="anchor" href="#gns3-download-linkhttpswwwgns3com">#</a>
+</h4>
+</blockquote>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<p><img src="/Network/GNS3/GNS01.png" alt="GNS3" /></p>
+<ul>
+<li><strong>상단의 GNS3 다운로드 링크를 클릭하여 GNS3에 접속 후, 로그인 혹은 회원가입을 진행합니다.</strong></li>
+</ul>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<p><img src="/Network/GNS3/GNS02.png" alt="GNS3" /></p>
+<ul>
+<li><strong>로그인 후, Download를 클릭하여 운영체제에 맞는 GNS3 설치파일을 다운로드 합니다.</strong></li>
+</ul>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<p><img src="/Network/GNS3/GNS03.png" alt="GNS3" />
+<img src="/Network/GNS3/GNS03-1.png" alt="GNS3" /></p>
+<ul>
+<li><strong>기본 값으로 설치를 진행합니다. 단 솔라윈드 톨킷은 설치하지 않습니다.</strong></li>
+</ul>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<p><img src="/Network/GNS3/GNS04.png" alt="GNS3" /></p>
+<ul>
+<li><strong>GNS3의 설치가 완료되었습니다.</strong></li>
+</ul>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<p><img src="/Network/GNS3/GNS05.png" alt="GNS3" /></p>
+<ul>
+<li><strong>GNS3가 설치되면 GNS3를 실행시킵니다.</strong></li>
+<li><strong>설정에 맞는 사항을 체크합니다. 여기서는 첫 번째 항목을 체크하겠습니다.</strong>
+<blockquote class="book-hint info">
+  <h4 id="1-run-appliances-in-a-virtual-machine">
+  1. <strong>Run appliances in a virtual machine</strong>
+  <a class="anchor" href="#1-run-appliances-in-a-virtual-machine">#</a>
+</h4>
+<ul>
+<li>가상 머신을 통하여 최신 IOS를 포함한 IOSv, IOU, ASA와 다른 Vendor의 Appliance들을 작동시킨다.</li>
+<li>단 이 첫 번째 세팅은 설명에서 요구하듯이 GNS3 VM을 요구한다.</li>
+</ul>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h4 id="2-run-appliances-on-my-local-computer">
+  2. <strong>Run appliances on my local computer</strong>
+  <a class="anchor" href="#2-run-appliances-on-my-local-computer">#</a>
+</h4>
+<ul>
+<li>로컬 컴퓨터, 즉 가상 머신이나 다른 서버를 통하지 않고 자신의 컴퓨터 내부에서 Appliance들을 작동시킨다.</li>
+</ul>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h4 id="3-run-appliances-on-a-remote-server-advanced-usage">
+  3. <strong>Run appliances on a remote server (advanced usage)</strong>
+  <a class="anchor" href="#3-run-appliances-on-a-remote-server-advanced-usage">#</a>
+</h4>
+<ul>
+<li>자신의 컴퓨터, 자신의 가상 머신이 아닌 외부 서버의 컴퓨터, 외부 서버의 가상 머신에서 Appliance들을 작동시킨다.</li>
+</ul>
+
+</blockquote>
+</li>
+</ul>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<p><img src="/Network/GNS3/GNS06.png" alt="GNS3" /></p>
+<ul>
+<li><strong>다음으로는 서버의 경로와 호스트 주소, 포트번호를 설정하는 화면이 나옵니다.</strong></li>
+<li><strong>여기서는 기본 값으로 설치를 진행하겠습니다.</strong></li>
+</ul>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<p><img src="/Network/GNS3/GNS0.png" alt="GNS3" /></p>
+<ul>
+<li><strong>다음은 VMware 혹은 VirtBOX를 GNS3의 연동합니다.</strong></li>
+<li><strong>에러가 따는 경우 <a href="https://my.vmware.com/kr/web/vmware/details?productId=734&amp;downloadGroup=PLAYER-1400-VIX1170">VIX</a>를 설치 후 진행합니다.</strong></li>
+</ul>
+<h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-16">
+  
+  <a class="anchor" href="#heading-16">#</a>
+</h1>
+<p><img src="/Network/GNS3/GNS0.png" alt="GNS3" /></p>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-17">
+  
+  <a class="anchor" href="#heading-17">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-18">
+  
+  <a class="anchor" href="#heading-18">#</a>
+</h1>
+<p><img src="/Network/GNS3/GNS0.png" alt="GNS3" /></p>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+<h1 id="heading-19">
+  
+  <a class="anchor" href="#heading-19">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-20">
+  
+  <a class="anchor" href="#heading-20">#</a>
+</h1>
+<p><img src="/Network/GNS3/GNS0.png" alt="GNS3" /></p>
+<ul>
+<li>
+<hr>
+</li>
+</ul>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

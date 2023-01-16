@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="aws 총정리#Global service = can`t choose a region IAN##IAM (Identity and Access Management, Global service) root account create by default, shouldn`t be used or shared Users are people within your organization, and can be grouped Group only contain users, not other groups -&gt; Group can`t contain other group Users don`t have to belong to a group, and usre can belong to multiple groups User or Groups can be assigned JSON documents called polcies These polices define the permissions of the users In AWS you apply the least privilege principle: don`t give more permissions than a user needs #IAM Policies inheritance consists of">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="aws SAA 총정리" />
+<meta property="og:description" content="aws 총정리#Global service = can`t choose a region IAN##IAM (Identity and Access Management, Global service) root account create by default, shouldn`t be used or shared Users are people within your organization, and can be grouped Group only contain users, not other groups -&gt; Group can`t contain other group Users don`t have to belong to a group, and usre can belong to multiple groups User or Groups can be assigned JSON documents called polcies These polices define the permissions of the users In AWS you apply the least privilege principle: don`t give more permissions than a user needs #IAM Policies inheritance consists of" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/aws/awssaa/saa_all/" /><meta property="article:section" content="docs" />
+
+
+
+<title>aws SAA 총정리 | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>aws SAA 총정리</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ian"><strong>IAN</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ec2"><strong>EC2</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#elastic-ip"><strong>Elastic IP</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="aws-총정리">
+  <strong>aws 총정리</strong>
+  <a class="anchor" href="#aws-%ec%b4%9d%ec%a0%95%eb%a6%ac">#</a>
+</h1>
+<hr>
+<ul>
+<li><strong>Global service = can`t choose a region</strong></li>
+</ul>
+<h3 id="ian">
+  <strong>IAN</strong>
+  <a class="anchor" href="#ian">#</a>
+</h3>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<ul>
+<li><strong>IAM (Identity and Access Management, Global service)</strong>
+<ul>
+<li>root account create by default, shouldn`t be used or shared</li>
+<li><strong>Users are people within your organization, and can be grouped</strong></li>
+<li>Group only contain users, not other groups -&gt; Group can`t contain other group</li>
+<li><strong>Users don`t have to belong to a group, and usre can belong to multiple groups</strong></li>
+<li>User or Groups can be assigned JSON documents called polcies
+<ul>
+<li>These polices define the permissions of the users</li>
+<li>In AWS you apply the least privilege principle: don`t give more permissions than a user needs</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>IAM Policies inheritance</strong>
+<ul>
+<li>
+<p>consists of</p>
+<ul>
+<li>Version : policy language version, always include &ldquo;2012-10-17&rdquo;</li>
+<li>Id : an identifier for the policy (optional)</li>
+<li>Statement : one or more individual statements (required)</li>
+</ul>
+</li>
+<li>
+<p>Satements consists of</p>
+<ul>
+<li>Sid : an identifier for the statement (optional)</li>
+<li>Effect : whether the statement aloows or denies access (Allow, Deny)</li>
+<li>Principal: account/user/role to which this policy applied to</li>
+<li>Action : list of actions this policy allows or denies</li>
+<li>Resource : list of resources to which the actions applied to</li>
+<li>Condition : conditions for when this policy is in effect (optional)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<p> </p>
+<ul>
+<li>
+<p><strong>IAN Password Policy</strong></p>
+<ul>
+<li><strong>Strong passwords = higher security for your account</strong></li>
+<li><strong>In AWS, you can setup a password policy:</strong>
+<ul>
+<li>Set a minimum password length</li>
+<li>Requrire specific character types:
+<ul>
+<li>including uppercase letters</li>
+<li>lowercase letters</li>
+<li>numbers</li>
+<li>non-alphanumeric charcters</li>
+</ul>
+</li>
+<li>Allow all IAM users to change their own passwords</li>
+<li>Require users to change their password after some time (password expiration)</li>
+<li>Prevent password rescue</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>MFA</strong></p>
+<ul>
+<li>MFA ( Multi Factor Authentication )
+<ul>
+<li>MFA = password you know + security device you own</li>
+<li>Virtual MFA device
+<ul>
+<li>google authenticator(phone only), Authy (Multi-device)</li>
+</ul>
+</li>
+<li>Universal 2nd Factor (U2F) Security Key</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>To access AWS</strong>
+<ul>
+<li>AWS Management console / password + MFA</li>
+<li>AWS Command Line Interface(CLI) / access keys</li>
+<li>AWS Software Deveploper Kit (SDK) / acccess Keys</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<p> </p>
+<ul>
+<li><strong>Cloud shell</strong>
+&rsquo;&rsquo;&rsquo;
+· 미국 동부 (오하이오 주)
+· 미국 동부 (버지니아 주)
+· 미국 서부 (오리건 주)
+· 아시아 태평양 (뭄바이)
+· 아시아 태평양 (시드니)
+· 아시아 태평양(도쿄)
+· 유럽(프랑크푸르트)
+· 유럽(아일랜드)
+&rsquo;''</li>
+</ul>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<h3 id="ec2">
+  <strong>EC2</strong>
+  <a class="anchor" href="#ec2">#</a>
+</h3>
+<ul>
+<li>On-Demand Instanceds ( Pay for what you use) : short workload, predictble pricing</li>
+<li>Reserved ( Up to 75% discount compared to On-demand) : (MINIMUM 1 Year)
+<ul>
+<li>Reserved Instances : Long workloads</li>
+<li>Convertible Reserved Instances : long workloads with flexible instances
+<ul>
+<li>can change the EC2 instance type</li>
+<li>Up to 54% dicount</li>
+</ul>
+</li>
+<li>Scheduled Reserved Instances : example - every Thursday between 3 and 6 pm</li>
+</ul>
+</li>
+<li>Spot Insances : short workloads, cheap, can lose instances (less reliable)
+<ul>
+<li>Can get discount of up to 90% compared to On-demand</li>
+<li>Instances that you can &ldquo;lose&rdquo; at any point of time if your max price is less than the current spot price</li>
+</ul>
+</li>
+<li>Dedicated Hosts : book an entire physical server, control instance placemenet
+<ul>
+<li>Allocated for your account for a 3-year period reservation</li>
+<li>More expensive</li>
+<li>Useful for software that have complicated licensing model (BYOL-Bring Your Own License)</li>
+<li>Or for companies thay have strong regulatory or compliance needs</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<p> </p>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<h3 id="elastic-ip">
+  <strong>Elastic IP</strong>
+  <a class="anchor" href="#elastic-ip">#</a>
+</h3>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<ul>
+<li><strong>can only have 5 Elastic IP in account (can ask AWS to increase that)</strong></li>
+</ul>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ian"><strong>IAN</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ec2"><strong>EC2</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#elastic-ip"><strong>Elastic IP</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

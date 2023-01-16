@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Amazon Web Service#Aws와 CloudComputing#Amazon Web Services ( AWS ) AWS Cloud Computing 와 aws Cloud Computing의 종류 IaaS PaaS SaaS On Premise 서버와 Cloud 서버의 차이 소유자 ( Owner ) 용량 ( Capacity ) 렌탈 서버 ( 공유 서버 )와 Public의 차이 렌탈 서버 전용 서버와 가상 전용 서버 렌탈 서버와 AWS ( Public )의 차이 Private Cloud와 Public Cloud AWS에서의 Private Cloud의 정의 AWS 서비스의 구성 AWS Computing#EC2 EC2 상태의 종류 EC2 구매옵션 Lightsail Lightsail의 유료 Plan Lightsail&amp; EC2 ECS Linux Container Kernel Docker Lambda Lambda EC2 vs Lambda Batch amazonwebservice Batch의 구성요소 Batch Group Elastic Beanstalk Elastic Beanstalk의 장점 #AWS Database#Amazon RDS ( Relational Database Service ) DB Instance DB Instance Storage Multi-AZ Read Replica Automated Backup Enhanced Monitoring RDS vs DB in EC2 Amazon DynamoDB DynamoDB의 특징 Amazon ElastiCache Cache In Memory Cache ( In Memory DataBase ) Memcache ElastiCache Amazon Redshift Redshift Redshift의 구성 Data Warehouse(DW) ETL(Extract, Tranform, Load) BI(Business Intelligence) Redshift vs RDS Amazon Aurora #AWS Storage#AWS Network#AWS Migrate#AWS Developer#AWS Management#AWS Security#AWS Analysis#">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Amazon Web Services" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mung0001.github.io/docs/cloud/aws/" />
+
+<title>Amazon Web Services | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="https://mung0001.github.io/docs/cloud/aws/index.xml" title="뭉게뭉게" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Amazon Web Services</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws와-cloudcomputinghttpsmung0001githubiodocsawsamazonwebserviceawseb9e80"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/">Aws와 CloudComputing</a></strong></a></li>
+        <li><a href="#aws-computinghttpsmung0001githubiodocsawsamazonwebserviceaws_computing"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/">AWS Computing</a></strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-databasehttpsmung0001githubiodocsawsamazonwebserviceaws_database"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/">AWS Database</a></strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-storagehttpsmung0001githubiodocsawsamazonwebserviceaws_storage"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_storage/">AWS Storage</a></strong></a></li>
+        <li><a href="#aws-networkhttpsmung0001githubiodocsawsamazonwebserviceaws_network"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_network/">AWS Network</a></strong></a></li>
+        <li><a href="#aws-migratehttpsmung0001githubiodocsawsamazonwebserviceaws_migrate"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_migrate/">AWS Migrate</a></strong></a></li>
+        <li><a href="#aws-developerhttpsmung0001githubiodocsawsamazonwebserviceaws_developer"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_developer/">AWS Developer</a></strong></a></li>
+        <li><a href="#aws-managementhttpsmung0001githubiodocsawsamazonwebserviceaws_management"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_management/">AWS Management</a></strong></a></li>
+        <li><a href="#aws-securityhttpsmung0001githubiodocsawsamazonwebserviceaws_security"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_security/">AWS Security</a></strong></a></li>
+        <li><a href="#aws-analysishttpsmung0001githubiodocsawsamazonwebserviceaws_analysis"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_analysis/">AWS Analysis</a></strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h1 id="amazon-web-service">
+  <strong>Amazon Web Service</strong>
+  <a class="anchor" href="#amazon-web-service">#</a>
+</h1>
+<p><img src="/Line/AWS.png" alt="amazonwebservice" /></p>
+<h3 id="aws와-cloudcomputinghttpsmung0001githubiodocsawsamazonwebserviceawseb9e80">
+  <strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/">Aws와 CloudComputing</a></strong>
+  <a class="anchor" href="#aws%ec%99%80-cloudcomputinghttpsmung0001githubiodocsawsamazonwebserviceawseb9e80">#</a>
+</h3>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#amazon-web-services--aws-">Amazon Web Services ( AWS )</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#aws">AWS</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#cloud-computing-%EC%99%80-aws">Cloud Computing 와 aws</a></li>
+</ul>
+</li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#cloud-computing%EC%9D%98-%EC%A2%85%EB%A5%98">Cloud Computing의 종류</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#infratructure-as-a-service--iaas">IaaS</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#platform-as-a-service">PaaS</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#software-as-as-service">SaaS</a></li>
+</ul>
+</li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#on-premise-%EC%84%9C%EB%B2%84%EC%99%80-cloud-%EC%84%9C%EB%B2%84%EC%9D%98-%EC%B0%A8%EC%9D%B4">On Premise 서버와 Cloud 서버의 차이</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#%EC%86%8C%EC%9C%A0%EC%9E%90--owner-">소유자 ( Owner )</a></li>
+<li><a href="">용량 ( Capacity )</a></li>
+</ul>
+</li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#%EB%A0%8C%ED%83%88-%EC%84%9C%EB%B2%84--%EA%B3%B5%EC%9C%A0-%EC%84%9C%EB%B2%84-%EC%99%80-public%EC%9D%98-%EC%B0%A8%EC%9D%B4">렌탈 서버 ( 공유 서버 )와 Public의 차이</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#%EB%A0%8C%ED%83%88-%EC%84%9C%EB%B2%84">렌탈 서버</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#%EC%A0%84%EC%9A%A9-%EC%84%9C%EB%B2%84%EC%99%80-%EA%B0%80%EC%83%81-%EC%A0%84%EC%9A%A9-%EC%84%9C%EB%B2%84">전용 서버와 가상 전용 서버</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#%EB%A0%8C%ED%83%88-%EC%84%9C%EB%B2%84%EC%99%80-aws--public-%EC%9D%98-%EC%B0%A8%EC%9D%B4">렌탈 서버와 AWS ( Public )의 차이</a></li>
+</ul>
+</li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#private-cloud%EC%99%80-public-cloud">Private Cloud와 Public Cloud</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#aws%EC%97%90%EC%84%9C%EC%9D%98-private-cloud%EC%9D%98-%EC%A0%95%EC%9D%98">AWS에서의 Private Cloud의 정의</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/#aws-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%9D%98-%EA%B5%AC%EC%84%B1">AWS 서비스의 구성</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="aws-computinghttpsmung0001githubiodocsawsamazonwebserviceaws_computing">
+  <strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/">AWS Computing</a></strong>
+  <a class="anchor" href="#aws-computinghttpsmung0001githubiodocsawsamazonwebserviceaws_computing">#</a>
+</h3>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/">EC2</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#ec2-%EC%83%81%ED%83%9C%EC%9D%98-%EC%A2%85%EB%A5%98">EC2 상태의 종류</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#ec2-%EA%B5%AC%EB%A7%A4%EC%98%B5%EC%85%98">EC2 구매옵션</a></li>
+</ul>
+</li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#lightsail">Lightsail</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#lightsail%EC%9D%98-%EC%9C%A0%EB%A3%8C-plan">Lightsail의 유료 Plan</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#lightsail-ec2">Lightsail&amp; EC2</a></li>
+</ul>
+</li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#ecs--elastic-container-service-">ECS</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#linux-container">Linux Container</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#kernel">Kernel</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#docker">Docker</a></li>
+</ul>
+</li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#lambda">Lambda</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#lamda-function%EC%9D%98-%EC%A0%95%EC%9D%98%EC%99%80-%EA%B5%AC%EC%84%B1">Lambda</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#ec2-vs-lambda">EC2 vs Lambda</a></li>
+</ul>
+</li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#batch">Batch</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#amazonwebservice-batch%EC%9D%98-%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C">amazonwebservice Batch의 구성요소</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#batch-group">Batch Group</a></li>
+</ul>
+</li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#elastic-beanstalk">Elastic Beanstalk</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/#elastic-beanstalk%EC%9D%98-%EC%9E%A5%EC%A0%90">Elastic Beanstalk의 장점</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h3 id="aws-databasehttpsmung0001githubiodocsawsamazonwebserviceaws_database">
+  <strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/">AWS Database</a></strong>
+  <a class="anchor" href="#aws-databasehttpsmung0001githubiodocsawsamazonwebserviceaws_database">#</a>
+</h3>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#amazon-rds--relational-database-service-">Amazon RDS ( Relational Database Service )</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#db-instance">DB Instance</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#db-instance-storage">DB Instance Storage</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#multi-az">Multi-AZ</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#read-replica">Read Replica</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#automated-backup">Automated Backup</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#enhanced-monitoring">Enhanced Monitoring</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#rds-vs-db-in-ec2">RDS vs DB in EC2</a></li>
+</ul>
+</li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#amazon-dynamodb">Amazon DynamoDB</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#dynamodb%EC%9D%98-%ED%8A%B9%EC%A7%95">DynamoDB의 특징</a></li>
+</ul>
+</li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#amazon-elasticache">Amazon ElastiCache</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#cache">Cache</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#in-memory-cache--in-memory-database-">In Memory Cache ( In Memory DataBase )</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#memcache">Memcache</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#elasticache">ElastiCache</a></li>
+</ul>
+</li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#amazon-redshift">Amazon Redshift</a>
+<ul>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#redshift">Redshift</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#redshift%EC%9D%98-%EA%B5%AC%EC%84%B1">Redshift의 구성</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#data-warehousedw">Data Warehouse(DW)</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#etlextract-tranform-load">ETL(Extract, Tranform, Load)</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#bibusiness-intelligence">BI(Business Intelligence)</a></li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#redshift-vs-rds">Redshift vs RDS</a></li>
+</ul>
+</li>
+<li><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/#amazon-aurora">Amazon Aurora</a></li>
+</ul>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<h3 id="aws-storagehttpsmung0001githubiodocsawsamazonwebserviceaws_storage">
+  <strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_storage/">AWS Storage</a></strong>
+  <a class="anchor" href="#aws-storagehttpsmung0001githubiodocsawsamazonwebserviceaws_storage">#</a>
+</h3>
+<ul>
+<li><a href=""></a>
+<ul>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+</ul>
+</li>
+</ul>
+<h3 id="aws-networkhttpsmung0001githubiodocsawsamazonwebserviceaws_network">
+  <strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_network/">AWS Network</a></strong>
+  <a class="anchor" href="#aws-networkhttpsmung0001githubiodocsawsamazonwebserviceaws_network">#</a>
+</h3>
+<h3 id="aws-migratehttpsmung0001githubiodocsawsamazonwebserviceaws_migrate">
+  <strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_migrate/">AWS Migrate</a></strong>
+  <a class="anchor" href="#aws-migratehttpsmung0001githubiodocsawsamazonwebserviceaws_migrate">#</a>
+</h3>
+<h3 id="aws-developerhttpsmung0001githubiodocsawsamazonwebserviceaws_developer">
+  <strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_developer/">AWS Developer</a></strong>
+  <a class="anchor" href="#aws-developerhttpsmung0001githubiodocsawsamazonwebserviceaws_developer">#</a>
+</h3>
+<h3 id="aws-managementhttpsmung0001githubiodocsawsamazonwebserviceaws_management">
+  <strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_management/">AWS Management</a></strong>
+  <a class="anchor" href="#aws-managementhttpsmung0001githubiodocsawsamazonwebserviceaws_management">#</a>
+</h3>
+<h3 id="aws-securityhttpsmung0001githubiodocsawsamazonwebserviceaws_security">
+  <strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_security/">AWS Security</a></strong>
+  <a class="anchor" href="#aws-securityhttpsmung0001githubiodocsawsamazonwebserviceaws_security">#</a>
+</h3>
+<h3 id="aws-analysishttpsmung0001githubiodocsawsamazonwebserviceaws_analysis">
+  <strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_analysis/">AWS Analysis</a></strong>
+  <a class="anchor" href="#aws-analysishttpsmung0001githubiodocsawsamazonwebserviceaws_analysis">#</a>
+</h3>
+<p><img src="/Line/AWS2.png" alt="amazonwebservice" /></p>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws와-cloudcomputinghttpsmung0001githubiodocsawsamazonwebserviceawseb9e80"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/">Aws와 CloudComputing</a></strong></a></li>
+        <li><a href="#aws-computinghttpsmung0001githubiodocsawsamazonwebserviceaws_computing"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/">AWS Computing</a></strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-databasehttpsmung0001githubiodocsawsamazonwebserviceaws_database"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/">AWS Database</a></strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-storagehttpsmung0001githubiodocsawsamazonwebserviceaws_storage"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_storage/">AWS Storage</a></strong></a></li>
+        <li><a href="#aws-networkhttpsmung0001githubiodocsawsamazonwebserviceaws_network"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_network/">AWS Network</a></strong></a></li>
+        <li><a href="#aws-migratehttpsmung0001githubiodocsawsamazonwebserviceaws_migrate"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_migrate/">AWS Migrate</a></strong></a></li>
+        <li><a href="#aws-developerhttpsmung0001githubiodocsawsamazonwebserviceaws_developer"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_developer/">AWS Developer</a></strong></a></li>
+        <li><a href="#aws-managementhttpsmung0001githubiodocsawsamazonwebserviceaws_management"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_management/">AWS Management</a></strong></a></li>
+        <li><a href="#aws-securityhttpsmung0001githubiodocsawsamazonwebserviceaws_security"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_security/">AWS Security</a></strong></a></li>
+        <li><a href="#aws-analysishttpsmung0001githubiodocsawsamazonwebserviceaws_analysis"><strong><a href="https://mung0001.github.io/docs/aws/amazonwebservice/aws_analysis/">AWS Analysis</a></strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

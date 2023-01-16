@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Git과 Github##깃 ( git )##Git 공식 홈페이지 에서 다운로드
+형상 관리 도구 ( Configuration Management Tool )인 분산형 관리 시스템
+무료, 공개소프트웨어 서비스
+소스코드를 주고 받을 필요 없이, 같은 파일을 여러 명이 동시에 작업하는 병렬 개발이 가능
+분산 버전관리이기 때문에 인터넷이 연결되지 않은 곳에서도 개발을 진행할 수 있으며, 중앙 저장소가 날라가벌도 다시 원상복구가 가능
+#git의 특징##버전관리 깃에서 버전이란 문서를 수정하고 저장할 때마다 생기는 지점">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Git" />
+<meta property="og:description" content="Git과 Github##깃 ( git )##Git 공식 홈페이지 에서 다운로드
+형상 관리 도구 ( Configuration Management Tool )인 분산형 관리 시스템
+무료, 공개소프트웨어 서비스
+소스코드를 주고 받을 필요 없이, 같은 파일을 여러 명이 동시에 작업하는 병렬 개발이 가능
+분산 버전관리이기 때문에 인터넷이 연결되지 않은 곳에서도 개발을 진행할 수 있으며, 중앙 저장소가 날라가벌도 다시 원상복구가 가능
+#git의 특징##버전관리 깃에서 버전이란 문서를 수정하고 저장할 때마다 생기는 지점" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mung0001.github.io/docs/system/development/git/git/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Git | 뭉게뭉게</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+<meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
+
+</head>
+<body>
+  <div class="background">
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex" style="max-width:100%;" >
+    
+    <aside style="padding-left: 1em;" class="book-menu">
+      <div class="book-menu-content">
+      
+  
+<nav styles="background-color:red; position=none;">
+구름이 
+<h2 class="book-brand">
+  <a href="/"><span>뭉게뭉게</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/" class="">Infra</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Docker</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/docker/" class="collapsed ">Docker docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>System</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/linux/" class="collapsed ">Linux</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/system/" class="collapsed ">OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/window/" class="collapsed ">Windows Servers</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/macos/" class="collapsed ">Mac OS</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/git/git/" class="active">Git</a>
+  
+
+</li>
+      
+    
+      
+        <li >
+
+  
+  <a href="/docs/system/development/git/hugo/" class="">Hugo</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Network</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Database</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/database/sqld/" class="collapsed ">SQLP&amp; SQLD</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+ 
+    </aside>
+
+
+
+    
+    <div style="padding-left: 2%;" class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Git</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#git과-github"><strong>Git과 Github</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#깃--git-"><strong>깃 ( git )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#git의-특징"><strong>git의 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#git-파일의-단계"><strong>git 파일의 단계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#branch"><strong>Branch</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#git-원격접속"><strong>git 원격접속</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#git-명령어"><strong>git 명령어</strong></a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      <div>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ICAYRM98zmyBXxtc" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<br>
+<br>
+<br>
+      
+  <article class="markdown"><h2 id="git과-github">
+  <strong>Git과 Github</strong>
+  <a class="anchor" href="#git%ea%b3%bc-github">#</a>
+</h2>
+<h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h3 id="깃--git-">
+  <strong>깃 ( git )</strong>
+  <a class="anchor" href="#%ea%b9%83--git-">#</a>
+</h3>
+<h1 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h1>
+<p><img src="/gitlogo.png" alt="git" /></p>
+<ul>
+<li>
+<p><a href="https://git-scm.com">Git 공식 홈페이지</a> 에서 다운로드</p>
+</li>
+<li>
+<p>형상 관리 도구 ( Configuration Management Tool )인  <strong>분산형 관리 시스템</strong></p>
+<ul>
+<li>
+<p>무료, 공개소프트웨어 서비스</p>
+</li>
+<li>
+<p>소스코드를 주고 받을 필요 없이, 같은 파일을 여러 명이 동시에 작업하는 병렬 개발이 가능</p>
+</li>
+<li>
+<p>분산 버전관리이기 때문에 인터넷이 연결되지 않은 곳에서도 개발을 진행할 수 있으며, 중앙 저장소가 날라가벌도 다시 원상복구가 가능</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-2">
+  
+  <a class="anchor" href="#heading-2">#</a>
+</h1>
+<h3 id="git의-특징">
+  <strong>git의 특징</strong>
+  <a class="anchor" href="#git%ec%9d%98-%ed%8a%b9%ec%a7%95">#</a>
+</h3>
+<h1 id="heading-3">
+  
+  <a class="anchor" href="#heading-3">#</a>
+</h1>
+<ol>
+<li><strong>버전관리</strong>
+<ul>
+<li>
+<p>깃에서 버전이란 문서를 수정하고 저장할 때마다 생기는 지점</p>
+</li>
+<li>
+<p>원래 파일 이름은 그대로 유지하면서 파일에서 무엇을 변경했는 지 변경 시점마다 저장이 가능</p>
+</li>
+<li>
+<p>각 버전마다 작업했던 내용을 확인할 수 있음</p>
+</li>
+<li>
+<p>과거의 버전으로 회귀가 가능</p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><strong>Stage 와 Commit</strong>
+<img src="/ST.png" alt="ST" />
+<ul>
+<li>
+<p><strong>작업 트리:</strong> 파일 수정, 저장 등의 작업을 하는 디렉토리</p>
+</li>
+<li>
+<p><strong>스테이지:</strong> 버전으로 만들 파일이 대기하는 장소</p>
+</li>
+<li>
+<p><strong>저장소:</strong> 스테이지에서 대기하고 있던 파일들을 버전으로 만들어 저장하는 장소</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-4">
+  
+  <a class="anchor" href="#heading-4">#</a>
+</h1>
+<p><img src="/ST2.png" alt="ST" /></p>
+<ul>
+<li>hello.txt 파일 문서를 수정하고 저장하면 그 파일은 작업 트리에서 스테이지로 이동</li>
+</ul>
+<h1 id="heading-5">
+  
+  <a class="anchor" href="#heading-5">#</a>
+</h1>
+<p><img src="/ST3.png" alt="ST" /></p>
+<ul>
+<li>파일 수정을 마쳤다면 버전을 만들기 위해 Commit 명령을 내림</li>
+<li>Commit 명령이 내려지면 새로운 버전이 생성되며 스테이지에 대기하던 파일 모두 저장소에 저장 됨</li>
+</ul>
+<h1 id="heading-6">
+  
+  <a class="anchor" href="#heading-6">#</a>
+</h1>
+<hr>
+<hr>
+<ol start="2">
+<li><strong>백업</strong></li>
+</ol>
+<ul>
+<li><strong>원격 저장소</strong>
+<ul>
+<li>
+<p>깃에서는 <strong>지역( Local ) 저장소와 원격( Remote ) 저장소를 연결</strong>해 버전 관리하는 파일들을 쉽게 백업이 가능</p>
+</li>
+<li>
+<p>원격 저장소에서 깃을 사용가능</p>
+</li>
+<li>
+<p>지역 저장소를 백업 가능</p>
+</li>
+<li>
+<p>협업 프로젝트에 사용 가능</p>
+</li>
+<li>
+<p>다른 사람의 소스 관찰 및 오픈 소스 참여 가능</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-7">
+  
+  <a class="anchor" href="#heading-7">#</a>
+</h1>
+<ol start="3">
+<li><strong>협업</strong></li>
+</ol>
+<h1 id="heading-8">
+  
+  <a class="anchor" href="#heading-8">#</a>
+</h1>
+<h3 id="git-파일의-단계">
+  <strong>git 파일의 단계</strong>
+  <a class="anchor" href="#git-%ed%8c%8c%ec%9d%bc%ec%9d%98-%eb%8b%a8%ea%b3%84">#</a>
+</h3>
+<h1 id="heading-9">
+  
+  <a class="anchor" href="#heading-9">#</a>
+</h1>
+<p><img src="/GF.png" alt="GF" /></p>
+<ul>
+<li>
+<p><strong>untracke:</strong> 한 번도 스테이지 상태에 올라가지 않은 파일</p>
+</li>
+<li>
+<p><strong>tracked:</strong> 한 번이라도 스테이지 상태에 올라간 파일</p>
+</li>
+<li>
+<p><strong>unmodified:</strong> 스테이지 상태에서 commit이 실행된 후 파일의 상태</p>
+</li>
+<li>
+<p><strong>modified:</strong> unmodified 상태에서 수정된 후 파일의 상태</p>
+</li>
+<li>
+<p><strong>.gitgnore:</strong> 버전 관리 중인 디렉토리 안에 버전 관리를 하지 않을 특정 파일 또는 디렉토리가 있는 경우 .gitignore의 목록을 지정 가능</p>
+</li>
+</ul>
+<h1 id="heading-10">
+  
+  <a class="anchor" href="#heading-10">#</a>
+</h1>
+<h2 id="branch">
+  <strong>Branch</strong>
+  <a class="anchor" href="#branch">#</a>
+</h2>
+<h1 id="heading-11">
+  
+  <a class="anchor" href="#heading-11">#</a>
+</h1>
+<p><img src="/GB.png" alt="GB" /></p>
+<ul>
+<li>Branch는 분기를 요구에 따른 나타냄</li>
+</ul>
+<hr>
+<hr>
+<h2 id="git-원격접속">
+  <strong>git 원격접속</strong>
+  <a class="anchor" href="#git-%ec%9b%90%ea%b2%a9%ec%a0%91%ec%86%8d">#</a>
+</h2>
+<h1 id="heading-12">
+  
+  <a class="anchor" href="#heading-12">#</a>
+</h1>
+<ul>
+<li><strong>SSH ( Secure SHell )</strong>
+<ul>
+<li>
+<p>보안이 강화된 안전한 방법으로 정보를 교환하는 방식</p>
+</li>
+<li>
+<p>Private key, Public key를 한 쌍으로 묶어 컴퓨터를 인증</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>
+<p>key 생성 Private key를 복사 후 로그인 사용자 아이콘의 Setting을 클릭</p>
+</li>
+<li>
+<p>SSH and GPG keys 선택 후 퍼블릭 키를 추가하기 위해 New SSH key 선택</p>
+</li>
+<li>
+<p>퍼블릭 키를 복사 ( 비밀번호 확인 )</p>
+</li>
+<li>
+<p>새로운 저장소를 생성 후 <a href="http://localhost:1313/docs/%E3%85%8E%E3%85%8E%E3%85%8E/git/#git-%EB%AA%85%EB%A0%B9%EC%96%B4">명령어</a>를 통해 원격 저장소와 연결</p>
+</li>
+</ol>
+<h1 id="heading-13">
+  
+  <a class="anchor" href="#heading-13">#</a>
+</h1>
+<hr>
+<hr>
+<h2 id="git-명령어">
+  <strong>git 명령어</strong>
+  <a class="anchor" href="#git-%eb%aa%85%eb%a0%b9%ec%96%b4">#</a>
+</h2>
+<h1 id="heading-14">
+  
+  <a class="anchor" href="#heading-14">#</a>
+</h1>
+<ul>
+<li><strong>사용자 이름 설정 ( 시스템 전체 )</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git config <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> user<span style="color:#f92672">.</span>name [ user name ]
+</span></span></code></pre></div><ul>
+<li><strong>사용자 이메일 설정 ( 시스템 전체 )</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git config <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> user<span style="color:#f92672">.</span>email [ user email ]
+</span></span></code></pre></div><ul>
+<li><strong>깃 초기화</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git init
+</span></span></code></pre></div><ul>
+<li><strong>저장소 상태확인</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git status
+</span></span></code></pre></div><ul>
+<li><strong>파일 스테이징</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git add <span style="color:#e6db74">&#34;수정파일&#34;</span>
+</span></span></code></pre></div><ul>
+<li><strong>Commit</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git commit <span style="color:#f92672">--</span>amend
+</span></span></code></pre></div><ul>
+<li><strong>방금 출력한 Commit 메시지 수정</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git commit <span style="color:#f92672">-</span>m <span style="color:#e6db74">&#34;message&#34;</span>
+</span></span></code></pre></div><ul>
+<li><strong>git 버전 확인</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git log <span style="color:#f92672">/</span> git log <span style="color:#f92672">--</span>stat ( commit status )
+</span></span></code></pre></div><ul>
+<li><strong>변경 사항 확인</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git diff
+</span></span></code></pre></div><ul>
+<li><strong>작업 트리를 최신으로 되돌리기</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git checkout <span style="color:#f92672">--</span>[ file name ]
+</span></span></code></pre></div><ul>
+<li><strong>스테이징 되돌리기 일반 | 최신 커밋 전 | 최신 커밋과 스테이징 전 | 수정 전 상태 복구 x</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git reset HEAD [ File name ]
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">--</span>soft HEAD<span style="color:#f92672">^</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">--</span>mixed HEAD<span style="color:#f92672">^</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">--</span>hard HEAD<span style="color:#f92672">^</span>
+</span></span></code></pre></div><ul>
+<li><strong>브랜치 확인</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git branch
+</span></span></code></pre></div><ul>
+<li><strong>브렌치 생성</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git branch [ branch name ]
+</span></span></code></pre></div><ul>
+<li><strong>브렌치 제거</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git branch <span style="color:#f92672">-</span>D [ branch name ]
+</span></span></code></pre></div><ul>
+<li><strong>브렌치 이동</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git checkout [ branch name ]
+</span></span></code></pre></div><ul>
+<li><strong>브랜치 사이의 차이점 알아보기</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git log [ A ]<span style="color:#f92672">..</span>[ B ]
+</span></span></code></pre></div><ul>
+<li><strong>편집기 열리지 않게 하기</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git merge o2 <span style="color:#f92672">--</span>no<span style="color:#f92672">-</span>edit
+</span></span></code></pre></div><ul>
+<li><strong>편집기 열기</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git merge o2 edit
+</span></span></code></pre></div><ul>
+<li><strong>지역 저장소 생성</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git init [ Storage name ]
+</span></span><span style="display:flex;"><span>cd [ Storage name ]
+</span></span><span style="display:flex;"><span>vi [ any file ]
+</span></span><span style="display:flex;"><span>git add [ any file ]
+</span></span><span style="display:flex;"><span>git commit <span style="color:#f92672">-</span>m add [ any file ]
+</span></span></code></pre></div><ul>
+<li><strong>원격 저장소 연결</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git remote add origin [ copy address ]
+</span></span><span style="display:flex;"><span>git remote <span style="color:#f92672">-</span>v
+</span></span></code></pre></div><ul>
+<li><strong>원격 저장소에 파일 올리기 u | f, 지역과 원격 연결 1회 | 강제</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git push <span style="color:#f92672">-</span>u [ destination ] [ branch ]
+</span></span></code></pre></div><ul>
+<li><strong>원격 저장소에서 파일 내려 받기</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git pull [ source ] [ branch ]
+</span></span></code></pre></div><ul>
+<li><strong>SSH 키 생성</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ssh<span style="color:#f92672">-</span>keygen
+</span></span></code></pre></div><ul>
+<li><strong>SSH 주소로 원격 저장소 연결</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git init ssh<span style="color:#f92672">-</span>connect
+</span></span><span style="display:flex;"><span>cd ssh<span style="color:#f92672">-</span>connect
+</span></span><span style="display:flex;"><span>git remote add [ destination ] [ git<span style="color:#a6e22e">@github</span><span style="color:#f92672">.</span>com:username<span style="color:#a6e22e">@connect</span><span style="color:#f92672">-</span>ssh<span style="color:#f92672">.</span>git]
+</span></span></code></pre></div><ul>
+<li><strong>원격 저장소 복제</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>git clone [ git address]
+</span></span></code></pre></div><h1 id="heading-15">
+  
+  <a class="anchor" href="#heading-15">#</a>
+</h1>
+<hr>
+<hr>
+</article>
+ 
+      
+<div>
+
+<br>
+
+
+
+</div>
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside style="max-width: 14%;" class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#git과-github"><strong>Git과 Github</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#깃--git-"><strong>깃 ( git )</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#git의-특징"><strong>git의 특징</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#git-파일의-단계"><strong>git 파일의 단계</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#branch"><strong>Branch</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#git-원격접속"><strong>git 원격접속</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#git-명령어"><strong>git 명령어</strong></a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
