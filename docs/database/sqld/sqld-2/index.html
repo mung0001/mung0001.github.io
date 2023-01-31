@@ -20,13 +20,12 @@
 <meta property="og:url" content="https://mung0001.github.io/docs/database/sqld/sqld-2/" /><meta property="article:section" content="docs" />
 
 
-
 <title>SQLD : SQL 기본 | 뭉게뭉게</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.ffcce1416ac965bf6815bf4bdd99cf970182cd6ac9b30c72a81407197d550a70.js" integrity="sha256-/8zhQWrJZb9oFb9L3ZnPlwGCzWrJswxyqBQHGX1VCnA=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1960,7 +1959,7 @@ https://github.com/alex-shpak/hugo-book
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> table1.<span style="color:#66d9ef">column_name</span>, table2.<span style="color:#66d9ef">column_name</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> table1, table2
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> table1.<span style="color:#66d9ef">column_name</span> <span style="color:#f92672">=</span> table2.<span style="color:#66d9ef">column_name</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">위</span> SQL처럼 <span style="color:#960050;background-color:#1e0010">컬럼명</span> <span style="color:#960050;background-color:#1e0010">앞에</span> <span style="color:#960050;background-color:#1e0010">테이블</span> <span style="color:#960050;background-color:#1e0010">명을</span> <span style="color:#960050;background-color:#1e0010">기술해줘야</span> <span style="color:#960050;background-color:#1e0010">함</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">위</span> SQL<span style="color:#960050;background-color:#1e0010">처럼</span> <span style="color:#960050;background-color:#1e0010">컬럼명</span> <span style="color:#960050;background-color:#1e0010">앞에</span> <span style="color:#960050;background-color:#1e0010">테이블</span> <span style="color:#960050;background-color:#1e0010">명을</span> <span style="color:#960050;background-color:#1e0010">기술해줘야</span> <span style="color:#960050;background-color:#1e0010">함</span>
 </span></span></code></pre></div><h1 id="heading-60">
   
   <a class="anchor" href="#heading-60">#</a>
@@ -1982,7 +1981,7 @@ https://github.com/alex-shpak/hugo-book
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> E.ENAME, E.JOB, E.SAL, S.GRADE
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> EMP E, SALGRADE S
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> E.SAL <span style="color:#66d9ef">BETWEEN</span> S.LOSAL <span style="color:#66d9ef">AND</span> S.HSAL;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">위는</span> E의 SAL의 <span style="color:#960050;background-color:#1e0010">값을</span> S의 LOSAL과 HSAL <span style="color:#960050;background-color:#1e0010">범위에서</span> <span style="color:#960050;background-color:#1e0010">찾는</span> <span style="color:#960050;background-color:#1e0010">것이다</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">위는</span> E<span style="color:#960050;background-color:#1e0010">의</span> SAL<span style="color:#960050;background-color:#1e0010">의</span> <span style="color:#960050;background-color:#1e0010">값을</span> S<span style="color:#960050;background-color:#1e0010">의</span> LOSAL<span style="color:#960050;background-color:#1e0010">과</span> HSAL <span style="color:#960050;background-color:#1e0010">범위에서</span> <span style="color:#960050;background-color:#1e0010">찾는</span> <span style="color:#960050;background-color:#1e0010">것이다</span>.
 </span></span></code></pre></div><h1 id="heading-61">
   
   <a class="anchor" href="#heading-61">#</a>

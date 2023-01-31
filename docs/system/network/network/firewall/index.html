@@ -16,13 +16,12 @@
 <meta property="og:url" content="https://mung0001.github.io/docs/system/network/network/firewall/" /><meta property="article:section" content="docs" />
 
 
-
 <title>Firewall | 뭉게뭉게</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.ffcce1416ac965bf6815bf4bdd99cf970182cd6ac9b30c72a81407197d550a70.js" integrity="sha256-/8zhQWrJZb9oFb9L3ZnPlwGCzWrJswxyqBQHGX1VCnA=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1222,21 +1221,21 @@ https://github.com/alex-shpak/hugo-book
 <li>
 <p><strong>Block 존</strong></p>
 <ul>
-<li>Drop 존처럼 들어오는 모든 네트워크 연결은 거부되는데, 이에 대해 icmp-host-prohibited와 
+<li>Drop 존처럼 들어오는 모든 네트워크 연결은 거부되는데, 이에 대해 icmp-host-prohibited와
 icmp6-prohibited라는 응답 메시지를 보낸다.</li>
 </ul>
 </li>
 <li>
 <p><strong>Public 존</strong></p>
 <ul>
-<li>서비스를 제공하는 특별한 포트로의 연결만을 허용하고, 그 외 포트로의 연결은 모두 거부되며 
+<li>서비스를 제공하는 특별한 포트로의 연결만을 허용하고, 그 외 포트로의 연결은 모두 거부되며
 기본 Zone으로 사용</li>
 </ul>
 </li>
 <li>
 <p><strong>External 존</strong></p>
 <ul>
-<li>특별히 매스커레이딩 규칙이 적용되는 외부의 라우터를 위해 사용되며, 단지 내부로의 연결 요청 
+<li>특별히 매스커레이딩 규칙이 적용되는 외부의 라우터를 위해 사용되며, 단지 내부로의 연결 요청
 중에서 선택된 연결만을 허용</li>
 </ul>
 </li>
@@ -1249,7 +1248,7 @@ icmp6-prohibited라는 응답 메시지를 보낸다.</li>
 <li>
 <p><strong>Work 존</strong></p>
 <ul>
-<li>같은 회사에 위치한 네트워크를 위해 사용되며, 대부분 같은 네트워크에 위치한 다른 시스템을 
+<li>같은 회사에 위치한 네트워크를 위해 사용되며, 대부분 같은 네트워크에 위치한 다른 시스템을
 신뢰하고 오직 선택된 연결만을 접속 허용</li>
 </ul>
 </li>
@@ -1323,7 +1322,7 @@ icmp6-prohibited라는 응답 메시지를 보낸다.</li>
   
   <a class="anchor" href="#heading-6">#</a>
 </h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--[</span>옵션<span style="color:#f92672">]=[</span>Firewalld Zone<span style="color:#f92672">]</span> <span style="color:#f92672">--[</span>add<span style="color:#f92672">,</span> remove 등의 명령어<span style="color:#f92672">]-[</span>interface<span style="color:#f92672">]=[</span>ens33<span style="color:#f92672">]</span> <span style="color:#f92672">[</span> <span style="color:#f92672">--</span>permanent 영구히 사용<span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--[</span><span style="color:#960050;background-color:#1e0010">옵션</span><span style="color:#f92672">]=[</span>Firewalld Zone<span style="color:#f92672">]</span> <span style="color:#f92672">--[</span>add<span style="color:#f92672">,</span> remove <span style="color:#960050;background-color:#1e0010">등의</span> <span style="color:#960050;background-color:#1e0010">명령어</span><span style="color:#f92672">]-[</span>interface<span style="color:#f92672">]=[</span>ens33<span style="color:#f92672">]</span> <span style="color:#f92672">[</span> <span style="color:#f92672">--</span>permanent <span style="color:#960050;background-color:#1e0010">영구히</span> <span style="color:#960050;background-color:#1e0010">사용</span><span style="color:#f92672">]</span>
 </span></span></code></pre></div><h1 id="heading-7">
   
   <a class="anchor" href="#heading-7">#</a>
@@ -1422,7 +1421,7 @@ icmp6-prohibited라는 응답 메시지를 보낸다.</li>
   <strong>21 tcp 포트를 추가</strong>
   <a class="anchor" href="#21-tcp-%ed%8f%ac%ed%8a%b8%eb%a5%bc-%ec%b6%94%ea%b0%80">#</a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span>21<span style="color:#f92672">/</span>tcp
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span><span style="color:#ae81ff">21</span><span style="color:#f92672">/</span>tcp
 </span></span></code></pre></div><h1 id="heading-18">
   
   <a class="anchor" href="#heading-18">#</a>
@@ -1431,7 +1430,7 @@ icmp6-prohibited라는 응답 메시지를 보낸다.</li>
   <strong>21 tcp 포트를 제거</strong>
   <a class="anchor" href="#21-tcp-%ed%8f%ac%ed%8a%b8%eb%a5%bc-%ec%a0%9c%ea%b1%b0">#</a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>remove<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span>21<span style="color:#f92672">/</span>tcp
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>remove<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span><span style="color:#ae81ff">21</span><span style="color:#f92672">/</span>tcp
 </span></span></code></pre></div><h1 id="heading-19">
   
   <a class="anchor" href="#heading-19">#</a>
@@ -1458,7 +1457,7 @@ icmp6-prohibited라는 응답 메시지를 보낸다.</li>
   <strong>포트포워딩 설정</strong>
   <a class="anchor" href="#%ed%8f%ac%ed%8a%b8%ed%8f%ac%ec%9b%8c%eb%94%a9-%ec%84%a4%ec%a0%95">#</a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>forward<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span>port<span style="color:#f92672">=</span>1000<span style="color:#f92672">:</span>proto<span style="color:#f92672">=</span>tcp<span style="color:#f92672">:</span>toport<span style="color:#f92672">=</span>80<span style="color:#f92672">:</span>toaddr<span style="color:#f92672">=</span>10<span style="color:#f92672">.</span><span style="color:#a6e22e">10</span><span style="color:#f92672">.</span><span style="color:#a6e22e">10</span><span style="color:#f92672">.</span><span style="color:#a6e22e">10</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>forward<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span>port<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span><span style="color:#f92672">:</span>proto<span style="color:#f92672">=</span>tcp<span style="color:#f92672">:</span>toport<span style="color:#f92672">=</span><span style="color:#ae81ff">80</span><span style="color:#f92672">:</span>toaddr<span style="color:#f92672">=</span><span style="color:#ae81ff">10.10.10.10</span>
 </span></span></code></pre></div><h1 id="heading-22">
   
   <a class="anchor" href="#heading-22">#</a>
@@ -1487,12 +1486,12 @@ icmp6-prohibited라는 응답 메시지를 보낸다.</li>
   <a class="anchor" href="#zone-%ec%98%81%ec%97%ad%ed%99%95%ec%9d%b8">#</a>
 </h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>zones
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span> 존 영역 확인
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">존</span> <span style="color:#960050;background-color:#1e0010">영역</span> <span style="color:#960050;background-color:#1e0010">확인</span>
 </span></span><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>active<span style="color:#f92672">-</span>zones
 </span></span><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>active<span style="color:#f92672">-</span>zones
 </span></span><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>get<span style="color:#f92672">-</span>active<span style="color:#f92672">-</span>zones
 </span></span><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>list<span style="color:#f92672">-</span>all<span style="color:#f92672">-</span>zones
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span> 모든 존 영역 확인
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">모든</span> <span style="color:#960050;background-color:#1e0010">존</span> <span style="color:#960050;background-color:#1e0010">영역</span> <span style="color:#960050;background-color:#1e0010">확인</span>
 </span></span></code></pre></div><h1 id="heading-25">
   
   <a class="anchor" href="#heading-25">#</a>
@@ -1510,7 +1509,7 @@ icmp6-prohibited라는 응답 메시지를 보낸다.</li>
   <strong>포트추가</strong>
   <a class="anchor" href="#%ed%8f%ac%ed%8a%b8%ec%b6%94%ea%b0%80">#</a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>zone<span style="color:#f92672">=</span><span style="color:#66d9ef">public</span> <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span>9090<span style="color:#f92672">/</span>tcp
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>zone<span style="color:#f92672">=</span><span style="color:#66d9ef">public</span> <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>port<span style="color:#f92672">=</span><span style="color:#ae81ff">9090</span><span style="color:#f92672">/</span>tcp
 </span></span></code></pre></div><h1 id="heading-27">
   
   <a class="anchor" href="#heading-27">#</a>
@@ -1531,7 +1530,7 @@ icmp6-prohibited라는 응답 메시지를 보낸다.</li>
   <strong>룰 추가</strong>
   <a class="anchor" href="#%eb%a3%b0-%ec%b6%94%ea%b0%80">#</a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>direct <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>rule ipv4 filter INPUT 0 <span style="color:#f92672">-</span>p tcp <span style="color:#f92672">--</span>dport 9090 <span style="color:#f92672">-</span>j ACCEPT
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>firewall<span style="color:#f92672">-</span>cmd <span style="color:#f92672">--</span>direct <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>rule ipv4 filter INPUT <span style="color:#ae81ff">0</span> <span style="color:#f92672">-</span>p tcp <span style="color:#f92672">--</span>dport <span style="color:#ae81ff">9090</span> <span style="color:#f92672">-</span>j ACCEPT
 </span></span></code></pre></div><h1 id="heading-29">
   
   <a class="anchor" href="#heading-29">#</a>
@@ -1591,7 +1590,7 @@ icmp6-prohibited라는 응답 메시지를 보낸다.</li>
   <a class="anchor" href="#heading-41">#</a>
 </h1>
 <p>firewall-cmd &ndash;reload
-firewall-cmd &ndash;permanent &ndash;zone=external 
+firewall-cmd &ndash;permanent &ndash;zone=external
 firewall-cmd &ndash;add-forward-port-port=9090:proto=tcp:toport=9090:toaddr=10.10.10.20
 firewall-cmd &ndash;set-default-zone=external
 firewall-cmd &ndash;zone=internal &ndash;add-masquerade</p>

@@ -12,13 +12,12 @@
 <meta property="og:url" content="https://mung0001.github.io/docs/system/development/shell/shell100/" /><meta property="article:section" content="docs" />
 
 
-
 <title>연습문제 | 뭉게뭉게</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.ffcce1416ac965bf6815bf4bdd99cf970182cd6ac9b30c72a81407197d550a70.js" integrity="sha256-/8zhQWrJZb9oFb9L3ZnPlwGCzWrJswxyqBQHGX1VCnA=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1685,7 +1684,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>PV[@]<span style="color:#e6db74">}</span>;
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">do</span>
 </span></span><span style="display:flex;"><span>                        pvremove $i
-</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;PV </span>$i의<span style="color:#e6db74"> 삭제가 완료되었습니다.&#34;</span>
+</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;PV </span>$i<span style="color:#e6db74">의 삭제가 완료되었습니다.&#34;</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">done</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">${</span>PV[0] == <span style="color:#e6db74">&#34;0&#34;</span><span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
@@ -1693,7 +1692,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>PV[@]<span style="color:#e6db74">}</span>;
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">do</span>
 </span></span><span style="display:flex;"><span>                        pvcreate $i
-</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;PV의 </span>$i의<span style="color:#e6db74"> 생성이 완료되었습니다.&#34;</span>
+</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;PV의 </span>$i<span style="color:#e6db74">의 생성이 완료되었습니다.&#34;</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">done</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">fi</span>
 </span></span><span style="display:flex;"><span>        main
@@ -1717,7 +1716,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>PV[@]<span style="color:#e6db74">}</span>;
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">do</span>
 </span></span><span style="display:flex;"><span>                        vgremove $i
-</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;VG </span>$i의<span style="color:#e6db74"> 삭제가 완료되었습니다.&#34;</span>
+</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;VG </span>$i<span style="color:#e6db74">의 삭제가 완료되었습니다.&#34;</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">done</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">${</span>VG[0] == <span style="color:#e6db74">&#34;0&#34;</span><span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
@@ -1725,7 +1724,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>PV[@]<span style="color:#e6db74">}</span>;
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">do</span>
 </span></span><span style="display:flex;"><span>                        vgcreate $i
-</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;VG의 </span>$i의<span style="color:#e6db74"> 생성이 완료되었습니다.&#34;</span>
+</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;VG의 </span>$i<span style="color:#e6db74">의 생성이 완료되었습니다.&#34;</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">done</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">fi</span>
 </span></span><span style="display:flex;"><span>        main

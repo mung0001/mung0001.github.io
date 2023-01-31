@@ -12,13 +12,12 @@
 <meta property="og:url" content="https://mung0001.github.io/docs/system/linux/linux/" /><meta property="article:section" content="docs" />
 
 
-
 <title>Linux 개요 | 뭉게뭉게</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.c327167905d362fc6017ee53361fed463101db74a6d5ae8e33a31a1b9902121f.js" integrity="sha256-wycWeQXTYvxgF&#43;5TNh/tRjEB23Sm1a6OM6MaG5kCEh8=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.ffcce1416ac965bf6815bf4bdd99cf970182cd6ac9b30c72a81407197d550a70.js" integrity="sha256-/8zhQWrJZb9oFb9L3ZnPlwGCzWrJswxyqBQHGX1VCnA=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1216,65 +1215,65 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#linux-%ea%b8%b0%eb%b3%b8-%eb%aa%85%eb%a0%b9%ec%96%b4">#</a>
 </h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>pwd 
-</span></span><span style="display:flex;"><span>현재 디렉토리 확인
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">현재</span> <span style="color:#960050;background-color:#1e0010">디렉토리</span> <span style="color:#960050;background-color:#1e0010">확인</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>cd <span style="color:#f92672">[</span> 이동할 경로 <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>작업 디렉토리 변경
+</span></span><span style="display:flex;"><span>cd <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">이동할</span> <span style="color:#960050;background-color:#1e0010">경로</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">작업</span> <span style="color:#960050;background-color:#1e0010">디렉토리</span> <span style="color:#960050;background-color:#1e0010">변경</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>ls <span style="color:#f92672">[</span> 확인 할 디렉토리 <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>디렉토리 내용 확인
+</span></span><span style="display:flex;"><span>ls <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">확인</span> <span style="color:#960050;background-color:#1e0010">할</span> <span style="color:#960050;background-color:#1e0010">디렉토리</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">디렉토리</span> <span style="color:#960050;background-color:#1e0010">내용</span> <span style="color:#960050;background-color:#1e0010">확인</span>
 </span></span><span style="display:flex;"><span>ls <span style="color:#f92672">-</span>al
-</span></span><span style="display:flex;"><span>숨겨진 파일까지 모두 표시
-</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>l은 보다 자세한 결과 검은색은 실행파일<span style="color:#f92672">,</span> 파란색을 디렉토리 파일을 의미
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">숨겨진</span> <span style="color:#960050;background-color:#1e0010">파일까지</span> <span style="color:#960050;background-color:#1e0010">모두</span> <span style="color:#960050;background-color:#1e0010">표시</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>l<span style="color:#960050;background-color:#1e0010">은</span> <span style="color:#960050;background-color:#1e0010">보다</span> <span style="color:#960050;background-color:#1e0010">자세한</span> <span style="color:#960050;background-color:#1e0010">결과</span> <span style="color:#960050;background-color:#1e0010">검은색은</span> <span style="color:#960050;background-color:#1e0010">실행파일</span><span style="color:#f92672">,</span> <span style="color:#960050;background-color:#1e0010">파란색을</span> <span style="color:#960050;background-color:#1e0010">디렉토리</span> <span style="color:#960050;background-color:#1e0010">파일을</span> <span style="color:#960050;background-color:#1e0010">의미</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>mkdir <span style="color:#f92672">[</span> 생성할 디렉토리 이름 <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>지정한 이름으로 된 디렉토리 <span style="color:#a6e22e">생성</span> <span style="color:#f92672">(</span> 하위 구조도 함께 생성 <span style="color:#f92672">:</span> <span style="color:#f92672">-</span>p <span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>mkdir <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">생성할</span> <span style="color:#960050;background-color:#1e0010">디렉토리</span> <span style="color:#960050;background-color:#1e0010">이름</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">지정한</span> <span style="color:#960050;background-color:#1e0010">이름으로</span> <span style="color:#960050;background-color:#1e0010">된</span> <span style="color:#960050;background-color:#1e0010">디렉토리</span> <span style="color:#960050;background-color:#1e0010">생성</span> <span style="color:#f92672">(</span> <span style="color:#960050;background-color:#1e0010">하위</span> <span style="color:#960050;background-color:#1e0010">구조도</span> <span style="color:#960050;background-color:#1e0010">함께</span> <span style="color:#960050;background-color:#1e0010">생성</span> <span style="color:#f92672">:</span> <span style="color:#f92672">-</span>p <span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>rmdir <span style="color:#f92672">[</span> 삭제할 디렉토리 이름 <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>디렉토리 삭제
+</span></span><span style="display:flex;"><span>rmdir <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">삭제할</span> <span style="color:#960050;background-color:#1e0010">디렉토리</span> <span style="color:#960050;background-color:#1e0010">이름</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">디렉토리</span> <span style="color:#960050;background-color:#1e0010">삭제</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>rm <span style="color:#f92672">-</span>rf <span style="color:#f92672">[</span> 삭제할 디렉토리<span style="color:#f92672">,</span> 파일 이름<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>r은 디렉토리 f는 파일을 의미
+</span></span><span style="display:flex;"><span>rm <span style="color:#f92672">-</span>rf <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">삭제할</span> <span style="color:#960050;background-color:#1e0010">디렉토리</span><span style="color:#f92672">,</span> <span style="color:#960050;background-color:#1e0010">파일</span> <span style="color:#960050;background-color:#1e0010">이름</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>r<span style="color:#960050;background-color:#1e0010">은</span> <span style="color:#960050;background-color:#1e0010">디렉토리</span> f<span style="color:#960050;background-color:#1e0010">는</span> <span style="color:#960050;background-color:#1e0010">파일을</span> <span style="color:#960050;background-color:#1e0010">의미</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>mv <span style="color:#f92672">[</span> 원본 경로 <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> 이동할 경로 <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>디렉토리 혹은 파일을 이동 및 이름 변경
+</span></span><span style="display:flex;"><span>mv <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">원본</span> <span style="color:#960050;background-color:#1e0010">경로</span> <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">이동할</span> <span style="color:#960050;background-color:#1e0010">경로</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">디렉토리</span> <span style="color:#960050;background-color:#1e0010">혹은</span> <span style="color:#960050;background-color:#1e0010">파일을</span> <span style="color:#960050;background-color:#1e0010">이동</span> <span style="color:#960050;background-color:#1e0010">및</span> <span style="color:#960050;background-color:#1e0010">이름</span> <span style="color:#960050;background-color:#1e0010">변경</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>cp <span style="color:#f92672">-</span>r <span style="color:#f92672">[</span> 원본 경로 <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> 이동할 경로 <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>r은 디렉토리를 포함해서 복사할 때 필요
+</span></span><span style="display:flex;"><span>cp <span style="color:#f92672">-</span>r <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">원본</span> <span style="color:#960050;background-color:#1e0010">경로</span> <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">이동할</span> <span style="color:#960050;background-color:#1e0010">경로</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>r<span style="color:#960050;background-color:#1e0010">은</span> <span style="color:#960050;background-color:#1e0010">디렉토리를</span> <span style="color:#960050;background-color:#1e0010">포함해서</span> <span style="color:#960050;background-color:#1e0010">복사할</span> <span style="color:#960050;background-color:#1e0010">때</span> <span style="color:#960050;background-color:#1e0010">필요</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>touch <span style="color:#f92672">[</span> 파일 이름 <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>내용이 아무것도 없는 빈 파일 생성
+</span></span><span style="display:flex;"><span>touch <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">파일</span> <span style="color:#960050;background-color:#1e0010">이름</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">내용이</span> <span style="color:#960050;background-color:#1e0010">아무것도</span> <span style="color:#960050;background-color:#1e0010">없는</span> <span style="color:#960050;background-color:#1e0010">빈</span> <span style="color:#960050;background-color:#1e0010">파일</span> <span style="color:#960050;background-color:#1e0010">생성</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>cat <span style="color:#f92672">[</span> 파일 <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>파일의 내용을 전부 확인
+</span></span><span style="display:flex;"><span>cat <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">파일</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">파일의</span> <span style="color:#960050;background-color:#1e0010">내용을</span> <span style="color:#960050;background-color:#1e0010">전부</span> <span style="color:#960050;background-color:#1e0010">확인</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>head <span style="color:#f92672">[</span> 파일 <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>파일의 내용을 시작부터 몇 줄만 확인 기본 10줄
+</span></span><span style="display:flex;"><span>head <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">파일</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">파일의</span> <span style="color:#960050;background-color:#1e0010">내용을</span> <span style="color:#960050;background-color:#1e0010">시작부터</span> <span style="color:#960050;background-color:#1e0010">몇</span> <span style="color:#960050;background-color:#1e0010">줄만</span> <span style="color:#960050;background-color:#1e0010">확인</span> <span style="color:#960050;background-color:#1e0010">기본</span> <span style="color:#ae81ff">10</span><span style="color:#960050;background-color:#1e0010">줄</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>tail <span style="color:#f92672">[</span> 파일 <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>파일의 내용을 끝에서 몇 줄만 확인 기본 10줄
+</span></span><span style="display:flex;"><span>tail <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">파일</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">파일의</span> <span style="color:#960050;background-color:#1e0010">내용을</span> <span style="color:#960050;background-color:#1e0010">끝에서</span> <span style="color:#960050;background-color:#1e0010">몇</span> <span style="color:#960050;background-color:#1e0010">줄만</span> <span style="color:#960050;background-color:#1e0010">확인</span> <span style="color:#960050;background-color:#1e0010">기본</span> <span style="color:#ae81ff">10</span><span style="color:#960050;background-color:#1e0010">줄</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>more <span style="color:#f92672">[</span> 파일 <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>파일의 내용을 화면에 맞춰서 확인
+</span></span><span style="display:flex;"><span>more <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">파일</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">파일의</span> <span style="color:#960050;background-color:#1e0010">내용을</span> <span style="color:#960050;background-color:#1e0010">화면에</span> <span style="color:#960050;background-color:#1e0010">맞춰서</span> <span style="color:#960050;background-color:#1e0010">확인</span>
 </span></span></code></pre></div><hr>
 <hr>
 <h2 id="grep">
   <strong>grep</strong>
   <a class="anchor" href="#grep">#</a>
 </h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>grep <span style="color:#f92672">[</span> 옵션 <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> 패턴 <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> 파일 이름 <span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>grep <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">옵션</span> <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">패턴</span> <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">파일</span> <span style="color:#960050;background-color:#1e0010">이름</span> <span style="color:#f92672">]</span>
 </span></span></code></pre></div><blockquote>
 <div class="book-expand">
   <label>
@@ -1375,7 +1374,7 @@ https://github.com/alex-shpak/hugo-book
   <strong>fgrep</strong>
   <a class="anchor" href="#fgrep">#</a>
 </h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>fgrep <span style="color:#f92672">[</span> 옵션 <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> 패턴 <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> 파일 이름 <span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>fgrep <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">옵션</span> <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">패턴</span> <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">파일</span> <span style="color:#960050;background-color:#1e0010">이름</span> <span style="color:#f92672">]</span>
 </span></span></code></pre></div><ul>
 <li>grep에서 특수문자가 포함된 경우 사용</li>
 </ul>
@@ -1389,7 +1388,7 @@ https://github.com/alex-shpak/hugo-book
   <strong>find</strong>
   <a class="anchor" href="#find">#</a>
 </h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>find <span style="color:#f92672">[</span> 경로 <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> 조건 <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> 아규먼트 <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> 행동 <span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>find <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">경로</span> <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">조건</span> <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">아규먼트</span> <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> <span style="color:#960050;background-color:#1e0010">행동</span> <span style="color:#f92672">]</span>
 </span></span><span style="display:flex;"><span>ex<span style="color:#f92672">)</span> find <span style="color:#f92672">/</span> <span style="color:#f92672">-</span>name file <span style="color:#f92672">-</span>exec rm <span style="color:#f92672">-</span>rf <span style="color:#f92672">{}</span> <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">;</span>
 </span></span></code></pre></div><blockquote>
 <div class="book-expand">
