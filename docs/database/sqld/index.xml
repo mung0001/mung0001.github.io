@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/database/sqld/sqld-0/</guid>
-      <description>****#****##</description>
+      <description>**** **** </description>
     </item>
     
     <item>
@@ -21,11 +21,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/database/sqld/sqld-1/</guid>
-      <description>데이터 모델링##데이터 모델링의 이해##데이터 모델링이란 현실에 존재하는 것을 데이터베이스에 사용할 수 있도록 모델링하는 과정 #데이터 모델링의 중요성 및 유의점 중복 : 같은 시간 같은 데이터 제공
+      <description>데이터 모델링 데이터 모델링의 이해 데이터 모델링이란 현실에 존재하는 것을 데이터베이스에 사용할 수 있도록 모델링하는 과정 데이터 모델링의 중요성 및 유의점 중복 : 같은 시간 같은 데이터 제공
 비유연성 : 사소한 업무변화에 데이터 모델이 수시로 변경되면 안됨
 비일관성 : 신용 상태에 대한 갱신 없이 고객의 납부 이력 정보 갱신 안됨
-#데이터 모델링
-개념적, 논리적, 물리적 데이터 모델링 #데이터 독립성 요소 : 스키마 스키마란 데이터베이스의 구조와 제약 조건에 관한 전반적인 명세를 기바술한 메타데이터의 집합</description>
+데이터 모델링
+개념적, 논리적, 물리적 데이터 모델링 데이터 독립성 요소 : 스키마 스키마란 데이터베이스의 구조와 제약 조건에 관한 전반적인 명세를 기바술한 메타데이터의 집합</description>
     </item>
     
     <item>
@@ -34,11 +34,12 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/database/sqld/sqld-2/</guid>
-      <description>SQL 기본#SQL 기본##DataBase
-특정 기업이나 조직 또는 개인이 필요에 의해 데이터를 일정한 형태로 저장해 놓은 것을 의미한다. #DBMS
-효율적인 데이터 관리 뿐만 아니라 예기치 못한 사건으로 인한 데이터의 손상을 피하고, 필요시 필요한 데이터를 복구하기 위한 강력한 기능의 SW(SoftWare) #DB 발전 1960 : 플로우차트 중심의 개발, 파일구조 사용
+      <description>SQL 기본 SQL 기본 DataBase
+특정 기업이나 조직 또는 개인이 필요에 의해 데이터를 일정한 형태로 저장해 놓은 것을 의미한다. DBMS
+효율적인 데이터 관리 뿐만 아니라 예기치 못한 사건으로 인한 데이터의 손상을 피하고, 필요시 필요한 데이터를 복구하기 위한 강력한 기능의 SW(SoftWare) DB 발전 1960 : 플로우차트 중심의 개발, 파일구조 사용
 1970 : DB 관리기법이 처음 태동, 계층-망형 DB등장
-1980 : 관계형 DB 상용화, Oracle, Sybase 등장</description>
+1980 : 관계형 DB 상용화, Oracle, Sybase 등장
+1990 : 객체 관계형 DB로 발전</description>
     </item>
     
   </channel>

@@ -2,43 +2,43 @@
 <html lang="en">
 
 <head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Django Project#Django Boardapp project##모델을 구성하기에 앞서 django에서 지원하는 admin을 사용하기 위해 기본적인 database를 받아온다.
-(ve) $ ./manage.py migrate #DB 테이블 생성
+<meta name="description" content="Django Project Django Boardapp project 모델을 구성하기에 앞서 django에서 지원하는 admin을 사용하기 위해 기본적인 database를 받아온다.
+(ve) $ ./manage.py migrate DB 테이블 생성
 # User table ALTER TABLE auth_user ADD COLUMN phone VARCHAR(45) NOT NULL AFTER date_joined, ADD COLUMN date_of_birth DATETIME NOT NULL AFTER phone, CHANGE COLUMN date_joined date_joined DATETIME NOT NULL AFTER email, CHANGE COLUMN first_name first_name VARCHAR(30) NULL AFTER is_active, CHANGE COLUMN is_staff is_staff TINYINT(1) NULL, CHANGE COLUMN is_active is_active TINYINT(1) NULL; # Board table ## board_categories create table board_categories( id int(10) not null auto_increment, category_type varchar(45) not null default &#39;Normal&#39;, category_code varchar(100) not null, category_name varchar(100) not null, category_desc varchar(200) not null, list_count int(10) default &#39;20&#39;, authority int(1) default &#39;0&#39;, creation_date datetime default current_timestamp, last_update_date datetime default null, primary key(id) )engine=InnoDB default CHARSET=utf8; ## boards create table boards( id int(10) not null auto_increment, category_id int(10) not null, user_id int(10) not null, title varchar(300) not null, content text not null, registered_date datetime default current_timestamp, last_update_date datetime default null, view_count int(10) default &#39;0&#39;, image varchar(255) default null, primary key(id), key board_category_fk_idx(category_id), key board_user_fk_idx(user_id), constraint board_category_fk foreign key(category_id) references board_categories(id) on delete no action on update no action, constraint board_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; ## board_replies create table board_replies( id int(10) not null auto_increment, article_id int(10) not null, user_id int(10) not null, `level` tinyint(1) default &#39;1&#39;, content text not null, reference_reply_id int(10) default &#39;0&#39;, registered_date datetime default current_timestamp, last_update_date datetime default null, primary key(id), key user_reply_fk_idx(user_id), key article_reply_fk_idx(article_id), constraint article_reply_fk foreign key(article_id) references boards(id) on delete no action on update no action, constraint user_reply_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; ## board_likes create table board_likes( id int(10) not null auto_increment, article_id int(10) not null, user_id int(11) not null, registered_date datetime default current_timestamp, primary key(id), key like_article_fk_idx(article_id), key like_user_fk_idx(user_id), constraint like_article_fk foreign key(article_id) references boards(id) on delete no action on update no action, constraint like_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; pip3 install Pillow">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Django DB(model) create" />
-<meta property="og:description" content="Django Project#Django Boardapp project##모델을 구성하기에 앞서 django에서 지원하는 admin을 사용하기 위해 기본적인 database를 받아온다.
-(ve) $ ./manage.py migrate #DB 테이블 생성
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/development/web/django/test/><meta property="og:title" content="Django DB(model) create" />
+<meta property="og:description" content="Django Project Django Boardapp project 모델을 구성하기에 앞서 django에서 지원하는 admin을 사용하기 위해 기본적인 database를 받아온다.
+(ve) $ ./manage.py migrate DB 테이블 생성
 # User table ALTER TABLE auth_user ADD COLUMN phone VARCHAR(45) NOT NULL AFTER date_joined, ADD COLUMN date_of_birth DATETIME NOT NULL AFTER phone, CHANGE COLUMN date_joined date_joined DATETIME NOT NULL AFTER email, CHANGE COLUMN first_name first_name VARCHAR(30) NULL AFTER is_active, CHANGE COLUMN is_staff is_staff TINYINT(1) NULL, CHANGE COLUMN is_active is_active TINYINT(1) NULL; # Board table ## board_categories create table board_categories( id int(10) not null auto_increment, category_type varchar(45) not null default &#39;Normal&#39;, category_code varchar(100) not null, category_name varchar(100) not null, category_desc varchar(200) not null, list_count int(10) default &#39;20&#39;, authority int(1) default &#39;0&#39;, creation_date datetime default current_timestamp, last_update_date datetime default null, primary key(id) )engine=InnoDB default CHARSET=utf8; ## boards create table boards( id int(10) not null auto_increment, category_id int(10) not null, user_id int(10) not null, title varchar(300) not null, content text not null, registered_date datetime default current_timestamp, last_update_date datetime default null, view_count int(10) default &#39;0&#39;, image varchar(255) default null, primary key(id), key board_category_fk_idx(category_id), key board_user_fk_idx(user_id), constraint board_category_fk foreign key(category_id) references board_categories(id) on delete no action on update no action, constraint board_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; ## board_replies create table board_replies( id int(10) not null auto_increment, article_id int(10) not null, user_id int(10) not null, `level` tinyint(1) default &#39;1&#39;, content text not null, reference_reply_id int(10) default &#39;0&#39;, registered_date datetime default current_timestamp, last_update_date datetime default null, primary key(id), key user_reply_fk_idx(user_id), key article_reply_fk_idx(article_id), constraint article_reply_fk foreign key(article_id) references boards(id) on delete no action on update no action, constraint user_reply_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; ## board_likes create table board_likes( id int(10) not null auto_increment, article_id int(10) not null, user_id int(11) not null, registered_date datetime default current_timestamp, primary key(id), key like_article_fk_idx(article_id), key like_user_fk_idx(user_id), constraint like_article_fk foreign key(article_id) references boards(id) on delete no action on update no action, constraint like_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; pip3 install Pillow" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/development/web/django/test/" /><meta property="article:section" content="docs" />
 
 
 
-<title>Django DB(model) create | 뭉게뭉게</title>
-<link rel="manifest" href="/manifest.json">
+<title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.3d8c7f91a1ae2a156d3acf98421fad5e26aabf6e44dfa654eae07357b1d35b2e.js" integrity="sha256-PYx/kaGuKhVtOs&#43;YQh&#43;tXiaqv25E36ZU6uBzV7HTWy4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
+<script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo="></script>
 <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+
 -->
+
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
+
 <body>
   <div class="background">
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex" style="max-width:100%;" >
-    
-    <aside style="padding-left: 1em;" class="book-menu">
-      <div class="book-menu-content">
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
       
   
 <nav styles="background-color:red; position=none;">
@@ -49,8 +49,9 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
+
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1003,127 +1004,6 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <span>Network</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
   <span>System</span>
   
 
@@ -1320,15 +1200,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
     </aside>
 
-
-
-    
-    <div style="padding-left: 2%;" class="book-page">
+    <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
   <div class="flex align-center justify-between">
@@ -1339,15 +1217,14 @@ https://github.com/alex-shpak/hugo-book
   <strong>Django DB(model) create</strong>
 
   <label for="toc-control">
-    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
   </label>
 </div>
 
 
   
-  <aside class="hidden clearfix">
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1413,26 +1290,14 @@ https://github.com/alex-shpak/hugo-book
 <br>
 <br>
       
-  <article class="markdown"><h1 id="django-project">
-  <strong>Django Project</strong>
-  <a class="anchor" href="#django-project">#</a>
-</h1>
+  <article class="markdown"><h1 id="django-project"><strong>Django Project</strong></h1>
 <hr>
 <p> </p>
-<h2 id="django-boardapp-project">
-  <strong>Django Boardapp project</strong>
-  <a class="anchor" href="#django-boardapp-project">#</a>
-</h2>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
+<h2 id="django-boardapp-project"><strong>Django Boardapp project</strong></h2>
+<h1 id="heading"></h1>
 <p>모델을 구성하기에 앞서 django에서 지원하는 admin을 사용하기 위해 기본적인 database를 받아온다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>(ve) <span style="color:#960050;background-color:#1e0010">$</span> <span style="color:#f92672">./</span>manage<span style="color:#f92672">.</span>py migrate
-</span></span></code></pre></div><h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
+</span></span></code></pre></div><h1 id="heading-1"></h1>
 <p><strong>DB 테이블 생성</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#f92672">#</span> <span style="color:#66d9ef">User</span> <span style="color:#66d9ef">table</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> auth_user
@@ -1518,32 +1383,14 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;boardapp.apps.BoardappConfig&#39;</span>,
 </span></span><span style="display:flex;"><span>]
 </span></span></code></pre></div><p>AUTH_USER_MODEL = &lsquo;boardapp.user&rsquo;</p>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
+<h1 id="heading-2"></h1>
 <p> </p>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
-<h2 id="mtv-패턴-models-구성">
-  <strong>MTV 패턴 Models 구성</strong>
-  <a class="anchor" href="#mtv-%ed%8c%a8%ed%84%b4-models-%ea%b5%ac%ec%84%b1">#</a>
-</h2>
+<h1 id="heading-3"></h1>
+<h2 id="mtv-패턴-models-구성"><strong>MTV 패턴 Models 구성</strong></h2>
 <hr>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
-<h3 id="models">
-  <strong>models</strong>
-  <a class="anchor" href="#models">#</a>
-</h3>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
+<h1 id="heading-4"></h1>
+<h3 id="models"><strong>models</strong></h3>
+<h1 id="heading-5"></h1>
 <ul>
 <li>boardapp에서 사용할 table을 만들었으니 model에 추가</li>
 <li>기본적인 틀 생성을 위해 inspectdb를 사용</li>
@@ -1690,14 +1537,8 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>        managed <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
 </span></span><span style="display:flex;"><span>        db_table <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;board_likes&#39;</span>
 </span></span></code></pre></div><hr>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
-<h3 id="djnago-어플리케이션-흐름">
-  <strong>Djnago 어플리케이션 흐름</strong>
-  <a class="anchor" href="#djnago-%ec%96%b4%ed%94%8c%eb%a6%ac%ec%bc%80%ec%9d%b4%ec%85%98-%ed%9d%90%eb%a6%84">#</a>
-</h3>
+<h1 id="heading-6"></h1>
+<h3 id="djnago-어플리케이션-흐름"><strong>Djnago 어플리케이션 흐름</strong></h3>
 <ul>
 <li>urls.py에 등록되어 있는 url을 따라간다.</li>
 <li>urls.py에 특정 url에 접근 했을 때 동작할 행동을 지정</li>
@@ -1716,10 +1557,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>]
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">+=</span> static(settings<span style="color:#f92672">.</span>MEDIA_URL, document_root<span style="color:#f92672">=</span>settings<span style="color:#f92672">.</span>MEDIA_ROOT)
-</span></span></code></pre></div><h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
+</span></span></code></pre></div><h1 id="heading-7"></h1>
 <p><strong>boardapp/urls.py</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.conf.urls.static <span style="color:#f92672">import</span> static
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.conf <span style="color:#f92672">import</span> settings
@@ -1788,10 +1626,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li>거의 모든 templates의 틀이 되는 base.html 생성</li>
 </ul>
-<h2 id="basehtml-main-페이지-작성">
-  <strong>base.html main 페이지 작성</strong>
-  <a class="anchor" href="#basehtml-main-%ed%8e%98%ec%9d%b4%ec%a7%80-%ec%9e%91%ec%84%b1">#</a>
-</h2>
+<h2 id="basehtml-main-페이지-작성"><strong>base.html main 페이지 작성</strong></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>vi boardapp/templates/base.html
 </span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;KO&#34;</span>&gt;
@@ -1857,19 +1692,10 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
 </span></span></code></pre></div><p>urls.py에 등록되지 않은 url은 &lsquo;#&lsquo;으로 변경<br>
 url을 추가할 때 마다 원래의 base.html을 업데이트 해 준다</p>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
+<h1 id="heading-8"></h1>
+<h1 id="heading-9"></h1>
 <p>main page</p>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
+<h1 id="heading-10"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>vi boardapp<span style="color:#f92672">/</span>urls<span style="color:#f92672">.</span>py
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.conf.urls.static <span style="color:#f92672">import</span> static
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.conf <span style="color:#f92672">import</span> settings
@@ -1923,10 +1749,7 @@ url을 추가할 때 마다 원래의 base.html을 업데이트 해 준다</p>
 </span></span><span style="display:flex;"><span>path(<span style="color:#e6db74">&#39;user_register_idcheck/&#39;</span>, user_register_idcheck, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;registeridcheck&#39;</span>),
 </span></span><span style="display:flex;"><span>path(<span style="color:#e6db74">&#39;user_register_res/&#39;</span>, user_register_result, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;registerres&#39;</span>),
 </span></span><span style="display:flex;"><span>path(<span style="color:#e6db74">&#39;user_register_completed/&#39;</span>, user_register_completed, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;registercompleted&#39;</span>),
-</span></span></code></pre></div><h3 id="user_register">
-  <strong>user_register</strong>
-  <a class="anchor" href="#user_register">#</a>
-</h3>
+</span></span></code></pre></div><h3 id="user_register"><strong>user_register</strong></h3>
 <ul>
 <li>boardapp/views.py</li>
 </ul>
@@ -2117,10 +1940,7 @@ url을 추가할 때 마다 원래의 base.html을 업데이트 해 준다</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#register_form&#39;</span>)<span style="color:#f92672">.</span>submit();
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="user_register_idcheck">
-  <strong>user_register_idcheck</strong>
-  <a class="anchor" href="#user_register_idcheck">#</a>
-</h3>
+</span></span></code></pre></div><h3 id="user_register_idcheck"><strong>user_register_idcheck</strong></h3>
 <ul>
 <li>vi/boardapp/views.py</li>
 </ul>
@@ -2139,10 +1959,7 @@ url을 추가할 때 마다 원래의 base.html을 업데이트 해 준다</p>
 </span></span><span style="display:flex;"><span>        msg <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;font color=&#39;blue&#39;&gt;사용할 수 있는 ID입니다.&lt;/font&gt;&lt;input type=&#39;hidden&#39; name=&#39;IDCheckResult&#39; id=&#39;IDCheckResult&#39; value=1/&gt;&#34;</span>
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> HttpResponse(msg)
-</span></span></code></pre></div><h3 id="user_register_res">
-  <strong>user_register_res</strong>
-  <a class="anchor" href="#user_register_res">#</a>
-</h3>
+</span></span></code></pre></div><h3 id="user_register_res"><strong>user_register_res</strong></h3>
 <ul>
 <li>boardapp/view.py</li>
 </ul>
@@ -2169,10 +1986,7 @@ url을 추가할 때 마다 원래의 base.html을 업데이트 해 준다</p>
 </span></span><span style="display:flex;"><span>        redirection_page <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/boardapp/error/&#39;</span>
 </span></span><span style="display:flex;"><span>        
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> redirect(redirection_page)
-</span></span></code></pre></div><h3 id="user_register_complete">
-  <strong>user_register_complete</strong>
-  <a class="anchor" href="#user_register_complete">#</a>
-</h3>
+</span></span></code></pre></div><h3 id="user_register_complete"><strong>user_register_complete</strong></h3>
 <ul>
 <li>vi boardapp/views.py</li>
 </ul>
@@ -2211,10 +2025,7 @@ url을 추가할 때 마다 원래의 base.html을 업데이트 해 준다</p>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
-</span></span></code></pre></div><h3 id="login">
-  <strong>login</strong>
-  <a class="anchor" href="#login">#</a>
-</h3>
+</span></span></code></pre></div><h3 id="login"><strong>login</strong></h3>
 <ul>
 <li>vi /boardapp/templates/login.html</li>
 </ul>
@@ -2288,10 +2099,7 @@ url을 추가할 때 마다 원래의 base.html을 업데이트 해 준다</p>
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#login_form&#39;</span>)<span style="color:#f92672">.</span>submit();
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="logoute">
-  <strong>logoute</strong>
-  <a class="anchor" href="#logoute">#</a>
-</h3>
+</span></span></code></pre></div><h3 id="logoute"><strong>logoute</strong></h3>
 <ul>
 <li>LogoutView
 <ul>
@@ -2300,10 +2108,7 @@ url을 추가할 때 마다 원래의 base.html을 업데이트 해 준다</p>
 </ul>
 </li>
 </ul>
-<h3 id="modify">
-  <strong>modify</strong>
-  <a class="anchor" href="#modify">#</a>
-</h3>
+<h3 id="modify"><strong>modify</strong></h3>
 <ul>
 <li>PasswordChangeView
 <ul>
@@ -2400,10 +2205,7 @@ url을 추가할 때 마다 원래의 base.html을 업데이트 해 준다</p>
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#39;#password_change_form&#39;</span>)<span style="color:#f92672">.</span>submit();
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="passwordchangedoneview">
-  <strong>PasswordChangeDoneView</strong>
-  <a class="anchor" href="#passwordchangedoneview">#</a>
-</h3>
+</span></span></code></pre></div><h3 id="passwordchangedoneview"><strong>PasswordChangeDoneView</strong></h3>
 <ul>
 <li>PasswordChangeDoneView는 django에서 지원하는 auth의 views를 사용한다.</li>
 <li>urls.py에서 template_name을 password_change_done.html로 지정하였다.</li>
@@ -2413,16 +2215,10 @@ url을 추가할 때 마다 원래의 base.html을 업데이트 해 준다</p>
 </span></span><span style="display:flex;"><span>    alert(<span style="color:#e6db74">&#34;비밀번호 변경이 완료되었습니다.&#34;</span>);
 </span></span><span style="display:flex;"><span>    location<span style="color:#f92672">.</span>href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{</span><span style="color:#e6db74">% u</span><span style="color:#e6db74">rl &#39;main&#39; %}&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>script<span style="color:#f92672">&gt;</span>
-</span></span></code></pre></div><h3 id="settingpy">
-  <strong>setting.py</strong>
-  <a class="anchor" href="#settingpy">#</a>
-</h3>
+</span></span></code></pre></div><h3 id="settingpy"><strong>setting.py</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>LOGIN_REDIRECT_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/boardapp/&#39;</span>
 </span></span><span style="display:flex;"><span>LOGOUT_REDIRECT_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/boardapp/&#39;</span>
-</span></span></code></pre></div><h3 id="test">
-  <strong>test</strong>
-  <a class="anchor" href="#test">#</a>
-</h3>
+</span></span></code></pre></div><h3 id="test"><strong>test</strong></h3>
 <ul>
 <li>base.html에서 완성된 부분을 #에서 name에 맞게 변경하고 runserver를 실시한다.</li>
 <li>회원가입을 테스트한다.
@@ -2536,6 +2332,7 @@ url을 추가할 때 마다 원래의 base.html을 업데이트 해 준다</p>
 </body>
 </div>
 </html>
+
 
 
 

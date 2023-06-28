@@ -2,47 +2,49 @@
 <html lang="en">
 
 <head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AWS EC2 생성##AWS EC2 생성##이번 장에서는 저번 장에서 생성했던 사용자 정의 VPC의 대역에 EC2를 생성해 보도록 하겠습니다. EC2 또한 중요한 개념이므로, EC2에 대한 학습을 원하는 분들은 AWS EC2를 참고해주세요. ##EC2 ( Elastic Compute Cloud ) 생성#기본적인 EC2 생성의 순서
+<meta name="description" content="AWS EC2 생성 AWS EC2 생성 이번 장에서는 저번 장에서 생성했던 사용자 정의 VPC의 대역에 EC2를 생성해 보도록 하겠습니다. EC2 또한 중요한 개념이므로, EC2에 대한 학습을 원하는 분들은 AWS EC2를 참고해주세요. EC2 ( Elastic Compute Cloud ) 생성 기본적인 EC2 생성의 순서
 1. AMI ( Amazon Machin Image ) 선택 2. Instance type 선택
 2. Instance Network 설정
 3. Storage 설정
-5. Tag 설정">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="AWS EC2 생성" />
-<meta property="og:description" content="AWS EC2 생성##AWS EC2 생성##이번 장에서는 저번 장에서 생성했던 사용자 정의 VPC의 대역에 EC2를 생성해 보도록 하겠습니다. EC2 또한 중요한 개념이므로, EC2에 대한 학습을 원하는 분들은 AWS EC2를 참고해주세요. ##EC2 ( Elastic Compute Cloud ) 생성#기본적인 EC2 생성의 순서
+5. Tag 설정
+6. Security Group 설정 여기에서는 처음에는 기본 VPC, 후에는 전장에서 생성했던 VPC에 생성해보도록 하겠습니다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/aws/awstraining/ec2/><meta property="og:title" content="AWS EC2 생성" />
+<meta property="og:description" content="AWS EC2 생성 AWS EC2 생성 이번 장에서는 저번 장에서 생성했던 사용자 정의 VPC의 대역에 EC2를 생성해 보도록 하겠습니다. EC2 또한 중요한 개념이므로, EC2에 대한 학습을 원하는 분들은 AWS EC2를 참고해주세요. EC2 ( Elastic Compute Cloud ) 생성 기본적인 EC2 생성의 순서
 1. AMI ( Amazon Machin Image ) 선택 2. Instance type 선택
 2. Instance Network 설정
 3. Storage 설정
-5. Tag 설정" />
+5. Tag 설정
+6. Security Group 설정 여기에서는 처음에는 기본 VPC, 후에는 전장에서 생성했던 VPC에 생성해보도록 하겠습니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/aws/awstraining/ec2/" /><meta property="article:section" content="docs" />
 
 
 
-<title>AWS EC2 생성 | 뭉게뭉게</title>
-<link rel="manifest" href="/manifest.json">
+<title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.3d8c7f91a1ae2a156d3acf98421fad5e26aabf6e44dfa654eae07357b1d35b2e.js" integrity="sha256-PYx/kaGuKhVtOs&#43;YQh&#43;tXiaqv25E36ZU6uBzV7HTWy4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
+<script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo="></script>
 <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+
 -->
+
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
+
 <body>
   <div class="background">
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex" style="max-width:100%;" >
-    
-    <aside style="padding-left: 1em;" class="book-menu">
-      <div class="book-menu-content">
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
       
   
 <nav styles="background-color:red; position=none;">
@@ -53,8 +55,9 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
+
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1088,127 +1091,6 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <span>Network</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
   <span>System</span>
   
 
@@ -1405,15 +1287,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
     </aside>
 
-
-
-    
-    <div style="padding-left: 2%;" class="book-page">
+    <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
   <div class="flex align-center justify-between">
@@ -1424,15 +1304,14 @@ https://github.com/alex-shpak/hugo-book
   <strong>AWS EC2 생성</strong>
 
   <label for="toc-control">
-    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
   </label>
 </div>
 
 
   
-  <aside class="hidden clearfix">
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1489,43 +1368,22 @@ https://github.com/alex-shpak/hugo-book
 <br>
 <br>
       
-  <article class="markdown"><h1 id="aws-ec2-생성">
-  <strong>AWS EC2 생성</strong>
-  <a class="anchor" href="#aws-ec2-%ec%83%9d%ec%84%b1">#</a>
-</h1>
+  <article class="markdown"><h1 id="aws-ec2-생성"><strong>AWS EC2 생성</strong></h1>
 <hr>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
+<h1 id="heading"></h1>
 <blockquote>
-<h2 id="aws-ec2-생성-1">
-  <strong>AWS EC2 생성</strong>
-  <a class="anchor" href="#aws-ec2-%ec%83%9d%ec%84%b1-1">#</a>
-</h2>
+<h2 id="aws-ec2-생성-1"><strong>AWS EC2 생성</strong></h2>
 </blockquote>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
+<h1 id="heading-1"></h1>
 <ul>
 <li><strong>이번 장에서는 저번 장에서 생성했던 사용자 정의 VPC의 대역에 EC2를 생성해 보도록 하겠습니다.</strong></li>
 <li><strong>EC2 또한 중요한 개념이므로, EC2에 대한 학습을 원하는 분들은 <a href="https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_computing/#ec2--elastic-compute-cloud-">AWS EC2</a>를 참고해주세요.</strong></li>
 </ul>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
+<h1 id="heading-2"></h1>
 <p> </p>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
+<h1 id="heading-3"></h1>
 <p> </p>
-<h2 id="ec2--elastic-compute-cloud--생성">
-  <strong>EC2 ( Elastic Compute Cloud ) 생성</strong>
-  <a class="anchor" href="#ec2--elastic-compute-cloud--%ec%83%9d%ec%84%b1">#</a>
-</h2>
+<h2 id="ec2--elastic-compute-cloud--생성"><strong>EC2 ( Elastic Compute Cloud ) 생성</strong></h2>
 <hr>
 <blockquote>
 <p><strong>기본적인 EC2 생성의 순서</strong></p>
@@ -1541,70 +1399,40 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><strong>검색에서 EC2를 입력후 인스턴스로 들어갑니다.</strong></li>
 </ul>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
+<h1 id="heading-4"></h1>
 <p> </p>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
+<h1 id="heading-5"></h1>
 <p><img src="/AWS/EC2/EC202.png" alt="EC2" /></p>
 <ul>
 <li><strong>대시보드에서 현재 사용량을 확인할 수 있습니다.</strong></li>
 <li><strong>인스턴스 생성을 위해 좌측 메뉴에 인스턴스를 클릭합니다.</strong></li>
 </ul>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
+<h1 id="heading-6"></h1>
 <p> </p>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
+<h1 id="heading-7"></h1>
 <p><img src="/AWS/EC2/EC203.png" alt="EC2" /></p>
 <ul>
 <li><strong>인스턴스 시작을 클릭합니다.</strong></li>
 </ul>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
+<h1 id="heading-8"></h1>
 <p> </p>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
+<h1 id="heading-9"></h1>
 <p><img src="/AWS/EC2/EC204.png" alt="EC2" /></p>
 <ul>
 <li><strong>AMI 선택에서는 이미지 파일을 선택할 수 있습니다. 여기에서는 Amzon Linux를 생성하겠습니다.</strong></li>
 <li><strong>또한 AMI는 직접 만들 수 있으며, AWS Marketplace를 통해서 타 유저의 이미지를 구매할 수도 있습니다.</strong></li>
 </ul>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
+<h1 id="heading-10"></h1>
 <p> </p>
-<h1 id="heading-11">
-  
-  <a class="anchor" href="#heading-11">#</a>
-</h1>
+<h1 id="heading-11"></h1>
 <p><img src="/AWS/EC2/EC205.png" alt="EC2" /></p>
 <ul>
 <li><strong>AWS 인스턴스 유형에서는 cpu, ram 스토리지의 유형과 사양 등을 선택할 수 있습니다.</strong></li>
 <li><strong>여기에서는 과금이 발생하지 않게 t2.micro를 선택하겠습니다.</strong></li>
 </ul>
-<h1 id="heading-12">
-  
-  <a class="anchor" href="#heading-12">#</a>
-</h1>
+<h1 id="heading-12"></h1>
 <p> </p>
-<h1 id="heading-13">
-  
-  <a class="anchor" href="#heading-13">#</a>
-</h1>
+<h1 id="heading-13"></h1>
 <p><img src="/AWS/EC2/EC206.png" alt="EC2" /></p>
 <ul>
 <li><strong>인스턴스 세부 정보 구성에서는 인스턴스의 수, VPC 서비넷 대역, 용량 예약, IAM 역할 등 세부 정보를 설정할 수 있습니다. 여기서는 기본 값으로 생성하겠습니다.</strong></li>
@@ -1669,168 +1497,93 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </blockquote>
-<h1 id="heading-14">
-  
-  <a class="anchor" href="#heading-14">#</a>
-</h1>
+<h1 id="heading-14"></h1>
 <p> </p>
-<h1 id="heading-15">
-  
-  <a class="anchor" href="#heading-15">#</a>
-</h1>
+<h1 id="heading-15"></h1>
 <p><img src="/AWS/EC2/EC207.png" alt="EC2" /></p>
 <ul>
 <li><strong>스토리지 추가에서는 볼륨을 추가할 수 있습니다.</strong></li>
 </ul>
-<h1 id="heading-16">
-  
-  <a class="anchor" href="#heading-16">#</a>
-</h1>
+<h1 id="heading-16"></h1>
 <p> </p>
-<h1 id="heading-17">
-  
-  <a class="anchor" href="#heading-17">#</a>
-</h1>
+<h1 id="heading-17"></h1>
 <p><img src="/AWS/EC2/EC208.png" alt="EC2" /></p>
 <ul>
 <li><strong>태그 추가에서는, 인스턴스에 대한 세부사항을 정의할 수 있습니다.</strong></li>
 <li><strong>여기서는 기본 값으로 생성하겠습니다.</strong></li>
 </ul>
-<h1 id="heading-18">
-  
-  <a class="anchor" href="#heading-18">#</a>
-</h1>
+<h1 id="heading-18"></h1>
 <p> </p>
-<h1 id="heading-19">
-  
-  <a class="anchor" href="#heading-19">#</a>
-</h1>
+<h1 id="heading-19"></h1>
 <p><img src="/AWS/EC2/EC209.png" alt="EC2" /></p>
 <ul>
 <li><strong>보안 그룹에서는 생성되는 EC2에 대한 보안 그룹을 지정합니다. 현재는 접속을 위해 TCP 22번 포트만 열어둔 상태로 생성하겠습니다.</strong></li>
 </ul>
-<h1 id="heading-20">
-  
-  <a class="anchor" href="#heading-20">#</a>
-</h1>
+<h1 id="heading-20"></h1>
 <p> </p>
-<h1 id="heading-21">
-  
-  <a class="anchor" href="#heading-21">#</a>
-</h1>
+<h1 id="heading-21"></h1>
 <p><img src="/AWS/EC2/EC210.png" alt="EC2" /></p>
 <ul>
 <li><strong>검사에서는 현재까지의 설정을 확인할 수 있습니다.</strong></li>
 <li><strong>인스턴스 시작을 누르면 키 페어를 선택창이 등장합니다. 여기서는 키 페어를 하나 생성하도록 하겠습니다.</strong></li>
 </ul>
-<h1 id="heading-22">
-  
-  <a class="anchor" href="#heading-22">#</a>
-</h1>
+<h1 id="heading-22"></h1>
 <p> </p>
-<h1 id="heading-23">
-  
-  <a class="anchor" href="#heading-23">#</a>
-</h1>
+<h1 id="heading-23"></h1>
 <p><img src="/AWS/EC2/EC211.png" alt="EC2" /></p>
 <ul>
 <li><strong>리눅스 운영체제를 통할 때에는 pem 파일을, Window를 사용할 때에는 ppk 파일을 사용하기에, 여기서는 pem 파일을 Putty key generator를 이용해 변경시켰습니다.</strong></li>
 </ul>
-<h1 id="heading-24">
-  
-  <a class="anchor" href="#heading-24">#</a>
-</h1>
+<h1 id="heading-24"></h1>
 <p> </p>
-<h1 id="heading-25">
-  
-  <a class="anchor" href="#heading-25">#</a>
-</h1>
+<h1 id="heading-25"></h1>
 <p><img src="/AWS/EC2/EC212.png" alt="EC2" /></p>
 <ul>
 <li><strong>생성이 완료되면, 인스턴스로 돌아와 생성되어진 인스턴스를 확인합니다.</strong></li>
 <li><strong>기본적으로 Pendig은 생성, Running은 실행가능, stop은 중지상태, shuttinf-down은 삭제 중, Terminated는 삭제된 상태를 의미하며, Running 상태에서만 요금이 부과됩니다.</strong></li>
 <li><strong>상단에는 간략한 EC2들의 정보를 나타내며, 하단에는 상세 정보를 나타냅니다. 여기서 접속을 위해 IPv4 퍼블릭 IP를 복사합니다.</strong></li>
 </ul>
-<h1 id="heading-26">
-  
-  <a class="anchor" href="#heading-26">#</a>
-</h1>
+<h1 id="heading-26"></h1>
 <p> </p>
-<h1 id="heading-27">
-  
-  <a class="anchor" href="#heading-27">#</a>
-</h1>
+<h1 id="heading-27"></h1>
 <p><img src="/AWS/EC2/EC213.png" alt="EC2" />
 <img src="/AWS/EC2/EC214.png" alt="EC2" /></p>
 <ul>
 <li><strong>Putty를 사용해 퍼블릭 IP와 프라이빗 키를 등록하면 접속이 가능합니다.</strong></li>
 <li><strong>기본적으로 기본 계정은 AWS Linux : EC2-user, Ubuntu : ubuntu Centos : centos 입니다.</strong></li>
 </ul>
-<h1 id="heading-28">
-  
-  <a class="anchor" href="#heading-28">#</a>
-</h1>
+<h1 id="heading-28"></h1>
 <p> </p>
-<h1 id="heading-29">
-  
-  <a class="anchor" href="#heading-29">#</a>
-</h1>
+<h1 id="heading-29"></h1>
 <p><img src="/AWS/EC2/EC215.png" alt="EC2" /></p>
 <ul>
 <li><strong>생성된 인스턴스에서 정상적으로 핑이 나가는 것을 확인하실 수 있으나, Window에서는 핑이 가지 않는 것을 확인하실 수 있습니다. 이는 전에 선택한 보안그룹으로 22번/TCP 포트밖에 사용하지 않았기 때문으로, 만약 보안그룹에 ICMP를 열어둔다면, Ping이 가능하게 할 수 있습니다. 이와 같이 보안그룹은  AWS에서 다방면으로 매우 중요한 역할을 수행합니다.</strong></li>
 </ul>
-<h1 id="heading-30">
-  
-  <a class="anchor" href="#heading-30">#</a>
-</h1>
+<h1 id="heading-30"></h1>
 <p> </p>
-<h1 id="heading-31">
-  
-  <a class="anchor" href="#heading-31">#</a>
-</h1>
+<h1 id="heading-31"></h1>
 <p><img src="/AWS/EC2/EC216.png" alt="EC2" /></p>
 <ul>
 <li><strong>이어서 인스턴스의 상태변경은 인스턴스를 선택후 작업, 혹은 오른쪽마우스로 가능합니다. 저는 삭제를 위해 종료를 클릭하겠습니다.</strong></li>
 </ul>
-<h1 id="heading-32">
-  
-  <a class="anchor" href="#heading-32">#</a>
-</h1>
+<h1 id="heading-32"></h1>
 <p> </p>
-<h1 id="heading-33">
-  
-  <a class="anchor" href="#heading-33">#</a>
-</h1>
+<h1 id="heading-33"></h1>
 <p><img src="/AWS/EC2/EC217.png" alt="EC2" /></p>
 <ul>
 <li><strong>삭제가 완료되었습니다.</strong></li>
 </ul>
-<h1 id="heading-34">
-  
-  <a class="anchor" href="#heading-34">#</a>
-</h1>
+<h1 id="heading-34"></h1>
 <p> </p>
-<h1 id="heading-35">
-  
-  <a class="anchor" href="#heading-35">#</a>
-</h1>
-<h2 id="사용자-정의-vpc-대역에-ec2-생성">
-  <strong>사용자 정의 VPC 대역에 EC2 생성</strong>
-  <a class="anchor" href="#%ec%82%ac%ec%9a%a9%ec%9e%90-%ec%a0%95%ec%9d%98-vpc-%eb%8c%80%ec%97%ad%ec%97%90-ec2-%ec%83%9d%ec%84%b1">#</a>
-</h2>
+<h1 id="heading-35"></h1>
+<h2 id="사용자-정의-vpc-대역에-ec2-생성"><strong>사용자 정의 VPC 대역에 EC2 생성</strong></h2>
 <hr>
-<h1 id="heading-36">
-  
-  <a class="anchor" href="#heading-36">#</a>
-</h1>
+<h1 id="heading-36"></h1>
 <ul>
 <li><strong>저번 장에서 생성했던 VPC 대역에 EC2를 생성해보도록 하겠습니다.</strong></li>
 <li><strong>인스턴스의 Network 설정까지는 동일하며, 그 후는 아래와 같습니다.</strong></li>
 </ul>
-<h1 id="heading-37">
-  
-  <a class="anchor" href="#heading-37">#</a>
-</h1>
+<h1 id="heading-37"></h1>
 <p><img src="/AWS/VPC/VPC23.png" alt="VPC" />
 <img src="/AWS/VPC/VPC24.png" alt="VPC" /></p>
 <ul>
@@ -1839,83 +1592,44 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>여기에서는 저번장에서 생성한 2개의 서브넷을 사용했습니다. Pulbic : 할당 활성화, Private : 할당 비활성화</strong></li>
 <li><strong>또한 위와 같이 ssh의 접속이 가능하게 보안그룹을 설정합니다.</strong></li>
 </ul>
-<h1 id="heading-38">
-  
-  <a class="anchor" href="#heading-38">#</a>
-</h1>
+<h1 id="heading-38"></h1>
 <p> </p>
-<h1 id="heading-39">
-  
-  <a class="anchor" href="#heading-39">#</a>
-</h1>
+<h1 id="heading-39"></h1>
 <p><img src="/AWS/VPC/VPC25.png" alt="VPC" /></p>
 <ul>
 <li><strong>생성이 완료되었습니다.</strong></li>
 </ul>
-<h1 id="heading-40">
-  
-  <a class="anchor" href="#heading-40">#</a>
-</h1>
+<h1 id="heading-40"></h1>
 <p> </p>
-<h1 id="heading-41">
-  
-  <a class="anchor" href="#heading-41">#</a>
-</h1>
+<h1 id="heading-41"></h1>
 <p><img src="/AWS/VPC/VPC26.png" alt="VPC" /></p>
 <ul>
 <li><strong>이제 Putty를 통해 퍼블릭과 프라이빗에 접속합니다.</strong></li>
 <li><strong>하지만, 프라이빗 대역은 퍼블릭 IP를 할당받지 않아 접속이 불가능합니다.</strong></li>
 </ul>
-<h1 id="heading-42">
-  
-  <a class="anchor" href="#heading-42">#</a>
-</h1>
+<h1 id="heading-42"></h1>
 <p> </p>
-<h1 id="heading-43">
-  
-  <a class="anchor" href="#heading-43">#</a>
-</h1>
+<h1 id="heading-43"></h1>
 <p><img src="/AWS/VPC/VPC28.png" alt="VPC" /></p>
 <ul>
 <li><strong>하지만 퍼블릭 서브넷의 인스턴스는 공통의 라우팅 테이블로 igw를 사용하기 때문에 프라이빗 IP를 알수 있어 접속이 가능합니다.</strong></li>
 <li><strong>또한 이와 같은 방법으로 보안그룹을 ssh접속이 가능한 한 컴퓨터만 혹은 서브넷이나 그룹등을 지정하거나, gateway를 특정 인스턴스로 지정하여 보안성을 높이는 것이 가능합니다.</strong></li>
 </ul>
-<h1 id="heading-44">
-  
-  <a class="anchor" href="#heading-44">#</a>
-</h1>
+<h1 id="heading-44"></h1>
 <p> </p>
-<h1 id="heading-45">
-  
-  <a class="anchor" href="#heading-45">#</a>
-</h1>
-<h2 id="cli를-통한-인스턴스-관리">
-  <strong>CLI를 통한 인스턴스 관리</strong>
-  <a class="anchor" href="#cli%eb%a5%bc-%ed%86%b5%ed%95%9c-%ec%9d%b8%ec%8a%a4%ed%84%b4%ec%8a%a4-%ea%b4%80%eb%a6%ac">#</a>
-</h2>
+<h1 id="heading-45"></h1>
+<h2 id="cli를-통한-인스턴스-관리"><strong>CLI를 통한 인스턴스 관리</strong></h2>
 <hr>
-<h1 id="heading-46">
-  
-  <a class="anchor" href="#heading-46">#</a>
-</h1>
+<h1 id="heading-46"></h1>
 <p> </p>
-<h1 id="heading-47">
-  
-  <a class="anchor" href="#heading-47">#</a>
-</h1>
+<h1 id="heading-47"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws ec2 help
 </span></span></code></pre></div><ul>
 <li><strong>aws ec2에 명령어를 알려줍니다.</strong></li>
 </ul>
-<h1 id="heading-48">
-  
-  <a class="anchor" href="#heading-48">#</a>
-</h1>
+<h1 id="heading-48"></h1>
 <p> </p>
-<h1 id="heading-49">
-  
-  <a class="anchor" href="#heading-49">#</a>
-</h1>
+<h1 id="heading-49"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws ec2 create-key-pair --key-name [ 키 페어 이름 ] --query &#39;KeyMaterial&#39; --output text | out-file &gt; [ 키 페어 경로 ].pem
 </span></span><span style="display:flex;"><span># KeyMaterial은 키의 값입니다.
 </span></span><span style="display:flex;"><span>
@@ -1926,41 +1640,23 @@ https://github.com/alex-shpak/hugo-book
 </span></span></code></pre></div><ul>
 <li><strong>키 페어를 생성합니다.</strong></li>
 </ul>
-<h1 id="heading-50">
-  
-  <a class="anchor" href="#heading-50">#</a>
-</h1>
+<h1 id="heading-50"></h1>
 <p> </p>
-<h1 id="heading-51">
-  
-  <a class="anchor" href="#heading-51">#</a>
-</h1>
+<h1 id="heading-51"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws ec2 delete-key-pair --key-name [ 키 페어 이름 ]
 </span></span></code></pre></div><ul>
 <li><strong>키 페어를 삭제합니다.</strong></li>
 </ul>
-<h1 id="heading-52">
-  
-  <a class="anchor" href="#heading-52">#</a>
-</h1>
+<h1 id="heading-52"></h1>
 <p> </p>
-<h1 id="heading-53">
-  
-  <a class="anchor" href="#heading-53">#</a>
-</h1>
+<h1 id="heading-53"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws ec2 create-security-group --group-name [ 보안 그룹 이름 ] --description [ 보안 그룹 설명 ] --vpcid [ VPC ID ]
 </span></span></code></pre></div><ul>
 <li><strong>보안 그룹을 생성합니다.</strong></li>
 </ul>
-<h1 id="heading-54">
-  
-  <a class="anchor" href="#heading-54">#</a>
-</h1>
+<h1 id="heading-54"></h1>
 <p> </p>
-<h1 id="heading-55">
-  
-  <a class="anchor" href="#heading-55">#</a>
-</h1>
+<h1 id="heading-55"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws ec2 authorize-security-group-ingress \
 </span></span><span style="display:flex;"><span>--group-id [ Security-group-id ] \
 </span></span><span style="display:flex;"><span>--protocol tcp \
@@ -1974,41 +1670,23 @@ https://github.com/alex-shpak/hugo-book
 </span></span></code></pre></div><ul>
 <li><strong>보안 그룹을 생성합니다.</strong></li>
 </ul>
-<h1 id="heading-56">
-  
-  <a class="anchor" href="#heading-56">#</a>
-</h1>
+<h1 id="heading-56"></h1>
 <p> </p>
-<h1 id="heading-57">
-  
-  <a class="anchor" href="#heading-57">#</a>
-</h1>
+<h1 id="heading-57"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws ec2 describe-security-groups --group-ids [ 보안 그룹 ID ]
 </span></span></code></pre></div><ul>
 <li><strong>보안 그룹의 상세 설명을 출력합니다.</strong></li>
 </ul>
-<h1 id="heading-58">
-  
-  <a class="anchor" href="#heading-58">#</a>
-</h1>
+<h1 id="heading-58"></h1>
 <p> </p>
-<h1 id="heading-59">
-  
-  <a class="anchor" href="#heading-59">#</a>
-</h1>
+<h1 id="heading-59"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws ec2 create-security-group --group-name [ 보안 그룹 이름 ] --description [ 보안 그룹 설명 ]
 </span></span></code></pre></div><ul>
 <li><strong>EC2를 생성할 때, 보안 그룹을 생성합니다.</strong></li>
 </ul>
-<h1 id="heading-60">
-  
-  <a class="anchor" href="#heading-60">#</a>
-</h1>
+<h1 id="heading-60"></h1>
 <p> </p>
-<h1 id="heading-61">
-  
-  <a class="anchor" href="#heading-61">#</a>
-</h1>
+<h1 id="heading-61"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws ec2 run-instances \
 </span></span><span style="display:flex;"><span>--image-id [ 이미지 이름 ] \
 </span></span><span style="display:flex;"><span>--count [ 인스턴스 수 ] \
@@ -2029,10 +1707,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><strong>인스턴스를 생성합니다.</strong></li>
 </ul>
-<h1 id="heading-62">
-  
-  <a class="anchor" href="#heading-62">#</a>
-</h1>
+<h1 id="heading-62"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>#!/bin/bash
 </span></span><span style="display:flex;"><span>apt install -y apache2
 </span></span><span style="display:flex;"><span>
@@ -2042,60 +1717,30 @@ https://github.com/alex-shpak/hugo-book
 </span></span></code></pre></div><ul>
 <li><strong>user data 사용시 사용가능한 형식</strong></li>
 </ul>
-<h1 id="heading-63">
-  
-  <a class="anchor" href="#heading-63">#</a>
-</h1>
+<h1 id="heading-63"></h1>
 <p> </p>
-<h1 id="heading-64">
-  
-  <a class="anchor" href="#heading-64">#</a>
-</h1>
+<h1 id="heading-64"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>aws ec2 describe-instances --filters &#34;[ 필터 값 ], Value=[ 값1, 값2 ]&#34;
 </span></span></code></pre></div><ul>
 <li><strong>특정 ec2를 나열합니다.</strong></li>
 </ul>
-<h1 id="heading-65">
-  
-  <a class="anchor" href="#heading-65">#</a>
-</h1>
+<h1 id="heading-65"></h1>
 <p> </p>
-<h1 id="heading-66">
-  
-  <a class="anchor" href="#heading-66">#</a>
-</h1>
+<h1 id="heading-66"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>aws ec2 start-instances --instance-ids [ 인스턴스 ID ]
 </span></span><span style="display:flex;"><span>aws ec2 stop-instances --instance-ids [ 인스턴스 ID ]
 </span></span><span style="display:flex;"><span>aws ec2 terminate-instances --instance-ids [ 인스턴스 ID ]
 </span></span></code></pre></div><ul>
 <li><strong>인스턴스의 상태를 변경합니다.</strong></li>
 </ul>
-<h1 id="heading-67">
-  
-  <a class="anchor" href="#heading-67">#</a>
-</h1>
+<h1 id="heading-67"></h1>
 <p> </p>
-<h1 id="heading-68">
-  
-  <a class="anchor" href="#heading-68">#</a>
-</h1>
-<h2 id="예제">
-  <strong>예제</strong>
-  <a class="anchor" href="#%ec%98%88%ec%a0%9c">#</a>
-</h2>
+<h1 id="heading-68"></h1>
+<h2 id="예제"><strong>예제</strong></h2>
 <hr>
-<h1 id="heading-69">
-  
-  <a class="anchor" href="#heading-69">#</a>
-</h1>
-<h4 id="예제-1">
-  예제 1.
-  <a class="anchor" href="#%ec%98%88%ec%a0%9c-1">#</a>
-</h4>
-<h4 id="다음의-인스턴스를-생성해보세요">
-  다음의 인스턴스를 생성해보세요.
-  <a class="anchor" href="#%eb%8b%a4%ec%9d%8c%ec%9d%98-%ec%9d%b8%ec%8a%a4%ed%84%b4%ec%8a%a4%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%b4%eb%b3%b4%ec%84%b8%ec%9a%94">#</a>
-</h4>
+<h1 id="heading-69"></h1>
+<h4 id="예제-1">예제 1.</h4>
+<h4 id="다음의-인스턴스를-생성해보세요">다음의 인스턴스를 생성해보세요.</h4>
 <blockquote>
 <p><strong>1. OS : Ubuntu18.04</strong><br>
 <strong>2. Instance-type : t2.micro</strong><br>
@@ -2105,23 +1750,11 @@ https://github.com/alex-shpak/hugo-book
 <strong>6. 새로운 Key-pair를 생성하여 접속 후, Apache2를 설치하세요.</strong><br>
 <strong>7. 각각의 인스턴스에 접속하여 확인합니다.</strong></p>
 </blockquote>
-<h1 id="heading-70">
-  
-  <a class="anchor" href="#heading-70">#</a>
-</h1>
+<h1 id="heading-70"></h1>
 <p> </p>
-<h1 id="heading-71">
-  
-  <a class="anchor" href="#heading-71">#</a>
-</h1>
-<h4 id="예제-2">
-  예제 2.
-  <a class="anchor" href="#%ec%98%88%ec%a0%9c-2">#</a>
-</h4>
-<h4 id="다음의-인스턴스를-생성해보세요-1">
-  다음의 인스턴스를 생성해보세요.
-  <a class="anchor" href="#%eb%8b%a4%ec%9d%8c%ec%9d%98-%ec%9d%b8%ec%8a%a4%ed%84%b4%ec%8a%a4%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%b4%eb%b3%b4%ec%84%b8%ec%9a%94-1">#</a>
-</h4>
+<h1 id="heading-71"></h1>
+<h4 id="예제-2">예제 2.</h4>
+<h4 id="다음의-인스턴스를-생성해보세요-1">다음의 인스턴스를 생성해보세요.</h4>
 <blockquote>
 <p><strong>1. OS : Ubuntu16.04</strong><br>
 <strong>2. Instance-type : t2.micro</strong><br>
@@ -2218,6 +1851,7 @@ https://github.com/alex-shpak/hugo-book
 </body>
 </div>
 </html>
+
 
 
 

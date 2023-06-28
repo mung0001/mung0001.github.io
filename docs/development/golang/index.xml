@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/golang/golang/</guid>
-      <description>Golang 설치#Go 공식 홈페이지에서 OS맞는 패키지를 설치 #Golang Study 사이트#Go 기본 메뉴얼 가장 빨리 만나는 Go 언어 Go-tour ##Go 기초 문법##중괄호 표기법#Go는 문법의 작성 스타일을 강제 Go의 대표적인 문법으로는 { } ( 중괄호 ) 표기 법이 있음 즉, 함수, 조건문, 반복문 등을 시작할 때는 반드시 같은 줄에서 시작 #; 세미콜론#마지막 구문의 세미클론을 생략 한 줄에 여러 구문을 사용할 때에는 세미콜론을 사용하여 나눔 fmt.</description>
+      <description>Golang 설치 Go 공식 홈페이지에서 OS맞는 패키지를 설치 Golang Study 사이트 Go 기본 메뉴얼 가장 빨리 만나는 Go 언어 Go-tour Go 기초 문법 중괄호 표기법 Go는 문법의 작성 스타일을 강제 Go의 대표적인 문법으로는 { } ( 중괄호 ) 표기 법이 있음 즉, 함수, 조건문, 반복문 등을 시작할 때는 반드시 같은 줄에서 시작 ; 세미콜론 마지막 구문의 세미클론을 생략 한 줄에 여러 구문을 사용할 때에는 세미콜론을 사용하여 나눔 fmt.Println(&amp;#34;Hello,&amp;#34;);fmt.Println(&amp;#34;world!&amp;#34;) 주석 // 한줄 주석 /* 여러 줄 주석 여러 줄 주석 */ 변수 사용하기 var 키워드 사용하는 방식 var i int var s string var age int = 10 var name string = &amp;#34;Maria&amp;#34; 자료형을 사용하는 방식 var age = 10 var name = &amp;#34;Maria&amp;#34; :=를 사용하면 var와 자료형 키워드를 사용하지 않고 선언가능 age := 10 name := &amp;#34;Maria&amp;#34; , ( 컴마 )를 사용하여 여러 변수를 선언하기 변수를 선언한 순서대로 값이 대입되며, 반드시 선언한 변수의 개수와 대입할 값의 개수가 값아야 함 var x, y int = 30, 50 var age, name = 10, &amp;#34;Maria&amp;#34; a, b, c, d := 1, 3.</description>
     </item>
     
   </channel>

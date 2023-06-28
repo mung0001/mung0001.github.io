@@ -2,39 +2,39 @@
 <html lang="en">
 
 <head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AWS S3 생성##이번 장에서는 S3를 생성해보도록 하겠습니다. S3 또한 중요한 개념이니, S3에 대한 학습을 원하는 분들은 AWS S3를 참조해주세요. #AWS S3 생성###AWS 서비스에서 S3를 검색합니다. ##버킷 생성을 클릭합니다. ##버킷의 이름과 리전을 선택합니다. 참고로 S3는 VPC에 영향을 받지 않습니다. ##옵션을 선택합니다. 여기서는 기본 값으로 생성을 진행합니다. ##S3에 대한 권한을 설정합니다. 기본적으로 차단되어 있는 것이 좋으며, 경우에 따라 설정 값을 변경합니다.">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="AWS S3 생성" />
-<meta property="og:description" content="AWS S3 생성##이번 장에서는 S3를 생성해보도록 하겠습니다. S3 또한 중요한 개념이니, S3에 대한 학습을 원하는 분들은 AWS S3를 참조해주세요. #AWS S3 생성###AWS 서비스에서 S3를 검색합니다. ##버킷 생성을 클릭합니다. ##버킷의 이름과 리전을 선택합니다. 참고로 S3는 VPC에 영향을 받지 않습니다. ##옵션을 선택합니다. 여기서는 기본 값으로 생성을 진행합니다. ##S3에 대한 권한을 설정합니다. 기본적으로 차단되어 있는 것이 좋으며, 경우에 따라 설정 값을 변경합니다." />
+<meta name="description" content="AWS S3 생성 이번 장에서는 S3를 생성해보도록 하겠습니다. S3 또한 중요한 개념이니, S3에 대한 학습을 원하는 분들은 AWS S3를 참조해주세요. AWS S3 생성 AWS 서비스에서 S3를 검색합니다. 버킷 생성을 클릭합니다. 버킷의 이름과 리전을 선택합니다. 참고로 S3는 VPC에 영향을 받지 않습니다. 옵션을 선택합니다. 여기서는 기본 값으로 생성을 진행합니다. S3에 대한 권한을 설정합니다. 기본적으로 차단되어 있는 것이 좋으며, 경우에 따라 설정 값을 변경합니다. 생성이 완료되면 버킷을 클릭합니다. 버킷을 클릭한 후, IMG 폴더를 생성합니다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/aws/awstraining/s3/><meta property="og:title" content="AWS S3 생성" />
+<meta property="og:description" content="AWS S3 생성 이번 장에서는 S3를 생성해보도록 하겠습니다. S3 또한 중요한 개념이니, S3에 대한 학습을 원하는 분들은 AWS S3를 참조해주세요. AWS S3 생성 AWS 서비스에서 S3를 검색합니다. 버킷 생성을 클릭합니다. 버킷의 이름과 리전을 선택합니다. 참고로 S3는 VPC에 영향을 받지 않습니다. 옵션을 선택합니다. 여기서는 기본 값으로 생성을 진행합니다. S3에 대한 권한을 설정합니다. 기본적으로 차단되어 있는 것이 좋으며, 경우에 따라 설정 값을 변경합니다. 생성이 완료되면 버킷을 클릭합니다. 버킷을 클릭한 후, IMG 폴더를 생성합니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/aws/awstraining/s3/" /><meta property="article:section" content="docs" />
 
 
 
-<title>AWS S3 생성 | 뭉게뭉게</title>
-<link rel="manifest" href="/manifest.json">
+<title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.3d8c7f91a1ae2a156d3acf98421fad5e26aabf6e44dfa654eae07357b1d35b2e.js" integrity="sha256-PYx/kaGuKhVtOs&#43;YQh&#43;tXiaqv25E36ZU6uBzV7HTWy4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
+<script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo="></script>
 <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+
 -->
+
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
+
 <body>
   <div class="background">
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex" style="max-width:100%;" >
-    
-    <aside style="padding-left: 1em;" class="book-menu">
-      <div class="book-menu-content">
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
       
   
 <nav styles="background-color:red; position=none;">
@@ -45,8 +45,9 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
+
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1080,127 +1081,6 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <span>Network</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
   <span>System</span>
   
 
@@ -1397,15 +1277,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
     </aside>
 
-
-
-    
-    <div style="padding-left: 2%;" class="book-page">
+    <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
   <div class="flex align-center justify-between">
@@ -1416,15 +1294,14 @@ https://github.com/alex-shpak/hugo-book
   <strong>AWS S3 생성</strong>
 
   <label for="toc-control">
-    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
   </label>
 </div>
 
 
   
-  <aside class="hidden clearfix">
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1453,343 +1330,187 @@ https://github.com/alex-shpak/hugo-book
 <br>
 <br>
       
-  <article class="markdown"><h1 id="aws-s3-생성">
-  <strong>AWS S3 생성</strong>
-  <a class="anchor" href="#aws-s3-%ec%83%9d%ec%84%b1">#</a>
-</h1>
+  <article class="markdown"><h1 id="aws-s3-생성"><strong>AWS S3 생성</strong></h1>
 <hr>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
+<h1 id="heading"></h1>
 <ul>
 <li><strong>이번 장에서는 S3를 생성해보도록 하겠습니다.</strong></li>
 <li><strong>S3 또한 중요한 개념이니, S3에 대한 학습을 원하는 분들은 <a href="https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_storage/#s3--simple-storage-service-">AWS S3</a>를 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
+<h1 id="heading-1"></h1>
 <blockquote>
-<h2 id="aws-s3-생성-1">
-  <strong>AWS S3 생성</strong>
-  <a class="anchor" href="#aws-s3-%ec%83%9d%ec%84%b1-1">#</a>
-</h2>
+<h2 id="aws-s3-생성-1"><strong>AWS S3 생성</strong></h2>
 </blockquote>
 <hr>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
+<h1 id="heading-2"></h1>
 <p> </p>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
+<h1 id="heading-3"></h1>
 <p><img src="/AWS/S3/S301.png" alt="S3" /></p>
 <ul>
 <li><strong>AWS 서비스에서 S3를 검색합니다.</strong></li>
 </ul>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
+<h1 id="heading-4"></h1>
 <p> </p>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
+<h1 id="heading-5"></h1>
 <p><img src="/AWS/S3/S302.png" alt="S3" /></p>
 <ul>
 <li><strong>버킷 생성을 클릭합니다.</strong></li>
 </ul>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
+<h1 id="heading-6"></h1>
 <p> </p>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
+<h1 id="heading-7"></h1>
 <p><img src="/AWS/S3/S303.png" alt="S3" /></p>
 <ul>
 <li><strong>버킷의 이름과 리전을 선택합니다.</strong></li>
 <li><strong>참고로 S3는 VPC에 영향을 받지 않습니다.</strong></li>
 </ul>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
+<h1 id="heading-8"></h1>
 <p> </p>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
+<h1 id="heading-9"></h1>
 <p><img src="/AWS/S3/S304.png" alt="S3" /></p>
 <ul>
 <li><strong>옵션을 선택합니다. 여기서는 기본 값으로 생성을 진행합니다.</strong></li>
 </ul>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
+<h1 id="heading-10"></h1>
 <p> </p>
-<h1 id="heading-11">
-  
-  <a class="anchor" href="#heading-11">#</a>
-</h1>
+<h1 id="heading-11"></h1>
 <p><img src="/AWS/S3/S305.png" alt="S3" /></p>
 <ul>
 <li><strong>S3에 대한 권한을 설정합니다. 기본적으로 차단되어 있는 것이 좋으며, 경우에 따라 설정 값을 변경합니다.</strong></li>
 </ul>
-<h1 id="heading-12">
-  
-  <a class="anchor" href="#heading-12">#</a>
-</h1>
+<h1 id="heading-12"></h1>
 <p> </p>
-<h1 id="heading-13">
-  
-  <a class="anchor" href="#heading-13">#</a>
-</h1>
+<h1 id="heading-13"></h1>
 <p><img src="/AWS/S3/S306.png" alt="S3" /></p>
 <ul>
 <li><strong>생성이 완료되면 버킷을 클릭합니다.</strong></li>
 </ul>
-<h1 id="heading-14">
-  
-  <a class="anchor" href="#heading-14">#</a>
-</h1>
+<h1 id="heading-14"></h1>
 <p> </p>
-<h1 id="heading-15">
-  
-  <a class="anchor" href="#heading-15">#</a>
-</h1>
+<h1 id="heading-15"></h1>
 <p><img src="/AWS/S3/S307.png" alt="S3" />
 <img src="/AWS/S3/S308.png" alt="S3" /></p>
 <ul>
 <li><strong>버킷을 클릭한 후, IMG 폴더를 생성합니다.</strong></li>
 </ul>
-<h1 id="heading-16">
-  
-  <a class="anchor" href="#heading-16">#</a>
-</h1>
+<h1 id="heading-16"></h1>
 <p> </p>
-<h1 id="heading-17">
-  
-  <a class="anchor" href="#heading-17">#</a>
-</h1>
+<h1 id="heading-17"></h1>
 <p><img src="/AWS/S3/S309.png" alt="S3" /></p>
 <ul>
 <li><strong>IMG 폴더로 진입하여 jpg 이미지 파일을 업로드 합니다.</strong></li>
 </ul>
-<h1 id="heading-18">
-  
-  <a class="anchor" href="#heading-18">#</a>
-</h1>
+<h1 id="heading-18"></h1>
 <p> </p>
-<h1 id="heading-19">
-  
-  <a class="anchor" href="#heading-19">#</a>
-</h1>
+<h1 id="heading-19"></h1>
 <p><img src="/AWS/S3/S310.png" alt="S3" /></p>
 <ul>
 <li><strong>이미지 파일을 선택하면 다운로드 링크, URL 링크를 확인할 수 있습니다.</strong></li>
 <li><strong>여기에서는 URL 링크로 진입하여 보겠습니다.</strong></li>
 </ul>
-<h1 id="heading-20">
-  
-  <a class="anchor" href="#heading-20">#</a>
-</h1>
+<h1 id="heading-20"></h1>
 <p> </p>
-<h1 id="heading-21">
-  
-  <a class="anchor" href="#heading-21">#</a>
-</h1>
+<h1 id="heading-21"></h1>
 <p><img src="/AWS/S3/S311.png" alt="S3" /></p>
 <ul>
 <li><strong>링크로 진입하여도, 그림이 나타나지 않습니다.</strong></li>
 <li><strong>이는 초기 버킷을 생성할 때, 퍼블릭 엑세스를 차단하였기 때문입니다.</strong></li>
 </ul>
-<h1 id="heading-22">
-  
-  <a class="anchor" href="#heading-22">#</a>
-</h1>
+<h1 id="heading-22"></h1>
 <p> </p>
-<h1 id="heading-23">
-  
-  <a class="anchor" href="#heading-23">#</a>
-</h1>
+<h1 id="heading-23"></h1>
 <p><img src="/AWS/S3/S312.png" alt="S3" /></p>
 <ul>
 <li><strong>이에 대한 수정을 위해 버킷에서 퍼블렉 엑세스 설정을 편집을 클릭합니다.</strong></li>
 </ul>
-<h1 id="heading-24">
-  
-  <a class="anchor" href="#heading-24">#</a>
-</h1>
+<h1 id="heading-24"></h1>
 <p> </p>
-<h1 id="heading-25">
-  
-  <a class="anchor" href="#heading-25">#</a>
-</h1>
+<h1 id="heading-25"></h1>
 <p><img src="/AWS/S3/S313.png" alt="S3" /></p>
 <ul>
 <li><strong>퍼블릭 엑세스 차단을 해제 후 저장합니다.</strong></li>
 </ul>
-<h1 id="heading-26">
-  
-  <a class="anchor" href="#heading-26">#</a>
-</h1>
+<h1 id="heading-26"></h1>
 <p> </p>
-<h1 id="heading-27">
-  
-  <a class="anchor" href="#heading-27">#</a>
-</h1>
+<h1 id="heading-27"></h1>
 <p><img src="/AWS/S3/S314.png" alt="S3" /></p>
 <ul>
 <li><strong>다시 파일을 선택하여 퍼블릭 설정을 클릭합니다.</strong></li>
 </ul>
-<h1 id="heading-28">
-  
-  <a class="anchor" href="#heading-28">#</a>
-</h1>
+<h1 id="heading-28"></h1>
 <p> </p>
-<h1 id="heading-29">
-  
-  <a class="anchor" href="#heading-29">#</a>
-</h1>
+<h1 id="heading-29"></h1>
 <p><img src="/AWS/S3/S315.png" alt="S3" /></p>
 <ul>
 <li><strong>URL로 접속하면 이미지가 나타납니다.</strong></li>
 </ul>
-<h1 id="heading-30">
-  
-  <a class="anchor" href="#heading-30">#</a>
-</h1>
+<h1 id="heading-30"></h1>
 <p> </p>
-<h1 id="heading-31">
-  
-  <a class="anchor" href="#heading-31">#</a>
-</h1>
+<h1 id="heading-31"></h1>
 <p> </p>
-<h1 id="heading-32">
-  
-  <a class="anchor" href="#heading-32">#</a>
-</h1>
+<h1 id="heading-32"></h1>
 <hr>
 <blockquote>
-<h2 id="cli-s3-생성">
-  <strong>CLI S3 생성</strong>
-  <a class="anchor" href="#cli-s3-%ec%83%9d%ec%84%b1">#</a>
-</h2>
+<h2 id="cli-s3-생성"><strong>CLI S3 생성</strong></h2>
 </blockquote>
 <hr>
-<h1 id="heading-33">
-  
-  <a class="anchor" href="#heading-33">#</a>
-</h1>
+<h1 id="heading-33"></h1>
 <p> </p>
-<h1 id="heading-34">
-  
-  <a class="anchor" href="#heading-34">#</a>
-</h1>
+<h1 id="heading-34"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws s3 help
 </span></span><span style="display:flex;"><span>$ aws s3api help
 </span></span></code></pre></div><ul>
 <li><strong>s3에 대한 명령어를 출력합니다.</strong></li>
 </ul>
-<h1 id="heading-35">
-  
-  <a class="anchor" href="#heading-35">#</a>
-</h1>
+<h1 id="heading-35"></h1>
 <p> </p>
-<h1 id="heading-36">
-  
-  <a class="anchor" href="#heading-36">#</a>
-</h1>
+<h1 id="heading-36"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws s3 mb s3://[ 버킷 이름 ]
 </span></span></code></pre></div><ul>
 <li><strong>버킷을 생성합니다.</strong></li>
 </ul>
-<h1 id="heading-37">
-  
-  <a class="anchor" href="#heading-37">#</a>
-</h1>
+<h1 id="heading-37"></h1>
 <p> </p>
-<h1 id="heading-38">
-  
-  <a class="anchor" href="#heading-38">#</a>
-</h1>
+<h1 id="heading-38"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws s3 ls
 </span></span><span style="display:flex;"><span>$ aws s3 ls s3://[ 버킷 이름 ]/path
 </span></span></code></pre></div><ul>
 <li><strong>버킷 및 폴더를 나열합니다.</strong></li>
 </ul>
-<h1 id="heading-39">
-  
-  <a class="anchor" href="#heading-39">#</a>
-</h1>
+<h1 id="heading-39"></h1>
 <p> </p>
-<h1 id="heading-40">
-  
-  <a class="anchor" href="#heading-40">#</a>
-</h1>
+<h1 id="heading-40"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws s3 rb s3://[ 버킷 이름 ]
 </span></span><span style="display:flex;"><span>$ aws s3 rb s3://[ 버킷 이름 ] --force
 </span></span></code></pre></div><ul>
 <li><strong>버킷을 삭제합니다.</strong></li>
 </ul>
-<h1 id="heading-41">
-  
-  <a class="anchor" href="#heading-41">#</a>
-</h1>
+<h1 id="heading-41"></h1>
 <p> </p>
-<h1 id="heading-42">
-  
-  <a class="anchor" href="#heading-42">#</a>
-</h1>
+<h1 id="heading-42"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws s3 cp file.txt s3://my-bucket/ --grants [ 권한 ]
 </span></span></code></pre></div><ul>
 <li>
 <hr>
 </li>
 </ul>
-<h1 id="heading-43">
-  
-  <a class="anchor" href="#heading-43">#</a>
-</h1>
+<h1 id="heading-43"></h1>
 <p> </p>
-<h1 id="heading-44">
-  
-  <a class="anchor" href="#heading-44">#</a>
-</h1>
+<h1 id="heading-44"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws s3 sync [ local path ] s3://[ bucket path ]/[ path ]
 </span></span></code></pre></div><ul>
 <li><strong>[ local path ]에서 [ bucket ]의 [ path ]에 모든 것을 Pull ( 다운로드 ) 합니다.</strong></li>
 </ul>
-<h1 id="heading-45">
-  
-  <a class="anchor" href="#heading-45">#</a>
-</h1>
+<h1 id="heading-45"></h1>
 <p> </p>
-<h1 id="heading-46">
-  
-  <a class="anchor" href="#heading-46">#</a>
-</h1>
+<h1 id="heading-46"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws s3 sync s3://[ bucket path ]/[ path ] [ local path ]
 </span></span></code></pre></div><ul>
 <li><strong>[ local path ]에서 [ bucket ]의 [ path ]에 모든 것을 Push ( 업로드 ) 합니다.</strong></li>
 </ul>
-<h1 id="heading-47">
-  
-  <a class="anchor" href="#heading-47">#</a>
-</h1>
+<h1 id="heading-47"></h1>
 <p> </p>
-<h1 id="heading-48">
-  
-  <a class="anchor" href="#heading-48">#</a>
-</h1>
+<h1 id="heading-48"></h1>
 </article>
  
       
@@ -1848,6 +1569,7 @@ https://github.com/alex-shpak/hugo-book
 </body>
 </div>
 </html>
+
 
 
 

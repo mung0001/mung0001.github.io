@@ -12,9 +12,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/docker/docker/docker-1/</guid>
-      <description>Docker란?##Docker###도커란 컨테이너 기반의 오픈소스 가상화 플랫폼으로 컨테이너형 가상화 기술을 구현하기 위해 상주 어플리케이션과 이 어플리케이션을 조작하기 위한 명령행 도구로 구성되는 프로덕트입니다.
+      <description>Docker란? Docker 도커란 컨테이너 기반의 오픈소스 가상화 플랫폼으로 컨테이너형 가상화 기술을 구현하기 위해 상주 어플리케이션과 이 어플리케이션을 조작하기 위한 명령행 도구로 구성되는 프로덕트입니다.
 컨테이너라 하면 배에 실는 네모난 화물 수송용 박스를 생각할 수 있는데 각각의 컨테이너 안에는 다양한 화물을 넣을 수 있고 규격화되어 컨테이너선이나 트레일러등 다양한 운송수단으로 쉽게 옮길 수 있습니다.
-서버에서 이야기하는 컨테이너도 이와 비슷한데 다양한 프로그램, 실행환경을 컨테이너로 추상화하고 동일한 인터페이스를 제공하여 프로그램의 배포 및 관리를 단순하게 해줍니다.</description>
+서버에서 이야기하는 컨테이너도 이와 비슷한데 다양한 프로그램, 실행환경을 컨테이너로 추상화하고 동일한 인터페이스를 제공하여 프로그램의 배포 및 관리를 단순하게 해줍니다. 백엔드 프로그램, 데이터베이스 서버, 메시지 큐등 어떤 프로그램도 컨테이너로 추상화할 수 있고 조립PC, AWS, Azure, Google cloud등 어디에서든 실행할 수 있습니다.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/docker/docker/docker-2/</guid>
-      <description>Docker 환경구축##이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다. 설치에 대한 자세한 설명은 Docker docs를 참고해주세요. #Docker 설치##Docker는 기본적으로 Linux 플랫폼, MacOS, Window 10을 지원하고 있습니다. Docker 지원 DESKTOP #Docker 지원 SERVER ##Debian 설치##Debian 환경##Debian계열 Linux에 Docker Engine을 설치 하기 위해서는 하단의 요구조건을 충족해야 합니다. Debian Buster 10 or Debian Stretch 9/ Raspbian Streetch x86_64 or amd 64, armhf, arm64 ##Debian 구 버전 Docker 삭제#$ sudo apt-get remove docker docker-engine docker.</description>
+      <description>Docker 환경구축 이번 장에서는 로컬환경에서 Docker를 구축하는 방법에 대해 알아보겠습니다. 설치에 대한 자세한 설명은 Docker docs를 참고해주세요. Docker 설치 Docker는 기본적으로 Linux 플랫폼, MacOS, Window 10을 지원하고 있습니다. Docker 지원 DESKTOP Docker 지원 SERVER Debian 설치 Debian 환경 Debian계열 Linux에 Docker Engine을 설치 하기 위해서는 하단의 요구조건을 충족해야 합니다. Debian Buster 10 or Debian Stretch 9/ Raspbian Streetch x86_64 or amd 64, armhf, arm64 Debian 구 버전 Docker 삭제 $ sudo apt-get remove docker docker-engine docker.</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/docker/docker/docker-3/</guid>
-      <description>Docker 이미지와 컨테이너##Docker 이미지와 컨테이너##Docker 이미지##$ docker image --help $ docker image [ options ] 옵션 설명 build 이미지 빌드 history history 출력 inspect 임포트 load 로드 ls 이미지 리스트르 보여준다 prune 사용하지 않는 이미지를 제거 pull 저장소에서 이미지를 다운로드 push 저장소에 이미지를 업로드 rm 삭제 save tar로 이미지를 저장 tag 태그를 생성 ##$ docker pull [ options ] [ 레포지터리 : 태그 ] $ docker image pull [ options ] [ 레포지터리 : 태그 ] # 도커 이미지 다운로드 $ docker images $ docker image list # 도커 이미지 리스트 리스트 출력 $ docker image tags [ 기반이미지 : 태그 ] [ 새이미지 | 태그 ] # 도커 이미지에 태그 입력 $ docker image push [ 레포지터리 : 태그 ] # 지정된 레포지터리에 업로드 도커 이미지의 태그는 버전을 구별하기 위한 역할을 수행합니다.</description>
+      <description>Docker 이미지와 컨테이너 Docker 이미지와 컨테이너 Docker 이미지 $ docker image --help $ docker image [ options ] 옵션 설명 build 이미지 빌드 history history 출력 inspect 임포트 load 로드 ls 이미지 리스트르 보여준다 prune 사용하지 않는 이미지를 제거 pull 저장소에서 이미지를 다운로드 push 저장소에 이미지를 업로드 rm 삭제 save tar로 이미지를 저장 tag 태그를 생성 $ docker pull [ options ] [ 레포지터리 : 태그 ] $ docker image pull [ options ] [ 레포지터리 : 태그 ] # 도커 이미지 다운로드 $ docker images $ docker image list # 도커 이미지 리스트 리스트 출력 $ docker image tags [ 기반이미지 : 태그 ] [ 새이미지 | 태그 ] # 도커 이미지에 태그 입력 $ docker image push [ 레포지터리 : 태그 ] # 지정된 레포지터리에 업로드 도커 이미지의 태그는 버전을 구별하기 위한 역할을 수행합니다.</description>
     </item>
     
     <item>
@@ -41,8 +41,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/docker/docker/docker-4/</guid>
-      <description>Doker 기본 명령어##docker 명령어의 기본 형식#$ docker + &amp;lt; 명령어 &amp;gt; $ sudo usermod -aG docker ${USER} $ sudo service docker restart # user을 docker 그룹에 넣음 항상 root 권한으로 실행 ##Docker search 명령으로 이미지 검색#$ sudo docker search &amp;lt; 이미지 이름 &amp;gt; 보통 ubuntu, centos, redis 등 os나 프로그램 이름을 가진 이미지가 공식 이미지
-나머지는 사용자들이 만들어서 공개한 이미지</description>
+      <description>Doker 기본 명령어 docker 명령어의 기본 형식 $ docker + &amp;lt; 명령어 &amp;gt; $ sudo usermod -aG docker ${USER} $ sudo service docker restart # user을 docker 그룹에 넣음 항상 root 권한으로 실행 Docker search 명령으로 이미지 검색 $ sudo docker search &amp;lt; 이미지 이름 &amp;gt; 보통 ubuntu, centos, redis 등 os나 프로그램 이름을 가진 이미지가 공식 이미지
+나머지는 사용자들이 만들어서 공개한 이미지
+Pull 명령으로 이미지 받기 $ sudo docker pull &amp;lt; 이미지:버전 &amp;gt; $ sudo docker pull ubuntu:latest 이미지 이름 뒤에 latest를 설정하면 최신 버전을 받음</description>
     </item>
     
     <item>
@@ -51,9 +52,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/docker/docker/docker-5/</guid>
-      <description>Dockerfile##Dockerfile###도커는 이미지를 만들기 위해 Dockerfile 이라는 이미지 빌드용 DSL (Domain Specific Language 파일을 사용합니다.)
+      <description>Dockerfile Dockerfile 도커는 이미지를 만들기 위해 Dockerfile 이라는 이미지 빌드용 DSL (Domain Specific Language 파일을 사용합니다.)
 DSL은 단순한 텍스트 파일로 일반적으로 소스와 함께 관리됩니다.
-$ sudo docker build &amp;lt;OPTIONS&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;URL&amp;gt; $ sudo docker build -t Mydocker . ##Dockerfile 내부 살펴보기##하단 외의 추가적으로 궁금한 사항들은 Docker docs를 참조해주세요. Dockerfile 예시 # 1. ubuntu 설치 (패키지 업데이트 + 만든사람 표시) FROM ubuntu:18.</description>
+$ sudo docker build &amp;lt;OPTIONS&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;URL&amp;gt; $ sudo docker build -t Mydocker . Dockerfile 내부 살펴보기 하단 외의 추가적으로 궁금한 사항들은 Docker docs를 참조해주세요. Dockerfile 예시 # 1. ubuntu 설치 (패키지 업데이트 + 만든사람 표시) FROM ubuntu:18.04 MAINTAINER mung0001@mung0001.github.io RUN apt-get -y update RUN apt-get -y upgrade # 2.</description>
     </item>
     
     <item>
@@ -62,7 +63,7 @@ $ sudo docker build &amp;lt;OPTIONS&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;URL&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/docker/docker/docker-6/</guid>
-      <description>Docker Compose##도커는 복잡한 설정을 쉽게 관리하기 위해 YAML방식의 설정파일을 이용한 Docker Compose라는 툴을 제공합니다. #Docker compose 설치#$ curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose $ chmod +x /usr/local/bin/docker-compose # docker-compose download docker-compose version 1.9.0, build 2585387 docker-py version: 1.10.6 CPython version: 2.7.9 OpenSSL version: OpenSSL 1.0.1t 3 May 2016 $ docker-compose version # 확인 ##Docker Compose로 wordpress 생성#$ vi docker-compose.</description>
+      <description>Docker Compose 도커는 복잡한 설정을 쉽게 관리하기 위해 YAML방식의 설정파일을 이용한 Docker Compose라는 툴을 제공합니다. Docker compose 설치 $ curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose $ chmod +x /usr/local/bin/docker-compose # docker-compose download docker-compose version 1.9.0, build 2585387 docker-py version: 1.10.6 CPython version: 2.7.9 OpenSSL version: OpenSSL 1.0.1t 3 May 2016 $ docker-compose version # 확인 Docker Compose로 wordpress 생성 $ vi docker-compose.yml version: &amp;#39;2&amp;#39; services: db: image: mysql:5.7 volumes: - db_data:/var/lib/mysql restart: always environment: MYSQL_ROOT_PASSWORD: wordpress MYSQL_DATABASE: wordpress MYSQL_USER: wordpress MYSQL_PASSWORD: wordpress wordpress: depends_on: - db image: wordpress:latest volumes: - wp_data:/var/www/html ports: - &amp;#34;8000:80&amp;#34; restart: always environment: WORDPRESS_DB_HOST: db:3306 WORDPRESS_DB_PASSWORD: wordpress volumes: db_data: wp_data: $ docker-compose up # 컨테이너 생성 </description>
     </item>
     
     <item>
@@ -71,11 +72,11 @@ $ sudo docker build &amp;lt;OPTIONS&amp;gt; &amp;lt;PATH&amp;gt; &amp;lt;URL&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/docker/docker/docker-7/</guid>
-      <description>Docker Swarm##Swarm은 Docker와 별개로 개발되었지만 Docker 1.12 버전부터 Swarm mode라는 이름으로 합쳐졌습니다.
+      <description>Docker Swarm Swarm은 Docker와 별개로 개발되었지만 Docker 1.12 버전부터 Swarm mode라는 이름으로 합쳐졌습니다.
 도커에 모든 게 내장되어 다른 툴을 설치할 필요가 없고 도커 명령어와 compose를 그대로 사용할 수 있어 다른 툴에 비해 압도적으로 쉬우며 편리합니다.
 기능이 단순하고 필요한 것만 구현되어 있어 세부적인 컨트롤의 난이도는 높은 편입니다.
-##Docker Swarm 용어절리##Swarm 정식 명칭은 도커 1.12버전에서 Swarm이 Swarm Mode로 바뀌었지만 그냥 Swarm이라고 하는 듯합니다.
-Swarm Cluster자체도 Swarm이라고 합니다.</description>
+Docker Swarm 용어절리 Swarm 정식 명칭은 도커 1.12버전에서 Swarm이 Swarm Mode로 바뀌었지만 그냥 Swarm이라고 하는 듯합니다.
+Swarm Cluster자체도 Swarm이라고 합니다. Swarm을 만들다 = Cluster을 만들다.</description>
     </item>
     
   </channel>

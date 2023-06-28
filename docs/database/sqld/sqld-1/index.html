@@ -2,49 +2,47 @@
 <html lang="en">
 
 <head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="데이터 모델링##데이터 모델링의 이해##데이터 모델링이란 현실에 존재하는 것을 데이터베이스에 사용할 수 있도록 모델링하는 과정 #데이터 모델링의 중요성 및 유의점 중복 : 같은 시간 같은 데이터 제공
+<meta name="description" content="데이터 모델링 데이터 모델링의 이해 데이터 모델링이란 현실에 존재하는 것을 데이터베이스에 사용할 수 있도록 모델링하는 과정 데이터 모델링의 중요성 및 유의점 중복 : 같은 시간 같은 데이터 제공
 비유연성 : 사소한 업무변화에 데이터 모델이 수시로 변경되면 안됨
 비일관성 : 신용 상태에 대한 갱신 없이 고객의 납부 이력 정보 갱신 안됨
-#데이터 모델링
-개념적, 논리적, 물리적 데이터 모델링 #데이터 독립성 요소 : 스키마 스키마란 데이터베이스의 구조와 제약 조건에 관한 전반적인 명세를 기바술한 메타데이터의 집합">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="SQLD : 데이터 모델링" />
-<meta property="og:description" content="데이터 모델링##데이터 모델링의 이해##데이터 모델링이란 현실에 존재하는 것을 데이터베이스에 사용할 수 있도록 모델링하는 과정 #데이터 모델링의 중요성 및 유의점 중복 : 같은 시간 같은 데이터 제공
+데이터 모델링
+개념적, 논리적, 물리적 데이터 모델링 데이터 독립성 요소 : 스키마 스키마란 데이터베이스의 구조와 제약 조건에 관한 전반적인 명세를 기바술한 메타데이터의 집합">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/database/sqld/sqld-1/><meta property="og:title" content="SQLD : 데이터 모델링" />
+<meta property="og:description" content="데이터 모델링 데이터 모델링의 이해 데이터 모델링이란 현실에 존재하는 것을 데이터베이스에 사용할 수 있도록 모델링하는 과정 데이터 모델링의 중요성 및 유의점 중복 : 같은 시간 같은 데이터 제공
 비유연성 : 사소한 업무변화에 데이터 모델이 수시로 변경되면 안됨
 비일관성 : 신용 상태에 대한 갱신 없이 고객의 납부 이력 정보 갱신 안됨
-#데이터 모델링
-개념적, 논리적, 물리적 데이터 모델링 #데이터 독립성 요소 : 스키마 스키마란 데이터베이스의 구조와 제약 조건에 관한 전반적인 명세를 기바술한 메타데이터의 집합" />
+데이터 모델링
+개념적, 논리적, 물리적 데이터 모델링 데이터 독립성 요소 : 스키마 스키마란 데이터베이스의 구조와 제약 조건에 관한 전반적인 명세를 기바술한 메타데이터의 집합" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/database/sqld/sqld-1/" /><meta property="article:section" content="docs" />
 
 
-<title>SQLD : 데이터 모델링 | 뭉게뭉게</title>
-<link rel="manifest" href="/manifest.json">
+
+<title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.ffcce1416ac965bf6815bf4bdd99cf970182cd6ac9b30c72a81407197d550a70.js" integrity="sha256-/8zhQWrJZb9oFb9L3ZnPlwGCzWrJswxyqBQHGX1VCnA=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
+<script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo="></script>
 <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+
 -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274477834047595"
-     crossorigin="anonymous"></script>
 
-
+  
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
+
 <body>
   <div class="background">
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex" style="max-width:100%;" >
-    
-    <aside style="padding-left: 1em;" class="book-menu">
-      <div class="book-menu-content">
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
       
   
 <nav styles="background-color:red; position=none;">
@@ -55,8 +53,9 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
+
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -97,7 +96,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/docs/infra/" class="">Infra</a>
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
   
 
 
@@ -116,7 +115,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
   
 
 
@@ -139,7 +138,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
   
 
 
@@ -147,6 +146,39 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
 
 
 
@@ -162,7 +194,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  <span>Microsoft Azure</span>
   
 
 
@@ -174,8 +206,269 @@ https://github.com/alex-shpak/hugo-book
   
   <ul>
     
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
   </ul>
   
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
 
 
 
@@ -244,6 +537,300 @@ https://github.com/alex-shpak/hugo-book
 
   
   <a href="/docs/docker/dockertraining/" class="collapsed ">Docker Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/monitoring/pc/" class="collapsed ">Monitoring</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
   
 
 
@@ -380,294 +967,6 @@ https://github.com/alex-shpak/hugo-book
 
       
     
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
-  <span>development</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
-  <span>Network</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
   </ul>
   
 
@@ -796,15 +1095,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
     </aside>
 
-
-
-    
-    <div style="padding-left: 2%;" class="book-page">
+    <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
   <div class="flex align-center justify-between">
@@ -815,15 +1112,14 @@ https://github.com/alex-shpak/hugo-book
   <strong>SQLD : 데이터 모델링</strong>
 
   <label for="toc-control">
-    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
   </label>
 </div>
 
 
   
-  <aside class="hidden clearfix">
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -874,38 +1170,17 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <br>
 <br>
-<script src="https://ads-partners.coupang.com/g.js"></script>
-<script>
-    new PartnersCoupang.G({"id":402713,"trackingCode":"AF0817069","subId":null,"template":"carousel","width":"680","height":"140"});
-</script>
-<br>
-<br>
 <br>
       
-  <article class="markdown"><h1 id="데이터-모델링">
-  <strong>데이터 모델링</strong>
-  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%eb%aa%a8%eb%8d%b8%eb%a7%81">#</a>
-</h1>
+  <article class="markdown"><h1 id="데이터-모델링"><strong>데이터 모델링</strong></h1>
 <hr>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
-<h3 id="데이터-모델링의-이해">
-  <strong>데이터 모델링의 이해</strong>
-  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%eb%aa%a8%eb%8d%b8%eb%a7%81%ec%9d%98-%ec%9d%b4%ed%95%b4">#</a>
-</h3>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
+<h1 id="heading"></h1>
+<h3 id="데이터-모델링의-이해"><strong>데이터 모델링의 이해</strong></h3>
+<h1 id="heading-1"></h1>
 <ul>
 <li><strong>데이터 모델링이란 현실에 존재하는 것을 데이터베이스에 사용할 수 있도록 모델링하는 과정</strong></li>
 </ul>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
+<h1 id="heading-2"></h1>
 <p> </p>
 <ul>
 <li><strong>데이터 모델링의 중요성 및 유의점</strong>
@@ -922,10 +1197,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
+<h1 id="heading-3"></h1>
 <p> </p>
 <ul>
 <li>
@@ -935,10 +1207,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
+<h1 id="heading-4"></h1>
 <p> </p>
 <ul>
 <li><strong>데이터 독립성 요소 : 스키마</strong>
@@ -955,10 +1224,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
+<h1 id="heading-5"></h1>
 <p> </p>
 <ul>
 <li>
@@ -976,10 +1242,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
+<h1 id="heading-6"></h1>
 <p> </p>
 <ul>
 <li><strong>데이터 독립성</strong>
@@ -996,10 +1259,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
+<h1 id="heading-7"></h1>
 <p> </p>
 <ul>
 <li><strong>데이터 모델링의 3요소</strong>
@@ -1016,10 +1276,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
+<h1 id="heading-8"></h1>
 <p> </p>
 <ul>
 <li><strong>데이터 모델링은 프로젝트에 참여한 모두가 숙지</strong>
@@ -1029,10 +1286,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
+<h1 id="heading-9"></h1>
 <p> </p>
 <ul>
 <li>
@@ -1042,10 +1296,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
+<h1 id="heading-10"></h1>
 <p> </p>
 <ul>
 <li><strong>모델링의 특징</strong>
@@ -1062,10 +1313,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-11">
-  
-  <a class="anchor" href="#heading-11">#</a>
-</h1>
+<h1 id="heading-11"></h1>
 <p> </p>
 <ul>
 <li><strong>Entity Relationship Diagram 작업순서</strong>
@@ -1091,10 +1339,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-12">
-  
-  <a class="anchor" href="#heading-12">#</a>
-</h1>
+<h1 id="heading-12"></h1>
 <p> </p>
 <ul>
 <li><strong>좋은 데이터 모델의 요소</strong>
@@ -1120,10 +1365,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-13">
-  
-  <a class="anchor" href="#heading-13">#</a>
-</h1>
+<h1 id="heading-13"></h1>
 <p> </p>
 <ul>
 <li><strong>엔터티의 특징</strong>
@@ -1155,10 +1397,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-14">
-  
-  <a class="anchor" href="#heading-14">#</a>
-</h1>
+<h1 id="heading-14"></h1>
 <p> </p>
 <ul>
 <li>
@@ -1179,10 +1418,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-15">
-  
-  <a class="anchor" href="#heading-15">#</a>
-</h1>
+<h1 id="heading-15"></h1>
 <p> </p>
 <ul>
 <li><strong>발생시점에 따른 분류 : 기본/키, 중심, 행위 엔터티</strong>
@@ -1199,10 +1435,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-16">
-  
-  <a class="anchor" href="#heading-16">#</a>
-</h1>
+<h1 id="heading-16"></h1>
 <p> </p>
 <ul>
 <li>
@@ -1212,10 +1445,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-17">
-  
-  <a class="anchor" href="#heading-17">#</a>
-</h1>
+<h1 id="heading-17"></h1>
 <p> </p>
 <ul>
 <li><strong>속성</strong>
@@ -1235,10 +1465,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-18">
-  
-  <a class="anchor" href="#heading-18">#</a>
-</h1>
+<h1 id="heading-18"></h1>
 <p> </p>
 <ul>
 <li><strong>속성의 분류 : 기본, 설계, 파생 속성</strong>
@@ -1255,10 +1482,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-19">
-  
-  <a class="anchor" href="#heading-19">#</a>
-</h1>
+<h1 id="heading-19"></h1>
 <p> </p>
 <ul>
 <li><strong>도메인</strong>
@@ -1267,10 +1491,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-20">
-  
-  <a class="anchor" href="#heading-20">#</a>
-</h1>
+<h1 id="heading-20"></h1>
 <p> </p>
 <ul>
 <li><strong>속성의 명명</strong>
@@ -1290,10 +1511,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-21">
-  
-  <a class="anchor" href="#heading-21">#</a>
-</h1>
+<h1 id="heading-21"></h1>
 <p> </p>
 <ul>
 <li>
@@ -1303,10 +1521,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-22">
-  
-  <a class="anchor" href="#heading-22">#</a>
-</h1>
+<h1 id="heading-22"></h1>
 <p> </p>
 <ul>
 <li><strong>패어링</strong>
@@ -1315,31 +1530,19 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-23">
-  
-  <a class="anchor" href="#heading-23">#</a>
-</h1>
+<h1 id="heading-23"></h1>
 <p> </p>
 <ul>
 <li><strong>UML에는 연관관계와 의존관계가 있는데, 연관(존재적)관계는 항상 이용하는 관계이고 의존관계는 상대방 행위에 의해 발생하는 관계를 의미</strong></li>
 </ul>
-<h1 id="heading-24">
-  
-  <a class="anchor" href="#heading-24">#</a>
-</h1>
+<h1 id="heading-24"></h1>
 <p> </p>
 <ul>
 <li><strong>ERD에서는 존재적 관계와 행위에 의한 관계를 구분하지 않고 표기했지만 UML에서는 이를 구분하여 연관관계는 실선, 의존관계는 점선으로 표현</strong></li>
 </ul>
-<h1 id="heading-25">
-  
-  <a class="anchor" href="#heading-25">#</a>
-</h1>
+<h1 id="heading-25"></h1>
 <p> </p>
-<h1 id="heading-26">
-  
-  <a class="anchor" href="#heading-26">#</a>
-</h1>
+<h1 id="heading-26"></h1>
 <ul>
 <li><strong>관계의 표기법</strong>
 <ul>
@@ -1355,10 +1558,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-27">
-  
-  <a class="anchor" href="#heading-27">#</a>
-</h1>
+<h1 id="heading-27"></h1>
 <p> </p>
 <ul>
 <li><strong>관계 체크사항</strong>
@@ -1378,10 +1578,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-28">
-  
-  <a class="anchor" href="#heading-28">#</a>
-</h1>
+<h1 id="heading-28"></h1>
 <p> </p>
 <ul>
 <li><strong>식별자</strong>
@@ -1398,10 +1595,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-29">
-  
-  <a class="anchor" href="#heading-29">#</a>
-</h1>
+<h1 id="heading-29"></h1>
 <p> </p>
 <ul>
 <li><strong>식별자의 특징</strong>
@@ -1424,10 +1618,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-30">
-  
-  <a class="anchor" href="#heading-30">#</a>
-</h1>
+<h1 id="heading-30"></h1>
 <p> </p>
 <ul>
 <li><strong>식별자 분류</strong>
@@ -1463,10 +1654,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-31">
-  
-  <a class="anchor" href="#heading-31">#</a>
-</h1>
+<h1 id="heading-31"></h1>
 <p> </p>
 <ul>
 <li><strong>주식별자 도출기준</strong>
@@ -1477,10 +1665,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-32">
-  
-  <a class="anchor" href="#heading-32">#</a>
-</h1>
+<h1 id="heading-32"></h1>
 <p> </p>
 <ul>
 <li><strong>식별자 관계</strong>
@@ -1490,10 +1675,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-33">
-  
-  <a class="anchor" href="#heading-33">#</a>
-</h1>
+<h1 id="heading-33"></h1>
 <p> </p>
 <ul>
 <li><strong>비식별자</strong>
@@ -1519,23 +1701,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-34">
-  
-  <a class="anchor" href="#heading-34">#</a>
-</h1>
+<h1 id="heading-34"></h1>
 <p> </p>
-<h1 id="heading-35">
-  
-  <a class="anchor" href="#heading-35">#</a>
-</h1>
-<h3 id="데이터-모델과-성능">
-  <strong>데이터 모델과 성능</strong>
-  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%eb%aa%a8%eb%8d%b8%ea%b3%bc-%ec%84%b1%eb%8a%a5">#</a>
-</h3>
-<h1 id="heading-36">
-  
-  <a class="anchor" href="#heading-36">#</a>
-</h1>
+<h1 id="heading-35"></h1>
+<h3 id="데이터-모델과-성능"><strong>데이터 모델과 성능</strong></h3>
+<h1 id="heading-36"></h1>
 <ul>
 <li><strong>성능 데이터 모델링</strong>
 <ul>
@@ -1551,10 +1721,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-37">
-  
-  <a class="anchor" href="#heading-37">#</a>
-</h1>
+<h1 id="heading-37"></h1>
 <p> </p>
 <ul>
 <li><strong>성능 데이터 모델링 고려사항 순서</strong>
@@ -1580,10 +1747,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-38">
-  
-  <a class="anchor" href="#heading-38">#</a>
-</h1>
+<h1 id="heading-38"></h1>
 <p> </p>
 <ul>
 <li><strong>기본적으로 데이터는 속성간의 함수종속성에 근거하여 정규화되어야 한다. 정규화는 선택이 아니라 필수사항</strong>
@@ -1606,10 +1770,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-39">
-  
-  <a class="anchor" href="#heading-39">#</a>
-</h1>
+<h1 id="heading-39"></h1>
 <p> </p>
 <ul>
 <li><strong>반정규화 절차</strong>
@@ -1626,10 +1787,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-40">
-  
-  <a class="anchor" href="#heading-40">#</a>
-</h1>
+<h1 id="heading-40"></h1>
 <p> </p>
 <ul>
 <li><strong>반정규화 대상조사</strong>
@@ -1649,10 +1807,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-41">
-  
-  <a class="anchor" href="#heading-41">#</a>
-</h1>
+<h1 id="heading-41"></h1>
 <p> </p>
 <ul>
 <li><strong>다른 방법유도 검토</strong>
@@ -1672,23 +1827,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-42">
-  
-  <a class="anchor" href="#heading-42">#</a>
-</h1>
+<h1 id="heading-42"></h1>
 <p> </p>
-<h1 id="heading-43">
-  
-  <a class="anchor" href="#heading-43">#</a>
-</h1>
-<h3 id="반정규화의-기법테이블-칼럼-관계">
-  <strong>반정규화의 기법(테이블, 칼럼, 관계)</strong>
-  <a class="anchor" href="#%eb%b0%98%ec%a0%95%ea%b7%9c%ed%99%94%ec%9d%98-%ea%b8%b0%eb%b2%95%ed%85%8c%ec%9d%b4%eb%b8%94-%ec%b9%bc%eb%9f%bc-%ea%b4%80%ea%b3%84">#</a>
-</h3>
-<h1 id="heading-44">
-  
-  <a class="anchor" href="#heading-44">#</a>
-</h1>
+<h1 id="heading-43"></h1>
+<h3 id="반정규화의-기법테이블-칼럼-관계"><strong>반정규화의 기법(테이블, 칼럼, 관계)</strong></h3>
+<h1 id="heading-44"></h1>
 <ul>
 <li>
 <p><strong>테이블 반정규화</strong></p>
@@ -1707,10 +1850,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-45">
-  
-  <a class="anchor" href="#heading-45">#</a>
-</h1>
+<h1 id="heading-45"></h1>
 <p> </p>
 <ul>
 <li><strong>테이블분할(수직분할, 수평분할)</strong>
@@ -1724,10 +1864,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-46">
-  
-  <a class="anchor" href="#heading-46">#</a>
-</h1>
+<h1 id="heading-46"></h1>
 <p> </p>
 <ul>
 <li><strong>테이블추가(중복, 통계, 이력, 부분테이블 추가)</strong>
@@ -1749,10 +1886,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-47">
-  
-  <a class="anchor" href="#heading-47">#</a>
-</h1>
+<h1 id="heading-47"></h1>
 <p> </p>
 <ul>
 <li><strong>칼럼 반정규화</strong>
@@ -1772,10 +1906,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-48">
-  
-  <a class="anchor" href="#heading-48">#</a>
-</h1>
+<h1 id="heading-48"></h1>
 <p> </p>
 <ul>
 <li><strong>PK에 의해 테이블을 분할하는 방법(파티셔닝)</strong>
@@ -1792,10 +1923,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-49">
-  
-  <a class="anchor" href="#heading-49">#</a>
-</h1>
+<h1 id="heading-49"></h1>
 <p> </p>
 <ul>
 <li><strong>테이블에 대한 수평/수직분할의 절차</strong>
@@ -1815,19 +1943,10 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-50">
-  
-  <a class="anchor" href="#heading-50">#</a>
-</h1>
+<h1 id="heading-50"></h1>
 <p> </p>
-<h3 id="슈퍼서브-타입-모델">
-  <strong>슈퍼/서브 타입 모델</strong>
-  <a class="anchor" href="#%ec%8a%88%ed%8d%bc%ec%84%9c%eb%b8%8c-%ed%83%80%ec%9e%85-%eb%aa%a8%eb%8d%b8">#</a>
-</h3>
-<h1 id="heading-51">
-  
-  <a class="anchor" href="#heading-51">#</a>
-</h1>
+<h3 id="슈퍼서브-타입-모델"><strong>슈퍼/서브 타입 모델</strong></h3>
+<h1 id="heading-51"></h1>
 <ul>
 <li>
 <p><strong>슈퍼/ 서브 타입 모델을 사용하는 이유</strong></p>
@@ -1836,10 +1955,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-52">
-  
-  <a class="anchor" href="#heading-52">#</a>
-</h1>
+<h1 id="heading-52"></h1>
 <p> </p>
 <ul>
 <li><strong>슈퍼/서브 타입 데이터 모델의 변환기술</strong>
@@ -1856,10 +1972,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-53">
-  
-  <a class="anchor" href="#heading-53">#</a>
-</h1>
+<h1 id="heading-53"></h1>
 <p> </p>
 <ul>
 <li><strong>인덱스 특성을 고려한 PK/FK DB 성능향상</strong>
@@ -1873,10 +1986,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-54">
-  
-  <a class="anchor" href="#heading-54">#</a>
-</h1>
+<h1 id="heading-54"></h1>
 <p> </p>
 <ul>
 <li><strong>분산 DB</strong>
@@ -1890,10 +2000,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-55">
-  
-  <a class="anchor" href="#heading-55">#</a>
-</h1>
+<h1 id="heading-55"></h1>
 <p> </p>
 <ul>
 <li><strong>분산 DB를 만족하기 위한 6가지 투명성</strong>
@@ -1919,17 +2026,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-56">
-  
-  <a class="anchor" href="#heading-56">#</a>
-</h1>
+<h1 id="heading-56"></h1>
 <p> </p>
 <ul>
 <li><strong>분산 DB 장-단점</strong>
-<h1 id="heading-57">
-  
-  <a class="anchor" href="#heading-57">#</a>
-</h1>
+<h1 id="heading-57"></h1>
 <ul>
 <li><strong>장점</strong>
 <ul>
@@ -1951,10 +2052,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-58">
-  
-  <a class="anchor" href="#heading-58">#</a>
-</h1>
+<h1 id="heading-58"></h1>
  
 <ul>
 <li><strong>단점</strong>
@@ -1982,10 +2080,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-59">
-  
-  <a class="anchor" href="#heading-59">#</a>
-</h1>
+<h1 id="heading-59"></h1>
 <p> </p>
 <ul>
 <li><strong>분산 DB 적용 기법</strong>
@@ -2005,10 +2100,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-60">
-  
-  <a class="anchor" href="#heading-60">#</a>
-</h1>
+<h1 id="heading-60"></h1>
 <p> </p>
 <ul>
 <li><strong>테이블 복제 분산</strong>
@@ -2030,10 +2122,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-61">
-  
-  <a class="anchor" href="#heading-61">#</a>
-</h1>
+<h1 id="heading-61"></h1>
 <p> </p>
 <ul>
 <li><strong>테이블 요약 분산</strong>
@@ -2055,10 +2144,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-62">
-  
-  <a class="anchor" href="#heading-62">#</a>
-</h1>
+<h1 id="heading-62"></h1>
 <p> </p>
 <ul>
 <li><strong>분산 DB 설계를 고려해야 하는 경우</strong>
@@ -2081,14 +2167,18 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-63">
-  
-  <a class="anchor" href="#heading-63">#</a>
-</h1>
+<h1 id="heading-63"></h1>
 <p> </p>
 </article>
  
       
+<div>
+
+<br>
+
+
+
+</div>
 
       <footer class="book-footer">
         
@@ -2161,6 +2251,7 @@ https://github.com/alex-shpak/hugo-book
 </body>
 </div>
 </html>
+
 
 
 

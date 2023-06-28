@@ -2,39 +2,39 @@
 <html lang="en">
 
 <head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AWS Storage##S3 ( Simple Storage Service )##웹 서비스 인터페이스( HTTP ) 를 이용하여 웹에서 언제 어디서나 원하는 양의 데이터를 저장하고 검색할 수 있는 스토리지 버킷( Bucket )과 객체 ( Object )로 나뉘며, 저장하고자 하는 모든 요소는 하나의 객체로 저장되고, 객체를 담는 곳이 버킷 S3 자체는 글로벌 서비스이지만 버킷을 생성 할 때에는 리전을 선택해야 함 객체는 객체 데이터와 메타 데이터로 나뉘며, 각자의 고유한 URL을 가지며 해당 URL로 접속 가능 #버킷( Bucket )의 정의와 특징#객체를 담고 있는 구성 요소 크기는 무제한, 리전을 지정하여 버킷을 생성해야 함 버킷의 이름은 반드시 고유해야하며, 증복이 불가능 한번 설정된 버킷의 이름은 다른 계정에서 사용불가 #객체( Object ) 의 정의와 특징#S3에 업로드되는 1개의 데이터를 객체라 함 키, 버전 ID, 값, 메타데이터 등으로 구성 객체 하나의 최소 크기는 1(0) byte ~ 5TB 스토리지 클래스, 암호화, 태그, 메타데이터, 객체 잠금 설정 가능 객체의 크기가 매우 클 경우 멀티파트 업로드를 통해 신속하게 업로드 가능 #객체의 스토리지 클래스#객체의 접근빈도 및 저장기안에 따라 결정되는 객체의 특성 Standard Type : 클래스를 선택하지 않을 경우 선택되는 일반적인 클래스 Strandard_IA(Ifrequent Access ) : 자주 엑세스하지는 않지만 즉시 액세스할 수 있는 데이터여야하는 경우 선택되는 클래스 One Zone_iA : Standard_IA와 기능은 동일하나 Standard_IA의 경우 세 곳의 AZ에 저장되는 것과 달리 한 군데의 AZ에만 저장되어 해당 AZ가 파괴될 경우 정보 손실 가능성 존재 ( 저장 요금이 적음 ) Intelligent tiering : 엑세스 빈도가 불규칙하여 빈도를 가늠하기 어려운 경우 선택되는 클래스 Glancier : 검색이 아닌 저장이 주용도인 스토리지로 저장요금이 위 클래스들보다 훨씬 저렴한, 다만 저장이 주용도이기 때문에 검색이 3~ 5시간이 소요 Glacier Deep Archive : 10년 이상 저장할 데이터를 저장하는 스토리지 클래스 #S3 사용#S3 생성↕#S3 생성#1.">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="AWS Storage" />
-<meta property="og:description" content="AWS Storage##S3 ( Simple Storage Service )##웹 서비스 인터페이스( HTTP ) 를 이용하여 웹에서 언제 어디서나 원하는 양의 데이터를 저장하고 검색할 수 있는 스토리지 버킷( Bucket )과 객체 ( Object )로 나뉘며, 저장하고자 하는 모든 요소는 하나의 객체로 저장되고, 객체를 담는 곳이 버킷 S3 자체는 글로벌 서비스이지만 버킷을 생성 할 때에는 리전을 선택해야 함 객체는 객체 데이터와 메타 데이터로 나뉘며, 각자의 고유한 URL을 가지며 해당 URL로 접속 가능 #버킷( Bucket )의 정의와 특징#객체를 담고 있는 구성 요소 크기는 무제한, 리전을 지정하여 버킷을 생성해야 함 버킷의 이름은 반드시 고유해야하며, 증복이 불가능 한번 설정된 버킷의 이름은 다른 계정에서 사용불가 #객체( Object ) 의 정의와 특징#S3에 업로드되는 1개의 데이터를 객체라 함 키, 버전 ID, 값, 메타데이터 등으로 구성 객체 하나의 최소 크기는 1(0) byte ~ 5TB 스토리지 클래스, 암호화, 태그, 메타데이터, 객체 잠금 설정 가능 객체의 크기가 매우 클 경우 멀티파트 업로드를 통해 신속하게 업로드 가능 #객체의 스토리지 클래스#객체의 접근빈도 및 저장기안에 따라 결정되는 객체의 특성 Standard Type : 클래스를 선택하지 않을 경우 선택되는 일반적인 클래스 Strandard_IA(Ifrequent Access ) : 자주 엑세스하지는 않지만 즉시 액세스할 수 있는 데이터여야하는 경우 선택되는 클래스 One Zone_iA : Standard_IA와 기능은 동일하나 Standard_IA의 경우 세 곳의 AZ에 저장되는 것과 달리 한 군데의 AZ에만 저장되어 해당 AZ가 파괴될 경우 정보 손실 가능성 존재 ( 저장 요금이 적음 ) Intelligent tiering : 엑세스 빈도가 불규칙하여 빈도를 가늠하기 어려운 경우 선택되는 클래스 Glancier : 검색이 아닌 저장이 주용도인 스토리지로 저장요금이 위 클래스들보다 훨씬 저렴한, 다만 저장이 주용도이기 때문에 검색이 3~ 5시간이 소요 Glacier Deep Archive : 10년 이상 저장할 데이터를 저장하는 스토리지 클래스 #S3 사용#S3 생성↕#S3 생성#1." />
+<meta name="description" content="AWS Storage S3 ( Simple Storage Service ) 웹 서비스 인터페이스( HTTP ) 를 이용하여 웹에서 언제 어디서나 원하는 양의 데이터를 저장하고 검색할 수 있는 스토리지 버킷( Bucket )과 객체 ( Object )로 나뉘며, 저장하고자 하는 모든 요소는 하나의 객체로 저장되고, 객체를 담는 곳이 버킷 S3 자체는 글로벌 서비스이지만 버킷을 생성 할 때에는 리전을 선택해야 함 객체는 객체 데이터와 메타 데이터로 나뉘며, 각자의 고유한 URL을 가지며 해당 URL로 접속 가능 버킷( Bucket )의 정의와 특징 객체를 담고 있는 구성 요소 크기는 무제한, 리전을 지정하여 버킷을 생성해야 함 버킷의 이름은 반드시 고유해야하며, 증복이 불가능 한번 설정된 버킷의 이름은 다른 계정에서 사용불가 객체( Object ) 의 정의와 특징 S3에 업로드되는 1개의 데이터를 객체라 함 키, 버전 ID, 값, 메타데이터 등으로 구성 객체 하나의 최소 크기는 1(0) byte ~ 5TB 스토리지 클래스, 암호화, 태그, 메타데이터, 객체 잠금 설정 가능 객체의 크기가 매우 클 경우 멀티파트 업로드를 통해 신속하게 업로드 가능 객체의 스토리지 클래스 객체의 접근빈도 및 저장기안에 따라 결정되는 객체의 특성 Standard Type : 클래스를 선택하지 않을 경우 선택되는 일반적인 클래스 Strandard_IA(Ifrequent Access ) : 자주 엑세스하지는 않지만 즉시 액세스할 수 있는 데이터여야하는 경우 선택되는 클래스 One Zone_iA : Standard_IA와 기능은 동일하나 Standard_IA의 경우 세 곳의 AZ에 저장되는 것과 달리 한 군데의 AZ에만 저장되어 해당 AZ가 파괴될 경우 정보 손실 가능성 존재 ( 저장 요금이 적음 ) Intelligent tiering : 엑세스 빈도가 불규칙하여 빈도를 가늠하기 어려운 경우 선택되는 클래스 Glancier : 검색이 아닌 저장이 주용도인 스토리지로 저장요금이 위 클래스들보다 훨씬 저렴한, 다만 저장이 주용도이기 때문에 검색이 3~ 5시간이 소요 Glacier Deep Archive : 10년 이상 저장할 데이터를 저장하는 스토리지 클래스 S3 사용 S3 생성 ↕ S3 생성 1.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/aws/amazonwebservice/aws_storage/><meta property="og:title" content="AWS Storage" />
+<meta property="og:description" content="AWS Storage S3 ( Simple Storage Service ) 웹 서비스 인터페이스( HTTP ) 를 이용하여 웹에서 언제 어디서나 원하는 양의 데이터를 저장하고 검색할 수 있는 스토리지 버킷( Bucket )과 객체 ( Object )로 나뉘며, 저장하고자 하는 모든 요소는 하나의 객체로 저장되고, 객체를 담는 곳이 버킷 S3 자체는 글로벌 서비스이지만 버킷을 생성 할 때에는 리전을 선택해야 함 객체는 객체 데이터와 메타 데이터로 나뉘며, 각자의 고유한 URL을 가지며 해당 URL로 접속 가능 버킷( Bucket )의 정의와 특징 객체를 담고 있는 구성 요소 크기는 무제한, 리전을 지정하여 버킷을 생성해야 함 버킷의 이름은 반드시 고유해야하며, 증복이 불가능 한번 설정된 버킷의 이름은 다른 계정에서 사용불가 객체( Object ) 의 정의와 특징 S3에 업로드되는 1개의 데이터를 객체라 함 키, 버전 ID, 값, 메타데이터 등으로 구성 객체 하나의 최소 크기는 1(0) byte ~ 5TB 스토리지 클래스, 암호화, 태그, 메타데이터, 객체 잠금 설정 가능 객체의 크기가 매우 클 경우 멀티파트 업로드를 통해 신속하게 업로드 가능 객체의 스토리지 클래스 객체의 접근빈도 및 저장기안에 따라 결정되는 객체의 특성 Standard Type : 클래스를 선택하지 않을 경우 선택되는 일반적인 클래스 Strandard_IA(Ifrequent Access ) : 자주 엑세스하지는 않지만 즉시 액세스할 수 있는 데이터여야하는 경우 선택되는 클래스 One Zone_iA : Standard_IA와 기능은 동일하나 Standard_IA의 경우 세 곳의 AZ에 저장되는 것과 달리 한 군데의 AZ에만 저장되어 해당 AZ가 파괴될 경우 정보 손실 가능성 존재 ( 저장 요금이 적음 ) Intelligent tiering : 엑세스 빈도가 불규칙하여 빈도를 가늠하기 어려운 경우 선택되는 클래스 Glancier : 검색이 아닌 저장이 주용도인 스토리지로 저장요금이 위 클래스들보다 훨씬 저렴한, 다만 저장이 주용도이기 때문에 검색이 3~ 5시간이 소요 Glacier Deep Archive : 10년 이상 저장할 데이터를 저장하는 스토리지 클래스 S3 사용 S3 생성 ↕ S3 생성 1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/aws/amazonwebservice/aws_storage/" /><meta property="article:section" content="docs" />
 
 
 
-<title>AWS Storage | 뭉게뭉게</title>
-<link rel="manifest" href="/manifest.json">
+<title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.3d8c7f91a1ae2a156d3acf98421fad5e26aabf6e44dfa654eae07357b1d35b2e.js" integrity="sha256-PYx/kaGuKhVtOs&#43;YQh&#43;tXiaqv25E36ZU6uBzV7HTWy4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
+<script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo="></script>
 <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+
 -->
+
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
+
 <body>
   <div class="background">
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex" style="max-width:100%;" >
-    
-    <aside style="padding-left: 1em;" class="book-menu">
-      <div class="book-menu-content">
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
       
   
 <nav styles="background-color:red; position=none;">
@@ -45,8 +45,9 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
+
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -960,127 +961,6 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <span>Network</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
   <span>System</span>
   
 
@@ -1277,15 +1157,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
     </aside>
 
-
-
-    
-    <div style="padding-left: 2%;" class="book-page">
+    <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
   <div class="flex align-center justify-between">
@@ -1296,15 +1174,14 @@ https://github.com/alex-shpak/hugo-book
   <strong>AWS Storage</strong>
 
   <label for="toc-control">
-    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
   </label>
 </div>
 
 
   
-  <aside class="hidden clearfix">
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1465,24 +1342,12 @@ https://github.com/alex-shpak/hugo-book
 <br>
 <br>
       
-  <article class="markdown"><h1 id="aws-storage">
-  <strong>AWS Storage</strong>
-  <a class="anchor" href="#aws-storage">#</a>
-</h1>
+  <article class="markdown"><h1 id="aws-storage"><strong>AWS Storage</strong></h1>
 <hr>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
-<h2 id="s3--simple-storage-service-">
-  <strong>S3 ( Simple Storage Service )</strong>
-  <a class="anchor" href="#s3--simple-storage-service-">#</a>
-</h2>
+<h1 id="heading"></h1>
+<h2 id="s3--simple-storage-service-"><strong>S3 ( Simple Storage Service )</strong></h2>
 <hr>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
+<h1 id="heading-1"></h1>
 <p><img src="/AWS/Storage/S3.png" alt="S3" /></p>
 <ul>
 <li>웹 서비스 인터페이스( HTTP ) 를 이용하여 웹에서 언제 어디서나 원하는 양의 데이터를 저장하고 검색할 수 있는 스토리지</li>
@@ -1490,28 +1355,16 @@ https://github.com/alex-shpak/hugo-book
 <li>S3 자체는 글로벌 서비스이지만 버킷을 생성 할 때에는 리전을 선택해야 함</li>
 <li>객체는 객체 데이터와 메타 데이터로 나뉘며, 각자의 고유한 URL을 가지며 해당 URL로 접속 가능</li>
 </ul>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
-<h3 id="버킷-bucket-의-정의와-특징">
-  <strong>버킷( Bucket )의 정의와 특징</strong>
-  <a class="anchor" href="#%eb%b2%84%ed%82%b7-bucket-%ec%9d%98-%ec%a0%95%ec%9d%98%ec%99%80-%ed%8a%b9%ec%a7%95">#</a>
-</h3>
+<h1 id="heading-2"></h1>
+<h3 id="버킷-bucket-의-정의와-특징"><strong>버킷( Bucket )의 정의와 특징</strong></h3>
 <ul>
 <li>객체를 담고 있는 구성 요소</li>
 <li>크기는 무제한, 리전을 지정하여 버킷을 생성해야 함</li>
 <li>버킷의 이름은 반드시 고유해야하며, 증복이 불가능</li>
 <li>한번 설정된 버킷의 이름은 다른 계정에서 사용불가</li>
 </ul>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
-<h3 id="객체-object--의-정의와-특징">
-  <strong>객체( Object ) 의 정의와 특징</strong>
-  <a class="anchor" href="#%ea%b0%9d%ec%b2%b4-object--%ec%9d%98-%ec%a0%95%ec%9d%98%ec%99%80-%ed%8a%b9%ec%a7%95">#</a>
-</h3>
+<h1 id="heading-3"></h1>
+<h3 id="객체-object--의-정의와-특징"><strong>객체( Object ) 의 정의와 특징</strong></h3>
 <ul>
 <li>S3에 업로드되는 1개의 데이터를 객체라 함</li>
 <li>키, 버전 ID, 값, 메타데이터 등으로 구성</li>
@@ -1519,14 +1372,8 @@ https://github.com/alex-shpak/hugo-book
 <li>스토리지 클래스, 암호화, 태그, 메타데이터, 객체 잠금 설정 가능</li>
 <li>객체의 크기가 매우 클 경우 멀티파트 업로드를 통해 신속하게 업로드 가능</li>
 </ul>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
-<h3 id="객체의-스토리지-클래스">
-  <strong>객체의 스토리지 클래스</strong>
-  <a class="anchor" href="#%ea%b0%9d%ec%b2%b4%ec%9d%98-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%ed%81%b4%eb%9e%98%ec%8a%a4">#</a>
-</h3>
+<h1 id="heading-4"></h1>
+<h3 id="객체의-스토리지-클래스"><strong>객체의 스토리지 클래스</strong></h3>
 <ul>
 <li>객체의 접근빈도 및 저장기안에 따라 결정되는 객체의 특성</li>
 <li><strong>Standard Type :</strong> 클래스를 선택하지 않을 경우 선택되는 일반적인 클래스</li>
@@ -1536,14 +1383,8 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>Glancier :</strong> 검색이 아닌 저장이 주용도인 스토리지로 저장요금이 위 클래스들보다 훨씬 저렴한, 다만 저장이 주용도이기 때문에 검색이 3~ 5시간이 소요</li>
 <li><strong>Glacier Deep Archive :</strong> 10년 이상 저장할 데이터를 저장하는 스토리지 클래스</li>
 </ul>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
-<h3 id="s3-사용">
-  <strong>S3 사용</strong>
-  <a class="anchor" href="#s3-%ec%82%ac%ec%9a%a9">#</a>
-</h3>
+<h1 id="heading-5"></h1>
+<h3 id="s3-사용"><strong>S3 사용</strong></h3>
 <blockquote>
 <div class="book-expand">
   <label>
@@ -1553,39 +1394,18 @@ https://github.com/alex-shpak/hugo-book
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
-<h2 id="s3-생성">
-  <strong>S3 생성</strong>
-  <a class="anchor" href="#s3-%ec%83%9d%ec%84%b1">#</a>
-</h2>
+      <h1 id="heading"></h1>
+<h2 id="s3-생성"><strong>S3 생성</strong></h2>
 <p><img src="/Line/AWS.png" alt="AWS" /></p>
-<h3 id="1-s3를-선택합니다">
-  1. S3를 선택합니다.
-  <a class="anchor" href="#1-s3%eb%a5%bc-%ec%84%a0%ed%83%9d%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h3 id="1-s3를-선택합니다">1. S3를 선택합니다.</h3>
 <p><img src="/AWS/Storage/S32.png" alt="S3" /></p>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
-<h3 id="2-s3-사용을-위해-버킷을-생성합니다">
-  2. S3 사용을 위해 버킷을 생성합니다.
-  <a class="anchor" href="#2-s3-%ec%82%ac%ec%9a%a9%ec%9d%84-%ec%9c%84%ed%95%b4-%eb%b2%84%ed%82%b7%ec%9d%84-%ec%83%9d%ec%84%b1%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-1"></h1>
+<h3 id="2-s3-사용을-위해-버킷을-생성합니다">2. S3 사용을 위해 버킷을 생성합니다.</h3>
 <p><img src="/AWS/Storage/S33.png" alt="S3" />
 <img src="/AWS/Storage/S34.png" alt="S3" />
 <img src="/AWS/Storage/S34-2.png" alt="S3" /></p>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
-<h3 id="버킷-생성이-주의사항">
-  <strong>버킷 생성이 주의사항</strong>
-  <a class="anchor" href="#%eb%b2%84%ed%82%b7-%ec%83%9d%ec%84%b1%ec%9d%b4-%ec%a3%bc%ec%9d%98%ec%82%ac%ed%95%ad">#</a>
-</h3>
+<h1 id="heading-2"></h1>
+<h3 id="버킷-생성이-주의사항"><strong>버킷 생성이 주의사항</strong></h3>
 <ul>
 <li><strong>버킷 이름에 대문자사용이 불가능</strong></li>
 <li><strong>버킷 이름에 특수문자 사용 불가능</strong></li>
@@ -1596,86 +1416,38 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
-<h3 id="3-bucket의-생성되었습니다">
-  3. Bucket의 생성되었습니다.
-  <a class="anchor" href="#3-bucket%ec%9d%98-%ec%83%9d%ec%84%b1%eb%90%98%ec%97%88%ec%8a%b5%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-3"></h1>
+<h3 id="3-bucket의-생성되었습니다">3. Bucket의 생성되었습니다.</h3>
 <p><img src="/AWS/Storage/S35.png" alt="S3" /></p>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
-<h3 id="4-버킷을-선택하면-버킷을-사용할-수-있습니다">
-  4. 버킷을 선택하면 버킷을 사용할 수 있습니다.
-  <a class="anchor" href="#4-%eb%b2%84%ed%82%b7%ec%9d%84-%ec%84%a0%ed%83%9d%ed%95%98%eb%a9%b4-%eb%b2%84%ed%82%b7%ec%9d%84-%ec%82%ac%ec%9a%a9%ed%95%a0-%ec%88%98-%ec%9e%88%ec%8a%b5%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-4"></h1>
+<h3 id="4-버킷을-선택하면-버킷을-사용할-수-있습니다">4. 버킷을 선택하면 버킷을 사용할 수 있습니다.</h3>
 <p><img src="/AWS/Storage/S36.png" alt="S3" /></p>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
-<h3 id="5-버킷의-파일을-사용자의-옵션에-맞춰-업로드합니다">
-  5. 버킷의 파일을 사용자의 옵션에 맞춰 업로드합니다.
-  <a class="anchor" href="#5-%eb%b2%84%ed%82%b7%ec%9d%98-%ed%8c%8c%ec%9d%bc%ec%9d%84-%ec%82%ac%ec%9a%a9%ec%9e%90%ec%9d%98-%ec%98%b5%ec%85%98%ec%97%90-%eb%a7%9e%ec%b6%b0-%ec%97%85%eb%a1%9c%eb%93%9c%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-5"></h1>
+<h3 id="5-버킷의-파일을-사용자의-옵션에-맞춰-업로드합니다">5. 버킷의 파일을 사용자의 옵션에 맞춰 업로드합니다.</h3>
 <p><img src="/AWS/Storage/S37.png" alt="S3" />
 <img src="/AWS/Storage/S37-2.png" alt="S3" />
 <img src="/AWS/Storage/S37-3.png" alt="S3" />
 <img src="/AWS/Storage/S37-4.png" alt="S3" /></p>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
-<h3 id="6-업로드가-완료되었습니다">
-  6. 업로드가 완료되었습니다.
-  <a class="anchor" href="#6-%ec%97%85%eb%a1%9c%eb%93%9c%ea%b0%80-%ec%99%84%eb%a3%8c%eb%90%98%ec%97%88%ec%8a%b5%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-6"></h1>
+<h3 id="6-업로드가-완료되었습니다">6. 업로드가 완료되었습니다.</h3>
 <p><img src="/AWS/Storage/S38.png" alt="S3" /></p>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
-<h3 id="7-업로드-파일을-선택하면-퍼블릭-전환-다운로드-링크-등의-기능을-사용가능합니다">
-  7. 업로드 파일을 선택하면, 퍼블릭 전환, 다운로드 링크 등의 기능을 사용가능합니다.
-  <a class="anchor" href="#7-%ec%97%85%eb%a1%9c%eb%93%9c-%ed%8c%8c%ec%9d%bc%ec%9d%84-%ec%84%a0%ed%83%9d%ed%95%98%eb%a9%b4-%ed%8d%bc%eb%b8%94%eb%a6%ad-%ec%a0%84%ed%99%98-%eb%8b%a4%ec%9a%b4%eb%a1%9c%eb%93%9c-%eb%a7%81%ed%81%ac-%eb%93%b1%ec%9d%98-%ea%b8%b0%eb%8a%a5%ec%9d%84-%ec%82%ac%ec%9a%a9%ea%b0%80%eb%8a%a5%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-7"></h1>
+<h3 id="7-업로드-파일을-선택하면-퍼블릭-전환-다운로드-링크-등의-기능을-사용가능합니다">7. 업로드 파일을 선택하면, 퍼블릭 전환, 다운로드 링크 등의 기능을 사용가능합니다.</h3>
 <p><img src="/AWS/Storage/S39-1.png" alt="S3" /></p>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
-<h3 id="8-권한이-없는-사용자가-링크로-접근하면-다음과-같은-오류가-발생됩니다">
-  8. 권한이 없는 사용자가 링크로 접근하면 다음과 같은 오류가 발생됩니다.
-  <a class="anchor" href="#8-%ea%b6%8c%ed%95%9c%ec%9d%b4-%ec%97%86%eb%8a%94-%ec%82%ac%ec%9a%a9%ec%9e%90%ea%b0%80-%eb%a7%81%ed%81%ac%eb%a1%9c-%ec%a0%91%ea%b7%bc%ed%95%98%eb%a9%b4-%eb%8b%a4%ec%9d%8c%ea%b3%bc-%ea%b0%99%ec%9d%80-%ec%98%a4%eb%a5%98%ea%b0%80-%eb%b0%9c%ec%83%9d%eb%90%a9%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-8"></h1>
+<h3 id="8-권한이-없는-사용자가-링크로-접근하면-다음과-같은-오류가-발생됩니다">8. 권한이 없는 사용자가 링크로 접근하면 다음과 같은 오류가 발생됩니다.</h3>
 <p><img src="/AWS/Storage/S39-2.png" alt="S3" /></p>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
+<h1 id="heading-9"></h1>
 <p><img src="/Line/AWS2.png" alt="AWS" /></p>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
+<h1 id="heading-10"></h1>
 
     </div>
   </label>
 </div>
 
 </blockquote>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
-<h3 id="윈도우-예약-작업과-s3-활용">
-  <strong>윈도우 예약 작업과 S3 활용</strong>
-  <a class="anchor" href="#%ec%9c%88%eb%8f%84%ec%9a%b0-%ec%98%88%ec%95%bd-%ec%9e%91%ec%97%85%ea%b3%bc-s3-%ed%99%9c%ec%9a%a9">#</a>
-</h3>
+<h1 id="heading-6"></h1>
+<h3 id="윈도우-예약-작업과-s3-활용"><strong>윈도우 예약 작업과 S3 활용</strong></h3>
 <blockquote>
 <div class="book-expand">
   <label>
@@ -1685,70 +1457,31 @@ https://github.com/alex-shpak/hugo-book
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
-<h2 id="윈도우-s3-연동">
-  <strong>윈도우 S3 연동</strong>
-  <a class="anchor" href="#%ec%9c%88%eb%8f%84%ec%9a%b0-s3-%ec%97%b0%eb%8f%99">#</a>
-</h2>
+      <h1 id="heading"></h1>
+<h2 id="윈도우-s3-연동"><strong>윈도우 S3 연동</strong></h2>
 <p><img src="/Line/AWS.png" alt="AWS" /></p>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
-<h3 id="1-연동을-위해-bucket의-backup-폴더를-생성합니다">
-  1. 연동을 위해 Bucket의 backup 폴더를 생성합니다.
-  <a class="anchor" href="#1-%ec%97%b0%eb%8f%99%ec%9d%84-%ec%9c%84%ed%95%b4-bucket%ec%9d%98-backup-%ed%8f%b4%eb%8d%94%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-1"></h1>
+<h3 id="1-연동을-위해-bucket의-backup-폴더를-생성합니다">1. 연동을 위해 Bucket의 backup 폴더를 생성합니다.</h3>
 <p><img src="/AWS/Storage/S10.png" alt="S3" /></p>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
-<h3 id="2-계정-생성을-위해-iam-서비스로-이동합니다">
-  2. 계정 생성을 위해 IAM 서비스로 이동합니다.
-  <a class="anchor" href="#2-%ea%b3%84%ec%a0%95-%ec%83%9d%ec%84%b1%ec%9d%84-%ec%9c%84%ed%95%b4-iam-%ec%84%9c%eb%b9%84%ec%8a%a4%eb%a1%9c-%ec%9d%b4%eb%8f%99%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-2"></h1>
+<h3 id="2-계정-생성을-위해-iam-서비스로-이동합니다">2. 계정 생성을 위해 IAM 서비스로 이동합니다.</h3>
 <p><img src="/AWS/Storage/S310.png" alt="S3" /></p>
 <ul>
 <li><a href="https://mung0001.github.io/docs/cloud/aws/aws_security/#aws-iam">IAM이란</a></li>
 </ul>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
-<h3 id="3-사용자-추가를-선택하여-사용자의-옵션에-맞춰-새로운-사용자를-생성합니다">
-  3. 사용자 추가를 선택하여 사용자의 옵션에 맞춰 새로운 사용자를 생성합니다.
-  <a class="anchor" href="#3-%ec%82%ac%ec%9a%a9%ec%9e%90-%ec%b6%94%ea%b0%80%eb%a5%bc-%ec%84%a0%ed%83%9d%ed%95%98%ec%97%ac-%ec%82%ac%ec%9a%a9%ec%9e%90%ec%9d%98-%ec%98%b5%ec%85%98%ec%97%90-%eb%a7%9e%ec%b6%b0-%ec%83%88%eb%a1%9c%ec%9a%b4-%ec%82%ac%ec%9a%a9%ec%9e%90%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-3"></h1>
+<h3 id="3-사용자-추가를-선택하여-사용자의-옵션에-맞춰-새로운-사용자를-생성합니다">3. 사용자 추가를 선택하여 사용자의 옵션에 맞춰 새로운 사용자를 생성합니다.</h3>
 <p><img src="/AWS/Storage/S310-2.png" alt="S3" />
 <img src="/AWS/Storage/S310-3.png" alt="S3" />
 <img src="/AWS/Storage/S310-4.png" alt="S3" />
 <img src="/AWS/Storage/S310-5.png" alt="S3" /></p>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
-<h3 id="4-사용자-생성이-완료되었습니다">
-  4. 사용자 생성이 완료되었습니다.
-  <a class="anchor" href="#4-%ec%82%ac%ec%9a%a9%ec%9e%90-%ec%83%9d%ec%84%b1%ec%9d%b4-%ec%99%84%eb%a3%8c%eb%90%98%ec%97%88%ec%8a%b5%eb%8b%88%eb%8b%a4">#</a>
-</h3>
-<h3 id="사용자-생성-후-연동을-위해-clihttpsdocsawsamazoncomko_krclilatestuserguidecli-chap-installhtml를-설치합니다">
-  사용자 생성 후, 연동을 위해 <a href="https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html">CLI</a>를 설치합니다.
-  <a class="anchor" href="#%ec%82%ac%ec%9a%a9%ec%9e%90-%ec%83%9d%ec%84%b1-%ed%9b%84-%ec%97%b0%eb%8f%99%ec%9d%84-%ec%9c%84%ed%95%b4-clihttpsdocsawsamazoncomko_krclilatestuserguidecli-chap-installhtml%eb%a5%bc-%ec%84%a4%ec%b9%98%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-4"></h1>
+<h3 id="4-사용자-생성이-완료되었습니다">4. 사용자 생성이 완료되었습니다.</h3>
+<h3 id="사용자-생성-후-연동을-위해-clihttpsdocsawsamazoncomko_krclilatestuserguidecli-chap-installhtml를-설치합니다">사용자 생성 후, 연동을 위해 <a href="https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html">CLI</a>를 설치합니다.</h3>
 <p><img src="/AWS/Storage/S310-6.png" alt="S3" />
 <img src="/AWS/Storage/S310-7.png" alt="S3" /></p>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
-<h3 id="5-설치가-완료되면-cmd-창에서-configure를-입력-후-다운받은-csv파일의-정보들을-입력합니다">
-  5. 설치가 완료되면, cmd 창에서 configure를 입력 후, 다운받은 csv파일의 정보들을 입력합니다.
-  <a class="anchor" href="#5-%ec%84%a4%ec%b9%98%ea%b0%80-%ec%99%84%eb%a3%8c%eb%90%98%eb%a9%b4-cmd-%ec%b0%bd%ec%97%90%ec%84%9c-configure%eb%a5%bc-%ec%9e%85%eb%a0%a5-%ed%9b%84-%eb%8b%a4%ec%9a%b4%eb%b0%9b%ec%9d%80-csv%ed%8c%8c%ec%9d%bc%ec%9d%98-%ec%a0%95%eb%b3%b4%eb%93%a4%ec%9d%84-%ec%9e%85%eb%a0%a5%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-5"></h1>
+<h3 id="5-설치가-완료되면-cmd-창에서-configure를-입력-후-다운받은-csv파일의-정보들을-입력합니다">5. 설치가 완료되면, cmd 창에서 configure를 입력 후, 다운받은 csv파일의 정보들을 입력합니다.</h3>
 <p><img src="/AWS/Storage/S311.png" alt="S3" /></p>
 <ul>
 <li><strong>AWS Access Key ID : ex.csv 파일의 엑세스 ID 값</strong></li>
@@ -1756,66 +1489,27 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>Default region name : region 이름으로 ap-northeast-2 입력</strong></li>
 <li><strong>Default output format : 포맷 형식으로 json을 입력</strong></li>
 </ul>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
-<h3 id="6-aws-s3-sync--저장한-윈도우의-경로--s3--저장될-버킷의-경로-를-입력합니다">
-  6. aws s3 sync [ 저장한 윈도우의 경로 ] s3 [ 저장될 버킷의 경로 ]를 입력합니다.
-  <a class="anchor" href="#6-aws-s3-sync--%ec%a0%80%ec%9e%a5%ed%95%9c-%ec%9c%88%eb%8f%84%ec%9a%b0%ec%9d%98-%ea%b2%bd%eb%a1%9c--s3--%ec%a0%80%ec%9e%a5%eb%90%a0-%eb%b2%84%ed%82%b7%ec%9d%98-%ea%b2%bd%eb%a1%9c-%eb%a5%bc-%ec%9e%85%eb%a0%a5%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
-</h3>
-<h3 id="aws-s3-sync-cbackup-s3mybucketbucketbackup">
-  aws s3 sync c:\backup s3://mybucketbucket/backup
-  <a class="anchor" href="#aws-s3-sync-cbackup-s3mybucketbucketbackup">#</a>
-</h3>
+<h1 id="heading-6"></h1>
+<h3 id="6-aws-s3-sync--저장한-윈도우의-경로--s3--저장될-버킷의-경로-를-입력합니다">6. aws s3 sync [ 저장한 윈도우의 경로 ] s3 [ 저장될 버킷의 경로 ]를 입력합니다.</h3>
+<h3 id="aws-s3-sync-cbackup-s3mybucketbucketbackup">aws s3 sync c:\backup s3://mybucketbucket/backup</h3>
 <p><img src="/AWS/Storage/S312.png" alt="S3" />
 <img src="/AWS/Storage/S312-2.png" alt="S3" /></p>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
-<h3 id="7-자동화를-위해-bat-파일을-생성합니다">
-  7. 자동화를 위해 .bat 파일을 생성합니다.
-  <a class="anchor" href="#7-%ec%9e%90%eb%8f%99%ed%99%94%eb%a5%bc-%ec%9c%84%ed%95%b4-bat-%ed%8c%8c%ec%9d%bc%ec%9d%84-%ec%83%9d%ec%84%b1%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-7"></h1>
+<h3 id="7-자동화를-위해-bat-파일을-생성합니다">7. 자동화를 위해 .bat 파일을 생성합니다.</h3>
 <p><img src="/AWS/Storage/S313.png" alt="S3" /></p>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
-<h3 id="8-bat-파일을-작업-스케줄러에-등록합니다">
-  8. bat 파일을 작업 스케줄러에 등록합니다.
-  <a class="anchor" href="#8-bat-%ed%8c%8c%ec%9d%bc%ec%9d%84-%ec%9e%91%ec%97%85-%ec%8a%a4%ec%bc%80%ec%a4%84%eb%9f%ac%ec%97%90-%eb%93%b1%eb%a1%9d%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-8"></h1>
+<h3 id="8-bat-파일을-작업-스케줄러에-등록합니다">8. bat 파일을 작업 스케줄러에 등록합니다.</h3>
 <p><img src="/AWS/Storage/S314.png" alt="S3" /></p>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
+<h1 id="heading-9"></h1>
 <p><img src="/AWS/Storage/S314-2.png" alt="S3" /></p>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
+<h1 id="heading-10"></h1>
 <p><img src="/AWS/Storage/S314-3.png" alt="S3" /></p>
-<h1 id="heading-11">
-  
-  <a class="anchor" href="#heading-11">#</a>
-</h1>
+<h1 id="heading-11"></h1>
 <p><img src="/AWS/Storage/S314-4.png" alt="S3" /></p>
-<h1 id="heading-12">
-  
-  <a class="anchor" href="#heading-12">#</a>
-</h1>
-<h3 id="9-등록이-완료되었습니다-확인을-위해-실행을-클릭합니다">
-  9. 등록이 완료되었습니다. 확인을 위해 실행을 클릭합니다.
-  <a class="anchor" href="#9-%eb%93%b1%eb%a1%9d%ec%9d%b4-%ec%99%84%eb%a3%8c%eb%90%98%ec%97%88%ec%8a%b5%eb%8b%88%eb%8b%a4-%ed%99%95%ec%9d%b8%ec%9d%84-%ec%9c%84%ed%95%b4-%ec%8b%a4%ed%96%89%ec%9d%84-%ed%81%b4%eb%a6%ad%ed%95%a9%eb%8b%88%eb%8b%a4">#</a>
-</h3>
+<h1 id="heading-12"></h1>
+<h3 id="9-등록이-완료되었습니다-확인을-위해-실행을-클릭합니다">9. 등록이 완료되었습니다. 확인을 위해 실행을 클릭합니다.</h3>
 <p><img src="/AWS/Storage/S314-5.png" alt="S3" /></p>
-<h1 id="heading-13">
-  
-  <a class="anchor" href="#heading-13">#</a>
-</h1>
+<h1 id="heading-13"></h1>
 <p><img src="/Line/AWS2.png" alt="AWS" /></p>
 
     </div>
@@ -1823,20 +1517,11 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 </blockquote>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
+<h1 id="heading-7"></h1>
 <p> </p>
-<h2 id="amazon-efs--elastic-file-system-">
-  <strong>Amazon EFS ( Elastic File System )</strong>
-  <a class="anchor" href="#amazon-efs--elastic-file-system-">#</a>
-</h2>
+<h2 id="amazon-efs--elastic-file-system-"><strong>Amazon EFS ( Elastic File System )</strong></h2>
 <hr>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
+<h1 id="heading-8"></h1>
 <p><img src="/AWS/Storage/EFS.png" alt="EFS" /></p>
 <ul>
 <li>AWS 클라우드 서비스와 온프레미스 리소스에서 사용할 수 있는 탄력적인 완전 관리형 탄력적 NFS 파일 시스템</li>
@@ -1849,92 +1534,47 @@ https://github.com/alex-shpak/hugo-book
 <li>페타바이트단위 데이터까지 확장 가능</li>
 <li>최대 1천개의 파일 시스템 생성</li>
 </ul>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
-<h3 id="스토리지-클래스">
-  <strong>스토리지 클래스</strong>
-  <a class="anchor" href="#%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%ed%81%b4%eb%9e%98%ec%8a%a4">#</a>
-</h3>
+<h1 id="heading-9"></h1>
+<h3 id="스토리지-클래스"><strong>스토리지 클래스</strong></h3>
 <ul>
 <li><strong>Standard Class :</strong> 자주 액세스하는 파일을 저장하는 데 사용하는 클래스</li>
 <li><strong>Infrequent Access( IA ) Class :</strong> 저장기간이 길지만 자주 액세스하지 않는 파일을 저장하기 위한 클라스</li>
 </ul>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
-<h3 id="가용성">
-  <strong>가용성</strong>
-  <a class="anchor" href="#%ea%b0%80%ec%9a%a9%ec%84%b1">#</a>
-</h3>
+<h1 id="heading-10"></h1>
+<h3 id="가용성"><strong>가용성</strong></h3>
 <ul>
 <li>여러 가용영역에서 엑세스 가능</li>
 <li>여러 가용영역에 중복 저장되기 때문에 하나의 가용영역이 파괴되더라도 다른 AZ에서 서비스 제공 가능</li>
 <li>IPSEC VPN 또는 Direct Connect를 통해 On-premise에서 접속 가능</li>
 </ul>
-<h1 id="heading-11">
-  
-  <a class="anchor" href="#heading-11">#</a>
-</h1>
-<h3 id="성능-모드-처리량-모드">
-  <strong>성능 모드/ 처리량 모드</strong>
-  <a class="anchor" href="#%ec%84%b1%eb%8a%a5-%eb%aa%a8%eb%93%9c-%ec%b2%98%eb%a6%ac%eb%9f%89-%eb%aa%a8%eb%93%9c">#</a>
-</h3>
+<h1 id="heading-11"></h1>
+<h3 id="성능-모드-처리량-모드"><strong>성능 모드/ 처리량 모드</strong></h3>
 <ul>
 <li>성능 모드에 있어서 대부분의 파일시스템에 Bursting Mode를 권장하지만 처리량이 많을 경우, Provisioned Mode를 권장</li>
 </ul>
-<h1 id="heading-12">
-  
-  <a class="anchor" href="#heading-12">#</a>
-</h1>
-<h3 id="수명-주기-관리">
-  <strong>수명 주기 관리</strong>
-  <a class="anchor" href="#%ec%88%98%eb%aa%85-%ec%a3%bc%ea%b8%b0-%ea%b4%80%eb%a6%ac">#</a>
-</h3>
+<h1 id="heading-12"></h1>
+<h3 id="수명-주기-관리"><strong>수명 주기 관리</strong></h3>
 <ul>
 <li>Standard Class: 자주 액세스하는 클래스</li>
 </ul>
-<h1 id="heading-13">
-  
-  <a class="anchor" href="#heading-13">#</a>
-</h1>
-<h3 id="파일시스템-정책">
-  <strong>파일시스템 정책</strong>
-  <a class="anchor" href="#%ed%8c%8c%ec%9d%bc%ec%8b%9c%ec%8a%a4%ed%85%9c-%ec%a0%95%ec%b1%85">#</a>
-</h3>
+<h1 id="heading-13"></h1>
+<h3 id="파일시스템-정책"><strong>파일시스템 정책</strong></h3>
 <ul>
 <li>여러 가용영역에서 엑세스 가능</li>
 <li>여러 가용영역에 중복 저장되기 때문에 하나의</li>
 </ul>
-<h1 id="heading-14">
-  
-  <a class="anchor" href="#heading-14">#</a>
-</h1>
+<h1 id="heading-14"></h1>
 <p> </p>
-<h2 id="amazon-glacier">
-  <strong>Amazon Glacier</strong>
-  <a class="anchor" href="#amazon-glacier">#</a>
-</h2>
+<h2 id="amazon-glacier"><strong>Amazon Glacier</strong></h2>
 <hr>
-<h1 id="heading-15">
-  
-  <a class="anchor" href="#heading-15">#</a>
-</h1>
+<h1 id="heading-15"></h1>
 <p><img src="/AWS/Storage/Glacier.png" alt="Glacier" /></p>
 <ul>
 <li>Glacier는 자주 사용하지 않는 데이터로 &ldquo;Cold Data&quot;에 최적화된 스토리지 서비스</li>
 <li>데이터 보관 및 백업을 목적으로 보안 기능과 함께 내구성 있는 저장 공간을 제공하는 매우 저렴한 스토리지 서비스</li>
 </ul>
-<h1 id="heading-16">
-  
-  <a class="anchor" href="#heading-16">#</a>
-</h1>
-<h3 id="glacier의-종류">
-  <strong>Glacier의 종류</strong>
-  <a class="anchor" href="#glacier%ec%9d%98-%ec%a2%85%eb%a5%98">#</a>
-</h3>
+<h1 id="heading-16"></h1>
+<h3 id="glacier의-종류"><strong>Glacier의 종류</strong></h3>
 <ul>
 <li>아카이브
 <ul>
@@ -1952,20 +1592,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-17">
-  
-  <a class="anchor" href="#heading-17">#</a>
-</h1>
+<h1 id="heading-17"></h1>
 <p> </p>
-<h2 id="storage-gateway">
-  <strong>Storage Gateway</strong>
-  <a class="anchor" href="#storage-gateway">#</a>
-</h2>
+<h2 id="storage-gateway"><strong>Storage Gateway</strong></h2>
 <hr>
-<h1 id="heading-18">
-  
-  <a class="anchor" href="#heading-18">#</a>
-</h1>
+<h1 id="heading-18"></h1>
 <p><img src="/AWS/Storage/Storage_Gateway.png" alt="SG" /></p>
 <ul>
 <li>On-premise 환경에서 Cloud 상의 Storage를 지원할 수 있게 하는 하이브리드 스토리지</li>
@@ -1979,28 +1610,16 @@ https://github.com/alex-shpak/hugo-book
 </li>
 <li>일반 PC에 마운트하여 사용하는 둥, 다양한 용도로 사용 가능</li>
 </ul>
-<h1 id="heading-19">
-  
-  <a class="anchor" href="#heading-19">#</a>
-</h1>
-<h3 id="file-gateway">
-  <strong>File Gateway</strong>
-  <a class="anchor" href="#file-gateway">#</a>
-</h3>
+<h1 id="heading-19"></h1>
+<h3 id="file-gateway"><strong>File Gateway</strong></h3>
 <ul>
 <li>FNFS와 SMB를 지원하는 Storage Gateway 유형</li>
 <li>S3를 스토리지로 사용하며, Gateway( EC2 등 )을 통해 S3에 데이터를 저장하고 이를 직접 S3에서 엑세스 할 수 있음</li>
 <li>하나의 파일을 하나의 오브젝트로 관리됨</li>
 <li>S3에 오브젝트로 관리되는 만큼, S3의 다른 기능을 사용할 수 있음</li>
 </ul>
-<h1 id="heading-20">
-  
-  <a class="anchor" href="#heading-20">#</a>
-</h1>
-<h3 id="volume-gateway">
-  <strong>Volume Gateway</strong>
-  <a class="anchor" href="#volume-gateway">#</a>
-</h3>
+<h1 id="heading-20"></h1>
+<h3 id="volume-gateway"><strong>Volume Gateway</strong></h3>
 <ul>
 <li>iSCSI를 지원하는 Storage Gateway 유형</li>
 <li>두 가지 유형으로 나뉨
@@ -2010,32 +1629,17 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-21">
-  
-  <a class="anchor" href="#heading-21">#</a>
-</h1>
-<h3 id="tape-gateway">
-  <strong>Tape Gateway</strong>
-  <a class="anchor" href="#tape-gateway">#</a>
-</h3>
+<h1 id="heading-21"></h1>
+<h3 id="tape-gateway"><strong>Tape Gateway</strong></h3>
 <ul>
 <li>VTL ( Vitual tape Library )를 지원하는 Storage Gateway</li>
 <li>가상 테이프데이터는 S3나 S3 Glacier에 저장될 수 있음</li>
 </ul>
-<h1 id="heading-22">
-  
-  <a class="anchor" href="#heading-22">#</a>
-</h1>
+<h1 id="heading-22"></h1>
 <p> </p>
-<h2 id="ebs--elastic-block-stroe-">
-  <strong>EBS ( Elastic Block Stroe )</strong>
-  <a class="anchor" href="#ebs--elastic-block-stroe-">#</a>
-</h2>
+<h2 id="ebs--elastic-block-stroe-"><strong>EBS ( Elastic Block Stroe )</strong></h2>
 <hr>
-<h1 id="heading-23">
-  
-  <a class="anchor" href="#heading-23">#</a>
-</h1>
+<h1 id="heading-23"></h1>
 <p><img src="/AWS/Storage/EBS.png" alt="EBS" /></p>
 <ul>
 <li>EBS 지원 EC2가 갖는 블록 형태의 스토리지</li>
@@ -2045,24 +1649,15 @@ https://github.com/alex-shpak/hugo-book
 <li>인스턴스 스토어 볼륨과는 달리 EBS 기반 인스턴스는 중지 / 재시작이 가능</li>
 <li>사용중인 EBS더라도 볼륨 유형과 사이즈를 변경할 수 있음( 사이즈의 축소는 불가 )</li>
 </ul>
-<h1 id="heading-24">
-  
-  <a class="anchor" href="#heading-24">#</a>
-</h1>
-<h3 id="ebs의-볼륨-유형">
-  <strong>EBS의 볼륨 유형</strong>
-  <a class="anchor" href="#ebs%ec%9d%98-%eb%b3%bc%eb%a5%a8-%ec%9c%a0%ed%98%95">#</a>
-</h3>
+<h1 id="heading-24"></h1>
+<h3 id="ebs의-볼륨-유형"><strong>EBS의 볼륨 유형</strong></h3>
 <ul>
 <li>범용 SSD( gp2 ): 시스템 부트 사용 가능, 대부분의 워크로드에서 사용</li>
 <li>프로비져닝된 IOPS SSD(  io1 ): 지속적인 IOPS 성능이나 16.000 IOPS 이상의 볼륨당 처리량을 필요로 하는 경우 적합 ( DB 워크로드 )</li>
 <li>처리량 최적회돤 HDD( st1 ): 시스템 부트 사용 불가능, IOPS가 아닌 처리량을 기준으로 하며 자주 엑세스하는 워크로드에 적합한 저비용 HDD 볼륨, 빅데이터나 데이터 웨어 하우스에 사용</li>
 <li>Cold HDD( sc1 ): 시스템 부트 사용 불가능, 자주 엑세스하지 않는 대용량 데이터 처리에 적합, 스토리지 비용이 최대한 낮아야 할 경우 사용</li>
 </ul>
-<h1 id="heading-25">
-  
-  <a class="anchor" href="#heading-25">#</a>
-</h1>
+<h1 id="heading-25"></h1>
 </article>
  
       
@@ -2253,6 +1848,7 @@ https://github.com/alex-shpak/hugo-book
 </body>
 </div>
 </html>
+
 
 
 

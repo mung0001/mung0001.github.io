@@ -4,27 +4,27 @@
   <url>
     <loc>https://mung0001.github.io/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/infra/idc/idc/idc01/</loc>
+    <loc>https://mung0001.github.io/docs/infra/idc/idc01/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/system/system00/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-1/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awssaa/saa-1/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/</loc>
+    <loc>https://mung0001.github.io/docs/aws/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/amazonwebservice/</loc>
+    <loc>https://mung0001.github.io/docs/aws/amazonwebservice/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/start/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/start/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/azuretraining/base/</loc>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/base/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/microsoftazure/</loc>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/amazonwebservice/aws%E1%84%85%E1%85%A1%E1%86%AB/</loc>
+    <loc>https://mung0001.github.io/docs/aws/amazonwebservice/aws%EB%9E%80/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/web/django/django/</loc>
+    <loc>https://mung0001.github.io/docs/development/web/django/django/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/web/django/basic/</loc>
+    <loc>https://mung0001.github.io/docs/development/web/django/basic/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/</loc>
   </url><url>
@@ -32,79 +32,67 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/dockertraining/infradocker-01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/gcp/googlecloudplatform/</loc>
+    <loc>https://mung0001.github.io/docs/gcp/googlecloudplatform/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/git/git/</loc>
+    <loc>https://mung0001.github.io/docs/development/git/git/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/golang/golang/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/infra/hardware/</loc>
+    <loc>https://mung0001.github.io/docs/development/golang/golang/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/infra/idc/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/infra/</loc>
+    <loc>https://mung0001.github.io/docs/infra/infra/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/infra/idc/idc/infra01/</loc>
+    <loc>https://mung0001.github.io/docs/infra/infra/infra01/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/macos/macos04/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/macos/macos01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/infra/hardware/board/</loc>
+    <loc>https://mung0001.github.io/docs/monitoring/pc/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/nca01/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/nca02/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/ncp0/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/ncp0/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/navercloudplatform/ncp00/</loc>
+    <loc>https://mung0001.github.io/docs/nc/navercloudplatform/ncp00/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/navercloudplatform/ncp01/</loc>
+    <loc>https://mung0001.github.io/docs/nc/navercloudplatform/ncp01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/navercloudplatform/ncp02/</loc>
+    <loc>https://mung0001.github.io/docs/nc/navercloudplatform/ncp02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/navercloudplatform/</loc>
+    <loc>https://mung0001.github.io/docs/nc/navercloudplatform/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/network/natwork-1/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/network/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/openstack/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/openstack/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/system/system01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/python/python01/</loc>
+    <loc>https://mung0001.github.io/docs/monitoring/pc/m01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/python/code/</loc>
+    <loc>https://mung0001.github.io/docs/development/python/python01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/python/</loc>
+    <loc>https://mung0001.github.io/docs/development/python/code/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/python/python/</loc>
+    <loc>https://mung0001.github.io/docs/development/python/</loc>
+  </url><url>
+    <loc>https://mung0001.github.io/docs/development/python/python/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell-1/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell-1/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/snort/snort-01/</loc>
+    <loc>https://mung0001.github.io/docs/development/spingboot/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/sophos/sophos_0/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awssaa/saa-2/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/sophos/sophos_1/</loc>
+    <loc>https://mung0001.github.io/docs/aws/amazonwebservice/aws_computing/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/spingboot/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-2/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/amazonwebservice/aws_computing/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/iam/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/infra/hardware/cpu/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/iam/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/dockertraining/infradocker-02/</loc>
   </url><url>
@@ -112,55 +100,45 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/system/macos/macos02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/keystone/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/keystone/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/</loc>
+    <loc>https://mung0001.github.io/docs/azure/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/nm/nm02/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/system/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/infra/idc/idc/infra02/</loc>
+    <loc>https://mung0001.github.io/docs/infra/infra/infra02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/snort/snort-02/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/sophos/sophos_2/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell-2/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell-2/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-3/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awssaa/saa-3/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/cli/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/cli/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/amazonwebservice/aws_database/</loc>
+    <loc>https://mung0001.github.io/docs/aws/amazonwebservice/aws_database/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awssaa/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awssaa/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/amazonwebservice/aws_storage/</loc>
+    <loc>https://mung0001.github.io/docs/aws/amazonwebservice/aws_storage/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/web/django/test/</loc>
+    <loc>https://mung0001.github.io/docs/development/web/django/test/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/docker/docker-3/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/dockertraining/infradocker-03/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/glance/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/glance/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/nca03/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca03/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/network/packet/</loc>
+    <loc>https://mung0001.github.io/docs/infra/infra/infra03/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/infra/idc/idc/infra03/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/infra/hardware/ram/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell-3/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell-3/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/</loc>
   </url><url>
@@ -168,155 +146,139 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window03/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-4/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awssaa/saa-4/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/amazonwebservice/aws_network/</loc>
+    <loc>https://mung0001.github.io/docs/aws/amazonwebservice/aws_network/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/vpc/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/vpc/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/dockertraining/infradocker-04/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/docker/docker-4/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/gcp/</loc>
+    <loc>https://mung0001.github.io/docs/gcp/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/nca04/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca04/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/infra/idc/idc/infra04/</loc>
+    <loc>https://mung0001.github.io/docs/infra/infra/infra04/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/network/portnumber/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/infra/hardware/nic/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/nova/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/nova/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window04/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell-4/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell-4/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-5/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awssaa/saa-5/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/ec2/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/ec2/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/amazonwebservice/aws_migrate/</loc>
+    <loc>https://mung0001.github.io/docs/aws/amazonwebservice/aws_migrate/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/docker/docker-5/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/gcp/gcptraining/</loc>
+    <loc>https://mung0001.github.io/docs/gcp/gcptraining/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/macos/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/</loc>
+    <loc>https://mung0001.github.io/docs/nc/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/nca05/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca05/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/neutron/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/neutron/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/infra/hardware/raidcontroller/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell-5/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/network/sdn/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell-5/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/sophos/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/infra/idc/idc/infra05/</loc>
+    <loc>https://mung0001.github.io/docs/infra/infra/infra05/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window05/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-6/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awssaa/saa-6/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/ami/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/ami/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/amazonwebservice/aws_developer/</loc>
+    <loc>https://mung0001.github.io/docs/aws/amazonwebservice/aws_developer/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/cinder/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/infra/hardware/disk/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/cinder/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/docker/docker-6/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/nca06/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca06/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell-6/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell-6/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/infra/idc/idc/infra06/</loc>
+    <loc>https://mung0001.github.io/docs/infra/infra/infra06/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window06/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/eip/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/eip/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/amazonwebservice/aws_management/</loc>
+    <loc>https://mung0001.github.io/docs/aws/amazonwebservice/aws_management/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/ceilometer/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/ceilometer/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/docker/docker-7/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/infra/idc/idc/infra07/</loc>
+    <loc>https://mung0001.github.io/docs/infra/infra/infra07/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/nca07/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca07/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell-7/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell-7/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window07/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/elb/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/elb/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/amazonwebservice/aws_security/</loc>
+    <loc>https://mung0001.github.io/docs/aws/amazonwebservice/aws_security/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/azuretraining/</loc>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/horizon/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/horizon/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/nca08/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca08/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/swift/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/swift/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window08/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/amazonwebservice/aws_analysis/</loc>
+    <loc>https://mung0001.github.io/docs/aws/amazonwebservice/aws_analysis/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/as/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/as/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/rds/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/rds/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/heat/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/heat/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/nca09/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca09/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window09/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/network/3tier/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/3tier/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/3tier/</loc>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/azure00/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/azuretraining/azure00/</loc>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure00/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/microsoftazure/azure00/</loc>
+    <loc>https://mung0001.github.io/docs/development/web/django/django01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/web/django/django01/</loc>
+    <loc>https://mung0001.github.io/docs/development/web/django/django02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/web/django/django02/</loc>
+    <loc>https://mung0001.github.io/docs/development/web/django/django03/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/web/django/django03/</loc>
+    <loc>https://mung0001.github.io/docs/development/web/django/django04/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/web/django/django04/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/web/django/django00/</loc>
+    <loc>https://mung0001.github.io/docs/development/web/django/django00/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/network/gns3/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/web/html/</loc>
+    <loc>https://mung0001.github.io/docs/development/web/html/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/linux/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/nca10/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca10/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/database/sqld/sqld-0/</loc>
   </url><url>
@@ -324,23 +286,23 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window10/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/s3/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/s3/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/azuretraining/azure01/</loc>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/azure01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/microsoftazure/azure01/</loc>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/nca11/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/nca11/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window11/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/database/sqld/sqld-1/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/trove/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/trove/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/microsoftazure/azure02/</loc>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure02/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window12/</loc>
   </url><url>
@@ -348,147 +310,137 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window13/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/azuretraining/azure02/</loc>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/azure02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/microsoftazure/azure10/</loc>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure10/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/microsoftazure/azure03/</loc>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure03/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/azuretraining/azure12/</loc>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/azure12/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/microsoftazure/azure04/</loc>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure04/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window14/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/docker/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-15/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awssaa/saa-15/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/azuretraining/az-900/</loc>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/az-900/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/microsoftazure/azure05/</loc>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure05/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window15/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/docker/dockertraining/</loc>
   </url><url>
+    <loc>https://mung0001.github.io/docs/infra/</loc>
+  </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window15-2/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-16/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awssaa/saa-16/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/microsoftazure/azure06/</loc>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure06/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/infra/monitoring/</loc>
+    <loc>https://mung0001.github.io/docs/monitoring/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window16/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awssaa/saa_all/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awssaa/saa_all/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/microsoftazure/azure07/</loc>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure07/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/window/window17/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awssaa/saa-17/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awssaa/saa-17/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/microsoftazure/azure08/</loc>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure08/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/microsoftazure/azure09/</loc>
+    <loc>https://mung0001.github.io/docs/azure/microsoftazure/azure09/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/golang/</loc>
+    <loc>https://mung0001.github.io/docs/development/golang/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/web/</loc>
+    <loc>https://mung0001.github.io/docs/development/web/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/</loc>
+    <loc>https://mung0001.github.io/docs/development/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/git/</loc>
+    <loc>https://mung0001.github.io/docs/development/git/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/linux01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/nm/nm01/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-01/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/snort/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/sahara/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/sahara/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/linux02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-02/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/ironic/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/ironic/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/linux03/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-03/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-03/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-04/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-04/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/database/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-05/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-05/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstack/service/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstack/service/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/linux04/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-06/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-06/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/linux05/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-07/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-07/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/linux06/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/linux07/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-08/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-08/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-09/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-09/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/linux08/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-10/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-10/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/network/security/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-stein/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-stein/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-11/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-11/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-12/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/network/firewall/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-13/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-12/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-14/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-13/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-15/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-14/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-15/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/openstack-ussuri-16/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/openstack-ussuri-16/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/mount/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/web/css/</loc>
+    <loc>https://mung0001.github.io/docs/development/web/css/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/devstack/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/devstack/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/lm-0/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/network/nm/</loc>
-  </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/ls00/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/owncloud/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/owncloud/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/lm-1/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/openstack/openstacktraining/packstack/</loc>
+    <loc>https://mung0001.github.io/docs/openstack/openstacktraining/packstack/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/ls01/</loc>
   </url><url>
@@ -498,79 +450,65 @@
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/ls02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/cloudformation/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/cloudformation/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/noserver/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/noserver/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/ebs/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/ebs/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/cognito/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/cognito/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/ec2site/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/ec2site/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/elasticbeanstalk/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/elasticbeanstalk/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/ses/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/ses/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/aws-lambda-crawling/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/aws-lambda-crawling/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/azure/azuretraining/base-copy-3/</loc>
+    <loc>https://mung0001.github.io/docs/azure/azuretraining/base-copy-3/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/cacti01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/web/django/</loc>
+    <loc>https://mung0001.github.io/docs/development/web/django/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/aws/awstraining/game/</loc>
+    <loc>https://mung0001.github.io/docs/aws/awstraining/game/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/ncp01/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/ncp01/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/system/linux/ls07/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell01/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell01/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/cloud/nc/ncptraining/ncp02/</loc>
+    <loc>https://mung0001.github.io/docs/nc/ncptraining/ncp02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell02/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell02/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell03/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell03/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell04/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell04/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell05/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell05/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell06/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell06/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell07/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell07/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell08/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell08/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell09/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell09/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/shell/shell100/</loc>
+    <loc>https://mung0001.github.io/docs/development/shell/shell100/</loc>
+  </url><url>
+    <loc>https://mung0001.github.io/docs/development/git/hugo/</loc>
+  </url><url>
+    <loc>https://mung0001.github.io/docs/development/web/django/django05/</loc>
   </url><url>
     <loc>https://mung0001.github.io/docs/hidden/</loc>
   </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/git/hugo/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/docs/system/development/web/django/django05/</loc>
+    <loc>https://mung0001.github.io/hidden/</loc>
   </url><url>
     <loc>https://mung0001.github.io/categories/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/tags/cpu/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/tags/disk/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/tags/hardware/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/tags/networkcontroller/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/tags/raidcontroller/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/tags/ram/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/tags/storage/</loc>
-  </url><url>
-    <loc>https://mung0001.github.io/tags/system/</loc>
   </url><url>
     <loc>https://mung0001.github.io/tags/</loc>
   </url>

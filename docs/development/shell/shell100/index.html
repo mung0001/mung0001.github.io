@@ -2,39 +2,39 @@
 <html lang="en">
 
 <head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shell Programming###연습문제 정리##구구단## gugu.sh #!/bin/bash for i in {1..9}; do for j in {1..9}; do echo $i &#34;X&#34; $j &#34;=&#34; `expr $i \* $j` done done ##야구게임##!/bin/bash Solution(){ Solution=() i=0 while [ $i -le 3 ]; do Solution[$i]=$((RANDOM% 9&#43;1)) if [ $i -eq 3 ]; then if [ ${Solution[3]} -eq ${Solution[0]} -o ${Solution[3]} -eq ${Solution[1]} -o ${Solution[3]} -eq ${Solution[2]} ]; then Solution[$i]=$((RANDOM% 9&#43;1)) else ((i&#43;&#43;)) fi fi if [ $i -eq 2 ]; then if [ ${Solution[2]} -eq ${Solution[0]} -o ${Solution[2]} -eq ${Solution[1]} ]; then Solution[$i]=$((RANDOM% 9&#43;1)) else ((i&#43;&#43;)) fi fi if [ $i -eq 1 ]; then if [ ${Solution[0]} -eq ${Solution[1]} ]; then Solution[$i]=$((RANDOM% 9&#43;1)) else ((i&#43;&#43;)) fi fi if [ $i -eq 0 ]; then ((i&#43;&#43;)) fi done echo ${Solution[@]} } Count=0 Score(){ Out=0 Ball=0 Strike=0 if [ $num1 -eq ${Solution[0]} ]; then ((Strike&#43;&#43;)) elif [ $num1 -eq ${Solution[1]} -o $num1 -eq ${Solution[2]} -o $num1 -eq ${Solution[3]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi if [ $num2 -eq ${Solution[1]} ]; then ((Strike&#43;&#43;)) elif [ $num2 -eq ${Solution[0]} -o $num2 -eq ${Solution[2]} -o $num2 -eq ${Solution[3]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi if [ $num3 -eq ${Solution[2]} ]; then ((Strike&#43;&#43;)) elif [ $num3 -eq ${Solution[1]} -o $num3 -eq ${Solution[0]} -o $num3 -eq ${Solution[3]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi if [ $num4 -eq ${Solution[3]} ]; then ((Strike&#43;&#43;)) elif [ $num4 -eq ${Solution[1]} -o $num4 -eq ${Solution[2]} -o $num4 -eq ${Solution[0]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi echo &#34; Strike : $Strike&#34; echo &#34; Ball : $Ball&#34; echo &#34; Out : $Out&#34; ((Count&#43;&#43;)) if [ $Strike -eq 4 ]; then echo &#34;수고하셨습니다.">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="연습문제" />
-<meta property="og:description" content="Shell Programming###연습문제 정리##구구단## gugu.sh #!/bin/bash for i in {1..9}; do for j in {1..9}; do echo $i &#34;X&#34; $j &#34;=&#34; `expr $i \* $j` done done ##야구게임##!/bin/bash Solution(){ Solution=() i=0 while [ $i -le 3 ]; do Solution[$i]=$((RANDOM% 9&#43;1)) if [ $i -eq 3 ]; then if [ ${Solution[3]} -eq ${Solution[0]} -o ${Solution[3]} -eq ${Solution[1]} -o ${Solution[3]} -eq ${Solution[2]} ]; then Solution[$i]=$((RANDOM% 9&#43;1)) else ((i&#43;&#43;)) fi fi if [ $i -eq 2 ]; then if [ ${Solution[2]} -eq ${Solution[0]} -o ${Solution[2]} -eq ${Solution[1]} ]; then Solution[$i]=$((RANDOM% 9&#43;1)) else ((i&#43;&#43;)) fi fi if [ $i -eq 1 ]; then if [ ${Solution[0]} -eq ${Solution[1]} ]; then Solution[$i]=$((RANDOM% 9&#43;1)) else ((i&#43;&#43;)) fi fi if [ $i -eq 0 ]; then ((i&#43;&#43;)) fi done echo ${Solution[@]} } Count=0 Score(){ Out=0 Ball=0 Strike=0 if [ $num1 -eq ${Solution[0]} ]; then ((Strike&#43;&#43;)) elif [ $num1 -eq ${Solution[1]} -o $num1 -eq ${Solution[2]} -o $num1 -eq ${Solution[3]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi if [ $num2 -eq ${Solution[1]} ]; then ((Strike&#43;&#43;)) elif [ $num2 -eq ${Solution[0]} -o $num2 -eq ${Solution[2]} -o $num2 -eq ${Solution[3]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi if [ $num3 -eq ${Solution[2]} ]; then ((Strike&#43;&#43;)) elif [ $num3 -eq ${Solution[1]} -o $num3 -eq ${Solution[0]} -o $num3 -eq ${Solution[3]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi if [ $num4 -eq ${Solution[3]} ]; then ((Strike&#43;&#43;)) elif [ $num4 -eq ${Solution[1]} -o $num4 -eq ${Solution[2]} -o $num4 -eq ${Solution[0]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi echo &#34; Strike : $Strike&#34; echo &#34; Ball : $Ball&#34; echo &#34; Out : $Out&#34; ((Count&#43;&#43;)) if [ $Strike -eq 4 ]; then echo &#34;수고하셨습니다." />
+<meta name="description" content="Shell Programming 연습문제 정리 구구단 # gugu.sh #!/bin/bash for i in {1..9}; do for j in {1..9}; do echo $i &#34;X&#34; $j &#34;=&#34; `expr $i \* $j` done done 야구게임 #!/bin/bash Solution(){ Solution=() i=0 while [ $i -le 3 ]; do Solution[$i]=$((RANDOM% 9&#43;1)) if [ $i -eq 3 ]; then if [ ${Solution[3]} -eq ${Solution[0]} -o ${Solution[3]} -eq ${Solution[1]} -o ${Solution[3]} -eq ${Solution[2]} ]; then Solution[$i]=$((RANDOM% 9&#43;1)) else ((i&#43;&#43;)) fi fi if [ $i -eq 2 ]; then if [ ${Solution[2]} -eq ${Solution[0]} -o ${Solution[2]} -eq ${Solution[1]} ]; then Solution[$i]=$((RANDOM% 9&#43;1)) else ((i&#43;&#43;)) fi fi if [ $i -eq 1 ]; then if [ ${Solution[0]} -eq ${Solution[1]} ]; then Solution[$i]=$((RANDOM% 9&#43;1)) else ((i&#43;&#43;)) fi fi if [ $i -eq 0 ]; then ((i&#43;&#43;)) fi done echo ${Solution[@]} } Count=0 Score(){ Out=0 Ball=0 Strike=0 if [ $num1 -eq ${Solution[0]} ]; then ((Strike&#43;&#43;)) elif [ $num1 -eq ${Solution[1]} -o $num1 -eq ${Solution[2]} -o $num1 -eq ${Solution[3]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi if [ $num2 -eq ${Solution[1]} ]; then ((Strike&#43;&#43;)) elif [ $num2 -eq ${Solution[0]} -o $num2 -eq ${Solution[2]} -o $num2 -eq ${Solution[3]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi if [ $num3 -eq ${Solution[2]} ]; then ((Strike&#43;&#43;)) elif [ $num3 -eq ${Solution[1]} -o $num3 -eq ${Solution[0]} -o $num3 -eq ${Solution[3]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi if [ $num4 -eq ${Solution[3]} ]; then ((Strike&#43;&#43;)) elif [ $num4 -eq ${Solution[1]} -o $num4 -eq ${Solution[2]} -o $num4 -eq ${Solution[0]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi echo &#34; Strike : $Strike&#34; echo &#34; Ball : $Ball&#34; echo &#34; Out : $Out&#34; ((Count&#43;&#43;)) if [ $Strike -eq 4 ]; then echo &#34;수고하셨습니다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/development/shell/shell100/><meta property="og:title" content="연습문제" />
+<meta property="og:description" content="Shell Programming 연습문제 정리 구구단 # gugu.sh #!/bin/bash for i in {1..9}; do for j in {1..9}; do echo $i &#34;X&#34; $j &#34;=&#34; `expr $i \* $j` done done 야구게임 #!/bin/bash Solution(){ Solution=() i=0 while [ $i -le 3 ]; do Solution[$i]=$((RANDOM% 9&#43;1)) if [ $i -eq 3 ]; then if [ ${Solution[3]} -eq ${Solution[0]} -o ${Solution[3]} -eq ${Solution[1]} -o ${Solution[3]} -eq ${Solution[2]} ]; then Solution[$i]=$((RANDOM% 9&#43;1)) else ((i&#43;&#43;)) fi fi if [ $i -eq 2 ]; then if [ ${Solution[2]} -eq ${Solution[0]} -o ${Solution[2]} -eq ${Solution[1]} ]; then Solution[$i]=$((RANDOM% 9&#43;1)) else ((i&#43;&#43;)) fi fi if [ $i -eq 1 ]; then if [ ${Solution[0]} -eq ${Solution[1]} ]; then Solution[$i]=$((RANDOM% 9&#43;1)) else ((i&#43;&#43;)) fi fi if [ $i -eq 0 ]; then ((i&#43;&#43;)) fi done echo ${Solution[@]} } Count=0 Score(){ Out=0 Ball=0 Strike=0 if [ $num1 -eq ${Solution[0]} ]; then ((Strike&#43;&#43;)) elif [ $num1 -eq ${Solution[1]} -o $num1 -eq ${Solution[2]} -o $num1 -eq ${Solution[3]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi if [ $num2 -eq ${Solution[1]} ]; then ((Strike&#43;&#43;)) elif [ $num2 -eq ${Solution[0]} -o $num2 -eq ${Solution[2]} -o $num2 -eq ${Solution[3]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi if [ $num3 -eq ${Solution[2]} ]; then ((Strike&#43;&#43;)) elif [ $num3 -eq ${Solution[1]} -o $num3 -eq ${Solution[0]} -o $num3 -eq ${Solution[3]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi if [ $num4 -eq ${Solution[3]} ]; then ((Strike&#43;&#43;)) elif [ $num4 -eq ${Solution[1]} -o $num4 -eq ${Solution[2]} -o $num4 -eq ${Solution[0]} ]; then ((Ball&#43;&#43;)) else ((Out&#43;&#43;)) fi echo &#34; Strike : $Strike&#34; echo &#34; Ball : $Ball&#34; echo &#34; Out : $Out&#34; ((Count&#43;&#43;)) if [ $Strike -eq 4 ]; then echo &#34;수고하셨습니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/development/shell/shell100/" /><meta property="article:section" content="docs" />
 
 
 
-<title>연습문제 | 뭉게뭉게</title>
-<link rel="manifest" href="/manifest.json">
+<title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.3d8c7f91a1ae2a156d3acf98421fad5e26aabf6e44dfa654eae07357b1d35b2e.js" integrity="sha256-PYx/kaGuKhVtOs&#43;YQh&#43;tXiaqv25E36ZU6uBzV7HTWy4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
+<script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo="></script>
 <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+
 -->
+
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
+
 <body>
   <div class="background">
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex" style="max-width:100%;" >
-    
-    <aside style="padding-left: 1em;" class="book-menu">
-      <div class="book-menu-content">
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
       
   
 <nav styles="background-color:red; position=none;">
@@ -45,8 +45,9 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
+
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1030,127 +1031,6 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <span>Network</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
   <span>System</span>
   
 
@@ -1347,15 +1227,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
     </aside>
 
-
-
-    
-    <div style="padding-left: 2%;" class="book-page">
+    <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
   <div class="flex align-center justify-between">
@@ -1366,15 +1244,14 @@ https://github.com/alex-shpak/hugo-book
   <strong>연습문제</strong>
 
   <label for="toc-control">
-    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
   </label>
 </div>
 
 
   
-  <aside class="hidden clearfix">
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1511,31 +1388,13 @@ https://github.com/alex-shpak/hugo-book
 <br>
 <br>
       
-  <article class="markdown"><h1 id="shell-programming">
-  <strong>Shell Programming</strong>
-  <a class="anchor" href="#shell-programming">#</a>
-</h1>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
+  <article class="markdown"><h1 id="shell-programming"><strong>Shell Programming</strong></h1>
+<h1 id="heading"></h1>
 <p> </p>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
-<h2 id="연습문제-정리">
-  <strong>연습문제 정리</strong>
-  <a class="anchor" href="#%ec%97%b0%ec%8a%b5%eb%ac%b8%ec%a0%9c-%ec%a0%95%eb%a6%ac">#</a>
-</h2>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
-<h3 id="구구단">
-  <strong>구구단</strong>
-  <a class="anchor" href="#%ea%b5%ac%ea%b5%ac%eb%8b%a8">#</a>
-</h3>
+<h1 id="heading-1"></h1>
+<h2 id="연습문제-정리"><strong>연습문제 정리</strong></h2>
+<h1 id="heading-2"></h1>
+<h3 id="구구단"><strong>구구단</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># gugu.sh</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash</span>
@@ -1547,19 +1406,10 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>        echo $i <span style="color:#e6db74">&#34;X&#34;</span> $j <span style="color:#e6db74">&#34;=&#34;</span> <span style="color:#e6db74">`</span>expr $i <span style="color:#ae81ff">\*</span> $j<span style="color:#e6db74">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">done</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
-</span></span></code></pre></div><h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
+</span></span></code></pre></div><h1 id="heading-3"></h1>
 <p> </p>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
-<h3 id="야구게임">
-  <strong>야구게임</strong>
-  <a class="anchor" href="#%ec%95%bc%ea%b5%ac%ea%b2%8c%ec%9e%84">#</a>
-</h3>
+<h1 id="heading-4"></h1>
+<h3 id="야구게임"><strong>야구게임</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
 </span></span><span style="display:flex;"><span>
@@ -1694,19 +1544,10 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>main
-</span></span></code></pre></div><h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
+</span></span></code></pre></div><h1 id="heading-5"></h1>
 <p> </p>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
-<h3 id="network-정적-자동설정-스크립트">
-  <strong>Network 정적 자동설정 스크립트</strong>
-  <a class="anchor" href="#network-%ec%a0%95%ec%a0%81-%ec%9e%90%eb%8f%99%ec%84%a4%ec%a0%95-%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8">#</a>
-</h3>
+<h1 id="heading-6"></h1>
+<h3 id="network-정적-자동설정-스크립트"><strong>Network 정적 자동설정 스크립트</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Network_Interface<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>        echo <span style="color:#e6db74">&#34;
@@ -1782,19 +1623,10 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>main
-</span></span></code></pre></div><h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
+</span></span></code></pre></div><h1 id="heading-7"></h1>
 <p> </p>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
-<h3 id="마운트-및-등록-스크립트">
-  <strong>마운트 및 등록 스크립트</strong>
-  <a class="anchor" href="#%eb%a7%88%ec%9a%b4%ed%8a%b8-%eb%b0%8f-%eb%93%b1%eb%a1%9d-%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8">#</a>
-</h3>
+<h1 id="heading-8"></h1>
+<h3 id="마운트-및-등록-스크립트"><strong>마운트 및 등록 스크립트</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#f92672">{</span>1..32<span style="color:#f92672">}</span>;
@@ -1939,19 +1771,10 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Mount Filesystem : ext3
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># default ext3</span>
-</span></span></code></pre></div><h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
+</span></span></code></pre></div><h1 id="heading-9"></h1>
 <p> </p>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
-<h3 id="user-생성-스크립트">
-  <strong>User 생성 스크립트</strong>
-  <a class="anchor" href="#user-%ec%83%9d%ec%84%b1-%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8">#</a>
-</h3>
+<h1 id="heading-10"></h1>
+<h3 id="user-생성-스크립트"><strong>User 생성 스크립트</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
 </span></span><span style="display:flex;"><span>Useradd<span style="color:#f92672">(){</span>
@@ -2063,19 +1886,10 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>GroupUID :
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 수동으로 그룹 ID를 지정</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># default : auto</span>
-</span></span></code></pre></div><h1 id="heading-11">
-  
-  <a class="anchor" href="#heading-11">#</a>
-</h1>
+</span></span></code></pre></div><h1 id="heading-11"></h1>
 <p> </p>
-<h1 id="heading-12">
-  
-  <a class="anchor" href="#heading-12">#</a>
-</h1>
-<h3 id="pv-vg-lv-스크립트">
-  <strong>PV VG LV 스크립트</strong>
-  <a class="anchor" href="#pv-vg-lv-%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8">#</a>
-</h3>
+<h1 id="heading-12"></h1>
+<h3 id="pv-vg-lv-스크립트"><strong>PV VG LV 스크립트</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
 </span></span><span style="display:flex;"><span>
@@ -2096,7 +1910,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>PV[@]<span style="color:#e6db74">}</span>;
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">do</span>
 </span></span><span style="display:flex;"><span>                        pvremove $i
-</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;PV </span>$i의<span style="color:#e6db74"> 삭제가 완료되었습니다.&#34;</span>
+</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;PV </span>$i<span style="color:#e6db74">의 삭제가 완료되었습니다.&#34;</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">done</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">${</span>PV[0] == <span style="color:#e6db74">&#34;0&#34;</span><span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
@@ -2104,7 +1918,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>PV[@]<span style="color:#e6db74">}</span>;
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">do</span>
 </span></span><span style="display:flex;"><span>                        pvcreate $i
-</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;PV의 </span>$i의<span style="color:#e6db74"> 생성이 완료되었습니다.&#34;</span>
+</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;PV의 </span>$i<span style="color:#e6db74">의 생성이 완료되었습니다.&#34;</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">done</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">fi</span>
 </span></span><span style="display:flex;"><span>        main
@@ -2128,7 +1942,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>PV[@]<span style="color:#e6db74">}</span>;
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">do</span>
 </span></span><span style="display:flex;"><span>                        vgremove $i
-</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;VG </span>$i의<span style="color:#e6db74"> 삭제가 완료되었습니다.&#34;</span>
+</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;VG </span>$i<span style="color:#e6db74">의 삭제가 완료되었습니다.&#34;</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">done</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">${</span>VG[0] == <span style="color:#e6db74">&#34;0&#34;</span><span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
@@ -2136,7 +1950,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>PV[@]<span style="color:#e6db74">}</span>;
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">do</span>
 </span></span><span style="display:flex;"><span>                        vgcreate $i
-</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;VG의 </span>$i의<span style="color:#e6db74"> 생성이 완료되었습니다.&#34;</span>
+</span></span><span style="display:flex;"><span>                        echo <span style="color:#e6db74">&#34;VG의 </span>$i<span style="color:#e6db74">의 생성이 완료되었습니다.&#34;</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">done</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">fi</span>
 </span></span><span style="display:flex;"><span>        main
@@ -2295,19 +2109,10 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>LVName : 
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 생성할 LV의 이름, 뛰어쓰기로 구분</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># ex lv1 lv2 lv3 ...</span>
-</span></span></code></pre></div><h1 id="heading-13">
-  
-  <a class="anchor" href="#heading-13">#</a>
-</h1>
+</span></span></code></pre></div><h1 id="heading-13"></h1>
 <p> </p>
-<h1 id="heading-14">
-  
-  <a class="anchor" href="#heading-14">#</a>
-</h1>
-<h3 id="파일에서-특정-단어를-찾아서-행을-변경하는-스크립트">
-  <strong>파일에서 특정 단어를 찾아서 행을 변경하는 스크립트</strong>
-  <a class="anchor" href="#%ed%8c%8c%ec%9d%bc%ec%97%90%ec%84%9c-%ed%8a%b9%ec%a0%95-%eb%8b%a8%ec%96%b4%eb%a5%bc-%ec%b0%be%ec%95%84%ec%84%9c-%ed%96%89%ec%9d%84-%eb%b3%80%ea%b2%bd%ed%95%98%eb%8a%94-%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8">#</a>
-</h3>
+<h1 id="heading-14"></h1>
+<h3 id="파일에서-특정-단어를-찾아서-행을-변경하는-스크립트"><strong>파일에서 특정 단어를 찾아서 행을 변경하는 스크립트</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 옵션에 맞게 스크립트를 실행시키세요.</span>
@@ -2340,19 +2145,10 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
-</span></span></code></pre></div><h1 id="heading-15">
-  
-  <a class="anchor" href="#heading-15">#</a>
-</h1>
+</span></span></code></pre></div><h1 id="heading-15"></h1>
 <p> </p>
-<h1 id="heading-16">
-  
-  <a class="anchor" href="#heading-16">#</a>
-</h1>
-<h3 id="예외처리">
-  <strong>예외처리</strong>
-  <a class="anchor" href="#%ec%98%88%ec%99%b8%ec%b2%98%eb%a6%ac">#</a>
-</h3>
+<h1 id="heading-16"></h1>
+<h3 id="예외처리"><strong>예외처리</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e"># 현재 공부중</span>
 </span></span><span style="display:flex;"><span>
@@ -2383,88 +2179,31 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>    set +e
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><h1 id="heading-17">
-  
-  <a class="anchor" href="#heading-17">#</a>
-</h1>
+</span></span></code></pre></div><h1 id="heading-17"></h1>
 <p> </p>
-<h1 id="heading-18">
-  
-  <a class="anchor" href="#heading-18">#</a>
-</h1>
-<h3 id="heading-19">
-  ****
-  <a class="anchor" href="#heading-19">#</a>
-</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div><h1 id="heading-20">
-  
-  <a class="anchor" href="#heading-20">#</a>
-</h1>
+<h1 id="heading-18"></h1>
+<h3 id="heading-19">****</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div><h1 id="heading-20"></h1>
 <p> </p>
-<h1 id="heading-21">
-  
-  <a class="anchor" href="#heading-21">#</a>
-</h1>
-<h3 id="heading-22">
-  ****
-  <a class="anchor" href="#heading-22">#</a>
-</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div><h1 id="heading-23">
-  
-  <a class="anchor" href="#heading-23">#</a>
-</h1>
+<h1 id="heading-21"></h1>
+<h3 id="heading-22">****</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div><h1 id="heading-23"></h1>
 <p> </p>
-<h1 id="heading-24">
-  
-  <a class="anchor" href="#heading-24">#</a>
-</h1>
-<h3 id="heading-25">
-  ****
-  <a class="anchor" href="#heading-25">#</a>
-</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div><h1 id="heading-26">
-  
-  <a class="anchor" href="#heading-26">#</a>
-</h1>
+<h1 id="heading-24"></h1>
+<h3 id="heading-25">****</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div><h1 id="heading-26"></h1>
 <p> </p>
-<h1 id="heading-27">
-  
-  <a class="anchor" href="#heading-27">#</a>
-</h1>
-<h3 id="heading-28">
-  ****
-  <a class="anchor" href="#heading-28">#</a>
-</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div><h1 id="heading-29">
-  
-  <a class="anchor" href="#heading-29">#</a>
-</h1>
+<h1 id="heading-27"></h1>
+<h3 id="heading-28">****</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div><h1 id="heading-29"></h1>
 <p> </p>
-<h1 id="heading-30">
-  
-  <a class="anchor" href="#heading-30">#</a>
-</h1>
-<h3 id="heading-31">
-  ****
-  <a class="anchor" href="#heading-31">#</a>
-</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div><h1 id="heading-32">
-  
-  <a class="anchor" href="#heading-32">#</a>
-</h1>
+<h1 id="heading-30"></h1>
+<h3 id="heading-31">****</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div><h1 id="heading-32"></h1>
 <p> </p>
-<h1 id="heading-33">
-  
-  <a class="anchor" href="#heading-33">#</a>
-</h1>
-<h3 id="heading-34">
-  ****
-  <a class="anchor" href="#heading-34">#</a>
-</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div><h1 id="heading-35">
-  
-  <a class="anchor" href="#heading-35">#</a>
-</h1>
+<h1 id="heading-33"></h1>
+<h3 id="heading-34">****</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div><h1 id="heading-35"></h1>
 <p> </p>
 </article>
  
@@ -2632,6 +2371,7 @@ https://github.com/alex-shpak/hugo-book
 </body>
 </div>
 </html>
+
 
 
 

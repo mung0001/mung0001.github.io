@@ -2,43 +2,43 @@
 <html lang="en">
 
 <head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Doker 기본 명령어##docker 명령어의 기본 형식#$ docker &#43; &lt; 명령어 &gt; $ sudo usermod -aG docker ${USER} $ sudo service docker restart # user을 docker 그룹에 넣음 항상 root 권한으로 실행 ##Docker search 명령으로 이미지 검색#$ sudo docker search &lt; 이미지 이름 &gt; 보통 ubuntu, centos, redis 등 os나 프로그램 이름을 가진 이미지가 공식 이미지
-나머지는 사용자들이 만들어서 공개한 이미지">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Docker 기본 명령어" />
-<meta property="og:description" content="Doker 기본 명령어##docker 명령어의 기본 형식#$ docker &#43; &lt; 명령어 &gt; $ sudo usermod -aG docker ${USER} $ sudo service docker restart # user을 docker 그룹에 넣음 항상 root 권한으로 실행 ##Docker search 명령으로 이미지 검색#$ sudo docker search &lt; 이미지 이름 &gt; 보통 ubuntu, centos, redis 등 os나 프로그램 이름을 가진 이미지가 공식 이미지
-나머지는 사용자들이 만들어서 공개한 이미지" />
+<meta name="description" content="Doker 기본 명령어 docker 명령어의 기본 형식 $ docker &#43; &lt; 명령어 &gt; $ sudo usermod -aG docker ${USER} $ sudo service docker restart # user을 docker 그룹에 넣음 항상 root 권한으로 실행 Docker search 명령으로 이미지 검색 $ sudo docker search &lt; 이미지 이름 &gt; 보통 ubuntu, centos, redis 등 os나 프로그램 이름을 가진 이미지가 공식 이미지
+나머지는 사용자들이 만들어서 공개한 이미지
+Pull 명령으로 이미지 받기 $ sudo docker pull &lt; 이미지:버전 &gt; $ sudo docker pull ubuntu:latest 이미지 이름 뒤에 latest를 설정하면 최신 버전을 받음">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/docker/docker/docker-4/><meta property="og:title" content="Docker 기본 명령어" />
+<meta property="og:description" content="Doker 기본 명령어 docker 명령어의 기본 형식 $ docker &#43; &lt; 명령어 &gt; $ sudo usermod -aG docker ${USER} $ sudo service docker restart # user을 docker 그룹에 넣음 항상 root 권한으로 실행 Docker search 명령으로 이미지 검색 $ sudo docker search &lt; 이미지 이름 &gt; 보통 ubuntu, centos, redis 등 os나 프로그램 이름을 가진 이미지가 공식 이미지
+나머지는 사용자들이 만들어서 공개한 이미지
+Pull 명령으로 이미지 받기 $ sudo docker pull &lt; 이미지:버전 &gt; $ sudo docker pull ubuntu:latest 이미지 이름 뒤에 latest를 설정하면 최신 버전을 받음" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/docker/docker/docker-4/" /><meta property="article:section" content="docs" />
 
 
-<title>Docker 기본 명령어 | 뭉게뭉게</title>
-<link rel="manifest" href="/manifest.json">
+
+<title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.ffcce1416ac965bf6815bf4bdd99cf970182cd6ac9b30c72a81407197d550a70.js" integrity="sha256-/8zhQWrJZb9oFb9L3ZnPlwGCzWrJswxyqBQHGX1VCnA=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
+<script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo="></script>
 <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+
 -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274477834047595"
-     crossorigin="anonymous"></script>
 
-
+  
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
+
 <body>
   <div class="background">
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex" style="max-width:100%;" >
-    
-    <aside style="padding-left: 1em;" class="book-menu">
-      <div class="book-menu-content">
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
       
   
 <nav styles="background-color:red; position=none;">
@@ -49,8 +49,9 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
+
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -91,7 +92,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/docs/infra/" class="">Infra</a>
+  <a href="/docs/aws/" class="">Amazon Web Services</a>
   
 
 
@@ -110,7 +111,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/docs/infra/hardware/" class="collapsed ">HardWare</a>
+  <a href="/docs/aws/amazonwebservice/" class="collapsed ">AWS docs</a>
   
 
 
@@ -133,7 +134,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  <a href="/docs/aws/awstraining/" class="collapsed ">AWS Training</a>
   
 
 
@@ -141,6 +142,39 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/aws/awssaa/" class="collapsed ">AWS SAA 시험정리</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
 
 
 
@@ -156,7 +190,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/docs/infra/monitoring/" class="">Monitoring</a>
+  <span>Microsoft Azure</span>
   
 
 
@@ -168,8 +202,269 @@ https://github.com/alex-shpak/hugo-book
   
   <ul>
     
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/microsoftazure/" class="collapsed ">Azure docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/azure/azuretraining/" class="collapsed ">Azure Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
   </ul>
   
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Google Cloud Platform</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/googlecloudplatform/" class="collapsed ">GCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/gcp/gcptraining/" class="collapsed ">GCP Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>Naver Cloud</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/navercloudplatform/" class="collapsed ">NCP docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/nc/ncptraining/" class="collapsed ">Naver Cloud Training</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>OpenStack</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstack/" class="collapsed ">OpenStack docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/openstack/openstacktraining/" class="collapsed ">OpenStack Training</a>
+  
+
+
+    
+
+
+
 
 
 
@@ -346,6 +641,300 @@ https://github.com/alex-shpak/hugo-book
     
 
   
+  <span>Infra engineer</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/idc/" class="collapsed ">IDC</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/infra/infra/" class="collapsed ">Infra engineer</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <a href="/docs/monitoring/" class="">Monitoring</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/monitoring/pc/" class="collapsed ">Monitoring</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
+  <span>development</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/python/" class="collapsed ">Python docs</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/shell/" class="collapsed ">Shell Script</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/spingboot/" class="collapsed ">Sping Boot</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/golang/" class="collapsed ">Golang</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/web/" class="collapsed ">Web</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/docs/development/git/" class="collapsed ">Git</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li class="book-section-flat" >
+    
+
+  
   <span>System</span>
   
 
@@ -450,294 +1039,6 @@ https://github.com/alex-shpak/hugo-book
 
       
     
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
-  <span>development</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/development/python/" class="collapsed ">Python docs</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/development/shell/" class="collapsed ">Shell Script</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/development/spingboot/" class="collapsed ">Sping Boot</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/development/golang/" class="collapsed ">Golang</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/development/web/" class="collapsed ">Web</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/development/git/" class="collapsed ">Git</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
-  <span>Network</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/network/network/" class="collapsed ">Network 기본</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/network/sophos/" class="collapsed ">Sophos</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/network/snort/" class="collapsed ">Snort</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/system/network/nm/" class="collapsed ">Network Master</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
   </ul>
   
 
@@ -830,15 +1131,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
     </aside>
 
-
-
-    
-    <div style="padding-left: 2%;" class="book-page">
+    <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
   <div class="flex align-center justify-between">
@@ -849,15 +1148,14 @@ https://github.com/alex-shpak/hugo-book
   <strong>Docker 기본 명령어</strong>
 
   <label for="toc-control">
-    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
   </label>
 </div>
 
 
   
-  <aside class="hidden clearfix">
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -984,27 +1282,12 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <br>
 <br>
-<script src="https://ads-partners.coupang.com/g.js"></script>
-<script>
-    new PartnersCoupang.G({"id":402713,"trackingCode":"AF0817069","subId":null,"template":"carousel","width":"680","height":"140"});
-</script>
-<br>
-<br>
 <br>
       
-  <article class="markdown"><h2 id="doker-기본-명령어">
-  <strong>Doker 기본 명령어</strong>
-  <a class="anchor" href="#doker-%ea%b8%b0%eb%b3%b8-%eb%aa%85%eb%a0%b9%ec%96%b4">#</a>
-</h2>
+  <article class="markdown"><h2 id="doker-기본-명령어"><strong>Doker 기본 명령어</strong></h2>
 <hr>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
-<h3 id="docker-명령어의-기본-형식">
-  <strong>docker 명령어의 기본 형식</strong>
-  <a class="anchor" href="#docker-%eb%aa%85%eb%a0%b9%ec%96%b4%ec%9d%98-%ea%b8%b0%eb%b3%b8-%ed%98%95%ec%8b%9d">#</a>
-</h3>
+<h1 id="heading"></h1>
+<h3 id="docker-명령어의-기본-형식"><strong>docker 명령어의 기본 형식</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ docker + &lt; 명령어 &gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ sudo usermod -aG docker $<span style="color:#75715e">{</span><span style="color:#a6e22e">USER</span><span style="color:#75715e">}</span>
@@ -1013,19 +1296,10 @@ https://github.com/alex-shpak/hugo-book
 </span></span></code></pre></div><ul>
 <li><strong>항상 root 권한으로 실행</strong></li>
 </ul>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
+<h1 id="heading-1"></h1>
 <p> </p>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
-<h3 id="docker-search-명령으로-이미지-검색">
-  <strong>Docker search 명령으로 이미지 검색</strong>
-  <a class="anchor" href="#docker-search-%eb%aa%85%eb%a0%b9%ec%9c%bc%eb%a1%9c-%ec%9d%b4%eb%af%b8%ec%a7%80-%ea%b2%80%ec%83%89">#</a>
-</h3>
+<h1 id="heading-2"></h1>
+<h3 id="docker-search-명령으로-이미지-검색"><strong>Docker search 명령으로 이미지 검색</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker search &lt; 이미지 이름 &gt;
 </span></span></code></pre></div><ul>
 <li>
@@ -1035,19 +1309,10 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>나머지는 사용자들이 만들어서 공개한 이미지</strong></p>
 </li>
 </ul>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
+<h1 id="heading-3"></h1>
 <p> </p>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
-<h3 id="pull-명령으로-이미지-받기">
-  <strong>Pull 명령으로 이미지 받기</strong>
-  <a class="anchor" href="#pull-%eb%aa%85%eb%a0%b9%ec%9c%bc%eb%a1%9c-%ec%9d%b4%eb%af%b8%ec%a7%80-%eb%b0%9b%ea%b8%b0">#</a>
-</h3>
+<h1 id="heading-4"></h1>
+<h3 id="pull-명령으로-이미지-받기"><strong>Pull 명령으로 이미지 받기</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker pull &lt; 이미지:버전 &gt;
 </span></span><span style="display:flex;"><span>$ sudo docker pull ubuntu:latest
 </span></span></code></pre></div><ul>
@@ -1061,37 +1326,19 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>호스트에 설치된 리눅스 배포판과 도커 이미지의 배포판 종류는 달라도 상관은 없음</strong></p>
 </li>
 </ul>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
+<h1 id="heading-5"></h1>
 <p> </p>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
-<h3 id="images-명령으로-이미지-목록-출력하기">
-  <strong>Images 명령으로 이미지 목록 출력하기</strong>
-  <a class="anchor" href="#images-%eb%aa%85%eb%a0%b9%ec%9c%bc%eb%a1%9c-%ec%9d%b4%eb%af%b8%ec%a7%80-%eb%aa%a9%eb%a1%9d-%ec%b6%9c%eb%a0%a5%ed%95%98%ea%b8%b0">#</a>
-</h3>
+<h1 id="heading-6"></h1>
+<h3 id="images-명령으로-이미지-목록-출력하기"><strong>Images 명령으로 이미지 목록 출력하기</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker images
 </span></span><span style="display:flex;"><span>$ sudo docker images &lt; image name &gt;
 </span></span></code></pre></div><ul>
 <li><strong>docker iamges 뒤에 이미지 이름을 설정하면 특정 이미지를 검색할 수 있음</strong></li>
 </ul>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
+<h1 id="heading-7"></h1>
 <p> </p>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
-<h3 id="run-명령으로-컨테이너-생성하기">
-  <strong>Run 명령으로 컨테이너 생성하기</strong>
-  <a class="anchor" href="#run-%eb%aa%85%eb%a0%b9%ec%9c%bc%eb%a1%9c-%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88-%ec%83%9d%ec%84%b1%ed%95%98%ea%b8%b0">#</a>
-</h3>
+<h1 id="heading-8"></h1>
+<h3 id="run-명령으로-컨테이너-생성하기"><strong>Run 명령으로 컨테이너 생성하기</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker run &lt; 옵션 &gt; &lt; 이미지 이름 &gt; &lt; 실행할 파일 &gt;
 </span></span><span style="display:flex;"><span>$ sudo docker run -i -t --name hello ubuntu /bin/bash
 </span></span></code></pre></div><ul>
@@ -1108,19 +1355,10 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>cd, ls 명령으로 컨테이너 내부를 둘러본 뒤 exit 입력하여 Bash 셸에서 빠져 나오면 이미지에서 /bin/bash 실행 파일을 실행했기 때문에 컨테이너가 정지 (stop) 됨</strong></p>
 </li>
 </ul>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
+<h1 id="heading-9"></h1>
 <p> </p>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
-<h3 id="docker-컨테이너-목록-확인하기">
-  <strong>Docker 컨테이너 목록 확인하기</strong>
-  <a class="anchor" href="#docker-%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88-%eb%aa%a9%eb%a1%9d-%ed%99%95%ec%9d%b8%ed%95%98%ea%b8%b0">#</a>
-</h3>
+<h1 id="heading-10"></h1>
+<h3 id="docker-컨테이너-목록-확인하기"><strong>Docker 컨테이너 목록 확인하기</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker ps
 </span></span><span style="display:flex;"><span>$ sudo docker ps -a
 </span></span></code></pre></div><ul>
@@ -1131,19 +1369,10 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>-a를 입력시 정지된 상태의 모든 컨테이너를 출력</strong></p>
 </li>
 </ul>
-<h1 id="heading-11">
-  
-  <a class="anchor" href="#heading-11">#</a>
-</h1>
+<h1 id="heading-11"></h1>
 <p> </p>
-<h1 id="heading-12">
-  
-  <a class="anchor" href="#heading-12">#</a>
-</h1>
-<h3 id="컨테이너-실행하기">
-  <strong>컨테이너 실행하기</strong>
-  <a class="anchor" href="#%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88-%ec%8b%a4%ed%96%89%ed%95%98%ea%b8%b0">#</a>
-</h3>
+<h1 id="heading-12"></h1>
+<h3 id="컨테이너-실행하기"><strong>컨테이너 실행하기</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker start &lt; 컨테이너 이름 &gt;
 </span></span><span style="display:flex;"><span>$ sudo docker start HI
 </span></span></code></pre></div><ul>
@@ -1154,19 +1383,10 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>컨테이너 이름 대신 컨테이너 ID를 사용해도 됨</strong></p>
 </li>
 </ul>
-<h1 id="heading-13">
-  
-  <a class="anchor" href="#heading-13">#</a>
-</h1>
+<h1 id="heading-13"></h1>
 <p> </p>
-<h1 id="heading-14">
-  
-  <a class="anchor" href="#heading-14">#</a>
-</h1>
-<h3 id="컨테이너-재시작하기">
-  <strong>컨테이너 재시작하기</strong>
-  <a class="anchor" href="#%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88-%ec%9e%ac%ec%8b%9c%ec%9e%91%ed%95%98%ea%b8%b0">#</a>
-</h3>
+<h1 id="heading-14"></h1>
+<h3 id="컨테이너-재시작하기"><strong>컨테이너 재시작하기</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker restart &lt; 컨테이너 이름 &gt;
 </span></span><span style="display:flex;"><span>$ sudo docker restart HI
 </span></span></code></pre></div><ul>
@@ -1177,19 +1397,10 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>컨테이너 이름 대신 컨테이너 ID를 사용해도 됨</strong></p>
 </li>
 </ul>
-<h1 id="heading-15">
-  
-  <a class="anchor" href="#heading-15">#</a>
-</h1>
+<h1 id="heading-15"></h1>
 <p> </p>
-<h1 id="heading-16">
-  
-  <a class="anchor" href="#heading-16">#</a>
-</h1>
-<h3 id="컨테이너에-접속하기">
-  <strong>컨테이너에 접속하기</strong>
-  <a class="anchor" href="#%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88%ec%97%90-%ec%a0%91%ec%86%8d%ed%95%98%ea%b8%b0">#</a>
-</h3>
+<h1 id="heading-16"></h1>
+<h3 id="컨테이너에-접속하기"><strong>컨테이너에 접속하기</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker attach &lt; 컨테이너 이름 &gt;
 </span></span><span style="display:flex;"><span>$ sudo docker attach HI
 </span></span></code></pre></div><ul>
@@ -1206,19 +1417,10 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>정지를 언하지 않을 시 ctrl + P or ctrl + Q를 차례대로 입력하여 컨테이너를 빠져나오면 됨</strong></p>
 </li>
 </ul>
-<h1 id="heading-17">
-  
-  <a class="anchor" href="#heading-17">#</a>
-</h1>
+<h1 id="heading-17"></h1>
 <p> </p>
-<h1 id="heading-18">
-  
-  <a class="anchor" href="#heading-18">#</a>
-</h1>
-<h3 id="외부에서-컨터이너-안의-명령-실행시키기">
-  <strong>외부에서 컨터이너 안의 명령 실행시키기</strong>
-  <a class="anchor" href="#%ec%99%b8%eb%b6%80%ec%97%90%ec%84%9c-%ec%bb%a8%ed%84%b0%ec%9d%b4%eb%84%88-%ec%95%88%ec%9d%98-%eb%aa%85%eb%a0%b9-%ec%8b%a4%ed%96%89%ec%8b%9c%ed%82%a4%ea%b8%b0">#</a>
-</h3>
+<h1 id="heading-18"></h1>
+<h3 id="외부에서-컨터이너-안의-명령-실행시키기"><strong>외부에서 컨터이너 안의 명령 실행시키기</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker exec &lt; 컨테이너 이름 &gt; &lt; 명령 &gt; &lt; 매개 변수 &gt;
 </span></span><span style="display:flex;"><span>$ sudo docker exec HI echo &#34;HIYO&#34;
 </span></span></code></pre></div><ul>
@@ -1232,37 +1434,19 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>docker exec 명령은 이미 실행된 컨테이너에서 apt-get, yum 명령으로 패키지를 설치하거나 각종 데몬을 실행할 때 활용</strong></p>
 </li>
 </ul>
-<h1 id="heading-19">
-  
-  <a class="anchor" href="#heading-19">#</a>
-</h1>
+<h1 id="heading-19"></h1>
 <p> </p>
-<h1 id="heading-20">
-  
-  <a class="anchor" href="#heading-20">#</a>
-</h1>
-<h3 id="컨테이너-정지하기">
-  <strong>컨테이너 정지하기</strong>
-  <a class="anchor" href="#%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88-%ec%a0%95%ec%a7%80%ed%95%98%ea%b8%b0">#</a>
-</h3>
+<h1 id="heading-20"></h1>
+<h3 id="컨테이너-정지하기"><strong>컨테이너 정지하기</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker stop &lt; 컨테이너 이름 &gt;
 </span></span><span style="display:flex;"><span>$ sudo docker stop HI
 </span></span></code></pre></div><ul>
 <li><strong>실행되고 있는 컨테이너를 정지</strong></li>
 </ul>
-<h1 id="heading-21">
-  
-  <a class="anchor" href="#heading-21">#</a>
-</h1>
+<h1 id="heading-21"></h1>
 <p> </p>
-<h1 id="heading-22">
-  
-  <a class="anchor" href="#heading-22">#</a>
-</h1>
-<h3 id="컨테이너-삭제하기">
-  <strong>컨테이너 삭제하기</strong>
-  <a class="anchor" href="#%ec%bb%a8%ed%85%8c%ec%9d%b4%eb%84%88-%ec%82%ad%ec%a0%9c%ed%95%98%ea%b8%b0">#</a>
-</h3>
+<h1 id="heading-22"></h1>
+<h3 id="컨테이너-삭제하기"><strong>컨테이너 삭제하기</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ sudo docker rm &lt; 컨테이너 이름 &gt;
 </span></span><span style="display:flex;"><span>$ sudo docker rm -f &lt; 컨테이너 이름 &gt;
 </span></span><span style="display:flex;"><span>$ sudo docker rm HI
@@ -1274,32 +1458,27 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>-f를 함께 사용시 실행되고 있는 컨테이너도 삭제</strong></p>
 </li>
 </ul>
-<h1 id="heading-23">
-  
-  <a class="anchor" href="#heading-23">#</a>
-</h1>
+<h1 id="heading-23"></h1>
 <p> </p>
-<h1 id="heading-24">
-  
-  <a class="anchor" href="#heading-24">#</a>
-</h1>
-<h3 id="이미지-삭제하기">
-  <strong>이미지 삭제하기</strong>
-  <a class="anchor" href="#%ec%9d%b4%eb%af%b8%ec%a7%80-%ec%82%ad%ec%a0%9c%ed%95%98%ea%b8%b0">#</a>
-</h3>
+<h1 id="heading-24"></h1>
+<h3 id="이미지-삭제하기"><strong>이미지 삭제하기</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ docker rmi &lt; 이미지 이름 &gt; : &lt; 태그 &gt;
 </span></span><span style="display:flex;"><span>$ docker rmi ubuntu:16.04
 </span></span></code></pre></div><ul>
 <li><strong>이름만을 지정하고 태그를 지정하지 않으면 ubuntu의 이름을 가진 모든 ubuntu 삭제</strong></li>
 </ul>
-<h1 id="heading-25">
-  
-  <a class="anchor" href="#heading-25">#</a>
-</h1>
+<h1 id="heading-25"></h1>
 <p> </p>
 </article>
  
       
+<div>
+
+<br>
+
+
+
+</div>
 
       <footer class="book-footer">
         
@@ -1448,6 +1627,7 @@ https://github.com/alex-shpak/hugo-book
 </body>
 </div>
 </html>
+
 
 
 

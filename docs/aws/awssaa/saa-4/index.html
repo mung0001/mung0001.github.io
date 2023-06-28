@@ -2,39 +2,41 @@
 <html lang="en">
 
 <head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="4장 Amazon Virtual Private Cloud##4장의 목표##복원력을 갖춘 아키텍처 설계 어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다. #안전한 어플리케이션 및 아키텍처 설계 단일 VPC 어플리케이션을 위한 네트워킹 인프라르 정의한다. 단일 VPC 애플리케이션을 위한 네트워킹 인프라르 정의한다. ##Virtual Private Cloud ( 이하 VPC )##VPC란 EC2의 네트워크 계층으로, EC2 인스턴스를 비롯한 여러 AWS 서비스에 네트워크 리소스를 담을 수 있는 가상의 네트워크를 의미한다.">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="4장 VPC" />
-<meta property="og:description" content="4장 Amazon Virtual Private Cloud##4장의 목표##복원력을 갖춘 아키텍처 설계 어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다. #안전한 어플리케이션 및 아키텍처 설계 단일 VPC 어플리케이션을 위한 네트워킹 인프라르 정의한다. 단일 VPC 애플리케이션을 위한 네트워킹 인프라르 정의한다. ##Virtual Private Cloud ( 이하 VPC )##VPC란 EC2의 네트워크 계층으로, EC2 인스턴스를 비롯한 여러 AWS 서비스에 네트워크 리소스를 담을 수 있는 가상의 네트워크를 의미한다." />
+<meta name="description" content="4장 Amazon Virtual Private Cloud 4장의 목표 복원력을 갖춘 아키텍처 설계 어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다. 안전한 어플리케이션 및 아키텍처 설계 단일 VPC 어플리케이션을 위한 네트워킹 인프라르 정의한다. 단일 VPC 애플리케이션을 위한 네트워킹 인프라르 정의한다. Virtual Private Cloud ( 이하 VPC ) VPC란 EC2의 네트워크 계층으로, EC2 인스턴스를 비롯한 여러 AWS 서비스에 네트워크 리소스를 담을 수 있는 가상의 네트워크를 의미한다.
+모든 VPC는 기본적으로 다른 모든 네트워크와 격리되어 있지만, 필요할 때는 인터넷 및 다른 VPC와 연결이 가능하다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/aws/awssaa/saa-4/><meta property="og:title" content="4장 VPC" />
+<meta property="og:description" content="4장 Amazon Virtual Private Cloud 4장의 목표 복원력을 갖춘 아키텍처 설계 어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다. 안전한 어플리케이션 및 아키텍처 설계 단일 VPC 어플리케이션을 위한 네트워킹 인프라르 정의한다. 단일 VPC 애플리케이션을 위한 네트워킹 인프라르 정의한다. Virtual Private Cloud ( 이하 VPC ) VPC란 EC2의 네트워크 계층으로, EC2 인스턴스를 비롯한 여러 AWS 서비스에 네트워크 리소스를 담을 수 있는 가상의 네트워크를 의미한다.
+모든 VPC는 기본적으로 다른 모든 네트워크와 격리되어 있지만, 필요할 때는 인터넷 및 다른 VPC와 연결이 가능하다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/aws/awssaa/saa-4/" /><meta property="article:section" content="docs" />
 
 
 
-<title>4장 VPC | 뭉게뭉게</title>
-<link rel="manifest" href="/manifest.json">
+<title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.3d8c7f91a1ae2a156d3acf98421fad5e26aabf6e44dfa654eae07357b1d35b2e.js" integrity="sha256-PYx/kaGuKhVtOs&#43;YQh&#43;tXiaqv25E36ZU6uBzV7HTWy4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
+<script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo="></script>
 <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+
 -->
+
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
+
 <body>
   <div class="background">
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex" style="max-width:100%;" >
-    
-    <aside style="padding-left: 1em;" class="book-menu">
-      <div class="book-menu-content">
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
       
   
 <nav styles="background-color:red; position=none;">
@@ -45,8 +47,9 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
+
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -960,127 +963,6 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <span>Network</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
   <span>System</span>
   
 
@@ -1277,15 +1159,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
     </aside>
 
-
-
-    
-    <div style="padding-left: 2%;" class="book-page">
+    <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
   <div class="flex align-center justify-between">
@@ -1296,15 +1176,14 @@ https://github.com/alex-shpak/hugo-book
   <strong>4장 VPC</strong>
 
   <label for="toc-control">
-    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
   </label>
 </div>
 
 
   
-  <aside class="hidden clearfix">
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1613,23 +1492,11 @@ https://github.com/alex-shpak/hugo-book
 <br>
 <br>
       
-  <article class="markdown"><h2 id="4장-amazon-virtual-private-cloud">
-  <strong>4장 Amazon Virtual Private Cloud</strong>
-  <a class="anchor" href="#4%ec%9e%a5-amazon-virtual-private-cloud">#</a>
-</h2>
+  <article class="markdown"><h2 id="4장-amazon-virtual-private-cloud"><strong>4장 Amazon Virtual Private Cloud</strong></h2>
 <hr>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
-<h3 id="4장의-목표">
-  <strong>4장의 목표</strong>
-  <a class="anchor" href="#4%ec%9e%a5%ec%9d%98-%eb%aa%a9%ed%91%9c">#</a>
-</h3>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
+<h1 id="heading"></h1>
+<h3 id="4장의-목표"><strong>4장의 목표</strong></h3>
+<h1 id="heading-1"></h1>
 <ul>
 <li><strong>복원력을 갖춘 아키텍처 설계</strong>
 <ul>
@@ -1637,10 +1504,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
+<h1 id="heading-2"></h1>
 <ul>
 <li><strong>안전한 어플리케이션 및 아키텍처 설계</strong>
 <ul>
@@ -1649,23 +1513,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
+<h1 id="heading-3"></h1>
 <p> </p>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
-<h3 id="virtual-private-cloud--이하-vpc-">
-  <strong>Virtual Private Cloud ( 이하 VPC )</strong>
-  <a class="anchor" href="#virtual-private-cloud--%ec%9d%b4%ed%95%98-vpc-">#</a>
-</h3>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
+<h1 id="heading-4"></h1>
+<h3 id="virtual-private-cloud--이하-vpc-"><strong>Virtual Private Cloud ( 이하 VPC )</strong></h3>
+<h1 id="heading-5"></h1>
 <ul>
 <li>
 <p><strong>VPC란 EC2의 네트워크 계층으로, EC2 인스턴스를 비롯한 여러 AWS 서비스에 네트워크 리소스를 담을 수 있는 가상의 네트워크를 의미한다.</strong></p>
@@ -1680,23 +1532,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>VPC에는 라우터, 스위치, VLAN과 같은 기존 네트워크 구성 요소들이 존재하지 않으며, 확장성을 실현하기 위해 소프트웨어 기능으로 추상화하였다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
+<h1 id="heading-6"></h1>
 <p> </p>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
-<h3 id="vpc-cidr-블록">
-  <strong>VPC CIDR 블록</strong>
-  <a class="anchor" href="#vpc-cidr-%eb%b8%94%eb%a1%9d">#</a>
-</h3>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
+<h1 id="heading-7"></h1>
+<h3 id="vpc-cidr-블록"><strong>VPC CIDR 블록</strong></h3>
+<h1 id="heading-8"></h1>
 <ul>
 <li>
 <p><strong>기존 네트워크와 동일하게 VPC는 하나 이상의 연속적인 IP 주소 범위로 구성되며, CIDR ( Classless Inter Domain Routing ) 블록으로 표시된다.</strong></p>
@@ -1735,10 +1575,7 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 </tbody>
 </table>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
+<h1 id="heading-9"></h1>
 <ul>
 <li>
 <p><strong>VPC는 온 프레미스 네트워크나 다른 VPC 등 다른 네트워크에 연결하려면 사용할 VPC CIDR과 다른 네트워크에 연결하려면 주소와 중복되지 않도록 해야 한다.</strong></p>
@@ -1747,23 +1584,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>기본 CIDR 블록은 변경할 수 없으므로 VPC를 만들기 전에 주소 요구 사항을 신중히 검토해야 한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
+<h1 id="heading-10"></h1>
 <p> </p>
-<h1 id="heading-11">
-  
-  <a class="anchor" href="#heading-11">#</a>
-</h1>
-<h3 id="보조-cidr-블록">
-  <strong>보조 CIDR 블록</strong>
-  <a class="anchor" href="#%eb%b3%b4%ec%a1%b0-cidr-%eb%b8%94%eb%a1%9d">#</a>
-</h3>
-<h1 id="heading-12">
-  
-  <a class="anchor" href="#heading-12">#</a>
-</h1>
+<h1 id="heading-11"></h1>
+<h3 id="보조-cidr-블록"><strong>보조 CIDR 블록</strong></h3>
+<h1 id="heading-12"></h1>
 <ul>
 <li>
 <p><strong>VPC를 만든 후에도 보조 CIDR 블록을 지정할 수 있다.</strong></p>
@@ -1775,23 +1600,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>VPC가 172.16.0.0/16일 경우 172.17.0.0/16으로 지정할 수 있지만, 192.168.0.0/16으로는 지정할 수 없다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-13">
-  
-  <a class="anchor" href="#heading-13">#</a>
-</h1>
+<h1 id="heading-13"></h1>
 <p> </p>
-<h1 id="heading-14">
-  
-  <a class="anchor" href="#heading-14">#</a>
-</h1>
-<h3 id="ipv6-cidr-블록">
-  <strong>IPv6 CIDR 블록</strong>
-  <a class="anchor" href="#ipv6-cidr-%eb%b8%94%eb%a1%9d">#</a>
-</h3>
-<h1 id="heading-15">
-  
-  <a class="anchor" href="#heading-15">#</a>
-</h1>
+<h1 id="heading-14"></h1>
+<h3 id="ipv6-cidr-블록"><strong>IPv6 CIDR 블록</strong></h3>
+<h1 id="heading-15"></h1>
 <ul>
 <li>
 <p><strong>VPC에 IPv6 CIDR을 할당 할 수 있으나, IP 접두사를 지정할 수 있는 기본 CIDR과는 달리 IPv6에서는 CIDR을 지정할 수 없다.</strong></p>
@@ -1803,23 +1616,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>IPv6의 VPC CIDR의 접두사의 길이는 항상 /56이다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-16">
-  
-  <a class="anchor" href="#heading-16">#</a>
-</h1>
+<h1 id="heading-16"></h1>
 <p> </p>
-<h1 id="heading-17">
-  
-  <a class="anchor" href="#heading-17">#</a>
-</h1>
-<h3 id="서브넷">
-  <strong>서브넷</strong>
-  <a class="anchor" href="#%ec%84%9c%eb%b8%8c%eb%84%b7">#</a>
-</h3>
-<h1 id="heading-18">
-  
-  <a class="anchor" href="#heading-18">#</a>
-</h1>
+<h1 id="heading-17"></h1>
+<h3 id="서브넷"><strong>서브넷</strong></h3>
+<h1 id="heading-18"></h1>
 <ul>
 <li>
 <p><strong>서브넷은 VPC 내 논리 컨테이너로 EC2 인스턴스를 배치하는 장소이다.</strong></p>
@@ -1831,23 +1632,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>인스턴스는 서브넷 안에 있어야 하며, 한 서브넷에 생성된 인스턴스는 다른 서브넷으로 이동이 불가능하다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-19">
-  
-  <a class="anchor" href="#heading-19">#</a>
-</h1>
+<h1 id="heading-19"></h1>
 <p> </p>
-<h1 id="heading-20">
-  
-  <a class="anchor" href="#heading-20">#</a>
-</h1>
-<h3 id="서브넷-cidr-블록">
-  <strong>서브넷 CIDR 블록</strong>
-  <a class="anchor" href="#%ec%84%9c%eb%b8%8c%eb%84%b7-cidr-%eb%b8%94%eb%a1%9d">#</a>
-</h3>
-<h1 id="heading-21">
-  
-  <a class="anchor" href="#heading-21">#</a>
-</h1>
+<h1 id="heading-20"></h1>
+<h3 id="서브넷-cidr-블록"><strong>서브넷 CIDR 블록</strong></h3>
+<h1 id="heading-21"></h1>
 <ul>
 <li>
 <p><strong>서브넷의 CIDR은 VPC CIDR의 일부이면서, VPC 내에서 고유해야 한다.</strong></p>
@@ -1869,23 +1658,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>만약 VPC가 보조 CIDR을 가지고 있을 경우, 서브넷은 적합한 CIDR을 선택해 생성할 수 있다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-22">
-  
-  <a class="anchor" href="#heading-22">#</a>
-</h1>
+<h1 id="heading-22"></h1>
 <p> </p>
-<h1 id="heading-23">
-  
-  <a class="anchor" href="#heading-23">#</a>
-</h1>
-<h3 id="가용-영역">
-  <strong>가용 영역</strong>
-  <a class="anchor" href="#%ea%b0%80%ec%9a%a9-%ec%98%81%ec%97%ad">#</a>
-</h3>
-<h1 id="heading-24">
-  
-  <a class="anchor" href="#heading-24">#</a>
-</h1>
+<h1 id="heading-23"></h1>
+<h3 id="가용-영역"><strong>가용 영역</strong></h3>
+<h1 id="heading-24"></h1>
 <ul>
 <li>
 <p><strong>서브넷은 하나의 가용영역 ( Availability Zone 이하 AZ ) 내에서만 존재할 수 있으며, 가용 영역은 상대적으로 작은 지리적 위치, 데이터 센터의 개념이다.</strong></p>
@@ -1921,43 +1698,19 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><strong>위와 같이 만약 us-east-1a의 생성된 web1의 인스턴스의 문제가 발생하더라도, web2 인스턴스의 서브넷은 다른 AZ에 속해있기 때문에 무중단 서비스가 가능하다.</strong></li>
 </ul>
-<h1 id="heading-25">
-  
-  <a class="anchor" href="#heading-25">#</a>
-</h1>
+<h1 id="heading-25"></h1>
 <p> </p>
-<h1 id="heading-26">
-  
-  <a class="anchor" href="#heading-26">#</a>
-</h1>
-<h3 id="ipv6-cidr-블록-1">
-  <strong>IPv6 CIDR 블록</strong>
-  <a class="anchor" href="#ipv6-cidr-%eb%b8%94%eb%a1%9d-1">#</a>
-</h3>
-<h1 id="heading-27">
-  
-  <a class="anchor" href="#heading-27">#</a>
-</h1>
+<h1 id="heading-26"></h1>
+<h3 id="ipv6-cidr-블록-1"><strong>IPv6 CIDR 블록</strong></h3>
+<h1 id="heading-27"></h1>
 <ul>
 <li><strong>VPC에 IPv6 CIDR을 할당하면 해당 VPC 내 서브넷에 IPv6 CIDR을 할당할 수 있다. IPv6 서브넷의 접두사 길이는 /64로 고정되어있다.</strong></li>
 </ul>
-<h1 id="heading-28">
-  
-  <a class="anchor" href="#heading-28">#</a>
-</h1>
+<h1 id="heading-28"></h1>
 <p> </p>
-<h1 id="heading-29">
-  
-  <a class="anchor" href="#heading-29">#</a>
-</h1>
-<h3 id="탄력적-네트워크-인터페이스">
-  <strong>탄력적 네트워크 인터페이스</strong>
-  <a class="anchor" href="#%ed%83%84%eb%a0%a5%ec%a0%81-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4">#</a>
-</h3>
-<h1 id="heading-30">
-  
-  <a class="anchor" href="#heading-30">#</a>
-</h1>
+<h1 id="heading-29"></h1>
+<h3 id="탄력적-네트워크-인터페이스"><strong>탄력적 네트워크 인터페이스</strong></h3>
+<h1 id="heading-30"></h1>
 <ul>
 <li>
 <p><strong>탄력적 네트워크 인터페이스 ( Elastic Network Interface 이하 ENI )를 사용하면 인스턴스가 AWS 서비스, 다른 인스턴스, 온 프레미스 서버, 인터넷 등 다른 네트워크의 리소스와 통신할 수 있다.</strong></p>
@@ -1966,23 +1719,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>기본적으로 물리 서버의 네트워크 인터페이스와 동일한 기능을 수행한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-31">
-  
-  <a class="anchor" href="#heading-31">#</a>
-</h1>
+<h1 id="heading-31"></h1>
 <p> </p>
-<h1 id="heading-32">
-  
-  <a class="anchor" href="#heading-32">#</a>
-</h1>
-<h3 id="기본-프라이빗-주소와-보조-프라이빗-ip-주소">
-  <strong>기본 프라이빗 주소와 보조 프라이빗 IP 주소</strong>
-  <a class="anchor" href="#%ea%b8%b0%eb%b3%b8-%ed%94%84%eb%9d%bc%ec%9d%b4%eb%b9%97-%ec%a3%bc%ec%86%8c%ec%99%80-%eb%b3%b4%ec%a1%b0-%ed%94%84%eb%9d%bc%ec%9d%b4%eb%b9%97-ip-%ec%a3%bc%ec%86%8c">#</a>
-</h3>
-<h1 id="heading-33">
-  
-  <a class="anchor" href="#heading-33">#</a>
-</h1>
+<h1 id="heading-32"></h1>
+<h3 id="기본-프라이빗-주소와-보조-프라이빗-ip-주소"><strong>기본 프라이빗 주소와 보조 프라이빗 IP 주소</strong></h3>
+<h1 id="heading-33"></h1>
 <ul>
 <li>
 <p><strong>각 인스턴스는 기본 프라이빗 주소를 가지고 있어야 하는 데, 그 주소는 서브넷 CIDR에서 지정한 범위 내 주소여야 한다.</strong></p>
@@ -1997,43 +1738,19 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>ENI를 인스턴스에 추가해서 연결할 수 있고, 이 ENI를 다른 서브넷에 둘 수도 있지만, 해당 인스턴스와 같은 가용 영역에 있어야하며, ENI와 연결된 주소는 ENI가 있는 서브넷에서 가져와야 한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-34">
-  
-  <a class="anchor" href="#heading-34">#</a>
-</h1>
+<h1 id="heading-34"></h1>
 <p> </p>
-<h1 id="heading-35">
-  
-  <a class="anchor" href="#heading-35">#</a>
-</h1>
-<h3 id="탄력적-네트워크-인터페이스-연결">
-  <strong>탄력적 네트워크 인터페이스 연결</strong>
-  <a class="anchor" href="#%ed%83%84%eb%a0%a5%ec%a0%81-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%ec%97%b0%ea%b2%b0">#</a>
-</h3>
-<h1 id="heading-36">
-  
-  <a class="anchor" href="#heading-36">#</a>
-</h1>
+<h1 id="heading-35"></h1>
+<h3 id="탄력적-네트워크-인터페이스-연결"><strong>탄력적 네트워크 인터페이스 연결</strong></h3>
+<h1 id="heading-36"></h1>
 <ul>
 <li><strong>ENI는 인스턴스와 독립적으로 존재가 가능하며, 먼저 ENI를 생성한 후 인스턴스를 생성하고 할당할 수 있다.</strong></li>
 </ul>
-<h1 id="heading-37">
-  
-  <a class="anchor" href="#heading-37">#</a>
-</h1>
+<h1 id="heading-37"></h1>
 <p> </p>
-<h1 id="heading-38">
-  
-  <a class="anchor" href="#heading-38">#</a>
-</h1>
-<h3 id="인터넷-게이트웨이">
-  <strong>인터넷 게이트웨이</strong>
-  <a class="anchor" href="#%ec%9d%b8%ed%84%b0%eb%84%b7-%ea%b2%8c%ec%9d%b4%ed%8a%b8%ec%9b%a8%ec%9d%b4">#</a>
-</h3>
-<h1 id="heading-39">
-  
-  <a class="anchor" href="#heading-39">#</a>
-</h1>
+<h1 id="heading-38"></h1>
+<h3 id="인터넷-게이트웨이"><strong>인터넷 게이트웨이</strong></h3>
+<h1 id="heading-39"></h1>
 <ul>
 <li>
 <p><strong>인터넷 게이트웨이는 퍼블릭 IP 주소를 할당받은 인스턴스가 인터넷과 연결돼서 인터넷으로부터 요청을 수신하는 기능을 수행한다.</strong></p>
@@ -2057,23 +1774,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>인터넷 게이트웨이를 사용하려면 인터넷 게이트웨이를 대상으로 하는 기본 라우팅을 라우팅 테이블에 만들어야 한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-40">
-  
-  <a class="anchor" href="#heading-40">#</a>
-</h1>
+<h1 id="heading-40"></h1>
 <p> </p>
-<h1 id="heading-41">
-  
-  <a class="anchor" href="#heading-41">#</a>
-</h1>
-<h3 id="라우팅-테이블">
-  <strong>라우팅 테이블</strong>
-  <a class="anchor" href="#%eb%9d%bc%ec%9a%b0%ed%8c%85-%ed%85%8c%ec%9d%b4%eb%b8%94">#</a>
-</h3>
-<h1 id="heading-42">
-  
-  <a class="anchor" href="#heading-42">#</a>
-</h1>
+<h1 id="heading-41"></h1>
+<h3 id="라우팅-테이블"><strong>라우팅 테이블</strong></h3>
+<h1 id="heading-42"></h1>
 <ul>
 <li>
 <p><strong>VPC는 리소스 형태로 가상 라우터를 구성하지 않음, 소프트웨어 함수로 IP 라우팅을 구현한 내재된 라우터를 제공한다.</strong></p>
@@ -2088,23 +1793,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>라우팅 테이블과 서브넷은명시적으로 직접 연결하지 않더라도 서브넷에 암시적으로 기본 라우팅 테이블이 연결되므로, 모든 서브넷은 라우팅 테이블으로 연결된다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-43">
-  
-  <a class="anchor" href="#heading-43">#</a>
-</h1>
+<h1 id="heading-43"></h1>
 <p> </p>
-<h1 id="heading-44">
-  
-  <a class="anchor" href="#heading-44">#</a>
-</h1>
-<h3 id="라우팅">
-  <strong>라우팅</strong>
-  <a class="anchor" href="#%eb%9d%bc%ec%9a%b0%ed%8c%85">#</a>
-</h3>
-<h1 id="heading-45">
-  
-  <a class="anchor" href="#heading-45">#</a>
-</h1>
+<h1 id="heading-44"></h1>
+<h3 id="라우팅"><strong>라우팅</strong></h3>
+<h1 id="heading-45"></h1>
 <ul>
 <li>
 <p><strong>라우팅은 라우팅 테이블과 연결된 서브넷 내 인스턴스에서 트래픽을 저달하는 방법을 결정한다.</strong></p>
@@ -2123,23 +1816,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>모든 라우팅 테이블에는 각각 다른 서브넷에 있는 인스턴스들이 서로 통신할 수 있게 하는로컬 라우팅이 포함되어 있다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-46">
-  
-  <a class="anchor" href="#heading-46">#</a>
-</h1>
+<h1 id="heading-46"></h1>
 <p> </p>
-<h1 id="heading-47">
-  
-  <a class="anchor" href="#heading-47">#</a>
-</h1>
-<h3 id="기본-라우팅">
-  <strong>기본 라우팅</strong>
-  <a class="anchor" href="#%ea%b8%b0%eb%b3%b8-%eb%9d%bc%ec%9a%b0%ed%8c%85">#</a>
-</h3>
-<h1 id="heading-48">
-  
-  <a class="anchor" href="#heading-48">#</a>
-</h1>
+<h1 id="heading-47"></h1>
+<h3 id="기본-라우팅"><strong>기본 라우팅</strong></h3>
+<h1 id="heading-48"></h1>
 <ul>
 <li><strong>인스턴스가 인터넷에 액세스하게 하려면 인터넷 게이트웨이를 가리키는 기본 라우팅을 생성해야 한다.</strong></li>
 </ul>
@@ -2175,23 +1856,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>AWS docs에서는 VPC 당 내재된 라우터가 하나 존재한다고 기술되어 있으며, 이 라우터란 실제 개별 리소스가 아닌 IP 라우팅 기능을 추상화한 것으로 이해하면 된다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-49">
-  
-  <a class="anchor" href="#heading-49">#</a>
-</h1>
+<h1 id="heading-49"></h1>
 <p> </p>
-<h1 id="heading-50">
-  
-  <a class="anchor" href="#heading-50">#</a>
-</h1>
-<h3 id="보안-그룹">
-  <strong>보안 그룹</strong>
-  <a class="anchor" href="#%eb%b3%b4%ec%95%88-%ea%b7%b8%eb%a3%b9">#</a>
-</h3>
-<h1 id="heading-51">
-  
-  <a class="anchor" href="#heading-51">#</a>
-</h1>
+<h1 id="heading-50"></h1>
+<h3 id="보안-그룹"><strong>보안 그룹</strong></h3>
+<h1 id="heading-51"></h1>
 <ul>
 <li>
 <p><strong>보안 그룹은 방화벽과 같은 기능을 제공하며, 인스턴스의 ENI의 송수신되는 트래픽을 허가해서 인스턴스를 오가는 트래픽을 제어해야 한다.</strong></p>
@@ -2203,23 +1872,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>실제 인스턴스는 ENI를 하나만 연결해서 사용하기 땜누에 하나의 인스턴스에 하나의 보안 그룹만이 연결되어 있다고 생각하기 쉬운데, 인스턴스에 ENI가 여러 개 있는 경우에는 반드시 확인이 필요하다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-52">
-  
-  <a class="anchor" href="#heading-52">#</a>
-</h1>
+<h1 id="heading-52"></h1>
 <p> </p>
-<h1 id="heading-53">
-  
-  <a class="anchor" href="#heading-53">#</a>
-</h1>
-<h3 id="보안-그룹-인바운드-규칙">
-  <strong>보안 그룹 인바운드 규칙</strong>
-  <a class="anchor" href="#%eb%b3%b4%ec%95%88-%ea%b7%b8%eb%a3%b9-%ec%9d%b8%eb%b0%94%ec%9a%b4%eb%93%9c-%ea%b7%9c%ec%b9%99">#</a>
-</h3>
-<h1 id="heading-54">
-  
-  <a class="anchor" href="#heading-54">#</a>
-</h1>
+<h1 id="heading-53"></h1>
+<h3 id="보안-그룹-인바운드-규칙"><strong>보안 그룹 인바운드 규칙</strong></h3>
+<h1 id="heading-54"></h1>
 <ul>
 <li>
 <p><strong>인바운드 규칙은 연결된 ENI에 허용할 트래픽을 정의하는 것으로 아래의 3 가지의 필수 요소를 포함한다.</strong></p>
@@ -2260,23 +1917,11 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </li>
 </ul>
-<h1 id="heading-55">
-  
-  <a class="anchor" href="#heading-55">#</a>
-</h1>
+<h1 id="heading-55"></h1>
 <p> </p>
-<h1 id="heading-56">
-  
-  <a class="anchor" href="#heading-56">#</a>
-</h1>
-<h3 id="보안-그룹-아웃바운드-규칙">
-  <strong>보안 그룹 아웃바운드 규칙</strong>
-  <a class="anchor" href="#%eb%b3%b4%ec%95%88-%ea%b7%b8%eb%a3%b9-%ec%95%84%ec%9b%83%eb%b0%94%ec%9a%b4%eb%93%9c-%ea%b7%9c%ec%b9%99">#</a>
-</h3>
-<h1 id="heading-57">
-  
-  <a class="anchor" href="#heading-57">#</a>
-</h1>
+<h1 id="heading-56"></h1>
+<h3 id="보안-그룹-아웃바운드-규칙"><strong>보안 그룹 아웃바운드 규칙</strong></h3>
+<h1 id="heading-57"></h1>
 <ul>
 <li>
 <p><strong>아웃바운드 규칙은 인스턴스에 연결된 ENI르 통해 송수힐 수 있는 트래픽을 정의한 것으로, 아래의 세가 요소를 포함한다.</strong></p>
@@ -2306,43 +1951,19 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 </tbody>
 </table>
-<h1 id="heading-58">
-  
-  <a class="anchor" href="#heading-58">#</a>
-</h1>
+<h1 id="heading-58"></h1>
 <p> </p>
-<h1 id="heading-59">
-  
-  <a class="anchor" href="#heading-59">#</a>
-</h1>
-<h3 id="원본과-대상-주소">
-  <strong>원본과 대상 주소</strong>
-  <a class="anchor" href="#%ec%9b%90%eb%b3%b8%ea%b3%bc-%eb%8c%80%ec%83%81-%ec%a3%bc%ec%86%8c">#</a>
-</h3>
-<h1 id="heading-60">
-  
-  <a class="anchor" href="#heading-60">#</a>
-</h1>
+<h1 id="heading-59"></h1>
+<h3 id="원본과-대상-주소"><strong>원본과 대상 주소</strong></h3>
+<h1 id="heading-60"></h1>
 <ul>
 <li><strong>규칙의 원본이나 대상 주소에 CIDR 또는 보안 그룹의 리소스 ID를 지정할 수 있고, 보안 그룹에 연결된 모든 인스턴스 규칙이 적용된다.</strong></li>
 </ul>
-<h1 id="heading-61">
-  
-  <a class="anchor" href="#heading-61">#</a>
-</h1>
+<h1 id="heading-61"></h1>
 <p> </p>
-<h1 id="heading-62">
-  
-  <a class="anchor" href="#heading-62">#</a>
-</h1>
-<h3 id="상태-저장-방화벽">
-  <strong>상태 저장 방화벽</strong>
-  <a class="anchor" href="#%ec%83%81%ed%83%9c-%ec%a0%80%ec%9e%a5-%eb%b0%a9%ed%99%94%eb%b2%bd">#</a>
-</h3>
-<h1 id="heading-63">
-  
-  <a class="anchor" href="#heading-63">#</a>
-</h1>
+<h1 id="heading-62"></h1>
+<h3 id="상태-저장-방화벽"><strong>상태 저장 방화벽</strong></h3>
+<h1 id="heading-63"></h1>
 <ul>
 <li>
 <p><strong>보안 그룹은 상태 저장 방화벽 역할을 수행한다.</strong></p>
@@ -2351,23 +1972,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>상태 저장이란 보안 그룹이 트래픽을 한 방향으로 전달되도록 허용할 때, 반대 방향의 응답 트래픽을 지능적으로 허용하는 것을 의미한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-64">
-  
-  <a class="anchor" href="#heading-64">#</a>
-</h1>
+<h1 id="heading-64"></h1>
 <p> </p>
-<h1 id="heading-65">
-  
-  <a class="anchor" href="#heading-65">#</a>
-</h1>
-<h3 id="기본-보안-그룹">
-  <strong>기본 보안 그룹</strong>
-  <a class="anchor" href="#%ea%b8%b0%eb%b3%b8-%eb%b3%b4%ec%95%88-%ea%b7%b8%eb%a3%b9">#</a>
-</h3>
-<h1 id="heading-66">
-  
-  <a class="anchor" href="#heading-66">#</a>
-</h1>
+<h1 id="heading-65"></h1>
+<h3 id="기본-보안-그룹"><strong>기본 보안 그룹</strong></h3>
+<h1 id="heading-66"></h1>
 <ul>
 <li>
 <p><strong>각 VPC엔느 삭제할 수 없는 기본 보안 그룹이 있으며, 필요하면 규칙을 수정할 수 있다.</strong></p>
@@ -2376,23 +1985,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>사용자 지정 봉나 그룹을 만들어 대신 사용하는 것도 가능하다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-67">
-  
-  <a class="anchor" href="#heading-67">#</a>
-</h1>
+<h1 id="heading-67"></h1>
 <p> </p>
-<h1 id="heading-68">
-  
-  <a class="anchor" href="#heading-68">#</a>
-</h1>
-<h3 id="네트워크-엑세스-제어-목록--network-access-contol-list--이하-nacl-">
-  <strong>네트워크 엑세스 제어 목록 ( Network Access Contol List : 이하 NACL )</strong>
-  <a class="anchor" href="#%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%97%91%ec%84%b8%ec%8a%a4-%ec%a0%9c%ec%96%b4-%eb%aa%a9%eb%a1%9d--network-access-contol-list--%ec%9d%b4%ed%95%98-nacl-">#</a>
-</h3>
-<h1 id="heading-69">
-  
-  <a class="anchor" href="#heading-69">#</a>
-</h1>
+<h1 id="heading-68"></h1>
+<h3 id="네트워크-엑세스-제어-목록--network-access-contol-list--이하-nacl-"><strong>네트워크 엑세스 제어 목록 ( Network Access Contol List : 이하 NACL )</strong></h3>
+<h1 id="heading-69"></h1>
 <ul>
 <li>
 <p><strong>NACL은 원본 또는 대상 주소 CIDR, 프로토콜, 포트를 기반으로 트래픅을 허용하는 인바운드와 아웃바운드 규칙을 포함한다.</strong></p>
@@ -2413,23 +2010,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>서브넷과 NACL이 같은 VPC에 있다면 하나의 NACL을 여러 서브넷에 연결하는 것이 가능하다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-70">
-  
-  <a class="anchor" href="#heading-70">#</a>
-</h1>
+<h1 id="heading-70"></h1>
 <p> </p>
-<h1 id="heading-71">
-  
-  <a class="anchor" href="#heading-71">#</a>
-</h1>
-<h3 id="nacl-인바운드-규칙">
-  <strong>NACL 인바운드 규칙</strong>
-  <a class="anchor" href="#nacl-%ec%9d%b8%eb%b0%94%ec%9a%b4%eb%93%9c-%ea%b7%9c%ec%b9%99">#</a>
-</h3>
-<h1 id="heading-72">
-  
-  <a class="anchor" href="#heading-72">#</a>
-</h1>
+<h1 id="heading-71"></h1>
+<h3 id="nacl-인바운드-규칙"><strong>NACL 인바운드 규칙</strong></h3>
+<h1 id="heading-72"></h1>
 <ul>
 <li>
 <p><strong>인바운드 규칙은 서브넷에 진입할 수 있는 트래픽을 정의하며, 다음 요소들을 포함한다.</strong></p>
@@ -2475,23 +2060,11 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><strong>NACL 규칙은 규칙 번호의 오름차순으로 처리된다.</strong></li>
 </ul>
-<h1 id="heading-73">
-  
-  <a class="anchor" href="#heading-73">#</a>
-</h1>
+<h1 id="heading-73"></h1>
 <p> </p>
-<h1 id="heading-74">
-  
-  <a class="anchor" href="#heading-74">#</a>
-</h1>
-<h3 id="nacl-아웃바운드-규칙">
-  <strong>NACL 아웃바운드 규칙</strong>
-  <a class="anchor" href="#nacl-%ec%95%84%ec%9b%83%eb%b0%94%ec%9a%b4%eb%93%9c-%ea%b7%9c%ec%b9%99">#</a>
-</h3>
-<h1 id="heading-75">
-  
-  <a class="anchor" href="#heading-75">#</a>
-</h1>
+<h1 id="heading-74"></h1>
+<h3 id="nacl-아웃바운드-규칙"><strong>NACL 아웃바운드 규칙</strong></h3>
+<h1 id="heading-75"></h1>
 <ul>
 <li>
 <p><strong>아웃바운드 또한 인바운드 규칙과 거의 같은 형식을 따르며, 아래의 요소들을 포함한다.</strong></p>
@@ -2538,23 +2111,11 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>NACL은 상태 비저장이므로 응답 트래픽을 자동으로 허용하지 않기 때문에, 만약 인바운드에서 HTTPS의 트래픽을 허용한다면, 아웃바운드 규칙에서도 응답 트래픽을 명시적으로 허용해야한다.</strong></li>
 <li><strong>기본적으로 최신 운영 체제에서는 49125-65535 범위의 임시 포트를 허용하지만, 이 범위는 충분하지않을 수 있다.</strong></li>
 </ul>
-<h1 id="heading-76">
-  
-  <a class="anchor" href="#heading-76">#</a>
-</h1>
+<h1 id="heading-76"></h1>
 <p> </p>
-<h1 id="heading-77">
-  
-  <a class="anchor" href="#heading-77">#</a>
-</h1>
-<h3 id="네트워크-엑세스-제어-목록과-보안-그룹을-같이-사용">
-  <strong>네트워크 엑세스 제어 목록과 보안 그룹을 같이 사용</strong>
-  <a class="anchor" href="#%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%97%91%ec%84%b8%ec%8a%a4-%ec%a0%9c%ec%96%b4-%eb%aa%a9%eb%a1%9d%ea%b3%bc-%eb%b3%b4%ec%95%88-%ea%b7%b8%eb%a3%b9%ec%9d%84-%ea%b0%99%ec%9d%b4-%ec%82%ac%ec%9a%a9">#</a>
-</h3>
-<h1 id="heading-78">
-  
-  <a class="anchor" href="#heading-78">#</a>
-</h1>
+<h1 id="heading-77"></h1>
+<h3 id="네트워크-엑세스-제어-목록과-보안-그룹을-같이-사용"><strong>네트워크 엑세스 제어 목록과 보안 그룹을 같이 사용</strong></h3>
+<h1 id="heading-78"></h1>
 <ul>
 <li>
 <p><strong>사용자가 인스턴스를 시작할 때, 보안 그룹을 올바르게 지정해야 하는 부담을 줄이기 위해 보안 그룹과 NACL을 함께 사용할 수 있다.</strong></p>
@@ -2569,23 +2130,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>NACL에서는 원본 또는 대상 주소를 지정해야 CIDR을 사용할 수 있으며, 이는 보안 그룹의 원본이나 대상 주소를 다른 보안 그룹을 지정할 수 있는 보안 그룹 규칙과는 다른 점이다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-79">
-  
-  <a class="anchor" href="#heading-79">#</a>
-</h1>
+<h1 id="heading-79"></h1>
 <p> </p>
-<h1 id="heading-80">
-  
-  <a class="anchor" href="#heading-80">#</a>
-</h1>
-<h3 id="퍼블릭-ip-주소">
-  <strong>퍼블릭 IP 주소</strong>
-  <a class="anchor" href="#%ed%8d%bc%eb%b8%94%eb%a6%ad-ip-%ec%a3%bc%ec%86%8c">#</a>
-</h3>
-<h1 id="heading-81">
-  
-  <a class="anchor" href="#heading-81">#</a>
-</h1>
+<h1 id="heading-80"></h1>
+<h3 id="퍼블릭-ip-주소"><strong>퍼블릭 IP 주소</strong></h3>
+<h1 id="heading-81"></h1>
 <ul>
 <li>
 <p><strong>퍼블릭 IP주소는 퍼블릭 인터넷으로부터 인스턴스에 엑세스하는 데 필수 요소로 인터넷이 아닌 프라이빗 네트워크 내에서만 통신할 수 있는 RFC 1918 주소와는 다르다 할 수 있다.</strong></p>
@@ -2606,23 +2155,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>IP 주소가 바뀌어도 무방한 인스턴스에는 퍼블릭 IP를 사용해도 되지만, 장기간 같은 IP 주소를 유지해야하는 인스턴스에는 탄력적 IP 주소를 사용하는 것이 좋다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-82">
-  
-  <a class="anchor" href="#heading-82">#</a>
-</h1>
+<h1 id="heading-82"></h1>
 <p> </p>
-<h1 id="heading-83">
-  
-  <a class="anchor" href="#heading-83">#</a>
-</h1>
-<h3 id="탄력적-ip-주소--elastic-ip-address--이하-eip-">
-  <strong>탄력적 IP 주소 ( Elastic IP Address : 이하 EIP )</strong>
-  <a class="anchor" href="#%ed%83%84%eb%a0%a5%ec%a0%81-ip-%ec%a3%bc%ec%86%8c--elastic-ip-address--%ec%9d%b4%ed%95%98-eip-">#</a>
-</h3>
-<h1 id="heading-84">
-  
-  <a class="anchor" href="#heading-84">#</a>
-</h1>
+<h1 id="heading-83"></h1>
+<h3 id="탄력적-ip-주소--elastic-ip-address--이하-eip-"><strong>탄력적 IP 주소 ( Elastic IP Address : 이하 EIP )</strong></h3>
+<h1 id="heading-84"></h1>
 <ul>
 <li>
 <p><strong>EIP는 AWS에서 사용자의 요청하면 계정에 할당되는 퍼블릭 IP 주소로 계정에 EIP가 할당되면 사용자가 직접 해제하지 않는 한 해당 주소를 독점적으로 사용할 수 있다.</strong></p>
@@ -2634,23 +2171,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>EIP는 인스턴스에 연결되지 않은 상태로 할당된다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-85">
-  
-  <a class="anchor" href="#heading-85">#</a>
-</h1>
+<h1 id="heading-85"></h1>
 <p> </p>
-<h1 id="heading-86">
-  
-  <a class="anchor" href="#heading-86">#</a>
-</h1>
-<h3 id="네트워크-주소-변환">
-  <strong>네트워크 주소 변환</strong>
-  <a class="anchor" href="#%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%a3%bc%ec%86%8c-%eb%b3%80%ed%99%98">#</a>
-</h3>
-<h1 id="heading-87">
-  
-  <a class="anchor" href="#heading-87">#</a>
-</h1>
+<h1 id="heading-86"></h1>
+<h3 id="네트워크-주소-변환"><strong>네트워크 주소 변환</strong></h3>
+<h1 id="heading-87"></h1>
 <ul>
 <li>
 <p><strong>ENI를 퍼블릭 IP 주소와 연결할 때는 ENI는 프라이빗 IP 주소를 그대로 유지한다.</strong></p>
@@ -2668,23 +2193,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>이 때 게이트웨이는 자동적으로 주소를 변화시키며, 사용자는 개입이 불가능하다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-88">
-  
-  <a class="anchor" href="#heading-88">#</a>
-</h1>
+<h1 id="heading-88"></h1>
 <p> </p>
-<h1 id="heading-89">
-  
-  <a class="anchor" href="#heading-89">#</a>
-</h1>
-<h3 id="네트워크-주소-변환-장치">
-  <strong>네트워크 주소 변환 장치</strong>
-  <a class="anchor" href="#%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%a3%bc%ec%86%8c-%eb%b3%80%ed%99%98-%ec%9e%a5%ec%b9%98">#</a>
-</h3>
-<h1 id="heading-90">
-  
-  <a class="anchor" href="#heading-90">#</a>
-</h1>
+<h1 id="heading-89"></h1>
+<h3 id="네트워크-주소-변환-장치"><strong>네트워크 주소 변환 장치</strong></h3>
+<h1 id="heading-90"></h1>
 <ul>
 <li>
 <p><strong>네트워크 주소 변환은 인터넷 게이트웨이에서 이루어지지만, 다음 두 가지 서비스도 네트워크 주소변환을 수행한다.</strong></p>
@@ -2739,15 +2252,9 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 </tbody>
 </table>
-<h1 id="heading-91">
-  
-  <a class="anchor" href="#heading-91">#</a>
-</h1>
+<h1 id="heading-91"></h1>
 <p> </p>
-<h1 id="heading-92">
-  
-  <a class="anchor" href="#heading-92">#</a>
-</h1>
+<h1 id="heading-92"></h1>
 <ul>
 <li><strong>EC2-1, 2의 외부주소의 인터넷 호스트로 패킷을 전송하면 그 패킷은 먼저 NAT 디바이스로전달되고, NAT 디바이스에서는 아래와 같이 패킷을 변환한다.</strong></li>
 </ul>
@@ -2771,15 +2278,9 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 </tbody>
 </table>
-<h1 id="heading-93">
-  
-  <a class="anchor" href="#heading-93">#</a>
-</h1>
+<h1 id="heading-93"></h1>
 <p> </p>
-<h1 id="heading-94">
-  
-  <a class="anchor" href="#heading-94">#</a>
-</h1>
+<h1 id="heading-94"></h1>
 <ul>
 <li><strong>내부 대역에서 NAT 디바이스와의 변환을 마치게 되면 하단과 같이 NAT 디바이스와 인터넷 게이트웨이로의 변환이 다시 한번 이루어진다.</strong></li>
 </ul>
@@ -2807,23 +2308,11 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>이와 같이 여러 인스턴스가 같은 NAT 디바이스를 사용할 수 있으므로 같은 퍼블릭 IP 주소를 공유해서 아웃 바운드에 연결할 수 있다.</strong></li>
 <li><strong>NAT 디바이스가 수행하는 기능을 포트 주소 변환 ( Port Address Translation : 이하 PAT )이라고 한다.</strong></li>
 </ul>
-<h1 id="heading-95">
-  
-  <a class="anchor" href="#heading-95">#</a>
-</h1>
+<h1 id="heading-95"></h1>
 <p> </p>
-<h1 id="heading-96">
-  
-  <a class="anchor" href="#heading-96">#</a>
-</h1>
-<h3 id="nat-디바이스를-사용한-라우팅-테이블-구성">
-  <strong>NAT 디바이스를 사용한 라우팅 테이블 구성</strong>
-  <a class="anchor" href="#nat-%eb%94%94%eb%b0%94%ec%9d%b4%ec%8a%a4%eb%a5%bc-%ec%82%ac%ec%9a%a9%ed%95%9c-%eb%9d%bc%ec%9a%b0%ed%8c%85-%ed%85%8c%ec%9d%b4%eb%b8%94-%ea%b5%ac%ec%84%b1">#</a>
-</h3>
-<h1 id="heading-97">
-  
-  <a class="anchor" href="#heading-97">#</a>
-</h1>
+<h1 id="heading-96"></h1>
+<h3 id="nat-디바이스를-사용한-라우팅-테이블-구성"><strong>NAT 디바이스를 사용한 라우팅 테이블 구성</strong></h3>
+<h1 id="heading-97"></h1>
 <ul>
 <li>
 <p><strong>프라이빗 서브넷에서 트래픽이 인터넷으로 전송돼야 하는 경우, 트래픽이 NAT 디바이스를 향하도록 경로가 설정되어 있어야 한다.</strong></p>
@@ -2859,23 +2348,11 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><strong>위의 표는 프라이빗과 퍼블릿의 기본 라우팅을 나타낸다.</strong></li>
 </ul>
-<h1 id="heading-98">
-  
-  <a class="anchor" href="#heading-98">#</a>
-</h1>
+<h1 id="heading-98"></h1>
 <p> </p>
-<h1 id="heading-99">
-  
-  <a class="anchor" href="#heading-99">#</a>
-</h1>
-<h3 id="nat-게이트웨이">
-  <strong>NAT 게이트웨이</strong>
-  <a class="anchor" href="#nat-%ea%b2%8c%ec%9d%b4%ed%8a%b8%ec%9b%a8%ec%9d%b4">#</a>
-</h3>
-<h1 id="heading-100">
-  
-  <a class="anchor" href="#heading-100">#</a>
-</h1>
+<h1 id="heading-99"></h1>
+<h3 id="nat-게이트웨이"><strong>NAT 게이트웨이</strong></h3>
+<h1 id="heading-100"></h1>
 <ul>
 <li>
 <p><strong>NAT 게이트웨이는 AWS에서 관리하는 NAT 디바이스이며, 인터넷 게이트웨이처럼 하나의 NAT 게이트웨이로 어떠한 용량의 요청도 수행할 수 있다.</strong></p>
@@ -2899,23 +2376,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>NAT 게이트웨이는 ENI를 사용하지 않으므로 보안 그룹을 적용할 수는 없지만, 서브넷에 NACL을 적용해서 트래픽을 제어할 수 있다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-101">
-  
-  <a class="anchor" href="#heading-101">#</a>
-</h1>
+<h1 id="heading-101"></h1>
 <p> </p>
-<h1 id="heading-102">
-  
-  <a class="anchor" href="#heading-102">#</a>
-</h1>
-<h3 id="nat-인스턴스">
-  <strong>NAT 인스턴스</strong>
-  <a class="anchor" href="#nat-%ec%9d%b8%ec%8a%a4%ed%84%b4%ec%8a%a4">#</a>
-</h3>
-<h1 id="heading-103">
-  
-  <a class="anchor" href="#heading-103">#</a>
-</h1>
+<h1 id="heading-102"></h1>
+<h3 id="nat-인스턴스"><strong>NAT 인스턴스</strong></h3>
+<h1 id="heading-103"></h1>
 <ul>
 <li>
 <p><strong>NAT 인스턴스는 사전 구성된 Linux 기반 AMI를 사용하는 일반적인 EC2 인스턴스로, 만들 때도 동일한 단게를 가진다.</strong></p>
@@ -2939,23 +2404,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>즉, 높은 탄력성이 요구되면 NAT 게이트웨이를 사용하는 것이 현명하다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-104">
-  
-  <a class="anchor" href="#heading-104">#</a>
-</h1>
+<h1 id="heading-104"></h1>
 <p> </p>
-<h1 id="heading-105">
-  
-  <a class="anchor" href="#heading-105">#</a>
-</h1>
-<h3 id="vpc-피어링">
-  <strong>VPC 피어링</strong>
-  <a class="anchor" href="#vpc-%ed%94%bc%ec%96%b4%eb%a7%81">#</a>
-</h3>
-<h1 id="heading-106">
-  
-  <a class="anchor" href="#heading-106">#</a>
-</h1>
+<h1 id="heading-105"></h1>
+<h3 id="vpc-피어링"><strong>VPC 피어링</strong></h3>
+<h1 id="heading-106"></h1>
 <ul>
 <li>
 <p><strong>VPC 피어링을 구성하면 VPC의 인스턴스가 프라이빗 AWS 네트워크를 통해 다른 VPC와 통신하게 할 수 있다.</strong></p>
@@ -3012,23 +2465,11 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>위에 표는 라우팅이 서로 반대로 설정된 것은 양방향으로 트래픽을 허용한다는 의미이다.</strong></li>
 <li><strong>대상 CIDR은 대상 VPC CIDR과 정확히 일치할 필요는 없으며, 특정 서브넷 사이에서 피어링을 사용하려면 서브넷 CIDR을 대신 지정할 수 있다.</strong></li>
 </ul>
-<h1 id="heading-107">
-  
-  <a class="anchor" href="#heading-107">#</a>
-</h1>
+<h1 id="heading-107"></h1>
 <p> </p>
-<h1 id="heading-108">
-  
-  <a class="anchor" href="#heading-108">#</a>
-</h1>
-<h3 id="요약">
-  <strong>요약</strong>
-  <a class="anchor" href="#%ec%9a%94%ec%95%bd">#</a>
-</h3>
-<h1 id="heading-109">
-  
-  <a class="anchor" href="#heading-109">#</a>
-</h1>
+<h1 id="heading-108"></h1>
+<h3 id="요약"><strong>요약</strong></h3>
+<h1 id="heading-109"></h1>
 <ul>
 <li>
 <p><strong>VPC 서비스는 EC2 및 다른 AWS 서비스의 네트워크 인프라를 제공하는 서비스이다.</strong></p>
@@ -3070,23 +2511,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>NAT 게이트웨이나 인스턴스 혹은 VPC 피어링 연결을 사용하기로 했다면 여러 라우팅 테이블을 수정해야 한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-110">
-  
-  <a class="anchor" href="#heading-110">#</a>
-</h1>
+<h1 id="heading-110"></h1>
 <p> </p>
-<h1 id="heading-111">
-  
-  <a class="anchor" href="#heading-111">#</a>
-</h1>
-<h2 id="시험-핵심">
-  <strong>시험 핵심</strong>
-  <a class="anchor" href="#%ec%8b%9c%ed%97%98-%ed%95%b5%ec%8b%ac">#</a>
-</h2>
-<h1 id="heading-112">
-  
-  <a class="anchor" href="#heading-112">#</a>
-</h1>
+<h1 id="heading-111"></h1>
+<h2 id="시험-핵심"><strong>시험 핵심</strong></h2>
+<h1 id="heading-112"></h1>
 <ul>
 <li><strong>VPC나 서브넷에 필요한 IP 주소의 수를 기반으로 올바른 CIDR 블록 접두사 길이를 결정할 수 있어야 한다.</strong>
 <ul>
@@ -3094,10 +2523,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-113">
-  
-  <a class="anchor" href="#heading-113">#</a>
-</h1>
+<h1 id="heading-113"></h1>
 <ul>
 <li><strong>서브넷의 중요성을 이해한다.</strong>
 <ul>
@@ -3116,10 +2542,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-114">
-  
-  <a class="anchor" href="#heading-114">#</a>
-</h1>
+<h1 id="heading-114"></h1>
 <ul>
 <li><strong>가용 영역 장애가 미치는 영향을 파악한다.</strong>
 <ul>
@@ -3132,10 +2555,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-115">
-  
-  <a class="anchor" href="#heading-115">#</a>
-</h1>
+<h1 id="heading-115"></h1>
 <ul>
 <li><strong>탄력적 네트워크 인터페이스(ENI)를 생성하고 사용하기 위한 규칙을 이해한다.</strong>
 <ul>
@@ -3143,10 +2563,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-116">
-  
-  <a class="anchor" href="#heading-116">#</a>
-</h1>
+<h1 id="heading-116"></h1>
 <ul>
 <li><strong>라우팅 테이블을 생성, 수정, 사용할 수 있어야 한다.</strong>
 <ul>
@@ -3155,10 +2572,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-117">
-  
-  <a class="anchor" href="#heading-117">#</a>
-</h1>
+<h1 id="heading-117"></h1>
 <ul>
 <li><strong>보안 그룹과 네트워크 엑세스 제어 목록 간의 차이점을 파악한다.</strong>
 <ul>
@@ -3166,10 +2580,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-118">
-  
-  <a class="anchor" href="#heading-118">#</a>
-</h1>
+<h1 id="heading-118"></h1>
 <ul>
 <li><strong>네트워크 주소 변환이 어떻게 작동되는 지 이해한다.</strong>
 <ul>
@@ -3178,10 +2589,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-119">
-  
-  <a class="anchor" href="#heading-119">#</a>
-</h1>
+<h1 id="heading-119"></h1>
 <ul>
 <li><strong>여러 VPC 간에 VPC 피어링을 만들고 구성할 수 있어야 한다.</strong>
 <ul>
@@ -3190,10 +2598,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-120">
-  
-  <a class="anchor" href="#heading-120">#</a>
-</h1>
+<h1 id="heading-120"></h1>
 <p> </p>
 </article>
  
@@ -3533,6 +2938,7 @@ https://github.com/alex-shpak/hugo-book
 </body>
 </div>
 </html>
+
 
 
 

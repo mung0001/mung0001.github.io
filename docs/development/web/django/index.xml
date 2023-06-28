@@ -12,12 +12,12 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/web/django/django/</guid>
-      <description>Djnago#Djnago 설치##설치환경#Ubuntu 18.04
+      <description>Djnago Djnago 설치 설치환경 Ubuntu 18.04
 mysql 5.7
 python 3.6.8
 pip3 9.0.3
 django 2.1
-#Ubuntu 설정#apt update -y
+Ubuntu 설정 apt update -y
 apt upgrade -y
 apt install python3 -y
 apt install python3-pip -y
@@ -25,11 +25,11 @@ apt install gcc -y
 apt install python-dev -y
 apt install libmysqlclient-dev -y
 apt install rpm -y
-#mysql 설치#wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+mysql 설치 wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 rpm -ivh mysql57-community-release-el7-11.noarch.rpm
 apt -y install mysql-server
 systemctl start mysql
-#mysql 임시 비밀번호와 비밀번호 변경#임시 비밀번호 입력 후 변경할 비밀번호를 입력</description>
+mysql 임시 비밀번호와 비밀번호 변경 임시 비밀번호 입력 후 변경할 비밀번호를 입력</description>
     </item>
     
     <item>
@@ -38,8 +38,9 @@ systemctl start mysql
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/web/django/basic/</guid>
-      <description>Django##Django##파이썬으로 만들어진 무료 오픈소스 웹 애플리케이션 프레임워크 모델&amp;ndash;뷰&amp;ndash;컨트롤러 ( MVC ) 패턴을 따름 장고는 컴포넌트의 재사용 및 플러그인화 가능성을, 빠른 개발을 위해 계발 웹 개발 시 많이 사용되며, 번거로운 요소들을 새로 개발할 필요 없이 내장된 기능만을 이용해 빠른 개발이 가능 #MTV ( Model-Template-View )##Model
-데이터에 관한 정보를 담으며, 데이터에 대한 접근, 검증, 작동과 데이터 사이의 관계를 정의하며, 각각의 모델은 데이터베이스에서 테이블에 해당 Template</description>
+      <description>Django Django 파이썬으로 만들어진 무료 오픈소스 웹 애플리케이션 프레임워크 모델&amp;ndash;뷰&amp;ndash;컨트롤러 ( MVC ) 패턴을 따름 장고는 컴포넌트의 재사용 및 플러그인화 가능성을, 빠른 개발을 위해 계발 웹 개발 시 많이 사용되며, 번거로운 요소들을 새로 개발할 필요 없이 내장된 기능만을 이용해 빠른 개발이 가능 MTV ( Model-Template-View ) Model
+데이터에 관한 정보를 담으며, 데이터에 대한 접근, 검증, 작동과 데이터 사이의 관계를 정의하며, 각각의 모델은 데이터베이스에서 테이블에 해당 Template
+데이터가 어떻게 표시되는 지를 정의, 템플릿은 사용자에게 실제로 보여지는 웹 페이지나 문서를 다룸 View</description>
     </item>
     
     <item>
@@ -48,8 +49,8 @@ systemctl start mysql
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/web/django/test/</guid>
-      <description>Django Project#Django Boardapp project##모델을 구성하기에 앞서 django에서 지원하는 admin을 사용하기 위해 기본적인 database를 받아온다.
-(ve) $ ./manage.py migrate #DB 테이블 생성
+      <description>Django Project Django Boardapp project 모델을 구성하기에 앞서 django에서 지원하는 admin을 사용하기 위해 기본적인 database를 받아온다.
+(ve) $ ./manage.py migrate DB 테이블 생성
 # User table ALTER TABLE auth_user ADD COLUMN phone VARCHAR(45) NOT NULL AFTER date_joined, ADD COLUMN date_of_birth DATETIME NOT NULL AFTER phone, CHANGE COLUMN date_joined date_joined DATETIME NOT NULL AFTER email, CHANGE COLUMN first_name first_name VARCHAR(30) NULL AFTER is_active, CHANGE COLUMN is_staff is_staff TINYINT(1) NULL, CHANGE COLUMN is_active is_active TINYINT(1) NULL; # Board table ## board_categories create table board_categories( id int(10) not null auto_increment, category_type varchar(45) not null default &amp;#39;Normal&amp;#39;, category_code varchar(100) not null, category_name varchar(100) not null, category_desc varchar(200) not null, list_count int(10) default &amp;#39;20&amp;#39;, authority int(1) default &amp;#39;0&amp;#39;, creation_date datetime default current_timestamp, last_update_date datetime default null, primary key(id) )engine=InnoDB default CHARSET=utf8; ## boards create table boards( id int(10) not null auto_increment, category_id int(10) not null, user_id int(10) not null, title varchar(300) not null, content text not null, registered_date datetime default current_timestamp, last_update_date datetime default null, view_count int(10) default &amp;#39;0&amp;#39;, image varchar(255) default null, primary key(id), key board_category_fk_idx(category_id), key board_user_fk_idx(user_id), constraint board_category_fk foreign key(category_id) references board_categories(id) on delete no action on update no action, constraint board_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; ## board_replies create table board_replies( id int(10) not null auto_increment, article_id int(10) not null, user_id int(10) not null, `level` tinyint(1) default &amp;#39;1&amp;#39;, content text not null, reference_reply_id int(10) default &amp;#39;0&amp;#39;, registered_date datetime default current_timestamp, last_update_date datetime default null, primary key(id), key user_reply_fk_idx(user_id), key article_reply_fk_idx(article_id), constraint article_reply_fk foreign key(article_id) references boards(id) on delete no action on update no action, constraint user_reply_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; ## board_likes create table board_likes( id int(10) not null auto_increment, article_id int(10) not null, user_id int(11) not null, registered_date datetime default current_timestamp, primary key(id), key like_article_fk_idx(article_id), key like_user_fk_idx(user_id), constraint like_article_fk foreign key(article_id) references boards(id) on delete no action on update no action, constraint like_user_fk foreign key(user_id) references auth_user(id) on delete no action on update no action )engine=InnoDB default CHARSET=utf8; pip3 install Pillow</description>
     </item>
     
@@ -59,7 +60,7 @@ systemctl start mysql
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/web/django/django01/</guid>
-      <description>Django##Django - 설문조사 app##polls app 생성#$ python manage.py startapp polls $ vi polls/views.py from django.http import HttpResponse def index(request) : return HttpResponse(&amp;#34;Hello, world. You`re at the polls index.&amp;#34;) $ vi polls/urls.py from django.urls import path from . import views urlpatterns = [ path(&amp;#39;&amp;#39;, views.index, name=&amp;#39;index&amp;#39;), # path 함수는 path(&amp;#39;rotue&amp;#39;, &amp;#39;view&amp;#39;, &amp;#39;kwargs&amp;#39;, &amp;#39;name&amp;#39;)의 형태로 출력되며 총 4개의인수를 받음 # route : 주소 / &amp;#39;&amp;#39; = 전체 # view : route로 접근했을 때 호출할 뷰 / views.</description>
+      <description>Django Django - 설문조사 app polls app 생성 $ python manage.py startapp polls $ vi polls/views.py from django.http import HttpResponse def index(request) : return HttpResponse(&amp;#34;Hello, world. You`re at the polls index.&amp;#34;) $ vi polls/urls.py from django.urls import path from . import views urlpatterns = [ path(&amp;#39;&amp;#39;, views.index, name=&amp;#39;index&amp;#39;), # path 함수는 path(&amp;#39;rotue&amp;#39;, &amp;#39;view&amp;#39;, &amp;#39;kwargs&amp;#39;, &amp;#39;name&amp;#39;)의 형태로 출력되며 총 4개의인수를 받음 # route : 주소 / &amp;#39;&amp;#39; = 전체 # view : route로 접근했을 때 호출할 뷰 / views.</description>
     </item>
     
     <item>
@@ -68,7 +69,7 @@ systemctl start mysql
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/web/django/django02/</guid>
-      <description>Django##**Django - **###</description>
+      <description>Django **Django - ** </description>
     </item>
     
     <item>
@@ -77,7 +78,7 @@ systemctl start mysql
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/web/django/django03/</guid>
-      <description>Django##**Django - **###</description>
+      <description>Django **Django - ** </description>
     </item>
     
     <item>
@@ -86,7 +87,7 @@ systemctl start mysql
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/web/django/django04/</guid>
-      <description>Django##**Django - **###</description>
+      <description>Django **Django - ** </description>
     </item>
     
     <item>
@@ -95,7 +96,7 @@ systemctl start mysql
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/web/django/django00/</guid>
-      <description>Django##Django - 기본 용어정리##CGI (Common Gateway Interface) 정해진 양식을 사용해서 요청하고 결과를 받아오는 방식 (ex : Apache-fast_cgi 등) ##WSGI (WEB Server Gateway Interface) CGI의 일종으로, 기존 python app에서는 CGI, mod_python, Fast CGI 등등 만을 사용했으나, wsgi는 프레임워크의 웹서버로, route web에서는 표준 인터페이스로 개발되었다. #Web Server 실제적으로 요청을 처리하는 컴퓨터 (ex : Apache, Nginx 등) #Cache Server 들어온 요청에 대한 응답을 미리 파일이나 메모리 캐시로 저장해두는 컴퓨터 (ex : Redis, Memcached 등) #DB Server 기존 DATABASE를 보다 빠르고, 편리하게 관리하기 위한 데이터 관리 전용 서비스 (ex : MySQL, MS-SQL, Oracle DB 등) #File Server 사용자가 업로드한 파일을 여러 사용자가 볼 수 있게 하는 서버 (ex : 인스타그램, faecbook 등) #제네릭 뷰 (Generic View) 기본적으로 Django에서 제공하는 뷰어로 뷰 클래스를 의미 #Model : Model(Django) DB의 구조를 결정, 대부분의 경우 테이블을 작성할 때 사용하는 데, 테이블의 이름, 각 열의 이름과 타입 등을 설계할 때 사용 #View : Template(Django) 사용자에게 보여지는 UI 부분으로, HTML 코드 등 실질적으로 클라이언트에게 보여질 부분 #Controller : View(Django) 기능, 로직 부분으로, 넘겨받은 데이터를 어떻게 해석하고 가공할지 그리고 처리된 결과를 어떻게 클라이언트에게 돌려줄지 결정하는 부분 ####Django - 프로젝트 구조 살펴보기##config 프로젝트 설정 파일과 웹 서비스 실행으르 위한 파일들이 들어있음 #config - init.</description>
+      <description>Django Django - 기본 용어정리 CGI (Common Gateway Interface) 정해진 양식을 사용해서 요청하고 결과를 받아오는 방식 (ex : Apache-fast_cgi 등) WSGI (WEB Server Gateway Interface) CGI의 일종으로, 기존 python app에서는 CGI, mod_python, Fast CGI 등등 만을 사용했으나, wsgi는 프레임워크의 웹서버로, route web에서는 표준 인터페이스로 개발되었다. Web Server 실제적으로 요청을 처리하는 컴퓨터 (ex : Apache, Nginx 등) Cache Server 들어온 요청에 대한 응답을 미리 파일이나 메모리 캐시로 저장해두는 컴퓨터 (ex : Redis, Memcached 등) DB Server 기존 DATABASE를 보다 빠르고, 편리하게 관리하기 위한 데이터 관리 전용 서비스 (ex : MySQL, MS-SQL, Oracle DB 등) File Server 사용자가 업로드한 파일을 여러 사용자가 볼 수 있게 하는 서버 (ex : 인스타그램, faecbook 등) 제네릭 뷰 (Generic View) 기본적으로 Django에서 제공하는 뷰어로 뷰 클래스를 의미 Model : Model(Django) DB의 구조를 결정, 대부분의 경우 테이블을 작성할 때 사용하는 데, 테이블의 이름, 각 열의 이름과 타입 등을 설계할 때 사용 View : Template(Django) 사용자에게 보여지는 UI 부분으로, HTML 코드 등 실질적으로 클라이언트에게 보여질 부분 Controller : View(Django) 기능, 로직 부분으로, 넘겨받은 데이터를 어떻게 해석하고 가공할지 그리고 처리된 결과를 어떻게 클라이언트에게 돌려줄지 결정하는 부분 Django - 프로젝트 구조 살펴보기 config 프로젝트 설정 파일과 웹 서비스 실행으르 위한 파일들이 들어있음 config - init.</description>
     </item>
     
     <item>
@@ -104,7 +105,7 @@ systemctl start mysql
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mung0001.github.io/docs/development/web/django/django05/</guid>
-      <description>ㅈ&amp;mdash; title: &amp;ldquo;Django - &amp;quot; bookCollapseSection: true weight: 10#Django##**Django - **###</description>
+      <description>ㅈ&amp;mdash; title: &amp;ldquo;Django - &amp;quot; bookCollapseSection: true weight: 10 Django **Django - ** </description>
     </item>
     
   </channel>

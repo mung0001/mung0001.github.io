@@ -2,39 +2,39 @@
 <html lang="en">
 
 <head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AWS Management##Amazon CloudWatch##AWS 클라우드 리소스와 AWS에서 실행되는 애플리케이션을 위한 모니터링 서비스 리소스 및 애플리케이션에 대해 측정할 수 있는 변수인 지표를 수집하고 추적 가능 사용중인 모든 AWS 서비스에 대한 지표가 자동적으로 표시디며, 사용자 지정 대시보드를 통해 사용자 지정 애플리케이션에 대한 지표를 표시하고 지정 집합 표시 가능 지표는 Cloudwatch에 게시된 시간 순서별 데이터 요소 세트이며, 모니터링할 변수 ( 가령 EC2의 CPU 사용량은 EC2가 제공하는 하나의 지표 ) 기본 모니터링과 세부 모니터링으로 나뉘며, 가각 5분과 1분 주기로 수집함 기본 모니터링은 자동활성화이지만, 세부 모니터링은 선택사항 기본적으로 CPU, Network, Disk, Status Check 등을 수집 ( Memory 항목이 없음 ) 지표 데이터의 보존기간 기간 60초 미만의 경우, 3시간 기간 60초의 경우, 15일 기간 300초의 경우 63일 기간 3600초의 경우, 455일 AWS CLI 혹은 API를 이용하여, Cloudwatch에 사용자 정의 지표 게시 가능 경보기능을 사용하여 어떤 지표가 일정기간동안 일정값에 도달할 경우 각 서비스가 취해야할 행동을 정의할 수 있음 모니터링하기로 선택한 측정치가 정의한 임계값을 초과할 경우 하나 이상의자동화 작업을 수행하도록 구성 EC2의 경우, 경보에 따라, 인스턴스 중비, 복구, 종료, 재부팅 가능 #Cloudwatch Agent#EC2에 Agent를 설치하게 되면 더 많은 시스템 수준 지표를 수집할 수 있음 온프레미스 서버 또한 Cloudwatch Agent 사용 가능 Memory 항목 포함 Cloudwatch Agent는 로그를 수집할 수 있으며, 후술할 Cloudwatch Logs 기능 사용 가능 #Cloudwatch Logs#EC2( Agent에서 수집된 ), CloudTrail, Route 53, Route 53, VPC flow Log 등 기타 소스에서 발생한 로그 파일을 모니터링, 저장 및 엑세스하는 기능 Cloudwatch Agent를 사용하여 로그를 수집 Cloudwatch Log Insights를 사용하여 CloudWatch Logs에서 로그 데이터를 대화식으로 검색해 분석할 수 있음 Agent는 기본적으로 5초마다 로그 데이터를 전송 #Cloudwatch Events#AWS 각 서비스의 이벤트가 사용자가 지정한 이벤트패턴과 일치하거나 일정이 트리거될 경우, 사용자가 월하는 기능을 발동시키도록 하는 기능 이번트 소스와 대상으로 나뉨 이벤트 소스: AWS 환경에서 발생하는 이벤트이며, 가령 S3의 경우 오브젝트 등록, 삭제 등을 들 수 있음 대상: 이벤트 발생시 해야할 행동을 정의하는 것이며, SNS 전송 혹은 람다, SQS 게시 등을 설정할 수 있음 이벤트 소스에 해당하는 규칙이 트리거될 경우 대상에 해당하는 서비스를 실행시킴 이벤트가 시스템에 생성해 둔 규칙과 일치하는 경우, AWS Lambda 함수를 자동으로 호출하고, 해당 이벤트를 Amazon Kinesis 스트림에 전달하고, Amazon SNS 주제를 알림&rsquo; having 1=1## #AWS CloudFormation##인프라를 관리 간소화를 목적으로 하는 서비스 AWS의 리소스를 일일이 설정하지 않고 해당 서비스의 프로비져닝과 설정을 미리 구성하여 반복작업을 줄이도록 도와주는 역할 EC2, Auto Scaling Group으로부터 ELB, RDS, S3 등을 사전에 구성하여 한 번의 클릭으로 다수의 서비스를 빠르게 생성할 수 있음 생성된 리소스 모음은 다른 계정 혹은 다른 리전에 옮겨 사용 가능 #Stack#하나의 단위로 관리할 수 있는 AWS 리소스들의 모음 스택을 생성, 업데이트 또는 삭제하여 리소스 모음을 생성, 업데이트, 삭제가 가능 스택에서 실행중인 리소스를 변경해야 하는 경우 스택을 업데이트할 수 있는 데, 이 업데이트된 세트를 변경세트라 칭함 스택을 삭제하는 경우 삭제할 스택을 지정하면 해당 스택과 스택 내 모든 리소스를 삭제 AWS에서 리소스를 삭제할 수 없는 경우 스택이 삭제 스택의 리소스 중 하나라도 성공적으로 생성되지 않은 경우 성공적으로 생성한 모든 리소스를 모두 삭제함 ( Automatic rollback on error ) #Template#스택을 구성하는 AWS 리소스를 JSON 혹은 YAML 형식으로 선언한 텍스트 파일">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="AWS Management" />
-<meta property="og:description" content="AWS Management##Amazon CloudWatch##AWS 클라우드 리소스와 AWS에서 실행되는 애플리케이션을 위한 모니터링 서비스 리소스 및 애플리케이션에 대해 측정할 수 있는 변수인 지표를 수집하고 추적 가능 사용중인 모든 AWS 서비스에 대한 지표가 자동적으로 표시디며, 사용자 지정 대시보드를 통해 사용자 지정 애플리케이션에 대한 지표를 표시하고 지정 집합 표시 가능 지표는 Cloudwatch에 게시된 시간 순서별 데이터 요소 세트이며, 모니터링할 변수 ( 가령 EC2의 CPU 사용량은 EC2가 제공하는 하나의 지표 ) 기본 모니터링과 세부 모니터링으로 나뉘며, 가각 5분과 1분 주기로 수집함 기본 모니터링은 자동활성화이지만, 세부 모니터링은 선택사항 기본적으로 CPU, Network, Disk, Status Check 등을 수집 ( Memory 항목이 없음 ) 지표 데이터의 보존기간 기간 60초 미만의 경우, 3시간 기간 60초의 경우, 15일 기간 300초의 경우 63일 기간 3600초의 경우, 455일 AWS CLI 혹은 API를 이용하여, Cloudwatch에 사용자 정의 지표 게시 가능 경보기능을 사용하여 어떤 지표가 일정기간동안 일정값에 도달할 경우 각 서비스가 취해야할 행동을 정의할 수 있음 모니터링하기로 선택한 측정치가 정의한 임계값을 초과할 경우 하나 이상의자동화 작업을 수행하도록 구성 EC2의 경우, 경보에 따라, 인스턴스 중비, 복구, 종료, 재부팅 가능 #Cloudwatch Agent#EC2에 Agent를 설치하게 되면 더 많은 시스템 수준 지표를 수집할 수 있음 온프레미스 서버 또한 Cloudwatch Agent 사용 가능 Memory 항목 포함 Cloudwatch Agent는 로그를 수집할 수 있으며, 후술할 Cloudwatch Logs 기능 사용 가능 #Cloudwatch Logs#EC2( Agent에서 수집된 ), CloudTrail, Route 53, Route 53, VPC flow Log 등 기타 소스에서 발생한 로그 파일을 모니터링, 저장 및 엑세스하는 기능 Cloudwatch Agent를 사용하여 로그를 수집 Cloudwatch Log Insights를 사용하여 CloudWatch Logs에서 로그 데이터를 대화식으로 검색해 분석할 수 있음 Agent는 기본적으로 5초마다 로그 데이터를 전송 #Cloudwatch Events#AWS 각 서비스의 이벤트가 사용자가 지정한 이벤트패턴과 일치하거나 일정이 트리거될 경우, 사용자가 월하는 기능을 발동시키도록 하는 기능 이번트 소스와 대상으로 나뉨 이벤트 소스: AWS 환경에서 발생하는 이벤트이며, 가령 S3의 경우 오브젝트 등록, 삭제 등을 들 수 있음 대상: 이벤트 발생시 해야할 행동을 정의하는 것이며, SNS 전송 혹은 람다, SQS 게시 등을 설정할 수 있음 이벤트 소스에 해당하는 규칙이 트리거될 경우 대상에 해당하는 서비스를 실행시킴 이벤트가 시스템에 생성해 둔 규칙과 일치하는 경우, AWS Lambda 함수를 자동으로 호출하고, 해당 이벤트를 Amazon Kinesis 스트림에 전달하고, Amazon SNS 주제를 알림&rsquo; having 1=1## #AWS CloudFormation##인프라를 관리 간소화를 목적으로 하는 서비스 AWS의 리소스를 일일이 설정하지 않고 해당 서비스의 프로비져닝과 설정을 미리 구성하여 반복작업을 줄이도록 도와주는 역할 EC2, Auto Scaling Group으로부터 ELB, RDS, S3 등을 사전에 구성하여 한 번의 클릭으로 다수의 서비스를 빠르게 생성할 수 있음 생성된 리소스 모음은 다른 계정 혹은 다른 리전에 옮겨 사용 가능 #Stack#하나의 단위로 관리할 수 있는 AWS 리소스들의 모음 스택을 생성, 업데이트 또는 삭제하여 리소스 모음을 생성, 업데이트, 삭제가 가능 스택에서 실행중인 리소스를 변경해야 하는 경우 스택을 업데이트할 수 있는 데, 이 업데이트된 세트를 변경세트라 칭함 스택을 삭제하는 경우 삭제할 스택을 지정하면 해당 스택과 스택 내 모든 리소스를 삭제 AWS에서 리소스를 삭제할 수 없는 경우 스택이 삭제 스택의 리소스 중 하나라도 성공적으로 생성되지 않은 경우 성공적으로 생성한 모든 리소스를 모두 삭제함 ( Automatic rollback on error ) #Template#스택을 구성하는 AWS 리소스를 JSON 혹은 YAML 형식으로 선언한 텍스트 파일" />
+<meta name="description" content="AWS Management Amazon CloudWatch AWS 클라우드 리소스와 AWS에서 실행되는 애플리케이션을 위한 모니터링 서비스 리소스 및 애플리케이션에 대해 측정할 수 있는 변수인 지표를 수집하고 추적 가능 사용중인 모든 AWS 서비스에 대한 지표가 자동적으로 표시디며, 사용자 지정 대시보드를 통해 사용자 지정 애플리케이션에 대한 지표를 표시하고 지정 집합 표시 가능 지표는 Cloudwatch에 게시된 시간 순서별 데이터 요소 세트이며, 모니터링할 변수 ( 가령 EC2의 CPU 사용량은 EC2가 제공하는 하나의 지표 ) 기본 모니터링과 세부 모니터링으로 나뉘며, 가각 5분과 1분 주기로 수집함 기본 모니터링은 자동활성화이지만, 세부 모니터링은 선택사항 기본적으로 CPU, Network, Disk, Status Check 등을 수집 ( Memory 항목이 없음 ) 지표 데이터의 보존기간 기간 60초 미만의 경우, 3시간 기간 60초의 경우, 15일 기간 300초의 경우 63일 기간 3600초의 경우, 455일 AWS CLI 혹은 API를 이용하여, Cloudwatch에 사용자 정의 지표 게시 가능 경보기능을 사용하여 어떤 지표가 일정기간동안 일정값에 도달할 경우 각 서비스가 취해야할 행동을 정의할 수 있음 모니터링하기로 선택한 측정치가 정의한 임계값을 초과할 경우 하나 이상의자동화 작업을 수행하도록 구성 EC2의 경우, 경보에 따라, 인스턴스 중비, 복구, 종료, 재부팅 가능 Cloudwatch Agent EC2에 Agent를 설치하게 되면 더 많은 시스템 수준 지표를 수집할 수 있음 온프레미스 서버 또한 Cloudwatch Agent 사용 가능 Memory 항목 포함 Cloudwatch Agent는 로그를 수집할 수 있으며, 후술할 Cloudwatch Logs 기능 사용 가능 Cloudwatch Logs EC2( Agent에서 수집된 ), CloudTrail, Route 53, Route 53, VPC flow Log 등 기타 소스에서 발생한 로그 파일을 모니터링, 저장 및 엑세스하는 기능 Cloudwatch Agent를 사용하여 로그를 수집 Cloudwatch Log Insights를 사용하여 CloudWatch Logs에서 로그 데이터를 대화식으로 검색해 분석할 수 있음 Agent는 기본적으로 5초마다 로그 데이터를 전송 Cloudwatch Events AWS 각 서비스의 이벤트가 사용자가 지정한 이벤트패턴과 일치하거나 일정이 트리거될 경우, 사용자가 월하는 기능을 발동시키도록 하는 기능 이번트 소스와 대상으로 나뉨 이벤트 소스: AWS 환경에서 발생하는 이벤트이며, 가령 S3의 경우 오브젝트 등록, 삭제 등을 들 수 있음 대상: 이벤트 발생시 해야할 행동을 정의하는 것이며, SNS 전송 혹은 람다, SQS 게시 등을 설정할 수 있음 이벤트 소스에 해당하는 규칙이 트리거될 경우 대상에 해당하는 서비스를 실행시킴 이벤트가 시스템에 생성해 둔 규칙과 일치하는 경우, AWS Lambda 함수를 자동으로 호출하고, 해당 이벤트를 Amazon Kinesis 스트림에 전달하고, Amazon SNS 주제를 알림&rsquo; having 1=1## AWS CloudFormation 인프라를 관리 간소화를 목적으로 하는 서비스 AWS의 리소스를 일일이 설정하지 않고 해당 서비스의 프로비져닝과 설정을 미리 구성하여 반복작업을 줄이도록 도와주는 역할 EC2, Auto Scaling Group으로부터 ELB, RDS, S3 등을 사전에 구성하여 한 번의 클릭으로 다수의 서비스를 빠르게 생성할 수 있음 생성된 리소스 모음은 다른 계정 혹은 다른 리전에 옮겨 사용 가능 Stack 하나의 단위로 관리할 수 있는 AWS 리소스들의 모음 스택을 생성, 업데이트 또는 삭제하여 리소스 모음을 생성, 업데이트, 삭제가 가능 스택에서 실행중인 리소스를 변경해야 하는 경우 스택을 업데이트할 수 있는 데, 이 업데이트된 세트를 변경세트라 칭함 스택을 삭제하는 경우 삭제할 스택을 지정하면 해당 스택과 스택 내 모든 리소스를 삭제 AWS에서 리소스를 삭제할 수 없는 경우 스택이 삭제 스택의 리소스 중 하나라도 성공적으로 생성되지 않은 경우 성공적으로 생성한 모든 리소스를 모두 삭제함 ( Automatic rollback on error ) Template 스택을 구성하는 AWS 리소스를 JSON 혹은 YAML 형식으로 선언한 텍스트 파일">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/aws/amazonwebservice/aws_management/><meta property="og:title" content="AWS Management" />
+<meta property="og:description" content="AWS Management Amazon CloudWatch AWS 클라우드 리소스와 AWS에서 실행되는 애플리케이션을 위한 모니터링 서비스 리소스 및 애플리케이션에 대해 측정할 수 있는 변수인 지표를 수집하고 추적 가능 사용중인 모든 AWS 서비스에 대한 지표가 자동적으로 표시디며, 사용자 지정 대시보드를 통해 사용자 지정 애플리케이션에 대한 지표를 표시하고 지정 집합 표시 가능 지표는 Cloudwatch에 게시된 시간 순서별 데이터 요소 세트이며, 모니터링할 변수 ( 가령 EC2의 CPU 사용량은 EC2가 제공하는 하나의 지표 ) 기본 모니터링과 세부 모니터링으로 나뉘며, 가각 5분과 1분 주기로 수집함 기본 모니터링은 자동활성화이지만, 세부 모니터링은 선택사항 기본적으로 CPU, Network, Disk, Status Check 등을 수집 ( Memory 항목이 없음 ) 지표 데이터의 보존기간 기간 60초 미만의 경우, 3시간 기간 60초의 경우, 15일 기간 300초의 경우 63일 기간 3600초의 경우, 455일 AWS CLI 혹은 API를 이용하여, Cloudwatch에 사용자 정의 지표 게시 가능 경보기능을 사용하여 어떤 지표가 일정기간동안 일정값에 도달할 경우 각 서비스가 취해야할 행동을 정의할 수 있음 모니터링하기로 선택한 측정치가 정의한 임계값을 초과할 경우 하나 이상의자동화 작업을 수행하도록 구성 EC2의 경우, 경보에 따라, 인스턴스 중비, 복구, 종료, 재부팅 가능 Cloudwatch Agent EC2에 Agent를 설치하게 되면 더 많은 시스템 수준 지표를 수집할 수 있음 온프레미스 서버 또한 Cloudwatch Agent 사용 가능 Memory 항목 포함 Cloudwatch Agent는 로그를 수집할 수 있으며, 후술할 Cloudwatch Logs 기능 사용 가능 Cloudwatch Logs EC2( Agent에서 수집된 ), CloudTrail, Route 53, Route 53, VPC flow Log 등 기타 소스에서 발생한 로그 파일을 모니터링, 저장 및 엑세스하는 기능 Cloudwatch Agent를 사용하여 로그를 수집 Cloudwatch Log Insights를 사용하여 CloudWatch Logs에서 로그 데이터를 대화식으로 검색해 분석할 수 있음 Agent는 기본적으로 5초마다 로그 데이터를 전송 Cloudwatch Events AWS 각 서비스의 이벤트가 사용자가 지정한 이벤트패턴과 일치하거나 일정이 트리거될 경우, 사용자가 월하는 기능을 발동시키도록 하는 기능 이번트 소스와 대상으로 나뉨 이벤트 소스: AWS 환경에서 발생하는 이벤트이며, 가령 S3의 경우 오브젝트 등록, 삭제 등을 들 수 있음 대상: 이벤트 발생시 해야할 행동을 정의하는 것이며, SNS 전송 혹은 람다, SQS 게시 등을 설정할 수 있음 이벤트 소스에 해당하는 규칙이 트리거될 경우 대상에 해당하는 서비스를 실행시킴 이벤트가 시스템에 생성해 둔 규칙과 일치하는 경우, AWS Lambda 함수를 자동으로 호출하고, 해당 이벤트를 Amazon Kinesis 스트림에 전달하고, Amazon SNS 주제를 알림&rsquo; having 1=1## AWS CloudFormation 인프라를 관리 간소화를 목적으로 하는 서비스 AWS의 리소스를 일일이 설정하지 않고 해당 서비스의 프로비져닝과 설정을 미리 구성하여 반복작업을 줄이도록 도와주는 역할 EC2, Auto Scaling Group으로부터 ELB, RDS, S3 등을 사전에 구성하여 한 번의 클릭으로 다수의 서비스를 빠르게 생성할 수 있음 생성된 리소스 모음은 다른 계정 혹은 다른 리전에 옮겨 사용 가능 Stack 하나의 단위로 관리할 수 있는 AWS 리소스들의 모음 스택을 생성, 업데이트 또는 삭제하여 리소스 모음을 생성, 업데이트, 삭제가 가능 스택에서 실행중인 리소스를 변경해야 하는 경우 스택을 업데이트할 수 있는 데, 이 업데이트된 세트를 변경세트라 칭함 스택을 삭제하는 경우 삭제할 스택을 지정하면 해당 스택과 스택 내 모든 리소스를 삭제 AWS에서 리소스를 삭제할 수 없는 경우 스택이 삭제 스택의 리소스 중 하나라도 성공적으로 생성되지 않은 경우 성공적으로 생성한 모든 리소스를 모두 삭제함 ( Automatic rollback on error ) Template 스택을 구성하는 AWS 리소스를 JSON 혹은 YAML 형식으로 선언한 텍스트 파일" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/aws/amazonwebservice/aws_management/" /><meta property="article:section" content="docs" />
 
 
 
-<title>AWS Management | 뭉게뭉게</title>
-<link rel="manifest" href="/manifest.json">
+<title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.3d8c7f91a1ae2a156d3acf98421fad5e26aabf6e44dfa654eae07357b1d35b2e.js" integrity="sha256-PYx/kaGuKhVtOs&#43;YQh&#43;tXiaqv25E36ZU6uBzV7HTWy4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
+<script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo="></script>
 <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+
 -->
+
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
+
 <body>
   <div class="background">
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex" style="max-width:100%;" >
-    
-    <aside style="padding-left: 1em;" class="book-menu">
-      <div class="book-menu-content">
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
       
   
 <nav styles="background-color:red; position=none;">
@@ -45,8 +45,9 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
+
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -960,127 +961,6 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <span>Network</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
   <span>System</span>
   
 
@@ -1277,15 +1157,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
     </aside>
 
-
-
-    
-    <div style="padding-left: 2%;" class="book-page">
+    <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
   <div class="flex align-center justify-between">
@@ -1296,15 +1174,14 @@ https://github.com/alex-shpak/hugo-book
   <strong>AWS Management</strong>
 
   <label for="toc-control">
-    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
   </label>
 </div>
 
 
   
-  <aside class="hidden clearfix">
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1469,25 +1346,13 @@ https://github.com/alex-shpak/hugo-book
 <br>
 <br>
       
-  <article class="markdown"><h1 id="aws-management">
-  <strong>AWS Management</strong>
-  <a class="anchor" href="#aws-management">#</a>
-</h1>
+  <article class="markdown"><h1 id="aws-management"><strong>AWS Management</strong></h1>
 <hr>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
-<h2 id="amazon-cloudwatch">
-  <strong>Amazon CloudWatch</strong>
-  <a class="anchor" href="#amazon-cloudwatch">#</a>
-</h2>
+<h1 id="heading"></h1>
+<h2 id="amazon-cloudwatch"><strong>Amazon CloudWatch</strong></h2>
 <hr>
 <p><img src="/AWS/Management/CloudWatch.png" alt="AWS" /></p>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
+<h1 id="heading-1"></h1>
 <ul>
 <li>AWS 클라우드 리소스와 AWS에서 실행되는 애플리케이션을 위한 모니터링 서비스</li>
 <li>리소스 및 애플리케이션에 대해 측정할 수 있는 변수인 지표를 수집하고 추적 가능</li>
@@ -1509,42 +1374,24 @@ https://github.com/alex-shpak/hugo-book
 <li>모니터링하기로 선택한 측정치가 정의한 임계값을 초과할 경우 하나 이상의자동화 작업을 수행하도록 구성</li>
 <li>EC2의 경우, 경보에 따라, 인스턴스 중비, 복구, 종료, 재부팅 가능</li>
 </ul>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
-<h3 id="cloudwatch-agent">
-  <strong>Cloudwatch Agent</strong>
-  <a class="anchor" href="#cloudwatch-agent">#</a>
-</h3>
+<h1 id="heading-2"></h1>
+<h3 id="cloudwatch-agent"><strong>Cloudwatch Agent</strong></h3>
 <ul>
 <li>EC2에 Agent를 설치하게 되면 더 많은 시스템 수준 지표를 수집할 수 있음</li>
 <li>온프레미스 서버 또한 Cloudwatch Agent 사용 가능</li>
 <li>Memory 항목 포함</li>
 <li>Cloudwatch Agent는 로그를 수집할 수 있으며, 후술할 Cloudwatch Logs 기능 사용 가능</li>
 </ul>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
-<h3 id="cloudwatch-logs">
-  <strong>Cloudwatch Logs</strong>
-  <a class="anchor" href="#cloudwatch-logs">#</a>
-</h3>
+<h1 id="heading-3"></h1>
+<h3 id="cloudwatch-logs"><strong>Cloudwatch Logs</strong></h3>
 <ul>
 <li>EC2( Agent에서 수집된 ), CloudTrail, Route 53, Route 53, VPC flow Log 등 기타 소스에서 발생한 로그 파일을 모니터링, 저장 및 엑세스하는 기능</li>
 <li>Cloudwatch Agent를 사용하여 로그를 수집</li>
 <li>Cloudwatch Log Insights를 사용하여 CloudWatch Logs에서 로그 데이터를 대화식으로 검색해 분석할 수 있음</li>
 <li>Agent는 기본적으로 5초마다 로그 데이터를 전송</li>
 </ul>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
-<h3 id="cloudwatch-events">
-  <strong>Cloudwatch Events</strong>
-  <a class="anchor" href="#cloudwatch-events">#</a>
-</h3>
+<h1 id="heading-4"></h1>
+<h3 id="cloudwatch-events"><strong>Cloudwatch Events</strong></h3>
 <ul>
 <li>AWS 각 서비스의 이벤트가 사용자가 지정한 이벤트패턴과 일치하거나 일정이 트리거될 경우, 사용자가 월하는 기능을 발동시키도록 하는 기능</li>
 <li>이번트 소스와 대상으로 나뉨</li>
@@ -1553,35 +1400,20 @@ https://github.com/alex-shpak/hugo-book
 <li>이벤트 소스에 해당하는 규칙이 트리거될 경우 대상에 해당하는 서비스를 실행시킴</li>
 <li>이벤트가 시스템에 생성해 둔 규칙과 일치하는 경우, AWS Lambda 함수를 자동으로 호출하고, 해당 이벤트를 Amazon Kinesis 스트림에 전달하고, Amazon SNS 주제를 알림&rsquo; having 1=1##</li>
 </ul>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
+<h1 id="heading-5"></h1>
 <p> </p>
-<h2 id="aws-cloudformation">
-  <strong>AWS CloudFormation</strong>
-  <a class="anchor" href="#aws-cloudformation">#</a>
-</h2>
+<h2 id="aws-cloudformation"><strong>AWS CloudFormation</strong></h2>
 <hr>
 <p><img src="/AWS/Management/CloudFormation.png" alt="AWS" /></p>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
+<h1 id="heading-6"></h1>
 <ul>
 <li>인프라를 관리 간소화를 목적으로 하는 서비스</li>
 <li>AWS의 리소스를 일일이 설정하지 않고 해당 서비스의 프로비져닝과 설정을 미리 구성하여 반복작업을 줄이도록 도와주는 역할</li>
 <li>EC2, Auto Scaling Group으로부터 ELB, RDS, S3 등을 사전에 구성하여 한 번의 클릭으로 다수의 서비스를 빠르게 생성할 수 있음</li>
 <li>생성된 리소스 모음은 다른 계정 혹은 다른 리전에 옮겨 사용 가능</li>
 </ul>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
-<h3 id="stack">
-  <strong>Stack</strong>
-  <a class="anchor" href="#stack">#</a>
-</h3>
+<h1 id="heading-7"></h1>
+<h3 id="stack"><strong>Stack</strong></h3>
 <ul>
 <li>하나의 단위로 관리할 수 있는 AWS 리소스들의 모음</li>
 <li>스택을 생성, 업데이트 또는 삭제하여 리소스 모음을 생성, 업데이트, 삭제가 가능</li>
@@ -1590,14 +1422,8 @@ https://github.com/alex-shpak/hugo-book
 <li>AWS에서 리소스를 삭제할 수 없는 경우 스택이 삭제</li>
 <li>스택의 리소스 중 하나라도 성공적으로 생성되지 않은 경우 성공적으로 생성한 모든 리소스를 모두 삭제함 ( Automatic rollback on error )</li>
 </ul>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
-<h3 id="template">
-  <strong>Template</strong>
-  <a class="anchor" href="#template">#</a>
-</h3>
+<h1 id="heading-8"></h1>
+<h3 id="template"><strong>Template</strong></h3>
 <ul>
 <li>
 <p>스택을 구성하는 AWS 리소스를 JSON 혹은 YAML 형식으로 선언한 텍스트 파일</p>
@@ -1609,14 +1435,8 @@ https://github.com/alex-shpak/hugo-book
 <p>템플릿을 &ldquo;Designer&quot;을 통해 생성할 수도 있으며, S3 bucket에 저장된 것을 불러와 생성이 가능</p>
 </li>
 </ul>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
-<h3 id="template의-여러-요소">
-  <strong>Template의 여러 요소</strong>
-  <a class="anchor" href="#template%ec%9d%98-%ec%97%ac%eb%9f%ac-%ec%9a%94%ec%86%8c">#</a>
-</h3>
+<h1 id="heading-9"></h1>
+<h3 id="template의-여러-요소"><strong>Template의 여러 요소</strong></h3>
 <ul>
 <li>
 <p><strong>Parameter :</strong> 선택 섹션, 스택 생성 및 업데이트 시 템플릿에 전달하는 값, 사용자가 선택하는 여러 요소들 ( EC2 유형 - t2.micro 등 )</p>
@@ -1634,21 +1454,12 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>Mappings :</strong> 선택 센셕, 프로그래밍 언어로 따지만 &lsquo;Switch&rsquo; 조건문에 해당하며, &lsquo;키&rsquo;에 해당하는 값 세트를 생성하고 해당하는 키가 있으면 값 세트에 맞춰 리소를 생성</p>
 </li>
 </ul>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
+<h1 id="heading-10"></h1>
 <p> </p>
-<h2 id="aws-cloudtrail">
-  <strong>AWS CloudTrail</strong>
-  <a class="anchor" href="#aws-cloudtrail">#</a>
-</h2>
+<h2 id="aws-cloudtrail"><strong>AWS CloudTrail</strong></h2>
 <hr>
 <p><img src="/AWS/Management/CloudTrail.png" alt="AWS" /></p>
-<h1 id="heading-11">
-  
-  <a class="anchor" href="#heading-11">#</a>
-</h1>
+<h1 id="heading-11"></h1>
 <ul>
 <li>CloudTrail의 이벤트는 AWS 계정에서의 활동 기록을 의미</li>
 <li>용자, 역할 또는 CloudTrail에서 모니터링이 가능한 서비스에 의해 수행되는 작업, AWS Management 콘솔, AWS SDK, 명령줄 도구 및 기타 AWS 서비스를 통해 수행되는 API 계정 활동과 비 API 계정 활동 모두에 대한 기록을 제공</li>
@@ -1660,14 +1471,8 @@ https://github.com/alex-shpak/hugo-book
 </li>
 <li>관리 이벤트와 데이터 이벤트 모두 동일한 CloudTrail JSON 로그 형식을 사용</li>
 </ul>
-<h1 id="heading-12">
-  
-  <a class="anchor" href="#heading-12">#</a>
-</h1>
-<h3 id="관리-이벤트">
-  <strong>관리 이벤트</strong>
-  <a class="anchor" href="#%ea%b4%80%eb%a6%ac-%ec%9d%b4%eb%b2%a4%ed%8a%b8">#</a>
-</h3>
+<h1 id="heading-12"></h1>
+<h3 id="관리-이벤트"><strong>관리 이벤트</strong></h3>
 <ul>
 <li>AWS 계정의 리소스에 대해 수행되는 관리 작업에 대한 정보를 제공하며, 이를 제어 영역 작업이라 함</li>
 </ul>
@@ -1684,14 +1489,8 @@ https://github.com/alex-shpak/hugo-book
 </blockquote>
 
 </blockquote>
-<h1 id="heading-13">
-  
-  <a class="anchor" href="#heading-13">#</a>
-</h1>
-<h3 id="데이터-이벤트">
-  <strong>데이터 이벤트</strong>
-  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%9d%b4%eb%b2%a4%ed%8a%b8">#</a>
-</h3>
+<h1 id="heading-13"></h1>
+<h3 id="데이터-이벤트"><strong>데이터 이벤트</strong></h3>
 <ul>
 <li>데이터 이벤트는 리소스 상에서, 또는 리소스 내에서 수행되는 리소스 작업에 대한 정보를 제공하며, 이를 데이터 영역 작업이라 함</li>
 </ul>
@@ -1706,108 +1505,57 @@ https://github.com/alex-shpak/hugo-book
 </blockquote>
 
 </blockquote>
-<h1 id="heading-14">
-  
-  <a class="anchor" href="#heading-14">#</a>
-</h1>
-<h3 id="insights-events">
-  <strong>Insights events</strong>
-  <a class="anchor" href="#insights-events">#</a>
-</h3>
+<h1 id="heading-14"></h1>
+<h3 id="insights-events"><strong>Insights events</strong></h3>
 <ul>
 <li>CloudTrail Insights 이벤트는 AWS 계정에서 비정상적인 활동을 캡처</li>
 <li>Insights events을 활성화하고 CloudTrail가 비정상적인 활동을 감지한 경우, Insights events는 다른 폴더나 트레일에 대한 대상 S3 버킷의 접두사에 로깅</li>
 <li>Insights events은 계정 API 사용량 변화가 계정의 일반적인 사용 패턴과 크게 다르다는 것을 CloudTrail가 감지한 경우에만 로깅</li>
 </ul>
-<h1 id="heading-15">
-  
-  <a class="anchor" href="#heading-15">#</a>
-</h1>
-<h3 id="cloudtrail-이벤트-기록">
-  <strong>CloudTrail 이벤트 기록</strong>
-  <a class="anchor" href="#cloudtrail-%ec%9d%b4%eb%b2%a4%ed%8a%b8-%ea%b8%b0%eb%a1%9d">#</a>
-</h3>
+<h1 id="heading-15"></h1>
+<h3 id="cloudtrail-이벤트-기록"><strong>CloudTrail 이벤트 기록</strong></h3>
 <ul>
 <li>CloudTrail 이벤트 기록은 CloudTrail 이벤트에 대한 지난 90일간의 기록으로 확인, 검색 및 다운로드가 가능</li>
 <li>AWS Management 콘솔, AWS SDK, 명령줄 도구 및 기타 AWS 서비스를 통해 수행되는 AWS 계정 활동에 대한 가시성을 확보가능</li>
 <li>CloudTrail 콘솔에서 어떤 열이 표시되는지를 선택하여 이벤트 기록 보기를 사용자 지정가능</li>
 </ul>
-<h1 id="heading-16">
-  
-  <a class="anchor" href="#heading-16">#</a>
-</h1>
-<h3 id="추적">
-  <strong>추적</strong>
-  <a class="anchor" href="#%ec%b6%94%ec%a0%81">#</a>
-</h3>
+<h1 id="heading-16"></h1>
+<h3 id="추적"><strong>추적</strong></h3>
 <ul>
 <li>추적은 Amazon S3 버킷, CloudWatch Logs 및 CloudWatch 이벤트에 CloudTrail 이벤트를 제공할 수 있는 구성</li>
 <li>추적을 사용하여 제공하고자 하는 CloudTrail 이벤트를 필터링하고, AWS KMS 키로 CloudTrail 이벤트 로그 파일을 암호화하며, 로그 파일 제공을 위해 Amazon SNS 알림을 설정이 가능</li>
 </ul>
-<h1 id="heading-17">
-  
-  <a class="anchor" href="#heading-17">#</a>
-</h1>
-<h3 id="조직-추적">
-  <strong>조직 추적</strong>
-  <a class="anchor" href="#%ec%a1%b0%ec%a7%81-%ec%b6%94%ec%a0%81">#</a>
-</h3>
+<h1 id="heading-17"></h1>
+<h3 id="조직-추적"><strong>조직 추적</strong></h3>
 <ul>
 <li>조직 추적은 조직의 마스터 계정과 모든 멤버 계정의 CloudTrail 이벤트를 동일한 Amazon S3 버킷, CloudWatch Logs 및 CloudWatch 이벤트에 전달할 수 있도록 하는 구성을 의미</li>
 </ul>
-<h1 id="heading-18">
-  
-  <a class="anchor" href="#heading-18">#</a>
-</h1>
+<h1 id="heading-18"></h1>
 <p> </p>
-<h2 id="aws-config">
-  <strong>AWS Config</strong>
-  <a class="anchor" href="#aws-config">#</a>
-</h2>
+<h2 id="aws-config"><strong>AWS Config</strong></h2>
 <hr>
 <p><img src="/AWS/Management/Config.png" alt="AWS" /></p>
-<h1 id="heading-19">
-  
-  <a class="anchor" href="#heading-19">#</a>
-</h1>
+<h1 id="heading-19"></h1>
 <ul>
 <li>AWS Config는 AWS 리소스 구성을 측정, 감사 및 평가할 수 있는 서비스</li>
 <li>Config는 AWS 리소스 구성을 지속적으로 모니터링 및 기록하고, 원하는 구성을 기준으로 기록된 구성을 자동으로 평가</li>
 </ul>
-<h1 id="heading-20">
-  
-  <a class="anchor" href="#heading-20">#</a>
-</h1>
+<h1 id="heading-20"></h1>
 <p> </p>
-<h2 id="aws-opsworks">
-  <strong>AWS OpsWorks</strong>
-  <a class="anchor" href="#aws-opsworks">#</a>
-</h2>
+<h2 id="aws-opsworks"><strong>AWS OpsWorks</strong></h2>
 <hr>
-<h1 id="heading-21">
-  
-  <a class="anchor" href="#heading-21">#</a>
-</h1>
+<h1 id="heading-21"></h1>
 <ul>
 <li>AWS OpsWorks는 Chef 및 Puppet의 관리형 인스턴스를 제공하는 구성 관리 서비스</li>
 <li>Chef 및 Puppet은 코드를 사용해 서버 구성을 자동화할 수 있게 해주는 자동화 플랫폼</li>
 <li>OpsWorks를 사용하면 Chef 및 Puppet을 통해 Amazon EC2 인스턴스 또는 온프레미스 컴퓨팅 환경 전체에서 서버가 구성, 배포 및 관리되는 방법을 자동가 가능</li>
 </ul>
-<h1 id="heading-22">
-  
-  <a class="anchor" href="#heading-22">#</a>
-</h1>
+<h1 id="heading-22"></h1>
 <p> </p>
-<h2 id="aws-managed-services">
-  <strong>AWS Managed Services</strong>
-  <a class="anchor" href="#aws-managed-services">#</a>
-</h2>
+<h2 id="aws-managed-services"><strong>AWS Managed Services</strong></h2>
 <hr>
 <p><img src="/AWS/Management/AMS.png" alt="AWS" /></p>
-<h1 id="heading-23">
-  
-  <a class="anchor" href="#heading-23">#</a>
-</h1>
+<h1 id="heading-23"></h1>
 <ul>
 <li>AWS Managed Services(AMS)는 안전하고 규정을 준수하는 AWS Landing Zone을 제공하고 고객 대신 AWS를 운영하는 서비스</li>
 <li>AWS Managed Services는 인프라를 유지 관리하기 위한 모범 사례를 구현하여 운영 오버헤드와 위험을 줄일 수 있도록 지원</li>
@@ -1815,10 +1563,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 <blockquote>
 <blockquote class="book-hint warning">
-  <h3 id="landing-zone">
-  <strong>Landing Zone</strong>
-  <a class="anchor" href="#landing-zone">#</a>
-</h3>
+  <h3 id="landing-zone"><strong>Landing Zone</strong></h3>
 <ul>
 <li>검증된 엔터프라이즈 운영 모델이자 지속적인 비용 최적화 및 일상적인 인프라 관리 수단</li>
 </ul>
@@ -1826,33 +1571,18 @@ https://github.com/alex-shpak/hugo-book
 </blockquote>
 
 </blockquote>
-<h1 id="heading-24">
-  
-  <a class="anchor" href="#heading-24">#</a>
-</h1>
+<h1 id="heading-24"></h1>
 <p> </p>
-<h2 id="aws-service-catalog">
-  <strong>AWS Service Catalog</strong>
-  <a class="anchor" href="#aws-service-catalog">#</a>
-</h2>
+<h2 id="aws-service-catalog"><strong>AWS Service Catalog</strong></h2>
 <hr>
-<h1 id="heading-25">
-  
-  <a class="anchor" href="#heading-25">#</a>
-</h1>
+<h1 id="heading-25"></h1>
 <ul>
 <li>AWS Service Catalog를 사용하는 조직은 AWS에서 사용이 승인된 IT 서비스 카탈로그를 생성하고 관리하는 서비스</li>
 <li>서비스에는 가상 머신 이미지, 서버, 소프트웨어 및 데이터베이스에서 멀티 티어 애플리케이션 아키텍처를 완성하는 모든 서비스가 포함</li>
 <li>AWS Service Catalog를 사용하면 일반적으로 배포된 IT 서비스를 중앙에서 관리할 수 있고 일관된 거버넌스를 달성하고 규정 준수 요건을 충족하는 데 도움이 되는 동시에 사용자가 필요로 하는 승인된 IT 서비스만을 신속하게 배포가능</li>
 </ul>
-<h1 id="heading-26">
-  
-  <a class="anchor" href="#heading-26">#</a>
-</h1>
-<h3 id="aws-service-catalog의-핵심개념">
-  <strong>AWS Service Catalog의 핵심개념</strong>
-  <a class="anchor" href="#aws-service-catalog%ec%9d%98-%ed%95%b5%ec%8b%ac%ea%b0%9c%eb%85%90">#</a>
-</h3>
+<h1 id="heading-26"></h1>
+<h3 id="aws-service-catalog의-핵심개념"><strong>AWS Service Catalog의 핵심개념</strong></h3>
 <ul>
 <li><strong>Service Catalog</strong>
 <ul>
@@ -1885,32 +1615,17 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-27">
-  
-  <a class="anchor" href="#heading-27">#</a>
-</h1>
+<h1 id="heading-27"></h1>
 <p> </p>
-<h2 id="aws-trustedadvisor">
-  <strong>AWS TrustedAdvisor</strong>
-  <a class="anchor" href="#aws-trustedadvisor">#</a>
-</h2>
+<h2 id="aws-trustedadvisor"><strong>AWS TrustedAdvisor</strong></h2>
 <hr>
 <p><img src="/AWS/Management/ATA.png" alt="AWS" /></p>
-<h1 id="heading-28">
-  
-  <a class="anchor" href="#heading-28">#</a>
-</h1>
+<h1 id="heading-28"></h1>
 <ul>
 <li>AWS Trusted Advisor는 AWS 모범 사례에 따라 리소스를 프로비저닝하는 데 도움이 되도록 실시간 지침을 제공하는 온라인 도구</li>
 </ul>
-<h1 id="heading-29">
-  
-  <a class="anchor" href="#heading-29">#</a>
-</h1>
-<h3 id="aws-trustedadvisro의-분석-카테고리">
-  <strong>AWS TrustedAdvisro의 분석 카테고리</strong>
-  <a class="anchor" href="#aws-trustedadvisro%ec%9d%98-%eb%b6%84%ec%84%9d-%ec%b9%b4%ed%85%8c%ea%b3%a0%eb%a6%ac">#</a>
-</h3>
+<h1 id="heading-29"></h1>
+<h3 id="aws-trustedadvisro의-분석-카테고리"><strong>AWS TrustedAdvisro의 분석 카테고리</strong></h3>
 <p><img src="/AWS/Management/ATA2.png" alt="AWS" /></p>
 </article>
  
@@ -2106,6 +1821,7 @@ https://github.com/alex-shpak/hugo-book
 </body>
 </div>
 </html>
+
 
 
 

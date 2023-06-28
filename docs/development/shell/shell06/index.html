@@ -2,43 +2,43 @@
 <html lang="en">
 
 <head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shell Programming###Interactive##Shell이 실행되는 환경은 두가지로 사용자로부터 프로프트를 통해 직접 명령을 입력받아 실행시키는 interactive shell과 script 파일을 실행하는 것과 같은 non-interacgtive shell이 있다.
+<meta name="description" content="Shell Programming Interactive Shell이 실행되는 환경은 두가지로 사용자로부터 프로프트를 통해 직접 명령을 입력받아 실행시키는 interactive shell과 script 파일을 실행하는 것과 같은 non-interacgtive shell이 있다.
 alais, job control과 같은 기능은 기본적으로 interactive shell에서 사용하기 위한 것으로 script를 실행할 때는 disable 된다.
-case $- in *i*) echo interactive shell ;; *) echo non-interactive shell ;; esac # $- 변수는 set 명령에 의해 설정되어 있는 option flage를 담고 있다.">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Interactive" />
-<meta property="og:description" content="Shell Programming###Interactive##Shell이 실행되는 환경은 두가지로 사용자로부터 프로프트를 통해 직접 명령을 입력받아 실행시키는 interactive shell과 script 파일을 실행하는 것과 같은 non-interacgtive shell이 있다.
+case $- in *i*) echo interactive shell ;; *) echo non-interactive shell ;; esac # $- 변수는 set 명령에 의해 설정되어 있는 option flage를 담고 있다. # i는 interactive를 의미 interactive 특징 Script 실행시에는 alias 기능이 disable 된다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/development/shell/shell06/><meta property="og:title" content="Interactive" />
+<meta property="og:description" content="Shell Programming Interactive Shell이 실행되는 환경은 두가지로 사용자로부터 프로프트를 통해 직접 명령을 입력받아 실행시키는 interactive shell과 script 파일을 실행하는 것과 같은 non-interacgtive shell이 있다.
 alais, job control과 같은 기능은 기본적으로 interactive shell에서 사용하기 위한 것으로 script를 실행할 때는 disable 된다.
-case $- in *i*) echo interactive shell ;; *) echo non-interactive shell ;; esac # $- 변수는 set 명령에 의해 설정되어 있는 option flage를 담고 있다." />
+case $- in *i*) echo interactive shell ;; *) echo non-interactive shell ;; esac # $- 변수는 set 명령에 의해 설정되어 있는 option flage를 담고 있다. # i는 interactive를 의미 interactive 특징 Script 실행시에는 alias 기능이 disable 된다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/development/shell/shell06/" /><meta property="article:section" content="docs" />
 
 
 
-<title>Interactive | 뭉게뭉게</title>
-<link rel="manifest" href="/manifest.json">
+<title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.3d8c7f91a1ae2a156d3acf98421fad5e26aabf6e44dfa654eae07357b1d35b2e.js" integrity="sha256-PYx/kaGuKhVtOs&#43;YQh&#43;tXiaqv25E36ZU6uBzV7HTWy4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
+<script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo="></script>
 <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+
 -->
+
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
+
 <body>
   <div class="background">
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex" style="max-width:100%;" >
-    
-    <aside style="padding-left: 1em;" class="book-menu">
-      <div class="book-menu-content">
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
       
   
 <nav styles="background-color:red; position=none;">
@@ -49,8 +49,9 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
+
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1034,127 +1035,6 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <span>Network</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
   <span>System</span>
   
 
@@ -1351,15 +1231,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
     </aside>
 
-
-
-    
-    <div style="padding-left: 2%;" class="book-page">
+    <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
   <div class="flex align-center justify-between">
@@ -1370,15 +1248,14 @@ https://github.com/alex-shpak/hugo-book
   <strong>Interactive</strong>
 
   <label for="toc-control">
-    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
   </label>
 </div>
 
 
   
-  <aside class="hidden clearfix">
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1411,27 +1288,12 @@ https://github.com/alex-shpak/hugo-book
 <br>
 <br>
       
-  <article class="markdown"><h1 id="shell-programming">
-  <strong>Shell Programming</strong>
-  <a class="anchor" href="#shell-programming">#</a>
-</h1>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
+  <article class="markdown"><h1 id="shell-programming"><strong>Shell Programming</strong></h1>
+<h1 id="heading"></h1>
 <p> </p>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
-<h2 id="interactive">
-  <strong>Interactive</strong>
-  <a class="anchor" href="#interactive">#</a>
-</h2>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
+<h1 id="heading-1"></h1>
+<h2 id="interactive"><strong>Interactive</strong></h2>
+<h1 id="heading-2"></h1>
 <ul>
 <li>
 <p><strong>Shell이 실행되는 환경은 두가지로 사용자로부터 프로프트를 통해 직접 명령을 입력받아 실행시키는 interactive shell과 script 파일을 실행하는 것과 같은 non-interacgtive shell이 있다.</strong></p>
@@ -1446,23 +1308,11 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">esac</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># $- 변수는 set 명령에 의해 설정되어 있는 option flage를 담고 있다.</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># i는 interactive를 의미</span>
-</span></span></code></pre></div><h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
+</span></span></code></pre></div><h1 id="heading-3"></h1>
 <p> </p>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
-<h3 id="interactive-특징">
-  <strong>interactive 특징</strong>
-  <a class="anchor" href="#interactive-%ed%8a%b9%ec%a7%95">#</a>
-</h3>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
+<h1 id="heading-4"></h1>
+<h3 id="interactive-특징"><strong>interactive 특징</strong></h3>
+<h1 id="heading-5"></h1>
 <ul>
 <li>
 <p><strong>Script 실행시에는 alias 기능이 disable 된다.</strong></p>
@@ -1471,10 +1321,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
+<h1 id="heading-6"></h1>
 <ul>
 <li>
 <p><strong>Script 실행시에는 histroy 확장이 disable 된다.</strong></p>
@@ -1483,10 +1330,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
+<h1 id="heading-7"></h1>
 <ul>
 <li>
 <p><strong>Script 실행시에는 job control이 disable 된다.</strong></p>
@@ -1495,10 +1339,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
+<h1 id="heading-8"></h1>
 <ul>
 <li>
 <p><strong>Script 실행시에는 exec 명령이 실패하면 바로 종료된다.</strong></p>
@@ -1507,10 +1348,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
+<h1 id="heading-9"></h1>
 <ul>
 <li>
 <p><strong>시작시 실행하는 파일이 다르다</strong></p>
@@ -1519,10 +1357,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
+<h1 id="heading-10"></h1>
 <p> </p>
 </article>
  
@@ -1586,6 +1421,7 @@ https://github.com/alex-shpak/hugo-book
 </body>
 </div>
 </html>
+
 
 
 

@@ -2,47 +2,49 @@
 <html lang="en">
 
 <head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="5장 데이터베이스##5장의 목표##복원력을 갖춘 아키텍처 설계 안정적이고/ 복원력을 갖춘 스토리지를 선택한다.
+<meta name="description" content="5장 데이터베이스 5장의 목표 복원력을 갖춘 아키텍처 설계 안정적이고/ 복원력을 갖춘 스토리지를 선택한다.
 어떻게 AWS 서비스를 사용해 결합 해제 매커니즘을 설계할지 결정한다.
 어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.
 어떻게 고 가용성 및/ 내결함성을 갖춘 아키텍처를 설계할지 결정한다.
-#성능이 뛰어난 아키텍처 정의 성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다. ##데이터베이스##데이터베이스를 사용하면 어플리케이션을 데이터를 저장하고 구성하며, 신속하게 검색할 수 있다.">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="5장 데이터베이스" />
-<meta property="og:description" content="5장 데이터베이스##5장의 목표##복원력을 갖춘 아키텍처 설계 안정적이고/ 복원력을 갖춘 스토리지를 선택한다.
+성능이 뛰어난 아키텍처 정의 성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다. 데이터베이스 데이터베이스를 사용하면 어플리케이션을 데이터를 저장하고 구성하며, 신속하게 검색할 수 있다.
+단층 파일(Flat File)에 데이터를 저장할 수도 있지만, 데이터양이 증가하게 디면 검색 속도가 느려지는 단점이 있으며, 개발자는 데이터를 저장하고 검색하기 위해 직접 파일 시스템에서 작업하는 대신, 데이터베이스로 작업을 수행함으로써 애플리케이션 개발에 집중하는 것이 가능하다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/aws/awssaa/saa-5/><meta property="og:title" content="5장 데이터베이스" />
+<meta property="og:description" content="5장 데이터베이스 5장의 목표 복원력을 갖춘 아키텍처 설계 안정적이고/ 복원력을 갖춘 스토리지를 선택한다.
 어떻게 AWS 서비스를 사용해 결합 해제 매커니즘을 설계할지 결정한다.
 어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다.
 어떻게 고 가용성 및/ 내결함성을 갖춘 아키텍처를 설계할지 결정한다.
-#성능이 뛰어난 아키텍처 정의 성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다. ##데이터베이스##데이터베이스를 사용하면 어플리케이션을 데이터를 저장하고 구성하며, 신속하게 검색할 수 있다." />
+성능이 뛰어난 아키텍처 정의 성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다. 데이터베이스 데이터베이스를 사용하면 어플리케이션을 데이터를 저장하고 구성하며, 신속하게 검색할 수 있다.
+단층 파일(Flat File)에 데이터를 저장할 수도 있지만, 데이터양이 증가하게 디면 검색 속도가 느려지는 단점이 있으며, 개발자는 데이터를 저장하고 검색하기 위해 직접 파일 시스템에서 작업하는 대신, 데이터베이스로 작업을 수행함으로써 애플리케이션 개발에 집중하는 것이 가능하다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/aws/awssaa/saa-5/" /><meta property="article:section" content="docs" />
 
 
 
-<title>5장 데이터베이스 | 뭉게뭉게</title>
-<link rel="manifest" href="/manifest.json">
+<title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.3d8c7f91a1ae2a156d3acf98421fad5e26aabf6e44dfa654eae07357b1d35b2e.js" integrity="sha256-PYx/kaGuKhVtOs&#43;YQh&#43;tXiaqv25E36ZU6uBzV7HTWy4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
+<script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo="></script>
 <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+
 -->
+
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
+
 <body>
   <div class="background">
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex" style="max-width:100%;" >
-    
-    <aside style="padding-left: 1em;" class="book-menu">
-      <div class="book-menu-content">
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
       
   
 <nav styles="background-color:red; position=none;">
@@ -53,8 +55,9 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
+
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -968,127 +971,6 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <span>Network</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
   <span>System</span>
   
 
@@ -1285,15 +1167,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
     </aside>
 
-
-
-    
-    <div style="padding-left: 2%;" class="book-page">
+    <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
   <div class="flex align-center justify-between">
@@ -1304,15 +1184,14 @@ https://github.com/alex-shpak/hugo-book
   <strong>5장 데이터베이스</strong>
 
   <label for="toc-control">
-    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
   </label>
 </div>
 
 
   
-  <aside class="hidden clearfix">
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1501,23 +1380,11 @@ https://github.com/alex-shpak/hugo-book
 <br>
 <br>
       
-  <article class="markdown"><h1 id="5장-데이터베이스">
-  <strong>5장 데이터베이스</strong>
-  <a class="anchor" href="#5%ec%9e%a5-%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%b2%a0%ec%9d%b4%ec%8a%a4">#</a>
-</h1>
+  <article class="markdown"><h1 id="5장-데이터베이스"><strong>5장 데이터베이스</strong></h1>
 <hr>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
-<h2 id="5장의-목표">
-  <strong>5장의 목표</strong>
-  <a class="anchor" href="#5%ec%9e%a5%ec%9d%98-%eb%aa%a9%ed%91%9c">#</a>
-</h2>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
+<h1 id="heading"></h1>
+<h2 id="5장의-목표"><strong>5장의 목표</strong></h2>
+<h1 id="heading-1"></h1>
 <ul>
 <li><strong>복원력을 갖춘 아키텍처 설계</strong>
 <ul>
@@ -1536,10 +1403,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
+<h1 id="heading-2"></h1>
 <ul>
 <li><strong>성능이 뛰어난 아키텍처 정의</strong>
 <ul>
@@ -1548,23 +1412,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
+<h1 id="heading-3"></h1>
 <p> </p>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
-<h3 id="데이터베이스">
-  <strong>데이터베이스</strong>
-  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%b2%a0%ec%9d%b4%ec%8a%a4">#</a>
-</h3>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
+<h1 id="heading-4"></h1>
+<h3 id="데이터베이스"><strong>데이터베이스</strong></h3>
+<h1 id="heading-5"></h1>
 <ul>
 <li>
 <p><strong>데이터베이스를 사용하면 어플리케이션을 데이터를 저장하고 구성하며, 신속하게 검색할 수 있다.</strong></p>
@@ -1579,23 +1431,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>데이터베이스에 장애가 발생할 때 데이터를 보호 및 복구하는 방법 뿐이 아닌, 애플리케이션의 필요한 수준의 성능과 안정성을 얻기 위해 AWS가 제공하는 데이터베이스 서비스를 학습한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
+<h1 id="heading-6"></h1>
 <p> </p>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
-<h3 id="관계형-데이터베이스">
-  <strong>관계형 데이터베이스</strong>
-  <a class="anchor" href="#%ea%b4%80%ea%b3%84%ed%98%95-%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%b2%a0%ec%9d%b4%ec%8a%a4">#</a>
-</h3>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
+<h1 id="heading-7"></h1>
+<h3 id="관계형-데이터베이스"><strong>관계형 데이터베이스</strong></h3>
+<h1 id="heading-8"></h1>
 <ul>
 <li>
 <p><strong>관계형 데이터베이스는 하나 이상의 테이블을 포함한 열과 행이 있어 스프레드시트로 시각화가 가능한 데이터베이스를 의미한다.</strong></p>
@@ -1604,19 +1444,10 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>관계형 데이터베이스 테이블에서 열은 속성, 행은 레코드 또는 튜플이라고 한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
+<h1 id="heading-9"></h1>
 <p> </p>
-<h3 id="열과-속성">
-  <strong>열과 속성</strong>
-  <a class="anchor" href="#%ec%97%b4%ea%b3%bc-%ec%86%8d%ec%84%b1">#</a>
-</h3>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
+<h3 id="열과-속성"><strong>열과 속성</strong></h3>
+<h1 id="heading-10"></h1>
 <ul>
 <li>
 <p><strong>관계형 데이터베이스 테이블에 데이털르 추가하기 전에, 각 열의 이름과 입력될 데이터의 형식을 사전에 정의해야 한다.</strong></p>
@@ -1663,23 +1494,11 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>관계형 데이터베이스의 이점은 데이터를 어떻게 쿼리할지 이해할 필요가 없다는 것이며, 데이터가 일관된 형식으로 존재하는 한 필요한 데이털르 원하는 방식으로 얻기 위해 여러 쿼리를 가공할 수 있다.</strong></li>
 <li><strong>관계형 데이터베이스는 임의의 열에 데이터를 쿼리하고 사용자가 데이터를 제공 방식을 지정해야 하는 애플리케이션에 적합하다.</strong></li>
 </ul>
-<h1 id="heading-11">
-  
-  <a class="anchor" href="#heading-11">#</a>
-</h1>
+<h1 id="heading-11"></h1>
 <p> </p>
-<h1 id="heading-12">
-  
-  <a class="anchor" href="#heading-12">#</a>
-</h1>
-<h3 id="다중-테이블-사용">
-  <strong>다중 테이블 사용</strong>
-  <a class="anchor" href="#%eb%8b%a4%ec%a4%91-%ed%85%8c%ec%9d%b4%eb%b8%94-%ec%82%ac%ec%9a%a9">#</a>
-</h3>
-<h1 id="heading-13">
-  
-  <a class="anchor" href="#heading-13">#</a>
-</h1>
+<h1 id="heading-12"></h1>
+<h3 id="다중-테이블-사용"><strong>다중 테이블 사용</strong></h3>
+<h1 id="heading-13"></h1>
 <ul>
 <li>
 <p><strong>모든 데이터를 단일 테이블에 저장하면 불피요한 중복이 생기기 때문에 데이터베이스가 불필요하게 커지고 쿼리 속도가 느려지므로, 일반적으로 애플리케이션은 다중 테이블을 연결해서 사용한다.</strong></p>
@@ -1714,23 +1533,11 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>사원 테이블은 부서 ID를 외래 키(Foregin Key)로 참조한다.</strong></li>
 <li><strong>데이터베이스가 여러 테이블의 열이 어떻게 연관됐는지 알 수 있도록 기본 키와 외래 키를 반드시 정해야 하며, 데이터베이스는 외래 키 제약 조건을 활성화해 하위 테이블이 외래 키를 참조할 때 해당 키가 상위 테이블에도 존재하는 지 확인해야 한다.</strong></li>
 </ul>
-<h1 id="heading-14">
-  
-  <a class="anchor" href="#heading-14">#</a>
-</h1>
+<h1 id="heading-14"></h1>
 <p> </p>
-<h1 id="heading-15">
-  
-  <a class="anchor" href="#heading-15">#</a>
-</h1>
-<h3 id="sql">
-  <strong>SQL</strong>
-  <a class="anchor" href="#sql">#</a>
-</h3>
-<h1 id="heading-16">
-  
-  <a class="anchor" href="#heading-16">#</a>
-</h1>
+<h1 id="heading-15"></h1>
+<h3 id="sql"><strong>SQL</strong></h3>
+<h1 id="heading-16"></h1>
 <ul>
 <li>
 <p><strong>관계형 데이터베이스에서는 구조화 질의 언어 SQL(Structured Query Language)를 사용해 데이터를 저장하고 쿼리하고 유지 관리 작업을 수행하므로 SQL 데이터베이스라고 불린다.</strong></p>
@@ -1739,23 +1546,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>SQL문은 관계형 데이터베이스 관리 시스템(RDBMS, Relational Database Management System) 마다 조금씩 차이가 있으며, 이는 주요 프로그래밍 언어들에 SQL 문을 만들고 데이터베이스에 입출력하는 라이브러리가 이기 때문으로, AWS 아키텍처로써 SQL까지는 알 필요는 없지만 AWS 관리형 데이터베이스에 작업하기 위한 일반적인 SQL 용어의 개념은 이해할 필요가 있다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-17">
-  
-  <a class="anchor" href="#heading-17">#</a>
-</h1>
+<h1 id="heading-17"></h1>
 <p> </p>
-<h1 id="heading-18">
-  
-  <a class="anchor" href="#heading-18">#</a>
-</h1>
-<h3 id="데이터-쿼리">
-  <strong>데이터 쿼리</strong>
-  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%bf%bc%eb%a6%ac">#</a>
-</h3>
-<h1 id="heading-19">
-  
-  <a class="anchor" href="#heading-19">#</a>
-</h1>
+<h1 id="heading-18"></h1>
+<h3 id="데이터-쿼리"><strong>데이터 쿼리</strong></h3>
+<h1 id="heading-19"></h1>
 <ul>
 <li>
 <p><strong>SELECT 문은 SQL 데이터베이스에서 데이터를 쿼리하는 데 사용되며, 데이터베이스에서 조회하고 싶은 특정 열을 지정할 뿐 아니라 모든 열에서 값을 기반으로 쿼리가 가능하다.</strong></p>
@@ -1764,63 +1559,27 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>테이블의 에측 가능한 구조와 외래 키 제약 조건을 사용해서 SELECT 문과 함께 JOIN 절을 사용해 여러 테이블의 데이터를 결합할 수 있다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-20">
-  
-  <a class="anchor" href="#heading-20">#</a>
-</h1>
+<h1 id="heading-20"></h1>
 <p> </p>
-<h1 id="heading-21">
-  
-  <a class="anchor" href="#heading-21">#</a>
-</h1>
-<h3 id="데이터-저장">
-  <strong>데이터 저장</strong>
-  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%a0%80%ec%9e%a5">#</a>
-</h3>
-<h1 id="heading-22">
-  
-  <a class="anchor" href="#heading-22">#</a>
-</h1>
+<h1 id="heading-21"></h1>
+<h3 id="데이터-저장"><strong>데이터 저장</strong></h3>
+<h1 id="heading-22"></h1>
 <ul>
 <li><strong>INSERT 문을 사용하면 테이블에 직접 데이터를 삽입할 수 있으며, 대량의 레코드를 저장해야 할 때 COPY 명령을 사용하면 적절하게 형식을 ㅁ맞춘 파일에서 지정한 테이블로 데이터를 복사할 수 있다.</strong></li>
 </ul>
-<h1 id="heading-23">
-  
-  <a class="anchor" href="#heading-23">#</a>
-</h1>
+<h1 id="heading-23"></h1>
 <p> </p>
-<h1 id="heading-24">
-  
-  <a class="anchor" href="#heading-24">#</a>
-</h1>
-<h3 id="온라인-트랙잭션-처리와-온라인-분석-처리">
-  <strong>온라인 트랙잭션 처리와 온라인 분석 처리</strong>
-  <a class="anchor" href="#%ec%98%a8%eb%9d%bc%ec%9d%b8-%ed%8a%b8%eb%9e%99%ec%9e%ad%ec%85%98-%ec%b2%98%eb%a6%ac%ec%99%80-%ec%98%a8%eb%9d%bc%ec%9d%b8-%eb%b6%84%ec%84%9d-%ec%b2%98%eb%a6%ac">#</a>
-</h3>
-<h1 id="heading-25">
-  
-  <a class="anchor" href="#heading-25">#</a>
-</h1>
+<h1 id="heading-24"></h1>
+<h3 id="온라인-트랙잭션-처리와-온라인-분석-처리"><strong>온라인 트랙잭션 처리와 온라인 분석 처리</strong></h3>
+<h1 id="heading-25"></h1>
 <ul>
 <li><strong>관계형 데이터베이스는 구성에 따라 온라인 트랜잭션 처리(OLTP, OnLine Transaction Processing)과 온라인 분석 처리(OLAP, Online Analytical Processing)</strong></li>
 </ul>
-<h1 id="heading-26">
-  
-  <a class="anchor" href="#heading-26">#</a>
-</h1>
+<h1 id="heading-26"></h1>
 <p> </p>
-<h1 id="heading-27">
-  
-  <a class="anchor" href="#heading-27">#</a>
-</h1>
-<h3 id="oltp">
-  <strong>OLTP</strong>
-  <a class="anchor" href="#oltp">#</a>
-</h3>
-<h1 id="heading-28">
-  
-  <a class="anchor" href="#heading-28">#</a>
-</h1>
+<h1 id="heading-27"></h1>
+<h3 id="oltp"><strong>OLTP</strong></h3>
+<h1 id="heading-28"></h1>
 <ul>
 <li>
 <p><strong>OLTP 데이터베이스는 초당 몇 회씩 순차적으로 데이터를 버번하게 읽고 쓰는 애플리케이션에 적합하며, OLTP 데이터베이스는 빠른 쿼리에 최적화 되어 있다.</strong></p>
@@ -1832,19 +1591,10 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>OLTP 데이터베이스는 1분당 수백 건의 주문을 처리해야 하는 온라인 주문 시스템을 지원하는 데 적합하다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-29">
-  
-  <a class="anchor" href="#heading-29">#</a>
-</h1>
+<h1 id="heading-29"></h1>
 <p> </p>
-<h3 id="olap">
-  <strong>OLAP</strong>
-  <a class="anchor" href="#olap">#</a>
-</h3>
-<h1 id="heading-30">
-  
-  <a class="anchor" href="#heading-30">#</a>
-</h1>
+<h3 id="olap"><strong>OLAP</strong></h3>
+<h1 id="heading-30"></h1>
 <ul>
 <li>
 <p><strong>OLAP 데이터베이스는 복잡한 대형 데이터 세트 쿼리에 최적화 되어 있으며, 상단하 스토리지와 컴퓨팅이 필요하여 데이터웨어하우징 애플리케이션으르 구축하여 여러 OLTP 데이터베이스를 단일 OLAP 데이터베이스로 모으는 것이 일반적이다.</strong></p>
@@ -1853,23 +1603,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>보통 대형 OLAP 데이터베이스에서는 복잡한 쿼리로 인한 컴퓨팅 부하를 여러 데이터베이스 서버가 나눠 처리하며, 파티셔닝이라는 프로세스에서 각 서버는 데이터베이스 일부를 맡아 처리한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-31">
-  
-  <a class="anchor" href="#heading-31">#</a>
-</h1>
+<h1 id="heading-31"></h1>
 <p> </p>
-<h1 id="heading-32">
-  
-  <a class="anchor" href="#heading-32">#</a>
-</h1>
-<h3 id="amazone-relational-database-server--이하-rds-">
-  <strong>Amazone Relational Database Server ( 이하 RDS )</strong>
-  <a class="anchor" href="#amazone-relational-database-server--%ec%9d%b4%ed%95%98-rds-">#</a>
-</h3>
-<h1 id="heading-33">
-  
-  <a class="anchor" href="#heading-33">#</a>
-</h1>
+<h1 id="heading-32"></h1>
+<h3 id="amazone-relational-database-server--이하-rds-"><strong>Amazone Relational Database Server ( 이하 RDS )</strong></h3>
+<h1 id="heading-33"></h1>
 <ul>
 <li>
 <p><strong>RDS는 클라우드에서 관계형 데이터베이스 시스템을 실행할 수 있게 하는 관리형 데이터베이스 서비스로, 데이터베이스 시스템 설정, 백업 수행, 고 가용성 보장, 데이터베이스와 기반 운영체제 패치 적용 등과 같은 작업을 수행한다.</strong></p>
@@ -1881,10 +1619,7 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>RDS를 사용해 데이터베이스를 배포할 때, 격리된 데이터베이스 환경인 데이터베이스 인스턴스 구성에서부 시작한다. 데이터베이스 인스턴스는 지정한 가상 프라이빗 클라우드(VPC)에 존재하나, EC2 인스턴스와는 다르게 AWS가 전적으로 데이터베이스 인스턴스를 관리한다. SSH를 사용해 엑세스할 수 없으며, EC2 인스턴스 사이에서도 보이지 않는다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-34">
-  
-  <a class="anchor" href="#heading-34">#</a>
-</h1>
+<h1 id="heading-34"></h1>
 <p> </p>
 <ul>
 <li><strong>데이터베이스 엔진</strong>
@@ -1902,10 +1637,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-35">
-  
-  <a class="anchor" href="#heading-35">#</a>
-</h1>
+<h1 id="heading-35"></h1>
 <ul>
 <li><strong>Maria DB</strong>
 <ul>
@@ -1914,10 +1646,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-36">
-  
-  <a class="anchor" href="#heading-36">#</a>
-</h1>
+<h1 id="heading-36"></h1>
 <ul>
 <li><strong>Oracle</strong>
 <ul>
@@ -1929,10 +1658,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-37">
-  
-  <a class="anchor" href="#heading-37">#</a>
-</h1>
+<h1 id="heading-37"></h1>
 <ul>
 <li><strong>PostgreSQL</strong>
 <ul>
@@ -1940,10 +1666,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-38">
-  
-  <a class="anchor" href="#heading-38">#</a>
-</h1>
+<h1 id="heading-38"></h1>
 <ul>
 <li><strong>Amazone Aurora</strong>
 <ul>
@@ -1956,10 +1679,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-39">
-  
-  <a class="anchor" href="#heading-39">#</a>
-</h1>
+<h1 id="heading-39"></h1>
 <ul>
 <li><strong>Microsoft SQL Server</strong>
 <ul>
@@ -1971,10 +1691,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-40">
-  
-  <a class="anchor" href="#heading-40">#</a>
-</h1>
+<h1 id="heading-40"></h1>
 <p> </p>
 <ul>
 <li><strong>라이센스 고려사항</strong>
@@ -1994,10 +1711,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-41">
-  
-  <a class="anchor" href="#heading-41">#</a>
-</h1>
+<h1 id="heading-41"></h1>
 <p> </p>
 <ul>
 <li><strong>데이터베이스 옵션 그룹</strong>
@@ -2020,10 +1734,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-42">
-  
-  <a class="anchor" href="#heading-42">#</a>
-</h1>
+<h1 id="heading-42"></h1>
 <p> </p>
 <ul>
 <li><strong>데이터베이스 인스턴스 클래스</strong>
@@ -2035,10 +1746,7 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>선택을 잘못 했거나 요구 사항이 변경될 때 인스턴스를 다른 클래스로 전환할 수도 있으며, RDS 데이터베이스 인스턴스 클래스를 다음의 세 가지 유형으로 분류한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-43">
-  
-  <a class="anchor" href="#heading-43">#</a>
-</h1>
+<h1 id="heading-43"></h1>
 <ul>
 <li><strong>표준</strong>
 <ul>
@@ -2049,10 +1757,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-44">
-  
-  <a class="anchor" href="#heading-44">#</a>
-</h1>
+<h1 id="heading-44"></h1>
 <ul>
 <li><strong>메모리 최적화 (대용량의 처리량)</strong>
 <ul>
@@ -2063,10 +1768,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-45">
-  
-  <a class="anchor" href="#heading-45">#</a>
-</h1>
+<h1 id="heading-45"></h1>
 <ul>
 <li><strong>순간확장 가능 (개발 및 테스트 용도)</strong>
 <ul>
@@ -2077,10 +1779,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-46">
-  
-  <a class="anchor" href="#heading-46">#</a>
-</h1>
+<h1 id="heading-46"></h1>
 <p> </p>
 <ul>
 <li><strong>스토리지</strong>
@@ -2094,10 +1793,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-47">
-  
-  <a class="anchor" href="#heading-47">#</a>
-</h1>
+<h1 id="heading-47"></h1>
 <p> </p>
 <ul>
 <li><strong>IOPS의 이해</strong>
@@ -2129,10 +1825,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-48">
-  
-  <a class="anchor" href="#heading-48">#</a>
-</h1>
+<h1 id="heading-48"></h1>
 <p> </p>
 <ul>
 <li><strong>스토리지 유형에 따라 IOPS 수가 달라지며, RDS는 다음 세가 유형의 스토리지를 제공한다.</strong>
@@ -2180,10 +1873,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-49">
-  
-  <a class="anchor" href="#heading-49">#</a>
-</h1>
+<h1 id="heading-49"></h1>
 <ul>
 <li><strong>프로비저닝된 IOPS SSD(io1)</strong>
 <ul>
@@ -2214,10 +1904,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-50">
-  
-  <a class="anchor" href="#heading-50">#</a>
-</h1>
+<h1 id="heading-50"></h1>
 <ul>
 <li><strong>마그네틱 스토리지</strong>
 <ul>
@@ -2225,23 +1912,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-51">
-  
-  <a class="anchor" href="#heading-51">#</a>
-</h1>
+<h1 id="heading-51"></h1>
 <p> </p>
-<h1 id="heading-52">
-  
-  <a class="anchor" href="#heading-52">#</a>
-</h1>
-<h3 id="읽기-전용-복제본">
-  <strong>읽기 전용 복제본</strong>
-  <a class="anchor" href="#%ec%9d%bd%ea%b8%b0-%ec%a0%84%ec%9a%a9-%eb%b3%b5%ec%a0%9c%eb%b3%b8">#</a>
-</h3>
-<h1 id="heading-53">
-  
-  <a class="anchor" href="#heading-53">#</a>
-</h1>
+<h1 id="heading-52"></h1>
+<h3 id="읽기-전용-복제본"><strong>읽기 전용 복제본</strong></h3>
+<h1 id="heading-53"></h1>
 <ul>
 <li>
 <p><strong>데이터베이스 인스턴스가 성능 요구 사항을 충족하지 못할 때, 병목 현상 발생 위치에 따라 해결 방법을 적용할 수 있다.</strong></p>
@@ -2283,23 +1958,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>마스터 인스턴스는 장애가 발생했을 시에, 읽기 전용 복제본을 마스터로 승격시킬 수는 있지만, 비동기 복제의 특성이 존재하므로 어느 정도의 손실은 감수해야 한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-54">
-  
-  <a class="anchor" href="#heading-54">#</a>
-</h1>
+<h1 id="heading-54"></h1>
 <p> </p>
-<h1 id="heading-55">
-  
-  <a class="anchor" href="#heading-55">#</a>
-</h1>
-<h3 id="고-가용성다중-az">
-  <strong>고 가용성(다중-AZ)</strong>
-  <a class="anchor" href="#%ea%b3%a0-%ea%b0%80%ec%9a%a9%ec%84%b1%eb%8b%a4%ec%a4%91-az">#</a>
-</h3>
-<h1 id="heading-56">
-  
-  <a class="anchor" href="#heading-56">#</a>
-</h1>
+<h1 id="heading-55"></h1>
+<h3 id="고-가용성다중-az"><strong>고 가용성(다중-AZ)</strong></h3>
+<h1 id="heading-56"></h1>
 <ul>
 <li>
 <p><strong>데이터베이스 인스턴스가 중단되어도 데이터베이스를 계속 운영하려면, RDS의 다중 AZ배포를 통해 여러 가용 영역에 데이터베이스 인스턴스를 다수 배포한다.</strong></p>
@@ -2322,10 +1985,7 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>모든 데이터베이스 엔진은 다중 AZ를 지원하지만 구현 방식은 약간씩 다르며, 인스턴스를 만든 후에 다중 AZ를 활성화하면 성능이 상당히 떨어지므로 유지 관리 주기를 짧게 설정해야 한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-57">
-  
-  <a class="anchor" href="#heading-57">#</a>
-</h1>
+<h1 id="heading-57"></h1>
 <p> </p>
 <ul>
 <li><strong>Oracle, PostgreSQL, MariaDB, MySQL, Microsoft SQL Server의 다중-AZ</strong>
@@ -2345,10 +2005,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-58">
-  
-  <a class="anchor" href="#heading-58">#</a>
-</h1>
+<h1 id="heading-58"></h1>
 <p> </p>
 <ul>
 <li><strong>Amazon Aurora에서 다중-AZ</strong>
@@ -2368,23 +2025,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-59">
-  
-  <a class="anchor" href="#heading-59">#</a>
-</h1>
+<h1 id="heading-59"></h1>
 <p> </p>
-<h1 id="heading-60">
-  
-  <a class="anchor" href="#heading-60">#</a>
-</h1>
-<h3 id="백업과-복구">
-  <strong>백업과 복구</strong>
-  <a class="anchor" href="#%eb%b0%b1%ec%97%85%ea%b3%bc-%eb%b3%b5%ea%b5%ac">#</a>
-</h3>
-<h1 id="heading-61">
-  
-  <a class="anchor" href="#heading-61">#</a>
-</h1>
+<h1 id="heading-60"></h1>
+<h3 id="백업과-복구"><strong>백업과 복구</strong></h3>
+<h1 id="heading-61"></h1>
 <ul>
 <li>
 <p><strong>RDS는 데이터베이스 인스턴스의 EBS 볼륨 스냇샷 기능을 제공한다. 일단 EBS 스냅샷처럼 인스턴스에 기반한 모든 데이터베이스는 스냅샷을 생성하여 S3에 저장할 수 있으며, 스냅샷은 중복성을 위해 같은 리전 여러 영역에 보관된다.</strong></p>
@@ -2406,23 +2051,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>새 인스턴스에 더 빠른 성능의 프로비저닝된 IOPS를 할당하면 복구 시간이 빨라진다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-62">
-  
-  <a class="anchor" href="#heading-62">#</a>
-</h1>
+<h1 id="heading-62"></h1>
 <p> </p>
-<h1 id="heading-63">
-  
-  <a class="anchor" href="#heading-63">#</a>
-</h1>
-<h3 id="자동화된-스냅샷">
-  <strong>자동화된 스냅샷</strong>
-  <a class="anchor" href="#%ec%9e%90%eb%8f%99%ed%99%94%eb%90%9c-%ec%8a%a4%eb%83%85%ec%83%b7">#</a>
-</h3>
-<h1 id="heading-64">
-  
-  <a class="anchor" href="#heading-64">#</a>
-</h1>
+<h1 id="heading-63"></h1>
+<h3 id="자동화된-스냅샷"><strong>자동화된 스냅샷</strong></h3>
+<h1 id="heading-64"></h1>
 <ul>
 <li>
 <p><strong>RDS는 매일 30분 백업 기간에 인스턴스 스냅샷을 자동 생성할 수 있으며, 이 기간은 사용자가 지정할 수도 있고 RDS가 자동으로 수행하게 할 수도 있다.</strong></p>
@@ -2449,23 +2082,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>데이터베이스 인스턴스에 대해 수동으로 스냅샷을 수행할 수 있으며, 자동화된 스냅샷과 달리 수동 스냅샷은 삭제할 때까지 유지된다. 인스턴스를 삭제하면 사용자는 RDS의 최종 스냅샷 작업 수행 여부와 자동 스냅샷 여부를 선택하야 하고, 최종 스냅샷과 모든 수동 스냅샷은 유지되지만, 자동 백업을 유지하지 않기로 선택한다면 자동 스냅샷은 즉시 삭제된다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-65">
-  
-  <a class="anchor" href="#heading-65">#</a>
-</h1>
+<h1 id="heading-65"></h1>
 <p> </p>
-<h1 id="heading-66">
-  
-  <a class="anchor" href="#heading-66">#</a>
-</h1>
-<h3 id="유지-관리-항목">
-  <strong>유지 관리 항목</strong>
-  <a class="anchor" href="#%ec%9c%a0%ec%a7%80-%ea%b4%80%eb%a6%ac-%ed%95%ad%eb%aa%a9">#</a>
-</h3>
-<h1 id="heading-67">
-  
-  <a class="anchor" href="#heading-67">#</a>
-</h1>
+<h1 id="heading-66"></h1>
+<h3 id="유지-관리-항목"><strong>유지 관리 항목</strong></h3>
+<h1 id="heading-67"></h1>
 <ul>
 <li>
 <p><strong>RDS는 관리형 서비스이므로 패치 및 업그레이드 처리는 AWS가 책임지며, 데이터베이스 인스턴스에서 운영 체제 보안과 안정성 패치 등의 유지 관리를 몇 달에 한 번씩 정기적으로 수행한다.</strong></p>
@@ -2483,23 +2104,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>유지 관리 기간을 매주 30분으로 지정해 유지 관리 작업이 수행되는 시기를 결정할 수 있으며, 유지 관리와 백업을 같은 기간에 지정할 수 있다. 유지 관리 기간을 30분으로 설정해도 작업은 유지 관리 기간을 넘어서 진행될 수도 있다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-68">
-  
-  <a class="anchor" href="#heading-68">#</a>
-</h1>
+<h1 id="heading-68"></h1>
 <p> </p>
-<h1 id="heading-69">
-  
-  <a class="anchor" href="#heading-69">#</a>
-</h1>
-<h3 id="amazon-redshift">
-  <strong>Amazon Redshift</strong>
-  <a class="anchor" href="#amazon-redshift">#</a>
-</h3>
-<h1 id="heading-70">
-  
-  <a class="anchor" href="#heading-70">#</a>
-</h1>
+<h1 id="heading-69"></h1>
+<h3 id="amazon-redshift"><strong>Amazon Redshift</strong></h3>
+<h1 id="heading-70"></h1>
 <ul>
 <li>
 <p><strong>Redshift는 OLAP 데이터베이스를 위해 설계된 PostgreSQL 기반의 관리형 데이터베이스 웨어하우스 솔루션으로 RDS와는 별개의 서비스로 존재한다.</strong></p>
@@ -2517,15 +2126,9 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>COPY 명령을 사용해 파일에서 Redshift 데이터베이스로 데이터를 가져올 때 Redshift는 어떤 열을 압축할지 선택할 수 있다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-71">
-  
-  <a class="anchor" href="#heading-71">#</a>
-</h1>
+<h1 id="heading-71"></h1>
 <p> </p>
-<h1 id="heading-72">
-  
-  <a class="anchor" href="#heading-72">#</a>
-</h1>
+<h1 id="heading-72"></h1>
 <ul>
 <li><strong>컴퓨팅 노드</strong>
 <ul>
@@ -2538,10 +2141,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-73">
-  
-  <a class="anchor" href="#heading-73">#</a>
-</h1>
+<h1 id="heading-73"></h1>
 <p> </p>
 <ul>
 <li><strong>데이터 분산 스타일</strong>
@@ -2561,23 +2161,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-74">
-  
-  <a class="anchor" href="#heading-74">#</a>
-</h1>
+<h1 id="heading-74"></h1>
 <p> </p>
-<h1 id="heading-75">
-  
-  <a class="anchor" href="#heading-75">#</a>
-</h1>
-<h3 id="비관계형-데이터베이스-no-sql">
-  <strong>비관계형 데이터베이스 No-SQL</strong>
-  <a class="anchor" href="#%eb%b9%84%ea%b4%80%ea%b3%84%ed%98%95-%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%b2%a0%ec%9d%b4%ec%8a%a4-no-sql">#</a>
-</h3>
-<h1 id="heading-76">
-  
-  <a class="anchor" href="#heading-76">#</a>
-</h1>
+<h1 id="heading-75"></h1>
+<h3 id="비관계형-데이터베이스-no-sql"><strong>비관계형 데이터베이스 No-SQL</strong></h3>
+<h1 id="heading-76"></h1>
 <ul>
 <li>
 <p><strong>비관계형 데이터베이스는 초당 수만 개의 트랜잭션을 일관성 있게 처리하도록 설계되어 있다.</strong></p>
@@ -2606,10 +2194,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-77">
-  
-  <a class="anchor" href="#heading-77">#</a>
-</h1>
+<h1 id="heading-77"></h1>
 <p> </p>
 <ul>
 <li><strong>데이터 저장</strong>
@@ -2629,10 +2214,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-78">
-  
-  <a class="anchor" href="#heading-78">#</a>
-</h1>
+<h1 id="heading-78"></h1>
 <p> </p>
 <ul>
 <li><strong>데이터 쿼리</strong>
@@ -2684,10 +2266,7 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>비관계형 데이터베이스에서 Charlotte라는 사원이 있는 모든 부서의 목록을 조회하는 것은 어려울 수 있으며, 사원 ID로 항목이 정렬되어 있으므로, 이름의 값이 Charlotte인 항목을 찾으려면 시스템은 모든 항목을 검색해야하는 문제점이 존재한다.</strong></li>
 <li><strong>각 항목의 데이터들은 정형화되어 있지 않기 때문에, 모든 속성마다 검색해서 부서 속성이 포함된 항목을 판별해야 하며, 이러한 쿼리는 느릴 뿐 아니라 컴퓨팅 자원도 상당히 소모한다.</strong></li>
 </ul>
-<h1 id="heading-79">
-  
-  <a class="anchor" href="#heading-79">#</a>
-</h1>
+<h1 id="heading-79"></h1>
 <p> </p>
 <ul>
 <li><strong>비관계형 데이터베이스 유형</strong>
@@ -2704,23 +2283,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-80">
-  
-  <a class="anchor" href="#heading-80">#</a>
-</h1>
+<h1 id="heading-80"></h1>
 <p> </p>
-<h1 id="heading-81">
-  
-  <a class="anchor" href="#heading-81">#</a>
-</h1>
-<h3 id="dynamodb">
-  <strong>DynamoDB</strong>
-  <a class="anchor" href="#dynamodb">#</a>
-</h3>
-<h1 id="heading-82">
-  
-  <a class="anchor" href="#heading-82">#</a>
-</h1>
+<h1 id="heading-81"></h1>
+<h3 id="dynamodb"><strong>DynamoDB</strong></h3>
+<h1 id="heading-82"></h1>
 <ul>
 <li>
 <p><strong>DynamoDB는 초당 수천 개 읽기 및 쓰기를 처리할 수 있는 관리형 비관계형 데이터베이스 서비스로, 데이터를 여러 파티션에 걸쳐 분산시켜서 이러한 성능을 얻는다.</strong></p>
@@ -2729,10 +2296,7 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>파티션은 테이블용 스토리지 할당으로, 여러 가용 영역의 SSD에 백업된다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-83">
-  
-  <a class="anchor" href="#heading-83">#</a>
-</h1>
+<h1 id="heading-83"></h1>
 <p> </p>
 <ul>
 <li><strong>파티션/ 해시 키</strong>
@@ -2799,10 +2363,7 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>핫 파티션이 되는 것을 피하려면 파티션 키를 최대한 고유하게 생성해야 한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-84">
-  
-  <a class="anchor" href="#heading-84">#</a>
-</h1>
+<h1 id="heading-84"></h1>
 <p> </p>
 <ul>
 <li><strong>속성과 항목</strong>
@@ -2870,10 +2431,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">}</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Mow the lawn&#34;</span><span style="color:#f92672">],</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">}</span>
-</span></span></code></pre></div><h1 id="heading-85">
-  
-  <a class="anchor" href="#heading-85">#</a>
-</h1>
+</span></span></code></pre></div><h1 id="heading-85"></h1>
 <p> </p>
 <ul>
 <li><strong>처리용량</strong>
@@ -2899,10 +2457,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-86">
-  
-  <a class="anchor" href="#heading-86">#</a>
-</h1>
+<h1 id="heading-86"></h1>
 <p> </p>
 <ul>
 <li><strong>Auto Scaling</strong>
@@ -2931,10 +2486,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-87">
-  
-  <a class="anchor" href="#heading-87">#</a>
-</h1>
+<h1 id="heading-87"></h1>
 <p> </p>
 <ul>
 <li><strong>예약 용령</strong>
@@ -2943,10 +2495,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-88">
-  
-  <a class="anchor" href="#heading-88">#</a>
-</h1>
+<h1 id="heading-88"></h1>
 <p> </p>
 <ul>
 <li><strong>데이터 읽기</strong>
@@ -2969,10 +2518,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-89">
-  
-  <a class="anchor" href="#heading-89">#</a>
-</h1>
+<h1 id="heading-89"></h1>
 <p> </p>
 <ul>
 <li><strong>보조 인덱스</strong>
@@ -2992,10 +2538,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-90">
-  
-  <a class="anchor" href="#heading-90">#</a>
-</h1>
+<h1 id="heading-90"></h1>
 <p> </p>
 <ul>
 <li><strong>글로벌 보조 인덱스</strong>
@@ -3015,10 +2558,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-91">
-  
-  <a class="anchor" href="#heading-91">#</a>
-</h1>
+<h1 id="heading-91"></h1>
 <p> </p>
 <ul>
 <li><strong>로컬 보조 인덱스</strong>
@@ -3038,23 +2578,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-92">
-  
-  <a class="anchor" href="#heading-92">#</a>
-</h1>
+<h1 id="heading-92"></h1>
 <p> </p>
-<h1 id="heading-93">
-  
-  <a class="anchor" href="#heading-93">#</a>
-</h1>
-<h3 id="요약">
-  <strong>요약</strong>
-  <a class="anchor" href="#%ec%9a%94%ec%95%bd">#</a>
-</h3>
-<h1 id="heading-94">
-  
-  <a class="anchor" href="#heading-94">#</a>
-</h1>
+<h1 id="heading-93"></h1>
+<h3 id="요약"><strong>요약</strong></h3>
+<h1 id="heading-94"></h1>
 <ul>
 <li>
 <p><strong>관계형 데이터베이스 또는 비관계형 데이터베이스의 사용 여부는 애플리케이션의 속성에 달려 있다.</strong></p>
@@ -3084,23 +2612,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>AWS 아키텍트는 적절한 데이터베이스와 AWS 서비스를 사용해서 성능 및 가용성 요구사항을 결정하고 올바르게 구현해야 한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-95">
-  
-  <a class="anchor" href="#heading-95">#</a>
-</h1>
+<h1 id="heading-95"></h1>
 <p> </p>
-<h1 id="heading-96">
-  
-  <a class="anchor" href="#heading-96">#</a>
-</h1>
-<h2 id="시험핵심">
-  <strong>시험핵심</strong>
-  <a class="anchor" href="#%ec%8b%9c%ed%97%98%ed%95%b5%ec%8b%ac">#</a>
-</h2>
-<h1 id="heading-97">
-  
-  <a class="anchor" href="#heading-97">#</a>
-</h1>
+<h1 id="heading-96"></h1>
+<h2 id="시험핵심"><strong>시험핵심</strong></h2>
+<h1 id="heading-97"></h1>
 <ul>
 <li><strong>관계형 데이터베이스와 비관계형 데이터베이스의 차이점을 이해한다.</strong>
 <ul>
@@ -3125,10 +2641,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-98">
-  
-  <a class="anchor" href="#heading-98">#</a>
-</h1>
+<h1 id="heading-98"></h1>
 <p> </p>
 <ul>
 <li><strong>RDS가 지원하는 여러 데이터베이스 엔진을 파악하자</strong>
@@ -3142,10 +2655,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-99">
-  
-  <a class="anchor" href="#heading-99">#</a>
-</h1>
+<h1 id="heading-99"></h1>
 <p> </p>
 <ul>
 <li><strong>특정 스토리지 요구 사항에 맞는 인스턴스 클래스와 스토리지 유형으르 선택할 수 있어야 한다.</strong>
@@ -3159,10 +2669,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-100">
-  
-  <a class="anchor" href="#heading-100">#</a>
-</h1>
+<h1 id="heading-100"></h1>
 <p> </p>
 <ul>
 <li><strong>다른 AZ와 읽기 전용 복제본의 차이점을 이해한다.</strong>
@@ -3182,10 +2689,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-101">
-  
-  <a class="anchor" href="#heading-101">#</a>
-</h1>
+<h1 id="heading-101"></h1>
 <p> </p>
 <ul>
 <li><strong>DynamoDB 테이블에 적합한 기본 키 형식을 결정할 수 있어야 한다.</strong>
@@ -3205,10 +2709,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-102">
-  
-  <a class="anchor" href="#heading-102">#</a>
-</h1>
+<h1 id="heading-102"></h1>
 <p> </p>
 <ul>
 <li><strong>DynamoDB 처리 용량이 어떻게 작동하는지 파악한다.</strong>
@@ -3228,10 +2729,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-103">
-  
-  <a class="anchor" href="#heading-103">#</a>
-</h1>
+<h1 id="heading-103"></h1>
 <p> </p>
 </article>
  
@@ -3451,6 +2949,7 @@ https://github.com/alex-shpak/hugo-book
 </body>
 </div>
 </html>
+
 
 
 

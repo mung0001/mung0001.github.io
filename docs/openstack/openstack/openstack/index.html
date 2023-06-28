@@ -2,16 +2,20 @@
 <html lang="en">
 
 <head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="인프라 환경 변화의 시작, 클라우드#클라우드 컴퓨팅의 정의와 종류##클라우드 컴퓨팅(Cloud Computing)#인터넷이 가능한 디바이스(스마트폰, 스마트패드, 스마트TV 등)로 클라우드에서 데이터를 처리하며, 저장 및 관리하는 컴퓨팅 시스템
+<meta name="description" content="인프라 환경 변화의 시작, 클라우드 클라우드 컴퓨팅의 정의와 종류 클라우드 컴퓨팅(Cloud Computing) 인터넷이 가능한 디바이스(스마트폰, 스마트패드, 스마트TV 등)로 클라우드에서 데이터를 처리하며, 저장 및 관리하는 컴퓨팅 시스템
 클라우드 서비스의 종류
 IaaS(Infrastrcture as a Service): 서버, 스토리지, 네트워크를 가상화 환경으로 만 들어 필요에 따라 인프라 자원을 제공하는 서비스
 PaaS(Platform as a Service): 웹에서 개발 플랫폼을 제공하는 서비스
 SaaS(Software as a Service): 온디맨드 소프트웨어(On-demand Software)라고도 하며, 중앙에서 호스팅 되는 소프트웨어를 웹 브라우저 등 클라우이언트로 이용하는 서비스">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="OpenStack 개요" />
-<meta property="og:description" content="인프라 환경 변화의 시작, 클라우드#클라우드 컴퓨팅의 정의와 종류##클라우드 컴퓨팅(Cloud Computing)#인터넷이 가능한 디바이스(스마트폰, 스마트패드, 스마트TV 등)로 클라우드에서 데이터를 처리하며, 저장 및 관리하는 컴퓨팅 시스템
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/openstack/openstack/openstack/><meta property="og:title" content="OpenStack 개요" />
+<meta property="og:description" content="인프라 환경 변화의 시작, 클라우드 클라우드 컴퓨팅의 정의와 종류 클라우드 컴퓨팅(Cloud Computing) 인터넷이 가능한 디바이스(스마트폰, 스마트패드, 스마트TV 등)로 클라우드에서 데이터를 처리하며, 저장 및 관리하는 컴퓨팅 시스템
 클라우드 서비스의 종류
 IaaS(Infrastrcture as a Service): 서버, 스토리지, 네트워크를 가상화 환경으로 만 들어 필요에 따라 인프라 자원을 제공하는 서비스
 PaaS(Platform as a Service): 웹에서 개발 플랫폼을 제공하는 서비스
@@ -21,28 +25,24 @@ SaaS(Software as a Service): 온디맨드 소프트웨어(On-demand Software)라
 
 
 
-<title>OpenStack 개요 | 뭉게뭉게</title>
-<link rel="manifest" href="/manifest.json">
+<title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.3d8c7f91a1ae2a156d3acf98421fad5e26aabf6e44dfa654eae07357b1d35b2e.js" integrity="sha256-PYx/kaGuKhVtOs&#43;YQh&#43;tXiaqv25E36ZU6uBzV7HTWy4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
+<script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo="></script>
 <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+
 -->
+
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
+
 <body>
   <div class="background">
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex" style="max-width:100%;" >
-    
-    <aside style="padding-left: 1em;" class="book-menu">
-      <div class="book-menu-content">
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
       
   
 <nav styles="background-color:red; position=none;">
@@ -53,8 +53,9 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
+
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1008,127 +1009,6 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <span>Network</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
   <span>System</span>
   
 
@@ -1325,15 +1205,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
     </aside>
 
-
-
-    
-    <div style="padding-left: 2%;" class="book-page">
+    <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
   <div class="flex align-center justify-between">
@@ -1344,15 +1222,14 @@ https://github.com/alex-shpak/hugo-book
   <strong>OpenStack 개요</strong>
 
   <label for="toc-control">
-    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
   </label>
 </div>
 
 
   
-  <aside class="hidden clearfix">
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1501,24 +1378,12 @@ https://github.com/alex-shpak/hugo-book
 <br>
 <br>
       
-  <article class="markdown"><h1 id="인프라-환경-변화의-시작-클라우드">
-  <strong>인프라 환경 변화의 시작, 클라우드</strong>
-  <a class="anchor" href="#%ec%9d%b8%ed%94%84%eb%9d%bc-%ed%99%98%ea%b2%bd-%eb%b3%80%ed%99%94%ec%9d%98-%ec%8b%9c%ec%9e%91-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c">#</a>
-</h1>
+  <article class="markdown"><h1 id="인프라-환경-변화의-시작-클라우드"><strong>인프라 환경 변화의 시작, 클라우드</strong></h1>
 <hr>
 <p> </p>
-<h2 id="클라우드-컴퓨팅의-정의와-종류">
-  <strong>클라우드 컴퓨팅의 정의와 종류</strong>
-  <a class="anchor" href="#%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%bb%b4%ed%93%a8%ed%8c%85%ec%9d%98-%ec%a0%95%ec%9d%98%ec%99%80-%ec%a2%85%eb%a5%98">#</a>
-</h2>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
-<h3 id="클라우드-컴퓨팅cloud-computing">
-  <strong>클라우드 컴퓨팅(Cloud Computing)</strong>
-  <a class="anchor" href="#%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%bb%b4%ed%93%a8%ed%8c%85cloud-computing">#</a>
-</h3>
+<h2 id="클라우드-컴퓨팅의-정의와-종류"><strong>클라우드 컴퓨팅의 정의와 종류</strong></h2>
+<h1 id="heading"></h1>
+<h3 id="클라우드-컴퓨팅cloud-computing"><strong>클라우드 컴퓨팅(Cloud Computing)</strong></h3>
 <ul>
 <li>
 <p>인터넷이 가능한 디바이스(스마트폰, 스마트패드, 스마트TV 등)로 클라우드에서 데이터를 처리하며, 저장 및 관리하는 컴퓨팅 시스템</p>
@@ -1551,14 +1416,8 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>Hybrid Cloud Management System:</strong> 퍼블릭 클라우드와, 프라이빗 클라우드를 혼용하는 클라우드 서비스</p>
 </li>
 </ul>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
-<h3 id="클라우드-핵심-서비스-컴퓨트와-스토리지">
-  <strong>클라우드 핵심 서비스 컴퓨트와 스토리지</strong>
-  <a class="anchor" href="#%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ed%95%b5%ec%8b%ac-%ec%84%9c%eb%b9%84%ec%8a%a4-%ec%bb%b4%ed%93%a8%ed%8a%b8%ec%99%80-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80">#</a>
-</h3>
+<h1 id="heading-1"></h1>
+<h3 id="클라우드-핵심-서비스-컴퓨트와-스토리지"><strong>클라우드 핵심 서비스 컴퓨트와 스토리지</strong></h3>
 <ul>
 <li>
 <p><strong>컴퓨트 서비스(Compute Service)</strong></p>
@@ -1573,28 +1432,13 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
+<h1 id="heading-2"></h1>
 <p> </p>
-<h2 id="하이퍼바이저의-정의와-종류">
-  <strong>하이퍼바이저의 정의와 종류</strong>
-  <a class="anchor" href="#%ed%95%98%ec%9d%b4%ed%8d%bc%eb%b0%94%ec%9d%b4%ec%a0%80%ec%9d%98-%ec%a0%95%ec%9d%98%ec%99%80-%ec%a2%85%eb%a5%98">#</a>
-</h2>
+<h2 id="하이퍼바이저의-정의와-종류"><strong>하이퍼바이저의 정의와 종류</strong></h2>
 <hr>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
-<h3 id="하이퍼바이저의-정의">
-  <strong>하이퍼바이저의 정의</strong>
-  <a class="anchor" href="#%ed%95%98%ec%9d%b4%ed%8d%bc%eb%b0%94%ec%9d%b4%ec%a0%80%ec%9d%98-%ec%a0%95%ec%9d%98">#</a>
-</h3>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
+<h1 id="heading-3"></h1>
+<h3 id="하이퍼바이저의-정의"><strong>하이퍼바이저의 정의</strong></h3>
+<h1 id="heading-4"></h1>
 <ul>
 <li>
 <p><strong>하이퍼바이저(Hypervisor)</strong></p>
@@ -1621,15 +1465,9 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
+<h1 id="heading-5"></h1>
 <p> </p>
-<h3 id="하이퍼바이저의-종류">
-  <strong>하이퍼바이저의 종류</strong>
-  <a class="anchor" href="#%ed%95%98%ec%9d%b4%ed%8d%bc%eb%b0%94%ec%9d%b4%ec%a0%80%ec%9d%98-%ec%a2%85%eb%a5%98">#</a>
-</h3>
+<h3 id="하이퍼바이저의-종류"><strong>하이퍼바이저의 종류</strong></h3>
 <ul>
 <li>
 <p><strong>KVM(for Kerne-based VirtualMachine):</strong></p>
@@ -1694,15 +1532,9 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
+<h1 id="heading-6"></h1>
 <p> </p>
-<h3 id="하이퍼바이저별-이미지-포맷">
-  <strong>하이퍼바이저별 이미지 포맷</strong>
-  <a class="anchor" href="#%ed%95%98%ec%9d%b4%ed%8d%bc%eb%b0%94%ec%9d%b4%ec%a0%80%eb%b3%84-%ec%9d%b4%eb%af%b8%ec%a7%80-%ed%8f%ac%eb%a7%b7">#</a>
-</h3>
+<h3 id="하이퍼바이저별-이미지-포맷"><strong>하이퍼바이저별 이미지 포맷</strong></h3>
 <ul>
 <li>KVM: img, qcow2, vmdk</li>
 <li>VMWARE: vmdk</li>
@@ -1710,35 +1542,20 @@ https://github.com/alex-shpak/hugo-book
 <li>마이크로소프트 Hyper-V: vhd, vmdk, vdi</li>
 <li>Xen, Xen Server: qcow2, vhd</li>
 </ul>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
+<h1 id="heading-7"></h1>
 <p> </p>
-<h3 id="이미지포맷-설명">
-  <strong>이미지포맷 설명</strong>
-  <a class="anchor" href="#%ec%9d%b4%eb%af%b8%ec%a7%80%ed%8f%ac%eb%a7%b7-%ec%84%a4%eb%aa%85">#</a>
-</h3>
+<h3 id="이미지포맷-설명"><strong>이미지포맷 설명</strong></h3>
 <ul>
 <li>qcow2: QEMU Copy On Write 2</li>
 <li>vdi: Virtual Disk Image</li>
 <li>vmdk: VMware Virtual Disk DevelopmentKit</li>
 <li>vhd: Virtual Hard Disk</li>
 </ul>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
+<h1 id="heading-8"></h1>
 <p> </p>
-<h2 id="클라우드에서-알아야-할-네트워크-상식">
-  <strong>클라우드에서 알아야 할 네트워크 상식</strong>
-  <a class="anchor" href="#%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c%ec%97%90%ec%84%9c-%ec%95%8c%ec%95%84%ec%95%bc-%ed%95%a0-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%83%81%ec%8b%9d">#</a>
-</h2>
+<h2 id="클라우드에서-알아야-할-네트워크-상식"><strong>클라우드에서 알아야 할 네트워크 상식</strong></h2>
 <hr>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
+<h1 id="heading-9"></h1>
 <ul>
 <li>
 <p><strong>고정 IP, 유동 IP</strong></p>
@@ -1759,62 +1576,35 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
+<h1 id="heading-10"></h1>
 <p> </p>
-<h3 id="cidrclassless-inter-domain-routing">
-  <strong>CIDR(Classless Inter-Domain Routing)</strong>
-  <a class="anchor" href="#cidrclassless-inter-domain-routing">#</a>
-</h3>
+<h3 id="cidrclassless-inter-domain-routing"><strong>CIDR(Classless Inter-Domain Routing)</strong></h3>
 <ul>
 <li>클래스가 없는 도메인간 라우팅 기법으로 기존 IP할당 방식인 네트워크 클래스를 대체</li>
 <li>급격히 부족해지는 IPv4 주소를 좀 더 효율적으로 사용</li>
 <li>접두어를 이용한 주소 지정 방식의 계층적 구조를 사용해 인터넷 라우팅의 부담을 덜어 줌</li>
 </ul>
-<h1 id="heading-11">
-  
-  <a class="anchor" href="#heading-11">#</a>
-</h1>
+<h1 id="heading-11"></h1>
 <p> </p>
-<h3 id="sdnsoftware-defined-networking">
-  <strong>SDN(Software Defined Networking)</strong>
-  <a class="anchor" href="#sdnsoftware-defined-networking">#</a>
-</h3>
+<h3 id="sdnsoftware-defined-networking"><strong>SDN(Software Defined Networking)</strong></h3>
 <ul>
 <li>네트워크 제어 기능이 물리적 네트워크와 분리되도록 프로그래밍한 네트워크 구조를 뜻함</li>
 <li>네트워크 제어 기능을 데이터 전달 기능과 분리해서 구현해야 한다.</li>
 <li>네트워크 제어 기능이 개발되고 실행될 수 있는 환경을 분리해 낮은 성능의CPU가 있는 하드위어 위에 스위치에 더 이상 위치시키지 않는다.</li>
 </ul>
-<h1 id="heading-12">
-  
-  <a class="anchor" href="#heading-12">#</a>
-</h1>
+<h1 id="heading-12"></h1>
 <p> </p>
-<h3 id="오픈플로openflow">
-  <strong>오픈플로(OpenFlow)</strong>
-  <a class="anchor" href="#%ec%98%a4%ed%94%88%ed%94%8c%eb%a1%9copenflow">#</a>
-</h3>
+<h3 id="오픈플로openflow"><strong>오픈플로(OpenFlow)</strong></h3>
 <ul>
 <li>SDN의 근간이 되는 기술로 SDN 아키텍처의 컨트롤 레이어와 인프라스트럭처 레이어 사이에 정의된 최초의 표준 통신 인터페이스</li>
 <li>흐름정보로 패킷의 전달 경로와 방식을 제어</li>
 <li>오픈플로는 오픈플로 컨트롤러와 오픈플로로 지원 네트워크 장비(라우터, 스위치) 사이에서 커뮤니케이션 역할을 담당</li>
 <li>일반적인 네트워크 장비(라우터, 스위치)는 플로 테이블을 이용해서 네트워크 트래픽을 처리하는 반면, 오픈플로는 소프트웨어 컨트롤러로 플로테이블을 조작하고 데이터 경로를 설정</li>
 </ul>
-<h1 id="heading-13">
-  
-  <a class="anchor" href="#heading-13">#</a>
-</h1>
+<h1 id="heading-13"></h1>
 <p> </p>
-<h3 id="네트워크-장비">
-  <strong>네트워크 장비</strong>
-  <a class="anchor" href="#%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%9e%a5%eb%b9%84">#</a>
-</h3>
-<h1 id="heading-14">
-  
-  <a class="anchor" href="#heading-14">#</a>
-</h1>
+<h3 id="네트워크-장비"><strong>네트워크 장비</strong></h3>
+<h1 id="heading-14"></h1>
 <ul>
 <li>
 <p><strong>라우터(Router):</strong></p>
@@ -1862,20 +1652,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-15">
-  
-  <a class="anchor" href="#heading-15">#</a>
-</h1>
+<h1 id="heading-15"></h1>
 <p> </p>
-<h2 id="블록-스토리지와-오브젝트-스토리지">
-  <strong>블록 스토리지와 오브젝트 스토리지</strong>
-  <a class="anchor" href="#%eb%b8%94%eb%a1%9d-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80%ec%99%80-%ec%98%a4%eb%b8%8c%ec%a0%9d%ed%8a%b8-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80">#</a>
-</h2>
+<h2 id="블록-스토리지와-오브젝트-스토리지"><strong>블록 스토리지와 오브젝트 스토리지</strong></h2>
 <hr>
-<h1 id="heading-16">
-  
-  <a class="anchor" href="#heading-16">#</a>
-</h1>
+<h1 id="heading-16"></h1>
 <ul>
 <li><strong>블록 스토리지(Block Storage)와 오브젝트 스토리지(Object Storage)</strong>
 <ul>
@@ -1884,19 +1665,10 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-17">
-  
-  <a class="anchor" href="#heading-17">#</a>
-</h1>
+<h1 id="heading-17"></h1>
 <p> </p>
-<h3 id="대표적인-스토리지-서비스">
-  <strong>대표적인 스토리지 서비스</strong>
-  <a class="anchor" href="#%eb%8c%80%ed%91%9c%ec%a0%81%ec%9d%b8-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%ec%84%9c%eb%b9%84%ec%8a%a4">#</a>
-</h3>
-<h1 id="heading-18">
-  
-  <a class="anchor" href="#heading-18">#</a>
-</h1>
+<h3 id="대표적인-스토리지-서비스"><strong>대표적인 스토리지 서비스</strong></h3>
+<h1 id="heading-18"></h1>
 <ul>
 <li>
 <p><strong>아마존의 EBS와 S3:</strong></p>
@@ -1927,36 +1699,15 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-19">
-  
-  <a class="anchor" href="#heading-19">#</a>
-</h1>
+<h1 id="heading-19"></h1>
 <p> </p>
-<h1 id="heading-20">
-  
-  <a class="anchor" href="#heading-20">#</a>
-</h1>
-<h1 id="openstack">
-  <strong>OpenStack</strong>
-  <a class="anchor" href="#openstack">#</a>
-</h1>
+<h1 id="heading-20"></h1>
+<h1 id="openstack"><strong>OpenStack</strong></h1>
 <hr>
-<h1 id="heading-21">
-  
-  <a class="anchor" href="#heading-21">#</a>
-</h1>
-<h2 id="오픈스택과-아키텍처">
-  <strong>오픈스택과 아키텍처</strong>
-  <a class="anchor" href="#%ec%98%a4%ed%94%88%ec%8a%a4%ed%83%9d%ea%b3%bc-%ec%95%84%ed%82%a4%ed%85%8d%ec%b2%98">#</a>
-</h2>
-<h1 id="heading-22">
-  
-  <a class="anchor" href="#heading-22">#</a>
-</h1>
-<h3 id="오픈스택">
-  <strong>오픈스택</strong>
-  <a class="anchor" href="#%ec%98%a4%ed%94%88%ec%8a%a4%ed%83%9d">#</a>
-</h3>
+<h1 id="heading-21"></h1>
+<h2 id="오픈스택과-아키텍처"><strong>오픈스택과 아키텍처</strong></h2>
+<h1 id="heading-22"></h1>
+<h3 id="오픈스택"><strong>오픈스택</strong></h3>
 <ul>
 <li>
 <p>오픈스택은 컴퓨트, 오브젝트 스토리지, 이미지, 인증 서비스 등이 유기적으로 연결되어 하나의 커다한 클라우드 컴퓨팅 시스템을 구축하는 것.</p>
@@ -1994,18 +1745,9 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 </blockquote>
-<h1 id="heading-23">
-  
-  <a class="anchor" href="#heading-23">#</a>
-</h1>
-<h3 id="클라우드-서비스오픈스택을-기준으로">
-  <strong>클라우드 서비스(오픈스택을 기준으로)</strong>
-  <a class="anchor" href="#%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%84%9c%eb%b9%84%ec%8a%a4%ec%98%a4%ed%94%88%ec%8a%a4%ed%83%9d%ec%9d%84-%ea%b8%b0%ec%a4%80%ec%9c%bc%eb%a1%9c">#</a>
-</h3>
-<h1 id="heading-24">
-  
-  <a class="anchor" href="#heading-24">#</a>
-</h1>
+<h1 id="heading-23"></h1>
+<h3 id="클라우드-서비스오픈스택을-기준으로"><strong>클라우드 서비스(오픈스택을 기준으로)</strong></h3>
+<h1 id="heading-24"></h1>
 <ul>
 <li>
 <p><strong>시스템 관련 클라우드 서비스</strong></p>
@@ -2041,10 +1783,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-25">
-  
-  <a class="anchor" href="#heading-25">#</a>
-</h1>
+<h1 id="heading-25"></h1>
 <ul>
 <li><strong>논리 아키텍처로 살펴보는 오픈스택의 변화</strong></li>
 </ul>
@@ -2066,10 +1805,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
+<h1 id="heading"></h1>
 <ul>
 <li><strong>HTC(High Throughput Computing):</strong>
 <ul>
@@ -2089,10 +1825,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
+<h1 id="heading-1"></h1>
 <ul>
 <li><strong>웹 호스팅:</strong>
 <ul>
@@ -2111,10 +1844,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
+<h1 id="heading-2"></h1>
 <ul>
 <li><strong>퍼블릭 클라우드:</strong>
 <ul>
@@ -2134,10 +1864,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
+<h1 id="heading-3"></h1>
 <ul>
 <li><strong>웹 서비스, 전자상거래:</strong>
 <ul>
@@ -2157,10 +1884,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
+<h1 id="heading-4"></h1>
 <ul>
 <li><strong>컴퓨트 스타터 키트(Compute Starter Kit):</strong>
 <ul>
@@ -2176,10 +1900,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
+<h1 id="heading-5"></h1>
 <ul>
 <li><strong>빅데이터:</strong>
 <ul>
@@ -2198,10 +1919,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
+<h1 id="heading-6"></h1>
 <ul>
 <li><strong>DBaaS:</strong>
 <ul>
@@ -2224,10 +1942,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
+<h1 id="heading-7"></h1>
 <ul>
 <li><strong>비디오 처리와 콘텐츠 전달:</strong>
 <ul>
@@ -2243,10 +1958,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
+<h1 id="heading-8"></h1>
 <ul>
 <li><strong>컨테이너 서비스:</strong>
 <ul>
@@ -2272,14 +1984,8 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 </blockquote>
-<h1 id="heading-26">
-  
-  <a class="anchor" href="#heading-26">#</a>
-</h1>
-<h2 id="오픈스택-적용사례">
-  <strong>오픈스택 적용사례</strong>
-  <a class="anchor" href="#%ec%98%a4%ed%94%88%ec%8a%a4%ed%83%9d-%ec%a0%81%ec%9a%a9%ec%82%ac%eb%a1%80">#</a>
-</h2>
+<h1 id="heading-26"></h1>
+<h2 id="오픈스택-적용사례"><strong>오픈스택 적용사례</strong></h2>
 <ul>
 <li><strong>업종별·목적별 클라우드 활용 사례</strong>
 <ul>
@@ -2300,18 +2006,12 @@ https://github.com/alex-shpak/hugo-book
 </li>
 </ul>
 <blockquote class="book-hint danger">
-  <h2 id="참고-홈페이지">
-  <strong>참고 홈페이지</strong>
-  <a class="anchor" href="#%ec%b0%b8%ea%b3%a0-%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80">#</a>
-</h2>
+  <h2 id="참고-홈페이지"><strong>참고 홈페이지</strong></h2>
 <ul>
 <li><a href="http://releases.openstack.org/">오픈스택 릴리스 웹 사이트</a></li>
 <li><a href="http://naleejang.tistory.com/">Nalee의 IT 이야기</a></li>
 </ul>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
+<h1 id="heading"></h1>
 <ul>
 <li><strong>오픈스택 파운데이션과 커뮤니티</strong>
 <ul>
@@ -2507,6 +2207,7 @@ https://github.com/alex-shpak/hugo-book
 </body>
 </div>
 </html>
+
 
 
 

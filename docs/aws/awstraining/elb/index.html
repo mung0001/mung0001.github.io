@@ -2,45 +2,45 @@
 <html lang="en">
 
 <head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AWS ELB 생성##이번 장에서는 생성된 인스턴스들을 로드밸런싱하는 방법에 대해 알아보도록 하겠습니다. ELB 또한 중요한 개념이니, ELB에 대한 학습을 원하는 분들은 AWS ELB를 참고해주세요. #AWS ELB 생성##ELB에 대한 생성 순서은 아래의 순서대로 진행합니다. 1. 인스턴스 생성
+<meta name="description" content="AWS ELB 생성 이번 장에서는 생성된 인스턴스들을 로드밸런싱하는 방법에 대해 알아보도록 하겠습니다. ELB 또한 중요한 개념이니, ELB에 대한 학습을 원하는 분들은 AWS ELB를 참고해주세요. AWS ELB 생성 ELB에 대한 생성 순서은 아래의 순서대로 진행합니다. 1. 인스턴스 생성
 2. 대상그룹 생성
 3. 로드 밸런서 생성
-#인스턴스 생성##먼저 기본 VPC에 가용영역 a와 c에 한 대씩, 총 두 대의 인스턴스를 생성해주세요. 보안 그룹은 80은 모두에게, 8009는 서로간만 통신이 가능하게 설정해주세요.">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="AWS ELB ( 2 Tier ) 생성" />
-<meta property="og:description" content="AWS ELB 생성##이번 장에서는 생성된 인스턴스들을 로드밸런싱하는 방법에 대해 알아보도록 하겠습니다. ELB 또한 중요한 개념이니, ELB에 대한 학습을 원하는 분들은 AWS ELB를 참고해주세요. #AWS ELB 생성##ELB에 대한 생성 순서은 아래의 순서대로 진행합니다. 1. 인스턴스 생성
+인스턴스 생성 먼저 기본 VPC에 가용영역 a와 c에 한 대씩, 총 두 대의 인스턴스를 생성해주세요. 보안 그룹은 80은 모두에게, 8009는 서로간만 통신이 가능하게 설정해주세요. 그 후, a,c 인스턴스에 Apach와 Tomcat을 설치 및 연동시켜주세요.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/aws/awstraining/elb/><meta property="og:title" content="AWS ELB ( 2 Tier ) 생성" />
+<meta property="og:description" content="AWS ELB 생성 이번 장에서는 생성된 인스턴스들을 로드밸런싱하는 방법에 대해 알아보도록 하겠습니다. ELB 또한 중요한 개념이니, ELB에 대한 학습을 원하는 분들은 AWS ELB를 참고해주세요. AWS ELB 생성 ELB에 대한 생성 순서은 아래의 순서대로 진행합니다. 1. 인스턴스 생성
 2. 대상그룹 생성
 3. 로드 밸런서 생성
-#인스턴스 생성##먼저 기본 VPC에 가용영역 a와 c에 한 대씩, 총 두 대의 인스턴스를 생성해주세요. 보안 그룹은 80은 모두에게, 8009는 서로간만 통신이 가능하게 설정해주세요." />
+인스턴스 생성 먼저 기본 VPC에 가용영역 a와 c에 한 대씩, 총 두 대의 인스턴스를 생성해주세요. 보안 그룹은 80은 모두에게, 8009는 서로간만 통신이 가능하게 설정해주세요. 그 후, a,c 인스턴스에 Apach와 Tomcat을 설치 및 연동시켜주세요." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/aws/awstraining/elb/" /><meta property="article:section" content="docs" />
 
 
 
-<title>AWS ELB ( 2 Tier ) 생성 | 뭉게뭉게</title>
-<link rel="manifest" href="/manifest.json">
+<title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.3d8c7f91a1ae2a156d3acf98421fad5e26aabf6e44dfa654eae07357b1d35b2e.js" integrity="sha256-PYx/kaGuKhVtOs&#43;YQh&#43;tXiaqv25E36ZU6uBzV7HTWy4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
+<script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo="></script>
 <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+
 -->
+
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
+
 <body>
   <div class="background">
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex" style="max-width:100%;" >
-    
-    <aside style="padding-left: 1em;" class="book-menu">
-      <div class="book-menu-content">
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
       
   
 <nav styles="background-color:red; position=none;">
@@ -51,8 +51,9 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
+
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -1086,127 +1087,6 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <span>Network</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
   <span>System</span>
   
 
@@ -1403,15 +1283,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
     </aside>
 
-
-
-    
-    <div style="padding-left: 2%;" class="book-page">
+    <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
   <div class="flex align-center justify-between">
@@ -1422,15 +1300,14 @@ https://github.com/alex-shpak/hugo-book
   <strong>AWS ELB ( 2 Tier ) 생성</strong>
 
   <label for="toc-control">
-    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
   </label>
 </div>
 
 
   
-  <aside class="hidden clearfix">
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1495,33 +1372,18 @@ https://github.com/alex-shpak/hugo-book
 <br>
 <br>
       
-  <article class="markdown"><h1 id="aws-elb-생성">
-  <strong>AWS ELB 생성</strong>
-  <a class="anchor" href="#aws-elb-%ec%83%9d%ec%84%b1">#</a>
-</h1>
+  <article class="markdown"><h1 id="aws-elb-생성"><strong>AWS ELB 생성</strong></h1>
 <hr>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
+<h1 id="heading"></h1>
 <ul>
 <li><strong>이번 장에서는 생성된 인스턴스들을 로드밸런싱하는 방법에 대해 알아보도록 하겠습니다.</strong></li>
 <li><strong>ELB 또한 중요한 개념이니, ELB에 대한 학습을 원하는 분들은 <a href="https://mung0001.github.io/docs/cloudcomputing/amazonwebservice/aws_as/#elastic-load-balancer">AWS ELB</a>를 참고해주세요.</strong></li>
 </ul>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
+<h1 id="heading-1"></h1>
 <blockquote>
-<h2 id="aws-elb-생성-1">
-  <strong>AWS ELB 생성</strong>
-  <a class="anchor" href="#aws-elb-%ec%83%9d%ec%84%b1-1">#</a>
-</h2>
+<h2 id="aws-elb-생성-1"><strong>AWS ELB 생성</strong></h2>
 </blockquote>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
+<h1 id="heading-2"></h1>
 <ul>
 <li><strong>ELB에 대한 생성 순서은 아래의 순서대로 진행합니다.</strong></li>
 </ul>
@@ -1530,28 +1392,16 @@ https://github.com/alex-shpak/hugo-book
 <strong>2. 대상그룹 생성</strong><br>
 <strong>3. 로드 밸런서 생성</strong></p>
 </blockquote>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
-<h3 id="인스턴스-생성">
-  <strong>인스턴스 생성</strong>
-  <a class="anchor" href="#%ec%9d%b8%ec%8a%a4%ed%84%b4%ec%8a%a4-%ec%83%9d%ec%84%b1">#</a>
-</h3>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
+<h1 id="heading-3"></h1>
+<h3 id="인스턴스-생성"><strong>인스턴스 생성</strong></h3>
+<h1 id="heading-4"></h1>
 <p><img src="/AWS/ELB/ELB0.png" alt="" /></p>
 <ul>
 <li><strong>먼저 기본 VPC에 가용영역 a와 c에 한 대씩, 총 두 대의 인스턴스를 생성해주세요.</strong></li>
 <li><strong>보안 그룹은 80은 모두에게, 8009는 서로간만 통신이 가능하게 설정해주세요.</strong></li>
 <li><strong>그 후, a,c 인스턴스에 Apach와 Tomcat을 설치 및 연동시켜주세요.</strong></li>
 </ul>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
+<h1 id="heading-5"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ apt-get -y update
 </span></span><span style="display:flex;"><span>$ apt-get -y upgrade
 </span></span><span style="display:flex;"><span>
@@ -1595,10 +1445,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span></code></pre></div><ul>
 <li><strong>Apache 설치</strong></li>
 </ul>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
+<h1 id="heading-6"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ apt -y update 
 </span></span><span style="display:flex;"><span>$ apt -y upgrade
 </span></span><span style="display:flex;"><span>
@@ -1670,56 +1517,29 @@ https://github.com/alex-shpak/hugo-book
 </span></span></code></pre></div><ul>
 <li><strong>Tomcat 설치</strong></li>
 </ul>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
+<h1 id="heading-7"></h1>
 <p> </p>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
-<h3 id="application-load-balancer-생성--이하-alb-">
-  <strong>Application Load Balancer 생성 ( 이하 ALB )</strong>
-  <a class="anchor" href="#application-load-balancer-%ec%83%9d%ec%84%b1--%ec%9d%b4%ed%95%98-alb-">#</a>
-</h3>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
+<h1 id="heading-8"></h1>
+<h3 id="application-load-balancer-생성--이하-alb-"><strong>Application Load Balancer 생성 ( 이하 ALB )</strong></h3>
+<h1 id="heading-9"></h1>
 <ul>
 <li><strong>ALB에 대한 설명은 <a href="">ALB Link</a>를 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
+<h1 id="heading-10"></h1>
 <p><img src="/AWS/ELB/ELB01.png" alt="" /></p>
 <ul>
 <li><strong>ALB를 생성하기 위해 메뉴에서 로드 밸런서 -&gt; 로드밸런서 생성을 클릭합니다.</strong></li>
 </ul>
-<h1 id="heading-11">
-  
-  <a class="anchor" href="#heading-11">#</a>
-</h1>
+<h1 id="heading-11"></h1>
 <p> </p>
-<h1 id="heading-12">
-  
-  <a class="anchor" href="#heading-12">#</a>
-</h1>
+<h1 id="heading-12"></h1>
 <p><img src="/AWS/ELB/ELB02.png" alt="" /></p>
 <ul>
 <li><strong>로드 밸런서의 유형 중 ALB를 선택합니다.</strong></li>
 </ul>
-<h1 id="heading-13">
-  
-  <a class="anchor" href="#heading-13">#</a>
-</h1>
+<h1 id="heading-13"></h1>
 <p> </p>
-<h1 id="heading-14">
-  
-  <a class="anchor" href="#heading-14">#</a>
-</h1>
+<h1 id="heading-14"></h1>
 <p><img src="/AWS/ELB/ELB03.png" alt="" /></p>
 <ul>
 <li><strong>위의 그림과 같이 ALB의 구성에 대한 설정을 진행합니다.</strong></li>
@@ -1727,28 +1547,16 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>리스너는 로드 밸런서에서 읽은 포트를 설정합니다.</strong></li>
 <li><strong>가용 영역은 로드 밸런서가 활성화될 가용 영역을 지정합니다.</strong></li>
 </ul>
-<h1 id="heading-15">
-  
-  <a class="anchor" href="#heading-15">#</a>
-</h1>
+<h1 id="heading-15"></h1>
 <p> </p>
-<h1 id="heading-16">
-  
-  <a class="anchor" href="#heading-16">#</a>
-</h1>
+<h1 id="heading-16"></h1>
 <p><img src="/AWS/ELB/ELB04.png" alt="" /></p>
 <ul>
 <li><strong>보안그룹은 외부와의 통신을 위해 80/tcp를 모두에게 개방하게 설정합니다.</strong></li>
 </ul>
-<h1 id="heading-17">
-  
-  <a class="anchor" href="#heading-17">#</a>
-</h1>
+<h1 id="heading-17"></h1>
 <p> </p>
-<h1 id="heading-18">
-  
-  <a class="anchor" href="#heading-18">#</a>
-</h1>
+<h1 id="heading-18"></h1>
 <p><img src="/AWS/ELB/ELB05.png" alt="" /></p>
 <ul>
 <li><strong>위의 그림과 같이 라우팅 구성에 대한 설정을 진행합니다.</strong></li>
@@ -1756,292 +1564,157 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>프로토콜과 포트는 대상 유형의 라우팅을 지정하는 설정입니다.</strong></li>
 <li><strong>상태검사는 경로로 접속하였을 때, 접속이 가능하면 Health, 불가능하면 Unhealth로 나타냅니다.</strong></li>
 </ul>
-<h1 id="heading-19">
-  
-  <a class="anchor" href="#heading-19">#</a>
-</h1>
+<h1 id="heading-19"></h1>
 <p> </p>
-<h1 id="heading-20">
-  
-  <a class="anchor" href="#heading-20">#</a>
-</h1>
+<h1 id="heading-20"></h1>
 <p><img src="/AWS/ELB/ELB06.png" alt="" /></p>
 <ul>
 <li><strong>설정이 끝나면, 대상 등록에 인스턴스를 등록합니다.</strong></li>
 </ul>
-<h1 id="heading-21">
-  
-  <a class="anchor" href="#heading-21">#</a>
-</h1>
-<h1 id="heading-22">
-  
-  <a class="anchor" href="#heading-22">#</a>
-</h1>
+<h1 id="heading-21"></h1>
+<h1 id="heading-22"></h1>
 <p> </p>
-<h1 id="heading-23">
-  
-  <a class="anchor" href="#heading-23">#</a>
-</h1>
+<h1 id="heading-23"></h1>
 <p><img src="/AWS/ELB/ELB5-1.png" alt="" /><br>
 <img src="/AWS/ELB/ELB07.png" alt="" /></p>
 <ul>
 <li><strong>ELB의 생성이 완료되면, DNS 접속을 통해 확인할 수 있습니다.</strong></li>
 </ul>
-<h1 id="heading-24">
-  
-  <a class="anchor" href="#heading-24">#</a>
-</h1>
+<h1 id="heading-24"></h1>
 <p> </p>
-<h1 id="heading-25">
-  
-  <a class="anchor" href="#heading-25">#</a>
-</h1>
+<h1 id="heading-25"></h1>
 <p><img src="/AWS/ELB/ELB5-2.png" alt="" /></p>
 <ul>
 <li><strong>또한 대상 그룹으로 이동하여 healthy 상태를 체크할 수 있습니다.</strong></li>
 </ul>
-<h1 id="heading-26">
-  
-  <a class="anchor" href="#heading-26">#</a>
-</h1>
+<h1 id="heading-26"></h1>
 <p> </p>
-<h1 id="heading-27">
-  
-  <a class="anchor" href="#heading-27">#</a>
-</h1>
-<h3 id="network-load-balancer-생성--이하-nlb-">
-  <strong>Network Load Balancer 생성 ( 이하 NLB )</strong>
-  <a class="anchor" href="#network-load-balancer-%ec%83%9d%ec%84%b1--%ec%9d%b4%ed%95%98-nlb-">#</a>
-</h3>
+<h1 id="heading-27"></h1>
+<h3 id="network-load-balancer-생성--이하-nlb-"><strong>Network Load Balancer 생성 ( 이하 NLB )</strong></h3>
 <ul>
 <li><strong>NLB에 대한 설명은 <a href="">NLB Link</a>를 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-28">
-  
-  <a class="anchor" href="#heading-28">#</a>
-</h1>
+<h1 id="heading-28"></h1>
 <p> </p>
-<h1 id="heading-29">
-  
-  <a class="anchor" href="#heading-29">#</a>
-</h1>
+<h1 id="heading-29"></h1>
 <p><img src="/AWS/ELB/ELB01.png" alt="" /></p>
 <ul>
 <li><strong>NLB 생성을 위해 다시 로드밸런서로 돌아와, 로드 밸런서 생성을 클릭합니다.</strong></li>
 </ul>
-<h1 id="heading-30">
-  
-  <a class="anchor" href="#heading-30">#</a>
-</h1>
+<h1 id="heading-30"></h1>
 <p> </p>
-<h1 id="heading-31">
-  
-  <a class="anchor" href="#heading-31">#</a>
-</h1>
+<h1 id="heading-31"></h1>
 <p><img src="/AWS/ELB/ELB08.png" alt="" /></p>
 <ul>
 <li><strong>로드 밸런서 유형에서 NLB를 선택합니다.</strong></li>
 </ul>
-<h1 id="heading-32">
-  
-  <a class="anchor" href="#heading-32">#</a>
-</h1>
+<h1 id="heading-32"></h1>
 <p> </p>
-<h1 id="heading-33">
-  
-  <a class="anchor" href="#heading-33">#</a>
-</h1>
+<h1 id="heading-33"></h1>
 <p><img src="/AWS/ELB/ELB09.png" alt="" /></p>
 <ul>
 <li><strong>NLB의 구성을 위와 같이 설정합니다.</strong></li>
 <li><strong>8009 포트는 톰캣과 아파치이 연동을 위한 포트 입니다.</strong></li>
 </ul>
-<h1 id="heading-34">
-  
-  <a class="anchor" href="#heading-34">#</a>
-</h1>
+<h1 id="heading-34"></h1>
 <p> </p>
-<h1 id="heading-35">
-  
-  <a class="anchor" href="#heading-35">#</a>
-</h1>
+<h1 id="heading-35"></h1>
 <p><img src="/AWS/ELB/ELB010.png" alt="" /></p>
 <ul>
 <li><strong>라우팅 테이블을 구성합니다.</strong></li>
 </ul>
-<h1 id="heading-36">
-  
-  <a class="anchor" href="#heading-36">#</a>
-</h1>
+<h1 id="heading-36"></h1>
 <p> </p>
-<h1 id="heading-37">
-  
-  <a class="anchor" href="#heading-37">#</a>
-</h1>
+<h1 id="heading-37"></h1>
 <p><img src="/AWS/ELB/ELB011.png" alt="" /></p>
 <ul>
 <li><strong>프라이빗 주소의 8009 포트로 인스턴스들을 등록합니다.</strong></li>
 </ul>
-<h1 id="heading-38">
-  
-  <a class="anchor" href="#heading-38">#</a>
-</h1>
+<h1 id="heading-38"></h1>
 <p> </p>
-<h1 id="heading-39">
-  
-  <a class="anchor" href="#heading-39">#</a>
-</h1>
+<h1 id="heading-39"></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ vi /etc/apache/workers.properties
 </span></span><span style="display:flex;"><span>worker.tomcat8.host = [ NLB DNS ]
 </span></span></code></pre></div><ul>
 <li><strong>Apache의 워커 파일은 NLB의 DNS로 설정합니다.</strong></li>
 </ul>
-<h1 id="heading-40">
-  
-  <a class="anchor" href="#heading-40">#</a>
-</h1>
+<h1 id="heading-40"></h1>
 <p> </p>
-<h1 id="heading-41">
-  
-  <a class="anchor" href="#heading-41">#</a>
-</h1>
+<h1 id="heading-41"></h1>
 <p><img src="/AWS/ELB/ELB012.png" alt="" /></p>
 <ul>
 <li><strong>설정해 두었던 ALB로 접속하여 index.jsp로 접속하면 톰캣을 통해 jsp로 접속하는 것을 확인 할 수 있습니다.</strong></li>
 </ul>
-<h1 id="heading-42">
-  
-  <a class="anchor" href="#heading-42">#</a>
-</h1>
+<h1 id="heading-42"></h1>
 <p> </p>
-<h1 id="heading-43">
-  
-  <a class="anchor" href="#heading-43">#</a>
-</h1>
+<h1 id="heading-43"></h1>
 <p><img src="/AWS/ELB/ELB013.png" alt="" /></p>
 <ul>
 <li><strong>대상그룹 또한 healthy를 확인할 수 있습니다.</strong></li>
 </ul>
-<h1 id="heading-44">
-  
-  <a class="anchor" href="#heading-44">#</a>
-</h1>
+<h1 id="heading-44"></h1>
 <p> </p>
-<h1 id="heading-45">
-  
-  <a class="anchor" href="#heading-45">#</a>
-</h1>
-<h3 id="classic-load-balancer-생성--이하-clb-">
-  <strong>Classic Load Balancer 생성 ( 이하 CLB )</strong>
-  <a class="anchor" href="#classic-load-balancer-%ec%83%9d%ec%84%b1--%ec%9d%b4%ed%95%98-clb-">#</a>
-</h3>
+<h1 id="heading-45"></h1>
+<h3 id="classic-load-balancer-생성--이하-clb-"><strong>Classic Load Balancer 생성 ( 이하 CLB )</strong></h3>
 <ul>
 <li><strong>CLB에 대한 설명은 <a href="">CLB Link</a>를 참조해주세요.</strong></li>
 </ul>
-<h1 id="heading-46">
-  
-  <a class="anchor" href="#heading-46">#</a>
-</h1>
+<h1 id="heading-46"></h1>
 <p><img src="/AWS/ELB/ELB01.png" alt="" /></p>
 <ul>
 <li><strong>CLB를 생성하기 위해 다시 로드 밸런서 생성을 클릭하세요.</strong></li>
 </ul>
-<h1 id="heading-47">
-  
-  <a class="anchor" href="#heading-47">#</a>
-</h1>
+<h1 id="heading-47"></h1>
 <p> </p>
-<h1 id="heading-48">
-  
-  <a class="anchor" href="#heading-48">#</a>
-</h1>
+<h1 id="heading-48"></h1>
 <p><img src="/AWS/ELB/ELB014.png" alt="" /></p>
 <ul>
 <li><strong>로드 밸런서 유형 중 CLB를 클릭하세요.</strong></li>
 </ul>
-<h1 id="heading-49">
-  
-  <a class="anchor" href="#heading-49">#</a>
-</h1>
+<h1 id="heading-49"></h1>
 <p> </p>
-<h1 id="heading-50">
-  
-  <a class="anchor" href="#heading-50">#</a>
-</h1>
+<h1 id="heading-50"></h1>
 <p><img src="/AWS/ELB/ELB015.png" alt="" /></p>
 <ul>
 <li><strong>ELB와 동일하게 외부대역으로 설정합니다..</strong></li>
 </ul>
-<h1 id="heading-51">
-  
-  <a class="anchor" href="#heading-51">#</a>
-</h1>
+<h1 id="heading-51"></h1>
 <p> </p>
-<h1 id="heading-52">
-  
-  <a class="anchor" href="#heading-52">#</a>
-</h1>
+<h1 id="heading-52"></h1>
 <p><img src="/AWS/ELB/ELB016.png" alt="" /></p>
 <ul>
 <li><strong>보안그룹 또한 기존 ELB-sg를 사용합니다.</strong></li>
 </ul>
-<h1 id="heading-53">
-  
-  <a class="anchor" href="#heading-53">#</a>
-</h1>
+<h1 id="heading-53"></h1>
 <p> </p>
-<h1 id="heading-54">
-  
-  <a class="anchor" href="#heading-54">#</a>
-</h1>
+<h1 id="heading-54"></h1>
 <p><img src="/AWS/ELB/ELB017.png" alt="" /></p>
 <ul>
 <li><strong>상태검사를 설정합니다.</strong></li>
 </ul>
-<h1 id="heading-55">
-  
-  <a class="anchor" href="#heading-55">#</a>
-</h1>
+<h1 id="heading-55"></h1>
 <p> 
 #<img src="/AWS/ELB/ELB018.png" alt="" /></p>
 <ul>
 <li><strong>인스턴스를 추가하고, 로드 밸런싱을 활성화합니다.</strong></li>
 </ul>
-<h1 id="heading-56">
-  
-  <a class="anchor" href="#heading-56">#</a>
-</h1>
+<h1 id="heading-56"></h1>
 <p> 
 #<img src="/AWS/ELB/ELB019.png" alt="" /></p>
 <ul>
 <li><strong>CLB의 DNS로 접속해보면, ELB와 같은 결과를 얻을 수 있습니다.</strong></li>
 </ul>
-<h1 id="heading-57">
-  
-  <a class="anchor" href="#heading-57">#</a>
-</h1>
+<h1 id="heading-57"></h1>
 <p> 
 #<img src="/AWS/ELB/ELB020.png" alt="" /></p>
 <ul>
 <li><strong>CLB또한 상태검사가 가능합니다.</strong></li>
 </ul>
-<h1 id="heading-58">
-  
-  <a class="anchor" href="#heading-58">#</a>
-</h1>
+<h1 id="heading-58"></h1>
 <p> </p>
-<h1 id="heading-59">
-  
-  <a class="anchor" href="#heading-59">#</a>
-</h1>
-<h4 id="예제-1">
-  예제 1.
-  <a class="anchor" href="#%ec%98%88%ec%a0%9c-1">#</a>
-</h4>
-<h4 id="서로-다른-public-서브넷-2개-private-서브넷-2개를-생성하여-각각-인스턴스를-생성한-후-elb로-접속이-가능하게-구현하세요">
-  서로 다른 Public 서브넷 2개, Private 서브넷 2개를 생성하여 각각 인스턴스를 생성한 후, ELB로 접속이 가능하게 구현하세요.
-  <a class="anchor" href="#%ec%84%9c%eb%a1%9c-%eb%8b%a4%eb%a5%b8-public-%ec%84%9c%eb%b8%8c%eb%84%b7-2%ea%b0%9c-private-%ec%84%9c%eb%b8%8c%eb%84%b7-2%ea%b0%9c%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%98%ec%97%ac-%ea%b0%81%ea%b0%81-%ec%9d%b8%ec%8a%a4%ed%84%b4%ec%8a%a4%eb%a5%bc-%ec%83%9d%ec%84%b1%ed%95%9c-%ed%9b%84-elb%eb%a1%9c-%ec%a0%91%ec%86%8d%ec%9d%b4-%ea%b0%80%eb%8a%a5%ed%95%98%ea%b2%8c-%ea%b5%ac%ed%98%84%ed%95%98%ec%84%b8%ec%9a%94">#</a>
-</h4>
+<h1 id="heading-59"></h1>
+<h4 id="예제-1">예제 1.</h4>
+<h4 id="서로-다른-public-서브넷-2개-private-서브넷-2개를-생성하여-각각-인스턴스를-생성한-후-elb로-접속이-가능하게-구현하세요">서로 다른 Public 서브넷 2개, Private 서브넷 2개를 생성하여 각각 인스턴스를 생성한 후, ELB로 접속이 가능하게 구현하세요.</h4>
 <blockquote>
 <div class="book-expand">
   <label>
@@ -2154,6 +1827,7 @@ https://github.com/alex-shpak/hugo-book
 </body>
 </div>
 </html>
+
 
 
 

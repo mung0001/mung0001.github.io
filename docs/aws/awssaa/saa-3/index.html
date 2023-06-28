@@ -2,45 +2,47 @@
 <html lang="en">
 
 <head>
+  <script data-ad-client="ca-pub-1022327295984162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="3장 Amazon Simple Storage Service와 Amazon Glacier Storage Service##3장의 목표#복원력을 갖춘 아키텍처 설계
+<meta name="description" content="3장 Amazon Simple Storage Service와 Amazon Glacier Storage Service 3장의 목표 복원력을 갖춘 아키텍처 설계
 안정적이고/ 복원력을 갖춘 스로티리지를 선택한다. 어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다. 어떻게 고가용성 및 내결함성을 갖춘 아키텍처를 설계할지 결정한다. 성능이 뛰어난 아키텍처 정의
 성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다. 안전한 애플리케이션 및 아키텍처 설명
-어떻게 애플리케이션 티어를 보호할지 결정한다. 어떻게 데이터를 보호할지 결정한다. 비용에 최적화된 아키텍처 설게">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="3장 S3와 Glacier" />
-<meta property="og:description" content="3장 Amazon Simple Storage Service와 Amazon Glacier Storage Service##3장의 목표#복원력을 갖춘 아키텍처 설계
+어떻게 애플리케이션 티어를 보호할지 결정한다. 어떻게 데이터를 보호할지 결정한다. 비용에 최적화된 아키텍처 설게
+어떻게 비용에 최적화된 스토리지를 설계할지 결정한다.">
+
+
+
+<meta name="robots" content="index,follow">
+<link rel="canonical" href=/docs/aws/awssaa/saa-3/><meta property="og:title" content="3장 S3와 Glacier" />
+<meta property="og:description" content="3장 Amazon Simple Storage Service와 Amazon Glacier Storage Service 3장의 목표 복원력을 갖춘 아키텍처 설계
 안정적이고/ 복원력을 갖춘 스로티리지를 선택한다. 어떻게 멀티 티어 아키텍처 솔루션을 설계할지 결정한다. 어떻게 고가용성 및 내결함성을 갖춘 아키텍처를 설계할지 결정한다. 성능이 뛰어난 아키텍처 정의
 성능이 뛰어난 스토리지 및 데이터베이스를 선택한다. 탄력성과 확장성을 갖춘 솔루션을 설계한다. 안전한 애플리케이션 및 아키텍처 설명
-어떻게 애플리케이션 티어를 보호할지 결정한다. 어떻게 데이터를 보호할지 결정한다. 비용에 최적화된 아키텍처 설게" />
+어떻게 애플리케이션 티어를 보호할지 결정한다. 어떻게 데이터를 보호할지 결정한다. 비용에 최적화된 아키텍처 설게
+어떻게 비용에 최적화된 스토리지를 설계할지 결정한다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mung0001.github.io/docs/aws/awssaa/saa-3/" /><meta property="article:section" content="docs" />
 
 
 
-<title>3장 S3와 Glacier | 뭉게뭉게</title>
-<link rel="manifest" href="/manifest.json">
+<title>뭉게뭉게</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0c9093ccbc8f6748958394c44f1e010f462c4e028bf810a740c6c1691b994bb3.css" integrity="sha256-DJCTzLyPZ0iVg5TETx4BD0YsTgKL&#43;BCnQMbBaRuZS7M=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.3d8c7f91a1ae2a156d3acf98421fad5e26aabf6e44dfa654eae07357b1d35b2e.js" integrity="sha256-PYx/kaGuKhVtOs&#43;YQh&#43;tXiaqv25E36ZU6uBzV7HTWy4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=">
+<script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo="></script>
 <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+
 -->
+
   
 <meta name="msvalidate.01" content="06459B812189FBCB7F3B235A75505BD4" />
 
 </head>
+
 <body>
   <div class="background">
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex" style="max-width:100%;" >
-    
-    <aside style="padding-left: 1em;" class="book-menu">
-      <div class="book-menu-content">
+    <aside style="padding: 1.5%; max-width: 90%;" class="book-menu">
       
   
 <nav styles="background-color:red; position=none;">
@@ -51,8 +53,9 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
+
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -966,127 +969,6 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <span>Network</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/network/" class="collapsed ">Network 기본</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/sophos/" class="collapsed ">Sophos</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/snort/" class="collapsed ">Snort</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/docs/network/nm/" class="collapsed ">Network Master</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li class="book-section-flat" >
-    
-
-  
   <span>System</span>
   
 
@@ -1283,15 +1165,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
     </aside>
 
-
-
-    
-    <div style="padding-left: 2%;" class="book-page">
+    <div style="padding-left: 2.5%;" class="book-page">
       <header class="book-header">
         
   <div class="flex align-center justify-between">
@@ -1302,15 +1182,14 @@ https://github.com/alex-shpak/hugo-book
   <strong>3장 S3와 Glacier</strong>
 
   <label for="toc-control">
-    
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
   </label>
 </div>
 
 
   
-  <aside class="hidden clearfix">
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
@@ -1435,19 +1314,10 @@ https://github.com/alex-shpak/hugo-book
 <br>
 <br>
       
-  <article class="markdown"><h2 id="3장-amazon-simple-storage-service와-amazon-glacier-storage-service">
-  <strong>3장 Amazon Simple Storage Service와 Amazon Glacier Storage Service</strong>
-  <a class="anchor" href="#3%ec%9e%a5-amazon-simple-storage-service%ec%99%80-amazon-glacier-storage-service">#</a>
-</h2>
+  <article class="markdown"><h2 id="3장-amazon-simple-storage-service와-amazon-glacier-storage-service"><strong>3장 Amazon Simple Storage Service와 Amazon Glacier Storage Service</strong></h2>
 <hr>
-<h1 id="heading">
-  
-  <a class="anchor" href="#heading">#</a>
-</h1>
-<h3 id="3장의-목표">
-  <strong>3장의 목표</strong>
-  <a class="anchor" href="#3%ec%9e%a5%ec%9d%98-%eb%aa%a9%ed%91%9c">#</a>
-</h3>
+<h1 id="heading"></h1>
+<h3 id="3장의-목표"><strong>3장의 목표</strong></h3>
 <ul>
 <li>
 <p><strong>복원력을 갖춘 아키텍처 설계</strong></p>
@@ -1478,23 +1348,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-1">
-  
-  <a class="anchor" href="#heading-1">#</a>
-</h1>
+<h1 id="heading-1"></h1>
 <p> </p>
-<h1 id="heading-2">
-  
-  <a class="anchor" href="#heading-2">#</a>
-</h1>
-<h3 id="amazon-simple-storage-service--이하-s3-">
-  <strong>Amazon simple Storage Service ( 이하 S3 )</strong>
-  <a class="anchor" href="#amazon-simple-storage-service--%ec%9d%b4%ed%95%98-s3-">#</a>
-</h3>
-<h1 id="heading-3">
-  
-  <a class="anchor" href="#heading-3">#</a>
-</h1>
+<h1 id="heading-2"></h1>
+<h3 id="amazon-simple-storage-service--이하-s3-"><strong>Amazon simple Storage Service ( 이하 S3 )</strong></h3>
+<h1 id="heading-3"></h1>
 <ul>
 <li>
 <p><strong>S3는 개인 애플리케이션, 다수 AWS 서비스의 데이터를 보관하며,다음 워크로드를 위한 훌륭한 플랫폼이다.</strong></p>
@@ -1508,10 +1366,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-4">
-  
-  <a class="anchor" href="#heading-4">#</a>
-</h1>
+<h1 id="heading-4"></h1>
 <ul>
 <li>
 <p><strong>S3는 객체 스토리지로, 전 장에서 배운 EC2는 인스턴스를 구동하는 반면 S3는 무제한 객체 스토리지 공간을 효과적으로 제공한다.</strong></p>
@@ -1544,23 +1399,11 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><strong>S3에 파일을 쓸 때는 2KB 메타 데이터가 함께 저장되며, 이 메타 데이터는 세부 정보를 구성하는 키로 만들어지며, 데이터 사용 권한과 파일 시스템처럼 보여지는 중첩 버킷 내 위치 정보 등이 저장된다.</strong></li>
 </ul>
-<h1 id="heading-5">
-  
-  <a class="anchor" href="#heading-5">#</a>
-</h1>
+<h1 id="heading-5"></h1>
 <p> </p>
-<h1 id="heading-6">
-  
-  <a class="anchor" href="#heading-6">#</a>
-</h1>
-<h3 id="s3-서비스-아키텍처">
-  <strong>S3 서비스 아키텍처</strong>
-  <a class="anchor" href="#s3-%ec%84%9c%eb%b9%84%ec%8a%a4-%ec%95%84%ed%82%a4%ed%85%8d%ec%b2%98">#</a>
-</h3>
-<h1 id="heading-7">
-  
-  <a class="anchor" href="#heading-7">#</a>
-</h1>
+<h1 id="heading-6"></h1>
+<h3 id="s3-서비스-아키텍처"><strong>S3 서비스 아키텍처</strong></h3>
+<h1 id="heading-7"></h1>
 <ul>
 <li>
 <p><strong>S3 파일은 버킷으로 구성되며, AWS 계정당 기본으로 만들 수 있는 버킷은 100개이다.</strong></p>
@@ -1594,23 +1437,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>단, 상위 수준의 API에서는 멀티 파트 업로드가 자동이지만, 하위 수준에서는 수동으로 나눠야 한다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-8">
-  
-  <a class="anchor" href="#heading-8">#</a>
-</h1>
+<h1 id="heading-8"></h1>
 <p> </p>
-<h1 id="heading-9">
-  
-  <a class="anchor" href="#heading-9">#</a>
-</h1>
-<h3 id="암호화">
-  <strong>암호화</strong>
-  <a class="anchor" href="#%ec%95%94%ed%98%b8%ed%99%94">#</a>
-</h3>
-<h1 id="heading-10">
-  
-  <a class="anchor" href="#heading-10">#</a>
-</h1>
+<h1 id="heading-9"></h1>
+<h3 id="암호화"><strong>암호화</strong></h3>
+<h1 id="heading-10"></h1>
 <ul>
 <li>
 <p><strong>웹 사이트와 같이 퍼블릭에서 엑세스하는 용도가 아니라면, S3에 저장할 데이터는 항상 암호화해야 한다.</strong></p>
@@ -1622,10 +1453,7 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>저장 중 데이터는 서버 측 암호화 혹은 클라이언트 측 암호화를 사용해서 보호할 수 있다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-11">
-  
-  <a class="anchor" href="#heading-11">#</a>
-</h1>
+<h1 id="heading-11"></h1>
 <ul>
 <li><strong>서버 측 암호화</strong>
 <ul>
@@ -1636,10 +1464,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-12">
-  
-  <a class="anchor" href="#heading-12">#</a>
-</h1>
+<h1 id="heading-12"></h1>
 <ul>
 <li><strong>클라이언트 측 암호화</strong>
 <ul>
@@ -1648,10 +1473,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-13">
-  
-  <a class="anchor" href="#heading-13">#</a>
-</h1>
+<h1 id="heading-13"></h1>
 <ul>
 <li><strong>로깅</strong>
 <ul>
@@ -1680,23 +1502,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-14">
-  
-  <a class="anchor" href="#heading-14">#</a>
-</h1>
+<h1 id="heading-14"></h1>
 <p> </p>
-<h1 id="heading-15">
-  
-  <a class="anchor" href="#heading-15">#</a>
-</h1>
-<h3 id="s3-내구성과-가용성">
-  <strong>S3 내구성과 가용성</strong>
-  <a class="anchor" href="#s3-%eb%82%b4%ea%b5%ac%ec%84%b1%ea%b3%bc-%ea%b0%80%ec%9a%a9%ec%84%b1">#</a>
-</h3>
-<h1 id="heading-16">
-  
-  <a class="anchor" href="#heading-16">#</a>
-</h1>
+<h1 id="heading-15"></h1>
+<h3 id="s3-내구성과-가용성"><strong>S3 내구성과 가용성</strong></h3>
+<h1 id="heading-16"></h1>
 <ul>
 <li><strong>객체를 저장할 때 여러 S3 스토리지 클래스 중에서 선택할 수 있으며, 내구성, 가용성, 지출가능 비용에 따라 선택한다.</strong></li>
 <li><strong>관련용어 설명</strong></li>
@@ -1723,15 +1533,9 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 </tbody>
 </table>
-<h1 id="heading-17">
-  
-  <a class="anchor" href="#heading-17">#</a>
-</h1>
+<h1 id="heading-17"></h1>
 <p> </p>
-<h1 id="heading-18">
-  
-  <a class="anchor" href="#heading-18">#</a>
-</h1>
+<h1 id="heading-18"></h1>
 <ul>
 <li><strong>내구성</strong>
 <ul>
@@ -1750,10 +1554,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-19">
-  
-  <a class="anchor" href="#heading-19">#</a>
-</h1>
+<h1 id="heading-19"></h1>
 <ul>
 <li><strong>S3 스토리지 안정성 보장 표준</strong></li>
 </ul>
@@ -1784,15 +1585,9 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 </tbody>
 </table>
-<h1 id="heading-20">
-  
-  <a class="anchor" href="#heading-20">#</a>
-</h1>
+<h1 id="heading-20"></h1>
 <p> </p>
-<h1 id="heading-21">
-  
-  <a class="anchor" href="#heading-21">#</a>
-</h1>
+<h1 id="heading-21"></h1>
 <ul>
 <li><strong>가용성</strong>
 <ul>
@@ -1805,15 +1600,9 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-22">
-  
-  <a class="anchor" href="#heading-22">#</a>
-</h1>
+<h1 id="heading-22"></h1>
 <p> </p>
-<h1 id="heading-23">
-  
-  <a class="anchor" href="#heading-23">#</a>
-</h1>
+<h1 id="heading-23"></h1>
 <ul>
 <li><strong>S3 스토리지 표준 가용성 보장</strong></li>
 </ul>
@@ -1837,10 +1626,7 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 </tbody>
 </table>
-<h1 id="heading-24">
-  
-  <a class="anchor" href="#heading-24">#</a>
-</h1>
+<h1 id="heading-24"></h1>
 <ul>
 <li><strong>데이터의 최종 일관성</strong>
 <ul>
@@ -1849,23 +1635,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-25">
-  
-  <a class="anchor" href="#heading-25">#</a>
-</h1>
+<h1 id="heading-25"></h1>
 <p> </p>
-<h1 id="heading-26">
-  
-  <a class="anchor" href="#heading-26">#</a>
-</h1>
-<h3 id="객체-수명-주기">
-  <strong>객체 수명 주기</strong>
-  <a class="anchor" href="#%ea%b0%9d%ec%b2%b4-%ec%88%98%eb%aa%85-%ec%a3%bc%ea%b8%b0">#</a>
-</h3>
-<h1 id="heading-27">
-  
-  <a class="anchor" href="#heading-27">#</a>
-</h1>
+<h1 id="heading-26"></h1>
+<h3 id="객체-수명-주기"><strong>객체 수명 주기</strong></h3>
+<h1 id="heading-27"></h1>
 <ul>
 <li>
 <p><strong>S3에서 시작하는 워크로드는 대개 백업 아카이브와 관련이 있다.</strong></p>
@@ -1874,10 +1648,7 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>백업 아카이브는 주기적으로 저장되므로 이에 대한 관리가 필요한 데, S3버전 관리를 통해 해결이 가능하다</strong></p>
 </li>
 </ul>
-<h1 id="heading-28">
-  
-  <a class="anchor" href="#heading-28">#</a>
-</h1>
+<h1 id="heading-28"></h1>
 <ul>
 <li><strong>버전 관리</strong>
 <ul>
@@ -1886,10 +1657,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-29">
-  
-  <a class="anchor" href="#heading-29">#</a>
-</h1>
+<h1 id="heading-29"></h1>
 <ul>
 <li><strong>수명 주기 관리</strong>
 <ul>
@@ -1899,35 +1667,17 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-30">
-  
-  <a class="anchor" href="#heading-30">#</a>
-</h1>
+<h1 id="heading-30"></h1>
 <p> </p>
-<h1 id="heading-31">
-  
-  <a class="anchor" href="#heading-31">#</a>
-</h1>
-<h3 id="s3-객체-엑세스">
-  <strong>S3 객체 엑세스</strong>
-  <a class="anchor" href="#s3-%ea%b0%9d%ec%b2%b4-%ec%97%91%ec%84%b8%ec%8a%a4">#</a>
-</h3>
-<h1 id="heading-32">
-  
-  <a class="anchor" href="#heading-32">#</a>
-</h1>
+<h1 id="heading-31"></h1>
+<h3 id="s3-객체-엑세스"><strong>S3 객체 엑세스</strong></h3>
+<h1 id="heading-32"></h1>
 <ul>
 <li><strong>S3에 데이터를 저장해서 사용하겠다고 결정했다면 중요성에 맞게 S3에 저장된 객체에 엑세스하는 방법과 업무의 보안상 필요에 맞는 요청만 엑세스하도록 제한하는 방법이 필요하다.</strong></li>
 </ul>
-<h1 id="heading-33">
-  
-  <a class="anchor" href="#heading-33">#</a>
-</h1>
+<h1 id="heading-33"></h1>
 <p> </p>
-<h1 id="heading-34">
-  
-  <a class="anchor" href="#heading-34">#</a>
-</h1>
+<h1 id="heading-34"></h1>
 <ul>
 <li><strong>엑세스 제어</strong>
 <ul>
@@ -1938,15 +1688,9 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-35">
-  
-  <a class="anchor" href="#heading-35">#</a>
-</h1>
+<h1 id="heading-35"></h1>
 <p> </p>
-<h1 id="heading-36">
-  
-  <a class="anchor" href="#heading-36">#</a>
-</h1>
+<h1 id="heading-36"></h1>
 <ul>
 <li><strong>미리 서명된 URL</strong>
 <ul>
@@ -1957,23 +1701,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>$ aws s3 presign s3://[ MybucketName ] /[ FilePath ] --expires-in [ second ]
 </span></span><span style="display:flex;"><span># second 만큼의 초 시간의 특정 File의 엑세스를 허용하는 CLI 명령어
-</span></span></code></pre></div><h1 id="heading-37">
-  
-  <a class="anchor" href="#heading-37">#</a>
-</h1>
+</span></span></code></pre></div><h1 id="heading-37"></h1>
 <p> </p>
-<h1 id="heading-38">
-  
-  <a class="anchor" href="#heading-38">#</a>
-</h1>
-<h3 id="정적-웹-사이트-호스팅">
-  <strong>정적 웹 사이트 호스팅</strong>
-  <a class="anchor" href="#%ec%a0%95%ec%a0%81-%ec%9b%b9-%ec%82%ac%ec%9d%b4%ed%8a%b8-%ed%98%b8%ec%8a%a4%ed%8c%85">#</a>
-</h3>
-<h1 id="heading-39">
-  
-  <a class="anchor" href="#heading-39">#</a>
-</h1>
+<h1 id="heading-38"></h1>
+<h3 id="정적-웹-사이트-호스팅"><strong>정적 웹 사이트 호스팅</strong></h3>
+<h1 id="heading-39"></h1>
 <ul>
 <li><strong>S3 버킷은 정적 웹 사이트 HTML 파일 호스팅에도 사용</strong></li>
 <li><strong>정적 웹 사이트는 웹 페이지와 스크립트를 랜더링할 때 서버가 아닌 클라이언트 시스템 서비스를 사용</strong></li>
@@ -1983,15 +1715,9 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ aws s3 website s3://[ MybucketName ] --index-document index.html --error-document error.html
 </span></span><span style="display:flex;"><span>$ 버킷의 정적 웹 사이트를 호스팅하며 메인 페이지와 에러 페이지를 설정한다. ( 수정 가능 )
-</span></span></code></pre></div><h1 id="heading-40">
-  
-  <a class="anchor" href="#heading-40">#</a>
-</h1>
+</span></span></code></pre></div><h1 id="heading-40"></h1>
 <p> </p>
-<h1 id="heading-41">
-  
-  <a class="anchor" href="#heading-41">#</a>
-</h1>
+<h1 id="heading-41"></h1>
 <ul>
 <li><strong>S3 Select와 Glacier Select</strong>
 <ul>
@@ -2000,46 +1726,22 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-42">
-  
-  <a class="anchor" href="#heading-42">#</a>
-</h1>
+<h1 id="heading-42"></h1>
 <p> </p>
-<h1 id="heading-43">
-  
-  <a class="anchor" href="#heading-43">#</a>
-</h1>
-<h3 id="amazon-glacier">
-  <strong>Amazon Glacier</strong>
-  <a class="anchor" href="#amazon-glacier">#</a>
-</h3>
-<h1 id="heading-44">
-  
-  <a class="anchor" href="#heading-44">#</a>
-</h1>
+<h1 id="heading-43"></h1>
+<h3 id="amazon-glacier"><strong>Amazon Glacier</strong></h3>
+<h1 id="heading-44"></h1>
 <ul>
 <li><strong>Glcanier는 S3 스토리지 클래스의 일부로 Glacier는 대부분 S3 클래스와 마찬가지로 99.999999999% 내구성을 보장하고, S3 구셩 주기에 통합할 수 있다.</strong></li>
 <li><strong>단 S3와 다른 점은 S3는 단일 객체 최대 크기가 5TB인 반면, Glacier은 40TB까지의 대형 아카이브를 지원하고, S3에서는 암호화를 선택해야하지만, Glacier는 인간이 읽을 수 없는 ID가 주어진다.</strong></li>
 <li><strong>Glacier의 단점은 데이터를 가져오는 데 걸리는 시간으로 S3는 즉시 엑세스가 가능하지만, Glacier 아카이브에서 객체를 가져오려면 몇 시간이 걸릴 수도 있다.</strong></li>
 <li><strong>이와 같이 Glacier의 목적은 데이터의 필요성과 사용빈도가 낮은 한경에서 장기적으로 데이터를 보관할 수 있는 저렴한 스토리지로 사용할 수 있다는 것이다.</strong></li>
 </ul>
-<h1 id="heading-45">
-  
-  <a class="anchor" href="#heading-45">#</a>
-</h1>
+<h1 id="heading-45"></h1>
 <p> </p>
-<h1 id="heading-46">
-  
-  <a class="anchor" href="#heading-46">#</a>
-</h1>
-<h3 id="스토리지-요금">
-  <strong>스토리지 요금</strong>
-  <a class="anchor" href="#%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%ec%9a%94%ea%b8%88">#</a>
-</h3>
-<h1 id="heading-47">
-  
-  <a class="anchor" href="#heading-47">#</a>
-</h1>
+<h1 id="heading-46"></h1>
+<h3 id="스토리지-요금"><strong>스토리지 요금</strong></h3>
+<h1 id="heading-47"></h1>
 <ul>
 <li><strong>스토리지 요금은 버전 관리와 객체 수명주기로 계속해서 파일이 이동하므로 과정이 복잡하다 할 수 있다.</strong></li>
 <li><strong>서울 리전 스토리지 요금 예시</strong></li>
@@ -2084,30 +1786,15 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>이 외에도 트래픽 관련 요금이 부과되며 기타 모든 요금에 대한 정보는 <a href="https://aws.amazon.com/s3/pricing/">여기</a>에서 확인할 수 있다.</strong></li>
 <li><strong><a href="http://calculator.s3.amazonaws.com/index.html">AWS 월 사용량 계산기</a></strong></li>
 </ul>
-<h1 id="heading-48">
-  
-  <a class="anchor" href="#heading-48">#</a>
-</h1>
+<h1 id="heading-48"></h1>
 <p> </p>
-<h1 id="heading-49">
-  
-  <a class="anchor" href="#heading-49">#</a>
-</h1>
-<h3 id="기타-스토리지-관련-서비스">
-  <strong>기타 스토리지 관련 서비스</strong>
-  <a class="anchor" href="#%ea%b8%b0%ed%83%80-%ec%8a%a4%ed%86%a0%eb%a6%ac%ec%a7%80-%ea%b4%80%eb%a0%a8-%ec%84%9c%eb%b9%84%ec%8a%a4">#</a>
-</h3>
-<h1 id="heading-50">
-  
-  <a class="anchor" href="#heading-50">#</a>
-</h1>
+<h1 id="heading-49"></h1>
+<h3 id="기타-스토리지-관련-서비스"><strong>기타 스토리지 관련 서비스</strong></h3>
+<h1 id="heading-50"></h1>
 <ul>
 <li><strong>AWS에는 S3, Glacier 이외에도 다양한 Storage Service 있다.</strong></li>
 </ul>
-<h1 id="heading-51">
-  
-  <a class="anchor" href="#heading-51">#</a>
-</h1>
+<h1 id="heading-51"></h1>
 <ul>
 <li><strong>Amazon Elastic File System ( EFS )</strong>
 <ul>
@@ -2117,15 +1804,9 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-52">
-  
-  <a class="anchor" href="#heading-52">#</a>
-</h1>
+<h1 id="heading-52"></h1>
 <p> </p>
-<h1 id="heading-53">
-  
-  <a class="anchor" href="#heading-53">#</a>
-</h1>
+<h1 id="heading-53"></h1>
 <ul>
 <li><strong>AWS Storage Gateway</strong>
 <ul>
@@ -2134,15 +1815,9 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-54">
-  
-  <a class="anchor" href="#heading-54">#</a>
-</h1>
+<h1 id="heading-54"></h1>
 <p> </p>
-<h1 id="heading-55">
-  
-  <a class="anchor" href="#heading-55">#</a>
-</h1>
+<h1 id="heading-55"></h1>
 <ul>
 <li><strong>AWS Snowball</strong>
 <ul>
@@ -2151,23 +1826,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-56">
-  
-  <a class="anchor" href="#heading-56">#</a>
-</h1>
+<h1 id="heading-56"></h1>
 <p> </p>
-<h1 id="heading-57">
-  
-  <a class="anchor" href="#heading-57">#</a>
-</h1>
-<h3 id="요약">
-  <strong>요약</strong>
-  <a class="anchor" href="#%ec%9a%94%ec%95%bd">#</a>
-</h3>
-<h1 id="heading-58">
-  
-  <a class="anchor" href="#heading-58">#</a>
-</h1>
+<h1 id="heading-57"></h1>
+<h3 id="요약"><strong>요약</strong></h3>
+<h1 id="heading-58"></h1>
 <ul>
 <li>
 <p><strong>Amazon S3는 적은 유지 관리 노력으로 대용량 아키이브와 데이터 스토리지를 운영할 수 있도록 안정성과 고가용성을 갖춘 객체 스토리지를 제공한다.</strong></p>
@@ -2194,23 +1857,11 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>Amazon Claier은 데이터 아카이브를 볼트에 저장하고 가져올 때는 몇 시간이 걸리지만, S3 스토리지 클래스보다 비용이 저렴하다.</strong></p>
 </li>
 </ul>
-<h1 id="heading-59">
-  
-  <a class="anchor" href="#heading-59">#</a>
-</h1>
+<h1 id="heading-59"></h1>
 <p> </p>
-<h1 id="heading-60">
-  
-  <a class="anchor" href="#heading-60">#</a>
-</h1>
-<h2 id="시험-핵심">
-  <strong>시험 핵심</strong>
-  <a class="anchor" href="#%ec%8b%9c%ed%97%98-%ed%95%b5%ec%8b%ac">#</a>
-</h2>
-<h1 id="heading-61">
-  
-  <a class="anchor" href="#heading-61">#</a>
-</h1>
+<h1 id="heading-60"></h1>
+<h2 id="시험-핵심"><strong>시험 핵심</strong></h2>
+<h1 id="heading-61"></h1>
 <ul>
 <li><strong>S3 리소스 구성되는 방식을 이해한다.</strong>
 <ul>
@@ -2219,10 +1870,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-62">
-  
-  <a class="anchor" href="#heading-62">#</a>
-</h1>
+<h1 id="heading-62"></h1>
 <ul>
 <li><strong>데이터 전송을 최적화하는 방법을 이해한다.</strong>
 <ul>
@@ -2231,10 +1879,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-63">
-  
-  <a class="anchor" href="#heading-63">#</a>
-</h1>
+<h1 id="heading-63"></h1>
 <ul>
 <li><strong>S3 데이터 보안 방법을 이해한다.</strong>
 <ul>
@@ -2243,10 +1888,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-64">
-  
-  <a class="anchor" href="#heading-64">#</a>
-</h1>
+<h1 id="heading-64"></h1>
 <ul>
 <li><strong>S3 객체의 내구성과 가용성을 측정하는 방법을 이해한다.</strong>
 <ul>
@@ -2254,10 +1896,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-65">
-  
-  <a class="anchor" href="#heading-65">#</a>
-</h1>
+<h1 id="heading-65"></h1>
 <ul>
 <li><strong>S3 객체 버전 관리와 수명 주기 관리를 이해한다.</strong>
 <ul>
@@ -2266,10 +1905,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-66">
-  
-  <a class="anchor" href="#heading-66">#</a>
-</h1>
+<h1 id="heading-66"></h1>
 <ul>
 <li><strong>S3 객체를 보호하는 방법을 이해한다.</strong>
 <ul>
@@ -2278,10 +1914,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-67">
-  
-  <a class="anchor" href="#heading-67">#</a>
-</h1>
+<h1 id="heading-67"></h1>
 <ul>
 <li><strong>정적 웹 사이트를 만드는 방법을 이해한다.</strong>
 <ul>
@@ -2289,10 +1922,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<h1 id="heading-68">
-  
-  <a class="anchor" href="#heading-68">#</a>
-</h1>
+<h1 id="heading-68"></h1>
 <ul>
 <li><strong>S3와 Glacier의 차이를 이해한다.</strong>
 <ul>
@@ -2454,6 +2084,7 @@ https://github.com/alex-shpak/hugo-book
 </body>
 </div>
 </html>
+
 
 
 
